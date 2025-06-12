@@ -188,9 +188,9 @@ export default {
       ]
     },
     logo: {
-      dark: './public/logo-full.svg',
-      light: './public/logo-full-dark.svg',
+      dark: './logo-full.svg',
+      light: './logo-full-dark.svg',
     },
   },
-  head: [['link', { rel: 'icon', href: './public/icon.webp' }]]
+  head: [['link', { rel: 'icon', href: './icon.webp' }]]
 }
