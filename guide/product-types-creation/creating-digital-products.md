@@ -82,3 +82,4 @@ Once you have configured all the necessary details:
 1.  Set the **Status** to **"Published"** in the "Publishing" section.
 2.  Click the **"Update"** (or "Save") button on the top right to make your digital product live in your store.
 
+
