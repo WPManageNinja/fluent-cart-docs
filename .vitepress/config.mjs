@@ -188,8 +188,9 @@ export default {
       ]
     },
     logo: {
-      dark: '/guide/public/logo-full.svg',
-      light: '/guide/public/logo-full-dark.svg',
+      dark: './logo-full.svg',
+      light: './logo-full-dark.svg',
     },
-  }
+  },
+  head: [['link', { rel: 'icon', href: '/icon.webp' }]]
 }
