@@ -194,6 +194,6 @@ export default {
   },
   head: [
       ['link', { rel: 'icon', href: '/icon.webp' }],
-      ['meta', { name: 'og:image', content: '/fluent-cart-featured.png' }],
+      ['meta', { name: 'og:image', content: 'https://fluentcart.com/wp-content/uploads/2025/06/fluent-cart-featured.png' }],
   ]
 }
