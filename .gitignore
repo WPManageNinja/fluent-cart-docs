@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+.idea
+
+# VitePress cache
+.vitepress/cache/
+
+# Mac system files
+.DS_Store
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*
+
+# Build output
+dist/
+
+# VSCode settings
+.vscode/ 
