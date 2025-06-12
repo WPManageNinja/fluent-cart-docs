@@ -192,5 +192,8 @@ export default {
       light: '/logo-full-dark.svg',
     },
   },
-  head: [['link', { rel: 'icon', href: '/icon.webp' }]]
+  head: [
+      ['link', { rel: 'icon', href: '/icon.webp' }],
+      ['meta', { name: 'og:image', content: '/fluent-cart-featured.png' }],
+  ]
 }
