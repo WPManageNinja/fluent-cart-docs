@@ -35,5 +35,5 @@ You can quickly filter your coupons based on their status:
 
 FluentCart allows you to create two main types of coupons: **Fixed Amount** and **Percentage.**
 
-* **[Adding Fixed Type Coupons](./add-fixed-coupon/):** For discounts that deduct a specific monetary amount (e.g., $10 off).
-* **[Adding Percentage Type Coupons](./add-percentage-coupon/):** For discounts that deduct a percentage of the total order or specific items (e.g., 20% off). 
+* **Adding Fixed Type Coupons:** For discounts that deduct a specific monetary amount (e.g., $10 off).
+* **Adding Percentage Type Coupons:** For discounts that deduct a percentage of the total order or specific items (e.g., 20% off). 
