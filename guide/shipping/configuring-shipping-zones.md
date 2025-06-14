@@ -14,6 +14,9 @@ Shipping zones are geographical areas where you offer specific shipping methods 
     * Click the **"Add Shipping Zone"** button.
     * You will be taken to the "Add Shipping Zone" detail page.
 
+        ![Screenshot of Configuring Shipping Zones](/guide/public/images/shipping/Configuring-Shipping-Zones/FluentCart-Shipping-Category-1.png)
+
+
 3.  **Define Zone Details**:
     * **Zone Name**: Enter a descriptive name for your shipping zone (e.g., "Domestic - USA", "European Union", "Local Delivery Area"). This name will help you identify the zone in your settings.
     * **Regions**: Select the specific countries that belong to this zone. You can start typing to search for countries and select them from the dropdown.

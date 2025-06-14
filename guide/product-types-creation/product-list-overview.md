@@ -52,7 +52,7 @@ At the top of the Products list, you'll find tabs that allow you to quickly filt
 For more granular control, use the **Advanced Filter** option: 
 
 1.  Click the **"Advanced Filter"** button located at the top right of the Products screen. 
-    ![Screenshot of Product Advanced Filter Button](/guide/public/images/product-types-creation/product-list/Products-list-2.png) *(You'll need to create this screenshot)*
+    ![Screenshot of Product Advanced Filter Button](/guide/public/images/product-types-creation/product-list/Products-list-2.png) 
 
 2.  The Advanced Filter section will expand, allowing you to define your filtering criteria, such as: 
     * **Order Property:** Filter products based on properties related to orders they are part of.
