@@ -1,13 +1,15 @@
 # Configuring Shipping Zones in FluentCart
 
-Shipping zones are geographical areas where you offer specific shipping methods and rates. By defining zones, you can tailor your shipping options to different regions of the world.
+Shipping zones are geographical regions that allow you to define specific shipping methods and rates for your customers. By creating zones, you can customize shipping options for different countries or areas. This guide will walk you through setting up a new shipping zone.
 
 ## How to Add and Manage Shipping Zones
 
 1.  **Navigate to Shipping Settings**:
-    * From your WordPress dashboard, go to **FluentCart Pro** > **Settings**.
-    * Click on the **Shipping** tab.
-    * Select the **Shipping Zones** sub-tab.
+    To begin, you must navigate to the shipping configuration area within FluentCart.
+
+    * From the main WordPress dashboard, locate the **FluentCart Pro** section in the left-hand navigation menu and click on **Settings**.
+    * On the Settings page, select the **Shipping** tab.
+    * Ensure the **Shipping Zones** sub-tab is selected. This screen will display all of your existing shipping zones.
 
 
 2.  **Add a New Shipping Zone**:
@@ -20,6 +22,9 @@ Shipping zones are geographical areas where you offer specific shipping methods 
 3.  **Define Zone Details**:
     * **Zone Name**: Enter a descriptive name for your shipping zone (e.g., "Domestic - USA", "European Union", "Local Delivery Area"). This name will help you identify the zone in your settings.
     * **Regions**: Select the specific countries that belong to this zone. You can start typing to search for countries and select them from the dropdown.
+
+        ![Screenshot of Configuring Shipping Zones](/guide/public/images/shipping/Configuring-Shipping-Zones/FluentCart-Shipping-Category-2.png)
+
 
 4.  **Save the Shipping Zone**:
     * Once you have entered all the necessary details, click the **"Save Shipping Zone"** button.
