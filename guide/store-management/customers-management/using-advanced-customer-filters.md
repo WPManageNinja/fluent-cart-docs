@@ -1,13 +1,11 @@
  # Using Advanced Customer Filters
 
-FluentCart's **Advanced Filter** functionality on the Customers screen allows you to segment your customer base and quickly find specific groups of customers based on detailed criteria. This is invaluable for targeted marketing, customer analysis, or specific administrative tasks.
+FluentCart's **Advanced Filter** tool on the Customers screen allows you sort your customers into groups and quickly find exact groups of customers by using very specific rules. This is super useful for sending special ads to certain groups, understanding your customers, or doing certain office jobs.
 
 ## Accessing and Using the Advanced Filter
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Customers**.
 2.  On the **Customers** screen, enable the **"Advanced Filter"** by clicking the **"toggle"** button in the top right corner. The Advanced Filter section will expand, allowing you to define your filtering criteria.
-
-    ![Screenshot of Advanced Filter Button](/guide/public/images/store-management/customer-advanced-filter-button.png) 
 
 ## Defining Filter Criteria
 
@@ -21,6 +19,9 @@ The Advanced Filter enables you to combine various properties to create precise 
 * **Adding Multiple Conditions:**
     * Click **"+ Add"** to add another rule for filtering. This typically functions as an "AND" condition, meaning all criteria must be met.
     * Click the **"+ OR"** button to add an alternative filter condition. This allows you to find customers who meet *either* the previous set of criteria *or* the new one.
+
+        ![Screenshot of Advanced Filter Button](/guide/public/images/store-management/customer-advanced-filter-button.png) 
+
 
 ## Applying and Resetting Filters
 

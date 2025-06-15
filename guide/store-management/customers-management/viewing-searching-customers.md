@@ -7,8 +7,6 @@ The Customers list in FluentCart provides an organized overview of all individua
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Customers** in the left sidebar.
 2.  This will open the main **Customers** screen, displaying a table of all your registered customers.
 
-    ![Screenshot of Customers List Page](/guide/public/images/store-management/customers-list.png)
-
 ## Understanding the Customers List Table
 
 The Customers list table presents key information for each customer at a glance:
@@ -18,6 +16,8 @@ The Customers list table presents key information for each customer at a glance:
 * **Purchase Count:** Indicates the total number of orders or purchases made by that customer. 
 * **Last Purchase Date:** Shows the date and time of their most recent purchase. 
 * **Customer Since:** Displays the date and time when the customer's record was first created in your system. 
+
+    ![Screenshot of Customers List Page](/guide/public/images/store-management/customers-list.png)
 
 ## Searching for Customers
 

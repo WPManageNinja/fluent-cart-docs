@@ -19,16 +19,16 @@ The Customer Details screen is organized into several panels, each providing spe
 
 At the top of the screen, you'll find the customer's primary identification.
 
-* **Customer Name:** The name of the customer (e.g., "Kevin").
-* **Order Count:** The total number of orders placed by this customer (e.g., "2 Orders").
-* **WP User ID:** The customer's associated WordPress User ID (e.g., "#2").
+* **Customer Name:** The name of the customer.
+* **Order Count:** The total number of orders placed by this customer.
+* **WP User ID:** The customer's associated WordPress User ID.
 
 ### 2. Customer Information Panel
 
 This section provides contact details and address management options for the customer.
 
-* **Contact Information:** Displays the customer's email address (e.g., "kevinauth@mail.com").
-* **Default Addresses:** Shows the customer's default shipping and billing addresses (e.g., "Sylhet, 3100, BD" for shipping, "34 r34t43, 16566, 3100, BD, 44325" for billing).
+* **Contact Information:** Displays the customer's email address.
+* **Default Addresses:** Shows the customer's default shipping and billing addresses.
 * **Action Links:**
     * **Edit customer information:** Allows you to modify the customer's core details.
     * **Manage shipping address:** Provides access to manage or add shipping addresses for this customer.
@@ -48,7 +48,7 @@ This table lists all orders placed by this specific customer.
 
 For customers who have purchased digital products with licenses, this section displays their associated license keys.
 
-* **License Details:** Includes columns for License Key, Product name, Order ID, and Activations (e.g., "0/50" for a "50 Sites Yearly License").
+* **License Details:** Includes columns for License Key, Product name, Order ID, and Activations.
 * **Clickable License Keys:** Each license key is clickable, allowing you to navigate to the [License Details screen](/guide/product-types-creation/creating-digital-products-with-licenses#product-specific-license-settings) for that specific license.
 
 The Customer Details screen is an invaluable tool for understanding your customers' interactions with your store and providing personalized support.
