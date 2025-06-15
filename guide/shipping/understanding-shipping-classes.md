@@ -13,8 +13,13 @@ Shipping classes allow you to group products with similar shipping characteristi
 2.  **Add a New Shipping Class**:
     * Click the **"Add Shipping Class"** button.
 
+            
+
+    ![Screenshot of Shipping Classes](/guide/public/images/shipping/understanding-shipping-classes/shipping-classes-1.png)
+
+
 3.  **Define Class Details**:
-    * **Class Name**: Give your shipping class a descriptive name (e.g., "Bulky Items", "Digital Products", "Small Envelopes").
+    * **Class Name**: Give your shipping class a descriptive name (e.g., "Bulky Items", "Digital Products").
     * **Cost**: Enter the numerical value for the additional cost associated with this class. This is an *adjustment* that will be added to the base shipping method cost.
     * **Cost Type**: This defines how the "Cost Adjustment" is applied:
         * **Percentage**: The "Cost Adjustment" will be applied by percentage.
@@ -38,7 +43,11 @@ Once you have created your shipping classes, you need to assign them to your pro
 
 
 3.  **Update Product**:
-    * Save or Update your product to apply the assigned shipping class.
+    * Save your product to apply the assigned shipping class.
+
+
+ ![Screenshot of Shipping Classes](/guide/public/images/shipping/understanding-shipping-classes/shipping-classes-2.png)
+
 
 **Important Notes**:
 * The actual final shipping cost will combine the shipping method's base rate with these shipping class adjustments, and then apply the "Class Aggregation" rule defined in the shipping method.

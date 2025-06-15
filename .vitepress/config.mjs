@@ -130,8 +130,7 @@ export default {
               text: 'Creating & Managing Coupons',
               link: '/guide/marketing-sales-tools/creating-managing-coupons/', // Link to its index.md
               items: [
-                { text: 'Adding Fixed Type Coupons', link: '/guide/marketing-sales-tools/creating-managing-coupons/add-fixed-coupon/' },
-                { text: 'Adding Percentage Type Coupons', link: '/guide/marketing-sales-tools/creating-managing-coupons/add-percentage-coupon/' }
+                { text: 'Adding Coupons', link: '/guide/marketing-sales-tools/creating-managing-coupons/adding-coupons/' }
               ]
             }
           ]
