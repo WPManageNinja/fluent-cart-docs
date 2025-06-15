@@ -23,8 +23,8 @@ The Customers list table presents key information for each customer at a glance:
 
 You can quickly find specific customers using the search bar available on the Customers screen.
 
-1.  Locate the search bar labeled **"Search by, #ID, First Name, Last Name and Email"** at the top of the customer list. 
-2.  Enter your search query (e.g., a customer's name, email, or ID).
+1.  Locate the search bar labeled **"Search by, #ID, First Name, Last Name, and Email"** at the top of the customer list. 
+2.  Enter your search query.
 3.  Press **Enter** or click the search icon to apply the filter.
 
     ![Screenshot of Customer Search Bar](/guide/public/images/store-management/customer-search.png) 

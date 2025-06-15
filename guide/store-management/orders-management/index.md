@@ -1,6 +1,6 @@
 # Orders Management
 
-The **Orders Management** section in FluentCart is where you oversee every transaction and customer purchase in your store. This powerful interface allows you to track orders from creation to fulfillment, manage payments, and handle refunds efficiently.
+The **Orders Management** section in FluentCart is where you handle every sale and customer buy in your store. This powerful interface allows you to track orders from creation to fulfillment, manage payments, and handle refunds efficiently.
 
 This section covers the following aspects of order management:
 
@@ -12,4 +12,4 @@ This section covers the following aspects of order management:
 * **[Collecting Payments for Modified Orders](/guide/store-management/orders-management/collecting-payments-modified-orders):** How to collect outstanding balances after an order has been modified, including generating custom payment links and marking payments as received.
 * **[Changing Order Statuses](/guide/store-management/orders-management/changing-order-statuses):** Learn how to update the status of an order (e.g., Processing, Completed, On Hold, Canceled) and manage shipping statuses.
 
-By effectively utilizing these order management tools, you can ensure smooth order processing, accurate record-keeping, and excellent customer service. 
+By using these order management tools well, you can ensure smooth order processing, accurate record-keeping, and excellent customer service. 
