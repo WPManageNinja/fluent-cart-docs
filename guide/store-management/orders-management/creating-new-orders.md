@@ -10,12 +10,12 @@ FluentCart allows you to manually create new orders directly from your WordPress
     ![Screenshot of Create Order Button](/guide/public/images/store-management/create-order-button.png) 
 3.  This will open a new order creation interface. You will need to:
     * **Customer Information:** Choose an existing customer from your store or you may create new.
-    * **Add Products:** Search for and add the products the customer is purchasing.
+    * **Products:** Search for and add the products the customer is purchasing.
         * You can select product variants if applicable.
         * Specify the quantity for each product.
-    * **Apply Coupons (Optional):** If a discount coupon applies to this manual order, you can enter and apply it here.
-    * **Add Discount:** If you want to add a discount yourself, click the Add Discount option.
-    * **Set Shipping Cost (Optional):** Manually enter any shipping charges for physical products.
+    * **Have a Coupon:** If a discount coupon applies to this manual order, you can enter and apply it here.
+    * **Add Discount:** If you want to add a discount for the order, click the Add Discount option.
+    * **Add Shipping Cost:** Manually you can add shipping charges for physical products.
     * **Review Totals:** Ensure the order subtotal and total amount are correct after adding products and any discounts/shipping.
     * **Notes:** Click the **Notes** icon to add any private notes or comments relevant to the order.
     * **Labels:**  A section for assigning custom labels.

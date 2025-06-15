@@ -41,7 +41,7 @@ Provides a summary of the order's financial aspects, including payments received
 * **Subtotal:** The total price of all items before taxes, shipping, or discounts.
 * **Total Paid:** The amount already paid by the customer.
 * **Net Payment:** The final amount after all deductions and payments.
-* **Total Refund Owed:** An alert may appear here if a refund has been initiated or is pending for the order.
+* **Total Due:**  If there's any pending amount, it will be displayed here.
 
 ### 4. Transaction Details
 
@@ -53,7 +53,7 @@ This table provides a log of all payment transactions related to this specific o
 * **Payment Method:** The method used for the transaction (e.g., "VISA", "PayPal").
 * **Total:** The amount of the individual transaction.
 * **Status:** The status of the transaction (e.g., "Completed", "Refunded").
-* **Payment Gateway Link:** From here, you can often navigate directly to the respective payment gateway (e.g., Stripe or PayPal) to view detailed transaction information there.
+
 
 ### 5. Notes
 
