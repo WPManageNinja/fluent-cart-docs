@@ -14,9 +14,9 @@ This is the standard method for installing the core FluentCart plugin, which is 
 
 ## 2. Installing FluentCart Pro Addons (Requires Base Plugin)
 
-If you have purchased FluentCart Pro Addons for advanced features, you will need to upload and activate them. **Ensure the Free Base Plugin (from step 1) is already installed and active before proceeding with Pro Addons.**
+If you have purchased FluentCart Pro Addons for advanced features, you will need to upload and activate them. Ensure the Free Base Plugin (from step 1) is already installed and active before proceeding with Pro Addons.
 
-1.  **Download the Pro Addons:** Obtain the FluentCart Pro Addons `.zip` file from your WPManageNinja dashboard.
+1.  Download the FluentCart Pro Addons `.zip` file from your WPManageNinja dashboard.
 2.  Navigate to your WordPress dashboard.
 3.  Go to **Plugins > Add New**.
 4.  At the top of the page, click the **"Upload Plugin"** button.
@@ -28,7 +28,7 @@ If you have purchased FluentCart Pro Addons for advanced features, you will need
 
 After installing the Pro Addons, you will need to activate your license key. This is essential to receive automatic updates, bug fixes, new features, and access to our support for your Pro Addons.
 
-1.  Upon activation of the Pro Addons, you might see an activation notice directly in your WordPress dashboard. You can click on this notice to begin the activation process.
+1.  When you turn on the Pro Addons, you might see an activation notice directly in your WordPress dashboard. You can click on this notice to start the activation process.
 2.  Alternatively, navigate to the FluentCart Dashboard in your WordPress admin area.
 3.  In the left sidebar, go to **FluentCart Pro > Settings**.
 4.  Click on the **"License Settings"** tab.

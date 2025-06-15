@@ -1,6 +1,6 @@
  # Store Management
 
-The **Store Management** section in FluentCart is your central hub for overseeing the daily operations of your online store. From handling customer orders to managing your customer base and tracking inventory, this area provides all the necessary tools to keep your business running smoothly.
+The **Store Management** section in FluentCart is your central hub for managing the daily work of your online store. From handling customer orders to managing your customer base and tracking inventory, this area provides all the necessary tools to keep your business running smoothly.
 
 This section covers the following key aspects of store management:
 

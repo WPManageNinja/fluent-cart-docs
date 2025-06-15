@@ -9,17 +9,17 @@ Inventory management settings are found within the **Product Edit** screen for i
 1.  Navigate to **FluentCart Pro > Products** in your WordPress dashboard. Click the "Edit" action.
 2.  On the **Product Edit** screen, scroll down to the **"Inventory Management"** section.
 
-    ![Screenshot of Inventory Management Section](/guide/public/images/product-types-creation/inventory-management-section.png) 
-
 ## Understanding Inventory Metrics
 
 The Inventory Management table displays key stock metrics for each product variant:
 
-* **Title:** The name of the product variant (e.g., "Single Site Yearly License", "Purple Air Max trainers - Simple").
+* **Title:** The name of the product variant.
 * **Total Stock:** The total quantity of this variant currently held in your inventory.
 * **Available:** The number of units currently available for purchase by customers.
-* **On hold:** The number of units that are part of pending orders (e.g., awaiting payment or processing) and are temporarily reserved.
+* **On hold:** The number of units that are part of pending orders.
 * **Delivered:** The number of units that have already been delivered or fulfilled.
+
+    ![Screenshot of Inventory Management Section](/guide/public/images/product-types-creation/inventory-management-section.png) 
 
 ## Adjusting Stock Levels
 

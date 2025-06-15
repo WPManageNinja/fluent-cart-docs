@@ -2,7 +2,7 @@
 
 The **Customers Management** section in FluentCart gives you with a centralized database of all your store's customers. This allows you to view their details, track their purchase history, manage their addresses, and perform various customer-centric actions.
 
-Effectively good customer management helps you give great service and know your customers better.
+Good customer management helps you give great service and know your customers better.
 
 This section covers the following aspects of customer management:
 

@@ -33,7 +33,7 @@ A visual representation shows how your sales have changed, so you can see trends
 
 ### 4. Recent Activities
 
-This log provides a chronological record of the latest significant events in your store, such as order updates, payments, and refunds. It serves as a quick audit trail for recent operations.
+This log shows a list of the newest important things that happened in your store, such as order updates, payments, and refunds. It serves as a quick audit trail for recent operations.
 
 * **Example Activities:** Order Created, Payment Paid, Order Status Updated, Order Refunded, Shipping Status Updated, License Upgrade.
 

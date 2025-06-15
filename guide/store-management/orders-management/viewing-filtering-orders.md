@@ -14,12 +14,12 @@ This section provides a snapshot of important order numbers, including:
 * **Paid Order items:** The total count of individual product items across all paid orders.
 * **Order value (Paid):** The total monetary value of all paid orders.
 
+    ![Screenshot of Orders List Page](/guide/public/images/store-management/order-stats-overview.png)
+
 ## Accessing the Orders List
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Orders** in the top menu.
 2.  This will open the main **Orders** screen, displaying a comprehensive list of all your store's orders.
-
-    ![Screenshot of Orders List Page](/guide/public/images/store-management/orders-list.png)
 
 ## Understanding the Orders List Table
 
@@ -29,9 +29,9 @@ The Orders list is presented in a table format, with each row representing an in
 * **Customer:** The name of the customer who placed the order.
 * **Items:** The number of distinct product items included in the order.
 * **Total:** The total monetary value of the order.
-* **Payment Status:** Indicates the current status of the payment (e.g., "Paid", "Partially Refunded").
-* **Status:** The current fulfillment or processing status of the order (e.g., "Completed", "Processing").
-* **Order Type:** Differentiates between various types of transactions (e.g., "Payment", "Subscription").
+* **Payment Status:** Indicates the current status of the payment.
+* **Status:** The current fulfillment or processing status of the order (e.g., "Processing").
+* **Order Type:** Differentiates between various types of transactions.
 * **Action Icons:** On the far right of each row, you'll see icons that let you quickly print things like order details.
 
 ## Filtering Orders
@@ -47,6 +47,8 @@ At the top of the Orders list, you'll find tabs that allow you to quickly filter
 * **Processing:** Displays orders that are currently being prepared or shipped.
 * **On Hold:** Shows orders that are awaiting payment or other administrative action.
 * **Paid:** Filters the list to show only orders for which payment has been received.
+
+    ![Screenshot of Orders List Page](/guide/public/images/store-management/orders-list.png)
 
 ### 2. Using the Advanced Filter
 
@@ -71,9 +73,9 @@ For more specific control, use the **Advanced Filter** option:
 3.  Apply your desired filters and click **"Apply"** to see the refined list of orders.
 4.  You can **"Reset"** the filters to view all orders again.
 
-![Screenshot of Advanced Filter Button](/guide/public/images/store-management/advanced-filter-button.png) 
-
 ### 3. Using the Search Bar
 
 You can also use the general search bar located at the top of the screen to quickly find orders by ID, Status, Payment status, Method, Amount, Customer Name, or Items.
+
+![Screenshot of Advanced Filter Button](/guide/public/images/store-management/advanced-filter-button.png) 
 
