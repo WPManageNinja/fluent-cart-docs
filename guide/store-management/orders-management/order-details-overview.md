@@ -18,17 +18,17 @@ The Order Details screen is organized into several panels, each providing specif
 At the top of the screen, you'll find the order's primary identification and quick action buttons.
 
 * **Order ID:** The unique identifier for the order (e.g., `#1001`).
-* **Order Status:** The current status of the order (e.g., "Processing", "Completed").
+* **Order Status:** The current status of the order.
 * **Refund Button:** Initiates the [refund process](/guide/store-management/orders-management/processing-refunds) for the order.
 * **Edit Button:** Allows you to enter [edit mode for the order](/guide/store-management/orders-management/editing-existing-orders).
-* **More Actions Dropdown:** Contains additional actions such as "Change Shipping Status", "Cancel Order", "Back to processing", and "Receipt".
+* **More Actions Dropdown:** Contains additional actions such as "Change Shipping Status", "Cancel Order", and "Receipt".
 
 ### 2. Order Items
 
 This section lists all the products included in the order.
 
-* **Product Name:** The name of the purchased product (e.g., "Elegant Running Shoe").
-* **Quantity:** The number of units purchased (e.g., "x 1", "x 2").
+* **Product Name:** The name of the purchased product.
+* **Quantity:** The number of units purchased.
 * **Individual Item Price:** The price of a single unit of the product.
 * For physical products, you might see an "Order Items Delivered" button to mark fulfillment for specific items.
 
@@ -50,10 +50,15 @@ This table provides a log of all payment transactions related to this specific o
 * **ID:** The transaction ID.
 * **Gateway ID:** The unique ID from the payment gateway (e.g., Stripe, PayPal).
 * **Date:** The date and time of the transaction.
-* **Payment Method:** The method used for the transaction (e.g., "VISA", "PayPal").
+* **Payment Method:** The method used for the transaction.
 * **Total:** The amount of the individual transaction.
+<<<<<<< HEAD
 * **Status:** The status of the transaction (e.g., "Completed", "Refunded").
 
+=======
+* **Status:** The status of the transaction.
+* **Payment Gateway Link:** From here, you can often navigate directly to the respective payment gateway (e.g., Stripe or PayPal) to view detailed transaction information there.
+>>>>>>> 1e3e0b9b2bef14497063cca0190b15771ec86b8a
 
 ### 5. Notes
 
