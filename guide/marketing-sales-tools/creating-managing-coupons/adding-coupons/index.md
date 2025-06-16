@@ -20,26 +20,26 @@ You can select the type that best suits your promotional needs.
 
 3.  This will open the **"Coupons Add Coupon"** screen, where you will configure your new coupon.
 
-    ![Screenshot of Add Coupon Screen (Fixed Type)](/guide/public/images/marketing-sales-tools/add-coupon-fixed-type.png)
-
 ### 1. Basic Information
 
-* **Title:** Enter an internal title for your coupon (e.g., "Holiday Sale Discount"). This is for your reference and not visible to customers.
+* **Title:** Enter an internal title for your coupon. This is for your reference and not visible to customers.
 * **Code:** This is the actual discount code that customers will enter at checkout (e.g., "HOLIDAY10"). You can type a custom code or click **"Generate Random Code"** to create one automatically.
 * **Coupon Priority:** (Optional) Enter a numerical value to set the priority of this coupon. A higher number might indicate a higher priority if multiple coupons can be applied.
 
 ### 2. Discount Value (Fixed Type)
 
 * **Type:** Select **"Fixed"** from the dropdown menu.
-* **Discount Amount\*:** Enter the specific monetary value of the discount (e.g., "10.00" for $10 off).
-* **Min Purchase Amount:** (Optional) Enter a minimum subtotal amount that the customer's cart must meet for the coupon to be valid. Default is $0.
+* **Discount Amount\*:** Enter the specific monetary value of the discount.
+* **Min Purchase Amount:** (Optional) Enter a minimum subtotal amount that the customer's cart must meet for the coupon to be valid. 
+
+    ![Screenshot of Add Coupon Screen (Fixed Type)](/guide/public/images/marketing-sales-tools/add-coupon-fixed-type.png)
 
 ### 3. Discount Value (Percentage Type)
 
 * **Type:** Select **"Percentage"** from the dropdown menu.
 * **Discount Percentage (%)\***: Enter the percentage value of the discount (e.g., "20" for 20% off).
 * **Min Purchase Amount:** (Optional) Enter a minimum subtotal amount that the customer's cart must meet for the coupon to be valid. Default is $0.
-* **Max Discount Amount:** (Optional) Enter a maximum monetary value for the discount. This is useful for percentage coupons to prevent excessively large discounts on very high-value orders. Default is $0 (no maximum).
+* **Max Discount Amount:** (Optional) Enter a maximum monetary value for the discount. This is useful for percentage coupons to prevent excessively large discounts on very high-value orders. 
 
     ![Screenshot of Add Coupon Screen (Fixed Type)](/guide/public/images/marketing-sales-tools/add-coupon-percentage-type.png)
 
@@ -73,6 +73,8 @@ Control how many times the coupon can be used.
 * **Status:** Set the coupon's status to **"Active"** to make it usable or **"Inactive"** to disable it.
 * **Internal Notes:** (Optional) Add any private notes about the coupon for your own reference.
 * **Stackable:** Choose **"Yes"** or **"No"** to determine if this coupon can be combined with other active coupons.
+
+    ![Screenshot of Add Coupon Screen (Fixed Type)](/guide/public/images/marketing-sales-tools/schedule-discounts-Additional-info.png)
 
 ## Saving Your Coupon
 

@@ -7,8 +7,6 @@ Coupons are an effective way to offer discounts, run promotions, and attract cus
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Coupons** in the left sidebar.
 2.  This will open the **Coupons** screen, displaying a table of all your existing discount coupons.
 
-    ![Screenshot of Coupons List Page](/guide/public/images/marketing-sales-tools/coupons-list.png)
-
 ## Understanding the Coupons List Table
 
 The Coupons list table provides key information for each coupon at a glance:
@@ -22,6 +20,8 @@ The Coupons list table provides key information for each coupon at a glance:
 * **Status:** : Here shows if the Coupon is active or inactive.
 * **Expiry Date:** The date when the coupon expires.
 * **Actions:** Click the three vertical dots for action options. From here, you can delete or edit coupons.
+
+    ![Screenshot of Coupons List Page](/guide/public/images/marketing-sales-tools/coupons-list.png)
 
 ## Filtering Coupons
 
