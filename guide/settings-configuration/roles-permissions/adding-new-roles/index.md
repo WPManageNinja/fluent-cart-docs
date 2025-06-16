@@ -5,7 +5,7 @@ FluentCart's **Roles and Permissions** system allows you to assign specific acce
 ## Steps to Add a New Role
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings > Roles And Permissions**.
-2.  On the **Roles And Permissions** screen, click the **"+ Add Role"** button at the top right.
+2.  On the **Roles And Permissions** screen, click the **"+ Add Role"** button at the top right corner.
 
     ![Screenshot of Add Role Button](/guide/public/images/settings-configuration/roles-permissions/add-role-button.png)
 

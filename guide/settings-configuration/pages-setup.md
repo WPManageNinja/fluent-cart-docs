@@ -23,6 +23,8 @@ For each core FluentCart functionality, you need to select an existing WordPress
     * **Required Shortcode:** `[fluent_cart_checkout]`
 * **Select Custom Payment Page:** Assigns a dedicated page that can be used for custom payment links (e.g., for collecting additional payments on modified orders).
     * **Required Shortcode:** `[fluent_cart_custom_payment]`
+* **Select Registration Page** Assign the page where customers can create a new account for your store.
+    * **Required Shortcode:** `[fluent_cart_registration_form]`
 
     ![Screenshot of Pages Setup Tab](/guide/public/images/settings-configuration/pages-setup.png)
 
