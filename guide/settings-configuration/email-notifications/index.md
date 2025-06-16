@@ -33,7 +33,6 @@ After configuring these details, click the **Save Settings** button to apply you
 
 The **Email Notifications List** contains all the transactional emails FluentCart can send automatically based on specific triggers, such as new orders or refunds. From this panel, you can enable, disable, and customize each individual email template.
 
-![Email Notifications list in FluentCart.]
 
 #### Enabling or Disabling a Notification
 
