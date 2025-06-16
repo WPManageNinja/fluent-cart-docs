@@ -12,8 +12,6 @@ FluentCart offers flexible customization for each automated email notification. 
 
 3.  This will open the **Edit Notification** screen, where you can customize the selected email template.
 
-    ![Screenshot of Edit Notification Screen](/guide/public/images/settings-configuration/email-notifications/edit-notification-screen.png)
-
 ## Customizing Email Notification Settings
 
 ### 1. General Settings
@@ -28,23 +26,32 @@ FluentCart offers flexible customization for each automated email notification. 
 
 ### 3. Recipient & Sender Configuration
 
+* **Mail From\*:** Configure the sender's email address for this notification. By default, it might use `{wp.admin_email}`.
 * **Send Mail To\*:** This crucial section defines who will receive the email. You can select from various predefined roles or email addresses:
     * Use the "Select" dropdown for general recipients.
     * You can specify `{wp.admin_email}` to send to the WordPress administrator's email.
     * Options like "Customer Email" or "User Email" are available for customer-facing notifications.
 * **Cc:** (Carbon Copy) An optional field to add additional email addresses that should receive a copy of this notification.
-* **Mail From\*:** Configure the sender's email address for this notification. By default, it might use `{wp.admin_email}`.
+
+
+    ![Screenshot of Edit Notification Screen](/guide/public/images/settings-configuration/email-notifications/edit-notification-screen.png)
 
 ### 4. Email Content Customization
 
 This section includes a powerful editor that lets you customize the subject line and body content of your email.
 
-* **Mail Subject\*:** Enter the subject line for the email. You can use dynamic shortcodes here to include order or customer-specific information (e.g., "Order Created").
+* **Mail Subject\*:** Enter the subject line for the email. You can use dynamic shortcodes here to include order or customer-specific information.
 * **Template Editor Area:** The main content area where you compose the email body.
     * **"Add ShortCodes" Dropdown:** A central feature that allows you to easily insert dynamic data into your email. This ensures that information like order IDs, customer names, or payment summaries are automatically populated.
         * Examples of shortcodes include: `{settings.store_logo}`, `{order.billing.first_name}`, `{order.id}`, `{order.updated_at}`, `{order.customer.full_name}`, `{order.customer.email}`, `{order.payment_summary}`, `{order.payment_receipt}`, `{order.customer_dashboard_link}`, `{order.uuid}`, and `{order.rate}`.
-    * **"Paragraph" Dropdown:** Provides basic text formatting options.
-    * **"Visual Code" Button:** Allows you to toggle between a visual editor (rich text) and a code editor (likely HTML/CSS) for advanced template customization.
+
+    * **"Select Button":** This dropdown lets you add a button to your email. You can easily link this button to a product's web page.
+    * **"Preview Template":** This dropdown lets you pick a ready-made email design that fits your needs.
+    * **"Preview Template":** Click this eye icon to see how your email will look before you send it.
+    * **"Reset Template":** Click this reset icon to go back to the original email design and clear any changes you've made.
+    * **"Visual & Code" Button:** Allows you to toggle between a visual editor (rich text) and a code editor (likely HTML/CSS) for advanced template customization.
+
+    ![Screenshot of Edit Notification Screen](/guide/public/images/settings-configuration/email-notifications/email-content-customization.png)
 
 ## Saving Your Template Changes
 
