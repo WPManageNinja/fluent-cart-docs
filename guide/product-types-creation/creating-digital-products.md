@@ -130,7 +130,7 @@ This crucial section is where you manage the actual digital files customers will
     * **Choose variant:** (Optional) If your digital product has multiple variations, you can select which specific variant(s) this asset applies to. Leave empty for all variants.
     * **Choose File:** Click this button to upload a file from your local computer or select from existing files in your FluentCart storage.
         * This will open a **"Storage Drivers"** modal, showing options like **Local** storage (drag & drop or browse) or **S3** (if configured).
-        * ![Screenshot of Choose File Modal (Storage Drivers)](/guide/public/images/product-types-creation/creating-digital-product/Digital-product-6.png)
+![Screenshot of Choose File Modal (Storage Drivers)](/guide/public/images/product-types-creation/creating-digital-product/Digital-product-6.png)
     * **File URL:** (Alternative) Provide a URL if your digital asset is hosted externally.
     * **File Name:** Enter a display name for the downloaded file. You can [edit this file name](/guide/product-types-creation/creating-digital-products#editing-uploaded-file-names) after upload if needed.
     * Click **"Save Asset"** to add the file to your product.

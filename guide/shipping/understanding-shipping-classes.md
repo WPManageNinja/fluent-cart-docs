@@ -1,6 +1,11 @@
 # Understanding and Using Shipping Classes in FluentCart
 
-Shipping classes allow you to group products with similar shipping characteristics. This is incredibly useful for applying specific shipping cost adjustments, regardless of the primary shipping method chosen. For example, you might have "Heavy Items" that always incur an extra fee, or "Fragile Goods" that require special handling costs.
+The most common use for a shipping class is to adjust the shipping cost for certain types of items. For example, you can create a:
+
+* **Heavy Items** class to automatically add an extra fee to an order.
+* **Fragile Goods** class to cover the cost of special handling and packaging.
+
+This guide explains how to use Shipping Classes to group products with similar shipping needs, allowing you to apply special shipping rules to them.
 
 ## How to Add and Manage Shipping Classes
 
@@ -19,7 +24,7 @@ Shipping classes allow you to group products with similar shipping characteristi
 
 
 3.  **Define Class Details**:
-    * **Class Name**: Give your shipping class a descriptive name (e.g., "Bulky Items", "Digital Products").
+    * **Class Name**: Give your shipping class a descriptive name (e.g., "Bulky Items").
     * **Cost**: Enter the numerical value for the additional cost associated with this class. This is an *adjustment* that will be added to the base shipping method cost.
     * **Cost Type**: This defines how the "Cost Adjustment" is applied:
         * **Percentage**: The "Cost Adjustment" will be applied by percentage.
