@@ -7,8 +7,6 @@ The **Single Product & Order Setup** screen in FluentCart allows you to fine-tun
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings** in the left sidebar.
 2.  Click on the **"Single Product & Order Setup"** tab.
 
-    ![Screenshot of Single Product & Order Setup Tab](/guide/public/images/settings-configuration/single-product-order-setup.png)
-
 ## Configuration Options
 
 ### 1. Single Product Setup
@@ -18,11 +16,13 @@ These settings control how additional information is presented on your individua
 * **Show Relevant In Single Page:** Check this box to display relevant related information (e.g., related products, additional details) on your product's dedicated single page.
 * **Show Relevant In Product Modal:** Check this box to display relevant information within product pop-up modals (if your theme or other plugins use them for quick product views).
 
+    ![Screenshot of Single Product & Order Setup Tab](/guide/public/images/settings-configuration/single-product-order-setup.png)
+
 ### 2. Variation Display
 
-This section defines how product variations (e.g., different sizes, colors, license tiers) are visually presented to customers.
+This section controls how the different versions of your products (like different sizes, colors, or types of licenses) look to your customers.
 
-* **Options:**
+* **View:**
     * **Image with Text:** Displays both an image and text for each variation.
     * **Image:** Displays only an image for each variation.
     * **Text:** Displays only text for each variation.
