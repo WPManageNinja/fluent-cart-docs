@@ -10,9 +10,8 @@ export default {
     lastmodDateOnly: false,
     transformItems: (items) => {
       return items.map(item => ({
-        ...item,
-        changefreq: 'weekly',
-        priority: item.url === '/' ? 1.0 : 0.8
+        url: item.url,
+        lastmod: item.lastmod
       }))
     }
   },
