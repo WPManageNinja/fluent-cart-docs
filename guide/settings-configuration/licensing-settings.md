@@ -7,8 +7,6 @@ The **Licensing Settings** feature in FluentCart allows you to manage your plugi
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings** in the left sidebar.
 2.  Click on the **"Licensing"** tab.
 
-    ![Screenshot of Licensing Settings Tab](/guide/public/images/settings-configuration/licensing-settings-tab.png)
-
 ## Managing Your License
 
 1.  On the Licensing Settings section, you'll see your current license status and details.
@@ -17,6 +15,8 @@ The **Licensing Settings** feature in FluentCart allows you to manage your plugi
 
 3.  Enter your license key in the provided field.
 4.  Click the **"Verify License"** button to activate your license.
+
+    ![Screenshot of Licensing Settings Tab](/guide/public/images/settings-configuration/licensing-settings-tab.png)
 
 :::tip Need a License Key?
 If you don't have a FluentCart license key yet, you can purchase one from [WPManageNinja](https://wpmanageninja.com/your-purchase-link-here).

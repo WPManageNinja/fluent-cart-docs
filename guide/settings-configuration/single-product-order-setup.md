@@ -9,7 +9,7 @@ The **Single Product & Order Setup** screen in FluentCart allows you to fine-tun
 
 ## Configuration Options
 
-### 1. Single Product Setup
+### 1. Product Settings
 
 These settings control how additional information is presented on your individual product pages and within product pop-up modals.
 
@@ -22,11 +22,11 @@ These settings control how additional information is presented on your individua
 
 This section controls how the different versions of your products (like different sizes, colors, or types of licenses) look to your customers.
 
-* **View:**
+* **Variation View:**
     * **Image with Text:** Displays both an image and text for each variation.
     * **Image:** Displays only an image for each variation.
     * **Text:** Displays only text for each variation.
-* **Columns:** You can set the column layout for how products are displayed on shop pages or within certain product sections.
+* **Variation Columns:** You can set the column layout for how products are displayed on shop pages or within certain product sections.
     * **Masonry:** A grid layout where items are arranged without fixed height rows.
     * **Two Column:** Displays products in two columns.
     * **Three Column:** Displays products in three columns.

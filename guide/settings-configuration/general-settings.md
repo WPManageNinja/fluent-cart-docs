@@ -19,7 +19,7 @@ The **General Settings (Store Setup)** screen is where you configure the fundame
 
 Select your store’s order mode from the dropdown. There are two options: **Test** and **Live**. Use "Test Mode" while setting up your store. Switch to "Live Mode" when you're ready to start accepting real orders.
 
-### 2. Address
+### 2. Store Address
 
 Provide your physical business address details. This information can be used for shipping calculations, tax purposes, and displayed in various store documents.
 
@@ -37,8 +37,7 @@ Provide your physical business address details. This information can be used for
 Configure the currency settings for your store's transactions.
 
 * **Checkout Currency:** Select the primary currency in which your products will be priced and payments will be processed.
-* **Decimal Separator:** Choose the character used to separate the whole number from the fractional part in prices.
-* **Thousand Separator:** Choose the character used to separate thousands in larger numbers.
+* **Number Format:** This setting lets you choose how numbers, especially prices, are shown in your store. It controls whether you use commas or dots to separate thousands and decimals.
 * **Currency Position:** Select where the currency symbol should appear relative to the amount.
 
     ![Screenshot of Store Settings - Store Setup Tab](/guide/public/images/settings-configuration/store-currency-setup.png)
