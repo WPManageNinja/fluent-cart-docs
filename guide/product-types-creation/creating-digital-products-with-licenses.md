@@ -1,6 +1,17 @@
  # Creating Digital Products with Licenses
 
-FluentCart excels at managing digital products that require license keys, such as software, plugins, or premium digital content with activation limits. This guide details how to set up these complex products, including their specific licensing rules, upgrade paths, and downloadable assets.
+This guide provides a complete walkthrough for selling digital products that require a license key, such as software, plugins, or premium content.
+
+Licensing helps you protect your digital items by controlling how they are used. By issuing a unique key to each customer, you can manage how many times your product can be activated and for how long the license is valid.
+
+In this guide, you will learn how to:
+
+* Create different license tiers with unique pricing (e.g., "Single Site License" or "50 Sites Lifetime").
+* Attach the main downloadable file that your customers will receive.
+* Set specific activation limits and license durations (like yearly or lifetime) for each tier.
+* Create customer-friendly upgrade paths to allow moving between different license tiers.
+
+Follow these steps to confidently configure all the necessary settings for your licensed digital products.
 
 ## Steps to Create a New Licensed Digital Product
 
@@ -36,7 +47,7 @@ Categorize and type your product for better organization.
 
 This section is crucial for defining the different license tiers and their pricing.
 
-* **Type Selection:** When [configuring product variations](/guide/product-types-creation/creating-physical-products#pricing-variations), ensure **"Digital"** and/or **"Subscription"** (if it's a recurring license) is selected as the product type within the pricing modal for your variants.
+* **Type Selection:** When [configuring product variations](/guide/product-types-creation/creating-digital-products.html#4-pricing-variatio), ensure **"Digital"** and/or **"Subscription"** (if it's a recurring license) is selected as the product type within the pricing modal for your variants.
 * **Pricing Table:** You'll define each license tier as a variation (e.g., "Single Site Yearly License", "50 Sites Lifetime License").
     * **Image:** You can upload a specific image for each license variant.
     * **Title:** The name of the license tier.
@@ -59,7 +70,7 @@ This section is where you manage the digital files associated with your licensed
 
 ### 7. Product-Specific License Settings
 
-This is the most critical section for licensed digital products, offering granular control over each license's behavior.
+This is the most important section for licensed digital products, offering granular control over each license's behavior.
 
 1.  On the Product Edit screen, click the **"License Settings"** tab.
 
@@ -68,7 +79,7 @@ This is the most critical section for licensed digital products, offering granul
 2.  **Enable Licensing for this product:** Ensure this checkbox is enabled to activate licensing for this product.
 
 3.  **License Configuration Table (Per Variant):**
-    * **Activation Limit:** For each license variant (e.g., "Single Site Yearly License"), set the number of times the license key can be activated (e.g., 1, 5, 50).
+    * **Activation Limit:** For each license variant (e.g., "Single Site Yearly License"), set the number of times the license key can be activated (e.g., 50, 100).
     * **License Validity:** Define the duration of the license for each variant:
         * Enter a number of **"Years"**.
         * Check **"Lifetime"** for an indefinite license.
