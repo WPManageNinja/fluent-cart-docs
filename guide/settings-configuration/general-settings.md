@@ -4,8 +4,8 @@ The **General Settings (Store Setup)** screen is where you configure the fundame
 
 ## Accessing General Settings
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings** in the left sidebar.
-2.  By default, you will land on the **"Store Settings"** tab, which houses the General Settings.
+1.  Go to your WordPress dashboard, then go to **FluentCart Pro > Settings** in the left side menu.
+2.  Normally, you'll see the **"Store Settings"** tab, which is where you find the General Settings.
 
 ## Configuring Your Store Details
 
@@ -13,7 +13,7 @@ The **General Settings (Store Setup)** screen is where you configure the fundame
 
 * **Store Name:** Enter the official name of your online store. This name will often appear in various parts of your store, emails, and reports.
 * **Store Logo:** You can upload your brand's logo here. This logo may be used in receipts, invoices, or other areas of your store.
-    * Click the "Remove" button if you wish to remove an existing logo.
+    * Click the **"Remove"** button if you wish to remove an existing logo.
 
 ### 2. Order Mode
 
@@ -45,7 +45,10 @@ Configure the currency settings for your store's transactions.
 
 ### 4. Payment View
 
-* **Logo:** This option likely controls whether your store's logo appears on payment-related pages or elements during the checkout process.
+The Payment View setting allows you choose how payment methods look to your customers on the checkout page. You can pick from a dropdown options:
+
+* **Logo:** This option displays the actual brand picture (logo) for each payment method (e.g., the PayPal logo instead of just the word "PayPal").
+* **Radio** This shows payment methods as simple choices you can click, like a small circle next to their name (e.g., "PayPal" as text).
 
 ## Saving Your Settings
 
