@@ -8,11 +8,11 @@ Upon landing on the Purchase History page, you will see a table listing all your
 
 * **Order Number**: A unique identifier for your purchase (e.g., `#1004`).
 * **Product**: A summary of the products included in the order (e.g., "Sticky Note - Lifetime").
-* **Date**: The date the order was placed (e.g., "May 30, 2025").
-* **Status**: The current status of the order (e.g., "Processing", "Completed").
-* **Total Amount**: The total cost of the order (e.g., "$8").
+* **Date**: The date the order was placed.
+* **Status**: The current status of the order.
+* **Total Amount**: The total cost of the order.
 
-You can also navigate through pages if you have many orders (e.g., "Page 1 of 1", "10/page Total 3").
+You can also navigate through pages if you have many orders.
 
 ![Screenshot of Purchase History](/guide/public/images/customer-dashboard/purchase-history/purchase-history-1.png)
 
@@ -33,10 +33,10 @@ On the **Payment Details** page, you will find:
 
 A table showing individual transactions related to this order, including:
 
-* **ID**: Transaction ID (e.g., `#1012`,).
-* **Amount**: The amount of the transaction (e.g., "$8").
-* **Status**: The status of the transaction (e.g., "Completed", "Refunded").
-* **Paid By**: The payment method used, often masked for security (e.g., "**** 4242").
+* **ID**: Transaction ID.
+* **Amount**: The amount of the transaction.
+* **Status**: The status of the transaction.
+* **Paid By**: The payment method used, often masked for security.
 
 ### Ordered Items
 * **Product**: The name of the product(s) purchased.

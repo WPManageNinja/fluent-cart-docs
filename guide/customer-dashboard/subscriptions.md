@@ -8,11 +8,11 @@ The main subscriptions page displays a list of all your subscriptions, including
 
 * **Product Name**: The name of the subscribed product (e.g., "Sticky Note").
 * **Payment Method**: Often masked for security (e.g., "**** 4242").
-* **Status**: The current status of the subscription (e.g., "Active", "Canceled").
+* **Status**: The current status of the subscription.
 * **Renewal Date**: When the subscription is set to auto-renew (e.g., "Auto renews on May 23, 2026").
 * **Billing Cycle**: The recurring cost and frequency (e.g., "$89.00 per year, until cancel.").
 
-You can navigate through pages if you have multiple subscriptions (e.g., "Page 1 of 1", "10/page Total 3").
+You can navigate through pages if you have multiple subscriptions.
 
 ![Screenshot of Subscription](/guide/public/images/customer-dashboard/subscriptions/subscriptions-1.png)
 
@@ -24,18 +24,18 @@ Clicking on a specific subscription will take you to its detailed management pag
 ### Subscription Details
 * **Product**: The specific product name (e.g., "Sticky Note"").
 * **Active Plan**: The plan name (e.g., "50 Sites Yearly License").
-* **Subscription**: The recurring billing amount and frequency (e.g., "$89.00 per year, until cancel.").
+* **Subscription**: The recurring billing amount and frequency.
 * **Status**: The current status (e.g., "active") and the auto-renewal date (e.g., "Auto renews on May 23, 2026").
-* **Payment method**: The masked payment method used for this subscription (e.g., "**** 4242").
+* **Payment method**: The masked payment method used for this subscription.
 
 ### Transaction Details 
 
 A table showing individual transactions related to this order, including:
 
-* **ID**: Transaction ID (e.g., `#1016).
-* **Amount**: The amount of the transaction (e.g., "$89").
-* **Status**: The status of the transaction (e.g., "Completed", "Refunded").
-* **Paid By**: The payment method used, often masked for security (e.g., "**** 4242").
+* **ID**: Transaction ID.
+* **Amount**: The amount of the transaction.
+* **Status**: The status of the transaction.
+* **Paid By**: The payment method used, often masked for security.
 
 ### License (if applicable)
 If your subscription is tied to a software license, this section will provide details:

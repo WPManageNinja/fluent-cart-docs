@@ -1,6 +1,16 @@
  # Creating Digital Products
 
-Digital products are downloadable items such as e-books, software, music, or templates that customers receive electronically after purchase. FluentCart provides a streamlined process for setting up these products, including managing their digital assets and pricing.
+This guide provides step-by-step instructions for adding a digital product to your FluentCart store.
+
+A digital product is any file that customers can download after purchase, such as an e-book, software, music, or design template. FluentCart gives you all the tools to set up these items correctly.
+
+In this guide, you will learn how to:
+
+* Add product details and set a price.
+* Upload the downloadable file for your customers.
+* Manage different product variations if needed.
+
+By the end, you will be able to confidently sell and manage any downloadable item.
 
 ## Steps to Create a New Digital Product
 
@@ -33,26 +43,80 @@ Categorize and type your digital product for better organization.
 * **Product Types:**
     * Assign the product to one or more relevant product types. Ensure "Digital" is selected or added here. Click **"+ Add More Type"** to assign additional types.
 
-### 4. Select Payment Term
+### 4. Pricing & Variations
 
-This section will show the “One-time” type payment option. You can also choose the “Subscription” based payment type, depending on your needs, from the dropdown option.
+This section is where you will set the price for your digital product. FluentCart provides two main methods: **Simple** (for products with no variations) and **Simple Variations** (for products with different versions).
 
-#### One-Time Payment
+First, use the dropdown menu at the top right of the pricing section to select the pricing method that fits your product.
 
-* **Type Selection:** When [configuring product variations](/guide/product-types-creation/creating-physical-products#pricing-variations), ensure **"Digital"** is selected as the product type within the pricing modal for your variants.
-* **"Select Payment Term":** This will show **"One Time"** as the option for digital products.
-* **Price:** Set the selling price for this digital product variant.
-* **Compare at price:** (Optional) Enter a higher price that will be displayed as a strike-through price.
-* **Manage Profit/Cost:** Enter the **"Cost per item"** (if applicable, e.g., licensing fees you pay for components) to calculate **Profit** and **Margin** for this digital variant.
 
-#### Subscription
+#### Option A: Simple Pricing
 
-Set the selling price for the subscription base.
+Choose this option when your product is a single item that does not have different versions. Within Simple Pricing, you can choose between two payment terms.
 
-* **Interval:** Set the interval based on the subscription: daily, weekly, monthly, or yearly.
-* **Enable Installment payment:** If you have an installment charge for your digital product, then check this checkbox. After that, set the installment count and total price.
+**1. One-Time Payment**
 
-    ![Screenshot of One-Time Payment Pricing Modal](/guide/public/images/product-types-creation/creating-digital-product/Digital-product-4.png)
+Select **One Time** from the "Select Payment Term" dropdown for products that customers purchase with a single payment.
+
+* **Price:** Set the required selling price for the product.
+* **Compare at price:** (Optional) Enter a higher original price to show a discount.
+* **Manage profit/cost:** (Optional) Toggle this on to enter the item's cost for internal profit tracking.
+
+**2. Subscription Payment**
+
+Select **Subscription** for products that require recurring payments.
+
+* **Installment Price:** The amount for each recurring payment.
+* **Compare at price:** (Optional) A higher price to show a discount on each installment.
+* **Interval:** The billing frequency, such as monthly or yearly.
+* **Enable installment payment:** Check this box to set a fixed number of payments.
+* **Installment Count:** The total number of payments the customer will make.
+* **Total Price:** This automatically calculates the total cost based on the installment price and count.
+* **Setup fee:** (Optional) Toggle this on to add a one-time initial fee.
+* **Manage profit/cost:** (Optional) Toggle this to track your cost and profit margin on the subscription.
+
+![Gif of Digital Product Edit Screen (Simple Pricing)](/guide/public/images/product-types-creation/creating-digital-product/simple-price.gif) 
+---
+
+#### Option B: Simple Variations
+
+Choose this option when your product has multiple versions, like "Standard" and "Pro". This allows you to create a table of variations, each with its own pricing structure.
+
+**1. Adding and Managing Variations in the Table**
+
+* **To Add a New Variation:** Click the `+ Add more` button at the bottom to add a new row to the table.
+* **To Configure a Variation:** To set the price and other details for a specific variation, click the pencil icon in the "Action" column. This will open a detailed configuration sidebar.
+* **To Duplicate a Variation:** Click the three-dot icon in the "Action" column to get the option for duplicating the variation.
+
+**2. Configuring a Single Variation (Pencil Icon)**
+
+After clicking the pencil icon, a sidebar appears where you can set up the pricing for that specific version. You must choose a payment term: **One Time** or **Subscription**.
+
+**A. One-Time Payment for a Variation**
+
+This option is for a variation that is sold for a single payment.
+
+* **Title:** The name of the specific variation (e.g., "File Manager Pro").
+* **Select Payment Term:** Choose **One Time** from the dropdown menu.
+* **Price:** Set the selling price for this variation.
+* **Compare at price:** An optional higher price to show a discount.
+* **Manage profit/cost:** Toggle this on to enter the **Cost per item** and track the **Profit** and **Margin**.
+* **Image:** Upload a specific image for this variation.
+
+**B. Subscription Payment for a Variation**
+
+This option is for a variation that is sold on a recurring payment basis.
+
+* **Select Payment Term:** Choose **Subscription** from the dropdown menu.
+* **Price:** The price for each recurring payment.
+* **Compare at price:** An optional higher price to show a discount on the recurring payment.
+* **Interval:** The billing frequency (e.g., Yearly).
+* **Enable installment payment:** Check this to set a fixed number of payments.
+* **Setup fee:** Toggle this on to add a one-time initial fee for the subscription.
+* **Manage profit/cost:** Toggle this to track profit and margin.
+* **Image:** Upload a unique image for this subscription variation.
+
+   ![Gif of Digital Product Edit Screen (Simple VAriation)](/guide/public/images/product-types-creation/creating-digital-product/simple-variation2.gif) 
 
 ### 5. Downloadable Asset(s)
 
