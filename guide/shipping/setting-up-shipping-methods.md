@@ -19,7 +19,7 @@ Shipping methods define the options customers have for receiving their orders wi
 
 3.  **Configure Method Details**:
 
-    * **Method Name**: Enter a user-friendly name for this shipping option (e.g., "Standard Delivery", "2-Day Express", "Local Pickup at Store").
+    * **Method Name**: Enter a user-friendly name for this shipping option (e.g., "Standard Delivery").
     * **Method Type**: Choose one of the core types:
         * **Flat Rate**: A fixed cost applied to the order.
         * **Free Shipping**: Shipping cost is zero.
