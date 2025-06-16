@@ -7,8 +7,6 @@ The **Theme Setup** screen in FluentCart allows you to customize the visual appe
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings** in the left sidebar.
 2.  Click on the **"Theme Setup"** tab.
 
-    ![Screenshot of Theme Setup Tab](/guide/public/images/settings-configuration/theme-setup.png)
-
 ## Customizing Your Store's Appearance
 
 This section provides a range of color pickers and input fields to define your store's color scheme. For each color option, clicking the "**Add**" button will typically open a color selection tool.
@@ -20,6 +18,8 @@ This section provides a range of color pickers and input fields to define your s
 * **Border Color:** Sets the color for borders around various elements, such as product boxes or input fields.
 * **Divider Color:** Defines the color for dividing lines or separators between sections.
 * **Pricing Active Card BG (Background):** Sets the background color for pricing cards or elements that are in an active or highlighted state.
+
+    ![Screenshot of Theme Setup Tab](/guide/public/images/settings-configuration/theme-setup.png)
 
 ## Saving Your Settings
 
