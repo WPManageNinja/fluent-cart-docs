@@ -5,7 +5,38 @@ export default {
   showingLastUpdated: true,
   description: 'Comprehensive documentation for FluentCart - your all-in-one e-commerce solution.',
   base: '/',
+  sitemap: {
+    hostname: 'https://docs.fluentcart.com',
+    lastmodDateOnly: false,
+    transformItems: (items) => {
+      return items.map(item => ({
+        ...item,
+        changefreq: 'weekly',
+        priority: item.url === '/' ? 1.0 : 0.8
+      }))
+    }
+  },
   themeConfig: {
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: 'Search Documentation',
+            buttonAriaLabel: 'Search Documentation'
+          },
+          modal: {
+            noResultsText: 'No results for',
+            resetButtonTitle: 'Reset search',
+            footer: {
+              selectText: 'to select',
+              navigateText: 'to navigate',
+              closeText: 'to close'
+            }
+          }
+        }
+      }
+    },
     outline: [2, 3],
     nav: [
       { text: 'User Docs', link: '/guide/' },
