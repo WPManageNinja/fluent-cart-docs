@@ -9,7 +9,7 @@ The **Refunds Report** in FluentCart provides specific and detailed insights int
 
     ![Screenshot of Refunds Report Page](/guide/public/images/reporting-analytics/refunds-report.png)
 
-## Refund Line Chart
+## Refund Report Chart
 
 This chart visually represents refund trends over time.
 

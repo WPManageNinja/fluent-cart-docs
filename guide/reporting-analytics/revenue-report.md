@@ -20,11 +20,13 @@ This chart visually represents your store's revenue trends over time.
 
 The top section of the Revenue Report provides a summary of crucial financial metrics for your store:
 
+* **Year:** Shows the year for the income.
+* **Order Count:** The number of orders made by customers, either new ones or those who bought before.
 * **Gross Sales:** The total value of sales before any deductions.
 * **Taxes:** The total amount of taxes collected.
 * **Shipping:** The total amount collected for shipping.
 * **Discount:** The total amount of discounts applied.
-* **Refund:** The total monetary amount that has been refunded.
+* **Refunds:** The total monetary amount that has been refunded.
 * **Net Revenue:** The total revenue after all deductions, such as refunds and discounts.
 
 ## Data Timeline
