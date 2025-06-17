@@ -88,19 +88,19 @@ export default {
           collapsed: true,
           items: [
             {
-              text: 'Creating & Managing Product Categories',
-              link: '/guide/product-types-creation/creating-managing-product-categories/', // Link to its index.md
-            },
-            {
-              text: 'Creating & Managing Product Types',
-              link: '/guide/product-types-creation/creating-managing-product-types/', // Link to its index.md
-            },
-            { text: 'Creating Physical Products', link: '/guide/product-types-creation/creating-physical-products' },
-            { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
-            { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
-            { text: 'Managing Product Integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
-            { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
-            { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' }
+              text: 'Product Overview', // This becomes the parent for the dropdown
+              link: '/guide/product-types-creation/', // Link to the main overview page
+              items: [
+                { text: 'Creating & Managing Product Categories', link: '/guide/product-types-creation/creating-managing-product-categories/'},
+                { text: 'Creating & Managing Product Types',link: '/guide/product-types-creation/creating-managing-product-types/'}, 
+                { text: 'Creating Physical Products', link: '/guide/product-types-creation/creating-physical-products' },
+                { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
+                { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
+                { text: 'Managing Product Integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
+                { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
+                { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' }
+              ]
+            }
           ]
         },
         {
@@ -108,7 +108,7 @@ export default {
           collapsed: true,
           items: [
             {
-              text: 'Overview', // This becomes the parent for the dropdown
+              text: 'Customer Dashboard Overview', // This becomes the parent for the dropdown
               link: '/guide/customer-dashboard/', // Link to the main overview page
               items: [ // These are the children that will show in the dropdown
                 { text: 'Purchase History', link: '/guide/customer-dashboard/purchase-history' },
@@ -124,6 +124,7 @@ export default {
           text: 'Payments & Checkout',
           collapsed: true,
           items: [
+            { text: 'Payments & Checkout Overview', link: '/guide/payments-checkout/' },
             {
               text: 'Connecting Payment Gateways',
               link: '/guide/payments-checkout/connecting-payment-gateways/', // Link to its index.md
@@ -141,7 +142,7 @@ export default {
           collapsed: true,
           items: [
             {
-              text: 'Overview',
+              text: 'Shipping Overview',
               link: '/guide/shipping/',
               items: [
                 { text: 'Configuring Shipping Zones', link: '/guide/shipping/configuring-shipping-zones' },
