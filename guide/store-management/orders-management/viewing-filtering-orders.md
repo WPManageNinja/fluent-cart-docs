@@ -30,7 +30,7 @@ The Orders list is presented in a table format, with each row representing an in
 * **Items:** The number of distinct product items included in the order.
 * **Total:** The total monetary value of the order.
 * **Payment Status:** Indicates the current status of the payment.
-* **Status:** The current fulfillment or processing status of the order (e.g., "Processing").
+* **Status:** The current fulfillment or processing status of the order.
 * **Order Type:** Differentiates between various types of transactions.
 * **Action Icons:** On the far right of each row, you'll see icons that let you quickly print things like order details.
 
@@ -58,17 +58,20 @@ For more specific control, use the **Advanced Filter** option:
     
 2.  This will open a section with many filtering options, allowing you to search using specific details under two main categories:
 
-* **Order Property:** Filters related to the order itself, such as:
+**Order Property:** Filters related to the order itself, such as:
 * By order item
 * Order status
 * Payment Status
 * Order type
 * Payment Method
 
-* **Customer Property:** Filters related to the customer who placed the order, such as:
+**Customer Property:** Filters related to the customer who placed the order, such as:
 * Customer First name
 * Customer last name
 * Customer Email and more.
+
+**Labels:** Filter related to the Labels, such as:
+* Label Name
 
 3.  Apply your desired filters and click **"Apply"** to see the refined list of orders.
 4.  You can **"Reset"** the filters to view all orders again.
