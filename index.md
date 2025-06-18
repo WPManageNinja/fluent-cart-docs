@@ -9,42 +9,156 @@ pageClass: guide-home
 layout: home
 ---
 
-<section style="margin-top: 30px;" id="home-hero">
-  <h1>FluentCart Docs</h1>
-  <p>Learn how to use FluentCart and extend as well for your needs</p>
-</section>
+<div class="home-hero">
+  <div class="hero-content">
+    <h1>FluentCart Documentation</h1>
+    <p class="hero-description">Everything you need to build and manage your online store with FluentCart</p>
+    <div class="hero-badges">
+      <Badge type="tip">Version: Pre-Release Beta</Badge>
+      <Badge type="warning">Doc Status: Under Development</Badge>
+    </div>
+  </div>
+</div>
 
-<Badge type="tip">Version: Pre-Release Beta</Badge> <Badge type="warning">Doc Status: Under Development</Badge>
-
-
-<section id="home-get-started" class="home-content">
-  <div>
-    <h2>User Guides</h2>
-    <p>Learn how to setup your store, understanding different features, run your shop efficiently as a shop owner.</p>
+<div class="home-features">
+  <div class="feature-card">
+    <div class="feature-icon">🚀</div>
+    <h3>Getting Started</h3>
+    <p>Learn the basics of FluentCart and set up your first store</p>
+    <a href="/guide/getting-started/installation-activation.html" class="feature-link">Get Started →</a>
   </div>
 
-- **[Getting Started with FluentCart](/guide/getting-started/installation-activation.md)**
-- **[Store Management](/guide/store-management/index.md)**
-- **[Orders Management](/guide/store-management/orders-management/index.md)**
-- **[Customers Management](/guide/store-management/customers-management/index.md)**
-- **[Inventory Management](/guide/store-management/inventory-management/index.md)**
-- **[Inventory Management](/guide/store-management/inventory-management/index.md)**
-- **[Product Types & Categories](/guide/product-types-creation/index.md)**
-- **[Customer Dashboard](/guide/customer-dashboard/index.md)**
-- **[Payments & Checkout](/guide/payments-checkout/index.md)**
-- **[Shipping Overview](/guide/shipping/index.md)**
-- **[Marketing & Sales Tools](/guide/marketing-sales-tools/index.md)**
-- **[Reporting & Analytics](/guide/reporting-analytics/index.md)**
-- **[Store Settings & Configuration](/guide/settings-configuration/index.md)**
-- **[Troubleshooting & Support](/guide/troubleshooting-support/index.md)**
-</section>
+  <div class="feature-card">
+    <div class="feature-icon">🛍️</div>
+    <h3>Store Management</h3>
+    <p>Manage products, orders, and customers efficiently</p>
+    <a href="/guide/store-management/" class="feature-link">Learn More →</a>
+  </div>
 
-<section id="home-internals" class="home-content">
-  <div>
-    <h2>Developer Docs</h2>
-    <p>FluentCart offers numerous easy-to-use hooks, functions and PHP API to interact with it's data and underlying API. Learn more about them in the detailed sections</p>
+  <div class="feature-card">
+    <div class="feature-icon">📦</div>
+    <h3>Inventory & Products</h3>
+    <p>Handle inventory and create different product types</p>
+    <a href="/guide/product-types-creation/" class="feature-link">Explore →</a>
   </div>
-  <div>
-    <p>Developer docs will be available end of June or early July 2025</p>
+
+  <div class="feature-card">
+    <div class="feature-icon">💳</div>
+    <h3>Payments & Shipping</h3>
+    <p>Set up payment gateways and shipping methods</p>
+    <a href="/guide/payments-checkout/" class="feature-link">Configure →</a>
   </div>
-</section>
+
+  <div class="feature-card">
+    <div class="feature-icon">📊</div>
+    <h3>Analytics & Reports</h3>
+    <p>Track your store's performance and growth</p>
+    <a href="/guide/reporting-analytics/" class="feature-link">View Reports →</a>
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">🛠️</div>
+    <h3>Developer Docs</h3>
+    <p>Extend FluentCart with custom functionality</p>
+    <a href="/developer/" class="feature-link">Start Coding →</a>
+  </div>
+</div>
+
+<style>
+.home-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, var(--vp-c-bg-soft), var(--vp-c-bg));
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(120deg, var(--vp-c-brand), var(--vp-c-brand-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  color: var(--vp-c-text-2);
+  margin-bottom: 2rem;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.feature-card {
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--vp-c-border);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--vp-c-text-1);
+}
+
+.feature-card p {
+  color: var(--vp-c-text-2);
+  margin-bottom: 1.5rem;
+}
+
+.feature-link {
+  color: var(--vp-c-brand);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.feature-link:hover {
+  color: var(--vp-c-brand-light);
+}
+
+@media (max-width: 768px) {
+  .home-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+  }
+}
+</style>
