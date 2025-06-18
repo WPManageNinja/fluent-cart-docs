@@ -81,3 +81,6 @@ The report also includes various other charts and data visualizations for in-dep
 
 * A **"View All Orders"** link is typically available, allowing you to quickly navigate to the main [Orders Management](/guide/store-management/orders-management/) screen for more detailed order information.
 
+## Search Filter 
+
+A general **"Search Filter"** is available at the top right. Here, you can search using an order's status or its payment status. This helps you quickly find the exact information you need in the report.

@@ -24,7 +24,7 @@ This chart shows a picture of how your product sales trends have changed over ti
 
 ## Product Performance Comparison ##
 
-This important section allows you to compare the performance of your products over different time periods.
+This is an important section that allows you to compare the performance of your products over different time periods.
 
 You can select **Year** and **Month** for two different periods to compare them side-by-side. For example, you might compare sales from "Year 2024, Month May" against "Year 2025, Month May" to see how your products are doing year-over-year or month-over-month.
 
