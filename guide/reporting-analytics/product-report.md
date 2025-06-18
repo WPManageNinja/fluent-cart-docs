@@ -7,8 +7,6 @@ The **Product Report** in FluentCart provides focused analytics on the performan
 1.  Go to your WordPress dashboard, navigate to **FluentCart Pro > Reports**.
 2.  Click on the **"Product"** tab to access the Product Report.
 
-    ![Screenshot of Product Report Page](/guide/public/images/reporting-analytics/product-report.png)
-
 ## Key Product Performance Indicators (KPIs)
 
 The top section of the Product Report provides a summary of crucial product-related metrics:
@@ -17,6 +15,8 @@ The top section of the Product Report provides a summary of crucial product-rela
 * **Customer Count:** The total number of customers who purchased products.
 * **Gross Sales:** The total value of sales before any deductions.
 * **Avg. Selling Price:** The average selling price of all products.
+
+    ![Screenshot of Product Report Page](/guide/public/images/reporting-analytics/product-report.png)
 
 ## Product Report Chart
 

@@ -7,13 +7,11 @@ The **Orders Report** in FluentCart provides in-depth analytics specifically foc
 1.  Go to WordPress dashboard, navigate to **FluentCart Pro > Reports**.
 2.  Click on the **"Orders"** tab to access the Orders Report.
 
-    ![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-report.png)
-
 ## Order Report Chart
 
 This chart visually represents order trends over time.
 
-* **Timeline Options:** You can view data on a "Monthly" or "Yearly" timeline.
+* **Timeline Options:** You can view data on a "Monthly" , "Yearly" timeline, or "Custom Date" selection.
 * **Metrics Displayed:** Typically tracks "Net Revenue", "Gross Sales", and "Orders" over the selected period.
 
 ## Average Monthly Performance
@@ -25,7 +23,7 @@ This section shows you your store's average numbers for each month. TIt also hel
 * **Avg. Monthly Orders:** This shows the average number of orders your store gets each month.
 * **Avg. Monthly Items:** This shows the average number of single product items sold each month.
 
-Below each number, you'll also see a percentage (like 100% more or 0%) indicating how much this average has grown or changed compared to a previous period.
+   ![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-report.png)
 
 ## Key Order Performance Indicators
 
@@ -51,6 +49,8 @@ This section provides insights into the behavior of your new and returning custo
 * **"Show Percentages" Toggle:** Check this checkbox of "Show Percentage" that allows you to view these metrics as percentages.
 * **Export:** Click the **Export** button to download Order Report CSV file.
 
+   ![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-group-by.png)
+
 ## Orders Grouped By
 
 This section breaks down order data based on specific criteria, offering granular insights.
@@ -75,11 +75,7 @@ The report also includes various other charts and data visualizations for in-dep
 * **Average Order Gross Timeline:** Tracks the average gross value of orders over time.
 * **Average Order Items Timeline:** Tracks the average number of items per order over time.
 
-![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-report-by.png)
-
-## Navigating to All Orders
-
-* A **"View All Orders"** link is typically available, allowing you to quickly navigate to the main [Orders Management](/guide/store-management/orders-management/) screen for more detailed order information.
+   ![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-report-by.png)
 
 ## Search Filter 
 

@@ -7,8 +7,6 @@ The **Refunds Report** in FluentCart provides specific and detailed insights int
 1.  Go to your WordPress dashboard, navigate to **FluentCart Pro > Reports**.
 2.  Click on the **"Refunds"** tab to access the Refunds Report.
 
-    ![Screenshot of Refunds Report Page](/guide/public/images/reporting-analytics/refunds-report.png)
-
 ## Refund Report Chart
 
 This chart visually represents refund trends over time.
@@ -24,6 +22,8 @@ The top section of the Refunds Report provides a summary of crucial refund-relat
 * **Avg. Refunded Amount:** The average monetary amount refunded per transaction.
 * **Total Refunded Amount:** The cumulative sum of all money refunded.
 * **Refund Rate:** Indicates the rate at which refunds occur.
+
+    ![Screenshot of Refunds Report Page](/guide/public/images/reporting-analytics/refunds-report.png)
 
 ## Data Timeline
 

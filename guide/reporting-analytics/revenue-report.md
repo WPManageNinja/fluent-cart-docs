@@ -7,13 +7,11 @@ The **Revenue Report** in FluentCart provides in-depth financial insights into y
 1.  Go to WordPress dashboard, navigate to **FluentCart Pro > Reports**.
 2.  Click on the **"Revenue"** tab to access the Revenue Report.
 
-    ![Screenshot of Revenue Report Page](/guide/public/images/reporting-analytics/revenue-report.png)
-
 ## Revenue Report Chart
 
 This chart visually represents your store's revenue trends over time.
 
-* **Timeline Options:** You can view data on a "Monthly" or "Yearly" timeline.
+* **Timeline Options:** You can view data on a "Monthly" , "Yearly" timeline or "Custom Date" selection.
 * **Metrics Tracked:** The chart primarily tracks "Net Revenue".
 
 ## Key Financial Indicators
@@ -29,12 +27,7 @@ The top section of the Revenue Report provides a summary of crucial financial me
 * **Refunds:** The total monetary amount that has been refunded.
 * **Net Revenue:** The total revenue after all deductions, such as refunds and discounts.
 
-## Data Timeline
-
-This table summarizes monthly revenue data, providing a tabular breakdown of your financial performance.
-
-* **Columns:** Includes "Month," "Order Count," "Gross Sales," "Taxes," "Shipping," "Discount," "Refunds," and "Net Revenue".
-* **Example:** For a given period, it might show 40 orders, $1080.9 Gross Sales, $0 Taxes, $0 Shipping, $213.52 Discount, $159.04 Refunds, and $708.34 Net Revenue.
+    ![Screenshot of Revenue Report Page](/guide/public/images/reporting-analytics/revenue-report.png)
 
 ## Net Revenue Grouped By
 
@@ -43,6 +36,8 @@ This section allows you to view your net revenue based on different criteria. Us
 * **Billing Country:** When you choose "Billing Country," the report shows how much revenue comes from each country based on billing information.
     * This table includes "Order Count," "Gross Sales," "Taxes," "Shipping," "Discount," "Refunds," and "Net Revenue" for each country.
     * If no data is present for this grouping, it will indicate "No Data."
+
+    ![Screenshot of Revenue Report Page](/guide/public/images/reporting-analytics/net-revenue.png)
 
 ## Exporting Report Data
 
