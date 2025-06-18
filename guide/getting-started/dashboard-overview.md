@@ -37,6 +37,8 @@ This log shows a list of the newest important things that happened in your store
 
 * **Example Activities:** Order Created, Payment Paid, Order Status Updated, Order Refunded, Shipping Status Updated, License Upgrade.
 
+![Screenshot of Dashboard Overview - Getting Started](/guide/public/images/getting-started/dashboard-overview.png)
+
 ### 5. Recent Orders
 
 A snapshot of your most recent customer orders, allowing for quick review.
@@ -49,6 +51,8 @@ A snapshot of your most recent customer orders, allowing for quick review.
 This section highlights orders that are still awaiting fulfillment, helping you prioritize shipping and delivery tasks.
 
 * Similar to Recent Orders, but focused on orders needing action.
+
+![Screenshot of Getting Started](/guide/public/images/getting-started/order-heat-map.png)
 
 ### 7. Order Heat Map
 
