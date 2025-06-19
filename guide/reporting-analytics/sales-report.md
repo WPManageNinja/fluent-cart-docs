@@ -19,8 +19,10 @@ At the top of this **Sales Dashboard Overview**, you'll find key numbers that up
 * **Total Refunds:** The total number of times you have given money back.
 * **Average Order Net:** The average money earned per order after discounts and refunds.
 * **Average Order Items:** The average number of products in each order.
-* **Average Customer Orders:** The average number of orders each customer places.
+* **Average Customer Orders:** The average number of orders each customer places. 
 * **Average Customer LTV (Lifetime Value):**  The average money a customer might spend with your store over time.
+
+    ![Screenshot of Sales Report Page](/guide/public/images/reporting-analytics/sales-report.png)
 
 ## Top Sold Products
 
