@@ -171,6 +171,7 @@ export default {
           collapsed: true,
           items: [
             { text: 'Reports Dashboard Overview', link: '/guide/reporting-analytics/reports-dashboard-overview' },
+            { text: 'Sales Report', link: '/guide/reporting-analytics/sales-report' },
             { text: 'Orders Report', link: '/guide/reporting-analytics/orders-report' },
             { text: 'Revenue Report', link: '/guide/reporting-analytics/revenue-report' },
             { text: 'Refunds Report', link: '/guide/reporting-analytics/refunds-report' },
@@ -182,12 +183,17 @@ export default {
           text: 'Settings & Configuration',
           collapsed: true,
           items: [
-            { text: 'General Settings (Store Setup)', link: '/guide/settings-configuration/general-settings' },
-            { text: 'Pages Setup', link: '/guide/settings-configuration/pages-setup' },
-            { text: 'Single Product & Order Setup', link: '/guide/settings-configuration/single-product-order-setup' },
-            { text: 'Theme Setup', link: '/guide/settings-configuration/theme-setup' },
-            { text: 'Additional Info Settings', link: '/guide/settings-configuration/additional-info-settings' },
+            { text: 'Store Settings', link: '/guide/settings-configuration/store-settings',   
+              items: [
+                { text: 'Pages Setup', link: '/guide/settings-configuration/pages-setup' },
+                { text: 'Single Product & Order Setup', link: '/guide/settings-configuration/single-product-order-setup' },
+                { text: 'Features & Addons', link: '/guide/settings-configuration/features-addons' },
+                { text: 'Theme Setup', link: '/guide/settings-configuration/theme-setup' },
+                { text: 'Additional Info Settings', link: '/guide/settings-configuration/additional-info-settings' },
+              ]},
             { text: 'Payment Settings Overview', link: '/guide/settings-configuration/payment-settings' },
+            { text: 'Invoice & Packing Settings', link: '/guide/settings-configuration/invoice-packing-settings' },
+            { text: 'Customizing Receipt Template', link: '/guide/settings-configuration/customizing-receipt-template' },
             {
               text: 'Email Notifications',
               link: '/guide/settings-configuration/email-notifications/', // Link to its index.md

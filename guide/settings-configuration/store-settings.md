@@ -1,6 +1,6 @@
- # General Settings (Store Setup)
+ # Store Settings
 
-The **General Settings (Store Setup)** screen is where you configure the fundamental information about your FluentCart store. This includes your store's name, logo, physical address, and essential currency settings, all of which are crucial for the basic operation and branding of your online business.
+The **Store Settings** screen is where you configure the fundamental information about your FluentCart store. This includes your store's name, logo, physical address, and essential currency settings, all of which are crucial for the basic operation and branding of your online business.
 
 ## Accessing General Settings
 
