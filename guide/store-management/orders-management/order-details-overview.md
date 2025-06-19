@@ -52,13 +52,9 @@ This table provides a log of all payment transactions related to this specific o
 * **Date:** The date and time of the transaction.
 * **Payment Method:** The method used for the transaction.
 * **Total:** The amount of the individual transaction.
-<<<<<<< HEAD
 * **Status:** The status of the transaction (e.g., "Completed", "Refunded").
-
-=======
-* **Status:** The status of the transaction.
 * **Payment Gateway Link:** From here, you can often navigate directly to the respective payment gateway (e.g., Stripe or PayPal) to view detailed transaction information there.
->>>>>>> 1e3e0b9b2bef14497063cca0190b15771ec86b8a
+
 
 ### 5. Notes
 
