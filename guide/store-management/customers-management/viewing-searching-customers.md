@@ -34,6 +34,4 @@ You can quickly find specific customers using the search bar available on the Cu
 At the bottom of the customer list, you'll find pagination controls that allow you to navigate through larger customer databases.
 
 * **Page 1 of X:** Shows your current page out of the total number of pages. 
-* **X/page:** Allows you to select how many customer records are displayed per page (e.g., "10/page"). 
-* **Total Y:** Indicates the total number of customers in your store (e.g., "Total 2"). 
-
+* **X/page:** Allows you to select how many customer records are displayed per page (e.g., "10/page").

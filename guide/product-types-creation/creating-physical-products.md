@@ -60,6 +60,7 @@ You will see the following fields:
 * **Price:** (Required) The main selling price for the product.
 * **Compare at price:** (Optional) An original or higher price that will be shown with a strikethrough to indicate a sale.
 * **Manage profit/cost:** (Optional) Toggle this on to enter the cost of the item. FluentCart will use this to calculate your profit and margin for internal tracking.
+* **Direct Checkout:** A unique URL that takes a customer directly to the checkout page with a specific product variation already added to their cart.
 
 ![Screenshot of Simple Price](/guide/public/images/product-types-creation/Creating-Physical-Products/simple-price.gif)
 
@@ -74,7 +75,7 @@ This will display a table where each row is a single variation.
 * **Price:** Set the specific price for this individual variation.
 * **Compare at price:** (Optional) Set a sale price for this specific variation.
 * **Action:** This column contains icons to manage each variation row.
-    * **Edit Icon (Pencil):** Click this to edit the variation's details in-line.
+    * **Edit Icon (Pencil):** Click this to edit the variation's details in-line.    
     * **More Options (Three Dots):** Click this to open a menu with more options:
         * **Skip inventory:** Check this box if you do not want to track stock for this specific variation.
         * **Duplicate:** Click this to create an exact copy of this variation row.
