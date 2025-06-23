@@ -17,7 +17,7 @@ The Order Details screen is organized into several panels, each providing specif
 
 At the top of the screen, you'll find the order's primary identification and quick action buttons.
 
-* **Order ID:** The unique identifier for the order (e.g., `#1001`).
+* **Order ID:** The unique identifier for the order.
 * **Order Status:** The current status of the order.
 * **Refund Button:** Initiates the [refund process](/guide/store-management/orders-management/processing-refunds) for the order.
 * **Edit Button:** Allows you to enter [edit mode for the order](/guide/store-management/orders-management/editing-existing-orders).
@@ -37,23 +37,21 @@ This section lists all the products included in the order.
 Provides a summary of the order's financial aspects, including payments received and any outstanding amounts.
 
 * **Payment:** Indicates the payment method used.
-* **Coupons:** Shows if any coupons were applied and their discount value.
 * **Subtotal:** The total price of all items before taxes, shipping, or discounts.
+* **Total:**  The total price of all the products.
 * **Total Paid:** The amount already paid by the customer.
 * **Net Payment:** The final amount after all deductions and payments.
-* **Total Due:**  If there's any pending amount, it will be displayed here.
 
 ### 4. Transaction Details
 
 This table provides a log of all payment transactions related to this specific order, including both payments and refunds.
 
 * **ID:** The transaction ID.
-* **Gateway ID:** The unique ID from the payment gateway (e.g., Stripe, PayPal).
+* **Gateway ID:** The unique ID from the payment gateway.
 * **Date:** The date and time of the transaction.
 * **Payment Method:** The method used for the transaction.
 * **Total:** The amount of the individual transaction.
-* **Status:** The status of the transaction (e.g., "Completed", "Refunded").
-* **Payment Gateway Link:** From here, you can often navigate directly to the respective payment gateway (e.g., Stripe or PayPal) to view detailed transaction information there.
+* **Status:** The status of the transaction.
 
 
 ### 5. Notes

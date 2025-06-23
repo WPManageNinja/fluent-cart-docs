@@ -30,7 +30,7 @@ This screen is divided into several sections that allow you to define exactly wh
 
 **1. Basic Information**
 
-* **Name:** Give your automation a descriptive name for internal reference (e.g., "Add New Customers to Newsletter").
+* **Name:** Give your automation a descriptive name for internal reference.
 * **List:** From the dropdown, select the target FluentCRM list where you want to add the new contacts.
 
 **2. Map Fields**
