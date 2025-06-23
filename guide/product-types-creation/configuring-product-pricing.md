@@ -18,6 +18,8 @@ Select **One Time** from the "Select Payment Term" dropdown for products that cu
 
 * **Manage profit/cost:** (Optional) Enable this toggle to enter the **Cost per item**. FluentCart will use this to automatically calculate and display the **Profit** and **Margin**.
 
+  ![Screenshot of Product Types List Page](/guide/public/images/product-types-creation/product-pricing/one-time-payment.png)
+
 #### B. Subscription Payment
 
 Select **Subscription** for products that require recurring payments.
@@ -38,6 +40,8 @@ Select **Subscription** for products that require recurring payments.
 
 * **Manage profit/cost:** (Optional) Toggle this on to track the cost and profit margin for the subscription.
 
+  ![Screenshot of Product Types List Page](/guide/public/images/product-types-creation/product-pricing/subscription-payment.png)
+
 ## Option 2: Simple Variations
 
 Choose this method for products that come in multiple versions, such as different sizes for a t-shirt or different license tiers for software. This method allows you to create a table of variations, each with its own unique pricing.
@@ -48,7 +52,9 @@ Choose this method for products that come in multiple versions, such as differen
 
 * **Configure a Variation:** Click the **pencil icon** in the "Action" column to open a sidebar where you can configure the pricing for that specific variation.
 
-* **More Actions:** Click the **three-dot icon** to access additional options like **Duplicate**, get a **Direct Checkout** link, or **Delete** the variation.
+* **More Actions:** Click the **three-dot icon** to access additional options like **Duplicate**, get a **Direct Checkout** link, **Delete** the variation, or **Skip inventory** option. 
+
+  ![Screenshot of Product Types pricing Page](/guide/public/images/product-types-creation/product-pricing/simple-variation.png)
 
 #### Configuring an Individual Variation
 
@@ -87,5 +93,7 @@ After clicking the pencil icon, a sidebar appears where you can configure the pr
 * **Manage profit/cost:** (Optional) Track the cost and profit.
 
 * **Image:** Upload a unique image for this variation.
+
+  ![Screenshot of Product Types pricing Page](/guide/public/images/product-types-creation/product-pricing/configure-indivisual-payment.png)
 
 After configuring a variation, click the **Update Price** button to save its settings.
