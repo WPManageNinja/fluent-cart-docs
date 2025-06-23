@@ -13,12 +13,12 @@ The **Products** screen in FluentCart is your central management hub for all ite
 
 The Products list table provides key information for each product at a glance: 
 
-* **Products:** Displays the product's name and its unique ID (e.g., "Fluent Forms #59", "Purple Air Max trainers #33"). 
+* **Products:** Displays the product's name and its unique ID (e.g.,"Purple Air Max trainers #33"). 
 * **Type:** Indicates the fundamental nature of the product (e.g., "Digital", "Physical"). 
 * **Variation:** Shows if the product has variations and their type (e.g., "Simple Variations"). 
-* **Price:** Displays the product's selling price or a price range if it has variations (e.g., "$10-$399", "$8-$10"). 
-* **Stock:** Shows the current stock level for the product or its variants (e.g., "Unlimited", "495"). 
-* **Status:** Indicates the product's publishing status (e.g., "Draft", "Publish"). 
+* **Price:** Displays the product's selling price or a price range if it has variations. 
+* **Stock:** Shows the current stock level for the product or its variants. 
+* **Status:** Indicates the product's publishing status. 
 * **Date:** The date and time the product was created or last updated. 
 * **Actions:** (Implied) Typically includes icons or links for editing, viewing, or deleting the product.
 
@@ -66,6 +66,6 @@ For more granular control, use the **Advanced Filter** option:
 At the bottom of the product list, pagination controls allow you to navigate through larger product catalogs. 
 
 * **Page 1 of X:** Shows your current page out of the total number of pages. 
-* **X/page:** Allows you to select how many products are displayed per page (e.g., "10/page"). 
+* **X/page:** Allows you to select how many products are displayed per page. 
 * **Total Y:** Indicates the total number of products in your store. 
 
