@@ -48,6 +48,7 @@ export default {
           text: 'Getting Started',
           collapsed: true,
           items: [
+            { text: 'Introduction to FluentCart', link: '/guide/getting-started/introduction-fluentcart' },
             { text: 'Installation & Activation', link: '/guide/getting-started/installation-activation' },
             { text: 'Initial Setup Wizard', link: '/guide/getting-started/initial-setup-wizard' },
             { text: 'Admin Dashboard', link: '/guide/getting-started/dashboard-overview' }
@@ -96,6 +97,7 @@ export default {
                 { text: 'Creating Physical Products', link: '/guide/product-types-creation/creating-physical-products' },
                 { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
                 { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
+                { text: 'Configuring Product Pricing', link: '/guide/product-types-creation/configuring-product-pricing' },
                 { text: 'Managing Product Integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
                 { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
                 { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' }
