@@ -75,7 +75,7 @@ This will display a table where each row is a single variation.
 * **Price:** Set the specific price for this individual variation.
 * **Compare at price:** (Optional) Set a sale price for this specific variation.
 * **Action:** This column contains icons to manage each variation row.
-    * **Edit Icon (Pencil):** Click this to edit the variation's details in-line.    
+    * **Edit Icon (Pencil):** Click this to edit the pricing variation's details.    
     * **More Options (Three Dots):** Click this to open a menu with more options:
         * **Skip inventory:** Check this box if you do not want to track stock for this specific variation.
         * **Duplicate:** Click this to create an exact copy of this variation row.
