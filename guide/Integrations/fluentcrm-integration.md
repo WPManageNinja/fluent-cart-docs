@@ -9,12 +9,20 @@ This integration is handled through FluentCart's **Checkout Actions** feature. T
 To begin, you need to access the main Checkout Actions screen.
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
-2.  Click on the **Checkout Actions** tab from the left-hand menu.
+2.  Once you're there, look for the **Checkout Actions** tab on the left side menu. Click it, and then hit the **Configure Modules** button.
+
+  ![Screenshot of Product Types pricing Page](/guide/public/images/Integrations/checkout-actions-fluentcart.png)
+
+Now, you'll see options for different tools you can connect. If you haven't added FluentCRM yet, click the **Install FluentCRM** button. But if you already have FluentCRM on your site and it's ready to go, just click the **Manage** button next to it instead.
+
+  ![Screenshot of Product Types pricing Page](/guide/public/images/Integrations/install-fluentCrm.png)
 
 #### Step 2: Create a New FluentCRM Feed
 
 1.  On the Checkout Actions screen, click the **Add Integration** button at the top right.
 2.  Select **FluentCRM Feed** from the dropdown menu. This will take you to the configuration screen for the new feed.
+
+  ![Screenshot of Product Types pricing Page](/guide/public/images/Integrations/add-integration.png)
 
 #### Step 3: Configure the Feed Settings
 
@@ -37,6 +45,8 @@ This is where you connect the customer data collected during checkout to the cor
 The **Select** button dropdown next to each field allows you to choose the corresponding shortcode. These shortcodes pull data directly from the customer's order and are organized into helpful categories like "Customer," "Payments," and "General." For example, to map the customer's email, you would choose **Email Address** from the "Customer" category, which inserts the `{order.billing_email}` shortcode.
 :::
 
+  ![Screenshot of Product Types pricing Page](/guide/public/images/Integrations/fluentcrm-integration-feed.png)
+
 **3. Additional Information**
 
 This section provides more advanced options for organizing and managing your new contacts.
@@ -46,8 +56,8 @@ This section provides more advanced options for organizing and managing your new
     * **Select the Tag:** Choose the tag you want to apply from the dropdown menu (e.g., "NYC Customers").
     * **Set the Condition:** Create a rule that must be met for the tag to be applied.
         * **If:** Select a data point (shortcode) from the dropdown, such as `{order.billing.city}`.
-        * **Operator:** Choose a logical operator (e.g., `equals`, `not equals`, `contains`).
-        * **Value:** Enter the value to check against (e.g., `New York`).
+        * **Operator:** Choose a logical operator.
+        * **Value:** Enter the value to check against.
     * **Add More Conditions:** Click the **plus icon (+)** to add another rule. The tag will only be applied if *all* conditions are met.
 * **Note:** Add a static note that will be attached to the contact's profile in FluentCRM.
 * **Double Opt-in:** Enable this to send a confirmation email to the user before they become an active subscriber on your list.
