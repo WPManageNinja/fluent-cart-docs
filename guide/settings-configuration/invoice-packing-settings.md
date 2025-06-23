@@ -27,7 +27,7 @@ On this page, you will find a series of editors for different types of fulfillme
 
 The customization process is identical for each of the five templates. Select the template you wish to edit and use the provided tools.
 
-* **Direct Editing:** You can directly type in the editor to add custom messages, format text (bold, italics, etc.), or adjust the layout.
+* **Direct Editing:** You can directly type in the editor to add custom messages, format text, or adjust the layout.
 * **Advanced Editing:** For precise control, you can switch between the **Visual** editor and the **Code** editor to work directly with the template's HTML.
 * **Using Shortcodes:** To automatically include order-specific details like customer names, addresses, or order IDs, use shortcodes.
     1.  Place your cursor in the editor where you want the information to appear.
