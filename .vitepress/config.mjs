@@ -169,6 +169,13 @@ export default {
           ]
         },
         {
+          text: 'Integrations',
+          collapsed: true,
+          items: [
+            { text: 'FluentCRM Integration', link: '/guide/integrations/fluentcrm-integration' },
+          ]
+        },
+        {
           text: 'Reporting & Analytics',
           collapsed: true,
           items: [
