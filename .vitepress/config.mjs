@@ -1,4 +1,3 @@
-
 export default {
   ignoreDeadLinks: true,
   title: ' ',
@@ -16,7 +15,6 @@ export default {
       }))
     }
   },
-
   themeConfig: {
     search: {
       provider: 'local',
@@ -40,7 +38,7 @@ export default {
     },
     outline: [2, 3],
     nav: [
-      { text: 'User Doc', link: '/guide/' },
+      { text: 'User Docs', link: '/guide/' },
       { text: 'Dev Docs', link: '/developer/' },
       { text: 'Website', link: 'https://fluentcart.com', target: '_blank', rel: 'noopener' }
     ],
@@ -95,7 +93,7 @@ export default {
               link: '/guide/product-types-creation/', // Link to the main overview page
               items: [
                 { text: 'Creating & Managing Product Categories', link: '/guide/product-types-creation/creating-managing-product-categories/'},
-                { text: 'Creating & Managing Product Types',link: '/guide/product-types-creation/creating-managing-product-types/'}, 
+                { text: 'Creating & Managing Product Types',link: '/guide/product-types-creation/creating-managing-product-types/'},
                 { text: 'Creating Physical Products', link: '/guide/product-types-creation/creating-physical-products' },
                 { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
                 { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
@@ -194,7 +192,7 @@ export default {
           text: 'Settings & Configuration',
           collapsed: true,
           items: [
-            { text: 'Store Settings', link: '/guide/settings-configuration/store-settings',   
+            { text: 'Store Settings', link: '/guide/settings-configuration/store-settings',
               items: [
                 { text: 'Pages Setup', link: '/guide/settings-configuration/pages-setup' },
                 { text: 'Single Product & Order Setup', link: '/guide/settings-configuration/single-product-order-setup' },
@@ -240,7 +238,7 @@ export default {
     },
   },
   head: [
-      ['link', { rel: 'icon', href: '/icon.webp' }],
-      ['meta', { property: 'og:image', content: 'https://fluentcart.com/wp-content/uploads/2025/06/fluent-cart-featured.png' }],
+    ['link', { rel: 'icon', href: '/icon.webp' }],
+    ['meta', { property: 'og:image', content: 'https://fluentcart.com/wp-content/uploads/2025/06/fluent-cart-featured.png' }],
   ]
 }
