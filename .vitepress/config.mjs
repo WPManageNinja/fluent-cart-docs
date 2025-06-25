@@ -40,7 +40,7 @@ export default {
     },
     outline: [2, 3],
     nav: [
-      { text: 'User Docs', link: '/guide/' },
+      { text: 'User Doc', link: '/guide/' },
       { text: 'Dev Docs', link: '/developer/' },
       { text: 'Website', link: 'https://fluentcart.com', target: '_blank', rel: 'noopener' }
     ],
