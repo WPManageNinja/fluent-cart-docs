@@ -18,11 +18,7 @@ export default {
       }))
     }
   },
-  markdown: {
-    config: (md) => {
-      md.use(zoomablePlugin)
-    }
-  },
+
   themeConfig: {
     search: {
       provider: 'local',
