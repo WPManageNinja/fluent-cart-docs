@@ -1,5 +1,4 @@
 
-import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
 
 export default {
   ignoreDeadLinks: true,
