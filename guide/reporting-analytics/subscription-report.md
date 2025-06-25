@@ -7,7 +7,7 @@ The **Subscription Report** in FluentCart provides key analytics and insights in
 1.  Go to your WordPress dashboard, navigate to **FluentCart Pro > Reports**.
 2.  Click on the **"Subscription"** tab to access the Subscription Report.
 
-    ![Screenshot of Refunds Report Page](@images/reporting-analytics/subscription-report.png)
+    <!-- ![Screenshot of Refunds Report Page](@images/reporting-analytics/subscription-report.png) -->
 
 ## Retention Chart
 
