@@ -1,4 +1,7 @@
-export default {
+import { defineConfig } from 'vitepress'
+import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
+
+export default defineConfig({
   ignoreDeadLinks: true,
   title: ' ',
   titleTemplate: ':title - FluentCart Documentation',
@@ -13,6 +16,11 @@ export default {
         url: item.url,
         lastmod: item.lastmod
       }))
+    }
+  },
+  markdown: {
+    config: (md) => {
+      md.use(zoomablePlugin)
     }
   },
   themeConfig: {
@@ -241,4 +249,4 @@ export default {
       ['link', { rel: 'icon', href: '/icon.webp' }],
       ['meta', { property: 'og:image', content: 'https://fluentcart.com/wp-content/uploads/2025/06/fluent-cart-featured.png' }],
   ]
-}
+})
