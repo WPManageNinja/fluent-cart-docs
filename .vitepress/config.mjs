@@ -1,7 +1,7 @@
-import { defineConfig } from 'vitepress'
+
 import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
 
-export default defineConfig({
+export default {
   ignoreDeadLinks: true,
   title: ' ',
   titleTemplate: ':title - FluentCart Documentation',
@@ -249,4 +249,4 @@ export default defineConfig({
       ['link', { rel: 'icon', href: '/icon.webp' }],
       ['meta', { property: 'og:image', content: 'https://fluentcart.com/wp-content/uploads/2025/06/fluent-cart-featured.png' }],
   ]
-})
+}
