@@ -20,7 +20,7 @@ The **Mailing Settings** section allows you to configure the global sender detai
 * **From Name:** Enter the name you want your customers to see as the sender (e.g., "Your Store Name").
 * **From Email:** Provide the official email address from which the emails will be sent. Ensure this is a valid, configured email address on your domain to prevent emails from going to spam.
 * **Reply to Name (Optional):** If you want replies to be addressed to a different name, enter it here. If left blank, it will default to the "From Name".
-* **Reply to email (optional):** If you want to receive customer replies at a different email address (like `support@yourstore.com`), enter it here. This routes replies to a specific inbox instead of the "From Email".
+* **Reply to email (optional):** If you want to receive customer replies at a different email address (like `sucom`), enter it here. This routes replies to a specific inbox instead of the "From Email".
 * **Email Footer:** Use the rich text editor to create a footer that will be appended to all outgoing emails. It is highly recommended to include your business name and address for compliance. You can also use the **Add ShortCodes** dropdown to insert dynamic content.
 
  ![Screenshot of Mailing Settings](/guide/public/images/settings-configuration/email-notifications/email-notifications-mailing.png)

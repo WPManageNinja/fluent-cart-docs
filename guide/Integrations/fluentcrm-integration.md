@@ -11,18 +11,18 @@ To begin, you need to access the main Checkout Actions screen.
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
 2.  Once you're there, look for the **Checkout Actions** tab on the left side menu. Click it, and then hit the **Configure Modules** button.
 
-  ![Screenshot of Product Types pricing Page](/guide/public/images/Integrations/checkout-actions-fluentcart.png)
+  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/checkout-actions-fluentcart.png)
 
 Now, you'll see options for different tools you can connect. If you haven't added FluentCRM yet, click the **Install FluentCRM** button. But if you already have FluentCRM on your site and it's ready to go, just click the **Manage** button next to it instead.
 
-  ![Screenshot of Product Types pricing Page](/guide/public/images/Integrations/install-fluentCrm.png)
+  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/install-fluentCrm.png)
 
 #### Step 2: Create a New FluentCRM Feed
 
 1.  On the Checkout Actions screen, click the **Add Integration** button at the top right.
 2.  Select **FluentCRM Feed** from the dropdown menu. This will take you to the configuration screen for the new feed.
 
-  ![Screenshot of Product Types pricing Page](/guide/public/images/Integrations/add-integration.png)
+  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/add-integration.png)
 
 #### Step 3: Configure the Feed Settings
 
@@ -45,7 +45,7 @@ This is where you connect the customer data collected during checkout to the cor
 The **Select** button dropdown next to each field allows you to choose the corresponding shortcode. These shortcodes pull data directly from the customer's order and are organized into helpful categories like "Customer," "Payments," and "General." For example, to map the customer's email, you would choose **Email Address** from the "Customer" category, which inserts the `{order.billing_email}` shortcode.
 :::
 
-  ![Screenshot of Product Types pricing Page](/guide/public/images/Integrations/fluentcrm-integration-feed.png)
+  ![Screenshot of Fluentcrm Integration Page](/guide/public/images/Integrations/fluentcrm-integration-feed.png)
 
 **3. Additional Information**
 
