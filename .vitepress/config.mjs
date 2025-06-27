@@ -9,7 +9,7 @@ export default defineConfig({
   showingLastUpdated: true,
   description: 'Comprehensive documentation for FluentCart - your all-in-one e-commerce solution.',
   
-  transformPageData: (pageData) => {
+  transformPageData: (pageData, { siteConfig }) => {
     // Initialize the "head" frontmatter if it doesn't exist.
     pageData.frontmatter.head ??= []
 
@@ -19,13 +19,50 @@ export default defineConfig({
       withoutTrailingSlash(pageData.filePath.replace(/(index)?\.md$/, ''))
     )
 
+    // Generate breadcrumb path
+    const pathSegments = pageData.relativePath.split('/')
+    const breadcrumbs = pathSegments.map((segment, index) => {
+      const path = pathSegments.slice(0, index + 1).join('/')
+      return {
+        '@type': 'ListItem',
+        'position': index + 1,
+        'item': {
+          '@id': joinURL('https://docs.fluentcart.com', path),
+          'name': segment.replace(/(index)?\.md$/, '').replace(/-/g, ' ').replace(/^[a-z]/, c => c.toUpperCase())
+        }
+      }
+    })
+
+    // Create JSON-LD structured data
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': pageData.frontmatter.title || pageData.title,
+      'description': pageData.frontmatter.description || pageData.description,
+      'url': canonicalUrl,
+      'dateModified': pageData.lastUpdated,
+      'breadcrumb': {
+        '@type': 'BreadcrumbList',
+        'itemListElement': breadcrumbs
+      }
+    }
+
+    // Add JSON-LD script
+    pageData.frontmatter.head.push([
+      'script',
+      {
+        type: 'application/ld+json',
+      },
+      JSON.stringify(jsonLd)
+    ])
+
     // Add canonical URL
     pageData.frontmatter.head.push([
       'link',
       {
         rel: 'canonical',
         href: canonicalUrl,
-      },
+      }
     ])
 
     // Add OpenGraph and Twitter meta tags
@@ -35,42 +72,56 @@ export default defineConfig({
         {
           property: 'og:url',
           content: canonicalUrl,
-        },
+        }
       ],
       [
         'meta',
         {
           property: 'og:type',
-          content: 'website',
-        },
+          content: 'article',
+        }
       ],
       [
         'meta',
         {
           property: 'og:title',
           content: pageData.frontmatter.title || pageData.title,
-        },
-      ],
-      [
-        'meta',
-        {
-          name: 'twitter:title',
-          content: pageData.frontmatter.title || pageData.title,
-        },
+        }
       ],
       [
         'meta',
         {
           property: 'og:description',
           content: pageData.frontmatter.description || pageData.description,
-        },
+        }
+      ],
+      [
+        'meta',
+        {
+          property: 'article:modified_time',
+          content: pageData.lastUpdated,
+        }
+      ],
+      [
+        'meta',
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        }
+      ],
+      [
+        'meta',
+        {
+          name: 'twitter:title',
+          content: pageData.frontmatter.title || pageData.title,
+        }
       ],
       [
         'meta',
         {
           name: 'twitter:description',
           content: pageData.frontmatter.description || pageData.description,
-        },
+        }
       ]
     )
   },
