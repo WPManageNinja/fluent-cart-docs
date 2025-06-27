@@ -68,6 +68,6 @@ This section provides more advanced options for organizing and managing your new
 
 Before saving, you must set the status of your new automation.
 
-* **Status:** Ensure the **Enable This feed** checkbox is checked to make the automation active. Unless your automation will be inactive.
+* **Status:** Ensure the **Enable This feed** checkbox is checked to make the automation active. Unless your automation will be inactive.t
 
 Once all fields are configured, click the **Create FluentCRM Feed** button at the bottom of the page. Your integration is now live, and FluentCart will automatically send customer data to FluentCRM after every completed checkout.

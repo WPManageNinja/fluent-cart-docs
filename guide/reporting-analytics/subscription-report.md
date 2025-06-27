@@ -49,4 +49,3 @@ This area (often with charts like "Churn Rates Over Time") provides deeper insig
 
 This section (often a chart) shows how the total number of your subscriptions changes over time.
 
- 
