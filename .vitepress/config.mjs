@@ -74,6 +74,7 @@ export default defineConfig({
       ]
     )
   },
+  cleanUrls: true,
   base: '/',
   sitemap: {
     hostname: 'https://docs.fluentcart.com',
