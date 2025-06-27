@@ -17,14 +17,14 @@ Using Product Types helps you sort and handle different collections of products 
 
 The Product Types list table provides key information for each defined type:
 
-* **Name:** The descriptive name of the product type (e.g., "Plugins").
+* **Name:** The descriptive name of the product type.
 * **Description:** A brief explanation of what this product type represents.
 * **Slug:** The URL-friendly version of the type name, automatically generated but editable.
 * **Count:** The number of products currently assigned to that specific product type.
 
 ## Creating a New Product Type
 
-1.  On the **Types** screen, click the **"Add New Type"** button at the top right.
+1.  On the **Types** screen, click the **"Add New Type"** button at the top right corner.
 
     ![Screenshot of Add New Type Button](/guide/public/images/product-types-creation/Creating-Managing-Types/Type-2.png) 
 
