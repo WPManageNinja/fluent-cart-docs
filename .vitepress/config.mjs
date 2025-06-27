@@ -1,6 +1,8 @@
-export default {
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
   ignoreDeadLinks: true,
-  title: ' ',
+  title: 'FluentCart Documentation',
   titleTemplate: ':title - FluentCart Documentation',
   showingLastUpdated: true,
   description: 'Comprehensive documentation for FluentCart - your all-in-one e-commerce solution.',
@@ -241,4 +243,4 @@ export default {
       ['link', { rel: 'icon', href: '/icon.webp' }],
       ['meta', { property: 'og:image', content: 'https://fluentcart.com/wp-content/uploads/2025/06/fluent-cart-featured.png' }],
   ]
-}
+})
