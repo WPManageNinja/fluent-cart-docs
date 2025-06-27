@@ -238,6 +238,7 @@ export default defineConfig({
       dark: '/logo-full.svg',
       light: '/logo-full-dark.svg',
     },
+    siteTitle: false,
   },
   head: [
       ['link', { rel: 'icon', href: '/icon.webp' }],
