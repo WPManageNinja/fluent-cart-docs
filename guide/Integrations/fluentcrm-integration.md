@@ -53,7 +53,7 @@ This section provides more advanced options for organizing and managing your new
 
 * **Other Fields:** Click the **plus icon (+)** to map additional data. For each, provide a **Field Label** in FluentCRM and select the corresponding FluentCart **Field Value** from the dropdown.
 * **Tags:** Apply one or more tags to the contact. For more advanced segmentation, check the **Enable Dynamic Tag Inputs** box to apply tags only when specific conditions are met.
-    * **Select the Tag:** Choose the tag you want to apply from the dropdown menu (e.g., "NYC Customers").
+    * **Select the Tag:** Choose the tag you want to apply from the dropdown menu.
     * **Set the Condition:** Create a rule that must be met for the tag to be applied.
         * **If:** Select a data point (shortcode) from the dropdown, such as `{order.billing.city}`.
         * **Operator:** Choose a logical operator.
@@ -68,6 +68,6 @@ This section provides more advanced options for organizing and managing your new
 
 Before saving, you must set the status of your new automation.
 
-* **Status:** Ensure the **Enable This feed** checkbox is checked to make the automation active.
+* **Status:** Ensure the **Enable This feed** checkbox is checked to make the automation active. Unless your automation will be inactive.
 
 Once all fields are configured, click the **Create FluentCRM Feed** button at the bottom of the page. Your integration is now live, and FluentCart will automatically send customer data to FluentCRM after every completed checkout.
