@@ -8,7 +8,7 @@ export default defineConfig({
   showingLastUpdated: true,
   description: 'Comprehensive documentation for FluentCart - your all-in-one e-commerce solution.',
   
-  transformPageData: (page, { siteConfig }) => {
+  transformPageData: (pageData, { siteConfig }) => {
     pageData.frontmatter.head ??= []
 
     // Add basic meta tags to the frontmatter.
