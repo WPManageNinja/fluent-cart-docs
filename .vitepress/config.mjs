@@ -1,11 +1,52 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  lang: 'en-US',
   ignoreDeadLinks: true,
   title: 'FluentCart Documentation',
   titleTemplate: ':title - FluentCart Documentation',
   showingLastUpdated: true,
   description: 'Comprehensive documentation for FluentCart - your all-in-one e-commerce solution.',
+  
+  transformPageData: (page, { siteConfig }) => {
+    pageData.frontmatter.head ??= []
+
+    // Add basic meta tags to the frontmatter.
+    pageData.frontmatter.head.push(
+      [
+        'meta',
+        {
+          property: 'og:title',
+          content:
+            pageData.frontmatter.title || pageData.title || siteConfig.site.title,
+        },
+      ],
+      [
+        'meta',
+        {
+          name: 'twitter:title',
+          content:
+            pageData.frontmatter.title || pageData.title || siteConfig.site.title,
+        },
+      ],
+      [
+        'meta',
+        {
+          property: 'og:description',
+          content:
+            pageData.frontmatter.description || pageData.description || siteConfig.site.description,
+        },
+      ],
+      [
+        'meta',
+        {
+          name: 'twitter:description',
+          content:
+            pageData.frontmatter.description || pageData.description || siteConfig.site.description,
+        },
+      ],
+    )
+  },
   base: '/',
   sitemap: {
     hostname: 'https://docs.fluentcart.com',
