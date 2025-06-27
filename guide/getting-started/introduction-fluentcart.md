@@ -1,6 +1,3 @@
----
-description: FluentCart documentation. Learn how to create and manage a powerful WordPress e-commerce store.
----
 # Introduction to FluentCart
 
 Welcome to FluentCart, a powerful and flexible e-commerce solution for WordPress designed to help you create and manage a full-featured online store with ease. Whether you are a small business owner, or a software developer, FluentCart provides the tools you need to sell anything, anywhere.
