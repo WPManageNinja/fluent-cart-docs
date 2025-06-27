@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { joinURL, withoutTrailingSlash } from 'ufo'
 
 export default defineConfig({
   lang: 'en-US',
@@ -8,43 +9,69 @@ export default defineConfig({
   showingLastUpdated: true,
   description: 'Comprehensive documentation for FluentCart - your all-in-one e-commerce solution.',
   
-  transformPageData: (pageData, { siteConfig }) => {
+  transformPageData: (pageData) => {
+    // Initialize the "head" frontmatter if it doesn't exist.
     pageData.frontmatter.head ??= []
 
-    // Add basic meta tags to the frontmatter.
+    // Create the canonical URL
+    const canonicalUrl = joinURL(
+      'https://docs.fluentcart.com',
+      withoutTrailingSlash(pageData.filePath.replace(/(index)?\.md$/, ''))
+    )
+
+    // Add canonical URL
+    pageData.frontmatter.head.push([
+      'link',
+      {
+        rel: 'canonical',
+        href: canonicalUrl,
+      },
+    ])
+
+    // Add OpenGraph and Twitter meta tags
     pageData.frontmatter.head.push(
       [
         'meta',
         {
+          property: 'og:url',
+          content: canonicalUrl,
+        },
+      ],
+      [
+        'meta',
+        {
+          property: 'og:type',
+          content: 'website',
+        },
+      ],
+      [
+        'meta',
+        {
           property: 'og:title',
-          content:
-            pageData.frontmatter.title || pageData.title || siteConfig.site.title,
+          content: pageData.frontmatter.title || pageData.title,
         },
       ],
       [
         'meta',
         {
           name: 'twitter:title',
-          content:
-            pageData.frontmatter.title || pageData.title || siteConfig.site.title,
+          content: pageData.frontmatter.title || pageData.title,
         },
       ],
       [
         'meta',
         {
           property: 'og:description',
-          content:
-            pageData.frontmatter.description || pageData.description || siteConfig.site.description,
+          content: pageData.frontmatter.description || pageData.description,
         },
       ],
       [
         'meta',
         {
           name: 'twitter:description',
-          content:
-            pageData.frontmatter.description || pageData.description || siteConfig.site.description,
+          content: pageData.frontmatter.description || pageData.description,
         },
-      ],
+      ]
     )
   },
   base: '/',

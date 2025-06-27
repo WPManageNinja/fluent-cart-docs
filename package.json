@@ -5,6 +5,7 @@
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
+    "ufo": "^1.6.1",
     "vitepress": "^1.6.3"
   }
 }

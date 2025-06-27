@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      ufo:
+        specifier: ^1.6.1
+        version: 1.6.1
       vitepress:
         specifier: ^1.6.3
         version: 1.6.3(@algolia/client-search@5.27.0)(postcss@8.5.4)(search-insights@2.17.3)
@@ -691,6 +694,9 @@ packages:
 
   trim-lines@3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
+
+  ufo@1.6.1:
+    resolution: {integrity: sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA==}
 
   unist-util-is@6.0.0:
     resolution: {integrity: sha512-2qCTHimwdxLfz+YzdGfkqNlH0tLi9xjTnHddPmJwtIG9MGsdbutfTc4P+haPD7l7Cjxf/WZj+we5qfVPvvxfYw==}
@@ -1448,6 +1454,8 @@ snapshots:
   tabbable@6.2.0: {}
 
   trim-lines@3.0.1: {}
+
+  ufo@1.6.1: {}
 
   unist-util-is@6.0.0:
     dependencies:
