@@ -7,8 +7,6 @@ The **Subscription Report** in FluentCart provides key analytics and insights in
 1.  Go to your WordPress dashboard, navigate to **FluentCart Pro > Reports**.
 2.  Click on the **"Subscription"** tab to access the Subscription Report.
 
-    <!-- ![Screenshot of Refunds Report Page](@images/reporting-analytics/subscription-report.png) -->
-
 ## Retention Chart
 
 This chart visually represents your subscription retention rates across different timeframes.
@@ -16,6 +14,8 @@ This chart visually represents your subscription retention rates across differen
 * **Product Selection:** You can filter the chart data by selecting a specific product.
 * **Custom Days:** Option to enter custom days for retention analysis.
 * **Timeframes:** The chart tracks retention over predefined periods: "7 Days", "15 Days", "30 Days", "90 Days", "180 Days", "365 Days", and "More than Year".
+
+  ![Screenshot of Report Subscriprtion Page](/guide/public/images/reporting-analytics/Subscription-Report.png)
 
 ## Key Subscription Indicators (KPIs)
 
@@ -38,6 +38,8 @@ This section (often a chart) helps you track how many new subscribers you gain e
 ## New MRR Trend ##
 
 This section (often a chart) shows you the trend of your new Monthly Recurring Revenue. It helps you see if your recurring income is growing over time.
+
+  ![Screenshot of Report Subscriprtion Page](/guide/public/images/reporting-analytics/Subscription-Report-overview.png)
 
 ## Churn Analytics ##
 
