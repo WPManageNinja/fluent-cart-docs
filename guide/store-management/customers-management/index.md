@@ -10,4 +10,4 @@ This section covers the following aspects of customer management:
 * **[Using Advanced Customer Filters](/guide/store-management/customers-management/using-advanced-customer-filters):** Discover how to segment your customer base using powerful filtering options, such as purchase count and first purchase date.
 * **[Customer Details Overview](/guide/store-management/customers-management/customer-details-overview):** A comprehensive guide to understanding all the information presented on an individual customer's profile page, including their orders, licenses, and contact details.
 
-By utilizing these customer management tools, you can maintain accurate customer records, analyze customer behavior, and personalize your interactions. 
+By using these customer management tools, you can keep customer records accurate, understand their behavior, and make your interactions more personal.
