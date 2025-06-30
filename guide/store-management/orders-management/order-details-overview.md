@@ -15,10 +15,10 @@ The Order Details screen is organized into several panels, each providing specif
 
 ### 1. Order Header
 
-At the top of the screen, you'll find the order's primary identification and quick action buttons.
+At the top of the screen, you’ll see the main order information and quick action buttons.
 
-* **Order ID:** The unique identifier for the order.
-* **Order Status:** The current status of the order.
+* **Order ID:** A unique number that identifies the order.
+* **Order Status:** Shows the current state of the order (like pending or completed).
 * **Refund Button:** Initiates the [refund process](/guide/store-management/orders-management/processing-refunds) for the order.
 * **Edit Button:** Allows you to enter [edit mode for the order](/guide/store-management/orders-management/editing-existing-orders).
 * **More Actions Dropdown:** Contains additional actions such as "Change Shipping Status", "Cancel Order", and "Receipt".
@@ -73,7 +73,7 @@ Displays key details about the customer who placed the order.
 
 ### 7. Activity Log
 
-A comprehensive chronological record of all significant events and changes that have occurred for this specific order. This is invaluable for tracking the order's progression and troubleshooting.
+A complete, time-ordered record of all important events and changes related to this order. This helps you track how the order has progressed and makes troubleshooting easier.
 
 * **Examples:** Order status updates (e.g., "Order status updated from completed to processing"), payment paid, refunds processed, license upgrades, and order creation events.
 

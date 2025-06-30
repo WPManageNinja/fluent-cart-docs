@@ -7,7 +7,10 @@ FluentCart allows you to manually create new orders directly from your WordPress
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Orders** in the left sidebar.
 2.  On the **Orders** screen, locate and click the **"Create Order"** button in the top right corner.
 
+
     ![Screenshot of Create Order Button](/guide/public/images/store-management/create-order-button.png) 
+
+
 3.  This will open a new order creation interface. You will need to:
     * **Customer Information:** Choose an existing customer from your store or you may create new.
     * **Products:** Search for and add the products the customer is purchasing.
