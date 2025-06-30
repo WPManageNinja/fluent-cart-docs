@@ -1,6 +1,6 @@
 # Installation & Activation
 
-This guide will walk you through the process of installing the FluentCart plugin on your WordPress website and activating your license to ensure you receive all updates and access premium features.
+This guide will show you how to install and activate the FluentCart plugin on your WordPress website. It will also explain how to activate your license so you can receive all updates and access premium features.
 
 ## 1. Installing FluentCart (Free Version)
 
