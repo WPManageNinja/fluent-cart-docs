@@ -1,6 +1,6 @@
  # Viewing & Filtering Orders
 
-The Orders list is your central hub for tracking all transactions and customer purchases in your FluentCart store. This guide explains how to effectively view your order list and use the available filters to quickly find specific orders.
+The Orders list is your central hub for tracking all transactions and customer purchases in your FluentCart store. This guide will show you how to view your orders and use filters to quickly find the specific orders.
 
 ## Understanding Order Stats Overview
 
