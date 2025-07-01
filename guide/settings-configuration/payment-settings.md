@@ -8,7 +8,7 @@ The **Payment Settings** screen in FluentCart lets you set up how your store han
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings** in the left sidebar.
 2.  Click on the **"Payment Settings"** tab.
 
-    <!-- ![Screenshot of Payment Settings Tab](@mages/settings-configuration/payment-settings-tab.png) -->
+![Screenshot of Payment Settings Tab](/guide/public/images/settings-configuration/payment-settings/payment-settings.png)
 
 ## Configuration Options
 
@@ -17,10 +17,9 @@ The **Payment Settings** screen in FluentCart lets you set up how your store han
 * **Enable/Disable Gateways:** Toggle switches to activate or deactivate specific payment gateways.
 * **Gateway Settings:** Configure API keys, test modes, and other gateway-specific settings.
 * **Available Gateways:**
-    * Stripe
-    * PayPal
-    * Cash on Delivery
-    * Other integrated payment methods
+    * [Stripe](/guide/payments-checkout/connecting-payment-gateways/stripe-settings)
+    * [PayPal](/guide/payments-checkout/connecting-payment-gateways/paypal-settings.md)
+    * [Cash on Delivery](/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings.md)
 
 ### 2. Checkout Settings
 

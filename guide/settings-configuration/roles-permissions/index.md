@@ -26,6 +26,6 @@ The table provides an overview of existing role assignments:
 
 You can assign existing WordPress users to predefined FluentCart roles directly from this display. 
 
-* To add a new role, click the **"+ Add Role"** button at the top right of the screen. This will open a modal to [add a new role](/settings-configuration/roles-permissions/adding-new-roles/index).
+* To add a new role, click the **"+ Add Role"** button at the top right of the screen. This will open a modal to [add a new role](/guide/settings-configuration/roles-permissions/adding-new-roles/index).
 
 Managing roles and permissions this way helps make sure every team member has the right access to your FluentCart store.
