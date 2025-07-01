@@ -24,7 +24,7 @@ These settings influence the customer's checkout process and account creation.
 * **Allow customers to create account during one-time checkout:** If you want to give customers the option to create an account during a one-time checkout, check this box. It’s helpful for collecting customer details even for single purchases.
 * **Hide coupon field on checkout:** Check this box to hide the coupon code input field on the checkout page. This can be useful if you are not running any coupon campaigns.
 
-    ![Screenshot of Additional Info Settings Tab](/guide/public/images/settings-configuration/additional-info-settings.png)
+    ![Screenshot of Additional Info Settings Tab](/guide/public/images/settings-configuration/additional-info/additional-info-settings.png)
 
 ### 3. Address & Communication
 
