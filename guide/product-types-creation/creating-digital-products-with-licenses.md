@@ -20,7 +20,11 @@ Follow these steps to confidently configure all the necessary settings for your 
 
 ### 1. Create a Digital Product 
 
-To create a product with a digital license in FluentCart, you must first create a digital product, then attach the downloadable asset to the product, and Finally, generate a license for it. Follow the [documentation](/guide/product-types-creation/creating-digital-products) on creating a digital product, then refer to the steps outlined below in this section for the subsequent process.
+To create a product with a digital license in FluentCart, you must first create a digital product, then attach the downloadable asset to the product, and Finally, generate a license for it. 
+
+> [!NOTE]
+> You can learn more about creating a digital product by following the [Creating Digital Product](/guide/product-types-creation/creating-digital-products) guide. The following sections also cover the basic steps.
+
 
 
 ### 2. Basic Product Information
@@ -104,7 +108,7 @@ On the Product Edit screen, click the **"Integrations"** tab.
 * Here you can connect this specific product to other FluentCart modules or third-party services that have a direct impact on its functionality, sales, or fulfillment.
 * For example, you might integrate a specific product with **FluentCRM** to add customers who purchase this product to a particular list, or with **FluentForms** if product purchase triggers a form submission.
 
-To learn more about managing product integrations, check out this [article](/guide/product-types-creation/managing-product-integrations).
+>To learn more about managing product integrations, see the [Managing Product Integrations](/guide/product-types-creation/managing-product-integrations) guide.
 
 ### 9. Defining Upgrade Paths
 
@@ -114,7 +118,7 @@ On the Product Edit screen, click the **"Upgrade Paths"** tab.
 * You can define paths from a **"From Plan"** (e.g., "Single Site Yearly License") to a **"To Plan"** (e.g., "5 Sites Yearly License" or "Single Site Lifetime License").
 * Specify a **"Discount Amount"** and whether the upgrade is **"Prorated"** (meaning the customer gets credit for unused time on their old plan).
 
-To learn more about upgrade paths, check out this [article](/guide/product-types-creation/defining-upgrade-paths).
+>To learn more about upgrade paths, see the [Defining Upgrade Paths](/guide/product-types-creation/defining-upgrade-paths) guide.
 
 
 ## Publishing Your Licensed Digital Product
