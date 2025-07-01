@@ -33,7 +33,7 @@ The Product Types list table provides key information for each defined type:
     
 
 3.  Fill in the following details for your new product type:
-    * **Name:** Enter the desired name for your product type (e.g., "Software"). This field is required.
+    * **Name:** Enter the desired name for your product type (e.g., "FluentForm"). This field is required.
     * **Slug:** (Optional) Enter a URL-friendly version of the name. If left blank, FluentCart will automatically generate one from the name.
     * **Parent Type:** Use the dropdown labeled "Select" to choose an existing product type if you want this new type to be a sub-type (e.g., a "Premium Software" type under a "Software" parent type). If it's a top-level type, leave this as "Select".
     * **Description:** Provide a brief description of what this product type represents or its primary characteristics.

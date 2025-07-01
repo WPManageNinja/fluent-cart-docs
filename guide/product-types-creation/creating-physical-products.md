@@ -113,6 +113,23 @@ To manually update your stock count for any variation:
     * **New Stock:** This field automatically previews the final stock total after your adjustment.
 3.  Click the **Apply** button to save the new stock level.
 
+### Shipping Class
+
+You can assign a **Shipping Class** to any product to apply location-based shipping costs.
+
+To add a shipping class:
+
+1. Scroll to the **Shipping Class** section (right side of the product edit screen).
+2. Select or create a shipping class (e.g., *NYC Zone*).
+3. The defined shipping cost will automatically apply at checkout for that region.
+
+Shipping classes work with **Shipping Zones** and **Shipping Methods** to control how and where you deliver products.
+
+::: info
+To learn more about how shipping classes work, see the [Understanding Shipping Classes](/guide/shipping/understanding-shipping-classes) guide.
+:::
+
+
 ## Publishing Your Physical Product
 
 Once you have configured all the necessary details:
