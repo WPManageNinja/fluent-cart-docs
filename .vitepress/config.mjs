@@ -173,7 +173,8 @@ export default defineConfig({
             { text: 'Introduction to FluentCart', link: '/guide/getting-started/introduction-fluentcart' },
             { text: 'Installation & Activation', link: '/guide/getting-started/installation-activation' },
             { text: 'Initial Setup Wizard', link: '/guide/getting-started/initial-setup-wizard' },
-            { text: 'Admin Dashboard', link: '/guide/getting-started/dashboard-overview' }
+            { text: 'Admin Dashboard', link: '/guide/getting-started/dashboard-overview' },
+            { text: 'FluentCart Glossary', link: '/guide/getting-started/fluentcart-glossary' }
           ]
         },
         {
