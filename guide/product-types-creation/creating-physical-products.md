@@ -64,6 +64,10 @@ You will see the following fields:
 
 ![Screenshot of Simple Price](/guide/public/images/product-types-creation/Creating-Physical-Products/simple-price.gif)
 
+::: info
+To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing.md) guide.
+:::
+
 #### Simple Variations (For Products with Different Versions)
 
 Choose this option when your product comes in different versions, such as t-shirts in various sizes and colors. This will allow you to set a different price, image, and stock level for each variation.

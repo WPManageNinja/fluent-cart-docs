@@ -118,6 +118,12 @@ This option is for a variation that is sold on a recurring payment basis.
 
    ![Gif of Digital Product Edit Screen (Simple VAriation)](/guide/public/images/product-types-creation/creating-digital-product/simple-variation2.gif) 
 
+::: info
+To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing.md) guide.
+:::
+
+
+
 ### 5. Downloadable Asset(s)
 
 This crucial section is where you manage the actual digital files customers will receive.
