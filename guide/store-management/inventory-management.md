@@ -1,6 +1,6 @@
  # Inventory Management
 
-Efficient inventory management is crucial for both physical products and digital products with limited licenses. FluentCart provides tools to track and adjust stock levels directly from the product editing interface, ensuring you always have accurate information about your product availability.
+Good inventory management is important for both physical products and digital products with limited licenses. FluentCart makes it easy to check and update your stock levels right from the product editing screen. This helps you always know what products are available.
 
 ## Accessing Inventory Management
 
@@ -19,7 +19,7 @@ The Inventory Management table displays key stock metrics for each product varia
 * **On hold:** The number of units that are part of pending orders.
 * **Delivered:** The number of units that have already been delivered or fulfilled.
 
-    ![Screenshot of Inventory Management Section](/guide/public/images/product-types-creation/inventory-management-section.png) 
+    ![Screenshot of Inventory Management Section](/guide/public/images/product-types-creation/inventory-management/inventory-management-section.png) 
 
 ## Adjusting Stock Levels
 
@@ -29,6 +29,8 @@ You can manually adjust the stock for your product variants:
 2.  Use the **"Adjust by"** field to enter the quantity by which you want to change the stock. This can be a positive number to add stock or a negative number to reduce it.
 3.  Click the **"Apply"** button to implement the stock adjustment.
 4.  You can click **"Cancel"** to discard any changes before applying.
+
+    ![Screenshot of Adjust Stock Section](/guide/public/images/product-types-creation/inventory-management/inventory-adjust-by.png) 
 
 :::tip Stock Management Best Practices
 * Regularly check your inventory to prevent overselling or running out of popular products.
