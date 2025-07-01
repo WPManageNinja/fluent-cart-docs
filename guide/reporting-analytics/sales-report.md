@@ -5,7 +5,7 @@ This dashboard provides a quick and clear view of your store's sales and key met
 ## Accessing the Sales Dashboard
 
 * Go to your WordPress dashboard, then go to **FluentCart Pro > Reports** in the top menu bar.
-* When you open the Reports screen, you'll automatically be on the **Sales** tab. This tab is your main page for sales.
+* When you open the Reports screen, click on the **Sales** tab. This is your main page for viewing sales information.
 
 ## Key Sales Performance Indicators (KPIs)
 
@@ -34,7 +34,7 @@ Similar to top-selling products, this section breaks down sales by specific vers
 
 ## Failed Orders
 
-This section shows orders that did not finish. It helps you keep track of purchases that customers tried to make but didn't go through.
+This section shows orders that weren’t completed. It helps you track purchases that customers started but didn’t finish. To see all failed orders, click the **View All Orders** button on the right side.
 
 ## Search Filter (Available Across All Reports)
 
