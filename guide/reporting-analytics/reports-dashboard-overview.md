@@ -26,7 +26,7 @@ This section provides a table that breaks down your gross sales volume, often sh
 
 ## Other Key Overview Metrics 
 
-While not fully visible in the current view, the Reports Dashboard Overview also typically includes other important sections to give you a complete picture:
+Even if not fully shown in the current view, the Reports Dashboard Overview usually includes other important sections to give you a full picture of your store’s performance.
 
 * **Net Revenue:** Your total income after all costs, refunds, and discounts.
 * **Net Revenue Quarterly:** Your net income is broken down by three-month periods.
