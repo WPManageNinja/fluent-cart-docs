@@ -6,6 +6,19 @@ For information on what your **customers** see when they log into their accounts
 
 The FluentCart Dashboard is the first screen you see when you log into your WordPress admin area and navigate to FluentCart. It provides a quick, at-a-glance overview of your store's performance and recent activities, helping you stay informed about your business operations.
 
+### Quick Access Controls (Top Right)
+
+In the top-right corner of the FluentCart dashboard, you’ll find three helpful shortcuts:
+
+- **Search (⌘K / Ctrl+K)**  
+  Open the search panel to quickly find products, customers, orders, or settings across FluentCart.
+
+- **Theme Toggle**  
+  Switch between **Light**, **Dark**, or **System** mode to match your preference.
+
+- **Settings Shortcut**  
+  Click the gear icon to go directly to FluentCart’s settings page for configuring store preferences, payments, emails, and more.
+
 ## Key Dashboard Sections
 
 The dashboard is designed to give you instant insights into your store's health.
