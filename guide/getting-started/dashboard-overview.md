@@ -30,7 +30,28 @@ At the top of the main dashboard area, you'll find a welcome message and quick a
 
 * **Add Product Button:** A quick-access button to create a new product, allowing you to quickly expand your inventory.
 
-### 2. Store Key Metrics
+### 2. Getting Started Checklist
+
+On the right side of the FluentCart dashboard, you’ll see the **Onboarding Checklist**. This helps you quickly set up your store by walking through the essential first steps.
+
+The checklist includes:
+
+- **Add Details to Store**  
+  Enter your store name, address, and basic configuration in the settings panel.
+
+- **Add Your First Product**  
+  Create a product using the **Products → Add New** option to make your first item available for sale.
+
+- **Setup Pages**  
+  Automatically generate key pages like Checkout, Cart, and Account with one click.
+
+- **Add Payments**  
+  Configure Stripe, PayPal, or other payment gateways so you can start accepting payments.
+
+As you complete each step, FluentCart will mark it off automatically. This guide disappears once your setup is complete.
+
+
+### 3. Store Key Metrics
 
 This section displays a simple overview of your store's performance.
 
@@ -44,7 +65,7 @@ This section displays a simple overview of your store's performance.
 A visual representation shows how your sales have changed, so you can see trends and track store's growth.
 * The chart generally displays metrics like Total Order Amount, Paid Order Amount, and Order Count over a selected period.
 
-### 4. Recent Activities
+### 5. Recent Activities
 
 This log shows a list of the newest important things that happened in your store, such as order updates, payments, and refunds. It serves as a quick audit trail for recent operations.
 
@@ -52,14 +73,14 @@ This log shows a list of the newest important things that happened in your store
 
 ![Screenshot of Dashboard Overview - Getting Started](/guide/public/images/getting-started/dashboard-overview.png)
 
-### 5. Recent Orders
+### 6. Recent Orders
 
 A snapshot of your most recent customer orders, allowing for quick review.
 
 * Displays the Order ID, Creation Date, Customer Name, Number of Items, and Total Amount for each order.
 * Includes a **"View All Orders"** link to navigate to the full [Orders Management](/guide/store-management/orders-management/) screen for detailed management.
 
-### 6. Unfulfilled Orders
+### 7. Unfulfilled Orders
 
 This section highlights orders that are still awaiting fulfillment, helping you prioritize shipping and delivery tasks.
 
@@ -67,7 +88,7 @@ This section highlights orders that are still awaiting fulfillment, helping you 
 
 ![Screenshot of Getting Started](/guide/public/images/getting-started/order-heat-map.png)
 
-### 7. Order Heat Map
+### 8. Order Heat Map
 
 A geographical visualization that likely shows areas with high order volume, giving you insights into your customer distribution.
 

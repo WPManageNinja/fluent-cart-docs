@@ -76,9 +76,8 @@ For more specific control, use the **Advanced Filter** option:
 3.  Apply your desired filters and click **"Apply"** to see the refined list of orders.
 4.  You can **"Reset"** the filters to view all orders again.
 
+![Screenshot of Advanced Filter Button](/guide/public/images/store-management/advanced-filter-button.png) 
+
 ### 3. Using the Search Bar
 
 You can also use the general search bar located at the top of the screen to quickly find orders by ID, Status, Payment status, Method, Amount, Customer Name, or Items.
-
-![Screenshot of Advanced Filter Button](/guide/public/images/store-management/advanced-filter-button.png) 
-

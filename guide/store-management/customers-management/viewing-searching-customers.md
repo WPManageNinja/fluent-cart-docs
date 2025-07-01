@@ -1,6 +1,6 @@
  # Viewing & Searching Customers
 
-The Customers list in FluentCart provides an organized overview of all individuals who have interacted with your store. This guide will show you how to navigate this list and effectively use search and filtering options to find specific customer profiles.
+The customers list in FluentCart provides an organized overview of all individuals who have interacted with your store. This guide will show you how to navigate this list and effectively use search and filtering options to find specific customer profiles.
 
 ## Accessing the Customers List
 

@@ -118,6 +118,10 @@ This option is for a variation that is sold on a recurring payment basis.
 
    ![Gif of Digital Product Edit Screen (Simple VAriation)](/guide/public/images/product-types-creation/creating-digital-product/simple-variation2.gif) 
 
+::: info
+To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing.md) guide.
+:::
+
 ### 5. Downloadable Asset(s)
 
 This crucial section is where you manage the actual digital files customers will receive.
@@ -137,6 +141,24 @@ This crucial section is where you manage the actual digital files customers will
 
 :::warning Important Note: Subscription Products
 The "Add Items" modal when [editing orders](/guide/store-management/orders-management/editing-existing-orders) currently **does not support adding subscription products**. Subscription orders must be initiated as such.
+:::
+
+### Shipping Class
+
+You can assign a **Shipping Class** to any product to apply location-based shipping costs.
+
+To add a shipping class:
+
+1. Scroll to the **Shipping Class** section (right side of the product edit screen).
+2. Select or create a shipping class (e.g., *NYC Zone*).
+3. The defined shipping cost will automatically apply at checkout for that region.
+
+Shipping classes work with **Shipping Zones** and **Shipping Methods** to control how and where you deliver products.
+
+> **Note:** Digital products typically don’t require shipping, but you can still assign a class if needed for special handling or hybrid products.
+
+::: info
+To learn more about how shipping classes work, see the [Understanding Shipping Classes](/guide/shipping/understanding-shipping-classes) guide.
 :::
 
 ## Publishing Your Digital Product
