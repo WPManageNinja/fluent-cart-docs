@@ -1,6 +1,6 @@
 # Shipping Overview
 
-FluentCart's robust shipping system allows you to define flexible shipping rules based on your customer's location, the products in their cart, and various calculation methods. This comprehensive guide will walk you through setting up shipping for your store, ensuring accurate and efficient delivery of your physical products.
+FluentCart’s powerful shipping system allows you to set up flexible shipping rules based on your customer’s location, what they’re buying, and how shipping costs are calculated. This easy guide will help you set up shipping for your store so your physical products are delivered correctly and on time.
 
 With FluentCart Shipping, you can:
 
