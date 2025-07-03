@@ -196,7 +196,7 @@ export default defineConfig({
                 { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' }
               ]
             },
-            { text: 'Inventory Management', link: '/guide/store-management/inventory-management' }
+            { text: 'Inventory Management', link: '/guide/product-types-creation/inventory-management' }
           ]
         },
         {

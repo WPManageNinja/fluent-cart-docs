@@ -6,7 +6,7 @@ This section covers the following key aspects of store management:
 
 * **[Orders Management](/guide/store-management/orders-management/):** Learn how to view, filter, create, edit, refund, and collect payments for all orders.
 * **[Customers Management](/guide/store-management/customers-management/):** Discover how to view, search, filter, and manage individual customer profiles and their associated data.
-* **[Inventory Management](/guide/store-management/inventory-management/):** Understand how to track and adjust stock levels for your physical and licensed digital products.
+* **[Inventory Management](/guide/product-types-creation/inventory-management/):** Understand how to track and adjust stock levels for your physical and licensed digital products.
 
 By mastering the tools within Store Management, you can fulfill orders efficiently, keep customer information accurate, and make sure your product availability is always up-to-date.
 
