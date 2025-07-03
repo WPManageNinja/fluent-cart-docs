@@ -17,7 +17,7 @@ The main area of this screen displays a list of available storage drivers. You c
 * **Status:** Typically shown as "Active" by default.
 * **Manage:** Click the "Manage" button next to "Local" to configure any specific local storage options (though this is often minimal).
 
-    ![Screenshot of Storage Settings Tab](/guide/public/images/settings-configuration/storage-settings-tab.png)
+    ![Screenshot of Storage Settings Tab](/guide/public/images/settings-configuration/storage/storage-settings-tab.png)
 
 ### 2. S3 (Amazon S3)
 

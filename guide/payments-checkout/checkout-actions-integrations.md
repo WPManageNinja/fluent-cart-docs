@@ -7,7 +7,7 @@ The **Checkout Actions** screen in FluentCart is designed to manage and configur
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings** in the left sidebar.
 2.  Click on the **"Checkout Actions"** tab.
 
-    ![Screenshot of Checkout Actions Tab](/guide/public/images/settings-configuration/checkout-actions-tab.png)
+    ![Screenshot of Checkout Actions Tab](/guide/public/images/settings-configuration/checkout/checkout-actions-tab.png)
 
 ## Understanding Checkout Actions
 

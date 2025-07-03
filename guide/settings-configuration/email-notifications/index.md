@@ -27,7 +27,7 @@ The **Mailing Settings** section allows you to configure the global sender detai
 
 After configuring these details, click the **Save Settings** button to apply your changes globally.
 
----
+
 
 ### Email Notifications List
 

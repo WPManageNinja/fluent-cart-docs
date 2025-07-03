@@ -20,7 +20,7 @@ The table provides an overview of existing role assignments:
 * **Roles:** A brief description of the permissions granted by that role.
 * **Action Icons:** On the far right of each row, you'll see icons that let you quickly "edit" or "delete" roles & permission details.
 
-    ![Screenshot of Roles and Permissions Tab](/guide/public/images/settings-configuration/roles-permissions-tab.png)
+    ![Screenshot of Roles and Permissions Tab](/guide/public/images/settings-configuration/roles-permissions/roles-permissions-tab.png)
 
 ### 2. Adding New Roles
 

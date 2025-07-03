@@ -14,6 +14,14 @@ This chart visually represents order trends over time.
 * **Timeline Options:** You can view data on a "Monthly" , "Yearly" timeline, or "Custom Date" selection.
 * **Metrics Displayed:** Typically tracks "Net Revenue", "Gross Sales", and "Orders" over the selected period.
 
+## Interacting with the Order Report Chart
+
+The **Order Report Chart** includes interactive controls that allow you to adjust the view or save the chart for your records. You can find these controls in the top right corner of the chart area.
+
+* **Zoom In (Magnifying Glass Icon):** This feature lets you take a closer look at a specific section of the chart. When you click this icon, you can select an area on the chart to magnify, helping you focus on data from a specific period within your selected date range.
+
+* **Download as Image (Screenshot Icon):** This button allows you to instantly capture a picture of the current chart. When you click it, a screenshot of the chart will be automatically saved to the downloads folder on your computer. This is very useful for quickly saving a visual copy of your report for presentations or for sharing with your team.
+
 ## Average Monthly Performance
 
 This section shows you your store's average numbers for each month. TIt also helps you understand typical sales, earnings, and order sizes over time.

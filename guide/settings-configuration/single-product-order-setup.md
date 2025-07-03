@@ -16,7 +16,7 @@ These settings control how additional information is presented on your individua
 * **Show Relevant In Single Page:** Check this box to display relevant related information (e.g., related products, additional details) on your product's dedicated single page.
 * **Show Relevant In Product Modal:** Check this box to display relevant information within product pop-up modals (if your theme or other plugins use them for quick product views).
 
-    ![Screenshot of Single Product & Order Setup Tab](/guide/public/images/settings-configuration/single-product-order-setup.png)
+    ![Screenshot of Single Product & Order Setup Tab](/guide/public/images/settings-configuration/single-product/single-product-order-setup.png)
 
 ### 2. Variation Display
 
