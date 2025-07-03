@@ -170,7 +170,7 @@ export default defineConfig({
           text: 'Getting Started',
           collapsed: true,
           items: [
-            { text: 'Introduction to FluentCart', link: '/guide/getting-started/introduction-fluentcart' },
+            { text: 'Introduction to  FluentCart', link: '/guide/getting-started/introduction-fluentcart' },
             { text: 'Installation & Activation', link: '/guide/getting-started/installation-activation' },
             { text: 'Initial Setup Wizard', link: '/guide/getting-started/initial-setup-wizard' },
             { text: 'Admin Dashboard', link: '/guide/getting-started/dashboard-overview' },
