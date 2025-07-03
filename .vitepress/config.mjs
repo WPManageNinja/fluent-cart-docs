@@ -178,6 +178,28 @@ export default defineConfig({
           ]
         },
         {
+          text: 'Product Types & Creation',
+          collapsed: true,
+          items: [
+            {
+              text: 'Product Overview', // This becomes the parent for the dropdown
+              link: '/guide/product-types-creation/', // Link to the main overview page
+              items: [
+                { text: 'Creating & Managing Product Categories', link: '/guide/product-types-creation/creating-managing-product-categories/'},
+                { text: 'Creating & Managing Product Types',link: '/guide/product-types-creation/creating-managing-product-types/'}, 
+                { text: 'Creating Physical Products', link: '/guide/product-types-creation/creating-physical-products' },
+                { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
+                { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
+                { text: 'Configuring Product Pricing', link: '/guide/product-types-creation/configuring-product-pricing' },
+                { text: 'Managing Product Integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
+                { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
+                { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' }
+              ]
+            },
+            { text: 'Inventory Management', link: '/guide/store-management/inventory-management' }
+          ]
+        },
+        {
           text: 'Store Management',
           collapsed: true,
           items: [
@@ -204,45 +226,6 @@ export default defineConfig({
                 { text: 'Customer Details Overview', link: '/guide/store-management/customers-management/customer-details-overview' }
               ]
             },
-            { text: 'Inventory Management', link: '/guide/store-management/inventory-management' }
-          ]
-        },
-        {
-          text: 'Product Types & Creation',
-          collapsed: true,
-          items: [
-            {
-              text: 'Product Overview', // This becomes the parent for the dropdown
-              link: '/guide/product-types-creation/', // Link to the main overview page
-              items: [
-                { text: 'Creating & Managing Product Categories', link: '/guide/product-types-creation/creating-managing-product-categories/'},
-                { text: 'Creating & Managing Product Types',link: '/guide/product-types-creation/creating-managing-product-types/'}, 
-                { text: 'Creating Physical Products', link: '/guide/product-types-creation/creating-physical-products' },
-                { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
-                { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
-                { text: 'Configuring Product Pricing', link: '/guide/product-types-creation/configuring-product-pricing' },
-                { text: 'Managing Product Integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
-                { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
-                { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' }
-              ]
-            }
-          ]
-        },
-        {
-          text: 'Customer Dashboard', // Finalized main section title
-          collapsed: true,
-          items: [
-            {
-              text: 'Customer Dashboard Overview', // This becomes the parent for the dropdown
-              link: '/guide/customer-dashboard/', // Link to the main overview page
-              items: [ // These are the children that will show in the dropdown
-                { text: 'Purchase History', link: '/guide/customer-dashboard/purchase-history' },
-                { text: 'Managing Subscriptions', link: '/guide/customer-dashboard/subscriptions' },
-                { text: 'Managing Licenses', link: '/guide/customer-dashboard/licenses' },
-                { text: 'Digital Product Downloads', link: '/guide/customer-dashboard/downloads' },
-                { text: 'Profile & Address Settings', link: '/guide/customer-dashboard/profile-management' }
-              ]
-            }
           ]
         },
         {
@@ -274,6 +257,23 @@ export default defineConfig({
                 { text: 'Setting Up Shipping Methods', link: '/guide/shipping/setting-up-shipping-methods' },
                 { text: 'Understanding Shipping Classes', link: '/guide/shipping/understanding-shipping-classes' },
                 { text: 'Advanced Shipping Calculations', link: '/guide/shipping/advanced-shipping-calculations' },
+              ]
+            }
+          ]
+        },
+        {
+          text: 'Customer Dashboard', // Finalized main section title
+          collapsed: true,
+          items: [
+            {
+              text: 'Customer Dashboard Overview', // This becomes the parent for the dropdown
+              link: '/guide/customer-dashboard/', // Link to the main overview page
+              items: [ // These are the children that will show in the dropdown
+                { text: 'Purchase History', link: '/guide/customer-dashboard/purchase-history' },
+                { text: 'Managing Subscriptions', link: '/guide/customer-dashboard/subscriptions' },
+                { text: 'Managing Licenses', link: '/guide/customer-dashboard/licenses' },
+                { text: 'Digital Product Downloads', link: '/guide/customer-dashboard/downloads' },
+                { text: 'Profile & Address Settings', link: '/guide/customer-dashboard/profile-management' }
               ]
             }
           ]
