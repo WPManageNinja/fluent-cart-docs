@@ -356,7 +356,7 @@ export default defineConfig({
       ]
     },
     logo: {
-      dark: '/logo-full.svg',
+      dark: '/logo-full.png',
       light: '/logo-full-dark.svg',
     },
     siteTitle: false,
