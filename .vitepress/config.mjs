@@ -296,6 +296,8 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'FluentCRM Integration', link: '/guide/integrations/fluentcrm-integration' },
+            { text: 'Mailchimp Integration', link: '/guide/Integrations/mailchimp-integration' },
+            { text: 'Amazon S3 Integration', link: '/guide/Integrations/amazon-s3-integration' }
           ]
         },
         {
