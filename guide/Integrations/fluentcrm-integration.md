@@ -71,3 +71,23 @@ Before saving, you must set the status of your new automation.
 * **Status:** Ensure the **Enable This feed** checkbox is checked to make the automation active. Unless your automation will be inactive.t
 
 Once all fields are configured, click the **Create FluentCRM Feed** button at the bottom of the page. Your integration is now live, and FluentCart will automatically send customer data to FluentCRM after every completed checkout.
+
+### Use Case Example: Segmenting Customers by Location
+
+To better understand how this integration works in practice, let's imagine you run an online store that sells physical goods, like custom-printed t-shirts. Your goal is to identify all customers from a specific city (e.g., London) so you can send them a targeted email about a local pop-up shop you are hosting.
+
+Here is how you would configure the FluentCRM feed to achieve this:
+
+* **Name:** `London Customer Segmentation`
+* **List:** `Main Customer List`
+* **Tags (Dynamic Tag Inputs):**
+    * **Tag:** `london-customer`
+    * **Condition:** IF `{order.billing.city}` *equals* `London`.
+* **Event Trigger:** `Order Completed`
+* **Status:** `Enable This feed`
+
+**Result:**
+
+With this configuration, every time an order with a London billing address is marked as "Completed" in FluentCart, the customer's information will be sent to FluentCRM. They will be added to your "Main Customer List" and will automatically be tagged as `london-customer`.
+
+Inside FluentCRM, you can then create a new email campaign and, in the recipient settings, choose to send it *only* to contacts who have the `london-customer` tag. This ensures your promotional email about the London pop-up shop is sent exclusively to the relevant local audience.
