@@ -327,6 +327,7 @@ export default defineConfig({
               ]},
             { text: 'Payment Settings Overview', link: '/guide/settings-configuration/payment-settings' },
             { text: 'Invoice & Packing Settings', link: '/guide/settings-configuration/invoice-packing-settings' },
+            { text: 'Configuring Webhooks', link: '/guide/settings-configuration/configuring-webhooks' },
             { text: 'Customizing Receipt Template', link: '/guide/settings-configuration/customizing-receipt-template' },
             {
               text: 'Email Notifications',
