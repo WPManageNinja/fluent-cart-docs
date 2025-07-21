@@ -330,10 +330,11 @@ export default defineConfig({
             { text: 'Configuring Webhooks', link: '/guide/settings-configuration/configuring-webhooks' },
             { text: 'Customizing Receipt Template', link: '/guide/settings-configuration/customizing-receipt-template' },
             {
-              text: 'Email Notifications',
-              link: '/guide/settings-configuration/email-notifications/', // Link to its index.md
+              text: 'Email Configuration',
+              link: '/guide/settings-configuration/email-configuration/', // Link to its index.md
               items: [
-                { text: 'Editing Email Templates', link: '/guide/settings-configuration/email-notifications/editing-email-templates' }
+                { text: 'Mailing Settings', link: '/guide/settings-configuration/email-configuration/mailing-settings' },
+                { text: 'Configuring Email Notification', link: '/guide/settings-configuration/email-configuration/configuring-email-notification' }
               ]
             },
             {
