@@ -220,7 +220,8 @@ export default defineConfig({
                 { text: 'Editing Existing Orders', link: '/guide/store-management/orders-management/editing-existing-orders' },
                 { text: 'Processing Refunds', link: '/guide/store-management/orders-management/processing-refunds' },
                 { text: 'Collecting Payments for Modified Orders', link: '/guide/store-management/orders-management/collecting-payments-modified-orders' },
-                { text: 'Changing Order Statuses', link: '/guide/store-management/orders-management/changing-order-statuses' }
+                { text: 'Changing Order Statuses', link: '/guide/store-management/orders-management/changing-order-statuses' },
+                { text: 'Understanding Statuses', link: '/guide/store-management/understanding-statuses' }
               ]
             },
             {
