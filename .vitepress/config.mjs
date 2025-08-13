@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { joinURL, withoutTrailingSlash } from 'ufo'
-import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
 
 export default defineConfig({
   lang: 'en-US',
@@ -136,11 +135,6 @@ export default defineConfig({
         url: item.url,
         lastmod: item.lastmod
       }))
-    }
-  },
-  markdown: {
-    config: (md) => {
-      md.use(zoomablePlugin)
     }
   },
   themeConfig: {
@@ -301,7 +295,9 @@ export default defineConfig({
           text: 'Integrations',
           collapsed: true,
           items: [
-            { text: 'FluentCRM Integration', link: '/guide/integrations/fluentcrm-integration' },
+            { text: 'FluentCRM Integration', link: '/guide/Integrations/fluentcrm-integration' },
+            { text: 'Mailchimp Integration', link: '/guide/Integrations/mailchimp-integration' },
+            { text: 'Amazon S3 Integration', link: '/guide/Integrations/amazon-s3-integration' }
           ]
         },
         {
@@ -331,12 +327,14 @@ export default defineConfig({
               ]},
             { text: 'Payment Settings Overview', link: '/guide/settings-configuration/payment-settings' },
             { text: 'Invoice & Packing Settings', link: '/guide/settings-configuration/invoice-packing-settings' },
+            { text: 'Configuring Webhooks', link: '/guide/settings-configuration/configuring-webhooks' },
             { text: 'Customizing Receipt Template', link: '/guide/settings-configuration/customizing-receipt-template' },
             {
-              text: 'Email Notifications',
-              link: '/guide/settings-configuration/email-notifications/', // Link to its index.md
+              text: 'Email Configuration',
+              link: '/guide/settings-configuration/email-configuration/', // Link to its index.md
               items: [
-                { text: 'Editing Email Templates', link: '/guide/settings-configuration/email-notifications/editing-email-templates' }
+                { text: 'Mailing Settings', link: '/guide/settings-configuration/email-configuration/mailing-settings' },
+                { text: 'Configuring Email Notification', link: '/guide/settings-configuration/email-configuration/configuring-email-notification' }
               ]
             },
             {

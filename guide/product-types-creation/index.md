@@ -14,5 +14,6 @@ This section covers the following essential aspects:
 * **[Managing Product Integrations (Product-Specific)](/guide/product-types-creation/managing-product-integrations):** How to connect individual products with relevant third-party services or FluentCart modules.
 * **[Defining Upgrade Paths](/guide/product-types-creation/defining-upgrade-paths):** Set up seamless upgrade options for your tiered products, particularly for licensed and subscription items.
 * **[Product List Overview](/guide/product-types-creation/product-list-overview):** Understand how to view, filter, and manage your entire product catalog efficiently.
+* **[Inventory Management](/guide/product-types-creation/inventory-management/):** Understand how to track and adjust stock levels for your physical and licensed digital products.
 
 By mastering this section, you'll be able to effectively structure your product offerings and manage your store's inventory.
