@@ -2,7 +2,9 @@
 
 This section provides an overview of the FluentCart **Admin Dashboard**, which is your control center for managing your e-commerce store.
 
+::: Info
 For information on what your **customers** see when they log into their accounts, please refer to our [Customer Dashboard Overview](/guide/customer-dashboard/index) documentation.
+:::
 
 The FluentCart Dashboard is the first screen you see when you log into your WordPress admin area and navigate to FluentCart. It provides a quick, at-a-glance overview of your store's performance and recent activities, helping you stay informed about your business operations.
 
@@ -11,7 +13,7 @@ The FluentCart Dashboard is the first screen you see when you log into your Word
 In the top-right corner of the FluentCart dashboard, you’ll find three helpful shortcuts:
 
 - **Search (⌘K / Ctrl+K)**  
-  Open the search panel to quickly find products, customers, orders, or settings across FluentCart.
+  Open the search panel to quickly find products, customers, orders, coupons or settings across FluentCart.
 
 - **Theme Toggle**  
   Switch between **Light**, **Dark**, or **System** mode to match your preference.
@@ -30,7 +32,7 @@ At the top of the main dashboard area, you'll find a welcome message and quick a
 
 * **Add Product Button:** A quick-access button to create a new product, allowing you to quickly expand your inventory.
 
-### 2. Getting Started Checklist
+### 2. Onboarding Checklist
 
 On the right side of the FluentCart dashboard, you’ll see the **Onboarding Checklist**. This helps you quickly set up your store by walking through the essential first steps.
 
@@ -43,13 +45,14 @@ The checklist includes:
   Create a product using the **Products → Add New** option to make your first item available for sale.
 
 - **Setup Pages**  
-  Automatically generate key pages like Checkout, Cart, and Account with one click.
+  Generate key pages like Checkout, Cart, and Account in the settigns.
 
 - **Add Payments**  
   Configure Stripe, PayPal, or other payment gateways so you can start accepting payments.
 
+::: Info
 As you complete each step, FluentCart will mark it off automatically. This guide disappears once your setup is complete.
-
+:::
 
 ### 3. Store Key Metrics
 
@@ -71,7 +74,7 @@ This log shows a list of the newest important things that happened in your store
 
 * **Example Activities:** Order Created, Payment Paid, Order Status Updated, Order Refunded, Shipping Status Updated, License Upgrade.
 
-![Screenshot of Dashboard Overview - Getting Started](/guide/public/images/getting-started/dashboard-overview.png)
+![Screenshot of Dashboard Overview - Getting Started](/guide/public/images/getting-started/admin-dashboard/dashboard-overview.png)
 
 ### 6. Recent Orders
 
@@ -86,7 +89,7 @@ This section highlights orders that are still awaiting fulfillment, helping you 
 
 * Similar to Recent Orders, but focused on orders needing action.
 
-![Screenshot of Getting Started](/guide/public/images/getting-started/order-heat-map.png)
+![Screenshot of Getting Started](/guide/public/images/getting-started/admin-dashboard/order-heat-map.png)
 
 ### 8. Order Heat Map
 
