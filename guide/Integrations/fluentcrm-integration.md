@@ -11,18 +11,18 @@ To begin, you need to access the main Checkout Actions screen.
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
 2.  Once you're there, look for the **Checkout Actions** tab on the left side menu. Click it, and then hit the **Configure Modules** button.
 
-  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/checkout-actions-fluentcart.png)
+  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/fluentcrm/checkout-actions-fluentcart.png)
 
 Now, you'll see options for different tools you can connect. If you haven't added FluentCRM yet, click the **Install FluentCRM** button. But if you already have FluentCRM on your site and it's ready to go, just click the **Manage** button next to it instead.
 
-  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/install-fluentCrm.png)
+  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/fluentcrm/install-fluentCrm.png)
 
 #### Step 2: Create a New FluentCRM Feed
 
 1.  On the Checkout Actions screen, click the **Add Integration** button at the top right.
 2.  Select **FluentCRM Feed** from the dropdown menu. This will take you to the configuration screen for the new feed.
 
-  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/add-integration.png)
+  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/fluentcrm/install-fluentCrm.png)
 
 #### Step 3: Configure the Feed Settings
 
@@ -45,7 +45,7 @@ This is where you connect the customer data collected during checkout to the cor
 The **Select** button dropdown next to each field allows you to choose the corresponding shortcode. These shortcodes pull data directly from the customer's order and are organized into helpful categories like "Customer," "Payments," and "General." For example, to map the customer's email, you would choose **Email Address** from the "Customer" category, which inserts the `{order.billing_email}` shortcode.
 :::
 
-  ![Screenshot of Fluentcrm Integration Page](/guide/public/images/Integrations/fluentcrm-integration-feed.png)
+  ![Screenshot of Fluentcrm Integration Page](/guide/public/images/Integrations/fluentcrm/fluentcrm-integration-feed.png)
 
 **3. Additional Information**
 
@@ -71,3 +71,23 @@ Before saving, you must set the status of your new automation.
 * **Status:** Ensure the **Enable This feed** checkbox is checked to make the automation active. Unless your automation will be inactive.t
 
 Once all fields are configured, click the **Create FluentCRM Feed** button at the bottom of the page. Your integration is now live, and FluentCart will automatically send customer data to FluentCRM after every completed checkout.
+
+### Use Case Example: Segmenting Customers by Location
+
+To better understand how this integration works in practice, let's imagine you run an online store that sells physical goods, like custom-printed t-shirts. Your goal is to identify all customers from a specific city (e.g., London) so you can send them a targeted email about a local pop-up shop you are hosting.
+
+Here is how you would configure the FluentCRM feed to achieve this:
+
+* **Name:** `London Customer Segmentation`
+* **List:** `Main Customer List`
+* **Tags (Dynamic Tag Inputs):**
+    * **Tag:** `london-customer`
+    * **Condition:** IF `{order.billing.city}` *equals* `London`.
+* **Event Trigger:** `Order Completed`
+* **Status:** `Enable This feed`
+
+**Result:**
+
+With this configuration, every time an order with a London billing address is marked as "Completed" in FluentCart, the customer's information will be sent to FluentCRM. They will be added to your "Main Customer List" and will automatically be tagged as `london-customer`.
+
+Inside FluentCRM, you can then create a new email campaign and, in the recipient settings, choose to send it *only* to contacts who have the `london-customer` tag. This ensures your promotional email about the London pop-up shop is sent exclusively to the relevant local audience.
