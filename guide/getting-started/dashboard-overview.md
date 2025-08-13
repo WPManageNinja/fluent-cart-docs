@@ -2,8 +2,8 @@
 
 This section provides an overview of the FluentCart **Admin Dashboard**, which is your control center for managing your e-commerce store.
 
-::: Info
-For information on what your **customers** see when they log into their accounts, please refer to our [Customer Dashboard Overview](/guide/customer-dashboard/index) documentation.
+:::info
+For information on what your **customers** see when they log into their accounts, please refer to our [Customer Dashboard Overview](/guide/customer-dashboard/) documentation.
 :::
 
 The FluentCart Dashboard is the first screen you see when you log into your WordPress admin area and navigate to FluentCart. It provides a quick, at-a-glance overview of your store's performance and recent activities, helping you stay informed about your business operations.
@@ -50,7 +50,7 @@ The checklist includes:
 - **Add Payments**  
   Configure Stripe, PayPal, or other payment gateways so you can start accepting payments.
 
-::: Info
+:::info
 As you complete each step, FluentCart will mark it off automatically. This guide disappears once your setup is complete.
 :::
 
