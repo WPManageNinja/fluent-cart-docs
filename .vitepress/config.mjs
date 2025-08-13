@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { joinURL, withoutTrailingSlash } from 'ufo'
+import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
 
 export default defineConfig({
   lang: 'en-US',
@@ -135,6 +136,11 @@ export default defineConfig({
         url: item.url,
         lastmod: item.lastmod
       }))
+    }
+  },
+  markdown: {
+    config: (md) => {
+      md.use(zoomablePlugin)
     }
   },
   themeConfig: {
