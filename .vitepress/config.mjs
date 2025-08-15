@@ -327,10 +327,9 @@ export default defineConfig({
             { text: 'Store Settings', link: '/guide/settings-configuration/store-settings',   
               items: [
                 { text: 'Pages Setup', link: '/guide/settings-configuration/pages-setup' },
-                { text: 'Single Product & Order Setup', link: '/guide/settings-configuration/single-product-order-setup' },
-                { text: 'Features & Addons', link: '/guide/settings-configuration/features-addons' },
+                { text: 'Product Page Settings', link: '/guide/settings-configuration/product-page' },
                 { text: 'Theme Setup', link: '/guide/settings-configuration/theme-setup' },
-                { text: 'Additional Info Settings', link: '/guide/settings-configuration/additional-info-settings' },
+                { text: 'Cart & Checkout Settings', link: '/guide/settings-configuration/cart-checkout-settings' },
               ]},
             { text: 'Payment Settings Overview', link: '/guide/settings-configuration/payment-settings' },
             { text: 'Invoice & Packing Settings', link: '/guide/settings-configuration/invoice-packing-settings' },
@@ -352,6 +351,7 @@ export default defineConfig({
               ]
             },
             { text: 'Storage Settings', link: '/guide/settings-configuration/storage-settings' },
+            { text: 'Features & Addons', link: '/guide/settings-configuration/features-addons' },
             { text: 'Licensing Settings (FluentCart Product License)', link: '/guide/settings-configuration/licensing-settings' }
           ]
         },
