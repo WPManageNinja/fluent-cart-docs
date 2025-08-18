@@ -38,7 +38,7 @@ To create a product with a digital license in FluentCart, you must first create 
 * **Featured Image:** Set a prominent image for your product (e.g., software icon, product box art).
 * **Add Media:** Upload additional images or videos.
 
-### 4. Product Organizer
+### 4. Product Taxonomies
 
 Categorize and type your product for better organization.
 
@@ -46,6 +46,8 @@ Categorize and type your product for better organization.
     * Assign the product to relevant categories (e.g., "Software"). Click **"+ Add More Category"** to assign additional categories.
 * **Product Types:**
     * Assign the product to relevant product types. Ensure **"Digital"** and/or **"Subscription"** (if recurring license) are selected or added here. Click **"+ Add More Type"** to assign additional types.
+* **Product Brand:** 
+    *Assign the product to relevant brands. Click to **"+Add Brand”** to assign additional brands.
 
 ### 5. Pricing & Variations
 
@@ -61,7 +63,7 @@ This section is crucial for defining the different license tiers and their prici
         * **"One Time"** for lifetime licenses.
         * **"Yearly"**, **"Monthly"**, **"Weekly"**, or **"Daily"** for subscription-based licenses.
     * **Setup Fee:** (Optional) An initial fee for subscriptions.
-    * **Manage Profit/Cost:** Enter the **"Cost per item"** for each license variant to track profitability.
+    * **Calculate Profit/Cost:** Enter the **"Cost per item"** for each license variant to track profitability.
 
 
 ### 6. Downloadable Asset(s)
@@ -75,6 +77,23 @@ This section is where you manage the digital files associated with your licensed
 ### 7. Product-Specific License Settings
 
 This is the most important section for licensed digital products, offering granular control over each license's behavior.
+
+#### Enable License Add-on
+Before you can set up licenses for a specific product, you need to make sure the main licensing feature is turned on for your entire store. This is a quick, one-time step.
+
+1. Navigate to **FluentCart Pro** > **Settings** from the left WordPress sidebar.
+
+2. Click on the **Features & Add-ons** tab.
+
+3. Locate the **Product Licensing** option and click the **toggle** button to enable it.
+
+4. Click the **Save Settings** button to apply the change.
+
+    ![Screenshot of Enable License Add-on](/guide/public/images/product-types-creation/creating-digital-product-license/license-add-on.png)
+
+#### Configure Product License Settings
+
+Once the add-on is enabled, you can configure the license settings for each product. On the Product Edit screen, click the **License Settings** tab.
 
 1.  On the Product Edit screen, click the **"License Settings"** tab.
 

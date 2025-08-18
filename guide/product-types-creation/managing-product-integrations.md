@@ -14,7 +14,7 @@ Product-specific integration settings are found within the **Edit Product** scre
 
 ## Configuring Product Integrations
 
-This section will display available integrations that can be connected specifically to this product. The options here will depend on which FluentCart modules or compatible third-party integrations you have [enabled globally](/guide/settings-configuration/email-notifications/).
+This section will display available integrations that can be connected specifically to this product. The options here will depend on which FluentCart modules or compatible third-party integrations you have enabled globally.
 
 * **Available Integrations:** You will see a list of modules that can interact with this product (e.g., FluentCRM, FluentForms).
     * **FluentCRM:** If connected, you might configure actions like adding customers who purchase this product to a specific CRM list or tagging them.

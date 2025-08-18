@@ -34,14 +34,16 @@ By the end, you will be able to confidently sell and manage any downloadable ite
 * **Featured Image:** Set a prominent image for your digital product (e.g., e-book cover, software icon).
 * **Add Media:** Upload additional images or videos to showcase your product.
 
-### 3. Product Organizer
+### 3. Product Taxonomies
 
-Categorize and type your digital product for better organization.
+Categorize and type your digital product for better structured organization.
 
 * **Product Categories:**
     * Assign the product to relevant categories (e.g., "E-Books", "Software"). Click **"+ Add More Category"** to assign additional categories.
 * **Product Types:**
     * Assign the product to one or more relevant product types. Ensure "Digital" is selected or added here. Click **"+ Add More Type"** to assign additional types.
+* **Product Brand:** 
+    *Assign the product to relevant brands. Click to **"+Add Brand”** to assign additional brands.
 
 ### 4. Pricing & Variations
 
@@ -60,7 +62,7 @@ Select **One Time** from the "Select Payment Term" dropdown for products that cu
 
 * **Price:** Set the required selling price for the product.
 * **Compare at price:** (Optional) Enter a higher original price to show a discount.
-* **Manage profit/cost:** (Optional) Toggle this on to enter the item's cost for internal profit tracking.
+* **Calculate profit/cost:** (Optional) Toggle this on to enter the item's cost for internal profit tracking.
 
 **2. Subscription Payment**
 
@@ -73,7 +75,7 @@ Select **Subscription** for products that require recurring payments.
 * **Installment Count:** The total number of payments the customer will make.
 * **Total Price:** This automatically calculates the total cost based on the installment price and count.
 * **Setup fee:** (Optional) Toggle this on to add a one-time initial fee.
-* **Manage profit/cost:** (Optional) Toggle this to track your cost and profit margin on the subscription.
+* **Calculate profit/cost:** (Optional) Toggle this to track your cost and profit margin on the subscription.
 
 ![Gif of Digital Product Edit Screen (Simple Pricing)](/guide/public/images/product-types-creation/creating-digital-product/simple-price.gif) 
 ---
@@ -100,7 +102,7 @@ This option is for a variation that is sold for a single payment.
 * **Select Payment Term:** Choose **One Time** from the dropdown menu.
 * **Price:** Set the selling price for this variation.
 * **Compare at price:** An optional higher price to show a discount.
-* **Manage profit/cost:** Toggle this on to enter the **Cost per item** and track the **Profit** and **Margin**.
+* **Calculate profit/cost:** Toggle this on to enter the **Cost per item** and track the **Profit** and **Margin**.
 * **Image:** Upload a specific image for this variation.
 
 **B. Subscription Payment for a Variation**
@@ -113,7 +115,7 @@ This option is for a variation that is sold on a recurring payment basis.
 * **Interval:** The billing frequency (e.g., Yearly).
 * **Enable installment payment:** Check this to set a fixed number of payments.
 * **Setup fee:** Toggle this on to add a one-time initial fee for the subscription.
-* **Manage profit/cost:** Toggle this to track profit and margin.
+* **Calculate profit/cost:** Toggle this to track profit and margin.
 * **Image:** Upload a unique image for this subscription variation.
 
    ![Gif of Digital Product Edit Screen (Simple VAriation)](/guide/public/images/product-types-creation/creating-digital-product/simple-variation2.gif) 
@@ -142,6 +144,12 @@ This crucial section is where you manage the actual digital files customers will
 :::warning Important Note: Subscription Products
 The "Add Items" modal when [editing orders](/guide/store-management/orders-management/editing-existing-orders) currently **does not support adding subscription products**. Subscription orders must be initiated as such.
 :::
+
+### 6. Digital Product Licensed
+
+This is one of the most important features for your store if you sell products like software, plugins, or themes that need a license key for activation. By adding a digital license, you can control how your product is used, how many times it can be activated, and for how long it remains valid. This helps protect your hard work and manage customer access properly.
+
+To learn more, read this documentation of the [Digital Product License](/guide/product-types-creation/creating-digital-products-with-licenses)
 
 ### Shipping Class
 

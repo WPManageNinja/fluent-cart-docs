@@ -16,7 +16,7 @@ Select **One Time** from the "Select Payment Term" dropdown for products that cu
 
 * **Compare at price:** (Optional) A higher original price that will be displayed with a strikethrough to indicate a sale.
 
-* **Manage profit/cost:** (Optional) Enable this toggle to enter the **Cost per item**. FluentCart will use this to automatically calculate and display the **Profit** and **Margin**.
+* **Calculate profit/cost:** (Optional) Enable this toggle to enter the **Cost per item**. FluentCart will use this to automatically calculate and display the **Profit** and **Margin**.
 
   ![Screenshot of Product Types List Page](/guide/public/images/product-types-creation/product-pricing/one-time-payment.png)
 
@@ -38,7 +38,7 @@ Select **Subscription** for products that require recurring payments.
 
 * **Setup fee:** (Optional) Enable this to add a one-time initial fee that is charged at the beginning of the subscription.
 
-* **Manage profit/cost:** (Optional) Toggle this on to track the cost and profit margin for the subscription.
+* **Calculate profit/cost:** (Optional) Toggle this on to track the cost and profit margin for the subscription.
 
   ![Screenshot of Product Types List Page](/guide/public/images/product-types-creation/product-pricing/subscription-payment.png)
 
@@ -70,7 +70,7 @@ After clicking the pencil icon, a sidebar appears where you can configure the pr
 
 * **Compare at price:** (Optional) Enter a sale price for this variation.
 
-* **Manage profit/cost:** (Optional) Track the cost and profit for this variation.
+* **Calculate profit/cost:** (Optional) Track the cost and profit for this variation.
 
 * **Image:** Upload a unique image for this variation.
 
@@ -90,7 +90,7 @@ After clicking the pencil icon, a sidebar appears where you can configure the pr
 
 * **Setup fee:** (Optional) Add a one-time initial fee for this subscription variation.
 
-* **Manage profit/cost:** (Optional) Track the cost and profit.
+* **Calculate profit/cost:** (Optional) Track the cost and profit.
 
 * **Image:** Upload a unique image for this variation.
 
