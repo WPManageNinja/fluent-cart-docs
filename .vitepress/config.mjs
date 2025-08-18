@@ -249,8 +249,7 @@ export default defineConfig({
                 { text: 'PayPal Settings', link: '/guide/payments-checkout/connecting-payment-gateways/paypal-settings' },
                 { text: 'Cash on Delivery (COD) Settings', link: '/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings' }
               ]
-            },
-            { text: 'Checkout Actions & Integrations', link: '/guide/payments-checkout/checkout-actions-integrations' }
+            }
           ]
         },
         {
@@ -333,6 +332,7 @@ export default defineConfig({
               ]},
             { text: 'Payment Settings Overview', link: '/guide/settings-configuration/payment-settings' },
             { text: 'Invoice & Packing Settings', link: '/guide/settings-configuration/invoice-packing-settings' },
+            { text: 'Global Integration', link: '/guide/settings-configuration/global-integrations' },
             { text: 'Configuring Webhooks', link: '/guide/settings-configuration/configuring-webhooks' },
             {
               text: 'Email Configuration',
