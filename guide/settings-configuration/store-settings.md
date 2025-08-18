@@ -15,20 +15,20 @@ The **Store Settings** screen is where you configure the fundamental information
 * **Store Logo:** You can upload your brand's logo here. This logo may be used in receipts, invoices, or other areas of your store.
     * Click the **"Remove"** button if you wish to remove an existing logo.
 
-### 2. Order Mode
+### 2. Store Mode
 
-Select your store’s order mode from the dropdown. There are two options: **Test** and **Live**. Use "Test Mode" while setting up your store. Switch to "Live Mode" when you're ready to start accepting real orders.
+Select your store’s mode from the dropdown. There are two options: **Test** and **Live**. Use "Test Mode" while setting up your store. Switch to "Live Mode" when you're ready to start accepting real orders.
 
 ### 2. Store Address
 
 Provide your physical business address details. This information can be used for shipping calculations, tax purposes, and displayed in various store documents.
 
-* **Address Line 1:** Enter the primary line of your street address.
-* **Address Line 2 (Optional):** Enter any additional address details.
-* **Country:** Select your store's operating country from the dropdown.
-* **State:** Enter your state or province.
-* **City:** Enter your city.
-* **Postcode:** Enter your postal or ZIP code.
+* **Country:** Select your store's country from the dropdown menu. This is used as the default country for shipping and tax calculations.
+* **District:** Enter the district, state, province, or region where your business is located.
+* **Street Address:** Provide the primary street name and number for your business location.
+* **Apt, suite, unit:** Enter any secondary address information, such as an apartment number, suite, or unit number.
+* **City/Town:** Enter the city or town where your business is located.
+* **Zip Code:** Provide the postal or zip code for your business address.
 
     ![Screenshot of Store Settings - Store Setup Tab](/guide/public/images/settings-configuration/store-setting/store-settings-setup.png)
 
