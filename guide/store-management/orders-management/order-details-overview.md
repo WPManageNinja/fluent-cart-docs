@@ -5,9 +5,9 @@ The Order Details screen in FluentCart provides a comprehensive breakdown of eac
 ## Accessing Order Details
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Orders**.
-2.  On the **Orders** list, click on the **ID** or the **"View"** action icon (if available) next to the order you wish to inspect.
+2.  On the **Orders** list, click on the **Receipt Number** or the **"View"** action icon (if available) next to the order you wish to inspect.
 
-    ![Screenshot of Order Details Page](/guide/public/images/store-management/order-3-details.png)
+    ![Screenshot of Order Details Page](/guide/public/images/store-management/order-details-overview/order-3-details.png)
 
 ## Understanding the Order Details Screen
 
@@ -17,7 +17,7 @@ The Order Details screen is organized into several panels, each providing specif
 
 At the top of the screen, you’ll see the main order information and quick action buttons.
 
-* **Order ID:** A unique number that identifies the order.
+* **Receipt Number:** A unique number that identifies the order.
 * **Order Status:** Shows the current state of the order (like pending or completed).
 * **Refund Button:** Initiates the [refund process](/guide/store-management/orders-management/processing-refunds) for the order.
 * **Edit Button:** Allows you to enter [edit mode for the order](/guide/store-management/orders-management/editing-existing-orders).
@@ -69,7 +69,7 @@ Displays key details about the customer who placed the order.
 * **Labels:** Any custom labels assigned to the customer.
 * This panel also offers quick links to [edit customer information](/guide/store-management/customers-management/customer-details-overview#editing-customer-information), [manage shipping address](/guide/store-management/customers-management/customer-details-overview#managing-customer-addresses), and [manage billing address](/guide/store-management/customers-management/customer-details-overview#managing-customer-addresses).
 
-    ![Screenshot of Order Details Page](/guide/public/images/store-management/order-details.png)
+    ![Screenshot of Order Details Page](/guide/public/images/store-management/order-details-overview/order-details.png)
 
 ### 7. Activity Log
 

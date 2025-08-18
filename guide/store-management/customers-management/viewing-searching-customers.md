@@ -14,10 +14,11 @@ The Customers list table presents key information for each customer at a glance:
 * **Customer:** Displays the customer's name and their associated email address. 
 * **Address:** Shows a summarized address for the customer. 
 * **Purchase Count:** Indicates the total number of orders or purchases made by that customer. 
+* **LTV (Lifetime Value):** This shows the total amount of money a customer has spent in your store over their entire history. It helps you quickly identify your most valuable customers. 
 * **Last Purchase Date:** Shows the date and time of their most recent purchase. 
 * **Customer Since:** Displays the date and time when the customer's record was first created in your system. 
 
-    ![Screenshot of Customers List Page](/guide/public/images/store-management/customers-list.png)
+    ![Screenshot of Customers List Page](/guide/public/images/store-management/viewing-searching-customers/customers-list.png)
 
 ## Searching for Customers
 
@@ -27,7 +28,7 @@ You can quickly find specific customers using the search bar available on the Cu
 2.  Enter your search query.
 3.  Press **Enter** or click the search icon to apply the filter.
 
-    ![Screenshot of Customer Search Bar](/guide/public/images/store-management/customer-search.png) 
+    ![Screenshot of Customer Search Bar](/guide/public/images/store-management/viewing-searching-customers/customer-search.png) 
 
 ## Pagination
 

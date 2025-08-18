@@ -10,7 +10,7 @@ After you have [edited an order](/guide/store-management/orders-management/editi
 
 To collect the outstanding balance, navigate to the **"Transaction Details"** section on the [Order Details screen](/guide/store-management/orders-management/order-details-overview). You will see a **"Collect Payments"** dropdown menu.
 
-![Screenshot of Collect Payments Dropdown](/guide/public/images/store-management/collect-payments-dropdown.png)
+![Screenshot of Collect Payments Dropdown](/guide/public/images/store-management/collecting-payments/collect-payments-dropdown.png)
 
 
 Clicking this dropdown reveals the following options:
@@ -30,7 +30,7 @@ This is the most common method for collecting additional payments remotely from 
 
 4.  Once the customer clicks the link, they will be directed to a secure payment page where they can pay the outstanding balance using the available payment methods.
 
-![Screenshot of Custom Payment Link Modal](/guide/public/images/store-management/custom-payment-link-modal.png)
+![Screenshot of Custom Payment Link Modal](/guide/public/images/store-management/collecting-payments/custom-payment-link-modal.png)
 
 ### 2. Mark Order as Paid
 

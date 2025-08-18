@@ -14,7 +14,7 @@ This section provides a snapshot of important order numbers, including:
 * **Paid Order items:** The total count of individual product items across all paid orders.
 * **Order value (Paid):** The total monetary value of all paid orders.
 
-    ![Screenshot of Orders List Page](/guide/public/images/store-management/order-stats-overview.png)
+    ![Screenshot of Orders List Page](/guide/public/images/store-management/viewing-and-filtering-orders/order-stats-overview.png)
 
 ## Accessing the Orders List
 
@@ -40,15 +40,25 @@ FluentCart provides many ways to filter your orders, helping you narrow down the
 
 ### 1. Filtering by Order Status
 
-At the top of the Orders list, you'll find tabs that allow you to quickly filter orders by their main status:
+At the top of the orders list, you will find several default tabs for one-click filtering of the most common order statuses:
 
-* **All:** Displays all orders regardless of their status.
-* **Completed:** Shows orders that have been successfully fulfilled and paid.
-* **Processing:** Displays orders that are currently being prepared or shipped.
-* **On Hold:** Shows orders that are awaiting payment or other administrative action.
-* **Paid:** Filters the list to show only orders for which payment has been received.
+* **All:** Displays every order in your store, regardless of status.
+* **Completed:** Shows only orders that have been successfully paid for and fulfilled.
+* **Processing:** Filters for orders that have been paid but are still awaiting fulfillment.
+* **On Hold:** Displays orders that are awaiting payment or require manual action before they can be processed.
 
-    ![Screenshot of Orders List Page](/guide/public/images/store-management/orders-list.png)
+For more specific filtering needs, FluentCart provides an additional set of advanced filters under the **More views** dropdown menu. Clicking on **More views** will reveal the following options:
+
+* **Paid:** This filter displays all orders that have a "Paid" payment status, regardless of their fulfillment status (e.g., Processing, Completed).
+* **Subscription:** Isolates only the initial orders that were placed for a new subscription.
+* **Renewal:** Shows only orders that were generated for a subscription renewal.
+* **Refunded:** Filters the list to show only orders that have been fully refunded.
+* **Partially Refunded:** Displays orders where only a portion of the total amount was returned to the customer.
+* **Upgraded From:** This view shows the original orders that customers have upgraded from (e.g., the initial "Standard Plan" order before upgrading).
+* **Upgraded To:** This view shows the new orders that were created as a result of a customer upgrading their subscription or license (e.g., the new "Pro Plan" order).
+
+
+    ![Screenshot of Orders List Page](/guide/public/images/store-management/viewing-and-filtering-orders/orders-list.png)
 
 ### 2. Using the Advanced Filter
 
@@ -76,7 +86,7 @@ For more specific control, use the **Advanced Filter** option:
 3.  Apply your desired filters and click **"Apply"** to see the refined list of orders.
 4.  You can **"Reset"** the filters to view all orders again.
 
-![Screenshot of Advanced Filter Button](/guide/public/images/store-management/advanced-filter-button.png) 
+![Screenshot of Advanced Filter Button](/guide/public/images/store-management/viewing-and-filtering-orders/advanced-filter-button.png) 
 
 ### 3. Using the Search Bar
 
