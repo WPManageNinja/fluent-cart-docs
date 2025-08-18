@@ -192,7 +192,8 @@ export default defineConfig({
               link: '/guide/product-types-creation/', // Link to the main overview page
               items: [
                 { text: 'Creating & Managing Product Categories', link: '/guide/product-types-creation/creating-managing-product-categories/'},
-                { text: 'Creating & Managing Product Types',link: '/guide/product-types-creation/creating-managing-product-types/'}, 
+                { text: 'Creating & Managing Product Types',link: '/guide/product-types-creation/creating-managing-product-types/'},
+                { text: 'Creating & Managing Product Brands',link: '/guide/product-types-creation/creating-managing-product-brand/'},
                 { text: 'Creating Physical Products', link: '/guide/product-types-creation/creating-physical-products' },
                 { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
                 { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
@@ -333,7 +334,6 @@ export default defineConfig({
             { text: 'Payment Settings Overview', link: '/guide/settings-configuration/payment-settings' },
             { text: 'Invoice & Packing Settings', link: '/guide/settings-configuration/invoice-packing-settings' },
             { text: 'Configuring Webhooks', link: '/guide/settings-configuration/configuring-webhooks' },
-            { text: 'Customizing Receipt Template', link: '/guide/settings-configuration/customizing-receipt-template' },
             {
               text: 'Email Configuration',
               link: '/guide/settings-configuration/email-configuration/', // Link to its index.md

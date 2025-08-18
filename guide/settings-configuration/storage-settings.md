@@ -25,6 +25,12 @@ The main area of this screen displays a list of available storage drivers. You c
 * **Status:** You will need to "Manage" this option to connect your Amazon S3 bucket.
 * **Manage:** Click the "Manage" button next to "S3 Info" to configure your S3 credentials (Access Key ID, Secret Access Key, Bucket Name, Region, etc.) and other settings for cloud storage.
 
+:::tip
+Read our comprehensive documentation to learn how you can integrate your FluentCart store with Amazon S3 for secure and scalable media file storage.
+
+[Read the full Integrating with Amazon S3 documentation](/guide/Integrations/amazon-s3-integration.md)
+:::
+
 :::tip Digital Product Assets
 When [creating or editing digital products](/product-types-creation/creating-digital-products), you will have the option to upload or link your downloadable assets. The storage driver you configure here will determine where those files are actually saved.
 :::

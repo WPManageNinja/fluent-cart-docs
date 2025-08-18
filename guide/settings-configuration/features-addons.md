@@ -7,6 +7,8 @@ The **Features & Addons** section in FluentCart is where you can activate or dea
 1. From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
 2. The **Store Setup** tab is selected by default, where you will find the **Features & Addons** section.
 
+![Features & Addons](/guide/public/images/settings-configuration/feature-addon/features-addons-1.png)
+
 ### Managing Available Features
 
 This area contains toggles for the core modules available in FluentCart.
