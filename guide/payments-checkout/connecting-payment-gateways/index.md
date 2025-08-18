@@ -9,7 +9,7 @@ This guide provides an overview of setting up each available payment gateway.
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings** in the left sidebar.
 2.  Click on the **"Payment Settings"** tab. 
 
-    ![Screenshot of Payment Settings Tab](/guide/public/images/settings-configuration/payment-settings-tab.png)
+    ![Screenshot of Payment Settings Tab](/guide/public/images/settings-configuration/payment-settings/payment-settings.png)
 
 ## Available Payment Gateways
 

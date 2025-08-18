@@ -351,7 +351,7 @@ export default defineConfig({
             },
             { text: 'Storage Settings', link: '/guide/settings-configuration/storage-settings' },
             { text: 'Features & Addons', link: '/guide/settings-configuration/features-addons' },
-            { text: 'Licensing Settings (FluentCart Product License)', link: '/guide/settings-configuration/licensing-settings' }
+            { text: 'Licensing Settings (FluentCart License)', link: '/guide/settings-configuration/licensing-settings' }
           ]
         },
         {

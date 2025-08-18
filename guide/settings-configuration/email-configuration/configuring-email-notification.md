@@ -18,47 +18,21 @@ On this screen, you will see a list of all available email notifications.
 
 Here is a list of the default email notifications that you can manage within FluentCart:
 
-* **Send mail to admin after order created:** Notifies the store admin that a new order has been placed.
-* **Send mail to customer after order created:** Confirms to the customer that their order has been successfully received.
-* **Send mail to admin after order updated:** Informs the admin of any changes made to an existing order.
-* **Send mail to customer after order updated:** Notifies the customer of any updates to their order.
-* **Send mail to admin after payment paid:** Alerts the admin that a payment has been successfully processed.
-* **Send mail to customer after payment paid:** Confirms to the customer that their payment has been received.
-* **Send mail to customer after refund:** Informs the customer that a refund has been processed for their order.
-* **Send mail to user after user created:** Welcomes a new user who has created an account on your store.
+* **Send mail to admin after New Order Paid:** Notifies the store admin when a new order has been successfully paid for.
+* **Purchase receipt to customer:** Sends a receipt to the customer immediately after their order is placed.
+* **Send mail to customer after a subscription renewed:** Confirms to the customer that their subscription renewal payment was successful.
+* **Send mail to admin after a subscription renewed:** Alerts the admin that a subscription renewal payment has been made.
+* **Send mail to admin after a refund:** Informs the admin that a full or partial refund has been processed.
+* **Send mail to customer after a refund:** Notifies the customer that a refund has been issued for their order.
+* **Send mail to customer when shipping status changed to shipped:** Informs the customer that their physical order has been shipped.
+* **Send mail to customer when shipping status changed to delivered:** Confirms to the customer that their order has been marked as delivered.
 
-For each notification in the list, you can see its **Name**, the intended **Recipient** (Admin, Customer, or User), and two management options on the right:
+
+For each notification in the list, you can see its **Name**, the intended **Recipient** (Admin or Customer), and toggle options on the right:
 
 * **Enable/Disable Toggle:** Use this switch to quickly activate or deactivate any notification. The email will only be sent if the toggle is enabled.
-* **Edit Icon (Pencil):** Click this icon to open the editor and customize the content of that specific email.
 
 ![Email Notification](/guide/public/images/settings-configuration/email-notifications/email-notification-1.png)
-
-#### Step 3: Edit an Individual Notification
-
-Clicking the **pencil icon** will take you to the editor for that specific email template. Here, you can tailor the subject and body of the email to match your brand's voice and style.
-
-**1. Basic Settings**
-
-* **Enable this email notification:** This toggle at the top right serves the same purpose as the one on the main list, allowing you to activate or deactivate the email from within the editor.
-* **Email Subject:** Edit the subject line of the email here. You can also use the **shortcode** button to the right to insert dynamic information, like the order ID, directly into the subject.
-
-**2. Choose an Email Body Type**
-
-You have two options for the email's content:
-
-* **Default Body:** This is the standard, pre-written email content provided by FluentCart. It contains all the essential information for that specific notification.
-* **Customized Body:** Select this option to create your own email content from scratch or to modify the default template.
-
-**3. Customize the Email Body**
-
-If you select **Customized Body**, a full rich text editor will appear.
-
-* **Content Editor:** Use the editor to write your own text, apply formatting, and structure the email exactly as you want it.
-* **Shortcodes:** Use the **shortcode** button above the editor to insert dynamic placeholders for order and customer details, such as `{order.id}` or `{order.customer.full_name}`.
-* **Visual/Code View:** Switch between the **Visual** editor and the **Code** editor to work directly with the HTML for more advanced customizations.
-
-![Email Notification](/guide/public/images/settings-configuration/email-notifications/email-notification-2.png)
 
 #### Step 4: Save Your Changes
 
