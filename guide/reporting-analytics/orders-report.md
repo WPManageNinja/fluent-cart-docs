@@ -1,90 +1,88 @@
- # Orders Report
+# Orders Report
 
-The **Orders Report** in FluentCart provides in-depth analytics specifically focused on your store's order performance. This report allows you to analyze various aspects of your sales data, helping you understand trends, customer behavior, and fulfillment efficiency.
+The **Orders Report** in FluentCart provides a deep dive into your store's order performance with in-depth analytics. This powerful dashboard allows you to analyze various aspects of your sales data through detailed charts and tables, helping you understand trends, customer behavior, and fulfillment efficiency.
 
-## Accessing the Orders Report
+#### Accessing the Orders Report
 
-1.  Go to WordPress dashboard, navigate to **FluentCart Pro > Reports**.
-2.  Click on the **"Orders"** tab to access the Orders Report.
+1.  From your WordPress dashboard, navigate to **FluentCart Pro > Reports**.
+2.  Click on the **Orders** tab to access the Orders Report.
 
-## Order Report Chart
+#### Filtering the Report
 
-This chart visually represents order trends over time.
+To help you analyze your data effectively, the Orders Report includes several filtering options:
 
-* **Timeline Options:** You can view data on a "Monthly" , "Yearly" timeline, or "Custom Date" selection.
-* **Metrics Displayed:** Typically tracks "Net Revenue", "Gross Sales", and "Orders" over the selected period.
+* **Date Filter:** Located at the top of the page, this allows you to view data for a specific timeline, such as "This Month," "This Year," or a custom date range. All charts and metrics on the page will update based on your selection.
+* **Advanced Filters:** To the top right, click the **filter icon** to segment the report by **Order Status** or **Payment Status**, allowing you to focus on specific types of orders (e.g., only "Completed" or "Paid" orders).
 
-## Interacting with the Order Report Chart
+#### Order Report Chart
 
-The **Order Report Chart** includes interactive controls that allow you to adjust the view or save the chart for your records. You can find these controls in the top right corner of the chart area.
+The main chart at the top of the page visually represents your key order trends over the selected period.
 
-* **Zoom In (Magnifying Glass Icon):** This feature lets you take a closer look at a specific section of the chart. When you click this icon, you can select an area on the chart to magnify, helping you focus on data from a specific period within your selected date range.
+* **Metric Selector:** In the top right corner of the chart, you can use the dropdown menu to select which metrics are displayed. You can visualize the following data points:
+    * **Net Revenue:** The total income from sales after all deductions (like refunds and discounts) have been taken out.
+    * **Gross Sales:** The total income from all sales before any deductions are made.
+    * **Orders:** The total number of individual purchases made by customers.
+    * **Items:** The total quantity of all individual products sold across all orders.
+    * **Average Order Net:** The average net revenue earned per individual order.
+    * **Average Order Gross:** The average gross sales amount per individual order.
+    * **Average Order Items:** The average number of items included in a single order.
+* **Interactive Controls:** You can also interact with the chart using the icons to zoom in on specific periods or download the chart as an image for your records.
 
-* **Download as Image (Screenshot Icon):** This button allows you to instantly capture a picture of the current chart. When you click it, a screenshot of the chart will be automatically saved to the downloads folder on your computer. This is very useful for quickly saving a visual copy of your report for presentations or for sharing with your team.
+#### Performance Overviews
 
-## Average Monthly Performance
+Below the main chart, you'll find two sections that provide a high-level summary of your store's performance.
 
-This section shows you your store's average numbers for each month. TIt also helps you understand typical sales, earnings, and order sizes over time.
+**Average Monthly Performance**
 
-* **Avg. Monthly Net:** This is the average amount of money your store earns each month after all costs and deductions.
-* **Avg. Monthly Gross:** This is the average total sales amount your store makes each month before anything is taken out.
-* **Avg. Monthly Orders:** This shows the average number of orders your store gets each month.
-* **Avg. Monthly Items:** This shows the average number of single product items sold each month.
+This section provides a snapshot of your store's average performance metrics on a monthly basis.
+
+* **Avg. Monthly Net:** Represents the average net revenue your store earns per month.
+* **Avg. Monthly Gross:** Calculates the average gross sales your store makes per month.
+* **Avg. Monthly Orders:** Tracks the average number of orders your store receives per month.
+* **Avg. Monthly Items:** Counts the average number of individual product items sold per month.
+
+**Key Order Performance Indicators**
+
+This section summarizes crucial order-related metrics for the selected period.
+
+* **Gross Sales:** Represents the total revenue from all sales before any deductions.
+* **Total Refunds:** Calculates the total monetary value of all refunds processed.
+* **Discounts:** Summarizes the total value of all discounts applied through coupons.
+* **Taxes:** Totals the amount of taxes collected on orders.
+* **Shipping:** Totals the amount charged to customers for shipping.
 
    ![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-report.png)
 
-## Key Order Performance Indicators
+#### Customer Insights
 
-The top section of the Orders Report provides a summary of crucial order-related metrics:
+**New vs. Returning Customers**
 
-* **Gross Sales:** The total value of sales before any refunds or discounts.
-* **Total Refunds:** The total monetary amount that has been refunded from orders.
-* **Discounts** The total monetary amount that has been discounted from orders.
-* **Taxes:** The total amount of taxes collected on orders.
-* **Shipping:** The total amount collected for shipping on orders.
+This powerful table breaks down your order data based on customer type, helping you measure customer loyalty and the effectiveness of your acquisition strategies.
 
-## New vs. Returning Customers
-
-This section provides insights into the behavior of your new and returning customers for orders.
-
-* **Type:** Shows what kind of customer they are, like if they are a **New** (first-time buyer) or **Recurring** (buys again) customer.
-* **Customer Count:** The number of new or returning customers.
-* **Order Count:** The number of orders placed by new or returning customers.
-* **Net Sales:** The net sales generated by new or returning customers.
-* **Average Net Sales:** The average net sales per order for new or returning customers.
-* **Gross Sales:** The gross sales generated by new or returning customers.
-* **Average Gross Sales:** The average gross sales per order for new or returning customers.
-* **"Show Percentages" Toggle:** Check this checkbox of "Show Percentage" that allows you to view these metrics as percentages.
-* **Export:** Click the **Export** button to download Order Report CSV file.
+* **Columns:** The table displays Customer Count, Order Count, Net Sales, Average Net Sales, Gross Sales, and Average Gross Sales for both **New** (first-time) and **Returning** customers.
+* **Show Percentages:** Enable this toggle to view the data as percentages, making it easy to see the proportion of sales from new versus returning customers.
+* **Export:** Click the **Export** button to download this data as a CSV file for further analysis.
 
    ![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-group-by.png)
 
-## Orders Grouped By
 
-This section breaks down order data based on specific criteria, offering granular insights.
+#### Orders Grouped By
 
-### 1. Shopping Country
+This section provides geographical and temporal breakdowns of your order data.
 
-* Presents a table showing "Country," "Orders," "Gross Sales," "Net Sales," "Average Gross Sales," and "Average Net Sales" for orders grouped by the customer's shopping country.
+* **Shopping Country:** This table breaks down your orders and sales data by the customer's country, helping you identify your key international markets.
+* **Orders Grouped By Day and Hour:** This heatmap visualizes your store's busiest times, showing which days of the week and which hours of the day generate the most orders.
 
-### 2. Day and Hour
+#### Additional Order Analytics
 
-* Provides a table showing "Orders Grouped By Day and Hour", allowing you to analyze sales performance based on specific days of the week and hours of the day.
+The bottom of the report features a series of granular charts to help you analyze specific aspects of customer behavior and order patterns:
 
-## Additional Order Analytics
-
-The report also includes various other charts and data visualizations for in-depth analysis:
-
-* **Gross Sale by Day:** Shows what days customers spent money, sorted by day for this week.
-* **Item Count Distribution:** Shows the distribution of product counts within orders.
-* **Gross Sale by Hours:** Visualizes customer spending patterns categorized by hour.
-* **Time Between Order Created & Completed:** Helps analyze the efficiency of your fulfillment process.
-* **Order Value Distribution:** Displays the distribution of order values across different ranges.
-* **Average Order Gross Timeline:** Tracks the average gross value of orders over time.
-* **Average Order Items Timeline:** Tracks the average number of items per order over time.
+* **Gross Sale by Day:** A bar chart visualizing the total gross sales generated on each day of the week, helping you identify your most profitable days.
+* **Item Count Distribution:** This chart illustrates how many orders contained 1 item, 2 items, 3 items, and so on, helping you understand your customers' purchasing volume.
+* **Gross Sale by Hour:** A bar chart that breaks down sales performance for each hour of the day, allowing you to pinpoint your peak sales times.
+* **Time Between Order Created & Completed:** This chart analyzes how long it takes for your team to fulfill orders, helping you measure the efficiency of your fulfillment process.
+* **Average Order Gross:** A line chart that tracks the trend of the average gross value of your orders over the selected time period.
+* **Order Value Distribution:** This chart illustrates how many orders fall into different price ranges (e.g., $0-100, $100-200), helping you understand your most common transaction sizes.
+* **Average Order Items:** A line chart that tracks the trend of the average number of items per order over the selected time period.
 
    ![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-report-by.png)
-
-## Search Filter 
-
-A general **"Search Filter"** is available at the top right. Here, you can search using an order's status or its payment status. This helps you quickly find the exact information you need in the report.
