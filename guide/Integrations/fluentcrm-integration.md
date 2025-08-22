@@ -1,76 +1,59 @@
-# Integrating with FluentCRM
+# FluentCRM Integration
 
-FluentCart seamlessly integrates with FluentCRM, allowing you to create powerful marketing automations that are triggered by customer purchases. By connecting your store to FluentCRM, you can automatically add new customers to specific lists, apply tags based on what they buy, and enrich their contact profiles without any manual work.
+FluentCart seamlessly integrates with FluentCRM, allowing you to create powerful marketing automations that are triggered by customer purchases. By connecting your store, you can automatically add new customers to specific lists, apply tags based on what they buy, and enrich their contact profiles without any manual work.
 
-This integration is handled through FluentCart's **Checkout Actions** feature. This guide will walk you through the process of setting up a new feed to connect a checkout event to FluentCRM.
+FluentCart offers two powerful ways to connect with FluentCRM: **Global Integrations**, which apply to every purchase (ideal for adding all customers to a main newsletter), and [**Product Integrations**](/guide/product-types-creation/managing-product-integrations.md), which are triggered only by specific items (perfect for adding a student to a course-specific list).
 
-#### Step 1: Navigate to Checkout Actions
+This guide will walk you through setting up both types of integrations.
 
-To begin, you need to access the main Checkout Actions screen.
+### When to Use Each Integration Type
+
+Before you begin, it's helpful to decide which type of integration best suits your goal:
+
+* **Use a Global Integration when:** You want an action to apply to *every single customer*, regardless of what they buy.
+    * *Example:* Adding all paying customers to your main "Newsletter" list.
+* **Use a Product Integration when:** You want an action to apply *only to customers who buy a specific item*. To learn more about setting up these powerful, product-specific automations, please follow our detailed [documentation](/guide/product-types-creation/managing-product-integrations.md).
+    * *Example:* Adding customers who bought your "Advanced SEO Course" to a "Course Students" list and tagging them accordingly.
+
+
+### Global Integration (For All Products)
+
+A global integration is perfect for general marketing tasks that should apply to all your customers, such as adding every new buyer to your main newsletter list or applying a general "Customer" tag.
+
+#### Navigating to Global Integrations
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
-2.  Once you're there, look for the **Checkout Actions** tab on the left side menu. Click it, and then hit the **Configure Modules** button.
+2.  Click on the **Global Integrations** tab.
 
-  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/fluentcrm/checkout-actions-fluentcart.png)
+#### Creating a New FluentCRM Feed
 
-Now, you'll see options for different tools you can connect. If you haven't added FluentCRM yet, click the **Install FluentCRM** button. But if you already have FluentCRM on your site and it's ready to go, just click the **Manage** button next to it instead.
+1.  On the Global Integrations dashboard, click the **Add Integration** button at the top right.
+2.  Select **FluentCRM Feed** from the dropdown menu. This will take you to the configuration screen.
 
-  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/fluentcrm/install-fluentCrm.png)
+  ![Screenshot of Fluentcrm Integration Page](/guide/public/images/Integrations/fluentcrm/add-integration.png)
 
-#### Step 2: Create a New FluentCRM Feed
+#### Configuring the Global Feed
 
-1.  On the Checkout Actions screen, click the **Add Integration** button at the top right.
-2.  Select **FluentCRM Feed** from the dropdown menu. This will take you to the configuration screen for the new feed.
+This screen allows you to define exactly what happens in FluentCRM when any order is placed in your store.
 
-  ![Screenshot of Fluentcrm Integration pricing Page](/guide/public/images/Integrations/fluentcrm/install-fluentCrm.png)
+* **Name:** Give your feed a descriptive name for your own internal reference (e.g., "Add All New Customers to Main List"). This helps you easily identify the automation later.
+* **FluentCRM Lists:** Select the FluentCRM list(s) where you want to add your new contacts. You can select one or more lists.
+* **Contact Tags:** Select the FluentCRM tag(s) you want to apply to all new customers. This is a great way to segment all your buyers for future marketing campaigns.
+* **Other Fields:** This powerful feature allows you to map additional data from the order to custom fields in FluentCRM. For each, provide a **Field Label** (the name of the custom field in FluentCRM) and select the corresponding FluentCart **Field Value** (shortcode) to sync the data.
+    * Example: To save the customer's city, you could set the Field Label to 'City' and select the Field Value '{order.billing.city}'. This will automatically populate the 'City' custom field in the FluentCRM contact profile with the data from the order.*
+* **Note:** Add a note that will be attached to the contact's profile in FluentCRM. You can use shortcodes here to make the note dynamic and personalized.
+* **Enable Double Opt-in:** It is highly recommended to keep this enabled. It sends a confirmation email to the user before they become an active subscriber, which is a best practice for GDPR compliance and maintaining a healthy, engaged email list.
+* **Enable ReSubscription:** If enabled, this will resubscribe a contact if they had previously unsubscribed from your list. Use this option with caution to ensure you respect your customers' choices.
+* **Event Trigger:** Select the specific store event that will trigger this automation. For most use cases, "Order Completed / Paid" is the best option, as it ensures only paying customers are added to your CRM.
+* **Enable This Feed:** Ensure the toggle at the top right is switched on to make the automation active. If it is disabled, the feed will be saved but will not run.
 
-#### Step 3: Configure the Feed Settings
+  ![Screenshot of Fluentcrm Integration Feed Page](/guide/public/images/Integrations/fluentcrm/fluentcrm-integration-feed.png)
 
-This screen is divided into several sections that allow you to define exactly what happens in FluentCRM when a customer checks out.
+Once configured, click the **Create FluentCRM Feed** button. This global automation is now live and will run for every order in your store.
 
-**1. Basic Information**
+### Combining Global and Product Integrations
 
-* **Name:** Give your automation a descriptive name for internal reference.
-* **List:** From the dropdown, select the target FluentCRM list where you want to add the new contacts.
-
-**2. Map Fields**
-
-This is where you connect the customer data collected during checkout to the corresponding fields in the FluentCRM contact profile. By default, you can map the following essential fields:
-
-* **Email Address:** This is the most critical field. You map this to the customer's email collected during checkout. It serves as the unique identifier for the contact in FluentCRM.
-* **First Name:** This maps the customer's first name from the checkout form to the "First Name" field in their FluentCRM profile, allowing for personalized communication.
-* **Last Name:** This maps the customer's last name from the checkout form to the "Last Name" field in their FluentCRM profile.
-
-:::tip Select button dropdown
-The **Select** button dropdown next to each field allows you to choose the corresponding shortcode. These shortcodes pull data directly from the customer's order and are organized into helpful categories like "Customer," "Payments," and "General." For example, to map the customer's email, you would choose **Email Address** from the "Customer" category, which inserts the `{order.billing_email}` shortcode.
-:::
-
-  ![Screenshot of Fluentcrm Integration Page](/guide/public/images/Integrations/fluentcrm/fluentcrm-integration-feed.png)
-
-**3. Additional Information**
-
-This section provides more advanced options for organizing and managing your new contacts.
-
-* **Other Fields:** Click the **plus icon (+)** to map additional data. For each, provide a **Field Label** in FluentCRM and select the corresponding FluentCart **Field Value** from the dropdown.
-* **Tags:** Apply one or more tags to the contact. For more advanced segmentation, check the **Enable Dynamic Tag Inputs** box to apply tags only when specific conditions are met.
-    * **Select the Tag:** Choose the tag you want to apply from the dropdown menu.
-    * **Set the Condition:** Create a rule that must be met for the tag to be applied.
-        * **If:** Select a data point (shortcode) from the dropdown, such as `{order.billing.city}`.
-        * **Operator:** Choose a logical operator.
-        * **Value:** Enter the value to check against.
-    * **Add More Conditions:** Click the **plus icon (+)** to add another rule. The tag will only be applied if *all* conditions are met.
-* **Note:** Add a static note that will be attached to the contact's profile in FluentCRM.
-* **Double Opt-in:** Enable this to send a confirmation email to the user before they become an active subscriber on your list.
-* **ReSubscribe:** If enabled, this will resubscribe a contact if they had previously unsubscribed from your list.
-* **VIP:** Enable this to automatically mark the new contact as a VIP in FluentCRM.
-
-**4. Finalize the Feed**
-
-Before saving, you must set the status of your new automation.
-
-* **Status:** Ensure the **Enable This feed** checkbox is checked to make the automation active. Unless your automation will be inactive.t
-
-Once all fields are configured, click the **Create FluentCRM Feed** button at the bottom of the page. Your integration is now live, and FluentCart will automatically send customer data to FluentCRM after every completed checkout.
+By combining both Global and Product-specific integrations, you can create a sophisticated marketing automation strategy. Use global feeds for general onboarding and product feeds for highly targeted, post-purchase follow-ups that enhance the customer experience.
 
 ### Use Case Example: Segmenting Customers by Location
 

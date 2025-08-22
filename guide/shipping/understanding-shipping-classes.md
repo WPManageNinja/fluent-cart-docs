@@ -29,10 +29,12 @@ This guide explains how to use Shipping Classes to group products with similar s
     * **Cost Type**: This defines how the "Cost Adjustment" is applied:
         * **Percentage**: The "Cost Adjustment" will be applied by percentage.
         * **Fixed Amount**: The "Cost Adjustment" will be applied by a fix amount.
-     * **Per Item**: Select this checkbox if you want the class to add per item charge if the buyer has multiple item of this product in the cart.
+     * **Apply to Qunatity**: Select this checkbox if you want the class to add per item charge if the buyer has multiple item of this product in the cart.
 
 4.  **Save the Shipping Class**:
     * Click the **"Save"** or **"Add Class"** button.
+
+     ![Screenshot of Shipping Classes](/guide/public/images/shipping/understanding-shipping-classes/shipping-classes-2.png)
 
 ## Assigning Shipping Classes to Products
 
@@ -49,9 +51,6 @@ Once you have created your shipping classes, you need to assign them to your pro
 
 3.  **Update Product**:
     * Save your product to apply the assigned shipping class.
-
-
- ![Screenshot of Shipping Classes](/guide/public/images/shipping/understanding-shipping-classes/shipping-classes-2.png)
 
 
 **Important Notes**:
