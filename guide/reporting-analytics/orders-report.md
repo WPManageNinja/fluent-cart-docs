@@ -4,15 +4,15 @@ The **Orders Report** in FluentCart provides a deep dive into your store's order
 
 #### Accessing the Orders Report
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Reports**.
-2.  Click on the **Orders** tab to access the Orders Report.
+1. From your WordPress dashboard, navigate to **FluentCart Pro > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)**.
+2. Click on the **Orders** tab to access the Orders Report.
 
 #### Filtering the Report
 
 To help you analyze your data effectively, the Orders Report includes several filtering options:
 
 * **Date Filter:** Located at the top of the page, this allows you to view data for a specific timeline, such as "This Month," "This Year," or a custom date range. All charts and metrics on the page will update based on your selection.
-* **Advanced Filters:** To the top right, click the **filter icon** to segment the report by **Order Status** or **Payment Status**, allowing you to focus on specific types of orders (e.g., only "Completed" or "Paid" orders).
+* **Advanced Filters:** To the top right, click the **filter icon** to segment the report by **[Order Status](/guide/store-management/understanding-statuses.md)** or **[Payment Status](/guide/store-management/understanding-statuses.md)**, allowing you to focus on specific types of orders (e.g., only "Completed" or "Paid" orders).
 
 #### Order Report Chart
 
