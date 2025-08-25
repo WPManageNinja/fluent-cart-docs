@@ -12,15 +12,26 @@ FluentCart's **Advanced Filter** tool on the Customers screen allows you sort yo
 The Advanced Filter enables you to combine various properties to create precise customer segments.
 
 * **Order Property:** This allows you to filter customers based on aspects of their orders.
-    * **Purchase Count:** Filter customers by the number of purchases they have made (e.g., customers with more than 5 purchases, or exactly 1 purchase).
+    * **By Order Items:** Find customers based on the specific items they bought.
+    * **Purchase:** Filter customers by the number of purchases they have made (e.g., customers with more than 5 purchases, or exactly 1 purchase).
     * **First Purchase Date:** Filter customers based on the date of their very first order. This is useful for identifying new customer cohorts or specific periods of acquisition.
     * **Last Purchase Date:** Filter customers based on the date of their most recent order. This is helpful for identifying recent buyers or customers who haven't purchased in a while.
+
+* **Customer Property:** This new feature lets you filter based on customer-specific details.
+
+     * **Customer Name:** Find customers by their first or last name.
+
+    * **Customer Email:** Search for customers using their email address.
+
+    * **Customer LTV:** Filter customers by their Lifetime Value, which is the total amount of money they’ve spent in your store.
+
+* **Labels:** This new feature lets you filter customers by specific labels you've added to them. This is great for grouping customers for marketing or other tasks.
 
 * **Adding Multiple Conditions:**
     * Click **"+ Add"** to add another rule for filtering. This typically functions as an "AND" condition, meaning all criteria must be met.
     * Click the **"+ OR"** button to add an alternative filter condition. This allows you to find customers who meet *either* the previous set of criteria *or* the new one.
 
-        ![Screenshot of Advanced Filter Button](/guide/public/images/store-management/customer-advanced-filter-button.png) 
+        ![Screenshot of Advanced Filter Button](/guide/public/images/store-management/using-advanced-filter/customer-advanced-filter-button.png) 
 
 
 ## Applying and Resetting Filters

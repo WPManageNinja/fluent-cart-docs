@@ -13,7 +13,7 @@ The Customers list table presents key information for each customer at a glance:
 
 * **Customer:** Displays the customer's name and their associated email address. 
 * **Address:** Shows a summarized address for the customer. 
-* **Purchase Count:** Indicates the total number of orders or purchases made by that customer. 
+* **Purchases:** Indicates the total number of orders or purchases made by that customer. 
 * **LTV (Lifetime Value):** This shows the total amount of money a customer has spent in your store over their entire history. It helps you quickly identify your most valuable customers. 
 * **Last Purchase Date:** Shows the date and time of their most recent purchase. 
 * **Customer Since:** Displays the date and time when the customer's record was first created in your system. 

@@ -5,7 +5,8 @@ The Order Details screen in FluentCart provides a comprehensive breakdown of eac
 ## Accessing Order Details
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Orders**.
-2.  On the **Orders** list, click on the **Receipt Number** or the **"View"** action icon (if available) next to the order you wish to inspect.
+2.  You will see a list of all the orders your store has received.
+3.  To open the details for a specific order, simply click on its order number in the first column (labeled # Date). 
 
     ![Screenshot of Order Details Page](/guide/public/images/store-management/order-details-overview/order-3-details.png)
 
@@ -21,7 +22,7 @@ At the top of the screen, you’ll see the main order information and quick acti
 * **Order Status:** Shows the current state of the order (like pending or completed).
 * **Refund Button:** Initiates the [refund process](/guide/store-management/orders-management/processing-refunds) for the order.
 * **Edit Button:** Allows you to enter [edit mode for the order](/guide/store-management/orders-management/editing-existing-orders).
-* **More Actions Dropdown:** Contains additional actions such as "Change Shipping Status", "Cancel Order", and "Receipt".
+* **More Actions Dropdown:** Contains additional actions such as "Change Shipping Status", "Cancel Order", Back to Processing, and "Receipt".
 
 ### 2. Order Items
 
@@ -53,12 +54,7 @@ This table provides a log of all payment transactions related to this specific o
 * **Total:** The amount of the individual transaction.
 * **Status:** The status of the transaction.
 
-
-### 5. Notes
-
-An internal field for administrators to add any private notes or comments relevant to the order.
-
-### 6. Customer Information
+### 5. Customer Information
 
 Displays key details about the customer who placed the order.
 
@@ -70,6 +66,10 @@ Displays key details about the customer who placed the order.
 * This panel also offers quick links to [edit customer information](/guide/store-management/customers-management/customer-details-overview#editing-customer-information), [manage shipping address](/guide/store-management/customers-management/customer-details-overview#managing-customer-addresses), and [manage billing address](/guide/store-management/customers-management/customer-details-overview#managing-customer-addresses).
 
     ![Screenshot of Order Details Page](/guide/public/images/store-management/order-details-overview/order-details.png)
+
+### 6. Notes
+
+An internal field for administrators to add any private notes or comments relevant to the order.
 
 ### 7. Activity Log
 
