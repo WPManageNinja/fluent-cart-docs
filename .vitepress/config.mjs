@@ -143,6 +143,9 @@ export default defineConfig({
       md.use(zoomablePlugin)
     }
   },
+  vite: {
+    publicDir: 'guide/public',
+  },
   themeConfig: {
     search: {
       provider: 'local',
