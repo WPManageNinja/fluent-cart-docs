@@ -20,4 +20,7 @@ yarn-error.log*
 dist/
 
 # VSCode settings
-.vscode/ 
+.vscode/
+
+# Exclude other docs projects
+fluent-affiliate-docs/ 
