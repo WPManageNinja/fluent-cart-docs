@@ -16,12 +16,12 @@ By the end of this guide, you will be able to confidently list and manage any ph
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Products** in the left sidebar.
 2.  On the **Products** screen, click the **"Add Product"** button at the top right.
 
-    ![Screenshot of Add Product Button](/guide/public/images/product-types-creation/Creating-Physical-Products/physical-product-1.png)
+    ![Screenshot of Add Product Button](/images/product-types-creation/Creating-Physical-Products/physical-product-1.png)
     
 
 3.  This will open the **Add New Product** screen, where you'll need to enter the product name and choose the product type either Physical Product or Digital Product. Once selected, you'll be taken to the **Edit Product** page.
 
-    ![Screenshot of Product Edit Screen (Physical Product Example)](/guide/public/images/product-types-creation/Creating-Physical-Products/physical-product-2.png)
+    ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/Creating-Physical-Products/physical-product-2.png)
 
 ### 1. Basic Product Information
 
@@ -62,7 +62,7 @@ You will see the following fields:
 * **Manage profit/cost:** (Optional) Toggle this on to enter the cost of the item. FluentCart will use this to calculate your profit and margin for internal tracking.
 * **Direct Checkout:** A unique URL that takes a customer directly to the checkout page with a specific product variation already added to their cart.
 
-![Screenshot of Simple Price](/guide/public/images/product-types-creation/Creating-Physical-Products/simple-price.gif)
+![Screenshot of Simple Price](/images/product-types-creation/Creating-Physical-Products/simple-price.gif)
 
 ::: info
 To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing.md) guide.
@@ -85,7 +85,7 @@ This will display a table where each row is a single variation.
         * **Duplicate:** Click this to create an exact copy of this variation row.
         * **Direct Checkout:** Get a direct link to purchase this specific variation, bypassing the main product page.
 
-![Screenshot of Simple Variation](/guide/public/images/product-types-creation/Creating-Physical-Products/simple-variation.gif)
+![Screenshot of Simple Variation](/images/product-types-creation/Creating-Physical-Products/simple-variation.gif)
 
 To add another version of your product, click the **+ Add more** button to create a new row in the table.
 

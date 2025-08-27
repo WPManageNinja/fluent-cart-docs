@@ -30,7 +30,7 @@ To the right of the main chart, you will find a summary of crucial product-relat
 * **Customer Count:** This shows the total number of unique customers who purchased products.
 * **Avg. Selling Price:** This calculates the average price of the products sold.
 
-    ![Screenshot of Product Report Page](/guide/public/images/reporting-analytics/product-report.png)
+    ![Screenshot of Product Report Page](/images/reporting-analytics/product-report.png)
 
 #### Product Performance Comparison
 

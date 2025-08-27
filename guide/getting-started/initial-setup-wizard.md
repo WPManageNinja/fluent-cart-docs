@@ -20,7 +20,7 @@ The first step of the wizard prompts you to enter basic information about your s
 
 Click **"Continue"** to proceed to the next step.
 
-![Screenshot of Initial Setup Wizard - Store Details](/guide/public/images/getting-started/initial-setup-wizard/initial-setup-wizard-step1.png)
+![Screenshot of Initial Setup Wizard - Store Details](/images/getting-started/initial-setup-wizard/initial-setup-wizard-step1.png)
 
 :::info Where to find later?
 These settings can be accessed and modified anytime from **FluentCart Pro > Settings > Settings > Store Setup**.
@@ -36,7 +36,7 @@ You have several options for setting up these pages:
 * **Create Pages (via `+` icon):** Click the **`+` icon** next to a page type. This will automatically create a new WordPress page for that specific function.
 * **Generate All Pages:** Click the **"Generate All Pages"** button at the bottom. This will automatically create all necessary pages (Checkout, Cart, Receipt, Shop, Customer Profile) with their respective FluentCart shortcodes embedded and assign them for you.
 
-![Screenshot of Initial Setup Wizard - Page Setup](/guide/public/images/getting-started/initial-setup-wizard/initial-setup-wizard-step2.png)
+![Screenshot of Initial Setup Wizard - Page Setup](/images/getting-started/initial-setup-wizard/initial-setup-wizard-step2.png)
 
 :::warning Important Shortcodes
 For each of these pages, you *must* ensure the correct FluentCart shortcode is embedded in the page content for the functionality to work. The wizard typically prompts you or automatically adds them.
@@ -63,7 +63,7 @@ The content will be uploaded in the background and may take a few seconds depend
 
 Click the **"Save"** button to finalize the wizard setup.
 
-![Screenshot of Initial Setup Wizard - Product Setup](/guide/public/images/getting-started/initial-setup-wizard/initial-setup-wizard-step3.png)
+![Screenshot of Initial Setup Wizard - Product Setup](/images/getting-started/initial-setup-wizard/initial-setup-wizard-step3.png)
 
 ## Completing the Wizard & Next Steps for Your Business
 

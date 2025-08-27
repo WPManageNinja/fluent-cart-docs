@@ -15,4 +15,4 @@ You can navigate through pages if you have many downloads (e.g., "Page 1 of 1", 
 
 Simply click the **Download** button next to the product you wish to obtain, and the file will begin downloading to your device.
 
-![Screenshot of Licenses](/guide/public/images/customer-dashboard/downloads/downloads-1.png)
+![Screenshot of Licenses](/images/customer-dashboard/downloads/downloads-1.png)

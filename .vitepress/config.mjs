@@ -3,12 +3,13 @@ import { joinURL, withoutTrailingSlash } from 'ufo'
 import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
 
 export default defineConfig({
-  lang: 'en-US',
-  ignoreDeadLinks: true,
   title: 'FluentCart Documentation',
   titleTemplate: ':title - FluentCart Documentation',
-  showingLastUpdated: true,
   description: 'Comprehensive documentation for FluentCart - your all-in-one e-commerce solution.',
+  lang: 'en-US',
+  cleanUrls: true,
+  ignoreDeadLinks: true,
+  showingLastUpdated: true,
   
   transformPageData: (pageData, { siteConfig }) => {
     // Initialize the "head" frontmatter if it doesn't exist.
@@ -126,7 +127,7 @@ export default defineConfig({
       ]
     )
   },
-  cleanUrls: true,
+  
   base: '/',
   sitemap: {
     hostname: 'https://docs.fluentcart.com',
@@ -138,6 +139,7 @@ export default defineConfig({
       }))
     }
   },
+  
   markdown: {
     config: (md) => {
       md.use(zoomablePlugin)

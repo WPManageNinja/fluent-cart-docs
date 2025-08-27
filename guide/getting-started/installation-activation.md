@@ -35,7 +35,7 @@ After installing the Pro Addons, you will need to activate your license key. Thi
 5.  In the "License Key" field, enter the unique license key you received upon purchasing FluentCart Pro Addons from WPManageNinja.
 
 6.  Click the **"Verify License"** button.
- ![Screenshot of Licensing Settings Tab](/guide/public/images/settings-configuration/license-settings-tab.png)
+ ![Screenshot of Licensing Settings Tab](/images/settings-configuration/license-settings-tab.png)
     * If successful, you will see a confirmation message, and your license status will be marked as active.
     * If you encounter an error, please double-check your license key for any typos or ensure your site can connect to the licensing server.
 

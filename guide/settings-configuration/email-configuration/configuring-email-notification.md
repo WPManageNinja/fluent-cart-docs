@@ -32,7 +32,7 @@ For each notification in the list, you can see its **Name**, the intended **Reci
 
 * **Enable/Disable Toggle:** Use this switch to quickly activate or deactivate any notification. The email will only be sent if the toggle is enabled.
 
-![Email Notification](/guide/public/images/settings-configuration/email-notifications/email-notification-1.png)
+![Email Notification](/images/settings-configuration/email-notifications/email-notification-1.png)
 
 #### Step 4: Save Your Changes
 

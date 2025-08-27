@@ -10,7 +10,7 @@ Product-specific integration settings are found within the **Edit Product** scre
 2.  [Edit an existing product](/guide/product-types-creation/product-list-overview) by clicking its name or the "Edit" action.
 3.  On the **Edit Product** screen, click on the **"Integrations"** tab.
 
-    ![Screenshot of Product Integrations Tab](/guide/public/images/product-types-creation/managing-product-integration/Product-Integration.png)
+    ![Screenshot of Product Integrations Tab](/images/product-types-creation/managing-product-integration/Product-Integration.png)
 
 ## Configuring Product Integrations
 

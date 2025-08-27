@@ -51,7 +51,7 @@ This section summarizes crucial order-related metrics for the selected period.
 * **Taxes:** Totals the amount of taxes collected on orders.
 * **Shipping:** Totals the amount charged to customers for shipping.
 
-   ![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-report.png)
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders-report.png)
 
 #### Customer Insights
 
@@ -63,7 +63,7 @@ This powerful table breaks down your order data based on customer type, helping 
 * **Show Percentages:** Enable this toggle to view the data as percentages, making it easy to see the proportion of sales from new versus returning customers.
 * **Export:** Click the **Export** button to download this data as a CSV file for further analysis.
 
-   ![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-group-by.png)
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders-group-by.png)
 
 
 #### Orders Grouped By
@@ -85,4 +85,4 @@ The bottom of the report features a series of granular charts to help you analyz
 * **Order Value Distribution:** This chart illustrates how many orders fall into different price ranges (e.g., $0-100, $100-200), helping you understand your most common transaction sizes.
 * **Average Order Items:** A line chart that tracks the trend of the average number of items per order over the selected time period.
 
-   ![Screenshot of Orders Report Page](/guide/public/images/reporting-analytics/orders-report-by.png)
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders-report-by.png)

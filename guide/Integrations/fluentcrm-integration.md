@@ -30,7 +30,7 @@ A global integration is perfect for general marketing tasks that should apply to
 1.  On the Global Integrations dashboard, click the **Add Integration** button at the top right.
 2.  Select **FluentCRM Feed** from the dropdown menu. This will take you to the configuration screen.
 
-  ![Screenshot of Fluentcrm Integration Page](/guide/public/images/Integrations/fluentcrm/add-integration.png)
+  ![Screenshot of Fluentcrm Integration Page](/images/Integrations/fluentcrm/add-integration.png)
 
 #### Configuring the Global Feed
 
@@ -47,7 +47,7 @@ This screen allows you to define exactly what happens in FluentCRM when any orde
 * **Event Trigger:** Select the specific store event that will trigger this automation. For most use cases, "Order Completed / Paid" is the best option, as it ensures only paying customers are added to your CRM.
 * **Enable This Feed:** Ensure the toggle at the top right is switched on to make the automation active. If it is disabled, the feed will be saved but will not run.
 
-  ![Screenshot of Fluentcrm Integration Feed Page](/guide/public/images/Integrations/fluentcrm/fluentcrm-integration-feed.png)
+  ![Screenshot of Fluentcrm Integration Feed Page](/images/Integrations/fluentcrm/fluentcrm-integration-feed.png)
 
 Once configured, click the **Create FluentCRM Feed** button. This global automation is now live and will run for every order in your store.
 

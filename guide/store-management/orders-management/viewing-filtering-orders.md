@@ -14,7 +14,7 @@ This section provides a snapshot of important order numbers, including:
 * **Paid Order items:** The total count of individual product items across all paid orders.
 * **Order value (Paid):** The total monetary value of all paid orders.
 
-    ![Screenshot of Orders List Page](/guide/public/images/store-management/viewing-and-filtering-orders/order-stats-overview.png)
+    ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/order-stats-overview.png)
 
 ## Accessing the Orders List
 
@@ -58,7 +58,7 @@ For more specific filtering needs, FluentCart provides an additional set of adva
 * **Upgraded To:** This view shows the new orders that were created as a result of a customer upgrading their subscription or license (e.g., the new "Pro Plan" order).
 
 
-    ![Screenshot of Orders List Page](/guide/public/images/store-management/viewing-and-filtering-orders/orders-list.png)
+    ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/orders-list.png)
 
 ### 2. Using the Advanced Filter
 
@@ -86,7 +86,7 @@ For more specific control, use the **Advanced Filter** option:
 3.  Apply your desired filters and click **"Apply"** to see the refined list of orders.
 4.  You can **"Reset"** the filters to view all orders again.
 
-![Screenshot of Advanced Filter Button](/guide/public/images/store-management/viewing-and-filtering-orders/advanced-filter-button.png) 
+![Screenshot of Advanced Filter Button](/images/store-management/viewing-and-filtering-orders/advanced-filter-button.png) 
 
 ### 3. Using the Search Bar
 

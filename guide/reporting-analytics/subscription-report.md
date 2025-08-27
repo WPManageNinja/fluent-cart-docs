@@ -15,7 +15,7 @@ To help you analyze your data effectively, the Subscription Report includes seve
 * **Product Filter:** Use the "Select product" dropdown to view metrics for a specific subscription product.
 * **Advanced Filters:** To the top right, click the **filter icon** to segment the report by **Order Status** or **Payment Status**.
 
-  ![Screenshot of Report Subscriprtion Page](/guide/public/images/reporting-analytics/Subscription-Report.png)
+  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/Subscription-Report.png)
 
 #### Key Performance Indicators (KPIs)
 
@@ -49,4 +49,4 @@ This section provides deeper insights into why subscriptions are being canceled.
 * **Churn Rates Over Time:** A line chart that tracks your churn rate over the selected period.
 * **Subscriptions Count Trend:** A line chart that visualizes the growth or decline of your total active subscriber count over time.
 
-  ![Screenshot of Report Subscriprtion Page](/guide/public/images/reporting-analytics/Subscription-Report-overview.png)
+  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/Subscription-Report-overview.png)

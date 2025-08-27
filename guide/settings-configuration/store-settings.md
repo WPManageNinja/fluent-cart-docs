@@ -30,7 +30,7 @@ Provide your physical business address details. This information can be used for
 * **City/Town:** Enter the city or town where your business is located.
 * **Zip Code:** Provide the postal or zip code for your business address.
 
-    ![Screenshot of Store Settings - Store Setup Tab](/guide/public/images/settings-configuration/store-setting/store-settings-setup.png)
+    ![Screenshot of Store Settings - Store Setup Tab](/images/settings-configuration/store-setting/store-settings-setup.png)
 
 ### 3. Currency
 
@@ -40,7 +40,7 @@ Configure the currency settings for your store's transactions.
 * **Number Format:** This setting lets you choose how numbers, especially prices, are shown in your store. It controls whether you use commas or dots to separate thousands and decimals.
 * **Currency Position:** Select where the currency symbol should appear relative to the amount.
 
-    ![Screenshot of Store Settings - Store Setup Tab](/guide/public/images/settings-configuration/store-setting/store-currency-setup.png)
+    ![Screenshot of Store Settings - Store Setup Tab](/images/settings-configuration/store-setting/store-currency-setup.png)
 
 ### 4. Payment View
 

@@ -7,7 +7,7 @@ FluentCart provides a straightforward way to process refunds for your orders, wh
 1.  Navigate to the **[Order Details](/guide/store-management/orders-management/order-details-overview)** screen for the specific order you wish to refund.
 2.  In the top right corner of the Order Details screen, click the **"Refund"** button.
 
-    ![Screenshot of Refund Button on Order Details](/guide/public/images/store-management/processing-refunds/refund-button-on-order.png)
+    ![Screenshot of Refund Button on Order Details](/images/store-management/processing-refunds/refund-button-on-order.png)
 
 3.  A **"Refund Payment"** modal window will appear.
 
@@ -24,7 +24,7 @@ FluentCart provides a straightforward way to process refunds for your orders, wh
 
 5.  After configuring all options, click the **"Refund"** button at the bottom of the modal (e.g., "Refund $51.3") to confirm and process the refund.
 
-![Screenshot of Refund Payment Modal](/guide/public/images/store-management/processing-refunds/refund-payment-modal.png)
+![Screenshot of Refund Payment Modal](/images/store-management/processing-refunds/refund-payment-modal.png)
 
 ## Post-Refund Status
 

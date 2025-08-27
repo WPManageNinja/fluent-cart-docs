@@ -19,7 +19,7 @@ This section provides a range of color pickers and input fields to define your s
 * **Divider Color:** Defines the color for dividing lines or separators between sections.
 * **Pricing Active Card BG (Background):** Sets the background color for pricing cards or elements that are in an active or highlighted state.
 
-    ![Screenshot of Theme Setup Tab](/guide/public/images/settings-configuration/theme-setup/theme-setup-customization.png)
+    ![Screenshot of Theme Setup Tab](/images/settings-configuration/theme-setup/theme-setup-customization.png)
 
 ## Saving Your Settings
 

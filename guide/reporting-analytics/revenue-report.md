@@ -27,7 +27,7 @@ The main chart at the top of the page visually represents your key financial tre
     * **Discount:** The total value of all discounts applied through coupons.
 * **Interactive Controls:** You can also interact with the chart using the icons to zoom in on specific periods or download the chart as an image for your records.
 
-    ![Screenshot of Revenue Report Page](/guide/public/images/reporting-analytics/revenue-report.png)
+    ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue-report.png)
 
 #### Net Revenue Breakdown
 
@@ -55,4 +55,4 @@ This powerful section allows you to segment your revenue data based on different
 * **Data Table:** The table will dynamically update to show a detailed breakdown of your revenue based on the selected grouping, including metrics like Order Count, Gross Sales, and Net Revenue for each item in the group (e.g., for each country or payment method).
 * **Export:** Click the **Export** button to download the currently displayed grouped data as a CSV file.
 
-    ![Screenshot of Revenue Report Page](/guide/public/images/reporting-analytics/net-revenue.png)
+    ![Screenshot of Revenue Report Page](/images/reporting-analytics/net-revenue.png)

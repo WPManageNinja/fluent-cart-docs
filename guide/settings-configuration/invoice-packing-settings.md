@@ -11,7 +11,7 @@ To begin customizing your documents, you first need to access the correct settin
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
 2.  Click on the **Invoice & Packing** tab from the left-hand menu.
 
-  ![Screenshot of Invoice & Packaging Page](/guide/public/images/settings-configuration/Invoice/invoice-packaging.png)
+  ![Screenshot of Invoice & Packaging Page](/images/settings-configuration/Invoice/invoice-packaging.png)
 
 ### Step 2: Understand the Available Templates
 
@@ -34,7 +34,7 @@ The customization process is identical for each of the five templates. Select th
     2.  Click the **Add ShortCodes** dropdown menu.
     3.  Select the desired placeholder from the list to insert it into the template.
 
-  ![Screenshot of Invoice & Packaging Page](/guide/public/images/settings-configuration/Invoice/template-customization.png)
+  ![Screenshot of Invoice & Packaging Page](/images/settings-configuration/Invoice/template-customization.png)
 
 ### Step 4: Save Your Templates
 

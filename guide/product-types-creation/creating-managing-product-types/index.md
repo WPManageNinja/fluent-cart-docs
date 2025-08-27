@@ -11,7 +11,7 @@ Using Product Types helps you sort and handle different collections of products 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Product Types** in the left WordPress sidebar.
 2.  This will open the **Types** screen, displaying a table of all your existing product types.
 
-    ![Screenshot of Product Types List Page](/guide/public/images/product-types-creation/Creating-Managing-Types/Type-1.png)
+    ![Screenshot of Product Types List Page](/images/product-types-creation/Creating-Managing-Types/Type-1.png)
 
 ## Understanding the Product Types List Table
 
@@ -26,7 +26,7 @@ The Product Types list table provides key information for each defined type:
 
 1.  On the **Types** screen, click the **"Add New Type"** button at the top right corner.
 
-    ![Screenshot of Add New Type Button](/guide/public/images/product-types-creation/Creating-Managing-Types/Type-2.png) 
+    ![Screenshot of Add New Type Button](/images/product-types-creation/Creating-Managing-Types/Type-2.png) 
 
 2.  An **"Add New Type"** modal window will appear.
 
@@ -41,7 +41,7 @@ The Product Types list table provides key information for each defined type:
 4.  Click the **"Add New Type"** button within the modal to save your new product type.
 5.  To cancel, click the **"Cancel"** button.
 
-![Screenshot of Add New Type Modal](/guide/public/images/product-types-creation/Creating-Managing-Types/Type-3.png)
+![Screenshot of Add New Type Modal](/images/product-types-creation/Creating-Managing-Types/Type-3.png)
 
 ## Searching and Filtering Product Types
 

@@ -30,7 +30,7 @@ To the right of the main chart, you will find a summary of crucial refund-relate
 * **Avg. Refunded Amount:** This calculates the average value of a single refund transaction.
 * **Refund Rate:** This is a key metric that shows the percentage of your orders that have resulted in a refund.
 
-    ![Screenshot of Refunds Report Page](/guide/public/images/reporting-analytics/refunds-report.png)
+    ![Screenshot of Refunds Report Page](/images/reporting-analytics/refunds-report.png)
 
 #### Additional Refund Analytics
 

@@ -22,7 +22,7 @@ This section provides a table that breaks down your gross sales volume, often sh
 * **Volume ($):** This column shows the total money earned from sales (before any costs or refunds).
 * **YoY Growth (%):** This shows the percentage of growth compared to the same time in the previous year.
 
-    ![Screenshot of Reporting Overview Page](/guide/public/images/reporting-analytics/reporting-overview.png)
+    ![Screenshot of Reporting Overview Page](/images/reporting-analytics/reporting-overview.png)
 
 ## Other Key Overview Metrics 
 
@@ -35,4 +35,4 @@ Even if not fully shown in the current view, the Reports Dashboard Overview usua
 * **Top Countries Gross Revenue:** A summary of total sales from your top-performing countries.
 * **Top Countries Net Revenue:** A summary of actual income from your top-performing countries.
 
-    ![Screenshot of Report Dashboard Overview Page](/guide/public/images/reporting-analytics/overview-metrics.png)
+    ![Screenshot of Report Dashboard Overview Page](/images/reporting-analytics/overview-metrics.png)

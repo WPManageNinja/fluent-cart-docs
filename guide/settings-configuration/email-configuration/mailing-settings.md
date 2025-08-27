@@ -18,7 +18,7 @@ These settings will be used to send all emails from FluentCart, such as order co
 * **Email Footer:** Use the rich text editor to create a footer that will be added to all emails sent from your store. For compliance, it is highly recommended to include your business name and address in the footer.
 * **Admin Email Address:** Specify the email address where FluentCart will send administrative notifications. By default, this uses the `{wp_admin_email}` shortcode, which automatically pulls the primary administrator email from your WordPress settings.
 
-![Mailing Settings](/guide/public/images/settings-configuration/email-notifications/mailing-settings.png)
+![Mailing Settings](/images/settings-configuration/email-notifications/mailing-settings.png)
 
 #### Saving Your Changes
 

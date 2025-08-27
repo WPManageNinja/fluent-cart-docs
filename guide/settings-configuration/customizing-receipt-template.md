@@ -16,7 +16,7 @@ You will now see the main editor, which comes pre-filled with a default layout. 
 * **Direct Editing:** You can directly type in the editor to add custom messages (like "Thank you for your order!"), change the text formatting (bold, italics), or restructure the layout.
 * **Advanced Editing:** For more precise control over the design, you can switch from the standard **Visual** editor to the **Code** editor. This allows you to work directly with the underlying HTML of the template.
 
-  ![Screenshot of Receipt Template Page](/guide/public/images/settings-configuration/Invoice/receipt-template.png)
+  ![Screenshot of Receipt Template Page](/images/settings-configuration/Invoice/receipt-template.png)
 
 #### Step 3: Add Dynamic Content with Shortcodes
 

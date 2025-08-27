@@ -50,7 +50,7 @@ The top of the dashboard displays a series of Key Performance Indicators (KPIs) 
 * **Average Customer Orders:** The average number of orders placed per customer.
 * **Average Customer LTV (Lifetime Value):** The average total revenue generated per customer over their entire history with your store.
 
-    ![Screenshot of Sales Report Page](/guide/public/images/reporting-analytics/sales-report.png)
+    ![Screenshot of Sales Report Page](/images/reporting-analytics/sales-report.png)
 
 #### Report Sections
 

@@ -13,13 +13,13 @@ First, let's go to the right place in FluentCart.
 3.  Choose **Storage Settings**.
 4.  You will see a list of cloud storage options. Find **Amazon S3** and click the **Manage** button.
 
-![Amazon S3 Settings in FluentCart](/guide/public/images/Integrations/S3/access-s3.png)
+![Amazon S3 Settings in FluentCart](/images/Integrations/S3/access-s3.png)
 
 You’ll now see the fields we need to fill in to connect FluentCart to Amazon S3.
 
 To retrieve this information, please visit your Amazon AWS account. Don’t worry, we’ll guide you through each step to make the process simple and stress-free.
 
-![Amazon S3 configuration fields in FluentCart](/guide/public/images/integrations/S3/s3-credential-fields.png)
+![Amazon S3 configuration fields in FluentCart](/images/integrations/S3/s3-credential-fields.png)
 
 ## Step 2: Get Your Credentials from Amazon S3
 
@@ -32,15 +32,15 @@ First, we need to create a "bucket," which is just what Amazon calls a storage c
 1.  Log in to your **Amazon AWS account**.
 2.  From the main dashboard, find and click on **S3** under the "Storage" section. If you can't find it, you can search for "S3" in the search bar at the top.
 
-![Navigating to the S3 service in AWS](/guide/public/images/integrations/S3/aws-navigate-to-s3.png)
+![Navigating to the S3 service in AWS](/images/integrations/S3/aws-navigate-to-s3.png)
 
 3.  Before we make the bucket, let's choose a **Region**. This is the physical location of the data center where your files will be stored. It's a good idea to pick a region that is closest to most of your customers. You can change this at the top right of the AWS console.
 
-![Choosing a region in the AWS console](/guide/public/images/integrations/S3/aws-select-region.png)
+![Choosing a region in the AWS console](/images/integrations/S3/aws-select-region.png)
 
 4.  Now, click the **Create Bucket** button. This will start the setup process for your new storage bucket.
 
-![The 'Create Bucket' button in AWS S3](/guide/public/images/integrations/S3/aws-create-bucket-button.png)
+![The 'Create Bucket' button in AWS S3](/images/integrations/S3/aws-create-bucket-button.png)
 
 5.  On the bucket creation page, follow these instructions carefully:
     * **Bucket Name:** Give your bucket a unique name.
@@ -51,7 +51,7 @@ First, we need to create a "bucket," which is just what Amazon calls a storage c
 
 Make a note of the **Region** you chose (like `us-east-1`), as you'll need it in a moment.
 
-![The 'Create Bucket' Creation page in AWS S3](/guide/public/images/integrations/S3/bucket-creation.png)
+![The 'Create Bucket' Creation page in AWS S3](/images/integrations/S3/bucket-creation.png)
 
 ### Create an "IAM User" (A Special Key)
 
@@ -59,32 +59,32 @@ Instead of giving FluentCart the master key to your entire Amazon account, we’
 
 1.  In the AWS search bar at the top, type **IAM** and select it from the results.
 
-![Searching for IAM in the AWS console](/guide/public/images/integrations/S3/aws-search-iam.png)
+![Searching for IAM in the AWS console](/images/integrations/S3/aws-search-iam.png)
 
 2.  On the IAM dashboard, click **Users** from the left sidebar, and then click the **Create User** button.
 
-![The 'Create User' button in the IAM dashboard](/guide/public/images/integrations/S3/iam-create-user-button.png)
+![The 'Create User' button in the IAM dashboard](/images/integrations/S3/iam-create-user-button.png)
 
 3.  **User name:** Give your user a name.
 4.  Leave the box for "**Provide user access to the AWS Management Console**" unchecked. FluentCart doesn't need it. After that, click the **Next** button.
 
-![Setting the user name in IAM](/guide/public/images/integrations/S3/iam-set-user-name.png)
+![Setting the user name in IAM](/images/integrations/S3/iam-set-user-name.png)
 
 5.  In the permissions step, choose **Attach policies directly**.
 6.  In the search bar, type **AmazonS3FullAccess**, check the box next to it, and click the **Next** button.
 
-![Attaching the AmazonS3FullAccess policy](/guide/public/images/integrations/S3/iam-attach-policy.png)
+![Attaching the AmazonS3FullAccess policy](/images/integrations/S3/iam-attach-policy.png)
 
 7.  You can skip the Review and Create step and click on the **Create User** button to create the new user.
 8.  Your user is now created! Click on the new **User Name** in the list to see its details.
 9.  Now, go to the **Security credentials** tab. Scroll down to the **Access keys** section and click **Create access key**.
 
-![The 'Create access key' button in security credentials](/guide/public/images/integrations/S3/iam-create-access-key.png)
+![The 'Create access key' button in security credentials](/images/integrations/S3/iam-create-access-key.png)
 
 10. The next step asked how you'll use the access key. Choose **Other** and click **Next**. You can skip the next step by clicking **Create access key**.
 11. Now you'll see your **Access key** and **Secret access key**. This is very important! Copy both of these keys somewhere safe. You can also click the **Download CSV file** button to save them to your computer.
 
-![Viewing the final Access Key and Secret Access Key](/guide/public/images/integrations/S3/iam-view-keys.png)
+![Viewing the final Access Key and Secret Access Key](/images/integrations/S3/iam-view-keys.png)
 
 > **Heads up!** Amazon will only show you the Secret Access Key once. If you lose it, you'll have to create a new one.
 
@@ -100,7 +100,7 @@ Okay, we have our bucket and our special keys. It's time to head back to FluentC
 6.  Click the **Test S3 Config** button. You should see a success message.
 7.  Finally, click **Save Settings** button.
 
-![FluentCart Storage Settings](/guide/public/images/integrations/S3/save-settings.png)
+![FluentCart Storage Settings](/images/integrations/S3/save-settings.png)
 
 That's it! Your FluentCart store is now connected to Amazon S3. All your new media files will be automatically stored in your S3 bucket, making your site faster and more efficient.
 

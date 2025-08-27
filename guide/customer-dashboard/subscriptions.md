@@ -14,7 +14,7 @@ The main subscriptions page displays a list of all your subscriptions, including
 
 You can navigate through pages if you have multiple subscriptions.
 
-![Screenshot of Subscription](/guide/public/images/customer-dashboard/subscriptions/subscriptions-1.png)
+![Screenshot of Subscription](/images/customer-dashboard/subscriptions/subscriptions-1.png)
 
 
 ## Managing Individual Subscription Details
@@ -49,4 +49,4 @@ If your subscription is tied to a software license, this section will provide de
 * **Manage License**: Direct link to manage the associated license.
 * **View List**: Returns you to the main Subscriptions list.
 
-![Screenshot of Subscription](/guide/public/images/customer-dashboard/subscriptions/subscriptions-2.png)
+![Screenshot of Subscription](/images/customer-dashboard/subscriptions/subscriptions-2.png)

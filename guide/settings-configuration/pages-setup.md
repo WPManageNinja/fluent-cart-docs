@@ -26,7 +26,7 @@ For each core FluentCart functionality, you need to select an existing WordPress
 * **Select Registration Page** Assign the page where customers can create a new account for your store.
     * **Required Shortcode:** `[fluent_cart_registration_form]`
 
-    ![Screenshot of Pages Setup Tab](/guide/public/images/settings-configuration/pages-setup/pages-setup.png)
+    ![Screenshot of Pages Setup Tab](/images/settings-configuration/pages-setup/pages-setup.png)
 
 ## Saving Your Settings
 

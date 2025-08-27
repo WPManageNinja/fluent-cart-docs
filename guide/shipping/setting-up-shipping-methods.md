@@ -14,7 +14,7 @@ Shipping methods define the options customers have for receiving their orders wi
     * Click the **"Add Shipping Method"** button within the chosen zone's settings.
     * A form will appear to configure the new method.
 
-        ![Screenshot of Shipping Method](/guide/public/images/shipping/setting-up-shipping-method/shipping-method-1.png)
+        ![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-1.png)
 
 
 3.  **Configure Method Details**:
@@ -37,7 +37,7 @@ Shipping methods define the options customers have for receiving their orders wi
         * **Take highest class cost**: Only the highest shipping cost among all the shipping classes present in the cart is applied.
 
 
-        ![Screenshot of Shipping Method](/guide/public/images/shipping/setting-up-shipping-method/shipping-method-2.png)
+        ![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-2.png)
 
 
 4.  **Save the Shipping Method**:

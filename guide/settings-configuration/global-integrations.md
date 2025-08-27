@@ -9,7 +9,7 @@ By setting up these integrations, you can eliminate manual data entry and seamle
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
 2.  Click on the **Global Integrations** tab.
 
-    ![Screenshot of Checkout Actions Tab](/guide/public/images/settings-configuration/checkout/checkout-actions-tab.png)
+    ![Screenshot of Checkout Actions Tab](/images/settings-configuration/checkout/checkout-actions-tab.png)
 
 
 #### The Global Integrations Dashboard

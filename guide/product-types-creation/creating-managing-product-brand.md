@@ -14,7 +14,7 @@ To get started, you first need to create your brands. This process is straightfo
 
 2.  This will take you to the main Brands screen, where you will find a list of all your existing brands. To add a new one, click the **Add New Brand** button at the top right.
 
-![Product Brand](/guide/public/images/product-types-creation/creating-managing-brand/product-brand-1.png)
+![Product Brand](/images/product-types-creation/creating-managing-brand/product-brand-1.png)
 
 3.  An "Add New Brand" pop-up window will appear. Fill in the details for your brand:
 

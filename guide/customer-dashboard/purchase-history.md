@@ -14,7 +14,7 @@ Upon landing on the Purchase History page, you will see a table listing all your
 
 You can also navigate through pages if you have many orders.
 
-![Screenshot of Purchase History](/guide/public/images/customer-dashboard/purchase-history/purchase-history-1.png)
+![Screenshot of Purchase History](/images/customer-dashboard/purchase-history/purchase-history-1.png)
 
 
 ## Viewing Individual Order Details
@@ -60,4 +60,4 @@ The Subscription Details section presents a table containing information about y
 * **File Name**: The specific name of the downloadable file (e.g., `sticky-note.zip`).
 * **Action**: A button to download the associated product file.
 
-![Screenshot of Purchase History](/guide/public/images/customer-dashboard/purchase-history/purchase-history-2.png)
+![Screenshot of Purchase History](/images/customer-dashboard/purchase-history/purchase-history-2.png)

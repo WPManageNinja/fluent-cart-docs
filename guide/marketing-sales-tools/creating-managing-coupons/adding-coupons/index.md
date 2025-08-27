@@ -16,7 +16,7 @@ You can select the type that best suits your promotional needs.
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Coupons** in the left sidebar.
 2.  On the **Coupons** screen, click the **"Add Coupon"** button at the top right.
 
-    ![Screenshot of Add Coupon Button](/guide/public/images/marketing-sales-tools/add-coupon-button.png) 
+    ![Screenshot of Add Coupon Button](/images/marketing-sales-tools/add-coupon-button.png) 
 
 3.  This will open the **"Coupons Add Coupon"** screen, where you will configure your new coupon.
 
@@ -32,7 +32,7 @@ You can select the type that best suits your promotional needs.
 * **Discount Amount\*:** Enter the specific monetary value of the discount.
 * **Min Purchase Amount:** (Optional) Enter a minimum subtotal amount that the customer's cart must meet for the coupon to be valid. 
 
-    ![Screenshot of Add Coupon Screen (Fixed Type)](/guide/public/images/marketing-sales-tools/add-coupon-fixed-type.png)
+    ![Screenshot of Add Coupon Screen (Fixed Type)](/images/marketing-sales-tools/add-coupon-fixed-type.png)
 
 ### 3. Discount Value (Percentage Type)
 
@@ -41,7 +41,7 @@ You can select the type that best suits your promotional needs.
 * **Min Purchase Amount:** (Optional) Enter a minimum subtotal amount that the customer's cart must meet for the coupon to be valid. Default is $0.
 * **Max Discount Amount:** (Optional) Enter a maximum monetary value for the discount. This is useful for percentage coupons to prevent excessively large discounts on very high-value orders. 
 
-    ![Screenshot of Add Coupon Screen (Fixed Type)](/guide/public/images/marketing-sales-tools/add-coupon-percentage-type.png)
+    ![Screenshot of Add Coupon Screen (Fixed Type)](/images/marketing-sales-tools/add-coupon-percentage-type.png)
 
 ### 4. Inclusion/Exclusion Rules (Optional)
 
@@ -74,7 +74,7 @@ Control how many times the coupon can be used.
 * **Internal Notes:** (Optional) Add any private notes about the coupon for your own reference.
 * **Stackable:** Choose **"Yes"** or **"No"** to determine if this coupon can be combined with other active coupons.
 
-    ![Screenshot of Add Coupon Screen (Fixed Type)](/guide/public/images/marketing-sales-tools/schedule-discounts-Additional-info.png)
+    ![Screenshot of Add Coupon Screen (Fixed Type)](/images/marketing-sales-tools/schedule-discounts-Additional-info.png)
 
 ## Saving Your Coupon
 

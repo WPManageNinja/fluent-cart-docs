@@ -7,11 +7,11 @@ FluentCart provides robust functionality to edit an order even after it has been
 1.  Navigate to the **[Order Details](/guide/store-management/orders-management/order-details-overview)** screen for the specific order you wish to edit.
 2.  In the top right corner of the Order Details screen, click the **"Edit"** button.
 
-    ![Screenshot of Order Details with Edit Button](/guide/public/images/store-management/editing-existing-orders/order-details-edit-button.png)
+    ![Screenshot of Order Details with Edit Button](/images/store-management/editing-existing-orders/order-details-edit-button.png)
 
 3.  The screen will transform into an editable interface, and the "Edit" button will change to **"Disable Editing"**.
 
-    ![Screenshot of Order in Editing Mode](/guide/public/images/store-management/editing-existing-orders/order-editing-mode.png)
+    ![Screenshot of Order in Editing Mode](/images/store-management/editing-existing-orders/order-editing-mode.png)
 
 ## Making Changes to an Order
 
@@ -24,12 +24,12 @@ You can add new products to the existing order:
 1.  In the "Order Items" section, locate the **"Search products"** field and the **"Browse"** button.
 2.  Use the search field to find the product(s) you wish to add, or click "Browse" to view your product catalog.
 
-    ![Screenshot of Add Product Search Field in Edit Mode](/guide/public/images/store-management/editing-existing-orders/add-product-search-edit-mode.png)
+    ![Screenshot of Add Product Search Field in Edit Mode](/images/store-management/editing-existing-orders/add-product-search-edit-mode.png)
 
 3.  A modal window will appear, listing your products. Select the desired products and their variations (if applicable) by checking the box next to them.
 5.  Click **"Add Items"** to add them to the order.
 
- ![Screenshot of Add Items Modal](/guide/public/images/store-management/editing-existing-orders/add-items-modal.png)
+ ![Screenshot of Add Items Modal](/images/store-management/editing-existing-orders/add-items-modal.png)
 
 :::warning Important Note: Subscription Products
 Currently, **subscription products cannot be added** to an existing order through this "Add Items" modal. Subscription orders must be initiated as such.

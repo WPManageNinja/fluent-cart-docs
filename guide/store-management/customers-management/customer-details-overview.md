@@ -9,7 +9,7 @@ Customers also have access to their own personalized dashboard where they can ma
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Customers**.
 2.  On the **Customers** list, click on the **Customer Name** next to the customer you wish to inspect.
 
-    ![Screenshot of Customer Details Page](/guide/public/images/store-management/customer-details/customer-details.png)
+    ![Screenshot of Customer Details Page](/images/store-management/customer-details/customer-details.png)
 
 ## Understanding the Customer Details Screen
 
@@ -35,7 +35,7 @@ This section provides contact details and address management options for the cus
     * **Manage billing address:** Provides access to manage or add billing addresses for this customer.
 * **Labels:** A section for assigning custom labels to the customer.
 
-    ![Screenshot of Customer Details Page](/guide/public/images/store-management/customer-details/customer-information-details.png)
+    ![Screenshot of Customer Details Page](/images/store-management/customer-details/customer-information-details.png)
 
 ### 3. Orders Section
 

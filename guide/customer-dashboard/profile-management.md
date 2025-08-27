@@ -28,4 +28,4 @@ This section allows you to provide or update the address where your orders will 
 
 Always remember to click **SAVE PROFILE** at the bottom of the page after making any changes to your account details or addresses to ensure your updates are saved.
 
-![Screenshot of Purchase History](/guide/public/images/customer-dashboard/customer-profile/customer-profile.png)
+![Screenshot of Purchase History](/images/customer-dashboard/customer-profile/customer-profile.png)

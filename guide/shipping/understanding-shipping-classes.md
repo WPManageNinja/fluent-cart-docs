@@ -20,7 +20,7 @@ This guide explains how to use Shipping Classes to group products with similar s
 
             
 
-    ![Screenshot of Shipping Classes](/guide/public/images/shipping/understanding-shipping-classes/shipping-classes-1.png)
+    ![Screenshot of Shipping Classes](/images/shipping/understanding-shipping-classes/shipping-classes-1.png)
 
 
 3.  **Define Class Details**:
@@ -34,7 +34,7 @@ This guide explains how to use Shipping Classes to group products with similar s
 4.  **Save the Shipping Class**:
     * Click the **"Save"** or **"Add Class"** button.
 
-     ![Screenshot of Shipping Classes](/guide/public/images/shipping/understanding-shipping-classes/shipping-classes-2.png)
+     ![Screenshot of Shipping Classes](/images/shipping/understanding-shipping-classes/shipping-classes-2.png)
 
 ## Assigning Shipping Classes to Products
 

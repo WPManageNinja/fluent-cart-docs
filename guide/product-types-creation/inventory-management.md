@@ -19,7 +19,7 @@ The Inventory Management table displays key stock metrics for each product varia
 * **On hold:** The number of units that are part of pending orders.
 * **Delivered:** The number of units that have already been delivered or fulfilled.
 
-    ![Screenshot of Inventory Management Section](/guide/public/images/product-types-creation/inventory-management/inventory-management-section.png) 
+    ![Screenshot of Inventory Management Section](/images/product-types-creation/inventory-management/inventory-management-section.png) 
 
 ## Adjusting Stock Levels
 
@@ -30,7 +30,7 @@ You can manually adjust the stock for your product variants:
 3.  Click the **"Apply"** button to implement the stock adjustment.
 4.  You can click **"Cancel"** to discard any changes before applying.
 
-    ![Screenshot of Adjust Stock Section](/guide/public/images/product-types-creation/inventory-management/inventory-adjust-by.png) 
+    ![Screenshot of Adjust Stock Section](/images/product-types-creation/inventory-management/inventory-adjust-by.png) 
 
 :::tip Stock Management Best Practices
 * Regularly check your inventory to prevent overselling or running out of popular products.

@@ -19,7 +19,7 @@ The Logs list table presents key information for each event entry:
 * **Module:** The FluentCart module or area from which the action originated.
 * **Actions:** For many log entries, particularly those related to orders, a **"View Order"** link is provided. Clicking this link will navigate you directly to the [Order Details screen](/guide/store-management/orders-management/order-details-overview) for that specific transaction.
 
-    ![Screenshot of Logs List Page](/guide/public/images/troubleshooting-support/understanding-logs/Logs.png)
+    ![Screenshot of Logs List Page](/images/troubleshooting-support/understanding-logs/Logs.png)
 
 ## Filtering Logs
 
