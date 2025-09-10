@@ -22,9 +22,9 @@ To get started, you first need to create your brands. This process is straightfo
 
     * **Slug:** This is the URL-friendly version of the name, used in the web address for the brand's archive page. It should be all lowercase and contain only letters, numbers, and hyphens. FluentCart will often generate this automatically from the name, but you can customize it.
 
-    * **Parent Brand:** (Optional) This powerful feature allows you to create brand hierarchies. For example, if you sell a specific product line from a larger company, you could make "Air Jordan" a child of the "Nike" parent brand.
+    * **Parent Brand:** This powerful feature allows you to create brand hierarchies. For example, if you sell a specific product line from a larger company, you could make "Air Jordan" a child of the "Nike" parent brand.
 
-    * **Description:** (Optional) Add a short description for the brand. Depending on your website's theme, this description may be displayed on the brand's archive page, providing customers with more context and improving SEO.
+    * **Description:** Add a short description for the brand. Depending on your website's theme, this description may be displayed on the brand's archive page, providing customers with more context and improving SEO.
 
 4.  Click the **Add New Brand** button to save the brand. It will now appear in your main brand list.
 

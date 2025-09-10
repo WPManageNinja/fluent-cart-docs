@@ -37,11 +37,12 @@ This section lists all the products included in the order.
 
 Provides a summary of the order's financial aspects, including payments received and any outstanding amounts.
 
-* **Payment:** Indicates the payment method used.
-* **Subtotal:** The total price of all items before taxes, shipping, or discounts.
-* **Total:**  The total price of all the products.
-* **Total Paid:** The amount already paid by the customer.
-* **Net Payment:** The final amount after all deductions and payments.
+* **Payment Status:** At the top of this section, a status like Paid quickly tells you whether the customer has completed their payment.
+* **Subtotal:** This is the total cost of all the products in the cart before any other charges, like shipping, are added.
+* **Shipping:** This line shows the shipping cost that was added to the order.
+* **Total:** This is the final price of the order that the customer was charged (Subtotal + Shipping + Taxes, etc.).
+* **Total Paid:** This shows how much money the customer has actually sent for this order.
+* **Net Payment:** This is the final amount your store has received after all payments have been processed.
 
 ### 4. Transaction Details
 

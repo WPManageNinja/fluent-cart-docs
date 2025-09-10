@@ -13,7 +13,7 @@ The FluentCart Dashboard is the first screen you see when you log into your Word
 In the top-right corner of the FluentCart dashboard, you’ll find three helpful shortcuts:
 
 - **Search (⌘K / Ctrl+K)**  
-  Open the search panel to quickly find products, customers, orders, coupons or settings across FluentCart.
+  When someone clicks on the search panel, a popup will appear allowing them to search for products, orders, customers, or settings across FluentCart.
 
 - **Theme Toggle**  
   Switch between **Light**, **Dark**, or **System** mode to match your preference.

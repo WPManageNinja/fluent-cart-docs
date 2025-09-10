@@ -1,6 +1,6 @@
 # Customer Dashboard
 
-The FluentCart Customer Dashboard serves as a comprehensive and personalized portal for every customer, offering a centralized location to manage all aspects of their interactions with your e-commerce store. This powerful dashboard empowers customers to efficiently handle their orders, subscriptions, licenses, and personal details.
+Tired of answering emails from customers asking for their past orders or download links? The FluentCart Customer Dashboard serves as a comprehensive and personalized portal for every customer, offering a centralized location to manage all aspects of their interactions with your e-commerce store. This powerful dashboard empowers customers to efficiently handle their orders, subscriptions, licenses, and personal details.
 
 Ensure you have set the Customer Dashboard page from **FluentCart Pro** > **Settings** > **Pages Setup**, and your users can access their dashboard on that particular page. For detailed instructions on setting this up, please refer to our [Pages Setup documentation](/guide/settings-configuration/pages-setup).
 

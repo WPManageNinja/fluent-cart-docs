@@ -13,7 +13,7 @@ FluentCart provides a straightforward way to process refunds for your orders, wh
 
 4.  Configure the refund details:
     * **Refund with transaction\:** Use the dropdown to select the specific payment transaction you wish to refund. This is crucial if an order had multiple payments or partial payments.
-    * **Select Item/s:** Select the items you are refunding.
+    * **Select Item/s:** This is a crucial step for keeping your records straight. Click this dropdown to choose the specific products the customer is returning. This helps keep your sales reports and inventory accurate, especially for partial returns. 
     * **Refund amount\:** Enter the amount you wish to refunds.
         * FluentCart displays the **"Max refund amount for this transaction"**, ensuring you don't refund more than was paid in that specific transaction. This allows for **partial refunds**. You can manually adjust the amount if needed.
     * **I want to Mange Stock:** Check this option to automatically update the stock quantity for this product after each sale or return. 

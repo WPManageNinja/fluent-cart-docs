@@ -2,28 +2,13 @@
 
 The Orders list is your central hub for tracking all transactions and customer purchases in your FluentCart store. This guide will show you how to view your orders and use filters to quickly find the specific orders.
 
-## Understanding Order Stats Overview
-
-Beyond the main list, you can get a quick summary of your order stats.
-To see this overview, click on **More Actions** button in the top right corner of the Orders screen, and then select "**Show Order Stats**". You can hide this overview anytime by using the same option again.
-
-This section provides a snapshot of important order numbers, including:
-
-* **All orders:** The total count of all orders in your store. 
-* **Paid Orders:** The number of orders that have been successfully paid for.
-* **Paid Order items:** The total count of individual product items across all paid orders.
-* **Order value (Paid):** The total monetary value of all paid orders.
-
-    ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/order-stats-overview.png)
-
 ## Accessing the Orders List
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Orders** in the top menu.
-2.  This will open the main **Orders** screen, displaying a comprehensive list of all your store's orders.
+From your WordPress dashboard, navigate to **FluentCart Pro** > **Orders**. This will take you directly to the main **Orders** screen, where you'll see a list of all the transactions in your store.
 
 ## Understanding the Orders List Table
 
-The Orders list is presented in a table format, with each row representing an individual order and displaying key information at a glance:
+Your orders are neatly organized in a table. Each row is a single order, and each column gives you a quick piece of information:
 
 * **Date:** The date and time when the order was placed.
 * **Customer:** The name of the customer who placed the order.
@@ -34,60 +19,76 @@ The Orders list is presented in a table format, with each row representing an in
 * **Order Type:** Differentiates between various types of transactions.
 * **Action Icons:** On the far right of each row, you'll see icons that let you quickly print things like order details.
 
+    ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/orders-list.png)
+
+## Customizing Your View
+
+You can change what you see on the Orders page to fit your needs. In the top-right corner, you’ll find a **More Actions** button that gives you a couple of neat options.
+
+### Showing or Hiding Order Stats
+
+If you want a quick "health check" of your store, you can show the order stats.
+
+Just click the **More Actions** button and select **Show Order Stats**. A summary will appear at the top, showing you important numbers like:
+
+* **All orders**: The total number of orders your store has ever received.
+* **Paid Orders**: How many orders have been successfully paid for.
+* **Paid Order items**: The total number of individual items sold.
+* **Order value (Paid)**: The total amount of money you've earned from paid orders.
+
+If you want to hide this summary to get more space, just click **More Actions** and choose **Hide Order Stats** option.
+
+   ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/order-stats-overview.png)
+
+### Showing and Hiding Bulk Actions
+
+Sometimes you need to do the same thing to many orders at once, like changing their status to "Shipped". That's where bulk actions come in handy.
+
+Click the **More Actions** button and select **Show Bulk Actions**. When you do this, a little checkbox will appear next to each order. You can then select multiple orders and apply an action to all of them at the same time.
+
+If you don't need to perform bulk actions and want a cleaner look, simply click **More Actions** again and choose **Hide Bulk Actions**. This will remove the checkboxes from the list.
+
 ## Filtering Orders
 
 FluentCart provides many ways to filter your orders, helping you narrow down the list based on status or other criteria.
 
 ### 1. Filtering by Order Status
 
-At the top of the orders list, you will find several default tabs for one-click filtering of the most common order statuses:
+Across the top of the list, you'll see tabs for the most common order statuses. You can click on any of them to instantly filter your orders:
 
-* **All:** Displays every order in your store, regardless of status.
-* **Completed:** Shows only orders that have been successfully paid for and fulfilled.
-* **Processing:** Filters for orders that have been paid but are still awaiting fulfillment.
-* **On Hold:** Displays orders that are awaiting payment or require manual action before they can be processed.
+* **All**: Shows every single order in your store.
+* **Completed**: Only shows orders that are fully paid and fulfilled.
+* **Processing**: Filters for orders that have been paid but are still waiting to be shipped or completed.
+* **On Hold**: Shows orders that might be waiting for payment or need some other manual check-up.
 
-For more specific filtering needs, FluentCart provides an additional set of advanced filters under the **More views** dropdown menu. Clicking on **More views** will reveal the following options:
+For even more filter options, click the **More views** dropdown menu. Here you can find more specific filters like:
 
-* **Paid:** This filter displays all orders that have a "Paid" payment status, regardless of their fulfillment status (e.g., Processing, Completed).
-* **Subscription:** Isolates only the initial orders that were placed for a new subscription.
-* **Renewal:** Shows only orders that were generated for a subscription renewal.
-* **Refunded:** Filters the list to show only orders that have been fully refunded.
-* **Partially Refunded:** Displays orders where only a portion of the total amount was returned to the customer.
-* **Upgraded From:** This view shows the original orders that customers have upgraded from (e.g., the initial "Standard Plan" order before upgrading).
-* **Upgraded To:** This view shows the new orders that were created as a result of a customer upgrading their subscription or license (e.g., the new "Pro Plan" order).
-
-
-    ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/orders-list.png)
+* **Paid**: Shows all orders that have been paid for, no matter their fulfillment status.
+* **Subscription**: Narrows the list to only the first order a customer made when they signed up for a subscription.
+* **Renewal**: Shows only the orders that were automatically created when a subscription renewed.
+* **Refunded**: Displays orders that have been fully refunded.
+* **Partially Refunded**: Shows orders where you only returned part of the money to the customer.
+* **Upgraded From / Upgraded To**: These are helpful for tracking subscription upgrades. One shows the original order, and the other shows the new, upgraded order.
 
 ### 2. Using the Advanced Filter
 
-For more specific control, use the **Advanced Filter** option:
+For times when you need to get super specific, the **Advanced Filter** is your best friend.
 
-1.  Enable the **"Advanced Filter"** by clicking the **toggle** button located at the top right of the Orders screen. You can add multiple advanced filter by clicking the **+OR** button.
-    
-2.  This will open a section with many filtering options, allowing you to search using specific details under two main categories:
+Click the toggle button next to the search bar to turn on the **Advanced Filter**. This opens up a new panel where you can set very detailed rules. Clicking the **+ Add** button reveals several categories to build your filter:
 
-**Order Property:** Filters related to the order itself, such as:
-* By order item
-* Order status
-* Payment Status
-* Order type
-* Payment Method
+* **Order Property**: Filters related to the order itself, like which product was ordered or the payment method used. For example, you can filter By Order Items, Order Status, Payment Status, Order Type, Payment Method, Order Amount, Order Date.
+* **Customer Property**: Filters based on details about the customer, like their name or email address. For example, you can filter by Customer Name, Customer Email.
+* **Transactions Property**: Lets you search by specific payment details, such as the Transaction ID, Transaction Status, Card Brand, or the last 4 digits of their card.
+* **License Property**: Filters for orders that contain software licenses, based on the license key or status.
+* **Labels**: Filters orders based on any custom labels you have assigned.
 
-**Customer Property:** Filters related to the customer who placed the order, such as:
-* Customer First name
-* Customer last name
-* Customer Email and more.
-
-**Labels:** Filter related to the Labels, such as:
-* Label Name
-
-3.  Apply your desired filters and click **"Apply"** to see the refined list of orders.
-4.  You can **"Reset"** the filters to view all orders again.
+You can add multiple rules by clicking the **+OR** button to create very powerful and specific searches. When you're done, click **Apply**. To go back to the full list, just click **Reset**.
 
 ![Screenshot of Advanced Filter Button](/images/store-management/viewing-and-filtering-orders/advanced-filter-button.png) 
 
 ### 3. Using the Search Bar
 
-You can also use the general search bar located at the top of the screen to quickly find orders by ID, Status, Payment status, Method, Amount, Customer Name, or Items.
+If you just need to find something fast, the search bar at the top of the page is perfect. You can type in an Order ID, customer name, email, or product name to instantly find what you're looking for.
+
+
+

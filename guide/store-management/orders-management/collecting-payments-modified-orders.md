@@ -17,24 +17,22 @@ Clicking this dropdown reveals the following options:
 
 ### 1. Custom Payment Link
 
-This is the most common method for collecting additional payments remotely from your customer.
+This is the most common way to collect an additional payment. It creates a special, secure link that you can send directly to your customer.
 
-1.  From the **"Collect Payments"** dropdown, select **"Custom Payment Link"**.
-2.  A **"Custom Payment Link"** popup window will appear.
+1. From the **Collect Payments** dropdown menu, choose the **Custom Payment Link** option.
 
-3.  Inside the popup:
-    * A unique payment link (e.g., `https://temp.xcloudon.com/custom-payment-page/?order_ha...`) will be displayed.
-    * Click the **"Copy"** button next to the link to copy it to your clipboard.
-    * You can then share this link with your customer via email, chat, or any other preferred communication method.
-    * **"Use vendor checkout" toggle:** You can enable this option. When activated, the customer will be redirected to the **vendor's specific payment page** instead of FluentCart's default payment page, leveraging their existing payment gateway setup.
+2. A small pop-up window will appear with a unique link created just for this order's remaining balance.
 
-4.  Once the customer clicks the link, they will be directed to a secure payment page where they can pay the outstanding balance using the available payment methods.
+3. Click the **Copy** button to copy this link to your clipboard. You can now paste it into an email, a chat message, or however you normally communicate with your customer.
+
+When your customer clicks the link, they will be taken to a simple and secure page where they can pay the outstanding amount using your store's available payment methods.
 
 ![Screenshot of Custom Payment Link Modal](/images/store-management/collecting-payments/custom-payment-link-modal.png)
 
 ### 2. Mark Order as Paid
 
-This option is used when you have already received the additional payment from the customer through an offline or manual process outside of FluentCart (e.g., cash payment, bank transfer, or a payment processed directly via your payment gateway's dashboard).
+This option is perfect for when you've already received the payment outside of FluentCart. Maybe the customer paid you the difference in cash, sent a bank transfer, or you charged them directly through your payment processor's website. This feature lets you manually update the order to reflect that payment
 
-1.  From the **"Collect Payments"** dropdown, select **"Mark order as paid"**.
-2.  FluentCart will update the order's status to reflect the payment as received, and the outstanding balance will be cleared.
+1. From the **Collect Payments** dropdown, simply select **Mark order as paid**.
+
+2. That's it! **FluentCart** will instantly update the order's status to show that it's fully paid. The outstanding balance will be cleared, and the transaction will be marked as complete.
