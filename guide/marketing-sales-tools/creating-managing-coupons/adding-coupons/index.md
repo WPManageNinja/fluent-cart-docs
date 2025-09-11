@@ -79,3 +79,15 @@ Control how many times the coupon can be used.
 ## Saving Your Coupon
 
 Once all settings are configured, click the **"Save"** button at the top of the page (if visible, or "Update" if editing) to create or update your fixed type coupon. 
+
+## Editing or Deleting a Coupon
+
+After you've created coupons, you can always go back to change their settings or remove them completely.
+
+First, find the coupon you want to manage in your coupons list. On the far right side of that coupon's row, under the **Actions** column, click the **three-dot** icon. A small menu will pop up with two options:
+
+* **Edit:** Choose this to open the settings for that coupon. You can then make any changes you need and save them.
+* **Delete:** Choose this to permanently remove the coupon. A confirmation window will likely appear to make sure you don't delete it by accident.
+
+
+    ![Screenshot of Edit or Delete existing Coupons](/images/marketing-sales-tools/edit-delete-coupons.png)

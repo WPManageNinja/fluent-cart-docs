@@ -2,9 +2,12 @@
 
 FluentCart seamlessly integrates with FluentCRM, allowing you to create powerful marketing automations that are triggered by customer purchases. By connecting your store, you can automatically add new customers to specific lists, apply tags based on what they buy, and enrich their contact profiles without any manual work.
 
-FluentCart offers two powerful ways to connect with FluentCRM: **Global Integrations**, which apply to every purchase (ideal for adding all customers to a main newsletter), and [**Product Integrations**](/guide/product-types-creation/managing-product-integrations.md), which are triggered only by specific items (perfect for adding a student to a course-specific list).
+FluentCart offers two powerful ways to connect with FluentCRM:
 
-This guide will walk you through setting up both types of integrations.
+* **Global Integrations:** These rules apply to every single purchase in your store. They are ideal for general tasks, like adding all new customers to your main newsletter.
+* [**Product Integrations**](/guide/product-types-creation/managing-product-integrations.md): These rules are more specific and are triggered only when a customer buys a particular item. This is perfect for targeted actions, like adding a customer to a special list after they buy a specific course or e-book.
+
+This guide will focus on setting up a **Global Integration**.
 
 ### When to Use Each Integration Type
 
@@ -16,7 +19,7 @@ Before you begin, it's helpful to decide which type of integration best suits yo
     * *Example:* Adding customers who bought your "Advanced SEO Course" to a "Course Students" list and tagging them accordingly.
 
 
-### Global Integration (For All Products)
+### Setting Up a Global Integration
 
 A global integration is perfect for general marketing tasks that should apply to all your customers, such as adding every new buyer to your main newsletter list or applying a general "Customer" tag.
 
@@ -36,20 +39,23 @@ A global integration is perfect for general marketing tasks that should apply to
 
 This screen allows you to define exactly what happens in FluentCRM when any order is placed in your store.
 
-* **Name:** Give your feed a descriptive name for your own internal reference (e.g., "Add All New Customers to Main List"). This helps you easily identify the automation later.
-* **FluentCRM Lists:** Select the FluentCRM list(s) where you want to add your new contacts. You can select one or more lists.
-* **Contact Tags:** Select the FluentCRM tag(s) you want to apply to all new customers. This is a great way to segment all your buyers for future marketing campaigns.
-* **Other Fields:** This powerful feature allows you to map additional data from the order to custom fields in FluentCRM. For each, provide a **Field Label** (the name of the custom field in FluentCRM) and select the corresponding FluentCart **Field Value** (shortcode) to sync the data.
-    * Example: To save the customer's city, you could set the Field Label to 'City' and select the Field Value '{order.billing.city}'. This will automatically populate the 'City' custom field in the FluentCRM contact profile with the data from the order.*
-* **Note:** Add a note that will be attached to the contact's profile in FluentCRM. You can use shortcodes here to make the note dynamic and personalized.
-* **Enable Double Opt-in:** It is highly recommended to keep this enabled. It sends a confirmation email to the user before they become an active subscriber, which is a best practice for GDPR compliance and maintaining a healthy, engaged email list.
-* **Enable ReSubscription:** If enabled, this will resubscribe a contact if they had previously unsubscribed from your list. Use this option with caution to ensure you respect your customers' choices.
+* **Feed Title:** Give your feed a descriptive name that you'll recognize later, like "Add All Customers to Newsletter.
+* **Add to Lists:** Use this field to select the FluentCRM lists you want to add to a customer’s profile when this feed runs from the dropdown.
+* **Add to Tags:** Select the FluentCRM tag(s) you want to apply to all new customers. This is a great way to segment all your buyers for future marketing campaigns.
+* **Remove From Lists / Remove From Tags:** If needed, you can also select lists and tags to remove from a customer's profile.
+* **Note:** You can add a note that will be attached to the contact's profile in FluentCRM. This is great for internal records. You can even make the note dynamic by using shortcodes (click the {(...)} icon) to include customer or order data.
+* **Enable Double Opt-in:** It is highly recommended to keep this enabled. It sends a confirmation email to new contacts before they are subscribed, which is a best practice for maintaining a healthy and engaged email list.
+* **Remove from selected Tags/Lists on Refund or Subscription Access Expiration:** This is a handy automation. If you check this box, FluentCart will automatically remove the customer from the lists and tags you selected if their order is refunded or their subscription ends.
 * **Event Trigger:** Select the specific store event that will trigger this automation. For most use cases, "Order Completed / Paid" is the best option, as it ensures only paying customers are added to your CRM.
-* **Enable This Feed:** Ensure the toggle at the top right is switched on to make the automation active. If it is disabled, the feed will be saved but will not run.
+* **Enable This Integration:** Ensure the toggle at the top right is switched on to make the automation active. If it is disabled, the integration will be saved but will not run.
 
   ![Screenshot of Fluentcrm Integration Feed Page](/images/Integrations/fluentcrm/fluentcrm-integration-feed.png)
 
 Once configured, click the **Create FluentCRM Feed** button. This global automation is now live and will run for every order in your store.
+
+Once everything is set up, you can manage the integration by clicking the **Edit** icon to make changes or the **Delete** icon to remove it.
+
+  ![Screenshot of Fluentcrm Integration Feed Page](/images/Integrations/fluentcrm/fluentcrm-integration-edit-or-delete.png)
 
 ### Combining Global and Product Integrations
 
