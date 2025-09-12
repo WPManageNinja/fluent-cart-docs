@@ -61,10 +61,28 @@ Whether you are creating a global or a product-specific feed, the configuration 
 * **Remove from Courses:** (Optional) Select any Courses you would like to automatically unenroll the customer from.
 * **Mark the community profile as verified:** Enable this option to automatically grant the customer a "verified" status within FluentCommunity, which can be used to signify them as a paying member.
 * **Remove from selected Courses/Spaces on Refund or Subscription Access Expiration:** This is a crucial automation feature. If enabled, FluentCart will automatically revoke the user's access to the selected spaces and courses if their order is refunded or their subscription expires.
-* **Event Trigger:** Select the specific store event that will trigger this automation. For most use cases, **"Order Paid (Payment / Subscription)"** is the best option, as it ensures access is only granted after a successful payment.
+* **Event Trigger:** Select the specific store event that will trigger this automation. 
 * **Run on Selected Variations Only (Product-Specific Only):** This powerful option appears only on product-specific integrations. It allows you to run the automation only when a customer purchases a specific variation of the product (e.g., a "Lifetime Access" tier). Leave this empty to have the feed run for all variations of this product.
 * **Enable this Integration:** Ensure the toggle at the top right is switched on to make the automation active. If it is disabled, the feed will be saved but will not run.
 
 ![Configure Integration Feed Fluentcommunity](/guide/public/images/Integrations/fluentcommunity/integrateing-fluentcommunity-3.webp)
 
 Once everything is configured, click the **Create FluentCommunity Feed** button. Your automation is now live!
+
+### Use Case Example: A Clothing Store
+
+Imagine you run a clothing store selling two hoodie variations: *Classic Hoodie* and *Premium Hoodie.*
+
+**Your Goal:**
+- Add all customers to a general "Hoodie Lovers" space.  
+- Add customers who buy the *Classic Hoodie* into the "Classic Hoodie Owners" space.  
+- Add customers who buy the *Premium Hoodie* into the "Premium Hoodie Owners" space.  
+
+**The Solution:**
+- **Global Integration**: Create one Global Feed that adds every customer to the "Hoodie Lovers" space when their order is paid.  
+- **Product-Specific Integrations**:  
+  - Inside the *Classic Hoodie* product, create a Product-Specific Feed to add customers to the *Classic Hoodie Owners* space.  
+  - Inside the *Premium Hoodie* product, create another Product-Specific Feed to add customers to the *Premium Hoodie Owners* space.  
+
+**The Result:**  
+When a customer buys the *Classic Hoodie*, both automations run. The global feed adds them to the *Hoodie Lovers* space, and the product feed adds them to *Classic Hoodie Owners*, creating a smooth, automated onboarding experience.

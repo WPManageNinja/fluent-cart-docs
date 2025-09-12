@@ -308,6 +308,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'FluentCRM Integration', link: '/guide/Integrations/fluentcrm-integration' },
+            { text: 'FluentCommunity Integration', link: '/guide/Integrations/fluentcommunity-integration' },
             { text: 'Amazon S3 Integration', link: '/guide/Integrations/amazon-s3-integration' }
           ]
         },
