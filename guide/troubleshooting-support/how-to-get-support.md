@@ -1,6 +1,6 @@
  # How to Get Support
 
-If you've reviewed the [Common Issues & FAQs](/guide/troubleshooting-support/common-issues-faqs) and [Understanding Logs](/guide/troubleshooting-support/understanding-logs) guides and are still encountering a problem with FluentCart, our dedicated support team at WPManageNinja is here to help.
+If you've reviewed the [Docs & FAQs](/guide/troubleshooting-support/common-issues-faqs) guides and still encountering a problem with FluentCart, our dedicated support team at WPManageNinja is here to help.
 
 ## How to Contact Support
 
