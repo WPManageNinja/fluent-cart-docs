@@ -17,8 +17,6 @@ This screen is divided into several sections to give you control over the entire
 
 These settings control where and how the cart icon appears on your website, ensuring it is always accessible to your customers.
 
-* **Cart Icon in Menu Bar:** When enabled, this places a cart icon in your website's main navigation menu. This is a standard and highly visible location that customers are accustomed to, making it easy to find.
-
 * **Cart Icon in Body:** Enable this to display a floating cart icon that remains visible on the side of the screen as the user scrolls. This acts as a persistent reminder of their cart's contents and provides a constant, one-click path to checkout.
 
 **User Account & Checkout Flow**

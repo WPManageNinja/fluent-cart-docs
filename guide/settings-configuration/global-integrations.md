@@ -26,11 +26,13 @@ This screen provides a comprehensive overview of all the integration feeds you h
     * **Edit (Pencil Icon):** Click this to open the configuration screen and make changes to the feed's settings, such as adding new triggers or modifying data mappings.
     * **Delete (Trash Can Icon):** Click this to permanently delete the integration feed. This action cannot be undone.
 
+    ![Screenshot of Checkout Actions Tab](/images/settings-configuration/checkout/global-integration.png)
+
 #### Adding a New Integration
 
 To create a new automation, you can add a new integration feed. This is the starting point for connecting your store to a new service.
 
 1.  From the Global Integrations dashboard, click the **Add Integration** button at the top right.
-2.  A dropdown menu will appear, listing all the available integrations you can configure (e.g., **FluentCRM Feed**). These are the services that FluentCart is ready to connect with.
+2.  A dropdown menu will appear, listing all the available integrations you can configure [FluentCRM](/guide/Integrations/fluentcrm-integration.md). These are the services that FluentCart is ready to connect with.
 3.  Select the integration you wish to add from the list.
 4.  You will be taken to the dedicated configuration screen for that specific integration. Here, you will set up the specific rules for the automation, such as defining the triggers, mapping data fields, and configuring any service-specific options.

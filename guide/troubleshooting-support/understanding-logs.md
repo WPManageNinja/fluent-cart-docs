@@ -1,6 +1,6 @@
  # Understanding Logs
 
-FluentCart's **Logs** screen provides a comprehensive chronological record of all significant events and actions that occur within your store. This audit trail is an essential tool for diagnosing issues, tracking changes, and monitoring your store's background operations.
+Think of the **Logs** screen as the diary for your store. It keeps a detailed record of every important event and action that happens, like when an order is paid or a setting is updated. This is an essential tool for keeping an eye on your store's operations and for figuring out what happened if something ever goes wrong.
 
 ## Accessing the Logs
 
@@ -23,19 +23,28 @@ The Logs list table presents key information for each event entry:
 
 ## Filtering Logs
 
-You can easily filter log entries by their status or type. This helps you find specific events quickly and keeps your store management more organized.
+If you are looking for a specific event, you can easily filter the log entries to narrow down your search.
 
-* **Log Type Filters:** Tabs at the top of the Logs screen allow you to filter entries by:
-    * **All:** Displays all log entries.
-    * **Success:** Shows only successfully completed actions.
-    * **Warning:** Displays entries indicating a warning or minor issue.
-    * **Failed:** Filters to show only actions that resulted in a failure.
-    * **Info:** Shows informational messages.
-    * **API Only:** Displays logs specifically related to API interactions.
+### Filtering by Status Tabs
+
+At the top of the logs screen, you will find several tabs to filter by the most common statuses:
+
+* **All:** Displays every log entry.
+* **Success:** Shows only successfully completed actions.
+* **Warning:** Filters for entries that indicate a minor issue.
+* **Error:** Shows only entries that are reporting an error.
+
+### Using 'More Views'
+
+For more specific filters, click the **More views** dropdown menu. Here you will find these options:
+
+* **Failed:** Shows only actions that resulted in a failure.
+* **Info:** Displays informational messages that aren't errors or successes.
+* **API Only:** Narrows the list to only show events related to API interactions.
 
 ## Using Logs for Troubleshooting
 
 * **Diagnosing Errors:** If you encounter unexpected behavior or errors in your store, checking the "Failed" or "Warning" log types can help identify the root cause.
-* **Auditing Changes:** TThe "Success" logs keep a record of all successful actions. This is helpful for audits or seeing who did what and when.
+* **Auditing Changes:** The "Success" logs keep a record of all successful actions. This is helpful for audits or seeing who did what and when.
 * **Tracking Workflows:** By reviewing the sequence of events in the log, you can understand how certain processes (like order fulfillment or refunds) unfolded.
 

@@ -2,10 +2,11 @@
 
 The **Single Product & Order Setup** screen in FluentCart allows you to fine-tune how individual product pages are displayed on your storefront and configure certain general settings related to order management.
 
-## Accessing Single Product & Order Setup
+## Accessing the Product Page Settings
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings** in the left sidebar.
-2.  Click on the **"Single Product & Order Setup"** tab.
+1. From your WordPress dashboard, navigate to **FluentCart Pro** > **Settings** in the left sidebar.
+2. Click on the **Store Settings** tab. 
+3. Finally, select the **Product Page** section to see all available options.
 
 ## Configuration Options
 
@@ -18,7 +19,11 @@ These settings control how additional information is presented on your individua
 
     ![Screenshot of Single Product & Order Setup Tab](/images/settings-configuration/product-page-settings/single-product-order-setup.png)
 
-### 2. Variation Display
+### 2. Image Zooming
+
+* **Enable Zoom:** This feature lets customers get a closer look at your product images. When you check this **Enable Zoom** box, customers can hover their mouse over a product picture to see a magnified view. This is perfect for products with fine details, like clothing or electronics.
+
+### 3. Variation Display
 
 These settings define how your product variations (e.g., different sizes, colors, or license tiers) are presented to customers. The goal is to make the selection process as clear and intuitive as possible.
 
@@ -36,5 +41,5 @@ A "slug" is the user-friendly and URL-valid part of a web address that identifie
 
 ## Saving Your Settings
 
-After making any changes to your Single Product & Order Setup, remember to click the **"Save Settings"** button at the bottom right of the screen to apply your configurations.
+After making any changes to your Single Product & Order Setup, remember to click the **"Save"** button at the bottom right of the screen to apply your configurations.
 
