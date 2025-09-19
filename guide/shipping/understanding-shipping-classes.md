@@ -27,8 +27,8 @@ This guide explains how to use Shipping Classes to group products with similar s
     * **Class Name**: Give your shipping class a descriptive name (e.g., "Bulky Items").
     * **Cost**: Enter the numerical value for the additional cost associated with this class. This is an *adjustment* that will be added to the base shipping method cost.
     * **Cost Type**: This defines how the "Cost Adjustment" is applied:
-        * **Percentage**: The "Cost Adjustment" will be applied by percentage.
-        * **Fixed Amount**: The "Cost Adjustment" will be applied by a fix amount.
+        * **Percentage**: The "**Cost Adjustment**" will be applied by percentage.
+        * **Fixed Amount**: The "**Cost Adjustment**" will be applied by a fix amount.
      * **Apply to Qunatity**: Select this checkbox if you want the class to add per item charge if the buyer has multiple item of this product in the cart.
 
 4.  **Save the Shipping Class**:

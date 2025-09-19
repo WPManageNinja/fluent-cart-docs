@@ -12,7 +12,7 @@ Shipping methods define the options customers have for receiving their orders wi
 
 2.  **Add a New Shipping Method**:
     * Click the **"Add Shipping Method"** button within the chosen zone's settings.
-    * A form will appear to configure the new method.
+    * A form will pop up, ready for you to fill in the details..
 
         ![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-1.png)
 
@@ -20,17 +20,17 @@ Shipping methods define the options customers have for receiving their orders wi
 3.  **Configure Method Details**:
 
     * **Method Name**: Enter a user-friendly name for this shipping option (e.g., "Standard Delivery").
-    * **Method Type**: Choose one of the core types:
+    * **Method Type**: Choose how you want to charge for this option:
         * **Flat Rate**: A fixed cost applied to the order.
-        * **Free Shipping**: Shipping cost is zero.
+        * **Free Shipping**: No charge for shipping. A great way to treat your customers!
         * **Local Pickup**: Customers collect their order directly from a designated location.
 
     * **Amount**: Enter the numerical value for the cost. The interpretation of this value depends on the "Rate Type" you selected (e.g., `$5.00` for Fixed Amount, or `$2.00` if Per Item means $2 per item).
 
     * **Confugure Rate**: This determines how the base cost of this method is calculated:
         * **Per Order**: A single, fixed charge for the entire order, regardless of items or price.
-        * **Per Item**: The cost is multiplied by the total number of items in the cart.
-        * **Per Price (e.g., 10% of total price)**: The cost is a percentage of the total cart value.
+        * **Per Item**: The shipping cost is multiplied by the number of items in the cart. If the cost is $2 and they buy 3 items, the shipping will be $6.
+        * **Per Price**: The shipping cost is a percentage of the total order price. For example, 10% of a $50 order would be $5 for shipping.
 
     * **Class Aggregation**: This crucial setting applies only when your cart contains products from [different shipping classes](/guide/shipping/understanding-shipping-classes.md). It dictates how the individual shipping class costs are combined for this method.
         * **Sum all class costs**: The shipping cost for each distinct shipping class in the cart is calculated and then all these individual costs are added together.
