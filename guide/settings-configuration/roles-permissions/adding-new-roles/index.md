@@ -16,9 +16,9 @@ FluentCart's **Roles and Permissions** system allows you to assign specific acce
 
 5.  **Select Role:**
     * After selecting a user, use the dropdown labeled **"Select Role"** to choose one of the predefined FluentCart roles. Each role comes with a brief description of its permissions:
-        * **Super Admin:** "With All Permissions". This role has complete control over all FluentCart functionalities.
+        * **Super Admin:** "With All Permissions". This role has complete control over all **FluentCart** functionalities.
         * **Manager:** "With All Permissions Except Sensitive Settings". This role can manage most aspects of the store but is restricted from critical configurations.
-        * **Worker:** "View Access for products, customers, coupons, integretions." It also has "Manage Access for Order Statuses". This role is suitable for staff primarily involved in fulfillment and basic order updates.
+        * **Worker:** "View Access for products, customers, coupons, integretions." It also has "**Manage Access** for Order Statuses". This role is suitable for staff primarily involved in fulfillment and basic order updates.
         * **Accountant:** "View Access for products, customers, orders, subscriptions, licenses, coupons, reports and integrations". This role is designed for users who need to view financial and sales data without making operational changes.
 
     ![Screenshot of Add Role Modal - Select User](/images/settings-configuration/roles-permissions/add-role-select-user.png)
