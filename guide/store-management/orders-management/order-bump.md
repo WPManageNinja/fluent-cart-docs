@@ -1,4 +1,4 @@
-# Order Bump: Maximize Revenue at Checkout
+# Order Bump
 
 The **Order Bump** feature in FluentCart allows you to present a last-minute, complementary product offer directly on the checkout page. This simple, high-converting technique encourages customers to add an extra item to their cart before completing their purchase, significantly increasing your average order value (AOV).
 
