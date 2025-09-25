@@ -11,13 +11,7 @@ Go to your WordPress dashboard, then go to **FluentCart Pro** > **Reports** in t
 The top of the dashboard provides crucial controls that determine the data displayed in the chart and table.
 
 * **Date Range Selector:** This field allows you to define the **Current Range** for your report. You can select a custom start and end date to focus on specific periods, such as a major sale or a specific fiscal quarter.
-* **Compare To:** This dropdown determines the historical period used for comparison. Options allow you to benchmark your **Current Range** data against:
-    * **Previous Period:** Compares against the period immediately preceding your selected date range.
-    * **Previous Month:** Compares against the previous calendar month.
-    * **Previous Quarter:** Compares against the previous three-month period.
-    * **Previous Year:** Compares against the same period one year ago.
-    * **Custom:** Allows you to define a completely separate date range for comparison.
-    * **No Comparison:** Shows only the data for the current period without any comparison metrics.
+* **Compare To:** This dropdown determines the historical period used for comparison. Options allow you to benchmark your **Current Range** data against prevous time periods. 
 * **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
 ### Key Customer Growth Metrics
