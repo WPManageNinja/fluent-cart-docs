@@ -4,47 +4,42 @@ The **Refunds Report** provides a focused analysis of all refund activity in you
 
 #### Accessing the Refunds Report
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Reports**.
-2.  Click on the **Refunds** tab to access the Refunds Report.
+Go to your WordPress dashboard, then go to **FluentCart** > **Reports** in the side menu, and click on the **Refunds** tab.
 
-#### Filtering the Report
+### Report Filters and Controls
 
-To help you analyze your data effectively, the Refunds Report includes several filtering options:
+The top of the dashboard gives you key controls to choose what data appears in your charts and tables.
 
-* **Date Filter:** Located at the top of the page, this allows you to view data for a specific timeline, such as "This Month," "This Year," or a custom date range. All charts and metrics on the page will update based on your selection.
-* **Advanced Filters:** To the top right, click the **filter icon** to segment the report by **Order Status** or **Payment Status**, allowing you to focus on refunds associated with specific types of orders.
+* **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
+* **Compare To:** This dropdown determines the historical period used for comparison, allowing you to benchmark your current data against previous time frames.
+* **Advanced Filters:** Click the filter icon to segment the report by criteria such as Order Type or specific Products, allowing you to isolate refunds associated with certain items.
+* **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
+
+   ![Screenshot of Refunds Report Page](/images/reporting-analytics/refunds/refunds-report.png)
+
+### Key Refund Metrics
+
+At the top of the **Refunds Report**, you will find summary cards highlighting your key refund metrics for the selected period.
+
+* **Total Refunds:** This figure displays the total number of individual refund transactions processed.
+* **Total Refunded Amount:** This represents the total monetary value of all refunds issued to customers.
+* **Avg. Refunded Amount:** This calculates the average value of a single refund transaction.
+* **Refund Rate:** This key metric shows the percentage of orders that resulted in a refund.
+
+Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against.
 
 #### Refund Report Chart
 
-The main chart at the top of the page visually represents your key refund trends over the selected period.
+The main visualization on this dashboard is the **Refund Report Chart**. This is a powerful area chart that allows for easy trend analysis of your refund activity. 
 
-* **Metric Selector:** In the top right corner of the chart, you can use the dropdown menu to select which metrics are displayed.
-* **Interactive Controls:** You can also interact with the chart using the icons to zoom in on specific periods or download the chart as an image for your records.
+By showing the current period's refund data alongside the past, you can quickly identify spikes, measure the impact of changes, and see if your refund rate is improving or worsening. The chart displays key trends for **Total Refunded Amount** and the count of **Total Refunds**.
 
-#### Key Performance Indicators (KPIs)
+### Detailed Refund Analysis
 
-To the right of the main chart, you will find a summary of crucial refund-related metrics for the selected period.
+Below the main chart, detailed breakdowns provide the specific data behind the visualization. This section is essential for granular analysis.
 
-* **Total Refunds:** This is the total number of individual refund transactions that have been processed.
-* **Total Refunded Amount:** This represents the total monetary value of all refunds issued to customers.
-* **Avg. Refunded Amount:** This calculates the average value of a single refund transaction.
-* **Refund Rate:** This is a key metric that shows the percentage of your orders that have resulted in a refund.
+* **Weeks between an order created date and refund date:** This bar chart shows how much time passes before customers request refunds. It helps you understand if issues with a product are immediate or develop over time.
 
-    ![Screenshot of Refunds Report Page](/images/reporting-analytics/refunds-report.png)
+* **Refund Grouped By:** This table breaks down your refund data by different criteria, such as **Billing Country**. The columns show the number of **Refunds**, the total **Refunded Amount**, and the **Average Refund**. This helps you pinpoint if refunds are more common in specific regions or with certain customer segments.
 
-#### Additional Refund Analytics
-
-Below the main chart, the report features additional sections for more granular analysis.
-
-**Weeks between an order created date and refund date**
-
-This bar chart helps you understand how quickly customers request refunds after their initial purchase. It groups refunds by the number of weeks that have passed between the order date and the refund date, which can help you identify if issues are appearing immediately or over time.
-
-**Refund Grouped By**
-
-This powerful section allows you to segment your refund data based on different criteria, helping you pinpoint the source of refunds.
-
-* **Grouping Options:** Use the dropdown menu on the right to choose how you want to group the data. Common options include:
-    * **Billing Country:** Segments refunds based on the customer's billing address to see if certain regions have higher refund rates.
-* **Data Table:** The table will dynamically update to show a detailed breakdown of your refund data based on the selected grouping, including metrics like the number of Refunds, the total Refunded Amount, and the Average Refund for each item in the group (e.g., for each country).
-* **Export:** Click the **Export** button to download the currently displayed grouped data as a CSV file.
+The Refunds Report goes deeper than sales data, showing you the reasons behind customer returns so you can improve your products and services.
