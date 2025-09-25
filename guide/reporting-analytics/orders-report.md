@@ -4,54 +4,70 @@ The **Orders Report** in FluentCart provides a deep dive into your store's order
 
 #### Accessing the Orders Report
 
+To find your Orders Report:
+
 1. From your WordPress dashboard, navigate to **FluentCart Pro > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)**.
 2. Click on the **Orders** tab to access the Orders Report.
 
 #### Filtering the Report
 
-To help you analyze your data effectively, the Orders Report includes several filtering options:
+The **Orders Report** includes the same simple filters you’ll find in other reports. These filters allow you narrow results to a specific time frame, compare different periods, or focus on particular order types. So, you can quickly get the exact data you need.
 
-* **Date Filter:** Located at the top of the page, this allows you to view data for a specific timeline, such as "This Month," "This Year," or a custom date range. All charts and metrics on the page will update based on your selection.
-* **Advanced Filters:** To the top right, click the **filter icon** to segment the report by **[Order Status](/guide/store-management/understanding-statuses.md)** or **[Payment Status](/guide/store-management/understanding-statuses.md)**, allowing you to focus on specific types of orders (e.g., only "Completed" or "Paid" orders).
+### Filtering by Date
+
+You'll see a **Date** filter left at the top. This allows you to check your store’s performance for a specific period. You can pick from preset options or select a custom date range that you want to see.
+
+### Comparing Time Periods
+
+Next to the date filter, you'll find the **Compare to** filter. This is a powerful tool to see your growth. For example, you can compare this week's sales order to last week's to see if you're improving.
+
+You can choose to compare your selected date range with:
+
+* **Previous Period:** Compares to the immediately preceding period of the same length.
+* **Previous Month:** Compares to the entire previous calendar month.
+* **Previous Quarter:** Compares to the previous three-month quarter.
+* **Previous Year:** Compares to the same date range in the previous year.
+* **Custom:** Lets you select a custom date range to compare against.
+
+### Using Advanced Filters
+
+For a more detailed view, click the **Filter** icon in the top-right corner. This will open up advanced options to narrow down your report.
+
+#### Filter by Order Type
+
+This allows you to see data for specific kinds of orders. It's great for separating your one-time sales from your recurring revenue. You can filter by:
+
+* **All:** Shows every type of order.
+* **One time:** Shows only standard, one-time purchases.
+* **Subscription:** Shows only new subscription orders.
+* **Renewal:** Shows only recurring payments from existing subscriptions.
+
+#### Filter by Products
+
+If you want to see how many orders included a specific item, you can use this filter. Just start typing a product's name and select it from the list. You can select multiple products to see their combined order data.
+
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/order-report-filter.png)
+
+### Key Performance Indicators (KPIs)
+
+The top of the report features a set of KPIs that give you an at-a-glance summary of your order performance for the selected period.
+
+* **Gross Sales:** The total revenue from all orders before any deductions.
+* **Refund:** The total amount of money refunded to customers.
+* **Net Revenue:** The revenue you've earned from orders after refunds are subtracted.
+* **Orders:** The total number of orders placed.
+* **Items:** The total quantity of all product units sold.
+* **Avg. Order Gross:** The average amount of money a customer spends per order.
+* **Avg. Order Net:** The average value of an order after refunds are considered.
+* **Avg. Order Items:** The average number of items customers buy in a single order.
 
 #### Order Report Chart
 
-The main chart at the top of the page visually represents your key order trends over the selected period.
+Just below the KPIs, you’ll see the Order Report Chart. This bar chart gives you a clear visual of your store’s performance over time.
 
-* **Metric Selector:** In the top right corner of the chart, you can use the dropdown menu to select which metrics are displayed. You can visualize the following data points:
-    * **Net Revenue:** The total income from sales after all deductions (like refunds and discounts) have been taken out.
-    * **Gross Sales:** The total income from all sales before any deductions are made.
-    * **Orders:** The total number of individual purchases made by customers.
-    * **Items:** The total quantity of all individual products sold across all orders.
-    * **Average Order Net:** The average net revenue earned per individual order.
-    * **Average Order Gross:** The average gross sales amount per individual order.
-    * **Average Order Items:** The average number of items included in a single order.
-* **Interactive Controls:** You can also interact with the chart using the icons to zoom in on specific periods or download the chart as an image for your records.
+You can adjust the chart view to show data by month or year. By default, it’s set to the standard format. To change it, use the dropdown menu located at the top-right corner of the chart section.
 
-#### Performance Overviews
-
-Below the main chart, you'll find two sections that provide a high-level summary of your store's performance.
-
-**Average Monthly Performance**
-
-This section provides a snapshot of your store's average performance metrics on a monthly basis.
-
-* **Avg. Monthly Net:** Represents the average net revenue your store earns per month.
-* **Avg. Monthly Gross:** Calculates the average gross sales your store makes per month.
-* **Avg. Monthly Orders:** Tracks the average number of orders your store receives per month.
-* **Avg. Monthly Items:** Counts the average number of individual product items sold per month.
-
-**Key Order Performance Indicators**
-
-This section summarizes crucial order-related metrics for the selected period.
-
-* **Gross Sales:** Represents the total revenue from all sales before any deductions.
-* **Total Refunds:** Calculates the total monetary value of all refunds processed.
-* **Discounts:** Summarizes the total value of all discounts applied through coupons.
-* **Taxes:** Totals the amount of taxes collected on orders.
-* **Shipping:** Totals the amount charged to customers for shipping.
-
-   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders-report.png)
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/orders-report-chart.png)
 
 #### Customer Insights
 
@@ -63,15 +79,14 @@ This powerful table breaks down your order data based on customer type, helping 
 * **Show Percentages:** Enable this toggle to view the data as percentages, making it easy to see the proportion of sales from new versus returning customers.
 * **Export:** Click the **Export** button to download this data as a CSV file for further analysis.
 
-   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders-group-by.png)
-
-
 #### Orders Grouped By
 
 This section provides geographical and temporal breakdowns of your order data.
 
 * **Shopping Country:** This table breaks down your orders and sales data by the customer's country, helping you identify your key international markets.
 * **Orders Grouped By Day and Hour:** This heatmap visualizes your store's busiest times, showing which days of the week and which hours of the day generate the most orders.
+
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/customer-insights.png)
 
 #### Additional Order Analytics
 
@@ -85,4 +100,4 @@ The bottom of the report features a series of granular charts to help you analyz
 * **Order Value Distribution:** This chart illustrates how many orders fall into different price ranges (e.g., $0-100, $100-200), helping you understand your most common transaction sizes.
 * **Average Order Items:** A line chart that tracks the trend of the average number of items per order over the selected time period.
 
-   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders-report-by.png)
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/orders-report-by.png)

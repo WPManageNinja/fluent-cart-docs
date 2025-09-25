@@ -35,7 +35,7 @@ At the very top, you get a direct summary of your store's financial volume and g
 * **Gross Volume:** The total sales amount before anything is taken out, charted over specific periods (e.g., quarterly or monthly).
 * **Year-over-Year Growth (YoY):** This figure shows the percentage change in your gross volume compared to the same time last year, giving you crucial context on expansion.
 
-    ![Screenshot of Reporting Overview Page](/images/reporting-analytics/reporting-overview.png)
+    ![Screenshot of Reporting Overview Page](/images/reporting-analytics/dashboard-overview/reporting-overview.png)
 
 
 ### Key Performance Trends
@@ -53,6 +53,7 @@ These sections move beyond raw sales to show real profitability and market perfo
 * **Net Revenue Quarterly:** The net income broken down by three-month periods for easier fiscal review.
 * **Top Country Gross/Net Volume:** Visual charts that categorize your sales and revenue based on the customer’s billing country. This helps you identify your most valuable geographical markets.
 
+<<<<<<< Updated upstream
     ![Screenshot of Report Dashboard Overview Page](/images/reporting-analytics/overview-metrics.png)
 
 ### Product and Customer Value
@@ -63,3 +64,6 @@ The final charts focus on catalog performance and the health of your customer ba
 * **Customer LifeTime Value (CLTV):** Metrics showing the expected total revenue from a customer over their entire relationship with your store, which is key for marketing decisions.
 
 By reviewing the Overview first, you get a clean summary of the most critical numbers, allowing you to choose which detailed tab (Sales, Refunds, etc.) you need to investigate further.
+=======
+    ![Screenshot of Report Dashboard Overview Page](/images/reporting-analytics/dashboard-overview/overview-metrics.png)
+>>>>>>> Stashed changes
