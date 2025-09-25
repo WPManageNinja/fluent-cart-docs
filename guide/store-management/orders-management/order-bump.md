@@ -69,7 +69,7 @@ After configuring all the details, click **Save** (standard practice) to activat
 On the main **Order Bumps** screen, you can manage all your existing offers:
 
 * **Status Tags:** Quickly see which offers are **Active**, **Draft** (saved but not enabled), or **All**.
-* **Action Menu:** The vertical ellipsis (`...`) icon provides options to **Edit**, **Duplicate**, or **Delete** an existing bump offer.
+* **Action Menu:** The vertical ellipsis (`...`) icon provides options to **Delete** an existing bump offer.
 
 ![Order Bump](/guide/public/images/store-management/order-bump/order-bump-4.png)
 
