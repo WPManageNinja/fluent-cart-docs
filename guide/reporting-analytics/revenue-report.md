@@ -7,42 +7,89 @@ The **Revenue Report** in FluentCart provides a detailed breakdown of your store
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Reports**.
 2.  Click on the **Revenue** tab to access the Revenue Report.
 
-#### Filtering the Report
+### Filtering the Report
 
-To help you analyze your data effectively, the Revenue Report includes several filtering options:
+The **Revenue Report** givess you more powerful filtering options at the top of the page. These tools allow you to define specific time frames, compare performance, and segment your revenue data for deeper insights.
 
-* **Date Filter:** Located at the top of the page, this allows you to view data for a specific timeline, such as "This Month," "This Year," or a custom date range. All charts and metrics on the page will update based on your selection.
-* **Advanced Filters:** To the top right, click the **filter icon** to segment the report by **Order Status** or **Payment Status**, allowing you to focus on revenue from specific types of orders.
+#### Date Filter
+
+Located at the top-left of the report, the **Date Filter** is used to select the primary time frame for your analysis. You can choose from predefined ranges (such as "This Month" or "This Quarter") or select a custom date range. 
+
+#### Compare to
+
+The **Compare to** dropdown allows you to compare the data from your selected date range against a secondary period to track performance trends and growth. Activating a comparison will update the Revenue Report Chart and Comparison table to visualize and detail the differences. The available options are:
+
+* **Previous Period:** Compares the selected range to the immediately preceding period of the same length. For example, if you select 30 days, it will compare to the 30 days prior.
+* **Previous Month:** Compares your selection to the entire previous calendar month.
+* **Previous Quarter:** Compares your selection to the previous three-month calendar quarter.
+* **Previous Year:** Compares the selected range to the exact same date range from the prior year.
+* **Custom:** Allows you to select a custom date range to compare against.
+* **No Comparison:** This option removes the comparison data from the report.
+
+#### Advanced Filters
+
+Click the **filter icon** located in the top-right corner of the report. This opens two different report data filter options.
+
+* **Order Type:** This filter allows you to separate revenue based on the type of transaction. You can choose to view revenue from:
+    * **All:** Includes all order types.
+    * **One time:** Shows revenue from standard, non-recurring purchases only.
+    * **Subscription:** Shows revenue from initial subscription sign-ups.
+    * **Renewal:** Shows revenue generated from recurring subscription payments.
+* **Products:** This filter allows you to see revenue data for one or more specific products. You can search for and select items from a list to analyze their individual or combined financial performance.
+
+	![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/advanced-filter.png)
+
+### Key Performance Indicators (KPIs)
+
+The top of the report displays a high-level summary of your store's financial activity. Each metric provides the total value for the selected date range, along with a visual indicator of its performance compared to the period selected in the "Compare to" filter.
+
+* **Gross Sales:** This represents the total revenue from all sales before any deductions are made. The percentage and trend arrow icon (▲ or ▼) next to the value show the increase or decrease compared to the comparison period.
+
+* **Refund:** This displays the total monetary value of refunds processed. Similarly, the percentage and trend arrow show how the total refund amount has changed relative to the comparison period.
+
+* **Revenue:** This shows your total income after deductions like refunds have been subtracted. The percentage and trend arrow provide a direct comparison of your net revenue between the two selected periods.
 
 #### Revenue Report Chart
 
-The main chart at the top of the page visually represents your key financial trends over the selected period.
+The main chart at the top of the page visually represents your key financial trends over the selected period. It is an area chart designed to provide a clear comparison of revenue, helping you to quickly identify patterns and growth.
 
-* **Metric Selector:** In the top right corner of the chart, you can use the dropdown menu to select which metrics are displayed. You can visualize the following data points:
-    * **Net Revenue:** Your total income after all deductions like refunds and discounts have been subtracted.
-    * **Gross Sales:** Your total sales revenue before any deductions are made.
-    * **Refund:** The total monetary value of refunds you have processed.
-    * **Taxes:** The total amount of taxes collected from sales.
-    * **Shipping:** The total amount of shipping fees charged to customers.
-    * **Discount:** The total value of all discounts applied through coupons.
-* **Interactive Controls:** You can also interact with the chart using the icons to zoom in on specific periods or download the chart as an image for your records.
+* **Current Revenue:** This metric, represented by a blue area, displays the revenue for the currently selected date range.
+* **Compare Revenue:** This metric, represented by a green area, displays the revenue for the comparison period you have selected from the "Compare to" filter.
 
-    ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue-report.png)
+In the top-right corner of the chart, you will find several icons to interact with the data visualization:
 
-#### Net Revenue Breakdown
+* **View Toggle:** Allows you to switch between different chart types, such as from an area chart to a bar chart.
+* **Zoom:** Enables you to magnify a specific portion of the chart for a more detailed view.
+* **More Options:** Provides additional functionalities, such as downloading the chart as an image for use in reports or presentations.
 
-This section provides a detailed tabular breakdown of your store's financial performance, typically grouped by year within your selected date range.
+At the bottom of the chart, you can use the Data and Timeline toggles to switch between the visual chart and its underlying data table.
+ 
+   ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/revenue-report.png)
 
-* **Columns:** The table displays the following financial details:
-    * **Year:** The year in which the revenue was recorded.
-    * **Order Count:** The total number of orders contributing to the revenue.
-    * **Gross Sales:** Represents the total revenue from all sales before any deductions.
-    * **Taxes:** Totals the amount of taxes collected on orders.
-    * **Shipping:** Totals the amount charged to customers for shipping.
-    * **Discount:** Summarizes the total value of all discounts applied through coupons.
-    * **Refunds:** Calculates the total monetary value of all refunds processed.
-    * **Net Revenue:** The final "take-home" revenue after all deductions have been applied.
-* **Export:** Click the **Export** button at the top right of this section to download the data as a CSV file for your accounting or for further analysis.
+### Comparison Table
+
+This section provides a detailed tabular breakdown of the data visualized in the Revenue Report Chart, offering a clear numerical comparison between the two selected periods.
+
+The table displays the following columns:
+
+* **Period:** The specific time interval being compared (e.g., May 2025 vs December 2024).
+* **Current Revenue:** The revenue generated during the current, more recent period.
+* **Compare Revenue:** The revenue generated during the older comparison period.
+* **Change (%):** The percentage difference between the Current and Compare Revenue. The value is color-coded green for an increase and red for a decrease, providing a quick visual indicator of performance.
+
+### Revenue Breakdown by Year
+
+This section aggregates your store's financial performance, grouped by year, within your selected date range. The data from this table can be downloaded as a CSV file by clicking the Export button located in the top-right corner.
+
+The table displays the following financial details:
+
+* **Year:** The year in which the revenue was recorded.
+* **Order Count:** The total number of orders contributing to the revenue for that year.
+* **Gross Sales:** The total revenue from all sales before any deductions.
+* **Refunds:** The total monetary value of all refunds processed.
+* **Revenue:** The final, net revenue after all deductions have been applied for the year.
+
+   ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/comparison-table.png)
 
 #### Net Revenue Grouped By
 
@@ -55,4 +102,4 @@ This powerful section allows you to segment your revenue data based on different
 * **Data Table:** The table will dynamically update to show a detailed breakdown of your revenue based on the selected grouping, including metrics like Order Count, Gross Sales, and Net Revenue for each item in the group (e.g., for each country or payment method).
 * **Export:** Click the **Export** button to download the currently displayed grouped data as a CSV file.
 
-    ![Screenshot of Revenue Report Page](/images/reporting-analytics/net-revenue.png)
+    ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/net-revenue.png)
