@@ -4,37 +4,47 @@ The **Product Report** provides detailed analytics on the performance of your in
 
 #### Accessing the Product Report
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Reports**.
-2.  Click on the **Product** tab to access the Product Report.
+Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)** in the side menu, and click on the **Product** tab.
 
-#### Filtering the Report
+### Report Filters and Controls
 
-To help you analyze your data effectively, the Product Report includes several filtering options:
+The top of the dashboard gives you key controls to choose what data appears in the report.
 
-* **Date Filter:** Located at the top of the page, this allows you to view data for a specific timeline, such as "This Month," "This Year," or a custom date range. All charts and metrics on the page will update based on your selection.
-* **Advanced Filters:** To the top right, click the **filter icon** to segment the report by **Order Status** or **Payment Status**, allowing you to focus on product performance from specific types of orders.
+* **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
+* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data.
+* **Advanced Filters:** Click the filter icon to break down the report by options like Order Type or specific Products. This helps you focus on detailed product data for a closer view.
+* **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
+
+### Key Product Metrics
+
+At the top of the **Product Report**, you will find summary cards highlighting your key product metrics for the selected period.
+
+* **Units Sold:** The total quantity of all product units sold.
+* **Gross Sale:** The total amount of money made from product sales before deductions.
+* **Refund:** The total monetary value of refunds for these products.
+* **Revenue:** The final income from products after refunds are subtracted.
+* **Customer Count:** The total number of unique customers who purchased products.
+* **Avg. Selling Price:** The average price of the products sold.
+
+Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against.
+
+   ![Screenshot of Product Report Page](/images/reporting-analytics/product/product-report.png)
 
 #### Product Report Chart
 
-The main chart at the top of the page visually represents your key product performance trends over the selected period.
+This chart gives you a picture of your overall product performance, visually comparing sales between two different time periods.
 
-* **Metric Selector:** In the top right corner of the chart, you can use the dropdown menu to select which metrics are displayed.
-* **Interactive Controls:** You can also interact with the chart using the icons to zoom in on specific periods or download the chart as an image for your records.
+* **Current Range:** Represented by the blue area, this shows performance for the period you selected.
+* **Compare Range:** Represented by the green area, this shows performance for the historical period you are comparing against.
 
-#### Key Performance Indicators (KPIs)
+### Product Performance Comparison
 
-To the right of the main chart, you will find a summary of crucial product-related metrics for the selected period.
+Below the main chart, a detailed comparison table allows you to analyze the performance of individual products between two specific months. Then, the table will then show:
 
-* **Units Sold:** This is the total quantity of all product units sold.
-* **Gross Sale:** This represents the total revenue generated from product sales before any deductions.
-* **Customer Count:** This shows the total number of unique customers who purchased products.
-* **Avg. Selling Price:** This calculates the average price of the products sold.
+* **Product:** This column lists your individual products.
+* **Comparison:** This unique column uses a bar chart to visually compare the sales numbers for each of the two months you selected, making it easy to see which products are trending up or down.
+* **Change:** This column shows the exact percentage of change between the two months, color-coded for a quick view of performance.
 
-    ![Screenshot of Product Report Page](/images/reporting-analytics/product-report.png)
+   ![Screenshot of Product Performanance Comparison](/images/reporting-analytics/product/product-performanance.png)
 
-#### Product Performance Comparison
-
-This powerful section allows you to compare the sales data of your products over two different time periods, helping you to measure growth and identify trends.
-
-1.  **Select Time Periods:** Use the two sets of dropdown menus to select the time periods you want to compare (e.g., "This Month" vs. "Last Month").
-2.  **View Comparison Data:** The table will then display a side-by-side comparison for each product, showing metrics like sales and revenue for both selected periods, making it easy to spot which products are trending up or down.
+With the Product Report, you can see clear patterns in product demand, giving you the insights you need to make smarter decisions about your inventory and marketing.
