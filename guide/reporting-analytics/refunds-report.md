@@ -13,7 +13,7 @@ The top of the dashboard gives you key controls to choose what data appears in y
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
 * **Compare To:** This dropdown determines the historical period used for comparison, allowing you to benchmark your current data against previous time frames.
 * **Advanced Filters:** Click the filter icon to segment the report by criteria such as Order Type or specific Products, allowing you to isolate refunds associated with certain items.
-* **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
+* **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
 
    ![Screenshot of Refunds Report Page](/images/reporting-analytics/refunds/refunds-report.png)
 
@@ -30,16 +30,16 @@ Each metric also includes a percentage that indicates the increase or decrease c
 
 #### Refund Report Chart
 
-The main visualization on this dashboard is the **Refund Report Chart**. This is a powerful area chart that allows for easy trend analysis of your refund activity. 
+The main chart on this dashboard is the **Refund Report Chart**. It’s an area chart that makes it easy to see trends in your refunds.
 
-By showing the current period's refund data alongside the past, you can quickly identify spikes, measure the impact of changes, and see if your refund rate is improving or worsening. The chart displays key trends for **Total Refunded Amount** and the count of **Total Refunds**.
+The chart compares refunds from the current period with past refunds, so you can quickly see increases or decreases and track changes in your refund rate. It shows both **Total Refunded Amount** and **Total Refunds**
 
 ### Detailed Refund Analysis
 
-Below the main chart, detailed breakdowns provide the specific data behind the visualization. This section is essential for granular analysis.
+Below the main chart, you’ll find more detailed breakdowns that show the data behind the charts. This helps you understand refunds in more detail.
 
-* **Weeks between an order created date and refund date:** This bar chart shows how much time passes before customers request refunds. It helps you understand if issues with a product are immediate or develop over time.
+* **Weeks between an order created date and refund date:** This bar chart shows how long it takes for customers to request refunds. It helps you see if problems happen right away or later.
 
-* **Refund Grouped By:** This table breaks down your refund data by different criteria, such as **Billing Country**. The columns show the number of **Refunds**, the total **Refunded Amount**, and the **Average Refund**. This helps you pinpoint if refunds are more common in specific regions or with certain customer segments.
+* **Refund Grouped By:** This table breaks down refunds by things like **Billing Country**. It shows the number of **Refunds**, the total **Refunded Amount**, and the **Average Refund**, helping you find patterns in specific regions or customer groups.
 
 The Refunds Report goes deeper than sales data, showing you the reasons behind customer returns so you can improve your products and services.

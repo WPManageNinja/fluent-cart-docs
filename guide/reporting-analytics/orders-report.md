@@ -16,8 +16,8 @@ The top of the dashboard gives you key controls to choose what data appears in t
 
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
 * **Compare To:** This dropdown allows you to choose a past time period to compare with your current data.
-* **Advanced Filters:** Click the filter icon to break down the report by options like **Order Type** or specific **Products**. This helps you focus on detailed order data for a closer view.
-* **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
+* **Advanced Filters:** Click the **filter** icon to break down the report by options like **Order Type** or specific **Products**. This helps you focus on detailed order data for a closer view.
+* **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
 
    ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/order-report-filter.png)
 
@@ -38,7 +38,7 @@ Each metric also includes a percentage that indicates the increase or decrease c
 
 #### Order Report Chart
 
-Just below the KPIs, you’ll see the Order Report Chart. This bar chart gives you a clear visual of your store’s performance over time.
+Just below the KPIs, you’ll see the Order **Report Chart**. This bar chart gives you a clear visual of your store’s performance over time.
 
 You can adjust the chart view to show data by month or year. By default, it’s set to the standard format. To change it, use the dropdown menu located at the top-right corner of the chart section.
 
@@ -52,7 +52,7 @@ This powerful table breaks down your order data based on customer type, helping 
 
 * **Columns:** The table displays Customer Count, Order Count, Net Sales, Average Net Sales, Gross Sales, and Average Gross Sales for both **New** (first-time) and **Returning** customers.
 * **Show Percentages:** Enable this toggle to view the data as percentages, making it easy to see the proportion of sales from new versus returning customers.
-* **Export:** Click the **Export** button to download this data as a CSV file for further analysis.
+* **Export:** Click the **Export** button to download this data as a **CSV** file for further analysis.
 
 #### Orders Grouped By
 
@@ -65,14 +65,14 @@ This section provides geographical and temporal breakdowns of your order data.
 
 #### Additional Order Analytics
 
-The bottom of the report features a series of granular charts to help you analyze specific aspects of customer behavior and order patterns:
+At the bottom of the report, you’ll find detailed charts that help you understand customer behavior and order trends.
 
-* **Gross Sale by Day:** A bar chart visualizing the total gross sales generated on each day of the week, helping you identify your most profitable days.
-* **Item Count Distribution:** This chart illustrates how many orders contained 1 item, 2 items, 3 items, and so on, helping you understand your customers' purchasing volume.
+* **Gross Sale by Day:** A bar chart showing total sales for each day of the week, so you can see which days earn the most.
+* **Item Count Distribution:** This chart shows how many orders have 1 item, 2 items, 3 items, etc., helping you understand how many items customers usually buy.
 * **Gross Sale by Hour:** A bar chart that breaks down sales performance for each hour of the day, allowing you to pinpoint your peak sales times.
-* **Time Between Order Created & Completed:** This chart analyzes how long it takes for your team to fulfill orders, helping you measure the efficiency of your fulfillment process.
+* **Time Between Order Created & Completed:** This chart shows how long it takes to complete an order, helping you see how quickly your team fulfills orders.
 * **Average Order Gross:** A line chart that tracks the trend of the average gross value of your orders over the selected time period.
-* **Order Value Distribution:** This chart illustrates how many orders fall into different price ranges (e.g., $0-100, $100-200), helping you understand your most common transaction sizes.
+* **Order Value Distribution:** This chart shows how many orders are in different price ranges (like $0–100 or $100–200) so you can see which order amounts happen most often.
 * **Average Order Items:** A line chart that tracks the trend of the average number of items per order over the selected time period.
 
    ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/orders-report-by.png)
