@@ -141,10 +141,6 @@ This crucial section is where you manage the actual digital files customers will
     * **File Name:** Enter a display name for the downloaded file. You can [edit this file name](/guide/product-types-creation/creating-digital-products#editing-uploaded-file-names) after upload if needed.
     * Click **"Save Asset"** to add the file to your product.
 
-:::warning Important Note: Subscription Products
-The "Add Items" modal when [editing orders](/guide/store-management/orders-management/editing-existing-orders) currently **does not support adding subscription products**. Subscription orders must be initiated as such.
-:::
-
 ### 6. Digital Product Licensed
 
 This is one of the most important features for your store if you sell products like software, plugins, or themes that need a license key for activation. By adding a digital license, you can control how your product is used, how many times it can be activated, and for how long it remains valid. This helps protect your hard work and manage customer access properly.
