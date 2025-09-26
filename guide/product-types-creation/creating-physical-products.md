@@ -25,9 +25,29 @@ By the end of this guide, you will be able to confidently list and manage any ph
 
 ### 1. Basic Product Information
 
-* **Title:** Enter the main name of your product (e.g., "Purple Air Max Trainers").
-* **Short description:** Provide a brief, concise summary of the product.
-* **Long Description:** Use the rich text editor to write a detailed description of your product. You can format text, add media, and switch to a "Visual Code" view for HTML editing.
+* **Title:** Enter the main name of your product (e.g., "Purple Air Max Trainers"). This name shows up everywhere: on your shop page, in the cart, and at checkout.
+* **Short description:** Write a brief, simple summary of what the product is. This usually shows up quickly near the product picture or price, giving customers a quick, important overview.
+* **Long Description:** This is the large area for all the detailed information, like features, materials, and how to use the product. FluentCart offers two great ways to build this content:
+
+    #### **Using the Visual Builder (Recommended for Dynamic Content)**
+
+    The **Builder** option uses the powerful block editor built into WordPress (Gutenberg). This lets you design rich, visual, and highly effective product pages.
+
+    1.  Click the **Builder** button, located next to the **Classic Editor** option.
+    2.  Click **Show Content Editor** to open the design screen.
+    3.  This screen gives you the opportunity to create dynamic descriptions by adding any available WordPress content blocks. For example, you can add:
+        * **Images & Videos:** Show extra product media right within the description.
+        * **Layouts:** Use columns to put text and pictures side-by-side for a clean look.
+        * **Lists & Tables:** Clearly list specifications or sizes.
+
+    By using the **Visual Builder**, you get the power to create beautiful product descriptions that help sell your products better and give customers a great shopping experience.
+
+    #### **Using the Classic Editor**
+
+    The **Classic Editor** gives you a standard, quick writing space. Within this editor, you have two modes:
+
+    * **Visual Mode:** This is the standard view where you type your description directly. You'll have formatting options above (like bold, italics, lists) and options to easily add media with your text.
+    * **Code Mode (HTML):** This view is for advanced users who want to write the long description using raw **HTML codes**.
 
 ### 2. Media
 
