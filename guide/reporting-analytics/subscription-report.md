@@ -1,52 +1,49 @@
 # Subscription Report
 
-The **Subscription Report** offers a specialized dashboard for analyzing the health and performance of your subscription-based products. This report is essential for understanding your recurring revenue, customer retention, and churn rates, providing critical insights into the long-term viability of your subscription business model.
+The **Subscription Report** provides a clear overview of your subscription growth, helping you track new signups and compare trends over time. This dashboard is designed to give you a simple, at-a-glance look at how your subscription offerings are performing.
 
 #### Accessing the Subscription Report
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Reports**.
-2.  Click on the **Subscription** tab to access the Subscription Report.
+Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)** in the side menu, and click on the **Subscription** tab.
 
-#### Filtering the Report
+### Report Filters and Controls
 
-To help you analyze your data effectively, the Subscription Report includes several filtering options:
+The top of the dashboard gives you key controls to choose what data appears in the report.
 
-* **Date Filter:** Located at the top of the page, this allows you to view data for a specific timeline, such as "This Month," "This Year," or a custom date range.
-* **Product Filter:** Use the "Select product" dropdown to view metrics for a specific subscription product.
-* **Advanced Filters:** To the top right, click the **filter icon** to segment the report by **Order Status** or **Payment Status**.
+* **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
+* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data.
+* **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
-  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/Subscription-Report.png)
+  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-report.png)
 
-#### Key Performance Indicators (KPIs)
+### Subscription Chart
 
-To the right of the main chart, you will find a summary of crucial subscription-related metrics for the selected period.
+The main feature of this report is the **Subscription Chart**. It shows your growth trends by visually comparing new subscriptions across two different time periods.
 
-* **Total Subscriptions:** The total number of active subscriptions.
-* **Subscription Churn Rate:** The percentage of subscribers who canceled their subscriptions within the period.
-* **ARPU (Average Revenue Per User):** The average revenue generated per active subscriber.
-* **LTV (Lifetime Value):** The total predicted revenue a single subscriber will generate over the lifetime of their subscription.
-* **Total Activations:** The total number of new subscriptions started.
-* **Total Payments:** The total number of successful subscription payments (new and recurring).
-* **Total Refunds:** The total monetary value of refunds issued for subscription payments.
-* **Failed Payments:** The number of subscription renewal payments that failed.
+* **Current Range:** Represented by the blue area, this shows new subscriptions for the period you selected.
+* **Compare Range:** Represented by the green area, this shows new subscriptions for the historical period you are comparing against.
 
-#### Subscription Analytics Charts
+You can also use the interactive controls in the top-right corner of the chart to change the view, zoom, or download the chart as an image.
 
-The dashboard features a series of charts to help you visualize key trends and metrics.
+  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-chart.png)
 
-**Retention Chart**
-This main chart at the top of the page visually represents your customer retention over time, showing the percentage of a cohort of new subscribers that remain active in the months following their initial signup.
+### Comparison Table
 
-**Daily Signups**
-This chart tracks the number of new subscriptions started each day, helping you identify trends in customer acquisition.
+The **Comparison** table provides the exact numbers from the visualization. This section is essential for seeing the precise data behind your growth trends.
 
-**New MRR Trend**
-This chart shows the trend of new Monthly Recurring Revenue (MRR) being added to your business over time, which is a key indicator of growth.
+* **Date:** This column shows the specific months being compared (e.g., "May 2025 vs April 2025").
+* **Current Range:** This shows the total number of new subscriptions from the current month.
+* **Compare Range:** This shows the total number of new subscriptions from the comparison month.
+* **Change (%):** This column displays the percentage of change between the two months, color-coded for a quick view of your growth.
 
-**Churn Analytics**
-This section provides deeper insights into why subscriptions are being canceled.
+### Detailed Subscription Analysis
 
-* **Churn Rates Over Time:** A line chart that tracks your churn rate over the selected period.
-* **Subscriptions Count Trend:** A line chart that visualizes the growth or decline of your total active subscriber count over time.
+Below the main comparison, you’ll find detailed charts that show customer loyalty and new customer trends. This section helps you clearly see how healthy your subscription business is.
 
-  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/Subscription-Report-overview.png)
+* **Retention Chart:** This chart shows you how long your customers stay subscribed after their initial purchase. The horizontal axis is divided into time periods like 7 Days, 30 Days, and 180 Days, making it easy to see at which point customers are most likely to drop off. This is a key tool for measuring customer loyalty.
+
+* **Daily Signups:** This chart tracks the number of new subscriptions you get each day. It helps you visualize your daily growth and identify trends in customer acquisition, which can be useful for seeing the impact of marketing campaigns.
+
+With the Subscription Report, you can easily see patterns in your subscription signups, giving you the insights you need to measure your growth.
+
+  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-comparion-table.png)
