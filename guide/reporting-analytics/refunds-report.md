@@ -4,15 +4,15 @@ The **Refunds Report** provides a focused analysis of all refund activity in you
 
 #### Accessing the Refunds Report
 
-Go to your WordPress dashboard, then go to **FluentCart** > **Reports** in the side menu, and click on the **Refunds** tab.
+Go to your WordPress dashboard, then go to **FluentCart** > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)** in the side menu, and click on the **Refunds** tab.
 
 ### Report Filters and Controls
 
 The top of the dashboard gives you key controls to choose what data appears in your charts and tables.
 
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
-* **Compare To:** This dropdown determines the historical period used for comparison, allowing you to benchmark your current data against previous time frames.
-* **Advanced Filters:** Click the filter icon to segment the report by criteria such as Order Type or specific Products, allowing you to isolate refunds associated with certain items.
+* **Compare To:** This dropdown lets you pick a past period (for example, the previous week, last month, or the same time last year). Your current data is then compared with that past period. This helps you see if your store is doing better, worse, or staying the same over time.
+* **Advanced Filters:** Click the **filter** icon to segment the report by criteria such as **Order Type** or specific **Products**, allowing you to isolate refunds associated with certain items.
 * **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
 
    ![Screenshot of Refunds Report Page](/images/reporting-analytics/refunds/refunds-report.png)
@@ -22,17 +22,17 @@ The top of the dashboard gives you key controls to choose what data appears in y
 At the top of the **Refunds Report**, you will find summary cards highlighting your key refund metrics for the selected period.
 
 * **Total Refunds:** This figure displays the total number of individual refund transactions processed.
-* **Total Refunded Amount:** This represents the total monetary value of all refunds issued to customers.
+* **Total Refunded Amount:** This shows the total amount of money refunded to customers. For example, if you refunded $200 and $150, the total refunded amount is $350.
 * **Avg. Refunded Amount:** This calculates the average value of a single refund transaction.
 * **Refund Rate:** This key metric shows the percentage of orders that resulted in a refund.
 
-Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against.
+Each metric also shows a percentage, telling you whether the value went up or down compared to the period you selected for comparison.
 
 #### Refund Report Chart
 
-The main chart on this dashboard is the **Refund Report Chart**. It’s an area chart that makes it easy to see trends in your refunds.
+The main chart on this dashboard is the **Refund Report Chart**. It’s an area chart that helps you easily spot refund trends.
 
-The chart compares refunds from the current period with past refunds, so you can quickly see increases or decreases and track changes in your refund rate. It shows both **Total Refunded Amount** and **Total Refunds**
+It compares the current period with past periods, so you can quickly see if refunds are going up or down. The chart shows both the **Total Refunded Amount** and the number of **Total Refunds**.
 
 ### Detailed Refund Analysis
 
