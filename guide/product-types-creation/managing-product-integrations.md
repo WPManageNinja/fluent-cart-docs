@@ -14,20 +14,28 @@ Product-specific integration settings are found within the **Edit Product** scre
 
 ## Configuring Product Integrations
 
-This section will display available integrations that can be connected specifically to this product. The options here will depend on which FluentCart modules or compatible third-party integrations you have enabled globally.
+This **Integrations** tab, found within the individual product settings, is where you create and manage powerful automation feeds specific to this product. The purpose of these feeds is to automatically run actions in other modules (like FluentCRM or FluentCommunity) the moment a customer buys this item.
 
-* **Available Integrations:** You will see a list of modules that can interact with this product (e.g., FluentCRM, FluentForms).
-    * **FluentCRM:** If connected, you might configure actions like adding customers who purchase this product to a specific CRM list or tagging them.
-    * **FluentForms:** If connected, you might set up actions related to form submissions upon product purchase.
-* **Connect/Manage Button:** Next to each integration, there will be a button (e.g., "Connect with FluentCRM", "Connect with FluentForms") to initiate or manage the connection.
-* **"Add Integration" Button:** Allows you to add new integration instances if multiple configurations are needed for a single module.
-* **"More Actions" Dropdown:** May provide additional options for managing integrations (e.g., refreshing integration status).
+#### Integration Feed Management
 
-## Purpose of Product-Specific Integrations
+This section displays a list of all existing automation feeds created for this product.
 
-Product-level integrations are useful for:
+* **Status:** A simple toggle switch allows you to instantly turn any integration feed **On** or **Off** without deleting the setup.
+* **Integration:** You will see the name and icon of the connected module (e.g., **FluentCRM** or **FluentCommunity**).
+* **Triggers:** The action in FluentCart that makes this rule run is clearly labeled (e.g., **Order Paid Done** means the automation runs instantly upon successful payment).
 
-* **Targeted Marketing:** Automatically enrolling customers who buy a specific product into a relevant email sequence in your CRM.
-* **Course Enrollment:** Granting access to a specific online course upon the purchase of an associated digital product.
-* **Automated Workflows:** Triggering custom actions in other tools based on a product's purchase or status.
+#### Creating a New Integration Feed
+
+Click the **Add Integration** button to set up a new automation rule. You will be given options to connect to installed Fluent products:
+
+* **FluentCRM Integration:** This allows you to automatically manage the customer who buys this product in FluentCRM. You can configure actions such as **Adding a user to a specific list**, **Removing a user from a list**, **Applying a Tag**, or **Removing a Tag**, based on the purchase.
+* **FluentCommunity Integration:** This allows you to automatically manage user access to your community or courses. You can set actions such as **Adding a user to a specific Space** or **Course**, or **Removing a user from a Space** or **Course**.
+
+### Purpose of Product-Specific Integrations
+
+Creating integration feeds at the product level is highly recommended for smart, automated workflows:
+
+* **Targeted Marketing:** Automatically tag a customer as "Purchased X Product" in **FluentCRM** and enroll them into a relevant email welcome sequence.
+* **Access Management:** Instantly grant or revoke access to private content or a member area in **FluentCommunity** upon successful payment for this product.
+* **Automated Workflows:** Ensure that crucial marketing and fulfillment tasks run immediately without any manual effort.
 
