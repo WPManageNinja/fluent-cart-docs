@@ -12,8 +12,8 @@ The top of the dashboard gives you key controls to choose what data appears in t
 
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
 * **Compare To:** This dropdown allows you to choose a past time period to compare with your current data.
-* **Advanced Filters:** Click the filter icon to break down the report by options like Order Type or specific Products. This helps you focus on detailed product data for a closer view.
-* **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
+* **Advanced Filters:** Click the filter icon to break down the report by options like **Order Type** or specific **Products**. This helps you focus on detailed product data for a closer view.
+* **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
 
 ### Key Product Metrics
 
