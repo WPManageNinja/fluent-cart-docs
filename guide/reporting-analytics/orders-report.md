@@ -4,53 +4,26 @@ The **Orders Report** in FluentCart provides a deep dive into your store's order
 
 #### Accessing the Orders Report
 
-To find your Orders Report:
+Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)** in the side menu, and click on the **Orders** tab.
 
-1. From your WordPress dashboard, navigate to **FluentCart Pro > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)**.
-2. Click on the **Orders** tab to access the Orders Report.
+#### Filtering Your Report Data
 
-#### Filtering the Report
+Want to look at a specific time frame? Or maybe you want to see how this month's orders compare to last month's? FluentCart makes this easy with simple filtering tools.
 
-The **Orders Report** includes the same simple filters you’ll find in other reports. These filters allow you narrow results to a specific time frame, compare different periods, or focus on particular order types. So, you can quickly get the exact data you need.
+### Report Filters and Controls
 
-### Filtering by Date
+The top of the dashboard gives you key controls to choose what data appears in the report.
 
-You'll see a **Date** filter left at the top. This allows you to check your store’s performance for a specific period. You can pick from preset options or select a custom date range that you want to see.
-
-### Comparing Time Periods
-
-Next to the date filter, you'll find the **Compare to** filter. This is a powerful tool to see your growth. For example, you can compare this week's sales order to last week's to see if you're improving.
-
-You can choose to compare your selected date range with:
-
-* **Previous Period:** Compares to the immediately preceding period of the same length.
-* **Previous Month:** Compares to the entire previous calendar month.
-* **Previous Quarter:** Compares to the previous three-month quarter.
-* **Previous Year:** Compares to the same date range in the previous year.
-* **Custom:** Lets you select a custom date range to compare against.
-
-### Using Advanced Filters
-
-For a more detailed view, click the **Filter** icon in the top-right corner. This will open up advanced options to narrow down your report.
-
-#### Filter by Order Type
-
-This allows you to see data for specific kinds of orders. It's great for separating your one-time sales from your recurring revenue. You can filter by:
-
-* **All:** Shows every type of order.
-* **One time:** Shows only standard, one-time purchases.
-* **Subscription:** Shows only new subscription orders.
-* **Renewal:** Shows only recurring payments from existing subscriptions.
-
-#### Filter by Products
-
-If you want to see how many orders included a specific item, you can use this filter. Just start typing a product's name and select it from the list. You can select multiple products to see their combined order data.
+* **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
+* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data.
+* **Advanced Filters:** Click the filter icon to break down the report by options like **Order Type** or specific **Products**. This helps you focus on detailed order data for a closer view.
+* **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
    ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/order-report-filter.png)
 
-### Key Performance Indicators (KPIs)
+### Key Order Metrics
 
-The top of the report features a set of KPIs that give you an at-a-glance summary of your order performance for the selected period.
+At the top of the Orders Report, you will find summary cards highlighting your key order metrics for the selected period.
 
 * **Gross Sales:** The total revenue from all orders before any deductions.
 * **Refund:** The total amount of money refunded to customers.
@@ -60,6 +33,8 @@ The top of the report features a set of KPIs that give you an at-a-glance summar
 * **Avg. Order Gross:** The average amount of money a customer spends per order.
 * **Avg. Order Net:** The average value of an order after refunds are considered.
 * **Avg. Order Items:** The average number of items customers buy in a single order.
+
+Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against.
 
 #### Order Report Chart
 
