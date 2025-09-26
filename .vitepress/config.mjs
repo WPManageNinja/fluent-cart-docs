@@ -203,7 +203,7 @@ export default defineConfig({
                 { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
                 { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
                 { text: 'Configuring Product Pricing', link: '/guide/product-types-creation/configuring-product-pricing' },
-                { text: 'Managing Product Integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
+                { text: 'Managing Product integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
                 { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
                 { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' }
               ]
@@ -308,9 +308,9 @@ export default defineConfig({
           text: 'Integrations',
           collapsed: true,
           items: [
-            { text: 'FluentCRM Integration', link: '/guide/Integrations/fluentcrm-integration' },
-            { text: 'FluentCommunity Integration', link: '/guide/Integrations/fluentcommunity-integration' },
-            { text: 'Amazon S3 Integration', link: '/guide/Integrations/amazon-s3-integration' }
+            { text: 'FluentCRM Integration', link: '/guide/integrations/fluentcrm-integration' },
+            { text: 'FluentCommunity Integration', link: '/guide/integrations/fluentcommunity-integration' },
+            { text: 'Amazon S3 Integration', link: '/guide/integrations/amazon-s3-integration' }
           ]
         },
         {

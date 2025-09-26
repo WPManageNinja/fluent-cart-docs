@@ -38,7 +38,7 @@ On the S3 Settings page, you will need to do the following:
 :::tip
 Read our comprehensive documentation to learn how you can integrate your FluentCart store with Amazon S3 for secure and scalable media file storage.
 
-[Read the full Integrating with Amazon S3 documentation](/guide/Integrations/amazon-s3-integration.md)
+[Read the full Integrating with Amazon S3 documentation](/guide/integrations/amazon-s3-integration.md)
 :::
 
 :::tip Digital Product Assets

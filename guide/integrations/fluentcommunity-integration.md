@@ -32,7 +32,7 @@ A global integration is perfect for broad actions that should apply to all your 
 1.  On the Global Integrations dashboard, click the **Add Integration** button at the top right.
 2.  Select **FluentCommunity Feed** from the dropdown menu. This will take you to the configuration screen for your new automation feed.
 
-![Global Integration FluentCommunity](/guide/public/images/Integrations/fluentcommunity/integrateing-fluentcommunity-1.webp)
+![Global Integration FluentCommunity](/guide/public/images/integrations/fluentcommunity/integrateing-fluentcommunity-1.webp)
 
 ### Part 2: Product-Specific Integration
 
@@ -48,7 +48,7 @@ A product-specific integration is ideal for highly targeted automations, like gr
 1.  Inside the product editor, you will see a series of tabs at the top. Click on the **Integrations** tab.
 2.  On the Product Integrations screen, click the **Add Integration** button and select **FluentCommunity Feed**. This will open the feed configuration screen.
 
-![Product Specific Integration FluentCommunity](/guide/public/images/Integrations/fluentcommunity/integrateing-fluentcommunity-2.webp)
+![Product Specific Integration FluentCommunity](/guide/public/images/integrations/fluentcommunity/integrateing-fluentcommunity-2.webp)
 
 ### Part 3: Configuring the Integration Feed
 
@@ -65,7 +65,7 @@ Whether you are creating a global or a product-specific feed, the configuration 
 * **Run on Selected Variations Only (Product-Specific Only):** This powerful option appears only on product-specific integrations. It allows you to run the automation only when a customer purchases a specific variation of the product (e.g., a "Lifetime Access" tier). Leave this empty to have the feed run for all variations of this product.
 * **Enable this Integration:** Ensure the toggle at the top right is switched on to make the automation active. If it is disabled, the feed will be saved but will not run.
 
-![Configure Integration Feed Fluentcommunity](/guide/public/images/Integrations/fluentcommunity/integrateing-fluentcommunity-3.webp)
+![Configure Integration Feed Fluentcommunity](/guide/public/images/integrations/fluentcommunity/integrateing-fluentcommunity-3.webp)
 
 Once everything is configured, click the **Create FluentCommunity Feed** button. Your automation is now live!
 

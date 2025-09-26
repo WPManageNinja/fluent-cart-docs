@@ -13,7 +13,7 @@ First, let's go to the right place in FluentCart.
 3.  Choose **Storage Settings**.
 4.  You will see a list of cloud storage options. Find **Amazon S3** and click the **Manage** button.
 
-![Amazon S3 Settings in FluentCart](/images/Integrations/S3/access-s3.png)
+![Amazon S3 Settings in FluentCart](/images/integrations/S3/access-s3.png)
 
 You’ll now see the fields we need to fill in to connect FluentCart to Amazon S3.
 
