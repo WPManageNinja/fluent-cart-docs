@@ -4,8 +4,7 @@ The **Store Settings** screen is where you configure the fundamental information
 
 ## Accessing General Settings
 
-1.  Go to your WordPress dashboard, then go to **FluentCart Pro > Settings** in the left side menu.
-2.  Normally, you'll see the **"Store Settings"** tab, which is where you find the General Settings.
+Go to your WordPress dashboard, then go to **FluentCart Pro** > **Settings** in the side menu, and click on the **Pages Setup** tab.
 
 ## Configuring Your Store Details
 

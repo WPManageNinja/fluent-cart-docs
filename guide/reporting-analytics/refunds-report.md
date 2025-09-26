@@ -4,7 +4,7 @@ The **Refunds Report** provides a focused analysis of all refund activity in you
 
 #### Accessing the Refunds Report
 
-Go to your WordPress dashboard, then go to **FluentCart** > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)** in the side menu, and click on the **Refunds** tab.
+Go to your WordPress dashboard, then go to **FluentCart** > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md) in the side menu, and click on the **Refunds** tab.
 
 ### Report Filters and Controls
 

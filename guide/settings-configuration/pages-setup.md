@@ -4,8 +4,7 @@ The **Pages Setup** screen in FluentCart lets you connect key store features to 
 
 ## Accessing Pages Setup
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings** in the left sidebar.
-2.  Click on the **"Pages Setup"** tab.
+Go to your WordPress dashboard, then go to **FluentCart Pro** > **Settings** in the side menu, and click the **Pages Setup** tab.
 
 ## Assigning Core Pages
 
