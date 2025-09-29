@@ -1,4 +1,4 @@
-# Tax & Duties
+# Tax & Duties Overview
 
 FluentCart’s **Tax & Duties** section is a powerful tool designed to help you manage your store’s taxes with ease and accuracy. Staying compliant with tax laws is essential for any business, and these settings give you the flexibility to handle everything from simple sales tax to complex international VAT rules.
 

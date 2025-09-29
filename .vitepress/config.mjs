@@ -279,7 +279,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: 'Tax & Duties',
+              text: 'Tax & Duties Overview',
               link: '/guide/tax-&-duties/tax-&-duties-overview.md',
               items: [
                 { text: 'Configuring Tax & Classes', link: '/guide/tax-&-duties/configuration-and-classes.md' },
