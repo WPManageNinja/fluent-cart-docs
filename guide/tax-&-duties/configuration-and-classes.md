@@ -30,6 +30,8 @@ This section is specifically for handling European Union VAT regulations for you
 * **Local Reverse Charge:** In some specific cases, reverse charge rules can apply even if the business customer is in your own country. Enabling this feature will ensure FluentCart handles these transactions correctly by removing the VAT and marking the order appropriately.
 * **Info:** The EU VAT settings are designed to automate the reverse-charge mechanism for B2B sales, helping you stay compliant with complex international tax laws.
 
+![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-1.png)
+
 ### Managing Tax Classes
 
 **Tax Classes** are the best way to manage different tax rates for different types of products. This is essential if you sell items that are not all taxed at the same rate (e.g., standard-rate electronics vs. zero-rated books). Tax Classes allow you to group these products to ensure the correct tax is applied every time.
@@ -42,6 +44,8 @@ FluentCart includes a few common classes to get you started:
 * **Reduced:** For items that have a lower tax rate.
 * **Zero:** For tax-exempt products.
 
+![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-2.png)
+
 #### Adding a New Tax Class
 
 You can create custom classes to better organize your products and handle complex tax rules.
@@ -52,6 +56,8 @@ You can create custom classes to better organize your products and handle comple
     * **Priority:** A number (0-10) that determines the order in which tax classes are applied. **Higher numbers have a higher priority** and will be applied first. This is useful for creating override rules.
     * **Product Category (Optional):** You can link this tax class directly to one or more product categories. Any product in the selected category will automatically use this tax class.
     * **Description:** An internal note for your reference.
+
+![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-3.png)
 
 #### Example Use Case
 
