@@ -49,7 +49,7 @@ At the top of the Products list, you'll find tabs that allow you to quickly filt
 
 ### 2. Using the Advanced Filter
 
-For more deatailed control, use the **Advanced Filter** option: 
+For more detailed control, use the **Advanced Filter** option: 
 
 1.  Click the **"Advanced Filter"** button located at the top right of the Products screen. 
 2.  The Advanced Filter section will expand, allowing you to define your filtering criteria, such as: 
