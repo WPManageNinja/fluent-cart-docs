@@ -26,6 +26,10 @@ After adding a country, you can define the specific tax rates that apply to it.
 1.  From the main **Rates** screen, find the country you wish to configure and click the **View** button or the number under the **Rates** column.
 2.  This will take you to the tax rate management page for that specific country.
 
+#### Tax ID
+
+At the top of this page, you can enter your business's official **Tax ID** number for this specific country or region. This ID will be used to identify your business on invoices and other legal documents, which is often a requirement for tax compliance. Simply enter your ID and click **Save**.
+
 #### Regional Settings
 
 This is where you define the primary tax rates for the selected country. You can add multiple rates to handle different tax classes or regional requirements.
