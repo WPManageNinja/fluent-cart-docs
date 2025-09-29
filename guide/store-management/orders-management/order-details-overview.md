@@ -70,7 +70,7 @@ Displays key details about the customer who placed the order.
 
 ### 6. Notes
 
-An internal field for administrators to add any private notes or comments relevant to the order.
+A private field where administrators can add notes or comments related to the order.
 
 ### 7. Activity Log
 
