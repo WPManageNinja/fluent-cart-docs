@@ -27,7 +27,7 @@ The Products list table provides key information for each product at a glance:
 From the Products list screen, you have several quick actions:
 
 * **Create Dummy Product:** A button to quickly populate your store with placeholder products for testing or setup. 
-* **Add Product:** Click this button to [create a new product listing](/guide/product-types-creation/creating-physical-products) from scratch. 
+* **Add Product:** Click this button to [create a new product](/guide/product-types-creation/creating-physical-products) listing from scratch. 
 * **View Product:** A general link, likely to see a live preview of the product on your storefront. 
 
 ## Filtering Products
