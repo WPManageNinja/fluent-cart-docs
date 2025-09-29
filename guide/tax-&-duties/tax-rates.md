@@ -13,11 +13,13 @@ Once you have configured your main tax settings and created your tax classes, th
 Before you can add rates, you must specify which countries you will be collecting taxes in.
 
 1.  On the **Existing Tax Rates** screen, click the **Configure Countries** button.
-2.  A pop-up window will appear, listing all available countries grouped by continent.
+2.  A pop-up window will appear, listing all available countries grouped by continent. You can also select countries by clicking on the **+Add Country** button. 
 3.  Select the checkbox next to each country where you need to apply tax rates.
 4.  Click **Save**. The selected countries will now appear on the main Rates screen, ready for you to add specific tax rules.
 
 > **Info:** To save you time, FluentCart comes with pre-configured default tax rates for many countries. After you select a country, you will often find that the standard tax rates have already been set up for you. You can then edit these default rates as needed.
+
+![Add Country](/guide/public/images/tax/rates/tax-rates-1.png)
 
 ### Managing Tax Rates for a Country
 
@@ -41,6 +43,8 @@ To add a new rate, click the **+ Add New Rate** button and fill in the following
 * **Tax Class:** Assign this rate to one of the tax classes you created earlier (e.g., Standard, Reduced, Zero). This ensures the rate is only applied to the correct products.
 * **Compound:** This is an advanced option for applying multiple taxes sequentially. If you enable this, the tax will be calculated on top of the subtotal plus any other taxes that have a lower priority.
 * **Priority:** A number that determines the order in which multiple taxes are applied to a single order. Taxes with a lower priority number (e.g., 1) are applied before taxes with a higher number (e.g., 2).
+
+![Configure Rates](/guide/public/images/tax/rates/tax-rates-2.png)
 
 #### Understanding Compound Taxes: A Practical Example
 
@@ -82,6 +86,8 @@ In some regions, the tax rate for shipping costs may be different from the tax r
     * **Shipping Tax Rate (%):** The specific tax rate that applies only to the shipping cost.
     * **For Province:** Select the state or province where this override rule should apply.
     * **Tax Class:** Select the tax class this override should apply to. This is useful if your shipping tax also needs to follow rules for standard, reduced, or zero-rated items.
+
+    ![Add Tax Override](/guide/public/images/tax/rates/tax-rates-3.png)
 
 This override gives you granular control to ensure maximum flexibility and accuracy, even in regions with complex shipping tax laws.
 
