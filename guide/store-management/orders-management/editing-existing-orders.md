@@ -22,7 +22,7 @@ Once in edit mode, you can perform various modifications to the order:
 You can add new products to the existing order:
 
 1.  In the "Order Items" section, locate the **"Search products"** field and the **"Browse"** button.
-2.  Use the search field to find the product(s) you wish to add, or click "Browse" to view your product catalog.
+2.  Use the search field to find the product(s) you wish to add, or click "**Browse**" to view your product catalog.
 
     ![Screenshot of Add Product Search Field in Edit Mode](/images/store-management/editing-existing-orders/add-product-search-edit-mode.png)
 
@@ -50,12 +50,23 @@ You can apply or modify coupon codes for the order:
 2.  Enter the coupon code in the provided field.
 3.  Click **"Apply"**.
 
+### Add Discount
+
+To apply a discount, click the **Add Discount** button. A new modal will appear where you can:
+
+1. Choose the **Discount Type**, either **Amount** or **Percentage**.
+2. Enter the **Discount Value**.
+3. Add a short **Description** to note the reason for the discount (this helps you remember why it was given).
+4. Finally, click **Apply** to save the discount.
+
 ### 4. Adding Shipping Costs
 
 For physical products, you can manually add or adjust shipping costs:
 
 1.  Locate the **"Add Shipping"** option in the financial summary area.
 2.  Enter the desired shipping amount.
+
+ ![Screenshot of Add Items Modal](/images/store-management/editing-existing-orders/update-order.png)
 
 ## Saving Your Changes
 
