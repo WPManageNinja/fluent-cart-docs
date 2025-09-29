@@ -21,9 +21,21 @@ Once the feature is active, you can create and manage your offers.
 1.  Navigate to the main FluentCart Pro menu.
 2.  Hover over the **More** menu item in the top navigation bar.
 3.  Click on **Order Bump**. This will take you to the Order Bumps management screen.
-4.  Click the **Add New** button on the top right to create a new offer.
+4.  Click the **Add New** button on the top right to create a new offer. A pop-up window will appear where you need to define the initial details of your offer.
 
 ![Order Bump](/guide/public/images/store-management/order-bump/order-bump-2.png)
+
+
+5.  To start creating your new offer, you must first define its core identity:
+
+    * **Bump Name:** Enter the main title for your offer. This is the compelling headline that customers will see, so make it attractive (e.g., "Yes! Add the eBook for 50% Off").
+    * **Order Bump Product:** From the dropdown menu, select the product that you want to offer as the order bump.
+
+Click the **Create** button.
+
+![Order Bump pop-up](/guide/public/images/store-management/order-bump/order-bump-6.png)
+
+After clicking "Create," you will be taken to the main configuration screen to set up the rest of your order bump's rules and design.
 
 ### 3. Configuring the Order Bump Details
 
