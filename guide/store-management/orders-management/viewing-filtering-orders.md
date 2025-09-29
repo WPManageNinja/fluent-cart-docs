@@ -42,9 +42,9 @@ If you want to hide this summary to get more space, just click **More Actions** 
 
 ### Showing and Hiding Bulk Actions
 
-Sometimes you need to do the same thing to many orders at once, like changing their status to "Shipped". That's where bulk actions come in handy.
+Click the **More Actions** button and select **Show Bulk Actions**. A little checkbox will appear next to each order. You can then select multiple orders and apply an action to all of them at the same time.
 
-Click the **More Actions** button and select **Show Bulk Actions**. When you do this, a little checkbox will appear next to each order. You can then select multiple orders and apply an action to all of them at the same time.
+Sometimes you need to apply the same action to many orders at once, such as removing old records. That's where bulk actions come in handy: simply select multiple orders and click **Delete Selected** button to remove them all at once.
 
 If you don't need to perform bulk actions and want a cleaner look, simply click **More Actions** again and choose **Hide Bulk Actions**. This will remove the checkboxes from the list.
 
