@@ -28,7 +28,9 @@ This section is specifically for handling European Union VAT regulations for you
 
 * **Enable EU VAT Number:** When enabled, this adds a VAT number field to your checkout page for customers in the EU. B2B customers can enter their valid VAT ID to have the VAT removed from their order, a process known as a **"reverse charge."**
 * **Local Reverse Charge:** In some specific cases, reverse charge rules can apply even if the business customer is in your own country. Enabling this feature will ensure FluentCart handles these transactions correctly by removing the VAT and marking the order appropriately.
-* **Info:** The EU VAT settings are designed to automate the reverse-charge mechanism for B2B sales, helping you stay compliant with complex international tax laws.
+::: info
+The EU VAT settings are designed to automate the reverse-charge mechanism for B2B sales, helping you stay compliant with complex international tax laws.
+:::
 
 ![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-1.png)
 
