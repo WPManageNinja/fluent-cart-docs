@@ -14,7 +14,7 @@ Product-specific integration settings are found within the **Edit Product** scre
 
 ## Configuring Product Integrations
 
-This **Integrations** tab, found within the individual product settings, is where you create and manage powerful automation feeds specific to this product. The purpose of these feeds is to automatically run actions in other modules (like FluentCRM or FluentCommunity) the moment a customer buys this item.
+In the **Integrations** tab of a product’s settings, you can set up and manage automation feeds for that product. These feeds allow you to automatically run actions in other modules (like FluentCRM or FluentCommunity) whenever the product is purchased or triggered.
 
 #### Integration Feed Management
 
@@ -22,7 +22,7 @@ This section displays a list of all existing automation feeds created for this p
 
 * **Status:** A simple toggle switch allows you to instantly turn any integration feed **On** or **Off** without deleting the setup.
 * **Integration:** You will see the name and icon of the connected module (e.g., **FluentCRM** or **FluentCommunity**).
-* **Triggers:** The action in FluentCart that makes this rule run is clearly labeled (e.g., **Order Paid Done** means the automation runs instantly upon successful payment).
+* **Triggers:** Triggers are specific events in FluentCart that start an automation for this product. You can choose the exact point in the customer journey, like when an order is paid, refunded, shipped, or when a subscription changes status, to run your integration feed.
 
 #### Creating a New Integration Feed
 
