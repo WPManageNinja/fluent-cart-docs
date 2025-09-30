@@ -12,6 +12,8 @@ Orders in FluentCart naturally progress through various statuses, indicating the
 * **Canceled:** The order has been canceled by the administrator or customer.
 * **Refunded:** The order has been refunded.
 
+    ![Screenshot of Order Status](/images/store-management/changing-order-statuses/order-status.png)
+
 ## How to Change Order Status
 
 You can change an order's status and perform other related actions from the **[Order Details screen](/guide/store-management/orders-management/order-details-overview)**.
@@ -27,7 +29,7 @@ You can change an order's status and perform other related actions from the **[O
     * **Back to processing:** This action allows you to revert an order's status to "Processing." This is useful if an order was prematurely marked as "Completed" or "On Hold" and still requires further attention or [editing](/guide/store-management/orders-management/editing-existing-orders).
     * **Receipt:** This option typically allows you to view or re-send the customer's purchase receipt for the order.
 
-     ![Screenshot of More Actions Dropdown](/images/store-management/changing-order-statuses/order-more-actions-dropdown.png)
+    ![Screenshot of More Actions Dropdown](/images/store-management/changing-order-statuses/order-more-actions-dropdown.png)
 
 ### Using the Activity Log
 
