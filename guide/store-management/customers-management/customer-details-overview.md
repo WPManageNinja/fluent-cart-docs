@@ -6,10 +6,9 @@ Customers also have access to their own personalized dashboard where they can ma
 
 ## Accessing Customer Details
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Customers**.
-2.  On the **Customers** list, click on the **Customer Name** next to the customer you wish to inspect.
+From your WordPress dashboard, navigate to **FluentCart Pro > Customers**. On the **Customers** list, click on the **Customer Name** next to the customer you wish to inspect.
 
-    ![Screenshot of Customer Details Page](/images/store-management/customer-details/customer-details.png)
+   ![Screenshot of Customer Details Page](/images/store-management/customer-details/customer-details.png)
 
 ## Understanding the Customer Details Screen
 
@@ -51,4 +50,4 @@ For customers who have purchased digital products with licenses, this section di
 * **License Details:** Includes columns for License Key, Product name, Order ID, and Activations.
 * **Clickable License Keys:** Each license key is clickable, allowing you to navigate to the [License Details screen](/guide/product-types-creation/creating-digital-products-with-licenses#product-specific-license-settings) for that specific license.
 
-The Customer Details screen is an invaluable tool for understanding your customers' interactions with your store and providing personalized support.
+The Customer Details page is an invaluable tool for understanding your customers' interactions with your store and providing personalized support.
