@@ -28,7 +28,7 @@ Once the feature is active, you can create and manage your offers.
 
 5.  To start creating your new offer, you must first define its core identity:
 
-    * **Bump Name:** Enter the main title for your offer. This is the compelling headline that customers will see, so make it attractive (e.g., "Yes! Add the eBook for 50% Off").
+    * **Bump Name:** Enter the main title for your offer. This is the compelling headline that customers will see, so make it attractive.
     * **Order Bump Product:** From the dropdown menu, select the product that you want to offer as the order bump.
 
 Click the **Create** button.
