@@ -23,6 +23,8 @@ These settings control how additional information is presented on your individua
 
 * **Enable Zoom:** This feature lets customers get a closer look at your product images. When you check this **Enable Zoom** box, customers can hover their mouse over a product picture to see a magnified view. This is perfect for products with fine details, like clothing or electronics.
 
+* **Enable Zoom In Modal:** If you use a product quick-view or pop-up modal, enable this option to activate the same hover-to-zoom functionality within that modal view.
+
 ### 3. Variation Display
 
 These settings define how your product variations (e.g., different sizes, colors, or license tiers) are presented to customers. The goal is to make the selection process as clear and intuitive as possible.
