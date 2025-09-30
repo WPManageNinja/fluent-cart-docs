@@ -1,6 +1,6 @@
 # FluentCommunity Integrating
 
-Connecting FluentCart to FluentCommunity lets you automatically manage your customers' access to community spaces and courses. When a customer buys a product, you can instantly enroll them in a specific course or add them to an exclusive space.
+Connecting FluentCart with FluentCommunity lets you automatically manage your customers' access to community spaces and courses. When a customer buys a product, you can instantly enroll them in a specific course or add them to an exclusive space.
 
 This automation is perfect for online courses, membership sites, or any store looking to build a community. It saves you from manually adding new members and ensures access is granted or removed based on their purchases or subscriptions.
 
