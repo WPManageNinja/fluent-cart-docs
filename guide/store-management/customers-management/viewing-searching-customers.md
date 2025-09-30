@@ -25,7 +25,7 @@ Need to find a specific person? The search bar at the top of the page makes it f
 
 Simply type what you're looking for into the search bar. You can search by a customer's **ID**, **First Name**, **Last Name**, or **Email Address**. Hit **Enter**, and the list will instantly filter to show you the results.
 
-    ![Screenshot of Customer Search Bar](/images/store-management/viewing-searching-customers/customer-search.png) 
+   ![Screenshot of Customer Search Bar](/images/store-management/viewing-searching-customers/customer-search.png) 
 
 ## Browsing Through Pages
 
