@@ -4,8 +4,7 @@ FluentCart's **Advanced Filter** tool on the Customers screen allows you sort yo
 
 ## Accessing and Using the Advanced Filter
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Customers**.
-2.  On the **Customers** screen, enable the **"Advanced Filter"** by clicking the **"toggle"** button in the top right corner. The Advanced Filter section will expand, allowing you to define your filtering criteria.
+1.  From your WordPress dashboard, navigate to **FluentCart Pro > Customers**. On the **Customers** page, enable the **"Advanced Filter"** by clicking the **"toggle"** button in the top right corner. The Advanced Filter section will expand, allowing you to define your filtering criteria.
 
 ## Defining Filter Criteria
 
@@ -25,7 +24,8 @@ The Advanced Filter enables you to combine various properties to create precise 
 
     * **Customer LTV:** Filter customers by their Lifetime Value, which is the total amount of money they’ve spent in your store.
 
-* **Labels:** This new feature lets you filter customers by specific labels you've added to them. This is great for grouping customers for marketing or other tasks.
+* **Labels:** This option allows you to filter your customer list based on the labels you have assigned to them.
+    * **Label Name:** Select one or more labels to find all customers who have been tagged. This is a great way to view specific customer segments you have created.
 
 * **Adding Multiple Conditions:**
     * Click **"+ Add"** to add another rule for filtering. This typically functions as an "AND" condition, meaning all criteria must be met.
