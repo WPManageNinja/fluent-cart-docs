@@ -4,7 +4,7 @@ FluentCart's **Advanced Filter** tool on the Customers screen allows you sort yo
 
 ## Accessing and Using the Advanced Filter
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Customers**. On the **Customers** page, enable the **"Advanced Filter"** by clicking the **"toggle"** button in the top right corner. The Advanced Filter section will expand, allowing you to define your filtering criteria.
+From your WordPress dashboard, navigate to **FluentCart Pro > Customers**. On the **Customers** page, enable the **"Advanced Filter"** by clicking the **"toggle"** button in the top right corner. The Advanced Filter section will expand, allowing you to define your filtering criteria.
 
 ## Defining Filter Criteria
 
