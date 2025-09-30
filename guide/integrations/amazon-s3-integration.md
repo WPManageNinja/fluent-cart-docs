@@ -34,7 +34,7 @@ First, we need to create a "bucket," which is just what Amazon calls a storage c
 
 ![Navigating to the S3 service in AWS](/images/integrations/S3/aws-navigate-to-s3.png)
 
-3.  Before we make the bucket, let's choose a **Region**. This is the physical location of the data center where your files will be stored. It's a good idea to pick a region that is closest to most of your customers. You can change this at the top right of the AWS console.
+3.  Before we make the bucket, let's choose a **Region**. This is the physical location of the data center where your files will be stored. You should pick a region that is most closest to you. You can change this at the top right of the AWS console.
 
 ![Choosing a region in the AWS console](/images/integrations/S3/aws-select-region.png)
 

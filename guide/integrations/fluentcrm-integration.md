@@ -49,13 +49,13 @@ This screen allows you to define exactly what happens in FluentCRM when any orde
 * **Remove from selected Tags/Lists on Refund or Subscription Access Expiration:** This is a handy automation. If you check this box, FluentCart will automatically remove the customer from the lists and tags you selected if their order is refunded or their subscription ends.
 * **Enable This Integration:** Ensure the toggle at the top right is switched on to make the automation active. If it is disabled, the integration will be saved but will not run.
 
-	![Screenshot of Fluentcrm Integration Feed Page](/images/integrations/fluentcrm/fluentcrm-integration-feed.png)
+![Screenshot of Fluentcrm Integration Feed Page](/images/integrations/fluentcrm/fluentcrm-integration-feed.png)
 
 Once configured, click the **Create FluentCRM Feed** button. This global automation is now live and will run for every order in your store.
 
 Once everything is set up, you can manage the integration by clicking the **Edit** icon to make changes or the **Delete** icon to remove it.
 
-	![Screenshot of Fluentcrm Integration Feed Page](/images/Integrations/fluentcrm/fluentcrm-integration-edit-or-delete.png)
+![Screenshot of Fluentcrm Integration Feed Page](/images/integrations/fluentcrm/fluentcrm-integration-edit-or-delete.png)
 
 ### Combining Global and Product Integrations
 
