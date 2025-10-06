@@ -13,12 +13,11 @@ You can select the type that best suits your promotional needs.
 
 ## Steps to Add a New Coupon
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Coupons** in the left sidebar.
-2.  On the **Coupons** screen, click the **"Add Coupon"** button at the top right.
+In your WordPress dashboard, go to **FluentCart Pro** > **Coupons** in the left sidebar. On the **Coupons** page, click the **Add Coupon** button in the top-right corner.
 
-    ![Screenshot of Add Coupon Button](/images/marketing-sales-tools/add-coupon-button.png) 
+   ![Screenshot of Add Coupon Button](/images/marketing-sales-tools/add-coupon-button.png) 
 
-3.  This will open the **"Coupons Add Coupon"** screen, where you will configure your new coupon.
+This will open the **"Coupons > Add Coupon"** screen, where you can set up and customize your new coupon.
 
 ### 1. Basic Information
 
@@ -28,53 +27,54 @@ You can select the type that best suits your promotional needs.
 
 ### 2. Discount Value (Fixed Type)
 
-* **Type:** Select **"Fixed"** from the dropdown menu.
-* **Discount Amount\*:** Enter the specific monetary value of the discount.
-* **Min Purchase Amount:** (Optional) Enter a minimum subtotal amount that the customer's cart must meet for the coupon to be valid. 
+Here, you can decide what kind of discount you want to offer.
 
-    ![Screenshot of Add Coupon Screen (Fixed Type)](/images/marketing-sales-tools/add-coupon-fixed-type.png)
+* **Type:** You can choose between two types:
 
-### 3. Discount Value (Percentage Type)
+  * **Fixed:** This takes a specific amount of money off the total, like $5 off.
 
-* **Type:** Select **"Percentage"** from the dropdown menu.
-* **Discount Percentage (%)\***: Enter the percentage value of the discount (e.g., "20" for 20% off).
-* **Min Purchase Amount:** (Optional) Enter a minimum subtotal amount that the customer's cart must meet for the coupon to be valid. Default is $0.
-* **Max Discount Amount:** (Optional) Enter a maximum monetary value for the discount. This is useful for percentage coupons to prevent excessively large discounts on very high-value orders. 
+  * **Percentage:** This takes a percentage off the total, like 10% off.
 
-    ![Screenshot of Add Coupon Screen (Fixed Type)](/images/marketing-sales-tools/add-coupon-percentage-type.png)
+* **Discount Amount:** Enter the value of your discount here. If you choose **Fixed**, enter a number like 5 for a $5 discount. If you choose **Percentage**, enter a number like 10 for a 10% discount. You can also leave it blank or set it to 0 for no maximum limit.
+  * **Max Discount Amount:** (Optional) Enter the maximum discount amount a customer can get. This is especially helpful for **percentage-based** coupons to make sure the discount doesn’t get too large on high-value orders.
 
-### 4. Inclusion/Exclusion Rules (Optional)
+### 3. Schedule
 
-You can define specific products or categories to which the coupon applies or is excluded from.
+On the right side of the screen, you’ll find the **Schedule** box. This is where you can make your coupon work only for a specific time.
 
-* **Include or exclude product categories:**
-    * Choose **"Include"** or **"Exclude"** using the radio buttons.
-    * Use the search field to select specific product categories.
-* **Include or Exclude Products:**
-    * Choose **"Include"** or **"Exclude"** using the radio buttons.
-    * Click **"Select"** to search for and add specific products.
+* **Start Date & Time:** Set when you want the coupon to start working.
+* **Set end date & time:** Check this box and pick a date and time for the coupon to automatically expire.
 
-### 5. Schedule
+   ![Screenshot of Add Coupon Screen (Discount Value)](/images/marketing-sales-tools/discount-value.png)
 
-Define when the coupon becomes active and when it expires.
+### 4. Usage Restrictions
 
-* **Start Date & Time:** Set the date and time when the coupon becomes valid.
-* **Set end date & time:** Check this box to enable an end date, then set the date and time when the coupon will expire.
+Sometimes, you only want a coupon to work for certain products or if a customer spends enough money. This is where you set those rules.
 
-### 6. Maximum Discount Uses
+* **Min Spend Amount:** The customer's cart must be at least this amount for the coupon to work.
+* **Max Spend Amount:** You can set a maximum cart value for the coupon. Leave it empty for no limit.
+* **Include/Exclude Categories:** You can make the coupon valid for only certain product categories (like "T-Shirts") or exclude certain categories.
+* **Include/Exclude Products:** Similar to categories, you can pick specific products that the coupon will or will not work for.
+
+    ![Screenshot of Usage Restrictions](/images/marketing-sales-tools/usage-restrictions.png)
+
+### 5. Maximum Discount Uses
 
 Control how many times the coupon can be used.
 
 * **Total Limit:** Enter the maximum number of times this coupon can be used across all customers. Enter "0" for unlimited usage.
 * **Per User Limit:** Enter the maximum number of times a single customer can use this coupon. Enter "0" for unlimited usage per user.
 
-### 7. Additional Information
+### 6. Additional Information
 
-* **Status:** Set the coupon's status to **"Active"** to make it usable or **"Inactive"** to disable it.
-* **Internal Notes:** (Optional) Add any private notes about the coupon for your own reference.
-* **Stackable:** Choose **"Yes"** or **"No"** to determine if this coupon can be combined with other active coupons.
+* **Status:** 
+  * **Active:** The coupon is live and can be used right away.
+  * **Disabled:** The coupon is turned off and cannot be used.
+  * **Expired:** The coupon has passed its end date.
+* **Internal Notes:** (Optional) You can leave a private note for yourself here, like "This coupon is for our newsletter subscribers."
+* **Stackable:** If you select **Yes**, customers can use this coupon with other coupons in the same purchase. If you select **No**, it can only be used by itself.
 
-    ![Screenshot of Add Coupon Screen (Fixed Type)](/images/marketing-sales-tools/schedule-discounts-Additional-info.png)
+    ![Screenshot of Add Coupon Screen (Fixed Type)](/images/marketing-sales-tools/additional-info.png)
 
 ## Saving Your Coupon
 
