@@ -205,7 +205,8 @@ export default defineConfig({
                 { text: 'Configuring Product Pricing', link: '/guide/product-types-creation/configuring-product-pricing' },
                 { text: 'Managing Product integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
                 { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
-                { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' }
+                { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' },
+                { text: 'Managing Subscriptions', link: '/guide/product-types-creation/managing-subscriptions' }
               ]
             },
             { text: 'Inventory Management', link: '/guide/product-types-creation/inventory-management' }
