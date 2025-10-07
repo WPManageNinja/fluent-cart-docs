@@ -356,7 +356,6 @@ export default defineConfig({
             { text: 'Payment Settings Overview', link: '/guide/settings-configuration/payment-settings' },
             { text: 'Invoice & Packing Settings', link: '/guide/settings-configuration/invoice-packing-settings' },
             { text: 'Global Integration', link: '/guide/settings-configuration/global-integrations' },
-            { text: 'Configuring Webhooks', link: '/guide/settings-configuration/configuring-webhooks' },
             {
               text: 'Email Configuration',
               link: '/guide/settings-configuration/email-configuration/', // Link to its index.md

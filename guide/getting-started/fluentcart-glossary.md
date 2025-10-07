@@ -75,9 +75,6 @@ This glossary defines common terms used throughout the FluentCart documentation 
 
 **H**
 
-* **Headless Commerce:**
-    An e-commerce architecture where the front-end storefront (the "head") is decoupled from the back-end commerce engine (FluentCart). This allows for highly custom websites, mobile apps, or other front-ends to be built using the **REST API**.
-
 * **Hybrid Product:**
   A single product listing that offers multiple types of the same item. For example, offering a book as a physical hardcover, a digital e-book, and a subscription to related content, all from one product page.
 
