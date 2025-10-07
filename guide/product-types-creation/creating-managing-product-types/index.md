@@ -2,14 +2,14 @@
 
 In FluentCart, Product Types are a flexible way to classify and group your products. This feature allows you to create your own unique system for organizing items in a way that best suits your business needs.
 
-Think of a "Type" as a custom label. For example, you could create types like "Plugins," to help you manage and filter your inventory more effectively.
+Think of a "**Type**" as a custom label. For example, you could create types like "Plugins," to help you manage and filter your inventory more effectively.
 
 Using Product Types helps you sort and handle different collections of products based on your own specific requirements.
 
 ## Accessing Product Types
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Product Types** in the left WordPress sidebar.
-2.  This will open the **Types** screen, displaying a table of all your existing product types.
+2.  This will open the **Types** page, displaying a table of all your existing product types.
 
     ![Screenshot of Product Types List Page](/images/product-types-creation/Creating-Managing-Types/Type-1.png)
 
