@@ -67,7 +67,7 @@ If you are using a modern, block-based WordPress theme, you can edit FluentCart'
 ## Integrating with Page Builders Bricks
 
 FluentCart's blocks are also fully compatible with popular page builder bricks. This allows you to seamlessly integrate FluentCart's e-commerce power with the advanced design capabilities of Bricks.
-You can use the FluentCart blocks and templates directly within the Bricks editor just as you would in the standard WordPress editor, giving you the best of both worlds. 
+You can use the FluentCart templates directly within the Bricks editor just as you would in the standard WordPress editor, giving you the best of both worlds. 
 
 For other builders that may not have direct block support, FluentCart also provides shortcodes as a flexible way to add product grids and buttons to any design.
 
