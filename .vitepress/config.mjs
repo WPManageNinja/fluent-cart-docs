@@ -378,6 +378,13 @@ export default defineConfig({
           ]
         },
         {
+          text: 'Miscellaneous',
+          collapsed: true,
+          items: [
+            { text: 'Using FluentCart Blocks & Templates', link: '/guide/using-fluentcart-blocks-&-templates' }
+          ]
+        },
+        {
           text: 'Troubleshooting & Support',
           collapsed: true,
           items: [
