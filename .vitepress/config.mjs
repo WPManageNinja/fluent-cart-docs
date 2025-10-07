@@ -351,7 +351,6 @@ export default defineConfig({
               items: [
                 { text: 'Pages Setup', link: '/guide/settings-configuration/pages-setup' },
                 { text: 'Product Page Settings', link: '/guide/settings-configuration/product-page' },
-                { text: 'Theme Setup', link: '/guide/settings-configuration/theme-setup' },
                 { text: 'Cart & Checkout Settings', link: '/guide/settings-configuration/cart-checkout-settings' },
               ]},
             { text: 'Payment Settings Overview', link: '/guide/settings-configuration/payment-settings' },

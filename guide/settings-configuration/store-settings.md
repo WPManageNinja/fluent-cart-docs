@@ -16,11 +16,18 @@ Go to your WordPress dashboard, then go to **FluentCart Pro** > **Settings** in 
 
 ### 2. Store Mode
 
-Select your store’s mode from the dropdown. There are two options: **Test** and **Live**. Use "Test Mode" while setting up your store. Switch to "Live Mode" when you're ready to start accepting real orders.
+Select your store's current operating mode. This is a critical setting that controls whether your store can process real payments.
 
-### 2. Store Address
+* **Live:** This is the standard mode for an active store. In **Live** mode, all transactions are real, and your payment gateways will process actual payments from customers.
+* **Test:** This mode is designed for development and setup purposes. When **Test** mode is active, you can place test orders using dummy payment details without any real money being charged.
 
-Provide your physical business address details. This information can be used for shipping calculations, tax purposes, and displayed in various store documents.
+::: info
+This setting is directly linked to your payment gateways. When you set the store to **Live Mode**, your payment methods will also switch to their live settings. When you select **Test Mode**, your payment gateways will automatically use their test or "sandbox" credentials.
+:::
+
+### 3. Store Address
+
+Provide your physical business address details. This information can be used for PayPal, shipping calculations, tax purposes, and displayed in various store documents.
 
 * **Country:** Select your store's country from the dropdown menu. This is used as the default country for shipping and tax calculations.
 * **District:** Enter the district, state, province, or region where your business is located.
@@ -31,7 +38,7 @@ Provide your physical business address details. This information can be used for
 
     ![Screenshot of Store Settings - Store Setup Tab](/images/settings-configuration/store-setting/store-settings-setup.png)
 
-### 3. Currency
+### 4. Currency
 
 Configure the currency settings for your store's transactions.
 
@@ -41,7 +48,7 @@ Configure the currency settings for your store's transactions.
 
     ![Screenshot of Store Settings - Store Setup Tab](/images/settings-configuration/store-setting/store-currency-setup.png)
 
-### 4. Payment View
+### 5. Payment View
 
 The Payment View setting allows you choose how payment methods look to your customers on the checkout page. You can pick from a dropdown options:
 

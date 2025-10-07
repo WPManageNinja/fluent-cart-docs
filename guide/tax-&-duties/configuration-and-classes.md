@@ -18,9 +18,10 @@ This section contains the fundamental rules that determine how taxes are calcula
     * **Excluded:** Choose this if your product prices are **tax-exclusive (net pricing)**. FluentCart will calculate and add the tax on top of the product price at checkout. This is common in regions like the US.
 * **Calculate Tax Based On:** Tax rates often depend on a customer's location. This setting determines which address FluentCart uses for its calculations.
     * **Options:** You can choose **Customer Shipping Address**, **Customer Billing Address**, or **Store Base Address**. For digital products, the billing address is often used, while for physical goods, the shipping address is typically required.
-* **Tax Rounding:** This setting controls how tax calculations are rounded, giving you the flexibility to remain compliant with different tax authorities.
-    * **For each item line:** Rounds the tax for each product individually before totaling them.
-    * **At subtotal level:** Calculates the tax on the order's subtotal and then rounds it once.
+* **Tax Rounding:**
+    This setting controls how FluentCart handles decimal points during tax calculations. Since tax calculations can often result in numbers with many decimal places, this option determines how that number is rounded to the final cent. For example, a calculated tax of $10.4990 would be automatically rounded up to $10.50.
+    * **For each item line:** This option calculates and rounds the tax for each product separately before adding them up to get the final tax total. This method is often required for strict accounting accuracy on a per-item basis.
+    * **At subtotal level:** This option calculates the tax on the entire order's subtotal and then rounds the final result just once. This often results in a final order total that looks cleaner and is easier for customers to understand.
 
 ### EU VAT Settings
 
