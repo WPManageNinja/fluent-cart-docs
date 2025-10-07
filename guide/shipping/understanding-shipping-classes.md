@@ -1,4 +1,4 @@
-# Understanding and Using Shipping Classes in FluentCart
+# Understanding and Using Shipping Classes
 
 The most common use for a shipping class is to adjust the shipping cost for certain types of items. For example, you can create a:
 

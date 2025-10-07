@@ -1,46 +1,54 @@
-# Setting Up Shipping Methods in FluentCart
+# Setting Up Shipping Methods
 
-Shipping methods define the options customers have for receiving their orders within a particular [shipping zone](/guide/shipping/configuring-shipping-zones.md). FluentCart offers various methods with flexible rate configurations.
+Shipping methods are the different delivery options you offer to customers within a specific [**shipping zone**](/guide/shipping/configuring-shipping-zones.md). FluentCart allows you to create flexible shipping options, from flat rates to free shipping, ensuring you can meet your customers' needs.
 
-## How to Add and Configure Shipping Methods
+This guide will show you how to add and configure shipping methods for your shipping zones.
 
-1.  **Select a Shipping Zone**:
-    * Go to **FluentCart** > **Settings** > **Shipping** > **Shipping Zones**.
-    * Click on the name of the shipping zone for which you want to add or manage methods.
-    * Within the zone details, you will see a section for "Shipping Methods."
+### How to Add a Shipping Method
+
+Before you can add a method, you must have already created a shipping zone.
+
+1.  From your WordPress dashboard, navigate to **FluentCart Pro** > **Settings** > **Shipping Zones**.
+2.  Click on the **Shipping Zones** sub-menu.
+3.  Find the shipping zone you want to add a method to and click on its name to edit it.
+4.  Inside the zone's settings, scroll down to the **Shipping Methods** section and click the **Add Shipping Method** button. You can also manage your existing shipping methods from this screen. To update a method's settings, click the Edit button located on the same row as its title.
+5.  This will open a pop-up window where you can configure the details of your new shipping method.
+
+![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-1.png)
+
+### Configuring the Shipping Method
+
+This is where you define how your shipping option will work.
+
+* **Enable Shipping Method:** This toggle at the top of the pop-up acts as the master switch for this specific method. If it's disabled, the method will be saved but won't appear as an option for customers at checkout.
+* **Method Title:** Enter a clear and user-friendly name for this shipping option (e.g., "Standard Shipping," "Express Delivery," "Local Pickup"). This is the name your customers will see at checkout.
+* **State:** (Optional) If this shipping method should only be available for specific states or provinces within the shipping zone's country, you can select them here. Leave it blank to have the method apply to the entire country.
+* **Method Type:** Choose the type of shipping method you want to offer:
+    * **Flat Rate:** This is a fixed-cost shipping option. Use this to set a single rate for delivery.
+    * **Free Shipping:** As the name suggests, this option is free for the customer. It's an excellent incentive to encourage sales.
+    * **Local Pickup:** This allows customers to pick up their order directly from your physical store or a designated location, bypassing shipping costs entirely.
+* **Amount:** If you selected "Flat Rate," enter the cost for this shipping method here (e.g., enter **10** for $10.00).
+
+* **Configure Rate**
+
+This setting determines how the "Flat Rate" cost is calculated if a customer has multiple items in their cart.
+
+* **Per Order:** Applies a single, fixed charge for the entire order, no matter how many items are purchased. This is the most common setup.
+* **Per Item:** The shipping cost is multiplied by the number of items in the cart. For example, if the cost is $2 and a customer buys 3 items, the total shipping cost will be $6.
+* **Percentage:** The shipping cost is calculated as a percentage of the total order price. For example, a 10% rate on a $50 order would result in a $5 shipping fee.
+
+* **Class Aggregation**
+
+This advanced setting is for when a customer's cart contains products from different shipping classes (e.g., a small item and a bulky, oversized item). It tells FluentCart how to combine the shipping costs.
+
+* **Combined Cost:** The shipping costs for each distinct shipping class in the cart are calculated and then added together to get the final total.
+* **Highest Cost:** Only the single highest shipping cost among all the shipping classes present in the cart is applied.
 
 
-2.  **Add a New Shipping Method**:
-    * Click the **"Add Shipping Method"** button within the chosen zone's settings.
-    * A form will pop up, ready for you to fill in the details..
+* **Description:** 
 
-        ![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-1.png)
+You can add a short description for the shipping method. Depending on your theme, this might be displayed to the customer at checkout to provide more context (e.g., "Delivered in 3-5 business days").
 
+ ![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-2.png)
 
-3.  **Configure Method Details**:
-
-    * **Method Name**: Enter a user-friendly name for this shipping option (e.g., "Standard Delivery").
-    * **Method Type**: Choose how you want to charge for this option:
-        * **Flat Rate**: A fixed cost applied to the order.
-        * **Free Shipping**: No charge for shipping. A great way to treat your customers!
-        * **Local Pickup**: Customers collect their order directly from a designated location.
-
-    * **Amount**: Enter the numerical value for the cost. The interpretation of this value depends on the "Rate Type" you selected (e.g., `$5.00` for Fixed Amount, or `$2.00` if Per Item means $2 per item).
-
-    * **Confugure Rate**: This determines how the base cost of this method is calculated:
-        * **Per Order**: A single, fixed charge for the entire order, regardless of items or price.
-        * **Per Item**: The shipping cost is multiplied by the number of items in the cart. If the cost is $2 and they buy 3 items, the shipping will be $6.
-        * **Per Price**: The shipping cost is a percentage of the total order price. For example, 10% of a $50 order would be $5 for shipping.
-
-    * **Class Aggregation**: This crucial setting applies only when your cart contains products from [different shipping classes](/guide/shipping/understanding-shipping-classes.md). It dictates how the individual shipping class costs are combined for this method.
-        * **Sum all class costs**: The shipping cost for each distinct shipping class in the cart is calculated and then all these individual costs are added together.
-        * **Take highest class cost**: Only the highest shipping cost among all the shipping classes present in the cart is applied.
-
-
-        ![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-2.png)
-
-
-4.  **Save the Shipping Method**:
-    * Click the **"Save"** button to save your new shipping method to the selected zone.
-
-You can add multiple shipping methods to each zone, offering your customers various shipping options. The order in which methods appear might affect customer choice, so consider ordering them logically.
+Once you have configured all the details, click the **Save** button. Your new shipping method is now active and will be offered to customers in the selected shipping zone.

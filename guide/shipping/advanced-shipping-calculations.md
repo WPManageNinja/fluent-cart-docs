@@ -1,4 +1,4 @@
-# Advanced Shipping Calculations in FluentCart
+# Advanced Shipping Calculations
 
 Understanding how FluentCart calculates shipping costs, especially when combining different shipping methods and shipping classes, is key to setting up accurate rates. This guide clarifies the "Class Aggregation" logic.
 
