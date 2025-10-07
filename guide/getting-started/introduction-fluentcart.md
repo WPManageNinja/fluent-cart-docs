@@ -8,7 +8,7 @@ This collection of documentation will guide you through all of FluentCart's powe
 
 * **Sell Any Product Type:** Create listings for [physical goods](/guide/product-types-creation/creating-physical-products.md), [digital downloads](/guide/product-types-creation/creating-digital-products.md), [licensed software](/guide/product-types-creation/creating-digital-products-with-licenses.md), and even hybrid products.
 * **Implement Flexible Pricing:** Configure simple one-time payments, recurring subscriptions, and complex product variations, learn more from [here](/guide/product-types-creation/configuring-product-pricing.md). 
-* **Streamline Store Operations:** Set up payment gateways, [shipping](/guide/shipping/), and automated [email notifications](/guide/settings-configuration/email-notifications/editing-email-templates).
+* **Streamline Store Operations:** Set up payment gateways, [shipping](/guide/shipping/), and automated [email notifications](/guide/settings-configuration/email-configuration/index.md).
 * **Customize Customer Communication:** Design branded [invoices & packing slips](/guide/settings-configuration/invoice-packing-settings), and [email receipts](/guide/settings-configuration/email-configuration/configuring-email-notification.md) to match your brand identity.
 * **Automate and Integrate:** Use Checkout Actions to connect with services like FluentCRM, and leverage the REST API for headless commerce or custom integrations.
 

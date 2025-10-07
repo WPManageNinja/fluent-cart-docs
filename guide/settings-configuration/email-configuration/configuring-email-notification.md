@@ -1,4 +1,4 @@
-### Configuring Email Notifications
+# Configuring Email Notifications
 
 The **Notifications** section in FluentCart is where you manage all the automated transactional emails that are sent to both your customers and store administrators. Keeping your customers informed about their order status is crucial for a professional e-commerce experience.
 

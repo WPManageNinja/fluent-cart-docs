@@ -73,7 +73,7 @@ This guide helps you start strong, but remember, making a full online store need
 
 * **Setup Payment Gateways:** Set up your preferred payment methods like Stripe, PayPal, or Cash on Delivery under **[Payment Settings](/guide/payments-checkout/connecting-payment-gateways/)**.
 * **Add Your Products:** Begin creating your actual [physical products](/guide/product-types-creation/creating-physical-products), [digital products](/guide/product-types-creation/creating-digital-products), or [licensed digital products](/guide/product-types-creation/creating-digital-products-with-licenses).
-* **Review Email Notifications:** Customize your [email templates](/guide/settings-configuration/email-notifications/editing-email-templates) to ensure customers receive branded and informative updates.
+* **Review Email Notifications:** Customize your [email templates](/guide/settings-configuration/email-configuration/index.md) to ensure customers receive branded and informative updates.
 * **Explore Reports:** Utilize the [Reporting & Analytics](/guide/reporting-analytics/) section to monitor your store's performance.
 * **Configure Integrations:** Connect FluentCart with other tools you use for CRM, marketing, or other business processes.
 

@@ -1,4 +1,4 @@
-### Mailing Settings
+# Mailing Settings
 
 The **Mailing Settings** section is the central area for managing the global sender identity and footer for all automated emails sent from your FluentCart store. Properly configuring these settings ensures brand consistency and improves email deliverability.
 
