@@ -113,6 +113,10 @@ This glossary defines common terms used throughout the FluentCart documentation 
 * **Order Status:**
     The current stage of an **Order** in the fulfillment process (e.g., Pending, Completed, Refunded). Statuses can be updated manually or automatically by payment events.
 
+* **Order Bump**
+    An Order Bump is a last-minute offer presented to customers directly on the checkout page, just before they complete their purchase. It's designed to increase the average order value by allowing customers to add a complementary or discounted product to their order with a single click.
+
+
 **P**
 
 * **Payment Gateway:**
@@ -150,9 +154,6 @@ This glossary defines common terms used throughout the FluentCart documentation 
 * **Renewals:**
     The process by which a customer extends their subscription or license for another term, either manually or through an automatic recurring payment.
 
-* **REST API (Representational State Transfer Application Programming Interface):**
-    An interface that allows developers to interact with your store's data (like products, orders, and customers) programmatically. It is the core technology that enables **Headless Commerce** and custom integrations.
-
 * **Roles & Permissions:**
     Settings within WordPress that control which user roles (e.g., Administrator, Shop Manager) have access to view or manage specific FluentCart features and data.
 
@@ -181,3 +182,8 @@ This glossary defines common terms used throughout the FluentCart documentation 
 
 * **SKU (Stock Keeping Unit):**
     A unique alphanumeric code assigned to a product or a specific **Variation** to track inventory.
+
+**T**
+
+* **Tax**
+    A tax is a charge imposed by a government on the sale of goods and services. In FluentCart, this refers to the sales tax, VAT (Value Added Tax), or GST (Goods and Services Tax) that you are required to collect from customers. You can manage these charges through **Tax Classes** (for grouping products with similar tax rules) and **Tax Rates** (for defining the specific tax percentages for different regions).
