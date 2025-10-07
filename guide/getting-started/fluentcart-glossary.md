@@ -157,6 +157,9 @@ This glossary defines common terms used throughout the FluentCart documentation 
 * **Roles & Permissions:**
     Settings within WordPress that control which user roles (e.g., Administrator, Shop Manager) have access to view or manage specific FluentCart features and data.
 
+* **REST API (Representational State Transfer Application Programming Interface):**
+    An interface that allows developers to interact with your store's data (like products, orders, and customers) programmatically. It is the core technology that enables **Headless Commerce** and custom integrations.
+
 **S**
 
 * **Shipping Address:**
