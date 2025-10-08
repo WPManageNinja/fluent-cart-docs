@@ -84,7 +84,6 @@ You will see the following fields:
 * **Price:** (Required) The main selling price for the product.
 * **Compare at price:** (Optional) An original or higher price that will be shown with a strikethrough to indicate a sale.
 * **Manage profit/cost:** (Optional) Toggle this on to enter the cost of the item. FluentCart will use this to calculate your profit and margin for internal tracking.
-* **Direct Checkout:** A unique URL that takes a customer directly to the checkout page with a specific product variation already added to their cart.
 
 ![Screenshot of Simple Price](/images/product-types-creation/Creating-Physical-Products/simple-price.gif)
 
