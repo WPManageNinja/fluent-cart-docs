@@ -35,7 +35,7 @@ Click the **Add Integration** button to set up a new automation rule. You will b
 
 Creating integration feeds at the product level is highly recommended for smart, automated workflows:
 
-* **Targeted Marketing:** Automatically tag a customer as "Purchased X Product" in **FluentCRM** and enroll them into a relevant email welcome sequence.
+* **Targeted Marketing:** Automatically add customers to specific lists and apply tags in FluentCRM based on the product they buy. This allows you to segment your audience and send highly relevant follow-up emails and offers.
 * **Access Management:** Instantly grant or revoke access to private content or a member area in **FluentCommunity** upon successful payment for this product.
 * **Automated Workflows:** Ensure that crucial marketing and fulfillment tasks run immediately without any manual effort.
 
