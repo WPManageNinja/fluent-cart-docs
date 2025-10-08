@@ -288,7 +288,16 @@ export default defineConfig({
                 { text: 'Setting Up Tax Rates', link: '/guide/tax-&-duties/tax-rates.md' }
 
               ]
-            }
+            },
+            {
+              text: 'European Union (EU) VAT',
+              link: '/guide/tax-&-duties/european-union-vat.md', 
+              items: [
+                { text: 'European Union VAT with the OSS Method', link: '/guide/tax-&-duties/european-vat-with-oss.md' },
+                { text: 'European Union VAT with a Home Country Registration', link: '/guide/tax-&-duties/european-vat-home-country.md' },
+                { text: 'European Union VAT with Specific Country Rates', link: '/guide/tax-&-duties/european-vat-specific-country.md' },
+              ]
+            },
           ]
         },
         {
