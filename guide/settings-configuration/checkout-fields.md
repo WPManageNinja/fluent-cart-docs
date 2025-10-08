@@ -57,4 +57,3 @@ Always understand the two options available for most fields:
 
 * **Toggle Switch**: Use this to make a field visible or **hidden** on your checkout page.
 * **Required Checkbox**: If a field is toggled on, checking this box forces the customer to fill it out before completing their purchase. If unchecked, the field is **optional**.
-```
