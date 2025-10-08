@@ -65,8 +65,14 @@ This section of the dashboard provides a simple, at-a-glance overview of your st
 
 ### 3. Sales Growth Chart
 
-A visual representation shows how your sales have changed, so you can see trends and track store's growth.
-* The chart generally displays metrics like Total Order Amount, Paid Order Amount, and Order Count over a selected period.
+This chart provides a clear, visual representation of your store's performance over time, helping you to spot trends, track growth, and understand your sales patterns.
+
+By default, the chart displays two key metrics:
+
+* **Revenue:** The total monetary value of sales for each day.
+* **Orders:** The total number of orders received each day.
+
+You can hover your mouse over any point on the chart to see a detailed breakdown of the exact Revenue and Order count for that specific day. This makes it easy to analyze your performance and see how your sales are progressing.
 
 ### 5. Recent Activities
 
