@@ -12,11 +12,11 @@ FluentCart provides a straightforward way to process refunds for your orders, wh
 3.  A **"Refund Payment"** modal window will appear.
 
 4.  Configure the refund details:
-    * **Refund with transaction\:** Use the dropdown to select the specific payment transaction you wish to refund. This is crucial if an order had multiple payments or partial payments.
+    * **Refund with transaction:** Use the dropdown to select the specific payment transaction you wish to refund. This is crucial if an order had multiple payments or partial payments.
     * **Select Item/s:** This is a crucial step for keeping your records straight. Click this dropdown to choose the specific products the customer is returning. This helps keep your sales reports and inventory accurate, especially for partial returns. 
-    * **Refund amount\:** Enter the amount you wish to refunds.
+    * **Refund amount:** Enter the amount you wish to refunds.
         * FluentCart displays the **"Max refund amount for this transaction"**, ensuring you don't refund more than was paid in that specific transaction. This allows for **partial refunds**. You can manually adjust the amount if needed.
-    * **I want to Mange Stock:** Check this option to automatically update the stock quantity for this product after each sale or return. 
+    * **Restock Quantity:** If a customer purchased a simple or variable product (such as a shirt), you’ll see a Restock Quantity section. This option allows you to restore product stock directly while processing a refund. You can specify how many units of each product should be added back to your store’s inventory from the same screen.
     * **Reason of refund:** Add a short Description to note the reason for the refund (this helps you remember why this refund).
     * **Subscription:** If the order includes a subscription, you will see a checkbox for **"Cancel Subscription (if any)"**.
         * Checking this box will not only process the refund but also automatically cancel the associated subscription.
