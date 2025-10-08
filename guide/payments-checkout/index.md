@@ -1,6 +1,6 @@
- # Payments & Checkout
+ # Configuring Payments Overview
 
-The **Payments & Checkout** section in FluentCart is fundamental to your online store's operation. This is where you configure how your customers pay for their purchases and how the checkout experience is managed. FluentCart offers robust options for integrating popular payment gateways and customizing various aspects of the checkout process.
+The **Payments** section in FluentCart is fundamental to your online store's operation. This is where you configure how your customers pay for their purchases and how the checkout experience is managed. FluentCart offers robust options for integrating popular payment gateways and customizing various aspects of the checkout process.
 
 ### Available Payment Gateways
 

@@ -247,10 +247,9 @@ export default defineConfig({
           text: 'Payments & Checkout',
           collapsed: true,
           items: [
-            { text: 'Payments & Checkout Overview', link: '/guide/payments-checkout/' },
             {
-              text: 'Connecting Payment Gateways',
-              link: '/guide/payments-checkout/connecting-payment-gateways/', // Link to its index.md
+              text: 'Configuring Payments Overview',
+              link: '/guide/payments-checkout/index.md', // Link to its index.md
               items: [
                 { text: 'Stripe Settings', link: '/guide/payments-checkout/connecting-payment-gateways/stripe-settings' },
                 { text: 'PayPal Settings', link: '/guide/payments-checkout/connecting-payment-gateways/paypal-settings' },
