@@ -196,9 +196,6 @@ export default defineConfig({
               text: 'Product Overview', // This becomes the parent for the dropdown
               link: '/guide/product-types-creation/', // Link to the main overview page
               items: [
-                { text: 'Creating & Managing Product Categories', link: '/guide/product-types-creation/creating-managing-product-categories/'},
-                { text: 'Creating & Managing Product Types',link: '/guide/product-types-creation/creating-managing-product-types/'},
-                { text: 'Creating & Managing Product Brands',link: '/guide/product-types-creation/creating-managing-product-brand/'},
                 { text: 'Creating Physical Products', link: '/guide/product-types-creation/creating-physical-products' },
                 { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
                 { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
@@ -206,7 +203,10 @@ export default defineConfig({
                 { text: 'Managing Product integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
                 { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
                 { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' },
-                { text: 'Managing Subscriptions', link: '/guide/product-types-creation/managing-subscriptions' }
+                { text: 'Managing Subscriptions', link: '/guide/product-types-creation/managing-subscriptions' },
+                { text: 'Creating & Managing Product Categories', link: '/guide/product-types-creation/creating-managing-product-categories/'},
+                { text: 'Creating & Managing Product Types',link: '/guide/product-types-creation/creating-managing-product-types/'},
+                { text: 'Creating & Managing Product Brands',link: '/guide/product-types-creation/creating-managing-product-brand/'}
               ]
             },
             { text: 'Inventory Management', link: '/guide/product-types-creation/inventory-management' }
