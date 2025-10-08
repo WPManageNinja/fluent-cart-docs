@@ -1,52 +1,45 @@
 # Subscriptions
 
-The **Subscriptions** section allows you to view and manage all your recurring product subscriptions. This is where you can see the status of your active and canceled plans, renewal dates, and payment methods.
+The **Subscription Plans** tab in your account dashboard is your central hub for viewing and managing all of your active and past recurring subscriptions. This is where you can track renewal dates, update your payment information, and access the complete history of your subscription payments.
 
-## Viewing All Subscriptions
+### Viewing All Your Subscriptions
 
-The main subscriptions page displays a list of all your subscriptions, including:
+The main Subscription Plans page displays a clear, organized list of all your subscriptions.
 
-* **Product Name**: The name of the subscribed product (e.g., "Sticky Note").
-* **Payment Method**: Often masked for security (e.g., "**** 4242").
-* **Status**: The current status of the subscription.
-* **Renewal Date**: When the subscription is set to auto-renew (e.g., "Auto renews on May 23, 2026").
-* **Billing Cycle**: The recurring cost and frequency (e.g., "$89.00 per year, until cancel.").
+For each subscription, you can quickly see:
 
-You can navigate through pages if you have multiple subscriptions.
+* **Item:** The name of the product and its specific plan.
+* **Status:** The current status of the subscription (e.g., Active) and its next renewal date.
+* **Plan:** The recurring cost and billing frequency (e.g., "$79.00 per year, until cancel.").
+* **Payment Method:** The saved payment method used for automatic renewals (e.g., the last four digits of a credit card).
 
 ![Screenshot of Subscription](/images/customer-dashboard/subscriptions/subscriptions-1.webp)
 
 
-## Managing Individual Subscription Details
+### Managing an Individual Subscription
 
-Clicking on a specific subscription will take you to its detailed management page. Here you can find:
+To see the complete details for a specific plan, simply click on it in the list. This will take you to its detailed overview page.
 
-### Subscription Details
-* **Product**: The specific product name (e.g., "Sticky Note"").
-* **Active Plan**: The plan name (e.g., "50 Sites Yearly License").
-* **Subscription**: The recurring billing amount and frequency.
-* **Status**: The current status (e.g., "active") and the auto-renewal date (e.g., "Auto renews on May 23, 2026").
-* **Payment method**: The masked payment method used for this subscription.
+This screen gives you a comprehensive look at every aspect of your subscription and provides several key actions.
 
-### Transaction Details 
+#### Subscription Plan Details
 
-A table showing individual transactions related to this order, including:
+This section provides a summary of the core details of your subscription.
 
-* **ID**: Transaction ID.
-* **Amount**: The amount of the transaction.
-* **Status**: The status of the transaction.
-* **Paid By**: The payment method used, often masked for security.
+* **Product and Plan Name:** The name of the product and the specific plan you are subscribed to.
+* **Billing Terms:** The recurring cost and billing frequency.
+* **Next Charge:** The date your next automatic renewal payment is scheduled.
+* **Payment Method:** The current payment method on file for renewals.
 
-### License (if applicable)
-If your subscription is tied to a software license, this section will provide details:
-* **License Key**: The unique license key (e.g., `SNW-............ 1bc1`).
-* **License utilized on**: Shows how many sites or installations are currently using this license out of the total limit (e.g., "0 out of 70 Limit").
+#### Key Actions
 
-### Actions
-* **Upgrade**: Option to upgrade your current subscription plan.
-* **Cancel Auto-Renew**: Option to stop automatic renewals for your subscription.
-* **Update**: (Context-dependent, might allow updating payment method or other details).
-* **Manage License**: Direct link to manage the associated license.
-* **View List**: Returns you to the main Subscriptions list.
+Below the details, you will find several important links:
+
+* **Update Payment Method:** Click this to securely update the credit card or PayPal account used for your automatic renewals. A pop-up will appear where you can enter your new payment details.
+* **View Order:** Click this to see the original order associated with this subscription in your **Purchase History**. This is useful for finding your initial receipt or order details.
+
+#### Related Transactions
+
+This section provides a complete financial history of your subscription. It lists every single transaction, from the initial purchase to every successful renewal payment. You can see the date, amount, status, and payment method for each transaction, and you can download a **Receipt** for any of them.
 
 ![Screenshot of Subscription](/images/customer-dashboard/subscriptions/subscriptions-2.webp)
