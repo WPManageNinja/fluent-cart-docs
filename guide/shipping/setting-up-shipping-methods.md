@@ -44,6 +44,9 @@ This advanced setting is for when a customer's cart contains products from diffe
 * **Combined Cost:** The shipping costs for each distinct shipping class in the cart are calculated and then added together to get the final total.
 * **Highest Cost:** Only the single highest shipping cost among all the shipping classes present in the cart is applied.
 
+::: info
+The Configure Rate and Class Aggregation settings work together to give you precise control over your shipping fees. For a more detailed guide with advanced examples of how these calculations work, especially when a cart contains multiple items from different shipping classes, please see our documentation on [Advanced Shipping Calculations](/guide/shipping/advanced-shipping-calculations.md).
+:::
 
 * **Description:** 
 
