@@ -168,7 +168,7 @@ The **Tax Class** allows you to apply specific tax rules to your product.
 To assign a tax class:
 
  1. Locate the **Tax Class** section on the right side of the screen.
- 2. Select a pre-configured tax class from the dropdown menu, or click **+ Add** to create a new one. The corresponding tax rate will then be automatically applied to this product during checkout. To learn more about Tax, read this [documentation](/guide/tax-&-duties/configuration-and-classes/).
+ 2. Select a pre-configured tax class from the dropdown menu, or click **+ Add** to create a new one. The corresponding tax rate will then be automatically applied to this product during checkout. To learn more about Tax, read this [Documentation](/guide/tax-&-duties/configuration-and-classes/).
 
 ## Publishing Settings
 

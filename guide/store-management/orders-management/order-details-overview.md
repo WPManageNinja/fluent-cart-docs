@@ -78,3 +78,15 @@ A complete, time-ordered record of all important events and changes related to t
 
 * **Examples:** Order status updates (e.g., "Order status updated from completed to processing"), payment paid, refunds processed, license upgrades, and order creation events.
 
+### 8. UTM Details
+
+This section shows any UTM (Urchin Tracking Module) parameters that were recorded when the customer placed their order.
+
+ * **UTM Campaign:** Shows the specific marketing campaign that brought the customer to your store. This information is valuable for tracking the effectiveness of your advertising and marketing efforts.
+
+### 9. Tax Information
+
+This section on the sidebar shows the tax details the customer provided during checkout.
+
+ * **Tax ID:** Displays the customer's **Tax Identification** Number. This is especially useful for B2B (business-to-business) sales or for complying with regional tax regulations that require collecting this information. To learn more about Tax, read the [Documentation](/guide/tax-&-duties/configuration-and-classes/).
+
