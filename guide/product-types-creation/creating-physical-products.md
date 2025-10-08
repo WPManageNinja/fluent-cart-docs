@@ -18,10 +18,9 @@ By the end of this guide, you will be able to confidently list and manage any ph
 
     ![Screenshot of Add Product Button](/images/product-types-creation/Creating-Physical-Products/physical-product-1.webp)
     
+3. This action will open a new **Add New Product** modal, where you’ll enter the product name and select the product type, either **Physical Product** or **Digital Product**. After making your selection, click on the **Add Product** button and you’ll be redirected to the **Edit Product** page to configure all product details.
 
-3.  This will open the **Add New Product** screen, where you'll need to enter the product name and choose the product type either Physical Product or Digital Product. Once selected, you'll be taken to the **Edit Product** page.
-
-    ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/Creating-Physical-Products/physical-product-2.webp)
+    ![Screenshot of Add New Product Modal)](/images/product-types-creation/Creating-Physical-Products/add-new-product.webp)
 
 ### 1. Basic Product Information
 
@@ -58,7 +57,7 @@ By the end of this guide, you will be able to confidently list and manage any ph
 
 Categorize and type your product for better organization and filtering.
 
-### 3. Product Taxonomies
+### 4. Product Taxonomies
 
 This section helps you organize and tag your product using WordPress taxonomies for better filtering and presentation on your storefront.
 
@@ -68,7 +67,9 @@ This section helps you organize and tag your product using WordPress taxonomies 
 
 By using these taxonomies, you ensure customers can easily find and filter your products on your shop pages.
 
-### 4. Pricing & Variations
+   ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/Creating-Physical-Products/physical-product-2.webp)
+
+### 5. Pricing & Variations
 
 This section is where you will set the price for your product. FluentCart offers two methods, depending on whether the product has different versions (like size or color) or is a single item.
 
@@ -112,7 +113,7 @@ This will display a table where each row is a single variation.
 
 To add another version of your product, click the **+ Add more** button to create a new row in the table.
 
-### 5. Inventory Management
+### 6. Inventory Management
 
 To track the stock for your product, first, make sure the [**Stock Management**](/guide/product-types-creation/inventory-management.md) feature is enabled from the settings section.
 
@@ -125,6 +126,14 @@ An inventory table will then be displayed, with a separate row for each product 
 * **Available:** The number of units currently available for customers to purchase.
 * **On hold:** Units that are part of a pending order but have not yet been shipped.
 * **Delivered:** The total number of units that have been successfully sold and fulfilled.
+
+### Downloadable Asset(s)
+
+FluentCart allows you to attach digital files to your physical products, which is perfect for selling hybrid items (like a textbook that comes with a PDF guide, or a piece of hardware with its software drivers).
+
+At the very bottom of the product editing page, you will see a checkbox for Downloadable Asset(s).
+
+Check this box to enable the feature. Once enabled, a new section will appear where you can upload and manage the files that customers will be able to download after purchasing the product.
 
 #### How to Adjust Stock Levels
 
@@ -152,11 +161,23 @@ Shipping classes work with **Shipping Zones** and **Shipping Methods** to contro
 To learn more about how shipping classes work, see the [Understanding Shipping Classes](/guide/shipping/understanding-shipping-classes) guide.
 :::
 
+### Tax Class
 
-## Publishing Your Physical Product
+The **Tax Class** allows you to apply specific tax rules to your product.
 
-Once you have configured all the necessary details:
+To assign a tax class:
 
-1.  Set the **Status** to **"Published"** in the "Publishing" section.
-2.  Click the **"Update"** (or "Save") button on the top right to make your product live in your store.
-    * You can also click **"Preview"** to see how the product page will look before publishing.
+ 1. Locate the **Tax Class** section on the right side of the screen.
+ 2. Select a pre-configured tax class from the dropdown menu, or click **+ Add** to create a new one. The corresponding tax rate will then be automatically applied to this product during checkout. To learn more about Tax, read this [documentation](/guide/tax-&-duties/configuration-and-classes/).
+
+## Publishing Settings
+
+This section on the right side of the product edit page controls your product's visibility and key purchasing rules.
+
+ * **Status:** This sets whether your product is live on your store (Publish) or saved as a hidden Draft.
+ * **URL Slug:** This is the unique, URL-friendly part of the web address for this product. FluentCart automatically creates one from the title, but you can click it to make edits.
+ * **Default Variant:** If your product has options (like different sizes or subscription plans), this setting pre-selects one for the customer when they visit the page.
+ * **Group By:** This organizes how your product variations are displayed. For example, you can group subscription plans by their billing interval (e.g., "Monthly" and "Yearly") to make them easier for customers to compare.
+ * **Limit purchases to 1 item per order:** Check this box to prevent customers from buying more than one of this specific item in a single transaction. This is useful for things like event tickets or exclusive items.
+
+Once you have configured all the necessary details, click the **"Update"** (or "Save") button on the top right to make your product live in your store. You can also click **"Preview"** to see how the product page will look before publishing.
