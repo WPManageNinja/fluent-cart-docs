@@ -19,7 +19,7 @@ The **Payment Settings** screen in FluentCart lets you set up how your store han
 * **Available Gateways:**
     * [Stripe](/guide/payments-checkout/connecting-payment-gateways/stripe-settings)
     * [PayPal](/guide/payments-checkout/connecting-payment-gateways/paypal-settings.md)
-    * [Paddle](/guide/payments-checkout/connecting-payment-gateways/#)
+    * [Paddle](/guide/payments-checkout/connecting-payment-gateways/paddle-settings)
     * [Cash on Delivery](/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings.md)
 
 ### 2. Checkout Settings
@@ -56,7 +56,7 @@ On this screen, you will see a list of all available payment gateways. Each gate
 * **Paddle:**
     * **Description:** Paddle is an all-in-one payment solution that lets you accept credit cards, debit cards, and other popular payment methods worldwide through a single, simple integration.
     * **Status:** Typically shown as "Active" if enabled.
-    * **Management:** Click "Manage" to access detailed [Paddle Settings](/guide/payments-checkout/connecting-payment-gateways/#) for configuration.
+    * **Management:** Click "Manage" to access detailed [Paddle Settings](/guide/payments-checkout/connecting-payment-gateways/paddle-settings) for configuration.
 * **Cash on Delivery (COD):** 
     * **Description:** Allows customers to pay with cash upon delivery of their order. 
     * **Status:** Typically shown as "Active" if enabled. 
