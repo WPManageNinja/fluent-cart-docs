@@ -31,11 +31,4 @@ Click the **Add Integration** button to set up a new automation rule. You will b
 * [**FluentCRM Integration:**](/guide/integrations/fluentcrm-integration.md) This allows you to automatically manage the customer who buys this product in FluentCRM. You can configure actions such as **Adding a user to a specific list**, **Removing a user from a list**, **Applying a Tag**, or **Removing a Tag**, based on the purchase.
 * [**FluentCommunity Integration:**](/guide/integrations/fluentcommunity-integration.md) This allows you to automatically manage user access to your community or courses. You can set actions such as **Adding a user to a specific Space** or **Course**, or **Removing a user from a Space** or **Course**.
 
-### Purpose of Product-Specific Integrations
-
-Creating integration feeds at the product level is highly recommended for smart, automated workflows:
-
-* **Targeted Marketing:** Automatically add customers to specific lists and apply tags in FluentCRM based on the product they buy. This allows you to segment your audience and send highly relevant follow-up emails and offers.
-* **Access Management:** Instantly grant or revoke access to private content or a member area in **FluentCommunity** upon successful payment for this product.
-* **Automated Workflows:** Ensure that crucial marketing and fulfillment tasks run immediately without any manual effort.
 
