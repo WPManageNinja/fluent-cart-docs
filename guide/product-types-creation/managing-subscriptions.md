@@ -42,8 +42,8 @@ At the top of the list, you will find several tabs to quickly view subscriptions
 
 For even more specific searches, you can use the **Advanced Filter** to build complex queries. Simply click the toggle to open the filter builder. You can add one or more rules to segment your subscriptions based on a wide range of properties, including:
 
-* **Subscription properties** (like Status or Next Billing Date)
-* **Billing Property** (like the Collection Method)
+* **Subscription properties** 
+* **Billing Property** 
 * **Transaction Property**
 * **Products**
 * **License Property**
