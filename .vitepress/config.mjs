@@ -381,7 +381,7 @@ export default defineConfig({
           text: 'Miscellaneous',
           collapsed: true,
           items: [
-            { text: 'Using FluentCart Blocks & Templates', link: '/guide/using-fluentcart-blocks-&-templates' }
+            { text: 'Using FluentCart Blocks & Templates', link: '/guide/miscellaneous/using-fluentcart-blocks-&-templates.md' },
           ]
         },
         {
