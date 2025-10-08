@@ -56,12 +56,12 @@ As you complete each step, FluentCart will mark it off automatically. This guide
 
 ### 3. Store Key Metrics
 
-This section displays a simple overview of your store's performance.
+This section of the dashboard provides a simple, at-a-glance overview of your store's most important performance indicators. It's designed to give you a quick snapshot of your business health every time you log in.
 
-* **Total Products:** The total number of products currently in your store.
-* **Draft Products:** The number of products that are still in draft mode and not yet published.
-* **Active Coupons:** The number of discount coupons that are currently active and usable.
-* **Inactive Coupons:** The number of coupons that are either expired, disabled, or not yet active.
+* **Total Products:** The total number of products currently in your store, including both published and draft items.
+* **Orders:** The total number of orders your store has received.
+* **Revenue:** The total revenue your store has generated from all sales.
+* **Refund:** The total monetary value of all refunds that have been processed.
 
 ### 3. Sales Growth Chart
 
