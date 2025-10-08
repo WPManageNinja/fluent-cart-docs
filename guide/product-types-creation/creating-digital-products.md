@@ -17,11 +17,11 @@ By the end, you will be able to confidently sell and manage any downloadable ite
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Products** in the left WordPress sidebar.
 2.  On the **Products** screen, click the **"Add Product"** button at the top right.
 
-    ![Screenshot of Add Product Button](/images/product-types-creation/creating-digital-product/Digital-product-1.png)
+    ![Screenshot of Add Product Button](/images/product-types-creation/creating-digital-product/Digital-product-1.webp)
 
 3.  This will open the **Add New Product** popup from where you have to give the product name and select the product type **Digital Product** then the **Edit Product** page will come.
 
-    ![Screenshot of Product Edit Screen (Digital Product Example)](/images/product-types-creation/creating-digital-product/Digital-product-3.png) 
+    ![Screenshot of Product Edit Screen (Digital Product Example)](/images/product-types-creation/creating-digital-product/Digital-product-3.webp) 
 
 ### 1. Basic Product Information
 
@@ -130,13 +130,13 @@ This crucial section is where you manage the actual digital files customers will
 
 * Initially, you'll see a list of any previously added assets.
 * Click **"+ Add Asset"** to upload or link a new downloadable file.
-    ![Screenshot of Add Downloadable Asset(s) Button](/images/product-types-creation/creating-digital-product/Digital-product-5.png) 
+    ![Screenshot of Add Downloadable Asset(s) Button](/images/product-types-creation/creating-digital-product/Digital-product-5.webp) 
 * An **"Add Downloadable Asset(s)"** modal will appear.
 
     * **Choose variant:** (Optional) If your digital product has multiple variations, you can select which specific variant(s) this asset applies to. Leave empty for all variants.
     * **Choose File:** Click this button to upload a file from your local computer or select from existing files in your FluentCart storage.
         * This will open a **"Storage Drivers"** modal, showing options like **Local** storage (drag & drop or browse) or **S3** (if configured).
-![Screenshot of Choose File Modal (Storage Drivers)](/images/product-types-creation/creating-digital-product/Digital-product-6.png)
+![Screenshot of Choose File Modal (Storage Drivers)](/images/product-types-creation/creating-digital-product/Digital-product-6.webp)
     * **File URL:** (Alternative) Provide a URL if your digital asset is hosted externally.
     * **File Name:** Enter a display name for the downloaded file. You can [edit this file name](/guide/product-types-creation/creating-digital-products#editing-uploaded-file-names) after upload if needed.
     * Click **"Save Asset"** to add the file to your product.

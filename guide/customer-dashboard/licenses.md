@@ -14,7 +14,7 @@ The main Licenses page presents a list of all your available licenses. Each lice
 
 You can navigate through pages if you have many licenses (e.g., "Page 1 of 1", "10/page Total 1").
 
-![Screenshot of Licenses](/images/customer-dashboard/licenses/licenses-1.png)
+![Screenshot of Licenses](/images/customer-dashboard/licenses/licenses-1.webp)
 
 
 ## Managing Individual License Details
@@ -45,4 +45,4 @@ If your license is part of a subscription, this section provides related informa
 * **View List**: Returns you to the main Licenses list.
 * **Manage Subscription**: Direct link to manage the associated subscription.
 
-![Screenshot of Licenses](/images/customer-dashboard/licenses/licenses-2.png)
+![Screenshot of Licenses](/images/customer-dashboard/licenses/licenses-2.webp)

@@ -14,7 +14,7 @@ Before you can add a method, you must have already created a shipping zone.
 4.  Inside the zone's settings, scroll down to the **Shipping Methods** section and click the **Add Shipping Method** button. You can also manage your existing shipping methods from this screen. To update a method's settings, click the Edit button located on the same row as its title.
 5.  This will open a pop-up window where you can configure the details of your new shipping method.
 
-![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-1.png)
+![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-1.webp)
 
 ### Configuring the Shipping Method
 
@@ -49,6 +49,6 @@ This advanced setting is for when a customer's cart contains products from diffe
 
 You can add a short description for the shipping method. Depending on your theme, this might be displayed to the customer at checkout to provide more context (e.g., "Delivered in 3-5 business days").
 
- ![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-2.png)
+ ![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-2.webp)
 
 Once you have configured all the details, click the **Save** button. Your new shipping method is now active and will be offered to customers in the selected shipping zone.

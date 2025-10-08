@@ -15,7 +15,7 @@ When you go to the Purchase History page, you'll see a list of all your orders. 
 
 Have a lot of past orders? No problem. Use the **Search bar** (look for the magnifying glass icon) at the top-right of your order list to quickly find the purchase you're looking for.
 
-![Screenshot of Purchase History](/images/customer-dashboard/purchase-history/purchase-history-1.png)
+![Screenshot of Purchase History](/images/customer-dashboard/purchase-history/purchase-history-1.webp)
 
 
 ## Viewing Individual Order Details
@@ -31,4 +31,4 @@ Here’s what you might see on the details page:
 * **License Details**: If your order included a product with a software license, you would also see a section here with your license key and activation details.
 
 
-![Screenshot of Purchase History](/images/customer-dashboard/purchase-history/purchase-history-2.png)
+![Screenshot of Purchase History](/images/customer-dashboard/purchase-history/purchase-history-2.webp)

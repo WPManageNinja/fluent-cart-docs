@@ -20,7 +20,7 @@ The top of the dashboard gives you key controls to choose what data appears in t
 * **Advanced Filters:** Click the **filter** icon to break down the report by options like **Order Type** or specific **Products**. This helps you focus on detailed sales data for a closer view.
 * **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
-  ![Screenshot of Sales Report Page](/images/reporting-analytics/sales/sles-report-filter.png)
+  ![Screenshot of Sales Report Page](/images/reporting-analytics/sales/sles-report-filter.webp)
 
 ### Key Sales Metrics
 
@@ -35,7 +35,7 @@ At the top of the **Sales Report**, you will find summary cards highlighting you
 
 Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against.
 
-  ![Screenshot of Sales Report Page](/images/reporting-analytics/sales/sales-reports.png)
+  ![Screenshot of Sales Report Page](/images/reporting-analytics/sales/sales-reports.webp)
 
 #### Detailed Sales Analysis
 

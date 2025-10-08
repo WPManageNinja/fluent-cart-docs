@@ -6,7 +6,7 @@ The **Cart & Checkout** settings are fundamental to shaping your customer's jour
 
 1. From your WordPress dashboard, navigate to **FluentCart Pro > Settings** and select the **Cart & Checkout** sub-menu under the **Store Settings** tab.
 
-    ![Screenshot of Additional Info Settings Tab](/images/settings-configuration/cart-checkout/cart-checkout.png)
+    ![Screenshot of Additional Info Settings Tab](/images/settings-configuration/cart-checkout/cart-checkout.webp)
 
 
 #### Configuration Options

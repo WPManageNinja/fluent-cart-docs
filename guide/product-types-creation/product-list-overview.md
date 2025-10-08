@@ -7,7 +7,7 @@ The **Products** screen in FluentCart is your central management hub for all ite
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Products** in the left sidebar.
 2.  This will open the main **Products** screen, displaying a comprehensive table of all your products. 
 
-    ![Screenshot of Products List Page](/images/product-types-creation/product-list/Products-list-1.png)
+    ![Screenshot of Products List Page](/images/product-types-creation/product-list/Products-list-1.webp)
 
 ## Understanding the Products List Table
 
@@ -60,7 +60,7 @@ For more detailed control, use the **Advanced Filter** option:
 
 3.  Apply your desired filters by clicking **"Apply"** or **"Reset"** them to view the complete list. 
 
-    ![Screenshot of Product Advanced Filter Button](/images/product-types-creation/product-list/Products-list-2.png) 
+    ![Screenshot of Product Advanced Filter Button](/images/product-types-creation/product-list/Products-list-2.webp) 
 
 
 ## Pagination

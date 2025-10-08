@@ -13,7 +13,7 @@ This guide will walk you through the entire process of connecting your Paddle ac
 
 This will take you to the main Paddle settings page, where you will configure the entire integration.
 
-   ![Screenshot of Activate Paddle in FluentCart](/images/payments-checkout/paddle-payment/activate-paddle.png)
+   ![Screenshot of Activate Paddle in FluentCart](/images/payments-checkout/paddle-payment/activate-paddle.webp)
 
 
 ### Step 2: Configure Paddle Settings
@@ -30,19 +30,19 @@ Here's a breakdown of the available settings:
 
 To find your API Keys and Client Token, log in to your [Paddle account](https://login.paddle.com/login) and navigate to the **Developer Tools → Authentication** section.
 
-   ![Screenshot of Payment Activation](/images/payments-checkout/paddle-payment/payment-activation.png)
+   ![Screenshot of Payment Activation](/images/payments-checkout/paddle-payment/payment-activation.webp)
 
 #### Generating API Key
 
 Once you log in to the Paddle Dashboard, open the **Developer Tools** dropdown list from the left sidebar, and click **Authentication**. Now, go to the **API keys** section and click the **+ New API key** button.
 
-   ![Screenshot of API key](/images/payments-checkout/paddle-payment/api-key.png)
+   ![Screenshot of API key](/images/payments-checkout/paddle-payment/api-key.webp)
 
 Now, provide the **Name** and **Description** for your API key, click the **Save** button, and your desired API key will be generated.
 
 Here, you can see the newly generated API Key. Now, press the **Copy key** button, and your desired **API Key** will be copied.
 
-   ![Screenshot of Copy API key](/images/payments-checkout/paddle-payment/copy-api-key.png)
+   ![Screenshot of Copy API key](/images/payments-checkout/paddle-payment/copy-api-key.webp)
 
 #### Generating Client Token / Public Token
 
@@ -50,11 +50,11 @@ Now, go to the **Client-side tokens** section and click the **+ New client-side 
 
 Now, provide the **Name** and **Description** for your client token, click the **Save** button, and your desired client token will be generated.
 
-   ![Screenshot of Client Token/ Public Token](/images/payments-checkout/paddle-payment/client-token.png)
+   ![Screenshot of Client Token/ Public Token](/images/payments-checkout/paddle-payment/client-token.webp)
 
 Here, you can see the newly generated Client Token. Now, click the **Three-dot icon** and press the **Copy Token** button.
 
-   ![Screenshot of Copy Client Token/ Public Token](/images/payments-checkout/paddle-payment/copy-client-token.png)
+   ![Screenshot of Copy Client Token/ Public Token](/images/payments-checkout/paddle-payment/copy-client-token.webp)
 
 ### Step 3: Set up Webhooks in Paddle
 
@@ -63,7 +63,7 @@ Webhooks are essential for FluentCart to receive real-time updates about transac
 1.  **Copy the Webhook URL:** First, copy the **Webhook URL** provided on your FluentCart Paddle settings page.
 2.  **Create a New Webhook in Paddle:** Log in to your Paddle dashboard. Navigate to **Developer Tools → Notifications**. Next, click on the **+ New destination** button.
 
-   ![Screenshot of Notification](/images/payments-checkout/paddle-payment/new-destination.png)
+   ![Screenshot of Notification](/images/payments-checkout/paddle-payment/new-destination.webp)
 
 A modal will appear. **Paste** the URL you copied from FluentCart into the **Webhook URL** field.
 
@@ -82,7 +82,7 @@ A modal will appear. **Paste** the URL you copied from FluentCart into the **Web
 
 After selecting the events, save the webhook by clicking the **Save destination** button. Paddle will provide you with a **Webhook Secret**. Simply copy this webhook secret for future use.
 
-   ![Screenshot of Events](/images/payments-checkout/paddle-payment/events.png)
+   ![Screenshot of Events](/images/payments-checkout/paddle-payment/events.webp)
 
 #### Add Webhook Secret to FluentCart:
 
@@ -101,7 +101,7 @@ You can also customize the appearance and text of the Paddle checkout button:
 * **Button Styling:** Adjust the **Button Color**, **Button Hover Color**, **Button Text Color**, and **Button Font Size** to match your store's design.
 * **Disable Webhook Verification:** This security feature ensures that webhook notifications are genuinely coming from Paddle. It should only be disabled for specific debugging or testing scenarios. For a live store, always keep this setting enabled to protect your store from fraudulent requests.
 
-   ![Screenshot of Customization](/images/payments-checkout/paddle-payment/customization-options.png)
+   ![Screenshot of Customization](/images/payments-checkout/paddle-payment/customization-options.webp)
 
 Once you have configured all the settings, click the **Save Settings** button. Your Paddle integration is now complete!
 

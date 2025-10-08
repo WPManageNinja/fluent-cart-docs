@@ -19,7 +19,7 @@ Before you can add rates, you must specify which countries you will be collectin
 
 > **Info:** To save you time, FluentCart comes with pre-configured default tax rates for many countries. After you select a country, you will often find that the standard tax rates have already been set up for you. You can then edit these default rates as needed.
 
-![Add Country](/guide/public/images/tax/rates/tax-rates-1.png)
+![Add Country](/guide/public/images/tax/rates/tax-rates-1.webp)
 
 ### Managing Tax Rates for a Country
 
@@ -44,7 +44,7 @@ To add a new rate, click the **+ Add New Rate** button and fill in the following
 * **Compound:** This is an advanced option for applying multiple taxes sequentially. If you enable this, the tax will be calculated on top of the subtotal plus any other taxes that have a lower priority.
 * **Priority:** A number that determines the order in which multiple taxes are applied to a single order. Taxes with a lower priority number (e.g., 1) are applied before taxes with a higher number (e.g., 2).
 
-![Configure Rates](/guide/public/images/tax/rates/tax-rates-2.png)
+![Configure Rates](/guide/public/images/tax/rates/tax-rates-2.webp)
 
 #### Understanding Compound Taxes: A Practical Example
 
@@ -87,7 +87,7 @@ In some regions, the tax rate for shipping costs may be different from the tax r
     * **For Province:** Select the state or province where this override rule should apply.
     * **Tax Class:** Select the tax class this override should apply to. This is useful if your shipping tax also needs to follow rules for standard, reduced, or zero-rated items.
 
-    ![Add Tax Override](/guide/public/images/tax/rates/tax-rates-3.png)
+    ![Add Tax Override](/guide/public/images/tax/rates/tax-rates-3.webp)
 
 This override gives you granular control to ensure maximum flexibility and accuracy, even in regions with complex shipping tax laws.
 

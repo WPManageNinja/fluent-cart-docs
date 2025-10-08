@@ -31,7 +31,7 @@ The Advanced Filter enables you to combine various properties to create precise 
     * Click **"+ Add"** to add another rule for filtering. This typically functions as an "AND" condition, meaning all criteria must be met.
     * Click the **"+ OR"** button to add an alternative filter condition. This allows you to find customers who meet *either* the previous set of criteria *or* the new one.
 
-        ![Screenshot of Advanced Filter Button](/images/store-management/using-advanced-filter/customer-advanced-filter-button.png) 
+        ![Screenshot of Advanced Filter Button](/images/store-management/using-advanced-filter/customer-advanced-filter-button.webp) 
 
 
 ## Applying and Resetting Filters

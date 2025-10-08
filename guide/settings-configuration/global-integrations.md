@@ -9,7 +9,7 @@ By setting up these integrations, you can eliminate manual data entry and seamle
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
 2.  Click on the **Global Integrations** tab.
 
-    ![Screenshot of Checkout Actions Tab](/images/settings-configuration/checkout/checkout-actions-tab.png)
+    ![Screenshot of Checkout Actions Tab](/images/settings-configuration/checkout/checkout-actions-tab.webp)
 
 
 #### The Global Integrations Dashboard
@@ -26,7 +26,7 @@ This screen provides a comprehensive overview of all the integration feeds you h
     * **Edit (Pencil Icon):** Click this to open the configuration screen and make changes to the feed's settings, such as adding new triggers or modifying data mappings.
     * **Delete (Trash Can Icon):** Click this to permanently delete the integration feed. This action cannot be undone.
 
-    ![Screenshot of Checkout Actions Tab](/images/settings-configuration/checkout/global-integration.png)
+    ![Screenshot of Checkout Actions Tab](/images/settings-configuration/checkout/global-integration.webp)
 
 #### Adding a New Integration
 

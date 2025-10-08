@@ -15,7 +15,7 @@ The top of the dashboard gives you key controls to choose what data appears in t
 * **Advanced Filters:** Click the **filter** icon to break down the report by options like Order Type or specific Products. This helps you focus on detailed revenue data for a closer view.
 * **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
 
-	![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/advanced-filter.png)
+	![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/advanced-filter.webp)
 
 ### Key Revenue Metrics
 
@@ -35,7 +35,7 @@ Below the key metrics, you’ll find detailed breakdowns of your store’s incom
 
 The Revenue Report shows how your store is earning over time. You can easily see what’s working, understand your store’s earnings, and plan to make it grow.
 
-   ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/revenue-analysis.png)
+   ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/revenue-analysis.webp)
 
 #### Net Revenue Grouped By
 
@@ -48,4 +48,4 @@ This section allows you to break down revenue by different criteria, making it e
 * **Data Table:** The table will dynamically update to show a detailed breakdown of your revenue based on the selected grouping, including metrics like Order Count, Gross Sales, and Net Revenue for each item in the group (e.g., for each country or payment method).
 * **Export:** Click the **Export** button to download the currently displayed grouped data as a CSV file.
 
-    ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/net-revenue.png)
+    ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/net-revenue.webp)

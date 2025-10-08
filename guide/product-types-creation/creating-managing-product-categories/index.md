@@ -9,7 +9,7 @@ For example, you can create categories like "Men's Clothing," to organize your p
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Product Categories** in the left WordPress sidebar.
 2.  This will open the **Categories** screen, displaying a table of all your existing product categories.
 
-    ![Screenshot of Product Categories List Page](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-1.png)
+    ![Screenshot of Product Categories List Page](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-1.webp)
 
 ## Understanding the Categories List Table
 
@@ -24,7 +24,7 @@ The Categories list table provides key information for each category:
 
 1.  On the **Categories** screen, click the **"Add New Category"** button at the top right.
 
-    ![Screenshot of Add New Category Button](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-2.png) 
+    ![Screenshot of Add New Category Button](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-2.webp) 
 
 2.  An **"Add New Category"** modal window will appear.
 
@@ -39,7 +39,7 @@ The Categories list table provides key information for each category:
 4.  Click the **"Add New Category"** button within the modal to save your new category.
 5.  To cancel, click the **"Cancel"** button.
 
- ![Screenshot of Add New Category Modal](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-3.png)
+ ![Screenshot of Add New Category Modal](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-3.webp)
 
 ## Searching and Filtering Categories
 

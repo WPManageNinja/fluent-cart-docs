@@ -33,7 +33,7 @@ This section is specifically for handling European Union VAT regulations for you
 The EU VAT settings are designed to automate the reverse-charge mechanism for B2B sales, helping you stay compliant with complex international tax laws.
 :::
 
-![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-1.png)
+![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-1.webp)
 
 ### Managing Tax Classes
 
@@ -47,7 +47,7 @@ FluentCart includes a few common classes to get you started:
 * **Reduced:** For items that have a lower tax rate.
 * **Zero:** For tax-exempt products.
 
-![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-2.png)
+![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-2.webp)
 
 #### Adding a New Tax Class
 
@@ -60,7 +60,7 @@ You can create custom classes to better organize your products and handle comple
     * **Product Category (Optional):** You can link this tax class directly to one or more product categories. Any product in the selected category will automatically use this tax class.
     * **Description:** An internal note for your reference.
 
-![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-3.png)
+![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-3.webp)
 
 #### Example Use Case
 

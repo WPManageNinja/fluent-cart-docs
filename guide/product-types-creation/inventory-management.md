@@ -13,7 +13,7 @@ Before you can manage inventory for individual products, you must first activate
 3.  You will see a list of available features. Find **Stock Management** and make sure the toggle next to it is enabled.
 4.  Click the **Save Settings** button.
 
-![Screenshot of Stock Management Enable](/images/product-types-creation/inventory-management/stock-management.png)
+![Screenshot of Stock Management Enable](/images/product-types-creation/inventory-management/stock-management.webp)
 
 Once this feature is active, the **Inventory Management** section will become available on the product edit screen for your individual products.
 
@@ -37,7 +37,7 @@ The **Inventory Management** section gives you a clear, real-time overview of th
 * **On hold:** The number of units that are currently reserved in pending or processing orders. These units are not available for sale.
 * **Delivered:** The total number of units that have been successfully sold and fulfilled.
 
-![Screenshot of Inventory Management Section](/images/product-types-creation/inventory-management/inventory-management-section.png) 
+![Screenshot of Inventory Management Section](/images/product-types-creation/inventory-management/inventory-management-section.webp) 
 
 #### Adjusting Stock Levels
 
@@ -47,7 +47,7 @@ You can easily add or remove stock manually right from this screen.
 2.  In the input field under the Title, enter the quantity by which you want to change the stock.
 3.  Click to **Apply** button for the stock adjustment. The **"Total Stock"** and **"Available"** quantities will update instantly.
 
-    ![Screenshot of Adjust Stock Section](/images/product-types-creation/inventory-management/inventory-adjust-by.png) 
+    ![Screenshot of Adjust Stock Section](/images/product-types-creation/inventory-management/inventory-adjust-by.webp) 
 
 
 :::tip Stock Management Best Practices

@@ -7,7 +7,7 @@ FluentCart's **Roles and Permissions** system allows you to assign specific acce
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings > Roles And Permissions**.
 2.  On the **Roles And Permissions** screen, click the **"+ Add Role"** button at the top right corner.
 
-    ![Screenshot of Add Role Button](/images/settings-configuration/roles-permissions/add-role-button.png)
+    ![Screenshot of Add Role Button](/images/settings-configuration/roles-permissions/add-role-button.webp)
 
 3.  An **"Add Role"** modal window will appear.
 
@@ -21,7 +21,7 @@ FluentCart's **Roles and Permissions** system allows you to assign specific acce
         * **Worker:** "View Access for products, customers, coupons, integretions." It also has "**Manage Access** for Order Statuses". This role is suitable for staff primarily involved in fulfillment and basic order updates.
         * **Accountant:** "View Access for products, customers, orders, subscriptions, licenses, coupons, reports and integrations". This role is designed for users who need to view financial and sales data without making operational changes.
 
-    ![Screenshot of Add Role Modal - Select User](/images/settings-configuration/roles-permissions/add-role-select-user.png)
+    ![Screenshot of Add Role Modal - Select User](/images/settings-configuration/roles-permissions/add-role-select-user.webp)
 
 6.  After selecting both the user and the role, click the **"Attach Role"** button within the modal to confirm the assignment.
 7.  To cancel the process, click the **"Cancel"** button.

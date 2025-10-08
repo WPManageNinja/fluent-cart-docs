@@ -28,7 +28,7 @@ At the top of the **Product Report**, you will find summary cards highlighting y
 
 Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against.
 
-   ![Screenshot of Product Report Page](/images/reporting-analytics/product/product-report.png)
+   ![Screenshot of Product Report Page](/images/reporting-analytics/product/product-report.webp)
 
 #### Product Report Chart
 
@@ -45,6 +45,6 @@ Below the main chart, a detailed comparison table allows you to analyze the perf
 * **Comparison:** This unique column uses a bar chart to visually compare the sales numbers for each of the two months you selected, making it easy to see which products are trending up or down.
 * **Change:** This column shows the exact percentage of change between the two months, color-coded for a quick view of performance.
 
-   ![Screenshot of Product Performanance Comparison](/images/reporting-analytics/product/product-performanance.png)
+   ![Screenshot of Product Performanance Comparison](/images/reporting-analytics/product/product-performanance.webp)
 
 With the Product Report, you can see clear patterns in product demand, giving you the insights you need to make smarter decisions about your inventory and marketing.

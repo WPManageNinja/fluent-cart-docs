@@ -15,7 +15,7 @@ The top of the dashboard gives you key controls to choose what data appears in y
 * **Advanced Filters:** Click the **filter** icon to segment the report by criteria such as **Order Type** or specific **Products**, allowing you to isolate refunds associated with certain items.
 * **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
 
-   ![Screenshot of Refunds Report Page](/images/reporting-analytics/refunds/refunds-report.png)
+   ![Screenshot of Refunds Report Page](/images/reporting-analytics/refunds/refunds-report.webp)
 
 ### Key Refund Metrics
 

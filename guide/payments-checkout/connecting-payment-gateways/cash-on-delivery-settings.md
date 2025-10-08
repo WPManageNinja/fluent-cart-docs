@@ -5,7 +5,7 @@ Cash on Delivery allows customers to pay with cash directly upon receiving their
 1.  On the **Payment Settings** screen, locate **"Cash on Delivery"** and click the **"Manage"** button next to it.
 2.  This will open the **Offline Payment Settings** screen.
 
-    ![Screenshot of Cash on Delivery Settings Page](/images/payments-checkout/cash-on-delivery-settings.png)
+    ![Screenshot of Cash on Delivery Settings Page](/images/payments-checkout/cash-on-delivery-settings.webp)
 
 3.  **Enable Cash on Delivery:** Check the box next to "Customers can pay for their orders by cash upon delivery." to activate this method.
 5.  **Payment Activation:** In the top right corner of this page, ensure the **Payment Activation** option is "**Enabled**".

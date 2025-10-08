@@ -89,7 +89,7 @@ Before you can set up licenses for a specific product, you need to make sure the
 
 4. Click the **Save Settings** button to apply the change.
 
-    ![Screenshot of Enable License Add-on](/images/product-types-creation/creating-digital-product-license/license-add-on.png)
+    ![Screenshot of Enable License Add-on](/images/product-types-creation/creating-digital-product-license/license-add-on.webp)
 
 #### Configure Product License Settings
 
@@ -97,7 +97,7 @@ Once the add-on is enabled, you can configure the license settings for each prod
 
 1.  On the Product Edit screen, click the **"License Settings"** tab.
 
-    ![Screenshot of Product License Settings Tab](/images/product-types-creation/creating-digital-product-license/License-Settings-1.png)
+    ![Screenshot of Product License Settings Tab](/images/product-types-creation/creating-digital-product-license/License-Settings-1.webp)
 
 2.  **Enable Licensing for this product:** Ensure this checkbox is enabled to activate licensing for this product.
 

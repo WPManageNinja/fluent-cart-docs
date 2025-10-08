@@ -12,7 +12,7 @@ Upgrade path settings are found within the **Edit Product** screen for individua
 2.  [Edit an existing product](/guide/product-types-creation/product-list-overview) that has multiple license tiers (e.g., "Fluent Forms").
 3.  On the **Edit Product** screen, click on the **"Upgrade Paths"** tab.
 
-    ![Screenshot of Product Upgrade Paths Tab](/images/product-types-creation/define-upgrade-path/Upgrade-Paths-1.png)
+    ![Screenshot of Product Upgrade Paths Tab](/images/product-types-creation/define-upgrade-path/Upgrade-Paths-1.webp)
 
 ## Understanding and Adding Upgrade Paths
 
@@ -31,7 +31,7 @@ The "Upgrade Paths" tab displays a table where you define the upgrade logic.
 
 3.  After configuring the path, ensure you save your product settings by clicking the **"Save"** button on the bottom of the Edit screen.
 
-    ![Screenshot of Product Upgrade Paths Tab](/images/product-types-creation/define-upgrade-path/add-Upgrade-Paths.png)
+    ![Screenshot of Product Upgrade Paths Tab](/images/product-types-creation/define-upgrade-path/add-Upgrade-Paths.webp)
 
 ### 2. Examples of Upgrade Paths
 

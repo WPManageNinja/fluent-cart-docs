@@ -27,7 +27,7 @@ The main visualization on this dashboard is the **Customer Growth Chart**. This 
 * **Visual Comparison:** The chart overlays two distinct areas—the **Current Range** (representing the period currently selected in the date filter) and the **Compare Range** (representing the historical period you are measuring against).
 * **Trend Analysis:** By showing the current period's customer acquisition alongside the past, you can quickly identify seasonal impacts, measure the success of specific marketing campaigns, and see if your acquisition rate is accelerating or slowing down.
 
-![Customer Reports](/guide/public/images/reporting-analytics/customer/customer-report-1.png)
+![Customer Reports](/guide/public/images/reporting-analytics/customer/customer-report-1.webp)
 
 ### Comparison Breakdown
 
@@ -38,6 +38,6 @@ Below the chart, a detailed **Comparison** table breaks down the growth trend mo
 * **Compare Range:** The total number of new customers acquired during the equivalent comparison month.
 * **Change [%]:** The exact percentage of change (growth or decline) between the two months, allowing you to pinpoint exactly when and how much your customer acquisition shifted.
 
-![Customer Reports](/guide/public/images/reporting-analytics/customer/customer-report-2.png)
+![Customer Reports](/guide/public/images/reporting-analytics/customer/customer-report-2.webp)
 
 By using the Customer Report, you can move beyond simple sales numbers to understand the most valuable asset of your store: your customer base.

@@ -17,7 +17,7 @@ Shipping zones are geographical regions that allow you to define specific shippi
     * Click the **"Add Shipping Zone"** button.
     * You will be taken to the "Add Shipping Zone" detail page.
 
-![Screenshot of Configuring Shipping Zones](/images/shipping/Configuring-Shipping-Zones/FluentCart-Shipping-Category-1.png)
+![Screenshot of Configuring Shipping Zones](/images/shipping/Configuring-Shipping-Zones/FluentCart-Shipping-Category-1.webp)
 
 
 3. **Name Your Zone and Pick Your Regions**:
@@ -28,7 +28,7 @@ Now you're on the setup page for your new zone. You only need to fill in two thi
 
 * **Country:** This is where you choose the places that belong to this zone. Start typing a country or state into the box, and then select it from the list that appears. Keep it empty to apply to all the countries.
 
-![Screenshot of Configuring Shipping Zones](/images/shipping/Configuring-Shipping-Zones/FluentCart-Shipping-Category-2.png)
+![Screenshot of Configuring Shipping Zones](/images/shipping/Configuring-Shipping-Zones/FluentCart-Shipping-Category-2.webp)
 
 Once you're happy with the name and the regions you've selected, just click the **"Save Shipping Zone"** buttson.
 

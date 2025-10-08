@@ -18,7 +18,7 @@ Select **One Time** from the "Select Payment Term" dropdown for products that cu
 
 * **Calculate profit/cost:** (Optional) Enable this toggle to enter the **Cost per item**. FluentCart will use this to automatically calculate and display the **Profit** and **Margin**.
 
-  ![Screenshot of Product Types List Page](/images/product-types-creation/product-pricing/one-time-payment.png)
+  ![Screenshot of Product Types List Page](/images/product-types-creation/product-pricing/one-time-payment.webp)
 
 #### B. Subscription Payment
 
@@ -40,7 +40,7 @@ Select **Subscription** for products that require recurring payments.
 
 * **Calculate profit/cost:** (Optional) Toggle this on to track the cost and profit margin for the subscription.
 
-  ![Screenshot of Product Types List Page](/images/product-types-creation/product-pricing/subscription-payment.png)
+  ![Screenshot of Product Types List Page](/images/product-types-creation/product-pricing/subscription-payment.webp)
 
 ## Option 2: Simple Variations
 
@@ -54,7 +54,7 @@ Choose this method for products that come in multiple versions, such as differen
 
 * **More Actions:** Click the **three-dot icon** to access additional options like **Duplicate**, get a **Direct Checkout** link, **Delete** the variation, or **Skip inventory** option. 
 
-  ![Screenshot of Product Types pricing Page](/images/product-types-creation/product-pricing/simple-variation.png)
+  ![Screenshot of Product Types pricing Page](/images/product-types-creation/product-pricing/simple-variation.webp)
 
 #### Configuring an Individual Variation
 
@@ -94,6 +94,6 @@ After clicking the pencil icon, a sidebar appears where you can configure the pr
 
 * **Image:** Upload a unique image for this variation.
 
-  ![Screenshot of Product Types pricing Page](/images/product-types-creation/product-pricing/configure-indivisual-payment.png)
+  ![Screenshot of Product Types pricing Page](/images/product-types-creation/product-pricing/configure-indivisual-payment.webp)
 
 After configuring a variation, click the **Update Price** button to save its settings.

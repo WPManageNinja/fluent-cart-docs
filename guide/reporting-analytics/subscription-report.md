@@ -14,7 +14,7 @@ The top of the dashboard gives you key controls to choose what data appears in t
 * **Compare To:** This dropdown allows you to choose a past time period to compare with your current data.
 * **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
-  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-report.png)
+  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-report.webp)
 
 ### Subscription Chart
 
@@ -25,7 +25,7 @@ The main feature of this report is the **Subscription Chart**. It shows your gro
 
 You can also use the interactive controls in the top-right corner of the chart to change the view, zoom, or download the chart as an image.
 
-  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-chart.png)
+  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-chart.webp)
 
 ### Comparison Table
 
@@ -46,4 +46,4 @@ Below the main comparison, you’ll find detailed charts that show customer loya
 
 With the Subscription Report, you can easily see patterns in your subscription signups, giving you the insights you need to measure your growth.
 
-  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-comparion-table.png)
+  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-comparion-table.webp)

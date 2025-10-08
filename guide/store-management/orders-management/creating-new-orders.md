@@ -8,7 +8,7 @@ FluentCart allows you to manually create new orders directly from your WordPress
 2.  On the **Orders** screen, locate and click the **"Create Order"** button in the top right corner.
 
 
-    ![Screenshot of Create Order Button](/images/store-management/creating-new-orders/create-order-button.png) 
+    ![Screenshot of Create Order Button](/images/store-management/creating-new-orders/create-order-button.webp) 
 
 
 3.  This will open a new order creation interface. You will need to:
@@ -29,7 +29,7 @@ FluentCart allows you to manually create new orders directly from your WordPress
     * Processing payment directly if you have integrated payment gateways.
 
 5.  **Finalize Order:** Once all details are correct and the payment method is selected, click the **Save** button finalize the order.
-![Screenshot of Create Order Button](/images/store-management/creating-new-orders/create-order-button2.png) 
+![Screenshot of Create Order Button](/images/store-management/creating-new-orders/create-order-button2.webp) 
 
 :::tip Manual Order Use Cases
 Manual order creation is great for:

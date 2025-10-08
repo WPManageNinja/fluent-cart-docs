@@ -17,7 +17,7 @@ These settings control how additional information is presented on your individua
 * **Show Relevant in Single Page:** When enabled, this will display a section for related products or upsells directly on the single product page. This is a highly effective strategy for encouraging customers to discover other items they might like, potentially leading to larger purchases.
 * **Show Relevant in Product Modal:** If your theme uses a product quick-view or modal pop-up, this option will display those same relevant products within that modal view. This provides a seamless cross selling opportunity without requiring the customer to navigate to a new page.
 
-    ![Screenshot of Single Product & Order Setup Tab](/images/settings-configuration/product-page-settings/single-product-order-setup.png)
+    ![Screenshot of Single Product & Order Setup Tab](/images/settings-configuration/product-page-settings/single-product-order-setup.webp)
 
 ### 2. Image Zooming
 

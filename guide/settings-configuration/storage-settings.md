@@ -17,11 +17,11 @@ Local storage means your files are saved directly on your website's server. This
 
 To check the settings for local storage, click the **Manage** button next to Local.
 
-   ![Screenshot of Storage Settings Tab](/images/settings-configuration/storage/storage-settings-tab.png)
+   ![Screenshot of Storage Settings Tab](/images/settings-configuration/storage/storage-settings-tab.webp)
 
 On this page, you’ll see a checkbox to **Enable the local driver**. Make sure this is checked if you want to use your server for file storage. Click **Save** if you make any changes.
  
-   ![Screenshot of Storage Settings Tab](/images/settings-configuration/storage/enable-local-driver.png)
+   ![Screenshot of Storage Settings Tab](/images/settings-configuration/storage/enable-local-driver.webp)
 
 ### 2. S3 (Amazon S3)
 

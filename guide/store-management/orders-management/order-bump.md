@@ -12,7 +12,7 @@ Before you can create any order bumps, you must first activate the feature in yo
 4.  Locate the **Order Bump** toggle and switch it to **Active**.
 5.  Click the **Save Settings** button to confirm the change.
 
-![Order Bump](/guide/public/images/store-management/order-bump/order-bump-1.png)
+![Order Bump](/guide/public/images/store-management/order-bump/order-bump-1.webp)
 
 ### 2. Creating a New Order Bump Offer
 
@@ -23,7 +23,7 @@ Once the feature is active, you can create and manage your offers.
 3.  Click on **Order Bump**. This will take you to the Order Bumps management screen.
 4.  Click the **Add New** button on the top right to create a new offer. A pop-up window will appear where you need to define the initial details of your offer.
 
-![Order Bump](/guide/public/images/store-management/order-bump/order-bump-2.png)
+![Order Bump](/guide/public/images/store-management/order-bump/order-bump-2.webp)
 
 
 5.  To start creating your new offer, you must first define its core identity:
@@ -33,7 +33,7 @@ Once the feature is active, you can create and manage your offers.
 
 Click the **Create** button.
 
-![Order Bump pop-up](/guide/public/images/store-management/order-bump/order-bump-6.png)
+![Order Bump pop-up](/guide/public/images/store-management/order-bump/order-bump-6.webp)
 
 After clicking "Create," you will be taken to the main configuration screen to set up the rest of your order bump's rules and design.
 
@@ -71,7 +71,7 @@ This is the crucial step where you define exactly when and for whom this offer a
 
 * **Set Priority:** If you have multiple Order Bumps active with overlapping display conditions, the priority number (e.g., 1, 2, 3) determines which offer will be displayed first. **Lower numbers mean higher priority.**
 
-![Order Bump](/guide/public/images/store-management/order-bump/order-bump-3.png)
+![Order Bump](/guide/public/images/store-management/order-bump/order-bump-3.webp)
 
 After configuring all the details, click **Save** (standard practice) to activate your bump offer.
 
@@ -83,8 +83,8 @@ On the main **Order Bumps** screen, you can manage all your existing offers:
 * **Status Tags:** Quickly see which offers are **Active**, **Draft** (saved but not enabled), or **All**.
 * **Action Menu:** The vertical ellipsis (`...`) icon provides options to **Delete** an existing bump offer.
 
-![Order Bump](/guide/public/images/store-management/order-bump/order-bump-4.png)
+![Order Bump](/guide/public/images/store-management/order-bump/order-bump-4.webp)
 
 * **Checkout View:** Once active, the offers appear on your store's checkout page, clearly labeled (e.g., **Recommended**) with the title, description, and discount, ready for the customer to accept with a single click.
 
-![Order Bump](/guide/public/images/store-management/order-bump/order-bump-5.png)
+![Order Bump](/guide/public/images/store-management/order-bump/order-bump-5.webp)

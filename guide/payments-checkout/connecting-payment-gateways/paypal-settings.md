@@ -5,7 +5,7 @@ PayPal provides a fast and secure way for customers to send and receive money or
 1.  On the **Payment Settings** screen, locate **"PayPal"** and click the **"Manage"** button next to it.
 2.  This will open the **PayPal Settings** screen.
 
-    ![Screenshot of PayPal Settings Page](/images/payments-checkout/paypal-settings.png)
+    ![Screenshot of PayPal Settings Page](/images/payments-checkout/paypal-settings.webp)
 
 3.  **Test Mode Warning:** If your store is in Test mode, a banner will remind you: "Your Store is in Test mode, Change Store's 'Order Mode' to 'Live' and update related settings to enable Live payment !!" This is crucial to switch to live mode for real transactions.
 4.  **Connect Your PayPal Account:**

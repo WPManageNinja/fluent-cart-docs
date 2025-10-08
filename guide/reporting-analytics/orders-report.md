@@ -19,7 +19,7 @@ The top of the dashboard gives you key controls to choose what data appears in t
 * **Advanced Filters:** Click the **filter** icon to break down the report by options like **Order Type** or specific **Products**. This helps you focus on detailed order data for a closer view.
 * **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
 
-   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/order-report-filter.png)
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/order-report-filter.webp)
 
 ### Key Order Metrics
 
@@ -42,7 +42,7 @@ Just below the KPIs, you’ll see the Order **Report Chart**. This bar chart giv
 
 You can adjust the chart view to show data by month or year. By default, it’s set to the standard format. To change it, use the dropdown menu located at the top-right corner of the chart section.
 
-   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/orders-report-chart.png)
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/orders-report-chart.webp)
 
 #### Customer Insights
 
@@ -61,7 +61,7 @@ This section provides geographical and temporal breakdowns of your order data.
 * **Shopping Country:** This table breaks down your orders and sales data by the customer's country, helping you identify your key international markets.
 * **Orders Grouped By Day and Hour:** This heatmap visualizes your store's busiest times, showing which days of the week and which hours of the day generate the most orders.
 
-   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/customer-insights.png)
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/customer-insights.webp)
 
 #### Additional Order Analytics
 
@@ -75,4 +75,4 @@ At the bottom of the report, you’ll find detailed charts that help you underst
 * **Order Value Distribution:** This chart shows how many orders are in different price ranges (like $0–100 or $100–200) so you can see which order amounts happen most often.
 * **Average Order Items:** A line chart that tracks the trend of the average number of items per order over the selected time period.
 
-   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/orders-report-by.png)
+   ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/orders-report-by.webp)

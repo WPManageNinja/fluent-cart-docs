@@ -19,7 +19,7 @@ Your orders are neatly organized in a table. Each row is a single order, and eac
 * **Order Type:** Differentiates between various types of transactions.
 * **Action Icons:** On the far right of each row, you'll see icons that let you quickly print things like order details.
 
-    ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/orders-list.png)
+    ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/orders-list.webp)
 
 ## Customizing Your View
 
@@ -38,7 +38,7 @@ Just click the **More Actions** button and select **Show Order Stats**. A summar
 
 If you want to hide this summary to get more space, just click **More Actions** and choose **Hide Order Stats** option.
 
-   ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/order-stats-overview.png)
+   ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/order-stats-overview.webp)
 
 ### Showing and Hiding Bulk Actions
 
@@ -84,7 +84,7 @@ Click the toggle button next to the search bar to turn on the **Advanced Filter*
 
 You can add multiple rules by clicking the **+OR** button to create very powerful and specific searches. When you're done, click **Apply**. To go back to the full list, just click **Reset**.
 
-![Screenshot of Advanced Filter Button](/images/store-management/viewing-and-filtering-orders/advanced-filter-button.png) 
+![Screenshot of Advanced Filter Button](/images/store-management/viewing-and-filtering-orders/advanced-filter-button.webp) 
 
 ### 3. Using the Search Bar
 

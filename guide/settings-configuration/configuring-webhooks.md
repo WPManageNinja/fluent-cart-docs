@@ -15,7 +15,7 @@ On the Webhooks screen, you will see a list of any webhooks you have already cre
 
 * To create a new one, click the **Add Webhook** button at the top right of the page. This will take you to the configuration screen.
 
-![Configuring Webhook](/images/settings-configuration/webhook/configuring-webhook-1.png)
+![Configuring Webhook](/images/settings-configuration/webhook/configuring-webhook-1.webp)
 
 ### Step 3: Configure the Webhook Feed
 
@@ -55,7 +55,7 @@ This is where you select the specific store event(s) that will fire this webhook
     * **Products:** `Product Shipped`
 
 
-![Configuring Webhook](/images/settings-configuration/webhook/configuring-webhook-2.png)
+![Configuring Webhook](/images/settings-configuration/webhook/configuring-webhook-2.webp)
 
 #### Step 4: Save and Activate the Webhook
 
@@ -74,5 +74,5 @@ For each webhook in the list, you can see its **Name**, the **Triggers** it's as
 * **Edit:** Click the **pencil icon** to open the configuration screen and make changes to the webhook's settings.
 * **Delete:** Click the **trash can icon** to permanently delete the webhook. A confirmation will be required.
 
-![Configuring Webhook](/images/settings-configuration/webhook/configuring-webhook-3.png)
+![Configuring Webhook](/images/settings-configuration/webhook/configuring-webhook-3.webp)
 

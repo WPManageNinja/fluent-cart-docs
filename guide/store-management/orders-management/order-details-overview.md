@@ -8,7 +8,7 @@ The Order Details screen in FluentCart provides a comprehensive breakdown of eac
 2.  You will see a list of all the orders your store has received.
 3.  To open the details for a specific order, simply click on its order number in the first column (labeled # Date). 
 
-    ![Screenshot of Order Details Page](/images/store-management/order-details-overview/order-3-details.png)
+    ![Screenshot of Order Details Page](/images/store-management/order-details-overview/order-3-details.webp)
 
 ## Understanding the Order Details Screen
 
@@ -66,7 +66,7 @@ Displays key details about the customer who placed the order.
 * **Labels:** Any custom labels assigned to the customer.
 * This panel also offers quick links to [edit customer information](/guide/store-management/customers-management/customer-details-overview#editing-customer-information), [manage shipping address](/guide/store-management/customers-management/customer-details-overview#managing-customer-addresses), and [manage billing address](/guide/store-management/customers-management/customer-details-overview#managing-customer-addresses).
 
-    ![Screenshot of Order Details Page](/images/store-management/order-details-overview/order-details.png)
+    ![Screenshot of Order Details Page](/images/store-management/order-details-overview/order-details.webp)
 
 ### 6. Notes
 

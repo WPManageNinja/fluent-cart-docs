@@ -27,7 +27,7 @@ This section allows you to provide or update the address where your orders will 
 * **Add New Address:** Click the **+ ADD NEW ADDRESS** button to add a new shipping address.
 * **Default Address:** You can view your saved shipping addresses. 
 
-![Screenshot of Purchase History](/images/customer-dashboard/customer-profile/customer-profile.png)
+![Screenshot of Purchase History](/images/customer-dashboard/customer-profile/customer-profile.webp)
 
 ## Edit an Existing Address
 
@@ -39,4 +39,4 @@ When you're finished with your changes, click the **Update Address** button or *
 
 After making any changes on this page, make sure you scroll to the bottom and click the main **Save Profile** button. This saves all your updates to your name and addresses
 
-![Screenshot of Purchase History](/images/customer-dashboard/customer-profile/edit-address.png)
+![Screenshot of Purchase History](/images/customer-dashboard/customer-profile/edit-address.webp)

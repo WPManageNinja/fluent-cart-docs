@@ -31,7 +31,7 @@ On this screen, you will see a list of all available email notifications. For ea
 
 To quickly activate or deactivate any notification, simply click the **toggle switch** in the "Enabled" column. The email will only be sent if the toggle is on.
 
-![Email Notification](/images/settings-configuration/email-notifications/email-notification-1.png)
+![Email Notification](/images/settings-configuration/email-notifications/email-notification-1.webp)
 
 
 ### Customizing an Email Notification
@@ -59,6 +59,6 @@ If you select **Customized Body**, a full rich text editor will appear.
 * **Shortcodes:** Just like with the subject line, you can use the **shortcode icon {;}** above the editor to insert dynamic placeholders for order, customer, and general store details. This allows you to create highly personalized and informative emails.
 * **Visual/Code View:** You can switch between the **Visual** editor and the **Code** editor (for HTML) to achieve more advanced customizations.
 
-![Email Notification Customization](/images/settings-configuration/email-notifications/email-notification-body.png)
+![Email Notification Customization](/images/settings-configuration/email-notifications/email-notification-body.webp)
 
 Once you are finished editing, click the **Update** button to save your changes. Your customized email will now be sent whenever its corresponding event is triggered.

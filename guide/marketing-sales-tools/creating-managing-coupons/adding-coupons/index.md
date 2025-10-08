@@ -15,7 +15,7 @@ You can select the type that best suits your promotional needs.
 
 In your WordPress dashboard, go to **FluentCart Pro** > **Coupons** in the left sidebar. On the **Coupons** page, click the **Add Coupon** button in the top-right corner.
 
-   ![Screenshot of Add Coupon Button](/images/marketing-sales-tools/add-coupon-button.png) 
+   ![Screenshot of Add Coupon Button](/images/marketing-sales-tools/add-coupon-button.webp) 
 
 This will open the **"Coupons > Add Coupon"** screen, where you can set up and customize your new coupon.
 
@@ -45,7 +45,7 @@ On the right side of the screen, you’ll find the **Schedule** box. This is whe
 * **Start Date & Time:** Set when you want the coupon to start working.
 * **Set end date & time:** Check this box and pick a date and time for the coupon to automatically expire.
 
-   ![Screenshot of Add Coupon Screen (Discount Value)](/images/marketing-sales-tools/discount-value.png)
+   ![Screenshot of Add Coupon Screen (Discount Value)](/images/marketing-sales-tools/discount-value.webp)
 
 ### 4. Usage Restrictions
 
@@ -56,7 +56,7 @@ Sometimes, you only want a coupon to work for certain products or if a customer 
 * **Include/Exclude Categories:** You can make the coupon valid for only certain product categories (like "T-Shirts") or exclude certain categories.
 * **Include/Exclude Products:** Similar to categories, you can pick specific products that the coupon will or will not work for.
 
-    ![Screenshot of Usage Restrictions](/images/marketing-sales-tools/usage-restrictions.png)
+    ![Screenshot of Usage Restrictions](/images/marketing-sales-tools/usage-restrictions.webp)
 
 ### 5. Maximum Discount Uses
 
@@ -74,7 +74,7 @@ Control how many times the coupon can be used.
 * **Internal Notes:** (Optional) You can leave a private note for yourself here, like "This coupon is for our newsletter subscribers."
 * **Stackable:** If you select **Yes**, customers can use this coupon with other coupons in the same purchase. If you select **No**, it can only be used by itself.
 
-    ![Screenshot of Add Coupon Screen (Fixed Type)](/images/marketing-sales-tools/additional-info.png)
+    ![Screenshot of Add Coupon Screen (Fixed Type)](/images/marketing-sales-tools/additional-info.webp)
 
 ## Saving Your Coupon
 
@@ -90,4 +90,4 @@ First, find the coupon you want to manage in your coupons list. On the far right
 * **Delete:** Choose this to permanently remove the coupon. A confirmation window will likely appear to make sure you don't delete it by accident.
 
 
-    ![Screenshot of Edit or Delete existing Coupons](/images/marketing-sales-tools/edit-delete-coupons.png)
+    ![Screenshot of Edit or Delete existing Coupons](/images/marketing-sales-tools/edit-delete-coupons.webp)

@@ -7,7 +7,7 @@ For any business selling recurring products or services, the **Subscriptions** d
 1.  From your WordPress dashboard, navigate to **FluentCart Pro**.
 2.  Click on **Subscriptions** in the top menu bar.
 
-![Managing Subscription](/images/product-types-creation/managing-subscription/managing-subscription-1.png)
+![Managing Subscription](/images/product-types-creation/managing-subscription/managing-subscription-1.webp)
 
 This will take you to the main Subscriptions screen, which lists all of your store's active and past subscriptions.
 
@@ -49,7 +49,7 @@ For even more specific searches, you can use the **Advanced Filter** to build co
 * **License Property**
 * **Labels**
 
-![Managing Subscription Advance Filter](/images/product-types-creation/managing-subscription/managing-subscription-2.png)
+![Managing Subscription Advance Filter](/images/product-types-creation/managing-subscription/managing-subscription-2.webp)
 
 You can combine multiple rules to create highly targeted lists of your subscribers.
 
@@ -64,4 +64,4 @@ This detailed view is broken down into several key sections:
 * **Customer Information:** This sidebar gives you a quick overview of the customer, including their contact details, their total lifetime value (LTV), and a direct link to their full customer profile.
 * **Labels:** Here, you can add internal labels to help you organize and segment your subscribers for your own reference (e.g., "VIP," "Early Adopter"). This is a great way to add internal notes and context to a subscriber's record.
 
-![Managing Subscription Detailed View](/images/product-types-creation/managing-subscription/managing-subscription-3.png)
+![Managing Subscription Detailed View](/images/product-types-creation/managing-subscription/managing-subscription-3.webp)

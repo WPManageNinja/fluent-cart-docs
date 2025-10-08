@@ -23,7 +23,7 @@ The Stripe settings page allows you to connect your store in both Test and Live 
 * **Connect with Stripe:** After selecting the appropriate tab (Test or Live), click the **Connect with stripe** button. This will redirect you to Stripe's website, where you will be prompted to log in and authorize the connection with FluentCart. This is a secure process that automatically syncs your account for the selected mode.
 
 
-    ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/stripe-settings.png)
+    ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/stripe-settings.webp)
 
 #### Step 3: Configure Webhooks
 
@@ -32,11 +32,11 @@ Webhooks are essential for the integration to function correctly. They allow Str
 1.  **Copy Your Webhook URL:** On the FluentCart Stripe settings page, you will see your unique **Webhook URL**. **Copy** this **URL** to your clipboard.
 2.  **Configure in Stripe:** Now, visit your [Stripe Account Dashboard](/https://dashboard.stripe.com/account/webhooks), click the **Developers** from the bottom-left corner, and press the **Webhooks**.
 
-    ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/developer-webhook.png)
+    ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/developer-webhook.webp)
 
 Here appears a new modal. Click on the **+Add destination** button
 
-   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/add-destination.png)
+   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/add-destination.webp)
 
 3. **Select the Important Events:** Now, choose the events recommended by **FluentCart** for **Stripe** to send to your **endpoint**. Under **Events**, click the **All events** tab. Click the checkboxes to select these specific events:
 
@@ -53,15 +53,15 @@ The Events recommended by FluentCart are briefly explained below:
 
 Once you select all the suggested **Webhook Events**, click the **Continue** button.
 
-   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/select-events.png)
+   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/select-events.webp)
 
 Then, select the **Webhook endpoint** and again click the **Continue** button.
 
-   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/webhook-endpoint.png)
+   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/webhook-endpoint.webp)
 
 Next, type a destination name, **paste** the **webhook URL** you copied earlier into the **Endpoint URL** field, and then click the “**Create Destination**” button.
 
-   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/create-destination.png)
+   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/create-destination.webp)
 
 #### Step 4: Activate and Save
 

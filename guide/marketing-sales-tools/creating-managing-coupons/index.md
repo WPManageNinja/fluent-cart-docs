@@ -21,7 +21,7 @@ The Coupons list table provides key information for each coupon at a glance:
 * **Expiry Date:** The date when the coupon expires.
 * **Actions:** Click the three vertical dots for action options. From here, you can delete or edit coupons.
 
-    ![Screenshot of Coupons List Page](/images/marketing-sales-tools/coupons-list.png)
+    ![Screenshot of Coupons List Page](/images/marketing-sales-tools/coupons-list.webp)
 
 ## Filtering Coupons
 

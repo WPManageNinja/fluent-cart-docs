@@ -11,20 +11,20 @@ Before you can connect your store, you first need to retrieve your API Key from 
 1.  Log in to your [Mailchimp account](https://login.mailchimp.com).
 2.  Click on your profile icon at the bottom left of the screen and navigate to **Account & billing > Extras > API keys**.
 
-![Mailchimp Account](/images/integrations/mailchimp/mailchimp-api-2.png)
+![Mailchimp Account](/images/integrations/mailchimp/mailchimp-api-2.webp)
 
 3.  If you want to create a new API key, click the **Create A Key** button.
 
-![Mailchimp Account](/images/integrations/mailchimp/mailchimp-api-3.png)
+![Mailchimp Account](/images/integrations/mailchimp/mailchimp-api-3.webp)
 
 4.  Give the key a descriptive name that you will recognize, such as "FluentCart Store," and click **Generate Key**.
 
-![Mailchimp Account](/images/integrations/mailchimp/mailchimp-api-4.png)
+![Mailchimp Account](/images/integrations/mailchimp/mailchimp-api-4.webp)
 
 
 5.  Mailchimp will display your new API key one time only. It is crucial to click **Copy To Clipboard** and save it in a secure location immediately, as you will not be able to view or copy it again.
 
-![Mailchimp Account](/images/integrations/mailchimp/mailchimp-api-5.png)
+![Mailchimp Account](/images/integrations/mailchimp/mailchimp-api-5.webp)
 
 #### Step 2: Connect Mailchimp to FluentCart
 
@@ -33,12 +33,12 @@ With your API key copied, you can now return to your WordPress dashboard to enab
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Integrations**.
 2.  Find **Mailchimp** in the list of available FluentCart Modules and click the **Manage** button.
 
-![FluentCart Mailchimp Settings](/images/integrations/mailchimp/integration-fluentcart-mailchimp-6.png)
+![FluentCart Mailchimp Settings](/images/integrations/mailchimp/integration-fluentcart-mailchimp-6.webp)
 
 3.  Paste your copied **Mailchimp API Key** into the designated field.
 4.  Click the **Save Settings** button. If the key is correct, you will see a success message confirming that the integration is active.
 
-![FluentCart Mailchimp Settings](/images/integrations/mailchimp/integration-fluentcart-mailchimp-7.png)
+![FluentCart Mailchimp Settings](/images/integrations/mailchimp/integration-fluentcart-mailchimp-7.webp)
 
 #### Step 3: Create a New Mailchimp Feed
 
@@ -48,7 +48,7 @@ Once the global connection is established, you can create specific automation "f
 2.  Click on the **Global Integration** tab.
 3.  Click the **Add Integration** button at the top right of the screen and select **Mailchimp Feed** from the dropdown menu.
 
-![FluentCart Mailchimp Settings](/images/integrations/mailchimp/integration-fluentcart-mailchimp-9.png)
+![FluentCart Mailchimp Settings](/images/integrations/mailchimp/integration-fluentcart-mailchimp-9.webp)
 
 
 #### Step 4: Configure the Mailchimp Feed
@@ -85,7 +85,7 @@ Here, you choose the specific store event that will trigger this automation. Thi
 
 * **Status:** Ensure the **Enable This feed** checkbox is checked. If this is not checked, the automation will be saved but will remain inactive.
 
-![FluentCart Mailchimp Settings](/images/integrations/mailchimp/integration-fluentcart-mailchimp-10.png)
+![FluentCart Mailchimp Settings](/images/integrations/mailchimp/integration-fluentcart-mailchimp-10.webp)
 
 Once you have configured all the settings to your liking, click the **Create Mailchimp Feed** (or a similar save) button. Your integration is now live, and FluentCart will automatically send new customer data to Mailchimp based on your chosen trigger and settings.
 

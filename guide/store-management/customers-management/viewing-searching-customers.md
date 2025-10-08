@@ -17,7 +17,7 @@ The Customers list table presents key information for each customer at a glance:
 * **Last Purchase Date:** Shows the date and time of their most recent purchase. 
 * **Customer Since:** Displays the date and time when the customer's record was first created in your system. 
 
-    ![Screenshot of Customers List Page](/images/store-management/viewing-searching-customers/customers-list.png)
+    ![Screenshot of Customers List Page](/images/store-management/viewing-searching-customers/customers-list.webp)
 
 ## Finding Specific Customers
 
@@ -25,7 +25,7 @@ Need to find a specific person? The search bar at the top of the page makes it f
 
 Simply type what you're looking for into the search bar. You can search by a customer's **ID**, **First Name**, **Last Name**, or **Email Address**. Hit **Enter**, and the list will instantly filter to show you the results.
 
-   ![Screenshot of Customer Search Bar](/images/store-management/viewing-searching-customers/customer-search.png) 
+   ![Screenshot of Customer Search Bar](/images/store-management/viewing-searching-customers/customer-search.webp) 
 
 ## Browsing Through Pages
 

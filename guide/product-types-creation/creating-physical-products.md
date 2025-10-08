@@ -16,12 +16,12 @@ By the end of this guide, you will be able to confidently list and manage any ph
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Products** in the left sidebar.
 2.  On the **Products** screen, click the **"Add Product"** button at the top right.
 
-    ![Screenshot of Add Product Button](/images/product-types-creation/Creating-Physical-Products/physical-product-1.png)
+    ![Screenshot of Add Product Button](/images/product-types-creation/Creating-Physical-Products/physical-product-1.webp)
     
 
 3.  This will open the **Add New Product** screen, where you'll need to enter the product name and choose the product type either Physical Product or Digital Product. Once selected, you'll be taken to the **Edit Product** page.
 
-    ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/Creating-Physical-Products/physical-product-2.png)
+    ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/Creating-Physical-Products/physical-product-2.webp)
 
 ### 1. Basic Product Information
 

@@ -12,11 +12,11 @@ If an order was marked as "Completed" but needs editing, you can use the "Back t
 1.  Navigate to the **[Order Details](/guide/store-management/orders-management/order-details-overview)** screen for the specific order you wish to edit.
 2.  In the top right corner of the Order Details screen, click the **"Edit"** button.
 
-    ![Screenshot of Order Details with Edit Button](/images/store-management/editing-existing-orders/order-details-edit-button.png)
+    ![Screenshot of Order Details with Edit Button](/images/store-management/editing-existing-orders/order-details-edit-button.webp)
 
 3.  The screen will transform into an editable interface, and the "Edit" button will change to **"Disable Editing"**.
 
-    ![Screenshot of Order in Editing Mode](/images/store-management/editing-existing-orders/order-editing-mode.png)
+    ![Screenshot of Order in Editing Mode](/images/store-management/editing-existing-orders/order-editing-mode.webp)
 
 ## Making Changes to an Order
 
@@ -29,12 +29,12 @@ You can add new products to the existing order:
 1.  In the "Order Items" section, locate the **"Search products"** field and the **"Browse"** button.
 2.  Use the search field to find the product(s) you wish to add, or click "Browse" to view your product catalog.
 
-    ![Screenshot of Add Product Search Field in Edit Mode](/images/store-management/editing-existing-orders/add-product-search-edit-mode.png)
+    ![Screenshot of Add Product Search Field in Edit Mode](/images/store-management/editing-existing-orders/add-product-search-edit-mode.webp)
 
 3.  A modal window will appear, listing your products. Select the desired products and their variations (if applicable) by checking the box next to them.
 5.  Click **"Add Items"** to add them to the order.
 
- ![Screenshot of Add Items Modal](/images/store-management/editing-existing-orders/add-items-modal.png)
+ ![Screenshot of Add Items Modal](/images/store-management/editing-existing-orders/add-items-modal.webp)
 
 ### 2. Modifying Existing Order Items
 
