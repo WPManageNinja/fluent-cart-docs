@@ -114,7 +114,7 @@ To add another version of your product, click the **+ Add more** button to creat
 
 ### 5. Inventory Management
 
-To track the stock for your product, first, make sure the **Inventory Management** toggle at the top of this section is enabled.
+To track the stock for your product, first, make sure the [**Stock Management**](/guide/product-types-creation/inventory-management.md) feature is enabled from the settings section.
 
 An inventory table will then be displayed, with a separate row for each product variation. This table helps you monitor your stock levels at a glance.
 
