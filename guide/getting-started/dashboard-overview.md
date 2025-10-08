@@ -87,13 +87,13 @@ This log shows a list of the newest important things that happened in your store
 A snapshot of your most recent customer orders, allowing for quick review.
 
 * Displays the Order ID, Creation Date, Customer Name, Number of Items, and Total Amount for each order.
-* Includes a **"View All Orders"** link to navigate to the full [Orders Management](/guide/store-management/orders-management/) screen for detailed management.
+* Includes a **View All** link to navigate to the full [Orders Management](/guide/store-management/orders-management/) screen for detailed management.
 
-### 7. Unfulfilled Orders
+### 7. Top Sold Products
 
-This section highlights orders that are still awaiting fulfillment, helping you prioritize shipping and delivery tasks.
+This widget highlights your current best-sellers, helping you to instantly see which products are most popular with your customers. It's a valuable tool for understanding product trends and making decisions about inventory and marketing.
 
-* Similar to Recent Orders, but focused on orders needing action.
+* Click the **View All** link to navigate to the **Products** section for more details of your products.
 
 ![Screenshot of Getting Started](/images/getting-started/admin-dashboard/order-heat-map.webp)
 
