@@ -19,7 +19,7 @@ The **Licensing Settings** feature in FluentCart allows you to manage your plugi
     ![Screenshot of Licensing Settings Tab](/images/settings-configuration/license/licensing-settings-tab.webp)
 
 :::tip Need a License Key?
-If you don't have a FluentCart license key yet, you can purchase one from [WPManageNinja](https://wpmanageninja.com/your-purchase-link-here).
+If you don't have a FluentCart license key yet, you can purchase one from [FluentCart](https://fluentcart.com/).
 :::
 
 ## License Status
