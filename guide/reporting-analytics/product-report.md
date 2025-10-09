@@ -21,10 +21,8 @@ At the top of the **Product Report**, you will find summary cards highlighting y
 
 * **Units Sold:** The total quantity of all product units sold.
 * **Gross Sale:** The total amount of money made from product sales before deductions.
-* **Refund:** The total monetary value of refunds for these products.
+* **Refunds:** The total monetary value of refunds for these products.
 * **Revenue:** The final income from products after refunds are subtracted.
-* **Customer Count:** The total number of unique customers who purchased products.
-* **Avg. Selling Price:** The average price of the products sold.
 
 Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against.
 
@@ -42,7 +40,7 @@ This chart gives you a picture of your overall product performance, visually com
 Below the main chart, a detailed comparison table allows you to analyze the performance of individual products between two specific months. Then, the table will then show:
 
 * **Product:** This column lists your individual products.
-* **Comparison:** This unique column uses a bar chart to visually compare the sales numbers for each of the two months you selected, making it easy to see which products are trending up or down.
+* **Sales:** This unique column uses a bar chart to visually compare the sales numbers for each of the two months you selected, making it easy to see which products are trending up or down.
 * **Change:** This column shows the exact percentage of change between the two months, color-coded for a quick view of performance.
 
    ![Screenshot of Product Performanance Comparison](/images/reporting-analytics/product/product-performanance.webp)
