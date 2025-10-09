@@ -27,16 +27,16 @@ At the top of the Orders Report, you will find summary cards highlighting your k
 
 * **Gross Sales:** The total revenue from all orders before any deductions.
 * **Refund:** The total amount of money refunded to customers.
-* **Net Revenue:** The revenue you've earned from orders after refunds are subtracted.
+* **Revenue:** The revenue you've earned from orders after refunds are subtracted (also known as net revenue).
 * **Orders:** The total number of orders placed.
 * **Items:** The total quantity of all product units sold.
-* **Avg. Order Gross:** The average amount of money a customer spends per order.
-* **Avg. Order Net:** The average value of an order after refunds are considered.
-* **Avg. Order Items:** The average number of items customers buy in a single order.
+* **Average Gross:** The average amount of money a customer spends per order, before refunds.
+* **Average Revenue:** The average value of an order after refunds are considered.
+* **Average Order Items:** The average number of items customers buy in a single order.
 
 Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against.
 
-#### Order Report Chart
+#### Order Chart
 
 Just below the KPIs, you’ll see the Order **Report Chart**. This bar chart gives you a clear visual of your store’s performance over time.
 
@@ -68,11 +68,11 @@ This section provides geographical and temporal breakdowns of your order data.
 At the bottom of the report, you’ll find detailed charts that help you understand customer behavior and order trends.
 
 * **Gross Sale by Day:** A bar chart showing total sales for each day of the week, so you can see which days earn the most.
-* **Item Count Distribution:** This chart shows how many orders have 1 item, 2 items, 3 items, etc., helping you understand how many items customers usually buy.
 * **Gross Sale by Hour:** A bar chart that breaks down sales performance for each hour of the day, allowing you to pinpoint your peak sales times.
-* **Time Between Order Created & Completed:** This chart shows how long it takes to complete an order, helping you see how quickly your team fulfills orders.
-* **Average Order Gross:** A line chart that tracks the trend of the average gross value of your orders over the selected time period.
+* **Item Count Distribution:** This chart shows how many orders have 1 item, 2 items, 3 items, etc., helping you understand how many items customers usually buy.
 * **Order Value Distribution:** This chart shows how many orders are in different price ranges (like $0–100 or $100–200) so you can see which order amounts happen most often.
+* **Average Order Gross:** A line chart that tracks the trend of the average gross value of your orders over the selected time period.
 * **Average Order Items:** A line chart that tracks the trend of the average number of items per order over the selected time period.
+* **Time between Order Created & Completed:** This chart shows how long it takes to complete an order, helping you see how quickly your team fulfills orders.
 
    ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/orders-report-by.webp)
