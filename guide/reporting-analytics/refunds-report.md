@@ -21,14 +21,14 @@ The top of the dashboard gives you key controls to choose what data appears in y
 
 At the top of the **Refunds Report**, you will find summary cards highlighting your key refund metrics for the selected period.
 
-* **Total Refunds:** This figure displays the total number of individual refund transactions processed.
-* **Total Refunded Amount:** This shows the total amount of money refunded to customers. For example, if you refunded $200 and $150, the total refunded amount is $350.
-* **Avg. Refunded Amount:** This calculates the average value of a single refund transaction.
+* **Refunds:** This figure displays the total number of individual refund transactions processed.
+* **Refunded:** This shows the total amount of money refunded to customers. For example, if you refunded $200 and $150, the total refunded amount is $350.
+* **Avgerage Amount:** This calculates the average value of a single refund transaction.
 * **Refund Rate:** This key metric shows the percentage of orders that resulted in a refund.
 
 Each metric also shows a percentage, telling you whether the value went up or down compared to the period you selected for comparison.
 
-#### Refund Report Chart
+#### Refunds Chart
 
 The main chart on this dashboard is the **Refund Report Chart**. It’s an area chart that helps you easily spot refund trends.
 
@@ -40,6 +40,6 @@ Below the main chart, you’ll find more detailed breakdowns that show the data 
 
 * **Weeks between an order created date and refund date:** This bar chart shows how long it takes for customers to request refunds. It helps you see if problems happen right away or later.
 
-* **Refund Grouped By:** This table breaks down refunds by things like **Billing Country**. It shows the number of **Refunds**, the total **Refunded Amount**, and the **Average Refund**, helping you find patterns in specific regions or customer groups.
+* **Refunds Grouped By:** This table breaks down refunds by things like **Billing Country**. It shows the number of **Refunds**, the total **Refunded Amount**, and the **Average Refund**, helping you find patterns in specific regions or customer groups.
 
 The Refunds Report goes deeper than sales data, showing you the reasons behind customer returns so you can improve your products and services.
