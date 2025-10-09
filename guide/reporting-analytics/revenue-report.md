@@ -23,15 +23,16 @@ At the top of the report, you’ll see a quick summary of your store’s sales a
 
 * **Gross Sales:** This represents the total revenue from all sales before any deductions are made. The percentage and trend arrow icon (▲ or ▼) next to the value show the increase or decrease compared to the comparison period.
 * **Refund:** This shows the total amount of money refunded. The percentage and trend arrow also show how this refund amount has changed compared to the selected period.
+* **Shipping:** This shows the total amount collected for shipping charges on orders. The percentage and trend arrow also show how this amount has changed compared to the selected period.
 * **Revenue:** This shows your total income after deductions like refunds have been subtracted. The percentage and trend arrow provide a direct comparison of your net revenue between the two selected periods.
 
 ### Detailed Revenue Analysis
 
 Below the key metrics, you’ll find detailed breakdowns of your store’s income. This section helps you see how well your store is performing.
 
-* **Revenue Report Chart:** This chart shows how your earnings have changed over time, making it easy to compare income from two different periods.
-* **Comparison Table:** This table provides the exact numbers from the chart, showing a period-by-period breakdown of your revenue and the percentage change.
-* **Revenue Breakdown by Year:** This table gives a yearly summary of your store, showing total orders, sales, refunds, and final revenue.
+* **Revenue Chart:** This chart shows how your earnings have changed over time, making it easy to compare income from two different periods.
+* **Revenue Comparison:** This table provides the exact numbers from the chart, showing a period-by-period breakdown of your revenue and the percentage change.
+* **Revenue Breakdown:** This table gives a yearly summary of your store, showing total orders, sales, refunds, and final revenue.
 
 The Revenue Report shows how your store is earning over time. You can easily see what’s working, understand your store’s earnings, and plan to make it grow.
 
