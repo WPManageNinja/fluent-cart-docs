@@ -27,7 +27,7 @@ You can also use the interactive controls in the top-right corner of the chart t
 
   ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-chart.webp)
 
-### Comparison Table
+### Subscription Comparison 
 
 The **Comparison** table provides the exact numbers from the visualization. This section is essential for seeing the precise data behind your growth trends.
 
