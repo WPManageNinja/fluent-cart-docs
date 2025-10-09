@@ -20,9 +20,9 @@ At the top of the Customer Report, you will find a summary card highlighting you
 
 * **Customer Growth:** This figure displays the net number of new customers acquired during the specified date range. The percentage indicates the growth or decline compared to the previous, equivalent time period you are comparing against.
 
-### Customer Growth Chart
+### New Customers
 
-The main visualization on this dashboard is the **Customer Growth Chart**. This is a powerful area chart that allows for easy trend analysis and comparison.
+The main visualization on this dashboard is the **New Customers**. This is a powerful area chart that allows for easy trend analysis and comparison.
 
 * **Visual Comparison:** The chart overlays two distinct areas—the **Current Range** (representing the period currently selected in the date filter) and the **Compare Range** (representing the historical period you are measuring against).
 * **Trend Analysis:** By showing the current period's customer acquisition alongside the past, you can quickly identify seasonal impacts, measure the success of specific marketing campaigns, and see if your acquisition rate is accelerating or slowing down.
