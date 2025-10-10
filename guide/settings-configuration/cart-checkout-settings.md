@@ -1,55 +1,39 @@
 # Cart & Checkout Settings
 
-The **Cart & Checkout** settings are fundamental to shaping your customer's journey, from the moment they add a product to their cart to the final confirmation of their purchase. Optimizing these options is key to reducing friction, increasing conversions, and creating a seamless buying experience. This section controls the visibility of the cart, user account creation policies, the fields on your checkout form, and the formatting of official receipts.
+The **Cart & Checkout** settings are fundamental to shaping your customer's journey, from the moment they add a product to their cart to the final confirmation of their purchase. Optimizing these options is key to reducing friction, increasing conversions, and creating a seamless buying experience.
 
-#### Accessing Cart & Checkout Settings
+This section controls the visibility of the cart, how user accounts are created, and the format of your official receipts.
 
-1. From your WordPress dashboard, navigate to **FluentCart Pro > Settings** and select the **Cart & Checkout** sub-menu under the **Store Settings** tab.
+## Accessing Cart & Checkout Settings
 
-    ![Screenshot of Additional Info Settings Tab](/images/settings-configuration/cart-checkout/cart-checkout.webp)
+1.  From your WordPress dashboard, navigate to **FluentCart Pro** > **Settings**.
+2.  Click on the **Store Settings** tab.
+3.  From the sub-menu, select **Cart & Checkout**.
 
+![Screenshot of Additional Info Settings Tab](/images/settings-configuration/cart-checkout/cart-checkout.webp)
 
-#### Configuration Options
+#### Cart Icon in Body
 
-This screen is divided into several sections to give you control over the entire checkout experience.
+Enable this to display a floating cart icon that remains visible on the side of the screen as the user scrolls. This provides a convenient, one-click path for customers to return to their cart from anywhere on your site.
 
-**Cart Display**
+#### User Account Creation Mode
 
-These settings control where and how the cart icon appears on your website, ensuring it is always accessible to your customers.
+This is a crucial setting that defines how customer accounts are handled during checkout. Choosing the right option has a big impact on the user experience.
 
-* **Cart Icon in Body:** Enable this to display a floating cart icon that remains visible on the side of the screen as the user scrolls. This acts as a persistent reminder of their cart's contents and provides a constant, one-click path to checkout.
+* **Create User Account Automatically after payment:** An account is automatically and seamlessly created for every customer after they complete their purchase. This is the recommended setting for stores selling subscriptions or licensed products, as it ensures customers have an account to manage their purchases without any extra steps.
+* **Give checkbox to create account on checkout page:** This adds an "Create an account?" checkbox to the checkout page. It gives customers the choice, balancing the benefits of account creation with the convenience of a faster checkout.
+* **No need to create account for onetime purchases:** This enables a full **"guest checkout"** experience for non-subscription products. It offers the lowest possible friction for new or one-time buyers and can significantly reduce cart abandonment.
 
-**User Account & Checkout Flow**
+#### Hide coupon field on checkout
 
-* **Require user to be logged in for checkout (Coming soon):** This planned feature will allow you to enforce that all customers must have an account and be logged in before they can complete a purchase, which is useful for members-only stores.
+Enable this option to remove the coupon code input field from the checkout page. This can be a strategic move to prevent customers from leaving your site to search for discount codes, a common cause of cart abandonment.
 
-* **User Account Creation Mode:** This is a crucial setting that defines how customer accounts are handled, directly impacting the user experience. You have three strategic options:
-
-  * **Create User Account Automatically after payment:** An account is automatically and seamlessly created for every customer post-purchase. This is the recommended setting for stores selling subscriptions or licensed products, as it ensures customers have an account to manage their purchases without any extra steps.
-
-  * **Give checkbox to create account on checkout page:** This provides a customer-centric approach by adding an "Create an account?" checkbox to the checkout page. It empowers customers to choose, balancing the benefits of account creation with the convenience of a quicker checkout.
-
-  * **No need to create account for onetime purchases:** This enables a full "guest checkout" experience, offering the lowest possible friction for new or one-time buyers. By not requiring an account, you can significantly reduce cart abandonment.
-
-**Checkout Fields**
-
-These options allow you to tailor the information you collect on the checkout page.
-
-* **Show additional address fields:** When enabled, this will display more extensive address fields, such as "Address Line 2" or "Company Name." This is particularly useful for B2B transactions or for customers with complex shipping addresses.
-
-* **Hide coupon field on checkout:** Enable this option to remove the coupon code input field from the checkout page. This can be a strategic move to prevent customers from leaving your site to search for discount codes, a common cause of cart abandonment.
-
-**Receipt Settings**
+#### Receipt Settings
 
 This section allows you to customize the numbering format for your store's official receipts, which helps with branding and organization.
 
-* **Minimum Receipt Number:** Set the starting number for your receipts. Many businesses set this to a higher number (e.g., `1001`) to appear more established than a store starting at receipt #1.
-
+* **Minimum Receipt Number:** Set the starting number for your receipts. Many businesses set this to a higher number (e.g., 1001) to appear more established than a store starting at receipt #1.
 * **Next Receipt Number:** This is a non-editable field that conveniently shows you the number that will be assigned to the very next receipt generated by your store.
-
-* **Receipt Prefix:** Enter a custom prefix that will be added before every receipt number (e.g., `FC-`, `INV-`). This is excellent for branding and makes your receipts instantly recognizable (e.g., `YOURBRAND-1001`).
-
-#### Saving Your Changes
+* **Receipt Prefix:** Enter a custom prefix that will be added before every receipt number (e.g., INV-, FC-). This is excellent for branding and makes your receipts instantly recognizable (e.g., YOURBRAND-1001).
 
 After you have configured these settings to your liking, click the **Save** button to apply the changes to your store.
-
