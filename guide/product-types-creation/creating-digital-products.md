@@ -39,11 +39,11 @@ By the end, you will be able to confidently sell and manage any downloadable ite
 Categorize and type your digital product for better structured organization.
 
 * **[Product Categories:](/guide/product-types-creation/creating-managing-product-categories/index.md)**
-    * Assign the product to relevant categories (e.g., "E-Books", "Software"). Click **"+ Add More Category"** to assign additional categories.
+    Assign the product to relevant categories (e.g., "E-Books", "Software"). Click **"+ Add More Category"** to assign additional categories.
 * **[Product Types:](/guide/product-types-creation/creating-managing-product-types/index.md)**
-    * Assign the product to one or more relevant product types. Ensure "Digital" is selected or added here. Click **"+ Add More Type"** to assign additional types.
+    Assign the product to one or more relevant product types. Ensure "Digital" is selected or added here. Click **"+ Add More Type"** to assign additional types.
 * **[Product Brand:](/guide/product-types-creation/creating-managing-product-brand.md)** 
-    *Assign the product to relevant brands. Click to **"+Add Brand”** to assign additional brands.
+    Assign the product to relevant brands. Click to **"+Add Brand”** to assign additional brands.
 
 ### 4. Pricing & Variations
 
