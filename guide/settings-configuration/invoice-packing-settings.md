@@ -2,7 +2,9 @@
 
 The **Invoice & Packing** section in FluentCart allows you to customize the templates for various printable documents essential for order fulfillment. This enables you to create branded and consistent documents, such as invoices and packing slips, that accompany your products.
 
+::: info
 Please note that the templates on this page are marked as being under active development, so their functionality may evolve.
+:::
 
 ### Step 1: Navigate to Invoice & Packing Settings
 
