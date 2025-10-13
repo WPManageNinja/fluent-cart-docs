@@ -8,6 +8,8 @@ Selling to customers within the European Union (EU) requires careful handling of
 2.  Click on the **Tax & Duties** tab.
 3.  From the sub-menu, select **European Union**.
 
+![European Union Settings](/guide/public/images/tax/european-union/european-union-settings.png)
+
 ### Choosing Your VAT Collection Method
 
 The first time you visit this screen, FluentCart will launch a setup wizard to help you choose how you want to collect VAT in the EU. This choice is crucial as it determines how tax rates are applied to your customers.
