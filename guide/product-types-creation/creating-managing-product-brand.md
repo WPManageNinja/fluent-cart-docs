@@ -8,50 +8,42 @@ This guide will show you how to create, manage, and assign brands to your produc
 
 ## Creating a New Brand
 
-To get started, you first need to create your brands. This process is straightforward and allows you to build out your brand library before assigning them to products.
+To get started, you first need to create your brands. This process is straightforward and allows you to build out your brand library before assigning it to products.
 
-1.  From your WordPress dashboard, go to **FluentCart Pro → Product Brands**.
-
-2.  This will take you to the main Brands screen, where you will find a list of all your existing brands. To add a new one, click the **Add New Brand** button at the top right.
+1. From your WordPress dashboard, go to **FluentCart Pro → Brands**.
+2. This will take you to the main **Brands** screen. On the left side, you will see the "**Add New Brand**" form.
 
 ![Product Brand](/images/product-types-creation/creating-managing-brand/product-brand-1.webp)
 
-3.  An "Add New Brand" pop-up window will appear. Fill in the details for your brand:
+Fill in the details for your brand:
 
-    * **Name:** Enter the brand's name exactly as you want it to appear to your customers. This is the primary identifier for the brand.
+ * **Name:** Enter the brand's name exactly as you want it to appear to your customers. This is the primary identifier for the brand.
+ * **Slug:** This is the URL-friendly version of the name, used in the web address for the brand's archive page. It should be all lowercase and contain only letters, numbers, and hyphens. FluentCart will automatically generate this from the name if you leave it blank.
+ * **Parent Brand:** This feature lets you create and organize brand levels. For example, if you sell a specific product line from a larger company, you could make "Air Jordan" a child of the "Nike" parent brand. For a top-level brand, simply leave this as "None."
+ * **Description:** Add a short description for the brand. Depending on your website's theme, this description may be displayed on the brand's archive page, providing customers with more context.
 
-    * **Slug:** This is the URL-friendly version of the name, used in the web address for the brand's archive page. It should be all lowercase and contain only letters, numbers, and hyphens. FluentCart will often generate this automatically from the name, but you can customize it.
-
-    * **Parent Brand:** This powerful feature allows you to create brand hierarchies. For example, if you sell a specific product line from a larger company, you could make "Air Jordan" a child of the "Nike" parent brand.
-
-    * **Description:** Add a short description for the brand. Depending on your website's theme, this description may be displayed on the brand's archive page, providing customers with more context and improving SEO.
-
-4.  Click the **Add New Brand** button to save the brand. It will now appear in your main brand list.
+Click the **Add New Brand** button to save the brand. It will now appear in the list on the right.
 
 ### Managing Existing Brands
 
-The main **Product Brands** screen provides a central dashboard to manage all the brands you have created.
+The table on the right side of the **Brands** screen is your command center for managing all the brands you've created.
 
-* The table displays each brand's **Name**, **Description**, **Slug**, and the **Count** of products assigned to it. This count is a useful way to see at a glance how popular each brand is in your store.
+This list gives you a quick overview of each brand, showing its **Name**, **Description**, **Slug**, and the **Count** of products assigned to it. The "Count" is a handy way to see which brands are most popular in your store.
 
-* Use the **Search** bar to quickly find a specific brand, which is especially helpful for stores with a large and growing catalog of brands.
+To manage your brands:
 
-* Click the **column icon** on the right to customize the table view. You can show or hide columns to declutter the interface and focus only on the information you need.
-
-* Click the **sort icon** to organize the brand list by different criteria. For example, you can sort alphabetically by Name or numerically by Count to easily identify your most popular or unused brands.
+**Sort the List:** You can organize the list by clicking the small arrows next to a column title, such as "Name" or "Count." This makes it easy to find brands alphabetically or see which ones have the most products.
+**Edit, Delete, and More:** When you move your mouse over a brand in the list, a set of options will appear right below its name:
+  * **Edit:** This takes you to a separate screen to change all the brand's details.
+  * **Quick Edit:** Allows you to make fast changes to the name and slug without leaving the page.
+  * **Delete:** Permanently removes the brand.
+  * **View:** Lets you see how the brand's page looks on your live website.
 
 #### Assigning Brands to a Product
 
 Once your brands are created, you can assign them to your products.
 
-1.  Navigate to the product you want to assign a brand to by going to **FluentCart Pro → Products** and clicking on a product to open its editor.
-
-2.  On the product edit page, look for the **Product Taxonomies** section on the right-hand side of the screen.
-
-3.  In the **Brands** box, you can assign one or more brands to the product:
-
-    * Check the box next to any existing brand in the list.
-
-    * Click the **+ Add Brand** link to create a new brand on the fly and assign it simultaneously, without needing to leave the product editor.
-
-4.  After assigning the brand(s), click the **Update** or **Publish** button at the top right of the page to save your changes. The brand will now be associated with that product.
+1. Navigate to the product you want to assign a brand to by going to **FluentCart Pro → Products** and clicking on a product to open its editor.
+2. On the product edit page, look for the Brands section on the right-hand side of the screen.
+3. In the **Brands** box, you can assign one or more brands to the product by checking the box next to any existing brand in the list.
+4. After assigning the brand(s), click the **Update** or **Publish** button at the top right of the page to save your changes. The brand will now be associated with that product.
