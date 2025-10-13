@@ -1,48 +1,38 @@
-# Creating & Managing Product Categories
+## Creating & Managing Product Categories
 
-In FluentCart, product categories help you group similar items together. This makes it easier for customers to browse your store and find what they are looking for.
+Product categories are the primary way to group and organize the products in your store. A well-structured set of categories makes it easy for customers to browse your offerings, find what they're looking for, and discover new items.
 
-For example, you can create categories like "Men's Clothing," to organize your products effectively. Well-organized categories can improve the shopping experience and help increase sales.
+### Accessing Product Categories
 
-## Accessing Product Categories
+1.  From your WordPress dashboard, navigate to **FluentCart**.
+2.  In the left-hand menu, click on **Categories**.
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Product Categories** in the left WordPress sidebar.
-2.  This will open the **Categories** screen, displaying a table of all your existing product categories.
+This will take you to the main Categories screen, where you can add new categories and manage your existing ones.
 
-    ![Screenshot of Product Categories List Page](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-1.webp)
+### How to Add a New Product Category
 
-## Understanding the Categories List Table
+On the left side of the Categories screen, you will find the form for adding a new category.
 
-The Categories list table provides key information for each category:
+Here’s a breakdown of the fields:
 
-* **Name:** The descriptive name of the product category (e.g., "Software", "Mens Shoes").
-* **Description:** A brief description of the category.
-* **Slug:** The URL-friendly version of the category name, automatically generated but editable.
-* **Count:** The number of products currently assigned to that specific category.
+* **Name:** Enter the name of your category as you want it to appear to customers on your storefront (e.g., "Digital Planners").
+* **Slug:** This is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens. FluentCart will automatically create a slug from the name, but you can edit it if needed.
+* **Parent Category:** This allows you to create a hierarchy of categories. For example, you could create a "Clothing" category and then create "T-Shirts" and "Hoodies" as child categories underneath it. To create a top-level category, leave this set to "None."
+* **Description:** (Optional) You can add a short description for the category. Depending on your theme, this might be displayed at the top of the category page on your storefront.
 
-## Creating a New Product Category
+After filling in the details, click the **Add New Category** button. Your new category will now appear in the list on the right.
 
-1.  On the **Categories** screen, click the **"Add New Category"** button at the top right.
+![Add New Categories](/guide/public/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-1.webp)
 
-    ![Screenshot of Add New Category Button](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-2.webp) 
+### Managing Existing Categories
 
-2.  An **"Add New Category"** modal window will appear.
+The table on the right side of the screen lists all your existing product categories. From here, you can quickly see the category's **Name, Description, Slug,** and a **Count** of how many products are in it.
 
-   
+To manage a category, hover your mouse over its name, and a set of action links will appear:
 
-3.  Fill in the following details for your new category:
-    * **Name:** Enter the desired name for your category (e.g., "E-Books", "Women's Apparel"). This field is required.
-    * **Slug:** (Optional) Enter a URL-friendly version of the name. If left blank, FluentCart will automatically generate one from the name.
-    * **Parent Category:** Use the dropdown labeled "Select" to choose an existing category if you want this new category to be a sub-category. If it's a top-level category, leave this as "Select".
-    * **Description:** Provide a brief description of what products this category will contain.
+* **Edit:** Click this to open a dedicated editor for that category, where you can change its name, slug, parent, or description.
+* **Quick Edit:** This allows you to make quick changes to the name and slug without leaving the main screen.
+* **Delete:** This will permanently remove the category.
+* **View:** This will take you to the public-facing category page on your storefront, showing all the products that belong to it.
 
-4.  Click the **"Add New Category"** button within the modal to save your new category.
-5.  To cancel, click the **"Cancel"** button.
-
- ![Screenshot of Add New Category Modal](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-3.webp)
-
-## Searching and Filtering Categories
-
-* **Search Bar:** Use the search bar at the top of the Categories list to "Search by name & hit enter." to quickly find specific categories.
-* **Sorting:** You can sort the list by clicking the up/down arrows next to the column headers. 
-* **Edit & Delete:** To edit or delete a category, click the three-dot menu next to the category name. From there, select either Edit or Delete based on your need. 
+You can also use the **Bulk Actions** dropdown menu at the top of the list to delete multiple categories at once.
