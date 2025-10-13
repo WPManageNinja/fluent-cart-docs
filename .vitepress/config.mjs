@@ -335,7 +335,8 @@ export default defineConfig({
             { text: 'Webhook Integrations', link: '/guide/integrations/webhook-integration' },
             { text: 'FluentCRM Integration', link: '/guide/integrations/fluentcrm-integration' },
             { text: 'FluentCommunity Integration', link: '/guide/integrations/fluentcommunity-integration' },
-            { text: 'Amazon S3 Integration', link: '/guide/integrations/amazon-s3-integration' }
+            { text: 'Amazon S3 Integration', link: '/guide/integrations/amazon-s3-integration' },
+            { text: 'FlunetAffiliate Integration', link: '/guide/integrations/fluentaffiliate-integration.md' }
           ]
         },
         {
