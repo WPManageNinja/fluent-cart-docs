@@ -283,7 +283,8 @@ export default defineConfig({
               link: '/guide/tax-&-duties/tax-&-duties-overview.md',
               items: [
                 { text: 'Configuring Tax & Classes', link: '/guide/tax-&-duties/configuration-and-classes.md' },
-                { text: 'Setting Up Tax Rates', link: '/guide/tax-&-duties/tax-rates.md' }
+                { text: 'Setting Up Tax Rates', link: '/guide/tax-&-duties/tax-rates.md' },
+                { text: 'Tax Filing', link: '/guide/tax-&-duties/tax-filing.md' }
 
               ]
             },
