@@ -9,20 +9,19 @@ Because FluentCart leverages native WordPress features like blocks and shortcode
 While FluentCart should work well with almost any standard theme, we have officially tested and confirmed full compatibility with the following popular themes and page builders:
 
 #### Popular Page Builders & Frameworks:
-* Divi
+
 * Bricks
-* Hello Elementor
 
 #### Popular Modern & Block-Based Themes:
+* Divi
 * Kadence
 * Astra
 * GeneratePress
 * Blocksy
 * Twenty Twenty-Five (and other default WordPress themes)
-
-#### Popular Classic Themes:
 * Storefront
 * OceanWP
+* Hello Elementor
 
 ### What If My Theme Isn't on the List?
 
