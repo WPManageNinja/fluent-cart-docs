@@ -205,7 +205,6 @@ export default defineConfig({
                 { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' },
                 { text: 'Managing Subscriptions', link: '/guide/product-types-creation/managing-subscriptions' },
                 { text: 'Creating & Managing Product Categories', link: '/guide/product-types-creation/creating-managing-product-categories/'},
-                { text: 'Creating & Managing Product Types',link: '/guide/product-types-creation/creating-managing-product-types/'},
                 { text: 'Creating & Managing Product Brands',link: '/guide/product-types-creation/creating-managing-product-brand/'}
               ]
             },
@@ -333,6 +332,7 @@ export default defineConfig({
           text: 'Integrations',
           collapsed: true,
           items: [
+            { text: 'Webhook Integrations', link: '/guide/integrations/webhook-integration' },
             { text: 'FluentCRM Integration', link: '/guide/integrations/fluentcrm-integration' },
             { text: 'FluentCommunity Integration', link: '/guide/integrations/fluentcommunity-integration' },
             { text: 'Amazon S3 Integration', link: '/guide/integrations/amazon-s3-integration' }

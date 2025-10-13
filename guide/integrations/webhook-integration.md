@@ -1,4 +1,4 @@
-# Configuring Webhooks
+# Webhook Integration
 
 Webhooks are a powerful tool for developers and advanced users that allow you to send real-time data from your FluentCart store to external applications and services. When a specific event occurs in your store (like a new order), FluentCart can automatically send a notification containing relevant data to a URL you specify.
 
