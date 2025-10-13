@@ -78,6 +78,9 @@ This glossary defines common terms used throughout the FluentCart documentation 
 * **Hybrid Product:**
   A single product listing that offers multiple types of the same item. For example, offering a book as a physical hardcover, a digital e-book, and a subscription to related content, all from one product page.
 
+* **Headless Commerce:** 
+    An advanced setup where the front-end of your store (the "head," like a custom website or mobile app) is separate from the back-end (FluentCart). Developers use the **REST API** to connect the two, allowing for highly custom and high-performance storefronts while FluentCart manages all the e-commerce logic (products, orders, payments) in the background.
+
 **I**
 
 * **Inventory Management:**
@@ -188,5 +191,5 @@ This glossary defines common terms used throughout the FluentCart documentation 
 
 **T**
 
-* **Tax**
+* **Tax:**
     A tax is a charge imposed by a government on the sale of goods and services. In FluentCart, this refers to the sales tax, VAT (Value Added Tax), or GST (Goods and Services Tax) that you are required to collect from customers. You can manage these charges through **Tax Classes** (for grouping products with similar tax rules) and **Tax Rates** (for defining the specific tax percentages for different regions).

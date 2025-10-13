@@ -62,6 +62,10 @@ You can create custom classes to better organize your products and handle comple
 
 ![Configuration and Classes](/guide/public/images/tax/configuration-classes/configuration-classes-3.webp)
 
+::: info 
+For a tax class to work correctly, you must complete two key steps: first, assign this class to a product (either by linking it to a Product Category here or by editing an individual product), and second, make sure you set a specific Tax Rate for this class in the country's [regional settings](/guide/tax-&-duties/tax-rates.md) where it applies.
+:::
+
 #### Example Use Case
 
 Imagine you sell clothing that has a standard tax rate, but you are running a special promotion on a specific category of t-shirts that should be tax-exempt.
