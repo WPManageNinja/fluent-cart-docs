@@ -17,6 +17,8 @@ If you have already selected **"Collect using a One Stop Shop (OSS) registration
 
 Click **Save**.
 
+![OSS Settings](/guide/public/images/tax/european-union/oss/oss-settings.png)
+
 Once you save these settings, FluentCart takes care of the rest. It will now automatically apply the correct, up-to-date VAT rates based on each customer's country, all managed under your single OSS registration.
 
 ### Managing Your OSS Configuration
@@ -30,13 +32,20 @@ FluentCart automatically uses the official standard, reduced, and zero tax rates
 **Example Use Case:**
 Imagine a country announces a temporary change to its "reduced" VAT rate from 9% to 7% for a promotional period, but the official databases used for automatic updates haven't caught up yet. You can use an override to apply the correct rate immediately.
 
-1.  Click the **Add Override** button.
+1.  Click the **Add Custom Rate** button.
+
+![OSS Settings](/guide/public/images/tax/european-union/oss/oss-settings-1.png)
+
 2.  A pop-up window will appear. Select the **Country** you want to override (e.g., Bulgaria).
 3.  You will see the default rates for that country's tax classes (e.g., standard 20%, reduced 9%, zero 0%). You can now enter your own custom percentage for one or more of these classes.
 4.  Click **Save Overrides**.
 
 The country will now appear in the **"Tax Overrides"** list at the top of the page, indicating that it is using your custom rates instead of the defaults. You can **Edit** or **Delete** this override at any time using the action icons on the right.
 
+![OSS Settings](/guide/public/images/tax/european-union/oss/oss-settings-2.png)
+
 #### Country Rates
 
 This section provides a convenient, collapsible list of all the EU countries where you are collecting VAT. You can expand any country to view the specific standard, reduced, and zero tax rates that FluentCart is currently applying automatically. This is a great way to quickly verify the rates being used across the EU without having to look them up individually.
+
+![OSS Settings](/guide/public/images/tax/european-union/oss/oss-settings-3.png)

@@ -20,7 +20,11 @@ If you selected **"Collect using your home country registration"** from the main
 
 Click **Save**.
 
+![European Home Country VAT](/guide/public/images/tax/european-union/home-country/home-country-tax-1.png)
+
 Once you save these settings, FluentCart will be configured to handle your EU VAT obligations correctly.
+
+![European Home Country VAT](/guide/public/images/tax/european-union/home-country/home-country-tax-2.png)
 
 ### How It Works at Checkout
 
