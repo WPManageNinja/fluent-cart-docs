@@ -43,11 +43,10 @@ To create a product with a digital license in FluentCart, you must first create 
 Categorize and type your product for better organization.
 
 * **Product Categories:**
-    * Assign the product to relevant categories (e.g., "Software"). Click **"+ Add More Category"** to assign additional categories.
-* **Product Types:**
-    * Assign the product to relevant product types. Ensure **"Digital"** and/or **"Subscription"** (if recurring license) are selected or added here. Click **"+ Add More Type"** to assign additional types.
+    Assign the product to relevant categories (e.g., "Software"). Click **"+ Add More Category"** to assign additional categories.
+
 * **Product Brand:** 
-    *Assign the product to relevant brands. Click to **"+Add Brand”** to assign additional brands.
+    Assign the product to relevant brands. Click to **"+Add Brand”** to assign additional brands.
 
 ### 5. Pricing & Variations
 
