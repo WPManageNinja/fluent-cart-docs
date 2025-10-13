@@ -4,75 +4,68 @@ Webhooks are a powerful tool for developers and advanced users that allow you to
 
 This is useful for creating custom integrations, connecting to services that aren't natively supported, or building your own data processing workflows. This guide will walk you through setting up a new webhook.
 
-### Step 1: Navigate to Webhooks
+### Step 1: Navigate to Global Integartions
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
-2.  Click on the **Webhooks** tab from the left-hand menu.
+First, we need to go to the right screen in your WordPress dashboard.
 
-### Step 2: Add a New Webhook
+1. Navigate to **FluentCart Pro → Settings**.
+2. From the side menu, click on **Global Integrations**.
 
-On the Webhooks screen, you will see a list of any webhooks you have already created.
+### Step 2: Add a New Webhook Integration
 
-* To create a new one, click the **Add Webhook** button at the top right of the page. This will take you to the configuration screen.
+Here, you’ll see a page where all your connections will live. To get started, click the **Add Integration** button in the top right corner and choose **Webhook** from the dropdown list.
 
-![Configuring Webhook](/images/settings-configuration/webhook/configuring-webhook-1.webp)
-
-### Step 3: Configure the Webhook Feed
-
-This screen contains all the settings required to define what data is sent, where it's sent, and what triggers it.
-
-**1. Basic Configuration**
-
-* **Name:** Give your webhook a descriptive name for internal reference (e.g., "Send New Orders to Accounting App").
-* **Request URL:** This is the most important field. Enter the unique URL provided by the external service that will receive the data.
-
-**2. Request Settings**
-
-* **Request Method:** Choose the HTTP method for the request. **POST** is the most common method for sending data, but GET, PUT, PATCH, and DELETE are also available for different use cases.
-* **Request Format:** Select the format for the data payload. **JSON** is the modern standard and is recommended for most integrations.
-
-**3. Request Headers (Optional)**
-
-* Headers are used to send extra information with the request, often for authentication (like an API key). You can choose:
-    * **No Headers:** If the receiving service doesn't require any.
-    * **With Headers:** To add custom key-value pairs.
-
-**4. Request Body**
-
-This section defines the actual data that will be sent in the webhook payload.
-
-* **All Data:** Select this to send the complete, default data object associated with the trigger event.
-* **Selected Fields:** Choose this option for more control. You can specify exactly which data points to send by providing a **Field Name** and a corresponding **Field Value**. Click the **plus icon (+)** to add more fields.
-
-**5. Event Trigger**
-
-This is where you select the specific store event(s) that will fire this webhook.
-
-* Click into the **Select event triggers** box to see a dropdown list of available triggers. You can select one or more events.
-* **Available Triggers include:**
-    * **Orders:** `Order Created`, `Order Completed / Paid`, `Order Canceled`, `Order Refunded`
-    * **Subscriptions:** `Subscription Canceled`, `Subscription Renewed`, `Subscription Expired`
-    * **Products:** `Product Shipped`
+![Add Integration](/images/integrations/webhook/add-integration.webp)
 
 
-![Configuring Webhook](/images/settings-configuration/webhook/configuring-webhook-2.webp)
+### Step 3: Configure the Webhook
+
+This is where you'll tell FluentCart what data to send, where to send it, and when.
+
+ * **Integration Title:** Give your webhook a name that's easy to remember, like "Send New Sales to Slack" or "Sync Orders with Accounting."
+ * **Request URL:** This is the most important part. Paste the unique URL from the other application where you want to send the data.
+ * **Request Method:** This tells the receiving server what kind of action to perform. POST is the most common method for sending new data. You can also choose **GET**, **PUT**, **PATCH**, or **DELETE** for other advanced uses.
+ * **Request Format:** Choose how your data will be structured. You have two options:
+    * **JSON:** This is the modern standard for most web applications and is usually the best choice.
+    * **Form Data:** Use this if the receiving service specifically requires data in this format.
+ * **Request Headers (Optional):** Some services require a special key or code (like an API key) to accept data. You can add these here.
+    * **No Headers:** Choose this if none are needed.
+    * **With Headers:** Select this to add custom headers. Simply enter a **Header Name** and its corresponding **Header Value**. You can add more by clicking **+ Add more**.
+
+ * **Request Body:** This is the actual information that will be sent.
+    * **All Data:** The easiest option. This sends the complete set of default information related to the event.
+    * **Selected Fields:** This gives you full control. You can choose exactly which pieces of data to send. For each field, you'll define a **Payload Key** (the name of the data field) and then select the specific Value you want to send from the dropdown.
+ * **Event Trigger:** This is the "when." Click the **Select Event** box to choose the specific action in your store that will trigger this webhook. You can select one or more events.
+
+Some of the available triggers include:
+ * Order Paid (Payment / Subscription)
+ * Order Canceled
+ * Order Refunded (Full)
+ * Subscription Activated
+ * Subscription Renewed
+ * Order Shipped
+ * Order Delivered
+ This screen contains all the settings required to define what data is sent, where it's sent, and what triggers it.
+
+![Configuring Webhook](/images/integrations/webhook/configuring-webhook.webp)
 
 #### Step 4: Save and Activate the Webhook
 
 * **Enable This Feed:** At the top right of the screen, ensure the toggle is switched on to make the webhook active.
-* Click the **Save Feed** button at the bottom to save your configuration.
+* Click the **Create Webhook Feed** button at the bottom to save your configuration.
 
-Your webhook is now live. When one of the selected trigger events occurs in your store, FluentCart will automatically send the configured data to your specified Request URL.
+That's it! Your webhook is now live. Whenever the event you selected occurs, FluentCart will automatically send the data you configured to your URL.
 
 ### Managing Your Webhooks
 
 After creating a webhook, it will appear in a list on the main Webhooks screen. This dashboard provides a clear overview of all your webhooks and allows you to manage them easily.
 
-For each webhook in the list, you can see its **Name**, the **Triggers** it's assigned to, and several management options:
+For each webhook, you can:
 
-* **Enable/Disable Toggle:** Use the toggle switch in the "Enabled" column to quickly activate or deactivate a webhook without deleting it.
-* **Edit:** Click the **pencil icon** to open the configuration screen and make changes to the webhook's settings.
-* **Delete:** Click the **trash can icon** to permanently delete the webhook. A confirmation will be required.
+ * **See its Status:** The "Enabled" column shows if a webhook is active or not.
+ * **Enable/Disable:** Use the toggle to quickly turn a webhook on or off without deleting it.
+ * **Edit:** Click on the webhook's title or an edit icon to change its settings.
+ * **Delete:** Use the trash can icon to permanently remove a webhook.
 
-![Configuring Webhook](/images/settings-configuration/webhook/configuring-webhook-3.webp)
+![Configuring Webhook](/images/integrations/webhook/managing-your-webhook.webp)
 
