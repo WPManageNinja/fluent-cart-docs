@@ -44,6 +44,10 @@ You can add more custom rates for different products or categories by clicking t
 
 ## How to Set Up a Coupon Referral
 
+This branded coupon code feature gives a special discount code to a partner, like a blogger or a social media influencer, and the affiliate can know exactly how many sales they brought in. FluentCart makes this incredibly simple.
+
+You give this coupon code directly to one of your affiliates. This way, whenever a customer uses that specific coupon, your affiliate automatically gets credit for the sale. It’s a perfect way to track your collaborations and make sure your partners are rewarded for the business they send your way, all without any extra work. To create this coupon, follow the steps below in your FluentCart.
+
 1.  In your WordPress dashboard, navigate to **FluentCart Pro > Coupons**.
 2.  Create a new coupon or edit an existing one.
 3.  On the coupon edit screen, find the **FluentAffiliate** section on the right-hand side.
