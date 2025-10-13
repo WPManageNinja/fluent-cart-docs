@@ -54,8 +54,8 @@ For more detailed control, use the **Advanced Filter** option:
 1.  Click the **"Advanced Filter"** button located at the top right of the Products screen. 
 2.  The Advanced Filter section will expand, allowing you to define your filtering criteria, such as: 
     * **Order Property:** Filter products based on properties related to orders they are part of.
-    * **Product Variation:** Filter products by their variations, including "**Variation Count**."
-    * **Taxonomies:** Filter products by their classification, including Product Categories, Product Types, and Product Brands.
+    * **Product Variation:** Filter products by their variations, including "Variation Count, Variation, and Variation Type."
+    * **Taxonomies:** Filter products by their classification, including Product Categories, and Product Brands.
     * **Conditional Logic:** Use the **"+ Add"** button for "AND" conditions and the **"+ OR"** button for "OR" conditions to combine multiple criteria.
 
 3.  Apply your desired filters by clicking **"Apply"** or **"Reset"** them to view the complete list. 
