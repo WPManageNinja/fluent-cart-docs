@@ -62,7 +62,6 @@ Categorize and type your product for better organization and filtering.
 This section helps you organize and tag your product using WordPress taxonomies for better filtering and presentation on your storefront.
 
 * **[Categories:](/guide/product-types-creation/creating-managing-product-categories/index.md)** Assign the product to one or more relevant **Categories** (e.g., "Men's Shoes"). You can select existing categories from the dropdown menu or click **+ Add Category** to create a new one instantly.
-* **[Types:](/guide/product-types-creation/creating-managing-product-types/index.md)** Assign the product to one or more relevant product **Types**. You can select an existing type or click **+ Add Type** to create a new type if the relevant option is not listed.
 * **[Brands:](/guide/product-types-creation/creating-managing-product-brand.md)** Use this field to associate the product with a specific **Brand**. Select the brand name from the dropdown menu or click **+ Add Brand** if the brand doesn't exist yet in your FluentCart settings.
 
 By using these taxonomies, you ensure customers can easily find and filter your products on your shop pages.

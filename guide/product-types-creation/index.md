@@ -6,8 +6,6 @@ FluentCart's flexibility allows you to sell a wide variety of items with tailore
 
 This section covers the following essential aspects:
 
-* **[Creating & Managing Product Categories](/guide/product-types-creation/creating-managing-product-categories/):** Learn how to organize your products into logical categories for better customer navigation and store management.
-* **[Creating & Managing Product Types](/guide/product-types-creation/creating-managing-product-types/):** Understand how to define different types of products (e.g., Physical, Digital, Subscription) to apply specific behaviors and attributes.
 * **[Creating Physical Products](/guide/product-types-creation/creating-physical-products):** A guide to setting up tangible goods that require shipping and inventory tracking.
 * **[Creating Digital Products](/guide/product-types-creation/creating-digital-products):** Learn how to configure downloadable products, including managing their digital assets.
 * **[Creating Digital Products with Licenses](/guide/product-types-creation/creating-digital-products-with-licenses):** Detailed instructions on setting up software or digital goods that require license keys, including activation limits and update management.
@@ -15,5 +13,8 @@ This section covers the following essential aspects:
 * **[Defining Upgrade Paths](/guide/product-types-creation/defining-upgrade-paths):** Set up seamless upgrade options for your tiered products, particularly for licensed and subscription items.
 * **[Product List Overview](/guide/product-types-creation/product-list-overview):** Understand how to view, filter, and manage your entire product catalog efficiently.
 * **[Inventory Management](/guide/product-types-creation/inventory-management/):** Understand how to track and adjust stock levels for your physical and licensed digital products.
+* **[Creating & Managing Product Categories](/guide/product-types-creation/creating-managing-product-categories/):** Learn how to organize your products into logical categories for better customer navigation and store management.
+* **[Creating & Managing Product Brands](/guide/product-types-creation/creating-managing-product-brand.md):** Learn how to create and assign brands to your products, helping customers to shop by brand and improving your store's organization.
+
 
 By mastering this section, you'll be able to effectively structure your product offerings and manage your store's inventory.

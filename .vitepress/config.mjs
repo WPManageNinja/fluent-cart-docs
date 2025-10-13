@@ -391,6 +391,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'Using FluentCart Blocks & Templates', link: '/guide/miscellaneous/using-fluentcart-blocks-&-templates.md' },
+            { text: 'Theme Compatibility', link: '/guide/miscellaneous/theme-compatibility.md' },
           ]
         },
         {
