@@ -53,11 +53,7 @@ By the end of this guide, you will be able to confidently list and manage any ph
 * **Featured Image:** Set a prominent image for your product.
 * **Add Media:** Upload additional images or videos that showcase your product from different angles or in use.
 
-### 3. Product Organizer
-
-Categorize and type your product for better organization and filtering.
-
-### 4. Product Taxonomies
+### 3. Product Taxonomies
 
 This section helps you organize and tag your product using WordPress taxonomies for better filtering and presentation on your storefront.
 
@@ -68,7 +64,7 @@ By using these taxonomies, you ensure customers can easily find and filter your 
 
    ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/Creating-Physical-Products/physical-product-2.webp)
 
-### 5. Pricing & Variations
+### 4. Pricing & Variations
 
 This section is where you will set the price for your product. FluentCart offers two methods, depending on whether the product has different versions (like size or color) or is a single item.
 
@@ -111,7 +107,7 @@ This will display a table where each row is a single variation.
 
 To add another version of your product, click the **+ Add more** button to create a new row in the table.
 
-### 6. Inventory Management
+### 5. Inventory Management
 
 To track the stock for your product, first, make sure the [**Stock Management**](/guide/product-types-creation/inventory-management.md) feature is enabled from the settings section.
 
