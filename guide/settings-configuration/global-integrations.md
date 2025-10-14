@@ -2,8 +2,6 @@
 
 The **Global Integrations** section is your central dashboard for managing powerful, event-driven automations that connect your FluentCart store to other essential services. These automations, often called "feeds," are triggered by specific events in your store, such as a new order being created or a subscription being renewed.
 
-By setting up these integrations, you can eliminate manual data entry and send real-time information to your marketing platforms, CRMs, and other external tools. This allows you to build sophisticated, automated workflows that enhance your marketing efforts and streamline your business operations. This guide will walk you through how to manage these integrations.
-
 ## Accessing Global Integrations
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
