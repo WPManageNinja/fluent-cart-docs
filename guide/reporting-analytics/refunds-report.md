@@ -42,4 +42,6 @@ Below the main chart, you’ll find more detailed breakdowns that show the data 
 
 * **Refunds Grouped By:** This table breaks down refunds by things like **Billing Country**. It shows the number of **Refunds**, the total **Refunded Amount**, and the **Average Refund**, helping you find patterns in specific regions or customer groups.
 
+![Refund Report Charts](/guide/public/images/reporting-analytics/refunds/refunds-report-1.webp)
+
 The Refunds Report goes deeper than sales data, showing you the reasons behind customer returns so you can improve your products and services.

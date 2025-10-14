@@ -20,7 +20,7 @@ The top of the dashboard gives you key controls to choose what data appears in t
 * **Advanced Filters:** Click the **filter** icon to break down the report by options like **Order Type** or specific **Products**. This helps you focus on detailed sales data for a closer view.
 * **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
-  ![Screenshot of Sales Report Page](/images/reporting-analytics/sales/sles-report-filter.webp)
+  ![Screenshot of Sales Report Page](/images/reporting-analytics/sales/sales-reports.webp)
 
 ### Key Sales Metrics
 
@@ -28,14 +28,12 @@ At the top of the **Sales Report**, you will find summary cards highlighting you
 
 * **Gross Sales:** This is the total amount of money made from sales before any deductions.
 * **Refunded:** The total monetary value of all refunds that have been processed.
-* **Net Revenue:** This is your true income after refunds have been subtracted from Gross Sales.
+* **Revenue:** This is your true income after refunds have been subtracted from Gross Sales.
 * **Orders:** The total number of orders that have been placed in your store.
-* **Items Sold:** The total quantity of all individual product units sold.
+* **Items:** The total quantity of all individual product units sold.
 * **Total Refunds:** The total count of individual refund transactions that were processed.
 
 Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against.
-
-  ![Screenshot of Sales Report Page](/images/reporting-analytics/sales/sales-reports.webp)
 
 #### Detailed Sales Analysis
 
