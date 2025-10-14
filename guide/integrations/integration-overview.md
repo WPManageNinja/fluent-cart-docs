@@ -13,7 +13,9 @@ This guide will walk you through the two main sections of this page: **Global In
 
 This section, located at the top of the page, is where you create powerful, store-wide automation rules. A "feed" is a rule that is triggered by an event in your store (like a new order) and performs an action in another integrated service (like adding a customer to a list in FluentCRM).
 
+::: info
 These integration rules apply globally to all your orders. For more targeted rules, you can also set up integrations on a [per-product basis](/guide/product-types-creation/managing-product-integrations.md).
+:::
 
 ![Integration Overview](/guide/public/images/integrations/integration-overview/integration-overview.png)
 
