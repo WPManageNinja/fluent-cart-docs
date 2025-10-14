@@ -39,9 +39,15 @@ Each metric also includes a percentage that indicates the increase or decrease c
 
 Below the key metrics, detailed breakdowns provide specific data about your best-performing products. This section is essential for understanding customer purchasing behavior.
 
-* **Top Sold Products:** This table lists your best-selling products based on the number of units sold and the total revenue they have generated. This helps you quickly identify which items are the most popular with your customers.
+**Top Sold Products:** This table lists your best-selling products based on the number of units sold and the total revenue they have generated. This helps you quickly identify which items are the most popular with your customers.
 
-* **Top Sold Variants:** This table shows sales by individual product variations (like size or color). It gives you detailed insight into which options are most popular, helping you make smarter decisions about inventory and marketing.
+**Top Sold Variants:** This table shows sales by individual product variations (like size or color). It gives you detailed insight into which options are most popular, helping you make smarter decisions about inventory and marketing.
+
+**Sources:** The Sources pie chart gives you a quick visual summary of how you're making money. It's a simple way to understand your business model at a glance. It breaks down your revenue into three main types:
+
+ * **One-time Payments:** This represents customers making a single, straightforward purchase.
+ * **Subscriptions:** This slice shows the revenue from customers who have signed up for recurring payments for a product or service.
+ * **Renewals:** This shows income from existing subscribers who have renewed their subscriptions.
 
 With the Sales Report, you can see clear patterns in revenue and product demand, giving you the insights you need to plan and grow your store effectively.
 
