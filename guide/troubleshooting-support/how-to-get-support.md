@@ -1,19 +1,19 @@
  # How to Get Support
 
-If you've reviewed the [Docs & FAQs](/guide/troubleshooting-support/common-issues-faqs) guides and still encountering a problem with FluentCart, our dedicated support team at WPManageNinja is here to help.
+If you've reviewed the [Docs & FAQs](/guide/troubleshooting-support/common-issues-faqs) guides and still encountering a problem with FluentCart, our dedicated support team is here to help.
 
 ## How to Contact Support
 
 To ensure you receive the quickest and most effective assistance, please follow these guidelines when contacting us:
 
-1.  **Visit the WPManageNinja Support Portal:**
-    Go to the official WPManageNinja support website. This is the primary channel for submitting support tickets.
-    * [WPManageNinja Support](https://wpmanageninja.com/support) 
+1.  **Visit the FluentCart Support Portal:**
+    Go to the official FluentCart website. This is the primary channel for submitting support tickets.
+    * [FluentCart Account](https://fluentcart.com/account/) 
 
 2.  **Submit a Support Ticket:**
-    * Log in to your WPManageNinja account.
+    * Log in to your FlunetCart account.
     * Navigate to the "Support Tickets" section.
-    * Click on "Create a New Ticket."
+    * Click on "Create Ticket."
 
 3.  **Provide Detailed Information:**
     When submitting your ticket, please include as much detail as possible. This helps our team understand your issue quickly and provide a precise solution. Include:
