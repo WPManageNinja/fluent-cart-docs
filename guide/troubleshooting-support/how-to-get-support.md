@@ -17,7 +17,6 @@ To ensure you receive the quickest and most effective assistance, please follow 
 
 3.  **Provide Detailed Information:**
     When submitting your ticket, please include as much detail as possible. This helps our team understand your issue quickly and provide a precise solution. Include:
-    * **Your FluentCart License Key:** This helps us verify your purchase and provide premium support.
     * **A Clear Description of the Problem:** Explain what you are trying to achieve and what is happening instead.
     * **Steps to Reproduce:** List the exact steps you take that lead to the issue.
     * **Screenshots or Screen Recordings:** Visual aids are incredibly helpful for diagnosing problems.
