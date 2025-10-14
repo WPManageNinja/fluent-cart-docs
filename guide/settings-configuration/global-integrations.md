@@ -1,10 +1,10 @@
 # Managing Global Integrations
 
-The **Global Integrations** section (formerly known as Checkout Actions) is your central dashboard for managing powerful, event-driven automations that connect your FluentCart store to other essential services. These automations, often called "feeds," are triggered by specific events in your store, such as a new order being created or a subscription being renewed.
+The **Global Integrations** section is your central dashboard for managing powerful, event-driven automations that connect your FluentCart store to other essential services. These automations, often called "feeds," are triggered by specific events in your store, such as a new order being created or a subscription being renewed.
 
-By setting up these integrations, you can eliminate manual data entry and seamlessly send real-time information to your marketing platforms, CRMs, and other external tools. This allows you to build sophisticated, automated workflows that enhance your marketing efforts and streamline your business operations. This guide will walk you through how to manage these integrations.
+By setting up these integrations, you can eliminate manual data entry and send real-time information to your marketing platforms, CRMs, and other external tools. This allows you to build sophisticated, automated workflows that enhance your marketing efforts and streamline your business operations. This guide will walk you through how to manage these integrations.
 
-#### Accessing Global Integrations
+## Accessing Global Integrations
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
 2.  Click on the **Global Integrations** tab.
@@ -12,7 +12,7 @@ By setting up these integrations, you can eliminate manual data entry and seamle
     ![Screenshot of Checkout Actions Tab](/images/settings-configuration/checkout/checkout-actions-tab.webp)
 
 
-#### The Global Integrations Dashboard
+### The Global Integrations Dashboard
 
 This screen provides a comprehensive overview of all the integration feeds you have configured, serving as your command center for all connected services.
 
@@ -33,6 +33,6 @@ This screen provides a comprehensive overview of all the integration feeds you h
 To create a new automation, you can add a new integration feed. This is the starting point for connecting your store to a new service.
 
 1.  From the Global Integrations dashboard, click the **Add Integration** button at the top right.
-2.  A dropdown menu will appear, listing all the available integrations you can configure [FluentCRM](/guide/integrations/fluentcrm-integration.md). These are the services that FluentCart is ready to connect with.
+2.  A dropdown menu will appear, listing all the available integrations, here you can configure [Webhook](/guide/integrations/webhook-integration.md), [FluentCRM](/guide/integrations/fluentcrm-integration.md) and [FluentCommunity](/guide/integrations/fluentcommunity-integration.md). 
 3.  Select the integration you wish to add from the list.
 4.  You will be taken to the dedicated configuration screen for that specific integration. Here, you will set up the specific rules for the automation, such as defining the triggers, mapping data fields, and configuring any service-specific options.
