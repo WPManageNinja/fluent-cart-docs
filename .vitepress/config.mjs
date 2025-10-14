@@ -333,6 +333,7 @@ export default defineConfig({
           text: 'Integrations',
           collapsed: true,
           items: [
+            { text: 'Integrations Overview', link: '/guide/integrations/integration-overview' },
             { text: 'Webhook Integrations', link: '/guide/integrations/webhook-integration' },
             { text: 'FluentCRM Integration', link: '/guide/integrations/fluentcrm-integration' },
             { text: 'FluentCommunity Integration', link: '/guide/integrations/fluentcommunity-integration' },
