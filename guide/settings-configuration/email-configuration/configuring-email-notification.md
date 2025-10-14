@@ -14,7 +14,7 @@ This guide will walk you through how to enable, disable, and customize these imp
 
 ### Managing Your Notifications
 
-On this screen, you will see a list of all available email notifications. For each one, you can see its **Notification Name**, the intended **Recipient** (Admin or Customer), and a toggle to enable or disable it.
+On this screen, you will see a list of all available email notifications. For each one, you can see its **Notification Name**, the intended **Recipient** (Admin or Customer), and a **toggle** to enable or disable it.
 
 #### Available Notifications:
 
