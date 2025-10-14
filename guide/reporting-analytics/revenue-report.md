@@ -23,6 +23,7 @@ At the top of the report, you’ll see a quick summary of your store’s sales a
 
 * **Gross Sales:** This represents the total revenue from all sales before any deductions are made. The percentage and trend arrow icon (▲ or ▼) next to the value show the increase or decrease compared to the comparison period.
 * **Refund:** This shows the total amount of money refunded. The percentage and trend arrow also show how this refund amount has changed compared to the selected period.
+* **Taxes:** This shows the total amount collected for sales tax on orders. The percentage and trend arrow also show how this amount has changed compared to the selected period.
 * **Shipping:** This shows the total amount collected for shipping charges on orders. The percentage and trend arrow also show how this amount has changed compared to the selected period.
 * **Revenue:** This shows your total income after deductions like refunds have been subtracted. The percentage and trend arrow provide a direct comparison of your net revenue between the two selected periods.
 
