@@ -1,62 +1,50 @@
-# Integrations Overview
+# Integrations & Addons
 
-**Integrations** are the key to unlocking the full power of your store. By connecting FluentCart with other powerful tools and services, you can automate your marketing, smooth your workflow, and add new capabilities to your e-commerce business.
+The **Integrations & Addons** screen is your central hub for connecting FluentCart with other powerful plugins and services. By activating these modules, you can automate your marketing, improve email deliverability, enhance customer support, and extend the functionality of your e-commerce store.
 
-This guide provides an overview of the available integration modules and explains how to activate and configure them.
+This guide will walk you through the two main sections of this page: **Global Integrations Feeds** and **Integration Modules**.
 
-## Activating the Integration Modules
-
-Many of FluentCart's core integrations can be found in a central dashboard, making them easy to manage.
+## Accessing the Integrations & Addons
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro**.
 2.  In the left-hand menu, click on **Integrations**.
 
-On this screen, you will see all the available integration modules for your FluentCart store. To help you find what you need, you can use the filter tabs (**ALL, CRM, LMS, CORE**) at the top of the list or use the search bar to find a specific integration by name.
+### Global Integrations Feeds
 
-For each module, you will see its current status displayed next to its name. The activation process is largely automatic.
+This section, located at the top of the page, is where you create powerful, store-wide automation rules. A "feed" is a rule that is triggered by an event in your store (like a new order) and performs an action in another integrated service (like adding a customer to a list in FluentCRM).
 
-* **If the required plugin is already installed and active:** FluentCart will automatically detect it, and you will see a green **Enabled** status badge. The integration is ready to be configured.
-* **If the required plugin is not installed:** You will see a button like **Install FluentCommunity**. Clicking this will help you install and activate the necessary plugin. Once the plugin is active, the integration will automatically be enabled on this screen.
+These integration rules apply globally to all your orders. For more targeted rules, you can also set up integrations on a [per-product basis](/guide/product-types-creation/managing-product-integrations.md).
 
 ![Integration Overview](/guide/public/images/integrations/integration-overview/integration-overview.png)
 
 ### Integration Modules
 
-#### Webhook
+This section, located at the bottom of the page, is where you manage the connections between FluentCart and other plugins. Before you can use an integration, you must first enable its module here.
 
-For developers and advanced users, **Webhooks** allow you to send real-time data from your FluentCart store (like a new order) to any external service that can accept webhook notifications. This is perfect for creating custom connections with inventory systems, accounting software, or other third-party applications.
+#### Activating an Integration Module
 
-* **Where to configure:** `FluentCart Pro > Settings > Global Integrations`
-* [Learn more about configuring Webhooks](/guide/integrations/webhook-integration.md)
+The activation process is largely automatic.
 
-#### FluentCRM
+* **If the required plugin is already installed and active:** FluentCart will automatically detect it, and you will see a green **Enabled** status badge. The integration is ready to be used.
+* **If the required plugin is not installed:** You will see a button like **Install FluentCommunity**. Clicking this will help you install and activate the necessary plugin. Once the plugin is active, the integration will automatically be enabled on this screen.
 
-Automate your email marketing by connecting FluentCart directly to **FluentCRM**. This powerful integration allows you to add customers to lists, apply tags based on what they buy. It's an essential tool for customer segmentation and long-term engagement.
+To help you find what you need, you can also use the filter tabs (**ALL, CRM, LMS, CORE, MARKETING**) or the search bar to find a specific module.
 
-* **Where to configure:** `FluentCart Pro > Settings > Global Integrations`
-* [Learn more about the FluentCRM integration](/guide/integrations/fluentcrm-integration.md)
+![Available Integration Modules](/guide/public/images/integrations/integration-overview/integration-overview-1.png)
 
-#### FluentCommunity
+### Available Integration Modules
 
-Create a seamless membership experience by connecting your store to **FluentCommunity**. This integration lets you automatically grant or revoke access to private courses and community spaces based on a customer's purchase, subscription status, or refunds.
+* [**Webhook:**](/guide/integrations/webhook-integration.md) For developers and advanced users, **Webhooks** allow you to send real-time data from your FluentCart store (like a new order) to any external service that can accept webhook notifications.
+* [**FluentCRM:**](/guide/integrations/fluentcrm-integration.md) Automate your email marketing. This powerful integration allows you to add customers to lists, apply tags based on what they buy, and trigger targeted follow-up email sequences after a purchase.
+* **FluentSMTP:** Ensure your store's emails get delivered. This module allows you to send all of FluentCart's transactional emails through a professional SMTP provider, improving deliverability. You don’t need any extra configuration to connect with FluentSMTP. Simply install FluentSMTP, and it will automatically integrate with your FluentCart.
+* [**FluentCommunity:**](/guide/integrations/fluentcommunity-integration.md) Create a seamless membership experience. This integration lets you automatically grant or revoke access to private courses and community spaces based on a customer's purchase or subscription status.
+* **FluentAuth:** Enhance your store's security and user experience. This integration allows you to customize the default WordPress login and registration pages, and add social login options for your customers. No extra settings are needed in FluentCart; simply install and configure the FluentAuth plugin, and it works automatically with your store.
+* **FluentForm:** Create advanced forms and surveys with an easy-to-use drag & drop form builder. 
+* **FluentSupport:** Streamline your customer service. This integration connects your e-commerce data with your helpdesk, allowing your support agents to view a customer's purchase history directly from their support tickets in FluentSupport.
 
-* **Where to configure:** `FluentCart Pro > Settings > Global Integrations`
-* [Learn more about the FluentCommunity integration](/guide/integrations/fluentcommunity-integration.md)
+#### Other Key Integrations
 
-### Other Key Integrations
+Some integrations are configured in their own dedicated areas of the settings.
 
-Some integrations are configured in different areas of the settings, depending on their specific function.
-
-#### FluentAffiliate
-
-Launch and manage a powerful affiliate program for your store. This integration allows partners and marketers to promote your products and automatically tracks their referrals, commissions, and payouts.
-
-* **Where to configure:** The connection is managed from the FluentAffiliate dashboard (`FluentAffiliate > Settings > Integration Settings`).
-* [Learn more about the FluentAffiliate integration](/guide/integrations/fluentaffiliate-integration.md)
-
-#### Amazon S3
-
-Securely host and deliver your digital products using **Amazon S3**. This integration provides faster, more reliable downloads for your customers and reduces the server load on your own website, which is essential for stores selling large files.
-
-* **Where to configure:** `FluentCart Pro > Settings > Storage Settings`
-* [Learn more about the Amazon S3 Integration](/guide/integrations/amazon-s3-integration.md)
+* [**Amazon S3:**](/guide/integrations/amazon-s3-integration.md) Securely host and deliver your digital products using Amazon S3. This integration provides faster, more reliable downloads for your customers and reduces the server load on your own website, which is essential for stores selling large files. For secure digital file hosting configure at `FluentCart Pro > Settings > Storage Settings`.
+* [**FluentAffiliate:**](/guide/integrations/fluentaffiliate-integration.md) Launch and manage a powerful affiliate program for your store. This integration allows partners and marketers to promote your products and automatically tracks their referrals, commissions, and payouts. For your affiliate program configure at `FluentAffiliate > Settings > Integration Settings`.
