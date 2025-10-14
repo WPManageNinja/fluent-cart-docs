@@ -45,7 +45,8 @@ Some of the available triggers include:
  * Subscription Renewed
  * Order Shipped
  * Order Delivered
- This screen contains all the settings required to define what data is sent, where it's sent, and what triggers it.
+
+This screen contains all the settings required to define what data is sent, where it's sent, and what triggers it.
 
 ![Configuring Webhook](/images/integrations/webhook/configuring-webhook.webp)
 
