@@ -16,19 +16,20 @@ The easiest and most flexible way to build your store is with FluentCart's dedic
 
    ![Screenshot of FluentCart Blocks](/images/miscellaneous/accessing-fluentcart-blocks.webp)
 
-### Understanding the Core Blocks
+## Understanding the Core Blocks
 
- * **Products:** This is the cornerstone block for building your shop. It displays a dynamic and fully customizable grid of your products. Use it to create your main /shop page, or place it on your homepage to feature new arrivals or best-sellers. In the block settings, you can filter which products appear based on categories, tags, and more.
- * **Product Search:** This block adds a clean and simple search bar to your page. It's designed to search only within your FluentCart products, making it a powerful tool to help customers find exactly what they're looking for, especially in stores with a large inventory.
- * **Customer Dashboard:** Use this block on a single page to create a dedicated "My Account" area. It automatically provides a secure dashboard where logged-in customers can view their purchase history, manage active subscriptions, download files, and update their personal details.
- * **Checkout Page:** This block is essential for your store to function. Add it to a blank page to designate it as your official checkout page. It will automatically render the entire secure checkout form, including fields for customer information, shipping options, and payment methods.
- * **Product Card:** Perfect for highlighting a single item. This block displays one specific product in a visually appealing card format. It's ideal for featuring a "Product of the Week" on your homepage, embedding an item within a blog post review, or creating a focused landing page for a promotion.
+FluentCart provides a wide range of blocks to help you build everything from your main shop page to a custom product landing page.
 
-### Understanding the Button Blocks
-
- * **Buy Now Button:** This button is designed for speed and higher conversions. When a customer clicks it, they are taken **directly** to the checkout page with that single item in their cart, completely bypassing the cart page. It's perfect for sales pages or for reducing the steps to purchase.
- * **Add To Cart Button:** This is the standard shopping button. It adds the selected product to the customer's cart, allowing them to continue browsing and add more items before they are ready to check out. Use this for your general product listings.
- * **Product Details Button:** Use this button to encourage discovery. It links directly to the full product page for a specific item, inviting customers to see more images, read the full description, and view different variations before making a decision.
+* **Products:** This is the cornerstone block for building your shop. It displays a dynamic and fully customizable grid of your products. Use it to create your main `/shop` page, or place it on your homepage to feature new arrivals or best-sellers. In the block settings, you can filter which products appear based on categories, tags, and more.
+* **Product Search:** This block adds a clean and simple search bar to your page. It's designed to search only within your FluentCart products, making it a powerful tool to help customers find exactly what they're looking for.
+* **Pricing Table:** Use this block to create a visually appealing pricing table for a specific product. This is perfect for subscription products or licensed software where you want to clearly display the different tiers or plans available (e.g., Basic, Pro, Ultimate).
+* **Customer Dashboard:** Use this block on a single page to create a dedicated **"My Account"** area. It automatically provides a secure dashboard where logged-in customers can view their purchase history, manage active subscriptions, download files, and update their personal details.
+* **Checkout Page:** This block is essential for your store to function. Add it to a blank page to designate it as your official checkout page. It will automatically render the entire secure checkout form.
+* **Product Card:** Perfect for highlighting a single item. This block displays one specific product in a visually appealing card format. It's ideal for featuring a "Product of the Week" on your homepage or embedding an item within a blog post review.
+* **Product Gallery:** This block displays the image gallery for a specific product. It's designed to be used when you are building a custom product page layout and want to place the image gallery in a specific location.
+* **Product Info:** This block displays the core information for a specific product, such as its title, short description, and price. Like the gallery, it's a modular block for building custom product pages.
+* **Buy Section:** This block displays the complete purchasing section for a product, including its variation options (e.g., sizes, colors), quantity selector, and the "Add to Cart" button. It's another key component for creating custom product layouts.
+* **Stock:** This block displays the current stock status for a specific product (e.g., "In Stock," "Out of Stock"). This is useful for adding scarcity and urgency to your custom product pages.
 
 > [!NOTE]
 >Every FluentCart blocks comes with its own set of customization options. After adding a block, be sure to check the block settings sidebar on the right to fine-tune its appearance and functionality.
@@ -66,7 +67,7 @@ If you are using a modern, block-based WordPress theme, you can edit FluentCart'
 
 ## Integrating with Page Builders Bricks
 
-FluentCart's blocks are also fully compatible with popular page builder bricks. This allows you to seamlessly integrate FluentCart's e-commerce power with the advanced design capabilities of Bricks.
+FluentCart's blocks are also fully compatible with popular page builder Bricks. This allows you to seamlessly integrate FluentCart's e-commerce power with the advanced design capabilities of Bricks.
 You can use the FluentCart templates directly within the Bricks editor just as you would in the standard WordPress editor, giving you the best of both worlds. 
 
 For other builders that may not have direct block support, FluentCart also provides shortcodes as a flexible way to add product grids and buttons to any design.
