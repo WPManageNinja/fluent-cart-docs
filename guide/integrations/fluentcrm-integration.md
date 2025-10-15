@@ -1,6 +1,8 @@
 # FluentCRM Integration
 
-FluentCart seamlessly integrates with FluentCRM, allowing you to create powerful marketing automations that are triggered by customer purchases. By connecting your store, you can automatically add new customers to specific lists, apply tags based on what they buy, and enrich their contact profiles without any manual work.
+Connecting FluentCart with FluentCRM allows you to create powerful marketing automations based on your customers' actions. When someone makes a purchase, you can automatically add them to specific lists, apply tags, and update their profiles in FluentCRM without lifting a finger.
+
+This guide will walk you through setting up a Global Integration Feed, which runs for every order placed in your store.
 
 FluentCart offers two powerful ways to connect with FluentCRM:
 
@@ -19,25 +21,27 @@ Before you begin, it's helpful to decide which type of integration best suits yo
     * *Example:* Adding customers who bought your "Advanced SEO Course" to a "Course Students" list and tagging them accordingly.
 
 
-### Setting Up a Global Integration
+### Enabling the FluentCRM Module
 
-A global integration is perfect for general marketing tasks that should apply to all your customers, such as adding every new buyer to your main newsletter list or applying a general "Customer" tag.
+First, you need to make sure the FluentCRM integration module is active.
+ 1. From your WordPress dashboard, navigate to **FluentCart Pro → Integrations**.
+ 2. Scroll down to the **Integration Modules** section.
+ 3. Find **FluentCRM** in the list and make sure it is enabled. If it's disabled, you may need to install or activate it first.
 
-#### Navigating to Global Integrations
+### Setting Up a Global Integration Feed
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
-2.  Click on the **Global Integrations** tab.
+A global feed is perfect for tasks that should apply to all your customers, like adding every new buyer to your main newsletter.
 
-#### Creating a New FluentCRM Feed
+#### Create a New FluentCRM Feed
 
-1.  On the Global Integrations dashboard, click the **Add Integration** button at the top right.
-2.  Select **FluentCRM Feed** from the dropdown menu. This will take you to the configuration screen.
+ * Click the **Add Integration** button in the top-right corner.
+ * Select **FluentCRM** from the dropdown menu. This will open a new screen where you can set up the automation rules.
 
-	![Screenshot of Fluentcrm Integration Page](/images/integrations/fluentcrm/add-integration.webp)
+![Screenshot of Fluentcrm Integration Page](/images/integrations/fluentcrm/add-integration.webp)
 
-#### Configuring the Global Feed
+#### Configure Your Feed 
 
-This screen allows you to define exactly what happens in FluentCRM when any order is placed in your store.
+Here, you'll decide exactly what happens in FluentCRM when the feed is triggered.
 
 * **Feed Title:** Give your feed a descriptive name that you'll recognize later, like "Add All Customers to Newsletter.
 * **Add to Lists:** Use this field to select the FluentCRM lists you want to add to a customer’s profile when this feed runs from the dropdown.
@@ -45,7 +49,22 @@ This screen allows you to define exactly what happens in FluentCRM when any orde
 * **Remove From Lists / Remove From Tags:** If needed, you can also select lists and tags to remove from a customer's profile.
 * **Note:** You can add a note that will be attached to the contact's profile in FluentCRM. This is great for internal records. You can even make the note dynamic by using shortcodes (click the {(...)} icon) to include customer or order data.
 * **Enable Double Opt-in:** It is highly recommended to keep this enabled. It sends a confirmation email to new contacts before they are subscribed, which is a best practice for maintaining a healthy and engaged email list.
-* **Event Trigger:** Select the specific store event that will trigger this automation. For most use cases, "Order Completed / Paid" is the best option, as it ensures only paying customers are added to your CRM.
+* **Event Trigger:** Select the specific store event that will trigger this automation. For most use cases, "Order Completed / Paid" is the best option, as it ensures only paying customers are added to your CRM. 
+
+The available Event Triggers are:
+
+  * Order Paid (Payment / Subscription)
+  * Order Canceled
+  * Order Refunded (Full)
+  * Subscription Activated
+  * Subscription Canceled
+  * Subscription Renewed
+  * Subscription End of Term (Completed)
+  * Subscription Expired / End of Access Validity
+  *  Shipping
+  * Order Shipped
+  * Order Delivered
+
 * **Remove from selected Tags/Lists on Refund or Subscription Access Expiration:** This is a handy automation. If you check this box, FluentCart will automatically remove the customer from the lists and tags you selected if their order is refunded or their subscription ends.
 * **Run on Selected Variations Only:** This setting allows this integration rule to run only when a customer buys a **specific product variation**. Select one or more variations from the dropdown to apply this rule exclusively to them. If you leave this field empty, the rule will apply to all variations of this product.
 
