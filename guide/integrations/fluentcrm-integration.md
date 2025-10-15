@@ -68,34 +68,29 @@ Once everything is set up, you can manage the integration by clicking the **Edit
 
 By combining both Global and Product-specific integrations, you can create a sophisticated marketing automation strategy. Use global feeds for general onboarding and product feeds for highly targeted, post-purchase follow-ups that enhance the customer experience.
 
-### Automation Triggers in FluentCRM
+### Advanced Marketing Automation with FluentCRM Triggers
 
-Automation Triggers are the starting point for your marketing automations. FluentCRM can connect specific events in your FluentCart store, such as a purchase or subscription renewal, directly to marketing actions in FluentCRM. This system allows you to create a personalized and timely experience for every customer.
+Beyond simply adding tags and lists, the FluentCart integration adds a powerful set of e-commerce triggers directly inside FluentCRM's automation builder. This allows you to create automated marketing funnels based on real-time events in your store.
+When you create a new automation in FluentCRM, you will find a new FluentCart trigger category.
+Here are the available triggers and what they do:
 
-To start using these triggers, you'll need to create a new automation inside **FluentCRM**. It’s a straightforward process.
 
-Here’s how you can find them:
+When you create a new automation in FluentCRM, you will find a new **FluentCart** trigger category.
 
- 1. From your WordPress dashboard, go to **FluentCRM → Automations**.
- 2. Click the **+ New Automation** button, which is usually at the top of the page.
+Here are the available triggers and what they do:
 
-> [!NOTE]
-> If you’d like to explore Automation Triggers in FluentCRM in more depth, take a look at our comprehensive [documentation](/https://fluentcrm.com/docs/fluentcart-integration-with-fluentcrm/). It provides step-by-step guidance, use cases, and best practices to help you make the most of your automated workflows.
+ * **Order Paid (Payment/Subscription):** Starts an automation when a new order is successfully paid. Perfect for sending a "Thank You" email or starting an onboarding sequence.
+ * **Order Shipped:** Triggers when a physical order's status is changed to "Shipped." Use this to send shipping confirmation emails with tracking information.
+ * **Order Delivered:** Triggers when an order's status is changed to "Delivered." A great opportunity to ask for a product review.
+ * **Order Refunded (Full):** Starts when a full refund is processed. You could use this to send a survey asking for feedback on why the customer requested a refund.
+ * **Order Canceled:** Triggers when an order is canceled.
+ * **Subscription Triggers:** A full suite of triggers for managing communication with your subscribers, including **Subscription Activated, Subscription Canceled, Subscription Renewed, and Subscription Expired**. These are essential for reducing churn and keeping subscribers engaged.
 
-Below are the triggers you can use to start your automations.
-
- * **Order Paid (Payment/Subscription):** This kicks off the moment a customer successfully pays for an order or subscription. It's perfect for sending a "thank you" email, starting a welcome series, or tagging them based on what they bought.
- * **Order Shipped:** Triggered when you mark an order as shipped. This is your go-to for automatically sending "Your order is on its way!" emails to your customers.
- * **Order Delivered:** This starts once an order is marked as delivered. It's a great opportunity to ask for a product review or send tips on how to use the purchased item.
- * **Order Refunded (Full):** Starts when you process a full refund. You can use this to automatically tag the user, remove them from a specific email list, and send a follow-up email to understand what went wrong.
- * **Order Canceled:** This is triggered if an order gets canceled. It's a useful way to start a conversation and find out why the customer changed their mind.
- * **Subscription Activated:** Begins the moment a new subscription becomes active. This is the perfect trigger for an onboarding email series that helps new subscribers get the most out of their purchase.
- * **Subscription Canceled:** When a customer cancels their subscription, this trigger can start a workflow to get feedback with a survey or even send a special offer to win them back.
- * **Subscription Renewed:** A great way to acknowledge customer loyalty. This trigger starts when a subscription successfully renews, allowing you to send a thank-you message automatically.
- * **Subscription Expired / End of Access Validity:** This starts when a customer's subscription expires and is no longer active. You can use it to send a "last chance to renew" campaign or a final goodbye email.
- * **Subscription End of Term (Completed):** This triggers when a subscription has run its full course and is now complete (for subscriptions that don't auto-renew).
+> [!Info]
+> These triggers are the starting point for powerful marketing funnels. For detailed, step-by-step guides on how to use these triggers to build onboarding sequences, cart abandonment funnels, and other advanced marketing automations, please see this [documentation](https://fluentcrm.com/docs/fluentcart-integration-with-fluentcrm/).
 
 ![Screenshot of Fluentcrm Automation Trigger](/images/integrations/fluentcrm/automation-trigger.webp)
+
 
 ### Use Case Example: Segmenting Customers by Location
 
