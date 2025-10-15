@@ -22,15 +22,17 @@ Before you begin, it's helpful to decide which type of integration best suits yo
 
 A global integration is perfect for broad actions that should apply to all your paying customers.
 
-#### Navigating to Global Integrations
+#### Navigating to Integrations
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
-2.  Click on the **Global Integrations** tab.
+First, you'll need to go to the correct screen in your WordPress dashboard.
+
+ 1. Navigate to **FluentCart Pro**.
+ 2. Click on **Integrations** from the sidebar menu.
 
 #### Creating a New FluentCommunity Feed
 
-1.  On the Global Integrations dashboard, click the **Add Integration** button at the top right.
-2.  Select **FluentCommunity Feed** from the dropdown menu. This will take you to the configuration screen for your new automation feed.
+1.  On the **Integrations & Addons** dashboard, click the **Add Integration** button at the top right.
+2.  Select **FluentCommunity** from the dropdown menu. This will take you to the configuration screen for your new automation feed.
 
 ![Global Integration FluentCommunity](/guide/public/images/integrations/fluentcommunity/integrateing-fluentcommunity-1.webp)
 
@@ -62,6 +64,20 @@ Whether you are creating a global or a product-specific feed, the configuration 
 * **Mark the community profile as verified:** Enable this option to automatically grant the customer a "verified" status within FluentCommunity, which can be used to signify them as a paying member.
 * **Remove from selected Courses/Spaces on Refund or Subscription Access Expiration:** This is a crucial automation feature. If enabled, FluentCart will automatically revoke the user's access to the selected spaces and courses if their order is refunded or their subscription expires.
 * **Event Trigger:** Select the specific store event that will trigger this automation. 
+ The available Event Triggers are:
+
+  * Order Paid (Payment / Subscription)
+  * Order Canceled
+  * Order Refunded (Full)
+  * Subscription Activated
+  * Subscription Canceled
+  * Subscription Renewed
+  * Subscription End of Term (Completed)
+  * Subscription Expired / End of Access Validity
+  *  Shipping
+  * Order Shipped
+  * Order Delivered
+
 * **Run on Selected Variations Only (Product-Specific Only):** This powerful option appears only on product-specific integrations. It allows you to run the automation only when a customer purchases a specific variation of the product (e.g., a "Lifetime Access" tier). Leave this empty to have the feed run for all variations of this product.
 * **Enable this Integration:** Ensure the toggle at the top right is switched on to make the automation active. If it is disabled, the feed will be saved but will not run.
 

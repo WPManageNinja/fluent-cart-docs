@@ -4,16 +4,16 @@ Webhooks are a powerful tool for developers and advanced users that allow you to
 
 This is useful for creating custom integrations, connecting to services that aren't natively supported, or building your own data processing workflows. This guide will walk you through setting up a new webhook.
 
-### Step 1: Navigate to Global Integartions
+### Step 1: Navigate to Integartions
 
-First, we need to go to the right screen in your WordPress dashboard.
+First, you'll need to go to the correct screen in your WordPress dashboard.
 
-1. Navigate to **FluentCart Pro → Settings**.
-2. From the side menu, click on **Global Integrations**.
+ 1. Navigate to **FluentCart Pro**.
+ 2. Click on **Integrations** from the sidebar menu.
 
 ### Step 2: Add a New Webhook Integration
 
-Here, you’ll see a page where all your connections will live. To get started, click the **Add Integration** button in the top right corner and choose **Webhook** from the dropdown list.
+On this page, you will see all of your global integration feeds. To get started, click the **Add Integration** button in the top right corner and choose **Webhook** from the dropdown list.
 
 ![Add Integration](/images/integrations/webhook/add-integration.webp)
 
