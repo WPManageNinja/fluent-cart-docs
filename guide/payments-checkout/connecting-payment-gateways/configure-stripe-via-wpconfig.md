@@ -39,4 +39,47 @@ define('FCT_STRIPE_TEST_SECRET_KEY','ENTER YOUR SECRET KEY HERE');
 
 Save the `wp-config.php` file and close it.
 
+### Step 3: Configure Webhooks
+
+Webhooks are essential for the integration to function correctly. They allow Stripe to send real-time notifications to your store about payment events, such as successful charges, refunds, and subscription updates.
+
+1.  **Copy Your Webhook URL:** On the FluentCart Stripe settings page, you will see your unique **Webhook URL**. **Copy** this **URL** to your clipboard.
+2.  **Configure in Stripe:** Now, visit your [Stripe Account Dashboard](/https://dashboard.stripe.com/account/webhooks), click the **Developers** from the bottom-left corner, and press the **Webhooks**.
+
+    ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/developer-webhook.webp)
+
+Here appears a new modal. Click on the **+Add destination** button
+
+   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/add-destination.webp)
+
+3. **Select the Important Events:** Now, choose the events recommended by **FluentCart** for **Stripe** to send to your **endpoint**. Under **Events**, click the **All events** tab. Click the checkboxes to select these specific events:
+
+The Events recommended by FluentCart are briefly explained below:
+
+ * **checkout.session.completed:** The customer finished checkout, and the order is ready to process.
+ * **charge.refunded:** A completed payment has been refunded to the customer.
+ * **charge.refund.updated:** Details of a refund were updated (like the amount or reason).
+ * **charge.succeeded:** The customer’s payment went through successfully.
+ * **invoice.paid:** A subscription invoice was paid by the customer.
+ * **invoice.payment.failed:** A subscription invoice payment failed (e.g., card declined).
+ * **customer.subscription.deleted:** The customer canceled their subscription.
+ * **customer.subscription.updated:** The customer’s subscription was changed (e.g., upgraded or downgraded).
+
+Once you select all the suggested **Webhook Events**, click the **Continue** button.
+
+   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/select-events.webp)
+
+Then, select the **Webhook endpoint** and again click the **Continue** button.
+
+   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/webhook-endpoint.webp)
+
+Next, type a destination name, **paste** the **webhook URL** you copied earlier into the **Endpoint URL** field, and then click the “**Create Destination**” button.
+
+   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/create-destination.webp)
+
+#### Step 4: Activate and Save
+
+1.  **Payment Activation:** Back on the **FluentCart Stripe settings** page, ensure the **Payment Activation** toggle at the top right is switched on.
+2.  **Save Settings:** Click the **Save Settings** button at the bottom to finalize the setup.
+
 Your Stripe integration is now ready to securely process payments for your store!
