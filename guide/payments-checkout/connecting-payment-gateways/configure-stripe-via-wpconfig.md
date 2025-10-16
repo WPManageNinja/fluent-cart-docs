@@ -44,14 +44,7 @@ Save the `wp-config.php` file and close it.
 Webhooks are essential for the integration to function correctly. They allow Stripe to send real-time notifications to your store about payment events, such as successful charges, refunds, and subscription updates.
 
 1.  **Copy Your Webhook URL:** On the FluentCart Stripe settings page, you will see your unique **Webhook URL**. **Copy** this **URL** to your clipboard.
-2.  **Configure in Stripe:** Now, visit your [Stripe Account Dashboard](/https://dashboard.stripe.com/account/webhooks), click the **Developers** from the bottom-left corner, and press the **Webhooks**.
-
-    ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/developer-webhook.webp)
-
-Here appears a new modal. Click on the **+Add destination** button
-
-   ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/add-destination.webp)
-
+2.  **Configure in Stripe:** Click the **Add Endpoint** link, and you’ll be redirected to your **Create an event destination** page.
 3. **Select the Important Events:** Now, choose the events recommended by **FluentCart** for **Stripe** to send to your **endpoint**. Under **Events**, click the **All events** tab. Click the checkboxes to select these specific events:
 
 The Events recommended by FluentCart are briefly explained below:
