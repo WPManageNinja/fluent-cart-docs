@@ -1,4 +1,4 @@
-## Configuring Stripe via wp-config.php
+# Configuring Stripe via wp-config.php
 
 FluentCart integrates perfectly with **Stripe**. While you can connect your account directly from the settings panel, this guide will walk you through the more secure method of configuring Stripe by adding your API keys to your site's `wp-config.php` file.
 
