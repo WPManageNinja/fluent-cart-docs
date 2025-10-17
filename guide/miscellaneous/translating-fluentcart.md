@@ -1,6 +1,8 @@
 # Translating FluentCart
 
-Want your FluentCart store to speak your customers' language? You can! FluentCart is ready to be translated into any language. This guide will walk you through the entire process to translate your entire FluentCart shop.
+Making your store available in different languages helps you connect with a wider, global audience and provide a better shopping experience for your customers. 
+
+FluentCart is fully translatable, so you can change the button, label, and message to fit your needs. In this guide, we'll use the popular Loco Translate plugin to get this done.
 
 ### Step 1. Install the Loco Translate Plugin
 
@@ -28,7 +30,10 @@ Now you are ready to start translating. It's important to translate both the fre
 
 4.  On the next screen, you will need to configure your new language file.
     * **Choose a language:** Choose the language that matches your WordPress General Settings language.
-    * **Choose a location:** This is a crucial step. Select the location labeled **Custom** (`languages/loco/plugins/`). Choosing this option protects your custom translations from being overwritten when you update the FluentCart plugin in the future.
+    * **Choose a location:** Next, you need to decide where to save your translation files. You will see a few options.
+
+> [!INFO]
+> We highly recommend choosing the "**Custom**" location. Files saved here are protected from being overwritten when you update the FluentCart plugin. If you choose the "Author" location, your custom translations could be lost during an update.
 
 5.  Click the **Start translating** button.
 
