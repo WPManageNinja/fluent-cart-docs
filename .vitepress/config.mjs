@@ -394,7 +394,8 @@ export default defineConfig({
           items: [
             { text: 'Using FluentCart Blocks & Templates', link: '/guide/miscellaneous/using-fluentcart-blocks-&-templates.md' },
             { text: 'Theme Compatibility', link: '/guide/miscellaneous/theme-compatibility.md' },
-            { text: 'Translating FluentCart', link: '/guide/miscellaneous/translating-fluentcart.md' }
+            { text: 'Translating FluentCart', link: '/guide/miscellaneous/translating-fluentcart.md' },
+            { text: 'Customize Store with Bricks', link: '/guide/miscellaneous/customize-store-with-bricks.md' }
           ]
         },
         {
