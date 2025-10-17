@@ -101,23 +101,23 @@ Once the add-on is enabled, you can configure the license settings for each prod
 2.  **Enable Licensing for this product:** Ensure this checkbox is enabled to activate licensing for this product.
 
 3.  **License Configuration Table (Per Variant):**
-    * **Activation Limit:** For each license variant (e.g., "Single Site Yearly License"), set the number of times the license key can be activated (e.g., 50, 100).
-    * **License Validity:** Define the duration of the license for each variant:
-        * Enter a number of **"Years"**.
-        * Check **"Lifetime"** for an indefinite license.
+    * **Activation Limit:** For each license variant (e.g., "Single Site Annual License"), set the number of times the license key can be activated (e.g., 50, 100).
 
 4.  **Software/Plugin Specific Information:**
     * **Version Number:** Enter the current version of your digital product (e.g., "1.0.1").
-    * **Description:** Provide a description related to the license or software.
-    * **Is WP Plugin?:** Check this box if your product is a WordPress plugin.
-    * **Readme URL (.txt file):** If it's a WordPress plugin, provide the URL to its `readme.txt` file for update checks.
-    * **Update File:** This field typically displays the main downloadable asset used for software updates (e.g., `fluent-form-pro.zip`).
-    * **Banner URL:** Provide a URL for a plugin banner image.
-    * **Icon URL:** Provide a URL for a plugin icon image.
-    * **Required PHP Version (optional):** Specify the minimum PHP version required for your product.
-    * **Required WP Version (optional):** Specify the minimum WordPress version required for your product.
-    * **License Key Prefix:** Define a custom prefix for license keys generated for this product (e.g., "ff-").
+    * **License Key Prefix:** This adds a short prefix to every license key generated for this product. It's a great way to quickly identify keys from different products. For example, you could use ff- for Fluent Forms.
+    * **Update File:** This field shows the main downloadable file that will be used for software updates.
+    * **Changelog Description:** Here, you can write down what's new or what has changed in the latest version of your product. This information will be visible to your users.
+    
+5.  **Is WP Plugin?:** If the digital product you're selling is a WordPress plugin, check this box. This will reveal a few more fields specific to WordPress plugins.
 
+     * **Changelog Page URL:** Enter the web address for your plugin's changelog.
+     * **Banner URL:** Provide a link to a banner image for your plugin.
+     * **Icon URL:** Provide a link to an icon image for your plugin.
+     * **Required PHP Version (optional):** If your plugin needs a minimum version of PHP to work, you can specify it here.
+     * **Required WP Version (optional):** Similarly, if your plugin requires a minimum WordPress version, enter it here.
+
+After you've configured these settings, just click the **Update Settings** button to save your changes.
 
 ### 8. Managing Product Integrations (Product-Specific)
 
