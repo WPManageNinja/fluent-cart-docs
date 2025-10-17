@@ -31,4 +31,4 @@ The real power comes from the customization options. After adding the **Products
 * **Style Settings**
     Under the **Style** tab, you have full control over the visual design. You can customize the Layout, Typography, Borders, and more to perfectly match the look and feel of your brand.
 
-![FluentCart Elements in Brick](/guide/public/images/miscellaneous/bricks/bricks-3.webp)
+![Elements options in Brick](/guide/public/images/miscellaneous/bricks/bricks-3.webp)
