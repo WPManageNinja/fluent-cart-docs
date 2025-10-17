@@ -60,7 +60,7 @@ layout: home
     <div class="feature-icon">🛠️</div>
     <h3>Developer Docs</h3>
     <p>Extend FluentCart with custom functionality</p>
-    <a href="/developer/" class="feature-link">Start Coding →</a>
+    <a href="https://dev.fluentcart.com/" class="feature-link">Start Coding →</a>
   </div>
 </div>
 
