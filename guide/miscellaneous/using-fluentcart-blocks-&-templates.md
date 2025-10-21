@@ -14,7 +14,7 @@ The easiest and most flexible way to build your store is with FluentCart's dedic
  2. Click the **plus icon (+)** to open the block inserter.
  3. Scroll down to find the **FluentCart** and **FluentCart Buttons** categories, or simply search for the block you need.
 
-   ![Screenshot of FluentCart Blocks](/images/miscellaneous/accessing-fluentcart-blocks.webp)
+   ![Screenshot of FluentCart Blocks](/images/miscellaneous/using-fluentcart-blocks/accessing-fluentcart-blocks.webp)
 
 ## Understanding the Core Blocks
 
@@ -49,7 +49,7 @@ Let's say you want to create a unique look for your shop by displaying the price
 
 Just like that, you have changed the layout for every product in the grid. You can reorder, remove, or customize any of the inner blocks to create the perfect design for your store.
 
-   ![Screenshot of List View](/images/miscellaneous/list-view.webp)
+   ![Screenshot of List View](/images/miscellaneous/using-fluentcart-blocks/list-view.webp)
 
 ## Customizing Core Layouts with Templates (for Block Themes)
 
@@ -63,7 +63,7 @@ If you are using a modern, block-based WordPress theme, you can edit FluentCart'
   * **Single Product:** This template controls the design of your individual product pages. Edit this to change the layout of the product title, image, description, and price for all products at once.
   * **Products by Category:** This template controls the design of your category pages (the pages that list all products in a category).
 
-   ![Screenshot of FluentCart Templates](/images/miscellaneous/fluentcart-templates.webp)
+   ![Screenshot of FluentCart Templates](/images/miscellaneous/using-fluentcart-blocks/fluentcart-templates.webp)
 
 ## Integrating with Page Builders Bricks
 
