@@ -334,6 +334,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'Integrations Overview', link: '/guide/integrations/integration-overview' },
+            { text: 'LearnDash Integration', link: '/guide/integrations/learndash-integration' },
             { text: 'Webhook Integrations', link: '/guide/integrations/webhook-integration' },
             { text: 'FluentCRM Integration', link: '/guide/integrations/fluentcrm-integration' },
             { text: 'FluentCommunity Integration', link: '/guide/integrations/fluentcommunity-integration' },
