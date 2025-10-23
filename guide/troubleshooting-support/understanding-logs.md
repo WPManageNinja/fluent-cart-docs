@@ -32,7 +32,7 @@ At the top of the logs screen, you will find several tabs to filter by the most 
 * **All:** Displays every log entry.
 * **Success:** Shows only successfully completed actions.
 * **Warning:** Filters for entries that indicate a minor issue.
-* **Error:** Shows only entries that are reporting an error.
+* **Error:** Shows only entries that are reporting an error
 
 ### Using 'More Views'
 
