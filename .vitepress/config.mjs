@@ -338,7 +338,7 @@ export default defineConfig({
             { text: 'LifterLMS Integration', link: '/guide/integrations/lifterlms-integration' },
             { text: 'Webhook Integrations', link: '/guide/integrations/webhook-integration' },
             { text: 'FluentCRM Integration', link: '/guide/integrations/fluentcrm-integration' },
-            { text: 'FluentSupport Integration', link: '/guide/integrations/fluentsupport-integration' },
+            { text: 'Fluent Support Integration', link: '/guide/integrations/fluentsupport-integration' },
             { text: 'FluentCommunity Integration', link: '/guide/integrations/fluentcommunity-integration' },
             { text: 'Amazon S3 Integration', link: '/guide/integrations/amazon-s3-integration' },
             { text: 'FlunetAffiliate Integration', link: '/guide/integrations/fluentaffiliate-integration.md' }

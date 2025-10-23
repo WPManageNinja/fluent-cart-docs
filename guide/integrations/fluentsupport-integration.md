@@ -1,25 +1,25 @@
 # FluentSupport Integration
 
-Connecting FluentCart with FluentSupport links your e-commerce store to your helpdesk system. This integration provides crucial purchase information directly to your support agents and creates a unified experience for your customers, making your support process faster and more efficient.
+Connecting FluentCart with Fluent Support links your e-commerce store to your helpdesk system. This integration provides crucial purchase information directly to your support agents and creates a unified experience for your customers, making your support process faster and more efficient.
 
 This guide will walk you through setting up the integration and explain how to use its key features step-by-step.
 
 ### Step 1: Enabling the Integration in FluentCart
 
-First, ensure both FluentCart and FluentSupport are installed and active on your WordPress site. The core connection happens automatically. To confirm it's active:
+First, ensure both FluentCart and Fluent Support are installed and active on your WordPress site. The core connection happens automatically. To confirm it's active:
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Integrations**.
 2.  Scroll down to the **Integration Modules** section.
-3.  Locate the **FluentSupport** module.
-4.  You should see a green **Enabled** status badge. This means FluentCart recognizes FluentSupport, and the basic connection is active. No further action is needed here.
+3.  Locate the **Fluent Support** module.
+4.  You should see a green **Enabled** status badge. This means FluentCart recognizes Fluent Support, and the basic connection is active. No further action is needed here.
 
-![Screenshot of FluentSupport Integration](/images/integrations/fluentsupport-integration/enabling-the-integration.webp)
+![Screenshot of Fluent Support Integration](/images/integrations/fluentsupport-integration/enabling-the-integration.webp)
 
-### Step 2: Creating Custom Fields in FluentSupport
+### Step 2: Creating Custom Fields in Fluent Support
 
-To get the most out of the integration, you can create special "Custom Fields" in FluentSupport. These fields allow you (or your customers) to link a support ticket directly to a specific FluentCart Product or Order. Also, you can create Workflows in FluentSupport with these custom fields.
+To get the most out of the integration, you can create special "Custom Fields" in Fluent Support. These fields allow you (or your customers) to link a support ticket directly to a specific FluentCart Product or Order. Also, you can create Workflows in FluentSupport with these custom fields.
 
-1.  From your WordPress dashboard, navigate to **FluentSupport > Custom Fields**.
+1.  From your WordPress dashboard, navigate to **Fluent Support > Custom Fields**.
 2.  Click the **+ Add New Field** button at the top right.
 3.  A pop-up window will appear. Configure the field:
     * **Field Type:** This is the most important setting. Choose either **FluentCart Products** or **FluentCart Orders** from the dropdown list.
@@ -88,7 +88,7 @@ This ensures that when the ticket arrives in your helpdesk, it's already linked 
 
 This feature requires no extra setup and works automatically thanks to the integration. It provides invaluable context for your support agents.
 
-1.  When a support agent opens any ticket in **FluentSupport > Tickets**.
+1.  When a support agent opens any ticket in **Fluent Support > Tickets**.
 2.  Look at the right-hand sidebar. A **Purchases** widget will automatically appear if the customer who submitted the ticket has any purchase history in your FluentCart store.
 3.  **What it shows:** This widget displays key information:
     * Customer's **Lifetime Value**.
@@ -99,4 +99,4 @@ This feature requires no extra setup and works automatically thanks to the integ
 
 ![Screenshot of Purchases History](/images/integrations/fluentsupport-integration/purchases-widget.webp)
 
-By following these steps and understanding these features, you can fully leverage the FluentCart-FluentSupport integration to create a highly efficient support system and a seamless experience for your customers.
+By following these steps and understanding these features, you can fully leverage the FluentCart-Fluent Support integration to create a highly efficient support system and a seamless experience for your customers.
