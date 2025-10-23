@@ -409,6 +409,13 @@ export default defineConfig({
             { text: 'Common Issues & FAQs', link: '/guide/troubleshooting-support/common-issues-faqs' },
             { text: 'How to Get Support', link: '/guide/troubleshooting-support/how-to-get-support' }
           ]
+        },
+        {
+          text: 'Changelog',
+          collapsed: true,
+          items: [
+            { text: 'Changelog', link: '/guide/changelog/changelog' }
+          ]
         }
       ]
     },
