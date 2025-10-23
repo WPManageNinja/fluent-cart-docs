@@ -414,7 +414,7 @@ export default defineConfig({
           text: 'Changelog',
           collapsed: true,
           items: [
-            { text: 'Changelog', link: '/guide/changelog/changelog' }
+            { text: 'Changelog', link: '/guide/' }
           ]
         }
       ]
