@@ -1,4 +1,4 @@
-# FluentSupport Integration
+# Fluent Support Integration
 
 Connecting FluentCart with Fluent Support links your e-commerce store to your helpdesk system. This integration provides crucial purchase information directly to your support agents and creates a unified experience for your customers, making your support process faster and more efficient.
 
@@ -17,7 +17,7 @@ First, ensure both FluentCart and Fluent Support are installed and active on you
 
 ### Step 2: Creating Custom Fields in Fluent Support
 
-To get the most out of the integration, you can create special "Custom Fields" in Fluent Support. These fields allow you (or your customers) to link a support ticket directly to a specific FluentCart Product or Order. Also, you can create Workflows in FluentSupport with these custom fields.
+To get the most out of the integration, you can create special "Custom Fields" in Fluent Support. These fields allow you (or your customers) to link a support ticket directly to a specific FluentCart Product or Order. Also, you can create Workflows in Fluent Support with these custom fields.
 
 1.  From your WordPress dashboard, navigate to **Fluent Support > Custom Fields**.
 2.  Click the **+ Add New Field** button at the top right.
@@ -38,13 +38,13 @@ You can repeat this process to create separate fields for both Products and Orde
 
 ### Step 3: Using Workflows
 
-Now that you have created FluentCart custom fields, you can use them to automate tasks in FluentSupport using **Automatic Workflows**. This allows you to automatically route tickets or apply tags based on the product a customer selects.
+Now that you have created FluentCart custom fields, you can use them to automate tasks in Fluent Support using **Automatic Workflows**. This allows you to automatically route tickets or apply tags based on the product a customer selects.
 
-1.  Navigate to **FluentSupport > Workflows**.
+1.  Navigate to **Fluent Support > Workflows**.
 2.  Click on the **+ Add New Workflow** button.
 3.  Give your workflow a name (e.g., "Assign Product X Tickets") and choose **Automatic** as the **Workflow Type**. Click **Continue**.
 
-![Screenshot of FluentSupport Workflows](/images/integrations/fluentsupport-integration/add-new-workflow.webp)
+![Screenshot of Fluent Support Workflows](/images/integrations/fluentsupport-integration/add-new-workflow.webp)
 
 4.  **Set Trigger & Conditions:**
     * Set the **Workflow Trigger** from the dropdown field, like **On Ticket Creation**.
@@ -61,7 +61,7 @@ Now, whenever a customer submits a ticket and selects that specific product, the
 
 Provide a great experience by adding a dedicated support section directly into the FluentCart customer account area.
 
-1.  Navigate to **FluentSupport > Global Settings**.
+1.  Navigate to **Fluent Support > Global Settings**.
 2.  Scroll down to the bottom of the page.
 3.  Check the box labeled **Add support link to Fluent Cart account navigation**.
 4.  Click **Save Settings**.
