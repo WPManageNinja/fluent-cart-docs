@@ -49,7 +49,7 @@
 * Added Terms & Conditions checkbox in the checkout page as settings
 * Improved Reporting
 * Order Confirmation issue fixed
-* Fixed Custom Integration Renderer
+* Fixed Custom Integration  Renderer
 
 ### 1.2.0 (Oct 14, 2025)
 
