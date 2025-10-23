@@ -171,7 +171,7 @@ export default defineConfig({
     },
     outline: [2, 3],
     nav: [
-      { text: 'User Docs', link: '/guide/' },
+      { text: 'User Docs', link: '/guide/getting-started/introduction-fluentcart.md' },
       { text: 'Dev Docs', link: 'https://dev.fluentcart.com/' },
       { text: 'Website', link: 'https://fluentcart.com', target: '_blank', rel: 'noopener' }
     ],
