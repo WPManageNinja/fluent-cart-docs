@@ -1,4 +1,4 @@
-## Creating & Managing Product Categories
+# Creating & Managing Product Categories
 
 Product categories are the primary way to group and organize the products in your store. A well-structured set of categories makes it easy for customers to browse your offerings, find what they're looking for, and discover new items.
 
