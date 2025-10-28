@@ -307,6 +307,7 @@ export default defineConfig({
               text: 'Customer Dashboard Overview', // This becomes the parent for the dropdown
               link: '/guide/customer-dashboard/', // Link to the main overview page
               items: [ // These are the children that will show in the dropdown
+                { text: 'Purchase Confirmation & Invoice Receipt', link: '/guide/customer-dashboard/purchase-confirmation-invoice-receipt' },
                 { text: 'Purchase History', link: '/guide/customer-dashboard/purchase-history' },
                 { text: 'Managing Subscriptions', link: '/guide/customer-dashboard/subscriptions' },
                 { text: 'Managing Licenses', link: '/guide/customer-dashboard/licenses' },
