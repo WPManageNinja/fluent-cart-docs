@@ -2,6 +2,15 @@
 
 This guide will show you how to install and activate the FluentCart plugin on your WordPress website. It will also explain how to activate your license so you can receive all updates and access premium features.
 
+#### Server & Hosting Requirements
+
+Before you install FluentCart, make sure your hosting environment meets the following requirements. This ensures that the plugin runs smoothly and delivers the best performance for your store.
+
+##### Minimum Requirements
+- **WordPress Version:** 5.0 or higher  
+- **PHP Version:** 7.4 or higher  
+- **MySQL Version:** 5.6 or higher (with InnoDB support)  
+
 ## 1. Installing FluentCart (Free Version)
 
 This is the standard method for installing the core FluentCart plugin, which is free and available from the WordPress Plugin Directory.
