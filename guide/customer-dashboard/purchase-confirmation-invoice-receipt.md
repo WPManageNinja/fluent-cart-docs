@@ -24,7 +24,7 @@ FluentCart automatically generates an invoice receipt for every order. This invo
 
 **What the Invoice Includes:**
 
-* Customer name and email address
+* Customer name 
 * Order ID and purchase date
 * Product name and price breakdown
 * Payment method used
