@@ -18,7 +18,7 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 • Refactor class name on frontend page
 ```
 
-```markdown [🐛 Bug fixes]
+```markdown [🐞 Bug fixes]
 • Product compare at price issue
 • Variation rearrange update issue
 • Console error and shipping method issue
@@ -55,7 +55,7 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
   block editor instead of variation selection modal
 ```
 
-```markdown [🐛 Bug fixes]
+```markdown [🐞 Bug fixes]
 • Tax calculation issue based on store state settings
 • Skip Inventory not working
 • Issue with category parsing '&'
@@ -85,7 +85,7 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 • Reporting
 ```
 
-```markdown [🐛 Bug fixes]
+```markdown [🐞 Bug fixes]
 • Order Confirmation issue
 • Custom Integration Renderer
 ```
