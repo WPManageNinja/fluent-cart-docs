@@ -1,4 +1,5 @@
 # Changelog
+Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
 ## FluentCart v1.2.4
 *Released on October 22, 2025*

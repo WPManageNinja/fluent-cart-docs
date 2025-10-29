@@ -173,7 +173,8 @@ export default defineConfig({
     nav: [
       { text: 'User Docs', link: '/guide/getting-started/introduction-fluentcart.md' },
       { text: 'Dev Docs', link: 'https://dev.fluentcart.com/' },
-      { text: 'Website', link: 'https://fluentcart.com', target: '_blank', rel: 'noopener' }
+      { text: 'Website', link: 'https://fluentcart.com', target: '_blank', rel: 'noopener' },
+      { text: 'Changelog', link: '/guide/changelog' }
     ],
     sidebar: {
       '/guide/': [
@@ -409,13 +410,6 @@ export default defineConfig({
             { text: 'Understanding Logs', link: '/guide/troubleshooting-support/understanding-logs' },
             { text: 'Common Issues & FAQs', link: '/guide/troubleshooting-support/common-issues-faqs' },
             { text: 'How to Get Support', link: '/guide/troubleshooting-support/how-to-get-support' }
-          ]
-        },
-        {
-          text: 'Changelog',
-          collapsed: true,
-          items: [
-            { text: 'Changelog', link: '/guide/changelog/changelog.md' }
           ]
         }
       ]
