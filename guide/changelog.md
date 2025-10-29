@@ -1,6 +1,59 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.2.5
+*Released on October 29, 2025*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• More currency formatting options
+• Multiple tax rates on checkout
+• Compound tax rates calculation
+• Accessibility improvements
+• Payment gateway reorder for checkout page
+• EU tax home country override
+• Date time and number translation
+• UTM reports
+• Accessibility on checkout
+• Gateway logo and label customization
+• Order_by filter to ShopAppBlock
+• SortBy Filter to ShopAppBlock
+• Product Price Block support to ProductInfoBlock
+• Order_paid_done hook
+• More context to fluent_cart/checkout/prepare_other_data hook
+• Customization Hooks in Thank You page
+• Customization Hooks in checkout page
+• Button style support for ShopApp Block
+• Link toggle and target option to Product Title Block
+• Missing translation strings
+• Mollie payment gateway
+```
+
+```markdown [🐞 Bug fixes]
+• Missing currency sign for new currencies
+• Currency formatting issue for old thousand separator
+• Subscription details for pricing type simple
+• Setup fee displaying when disabled
+• Tax name for AU set as “ABN”
+• Buy now button style issue
+• Product Excerpt style not working
+• Inventory validation issue on default variation first load
+• Always showing ‘in-stock’ in ShopApp and Product Single
+• Quantity 10k leads to broken empty state
+• JS event not calling after removing the last item
+• Billing and Shipping address webhook issue
+• Payment validation error message not showing
+• Selected product not saving in ProductGallery and BuySection blocks
+• Broken product gallery block
+• Report colors issue for comparison
+• Report child page navigation
+• Loader not showing in product Modal
+• VAT not showing in receipt
+```
+
+:::
+
 ## FluentCart v1.2.4
 *Released on October 22, 2025*
 
