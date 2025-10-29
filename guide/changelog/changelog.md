@@ -1,7 +1,5 @@
 # Changelog
 
----
-
 ## FluentCart v1.2.4
 *Released on October 22, 2025*
 
@@ -10,8 +8,7 @@
 ```markdown [✨ Newly Added]
 • CSS variables on cart drawer/shop page
 • Product name on admin create order items
-• New hooks for single product and shop page 
-  products
+• New hooks for single product and shop page products
 • New hook (fluent_cart/hide_unnecessary_decimals)
 • Total on cart drawer
 ```
@@ -36,8 +33,6 @@
 
 :::
 
----
-
 ## FluentCart v1.2.2
 *Released on October 16, 2025*
 
@@ -46,44 +41,34 @@
 ```markdown [✨ Newly Added]
 • Shipping zone for whole world
 • New currency support for BYN, IRR, MMK
-• Shipping status to order summary 
-  (Frontend Customer Portal)
+• Shipping status to order summary (Frontend Customer Portal)
 • Block icons and block preview
-• Currency code and currency sign on pricing 
-  of product card
-• Price format setting for product card 
-  block editor
+• Currency code and currency sign on pricing of product card
+• Price format setting for product card block editor
 • Clearable on tax and shipping class widget
 • Pro notice on upgrade path
 ```
 
 ```markdown [🚀 Improvements]
 • Product selection modal on product card 
-  block editor instead of variation 
-  selection modal
+  block editor instead of variation selection modal
 ```
 
 ```markdown [🐛 Bug fixes]
-• Tax calculation issue based on store 
-  state settings
+• Tax calculation issue based on store state settings
 • Skip Inventory not working
 • Issue with category parsing '&'
 • Translation issue
 • Item doesn't get deleted from the cart
-• Css loading issue for blocks in 
-  template editor
+• Css loading issue for blocks in template editor
 • Report page navigation issue
 • Single Product js issue
-• Input rounded issue on store address which 
-  render under then country input
-• Popover text breaking issue now it is 
-  word breaks
+• Input rounded issue on store address which render under then country input
+• Popover text breaking issue now it is word breaks
 • Color issue on ProductInventory pro icon
 ```
 
 :::
-
----
 
 ## FluentCart v1.2.1
 *Released on October 5, 2025*
@@ -105,8 +90,6 @@
 ```
 
 :::
-
----
 
 ## FluentCart v1.2.0
 *Released on October 14, 2025*
