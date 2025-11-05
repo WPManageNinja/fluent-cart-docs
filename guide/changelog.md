@@ -1,6 +1,16 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.2.6
+*Released on October 30, 2025*
+
+::: code-group
+
+```markdown [🐞 Bug fixes]
+• Hotfix: Coupon usage database issue fixed
+
+:::
+
 ## FluentCart v1.2.5
 *Released on October 29, 2025*
 
