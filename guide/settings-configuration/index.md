@@ -9,7 +9,6 @@ This section covers the following critical areas:
 * **[General Settings (Store Setup)](/guide/settings-configuration/general-settings):** Configure your basic store information, including name, logo, address, and currency settings.
 * **[Pages Setup](/guide/settings-configuration/pages-setup):** Assign essential FluentCart functionalities (like shop, cart, and checkout) to specific WordPress pages using shortcodes.
 * **[Single Product & Order Setup](/guide/settings-configuration/single-product-order-setup):** Customize how individual products are displayed and manage general order-related settings.
-* **[Theme Setup](/guide/settings-configuration/theme-setup):** Fine-tune the visual appearance of your FluentCart store by customizing its color scheme.
 * **[Additional Info Settings](/guide/settings-configuration/additional-info-settings):** Configure various optional settings related to cart display, checkout requirements, and address fields.
 * **[Payment Settings Overview](/guide/settings-configuration/payment-settings):** A general overview of available payment gateways and links to their detailed setup guides.
 * **[Email Notifications](/guide/settings-configuration/email-notifications):** Manage and customize automated email communications sent to both administrators and customers.
