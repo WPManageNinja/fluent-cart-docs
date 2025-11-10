@@ -344,7 +344,7 @@ export default defineConfig({
             { text: 'Fluent Support Integration', link: '/guide/integrations/fluentsupport-integration' },
             { text: 'FluentCommunity Integration', link: '/guide/integrations/fluentcommunity-integration' },
             { text: 'Amazon S3 Integration', link: '/guide/integrations/amazon-s3-integration' },
-            { text: 'FlunetAffiliate Integration', link: '/guide/integrations/fluentaffiliate-integration.md' }
+            { text: 'FluentAffiliate Integration', link: '/guide/integrations/fluentaffiliate-integration.md' }
           ]
         },
         {
