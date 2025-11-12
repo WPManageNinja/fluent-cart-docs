@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { joinURL, withoutTrailingSlash } from 'ufo'
-import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
+// import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
 
 export default defineConfig({
   title: 'FluentCart Documentation',
@@ -142,7 +142,7 @@ export default defineConfig({
   
   markdown: {
     config: (md) => {
-      md.use(zoomablePlugin)
+      // md.use(zoomablePlugin) // Disabled - ZoomableImage component causing frontend rendering issues
     }
   },
   vite: {
