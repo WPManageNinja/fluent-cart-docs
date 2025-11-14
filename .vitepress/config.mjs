@@ -255,6 +255,7 @@ export default defineConfig({
                 { text: 'PayPal Settings', link: '/guide/payments-checkout/connecting-payment-gateways/paypal-settings' },
                 { text: 'Paddle Settings', link: '/guide/payments-checkout/connecting-payment-gateways/paddle-settings' },
                 { text: 'Mollie Settings', link: '/guide/payments-checkout/connecting-payment-gateways/mollie-settings' },
+                { text: 'Paystack Settings', link: '/guide/payments-checkout/connecting-payment-gateways/paystack-settings' },
                 { text: 'Cash on Delivery (COD) Settings', link: '/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings' }
               ]
             }
