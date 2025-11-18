@@ -20,6 +20,8 @@ The **Payment Settings** screen in FluentCart lets you set up how your store han
     * [Stripe](/guide/payments-checkout/connecting-payment-gateways/stripe-settings)
     * [PayPal](/guide/payments-checkout/connecting-payment-gateways/paypal-settings.md)
     * [Paddle](/guide/payments-checkout/connecting-payment-gateways/paddle-settings)
+    * [Mollie](/guide/payments-checkout/connecting-payment-gateways/mollie-settings.md)
+    * [Paystack](/guide/payments-checkout/connecting-payment-gateways/paystack-settings.md)
     * [Cash on Delivery](/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings.md)
 
 ### 2. Checkout Settings
@@ -57,6 +59,14 @@ On this screen, you will see a list of all available payment gateways. Each gate
     * **Description:** Paddle is an all-in-one payment solution that lets you accept credit cards, debit cards, and other popular payment methods worldwide through a single, simple integration.
     * **Status:** Typically shown as "Active" if enabled.
     * **Management:** Click "Manage" to access detailed [Paddle Settings](/guide/payments-checkout/connecting-payment-gateways/paddle-settings) for configuration.
+* **Mollie**
+    * **Description:** Mollie is a popular payment gateway, primarily used in Europe, that allows you to securely accept credit cards, debit cards, and local payment methods like iDEAL and Bancontact.
+    * **Status:** Typically shown as "Active" if enabled.
+    * **Management:** Click "Manage" to access detailed [Mollie Settings](/guide/payments-checkout/connecting-payment-gateways/mollie-settings.md) for configuration.
+* **Paystack**
+    * **Description:** Paystack is a modern payment gateway that helps businesses, particularly in Africa, accept payments from anyone, anywhere in the world via credit cards, bank transfers, and mobile money.
+    * **Status:** Typically shown as "Active" if enabled.
+    * **Management:** Click "Manage" to access detailed [Paystack Settings](/guide/payments-checkout/connecting-payment-gateways/paystack-settings.md) for configuration.
 * **Cash on Delivery (COD):** 
     * **Description:** Allows customers to pay with cash upon delivery of their order. 
     * **Status:** Typically shown as "Active" if enabled. 
