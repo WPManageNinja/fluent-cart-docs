@@ -396,13 +396,13 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Miscellaneous',
+          text: 'Customization and Themes',
           collapsed: true,
           items: [
-            { text: 'Using FluentCart Blocks & Templates', link: '/guide/miscellaneous/using-fluentcart-blocks-&-templates.md' },
-            { text: 'Theme Compatibility', link: '/guide/miscellaneous/theme-compatibility.md' },
-            { text: 'Translating FluentCart', link: '/guide/miscellaneous/translating-fluentcart.md' },
-            { text: 'Customize Store with Bricks', link: '/guide/miscellaneous/customize-store-with-bricks.md' }
+            { text: 'Using FluentCart Blocks & Templates', link: '/guide/customization-and-themes/using-fluentcart-blocks-&-templates.md' },
+            { text: 'Theme Compatibility', link: '/guide/customization-and-themes/theme-compatibility.md' },
+            { text: 'Translating FluentCart', link: '/guide/customization-and-themes/translating-fluentcart.md' },
+            { text: 'Customize Store with Bricks', link: '/guide/customization-and-themes/customize-store-with-bricks.md' }
           ]
         },
         {

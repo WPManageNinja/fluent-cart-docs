@@ -16,7 +16,7 @@ The easiest way to display your products is by using the main **Products** eleme
 2.  Click the plus icon (**+**) to add a new element.
 3.  In the elements panel, scroll down to the **FluentCart** category and click the **Products** element.
 
-![FluentCart Elements in Brick](/guide/public/images/miscellaneous/bricks/bricks-1.webp)
+![FluentCart Elements in Brick](/guide/public/images/customization-and-themes/bricks/bricks-1.webp)
 
 This will instantly add a beautiful, fully functional grid of your products to the page.
 
@@ -31,4 +31,4 @@ The real power comes from the customization options. After adding the **Products
 * **Style Settings**
     Under the **Style** tab, you have full control over the visual design. You can customize the Layout, Typography, Borders, and more to perfectly match the look and feel of your brand.
 
-![Elements options in Brick](/guide/public/images/miscellaneous/bricks/bricks-3.webp)
+![Elements options in Brick](/guide/public/images/customization-and-themes/bricks/bricks-3.webp)
