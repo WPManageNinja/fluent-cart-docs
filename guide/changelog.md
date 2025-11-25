@@ -1,6 +1,34 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.0
+*Released on November 19, 2025*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Introducing Paystack Payment Gateway
+• Added Quarterly and Half-Yearly subscription billing intervals
+• Coupons now supports email based restrictions
+• Introducing REST API Doc: https://dev.fluentcart.com/restapi/
+• Added new hooks and filters for developers
+```
+
+```markdown [🚀 Improvements]
+• Security: Performed a paid third-party security audit (Patchstack) as part of ongoing hardening efforts
+• Improved Translation support for multiple languages
+• Improved Reporting performance and data accuracy
+• Refreshed the checkout page design and optimized payment method re-rendering
+• Better Multi-Site Support
+• Improvement on Invoicing & Taxes
+```
+
+```markdown [🐞 Bug fixes]
+• Bug fixes and Improvements
+```
+
+:::
+
 ## FluentCart v1.2.6
 *Released on October 30, 2025*
 
