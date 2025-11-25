@@ -1,4 +1,4 @@
-### FluentCart status Overview
+# FluentCart status Overview
 
 This guide explains the different statuses you'll see throughout FluentCart. Statuses help you quickly understand the current state of your products, orders, payments, subscriptions, and more.
 
