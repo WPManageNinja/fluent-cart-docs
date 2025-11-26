@@ -425,5 +425,7 @@ export default defineConfig({
   head: [
       ['link', { rel: 'icon', href: '/icon.webp' }],
       ['meta', { property: 'og:image', content: 'https://fluentcart.com/wp-content/uploads/2025/06/fluent-cart-featured.png' }],
+      ['script', { src: 'https://cdn.jsdelivr.net/gh/fluent-docai/fluent-bot-chat-widget-open@latest/fluent-bot-chat-widget.umd.js' }],
+      ['script', {}, '(function() { function initWidget() { if (typeof FluentBotChatWidget !== "undefined") { FluentBotChatWidget.injectWidget("d5e29b4b-0108-4885-98c8-d1cde76a5b70"); } else { setTimeout(initWidget, 100); } } initWidget(); })();']
   ]
 })
