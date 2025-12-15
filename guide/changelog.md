@@ -1,6 +1,40 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.2
+*Released on December 2, 2025*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Private Product Status
+• Adds Authorize.net payment gateway (Pro)
+• Adds Recurring discount coupon
+• Adds Checkout block
+• Adds Product variation customization hooks
+• Adds Thank You page payment instructions
+```
+
+```markdown [🚀 Improvements]
+• Updates Reports graph design
+• Updates Gateway customization design
+• Updates Addon gateway management for future updates
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes handling of zero-decimal currency for Stripe
+• Fixes hookable customer profile menu & icon issue
+• Fixes coupon priority issue
+• Fixes coupon calculation issues
+• Fixes report card design issue
+• Fixes group key SQL security issue
+• Fixes EU VAT renderer issue on initial load
+• Fixes variation title not showing for bump product
+• Fixes wrong Stripe canceled_at date
+```
+
+:::
+
 ## FluentCart v1.3.0
 *Released on November 19, 2025*
 
