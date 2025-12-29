@@ -344,6 +344,7 @@ export default defineConfig({
             { text: 'FluentCRM Integration', link: '/guide/integrations/fluentcrm-integration' },
             { text: 'Fluent Support Integration', link: '/guide/integrations/fluentsupport-integration' },
             { text: 'FluentCommunity Integration', link: '/guide/integrations/fluentcommunity-integration' },
+            { text: 'FluentBooking Integration', link: '/guide/integrations/fluentbooking-integration' },
             { text: 'Amazon S3 Integration', link: '/guide/integrations/amazon-s3-integration' },
             { text: 'FluentAffiliate Integration', link: '/guide/integrations/fluentaffiliate-integration.md' }
           ]
