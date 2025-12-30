@@ -5,7 +5,7 @@ description: "A comprehensive guide on connecting FluentCart with FluentBooking 
 
 # FluentBooking Integration
 
-Connecting **FluentCart** with **FluentBooking** turns your appointment calendar into a powerful sales channel. This integration allows you to sell consultations, classes, services, or products directly through your booking forms without requiring third-party plugins.
+**FluentCart** is designed to be fast, flexible, and scalable, making it easy to manage your eCommerce business. With this integration, you can sell consultations, classes, services, or products directly from your booking forms-no third-party plugins required.
 
 By using FluentCart’s payment processing, you can maintain a unified ecosystem for both your products and your scheduled appointments.
 
