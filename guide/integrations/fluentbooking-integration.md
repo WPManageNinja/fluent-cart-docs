@@ -14,8 +14,8 @@ By using FluentCart’s payment processing, you can maintain a unified ecosystem
 The connection between the two plugins is designed to be seamless. Once FluentCart is active on your site, you simply need to toggle the feature inside FluentBooking.
 
 1.  Navigate to **FluentBooking > Settings** from your WordPress dashboard.
-2.  Click on **Advanced Features & Addons** in the top menu bar.
-3.  The system should automatically detect the FluentCart plugin; ensure it is enabled to allow the two tools to communicate.
+2.  Click on **Advanced Features & Addons** in the left side bar.
+3.  The system should automatically detect the **FluentCart** plugin; ensure it is enabled to allow the two tools to communicate.
 
 ![Activating the FluentCart module within FluentBooking settings](/guide/public/images/integrations/fluentbooking-integration/activate-the-fluentcart-module.webp)
 
