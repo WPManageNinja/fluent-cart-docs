@@ -1,12 +1,13 @@
 # FluentCart Shortcodes
 
-Shortcodes are a powerful way to display your store's content anywhere on your WordPress site. FluentCart provides flexible shortcodes that allow you to display your product catalog, checkout pages, and customer dashboards with complete control over the layout and functionality.
+FluentCart provides a powerful and flexible shortcode that allows you to display your product catalog anywhere on your WordPress site. With complete control over the layout and functionality, you can seamlessly integrate your store's products into any page or post.
 
 ## The Product Catalog Shortcode
 
 The `[fluent_cart_products]` shortcode is the primary way to display your products on any page. It allows you to create a custom shop experience by filtering products, setting pagination, and enabling advanced search features.
 
 ### Basic Usage
+
 To display your default product grid, simply paste this into any page or post:
 `[fluent_cart_products]`
 
