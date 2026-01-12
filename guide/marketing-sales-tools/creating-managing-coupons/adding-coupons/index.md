@@ -49,14 +49,41 @@ On the right side of the screen, you’ll find the **Schedule** box. This is whe
 
 ### 4. Usage Restrictions
 
-Sometimes, you only want a coupon to work for certain products or if a customer spends enough money. This is where you set those rules.
+Sometimes, you don’t want a coupon to be used for every single thing in your store. Usage restrictions let you set the "rules" for how and when a discount can be used. This helps you protect your profits while still offering great deals to the right people.
 
-* **Min Spend Amount:** The customer's cart must be at least this amount for the coupon to work.
-* **Max Spend Amount:** You can set a maximum cart value for the coupon. Leave it empty for no limit.
-* **Include/Exclude Categories:** You can make the coupon valid for only certain product categories (like "T-Shirts") or exclude certain categories.
-* **Include/Exclude Products:** Similar to categories, you can pick specific products that the coupon will or will not work for.
+#### Spending Limits
 
-    ![Screenshot of Usage Restrictions](/images/marketing-sales-tools/usage-restrictions.webp)
+ * **Min Spend Amount:** The customer's cart must reach this total before the coupon will work.
+ * **Max Spend Amount:** You can set a limit so the coupon won't work if the cart total is too high. If you don't want a limit, just leave this empty.
+
+#### Picking Specific Items
+
+ * **Include/Exclude Categories:** You can choose to make a coupon work only for certain groups of products (like "Winter Gear") or keep it from working on others.
+ * **Include/Exclude Products:** If you have one specific product that you don't want to discount, you can list it here to exclude it from the deal.
+
+#### Restricting by User
+
+ * **By Email Address:** You can limit a coupon so only specific people can use it by entering their email addresses here. This is perfect for sending a "thank you" discount to a single loyal customer.
+
+### Recurring Coupons 
+
+FluentCart supports 100% recurring discounts for subscriptions. This means a coupon can apply not just to the first payment, but to every renewal for as long as the subscription remains active.
+
+#### Make this coupon recurring
+
+When enabled, the discount will automatically apply on each billing cycle—no manual work required.
+
+#### Why Use This
+
+ * **Free Team Access:** Give your own staff or testers completely free access to your services.
+ * **Sponsor Memberships:** Allow a sponsor to pay for a customer's membership so the customer pays $0 for every renewal.
+ * **Influencer Perks:** Create special links for partners that give their followers zero-cost renewals for a set time.
+ * **Lifetime Trials:** Launch plans that stay free until you decide to change them manually
+
+>[!Note]
+>This feature makes your store more flexible because it doesn't assume every subscription has to make money immediately. It also makes your reports and renewal logic much safer for the long term.
+
+   ![Screenshot of Usage Restrictions](/images/marketing-sales-tools/usage-restrictions.webp)
 
 ### 5. Maximum Discount Uses
 
