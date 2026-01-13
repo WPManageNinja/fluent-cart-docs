@@ -1,3 +1,8 @@
+---
+title: "Stripe Settings"
+description: "Learn how to connect and configure Stripe payment gateway in FluentCart to securely accept credit cards, debit cards, and various payment methods through embedded or hosted checkout."
+---
+
 # Stripe Settings
 
 Stripe is a powerful and globally recognized payment platform that allows you to securely accept credit cards, debit cards, and various other payment methods through a single, seamless integration.
@@ -26,9 +31,16 @@ The Stripe settings page allows you to connect your store in both Test and Live 
 FluentCart securely stores your Stripe connection information using a salt key encryption method. This ensures your informations remain fully encrypted in the database and protected from unauthorized access.
 :::
 
+#### Step 3: Choose Your Checkout Mode
+
+FluentCart gives you two different ways for customers to pay:
+
+ * **Embedded checkout (Recommended):** This keeps the customer on your website. It’s a customizable block that lets you control the design.
+ * **Stripe Hosted checkout:** This sends the customer to a secure page managed by **Stripe**. This is great for high-volume stores or if you want Stripe to handle all the complex security rules for you.
+
 ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/stripe-settings.webp)
 
-#### Step 3: Configure Webhooks
+#### Step 4: Configure Webhooks
 
 Webhooks are essential for the integration to function correctly. They allow Stripe to send real-time notifications to your store about payment events, such as successful charges, refunds, and subscription updates.
 
@@ -60,7 +72,7 @@ Next, type a destination name, **paste** the **webhook URL** you copied earlier 
 
    ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/create-destination.webp)
 
-#### Step 4: Activate and Save
+#### Step 5: Activate and Save
 
 1.  **Payment Activation:** Back on the **FluentCart Stripe settings** page, ensure the **Payment Activation** toggle at the top right is switched on.
 2.  **Save Settings:** Click the **Save Settings** button at the bottom to finalize the setup.
