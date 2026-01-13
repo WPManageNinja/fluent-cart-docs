@@ -147,6 +147,9 @@ export default defineConfig({
   },
   vite: {
     publicDir: 'guide/public',
+    build: {
+      chunkSizeWarningLimit: 1000,
+    }
   },
   themeConfig: {
     search: {
