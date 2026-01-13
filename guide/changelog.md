@@ -1,6 +1,78 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.6
+*Released on January 8, 2026*
+
+::: code-group
+
+```markdown [🐞 Bug fixes]
+• Fixes FSE theme support
+• Fixes Checkout Agree Terms and Conditions issue
+• Fixes Product Min-Max pricing issue
+• Fixes Buy now section position issue
+• Fixes Shortcode issue in cart and checkout page
+• Fixes Subscription related order issue
+• Fixes Checkout page broken on Breakdance builder
+```
+
+:::
+
+## FluentCart v1.3.5
+*Released on January 6, 2026*
+
+::: code-group
+
+```markdown [🐞 Bug fixes]
+• Hotfix: Cart Model caching issue fixed
+```
+
+:::
+
+## FluentCart v1.3.4
+*Released on January 6, 2026*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Bundle products
+• Adds Stripe hosted checkout
+• Adds Stripe appearance customizations support
+• Adds Razorpay payment gateway addon (onetime)
+• Adds 100% recurring discount
+• Adds Order reference to Stripe metadata
+• Adds New currency Ghanaian Cedi (GHS)
+• Adds Turnstile invisible captcha
+• Adds Email notification for offline payment
+• Adds Items information in stripe metadata
+• Adds WP user creation
+• Adds Subscription retention & Cohort report
+```
+
+```markdown [🚀 Improvements]
+• Enhanced Development hooks to customize checkout button text
+• Enhanced Translations for different modules
+• Enhanced More development related hooks and modules
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Double confirmation email issue
+• Fixes Order bump with subscription products
+• Fixes NO_SHIPPING for paypal subscription issue
+• Fixes Amount precision issue for paypal
+• Fixes Update button issue for affiliate in coupon
+• Fixes Checkout missing company name store issue
+• Fixes Conflicts with Divi-5 Builder issue
+• Fixes Customer last purchase invalid date issue
+• Fix Downloads handling for object-based order
+• Fixes S3 empty file validation issue
+• Fixes downloadable file issue and empty file visibility
+• Fixes Get paypal plan api endpoints issue
+• Fixes Variation View Image & Text issue for Gutenberg
+```
+
+:::
+
 ## FluentCart v1.3.2
 *Released on December 2, 2025*
 
