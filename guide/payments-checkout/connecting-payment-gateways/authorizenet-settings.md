@@ -9,7 +9,7 @@ This guide provides a step-by-step walkthrough to connect your Authorize.net acc
 First, you need to locate the integration settings within your WordPress site.
 
 1.  Navigate to **FluentCart Pro > Settings** from your WordPress sidebar.
-2.  Select the **Payment Settings** tab from the menu.
+2.  Select the **Payment Settings** tab from the sidebar.
 3.  Scroll down to find **Authorize.net** and click the **Manage** button.
 
 ![Authorize.net Settings](/guide/public/images/payments-checkout/authorize.net/authorize-payment-method-1.webp)
