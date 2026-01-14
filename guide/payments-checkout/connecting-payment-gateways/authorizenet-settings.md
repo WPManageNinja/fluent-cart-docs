@@ -1,6 +1,6 @@
 # Authorize.net Settings
 
-Authorize.net (a Visa solution) is one of the most trusted payment gateways, allowing you to securely accept credit cards, debit cards, and e-checks (ACH). Integrating it with FluentCart provides your customers with a professional and reliable checkout experience.
+Authorize.net is one of the most trusted payment gateways, allowing you to securely accept credit cards, debit cards, and e-checks (ACH). Integrating it with FluentCart provides your customers with a professional and reliable checkout experience.
 
 This guide provides a step-by-step walkthrough to connect your Authorize.net account, configure your checkout appearance, and set up webhooks for automated order processing.
 
