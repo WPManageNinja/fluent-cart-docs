@@ -261,6 +261,7 @@ export default defineConfig({
                 { text: 'Mollie Settings', link: '/guide/payments-checkout/connecting-payment-gateways/mollie-settings' },
                 { text: 'Paystack Settings', link: '/guide/payments-checkout/connecting-payment-gateways/paystack-settings' },
                 { text: 'Razorpay Settings', link: '/guide/payments-checkout/connecting-payment-gateways/razorpay-settings' },
+                { text: 'Authorize.net Settings', link: '/guide/payments-checkout/connecting-payment-gateways/authorizenet-settings' },
                 { text: 'Cash on Delivery (COD) Settings', link: '/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings' }
               ]
             }
