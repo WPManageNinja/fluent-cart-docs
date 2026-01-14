@@ -9,7 +9,7 @@ This guide provides a step-by-step walkthrough to connect your Authorize.net acc
 First, you need to locate the integration settings within your WordPress site.
 
 1.  Navigate to **FluentCart Pro > Settings** from your WordPress sidebar.
-2.  Select the **Payment Settings** tab from the left-hand menu.
+2.  Select the **Payment Settings** tab from the menu.
 3.  Scroll down to find **Authorize.net** and click the **Manage** button.
 
 ![Authorize.net Settings](/guide/public/images/payments-checkout/authorize.net/authorize-payment-method-1.webp)
@@ -20,7 +20,8 @@ To connect your store, you need to retrieve four specific keys from your Authori
 
 1.  Log in to your [**Authorize.net Dashboard**](https://login.authorize.net/).
 2.  Go to the **Account** tab in the main navigation.
-3.  Click on **API Credentials and Keys** (located under the Account section).
+3.  Click on **Account and API Settings** (located under the Account section).
+4.  Select **API Credentials and Keys**.
 
 ![Authorize.net Settings](/guide/public/images/payments-checkout/authorize.net/authorize-payment-method-2.webp)
 
@@ -56,7 +57,7 @@ Now, return to your WordPress site to input the credentials you just gathered.
 
 Webhooks are critical for communication. They allow Authorize.net to notify FluentCart the moment a payment is successful, failed, or a subscription is renewed.
 
-1.  **Copy the Webhook URL:** On the FluentCart Authorize.net settings page, locate the **Webhook URL** (it usually looks like `https://your-site.com/?fluentcart_api...`). Click the copy icon.
+1.  **Copy the Webhook URL:** On the FluentCart Authorize.net settings page, locate the **Webhook URL** (it looks like `https://your-site.com/?fluentcart_api...`). Click the copy icon.
 2.  **Add Webhook in Authorize.net:**
     * In your Authorize.net dashboard, go to **Account > Webhook Notifications > Webhooks**.
     * Click the **+ Create a webhook notification** button.
@@ -64,7 +65,7 @@ Webhooks are critical for communication. They allow Authorize.net to notify Flue
 ![Authorize.net Settings](/guide/public/images/payments-checkout/authorize.net/authorize-payment-method-5.webp)
 
 3.  **Fill in Webhook Details:**
-    * **Name:** Enter "FluentCart Webhook."
+    * **Name:** Give a name to your Webhook like "FluentCart Webhook."
     * **Endpoint URL:** Paste the URL you copied from FluentCart.
     * **Status:** Ensure this is set to **Active**.
 4.  **Select Events:** Check the boxes for the following recommended events:
