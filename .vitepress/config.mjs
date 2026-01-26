@@ -233,6 +233,7 @@ export default defineConfig({
                 { text: 'Collecting Payments for Modified Orders', link: '/guide/store-management/orders-management/collecting-payments-modified-orders' },
                 { text: 'Order Bump', link: '/guide/store-management/orders-management/order-bump' },
                 { text: 'Changing Order Statuses', link: '/guide/store-management/orders-management/changing-order-statuses' },
+                { text: 'Instant Modal Checkout', link: '/guide/store-management/orders-management/instant-modal-checkout' },
                 { text: 'Understanding Statuses', link: '/guide/store-management/understanding-statuses' }
               ]
             },
