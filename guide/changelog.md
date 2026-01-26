@@ -1,6 +1,67 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.8
+*Released on January 23, 2026*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Instant checkout feature
+• Adds Product Button block (Guttenberg)
+• Adds Product duplicate feature
+• Adds Copy variation ID option in variation context menu
+```
+
+```markdown [🚀 Improvements]
+• Improves JS file size optimization
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes S3 driver directory seperator issue
+```
+
+:::
+
+## FluentCart v1.3.7
+*Released on January 20, 2026*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Support for frontend templates
+• Adds Order UUID / hash filter
+• Adds Stripe metadata hook
+• Adds Hook for autocomplete digital orders (default enabled)
+```
+
+```markdown [🚀 Improvements]
+• Improves Translation support for receipt page
+• Improves Frontend loader UI
+• Improves Cart item count sync between backend and UI badge
+• Improves Stripe subscription price update event handling
+• Improves Validation error handling and messaging
+• Improves Retention report components
+• Improves Checkout, product, and loader styles
+• Improves Checkout field defaults and labels
+• Improves Text change: "Half year" → "Six month"
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Hide consent section for stripe subscription
+• Fixes Security issue in license APIs
+• Fixes Product variation IDs not updating in DownloadFile
+• Fixes ShopApp block list view & pagination issue
+• Fixes Cart icon in body setting not working
+• Fixes GroupKey bug in reports
+• Fixes License rendering issue on customer profile
+• Fixes Checkout empty state issue
+• Fixes Address validation message and input label mismatch
+• Fixes Missing required symbol for "Full Name" in checkout
+```
+
+:::
+
 ## FluentCart v1.3.6
 *Released on January 8, 2026*
 
