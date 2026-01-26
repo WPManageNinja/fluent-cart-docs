@@ -1,6 +1,201 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.8
+*Released on January 23, 2026*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Instant checkout feature
+• Adds Product Button block (Guttenberg)
+• Adds Product duplicate feature
+• Adds Copy variation ID option in variation context menu
+```
+
+```markdown [🚀 Improvements]
+• Improves JS file size optimization
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes S3 driver directory seperator issue
+```
+
+:::
+
+## FluentCart v1.3.7
+*Released on January 20, 2026*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Support for frontend templates
+• Adds Order UUID / hash filter
+• Adds Stripe metadata hook
+• Adds Hook for autocomplete digital orders (default enabled)
+```
+
+```markdown [🚀 Improvements]
+• Improves Translation support for receipt page
+• Improves Frontend loader UI
+• Improves Cart item count sync between backend and UI badge
+• Improves Stripe subscription price update event handling
+• Improves Validation error handling and messaging
+• Improves Retention report components
+• Improves Checkout, product, and loader styles
+• Improves Checkout field defaults and labels
+• Improves Text change: "Half year" → "Six month"
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Hide consent section for stripe subscription
+• Fixes Security issue in license APIs
+• Fixes Product variation IDs not updating in DownloadFile
+• Fixes ShopApp block list view & pagination issue
+• Fixes Cart icon in body setting not working
+• Fixes GroupKey bug in reports
+• Fixes License rendering issue on customer profile
+• Fixes Checkout empty state issue
+• Fixes Address validation message and input label mismatch
+• Fixes Missing required symbol for "Full Name" in checkout
+```
+
+:::
+
+## FluentCart v1.3.6
+*Released on January 8, 2026*
+
+::: code-group
+
+```markdown [🐞 Bug fixes]
+• Fixes FSE theme support
+• Fixes Checkout Agree Terms and Conditions issue
+• Fixes Product Min-Max pricing issue
+• Fixes Buy now section position issue
+• Fixes Shortcode issue in cart and checkout page
+• Fixes Subscription related order issue
+• Fixes Checkout page broken on Breakdance builder
+```
+
+:::
+
+## FluentCart v1.3.5
+*Released on January 6, 2026*
+
+::: code-group
+
+```markdown [🐞 Bug fixes]
+• Hotfix: Cart Model caching issue fixed
+```
+
+:::
+
+## FluentCart v1.3.4
+*Released on January 6, 2026*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Bundle products
+• Adds Stripe hosted checkout
+• Adds Stripe appearance customizations support
+• Adds Razorpay payment gateway addon (onetime)
+• Adds 100% recurring discount
+• Adds Order reference to Stripe metadata
+• Adds New currency Ghanaian Cedi (GHS)
+• Adds Turnstile invisible captcha
+• Adds Email notification for offline payment
+• Adds Items information in stripe metadata
+• Adds WP user creation
+• Adds Subscription retention & Cohort report
+```
+
+```markdown [🚀 Improvements]
+• Enhanced Development hooks to customize checkout button text
+• Enhanced Translations for different modules
+• Enhanced More development related hooks and modules
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Double confirmation email issue
+• Fixes Order bump with subscription products
+• Fixes NO_SHIPPING for paypal subscription issue
+• Fixes Amount precision issue for paypal
+• Fixes Update button issue for affiliate in coupon
+• Fixes Checkout missing company name store issue
+• Fixes Conflicts with Divi-5 Builder issue
+• Fixes Customer last purchase invalid date issue
+• Fix Downloads handling for object-based order
+• Fixes S3 empty file validation issue
+• Fixes downloadable file issue and empty file visibility
+• Fixes Get paypal plan api endpoints issue
+• Fixes Variation View Image & Text issue for Gutenberg
+```
+
+:::
+
+## FluentCart v1.3.2
+*Released on December 2, 2025*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Private Product Status
+• Adds Authorize.net payment gateway (Pro)
+• Adds Recurring discount coupon
+• Adds Checkout block
+• Adds Product variation customization hooks
+• Adds Thank You page payment instructions
+```
+
+```markdown [🚀 Improvements]
+• Updates Reports graph design
+• Updates Gateway customization design
+• Updates Addon gateway management for future updates
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes handling of zero-decimal currency for Stripe
+• Fixes hookable customer profile menu & icon issue
+• Fixes coupon priority issue
+• Fixes coupon calculation issues
+• Fixes report card design issue
+• Fixes group key SQL security issue
+• Fixes EU VAT renderer issue on initial load
+• Fixes variation title not showing for bump product
+• Fixes wrong Stripe canceled_at date
+```
+
+:::
+
+## FluentCart v1.3.0
+*Released on November 19, 2025*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Introducing Paystack Payment Gateway
+• Added Quarterly and Half-Yearly subscription billing intervals
+• Coupons now supports email based restrictions
+• Introducing REST API Doc: https://dev.fluentcart.com/restapi/
+• Added new hooks and filters for developers
+```
+
+```markdown [🚀 Improvements]
+• Security: Performed a paid third-party security audit (Patchstack) as part of ongoing hardening efforts
+• Improved Translation support for multiple languages
+• Improved Reporting performance and data accuracy
+• Refreshed the checkout page design and optimized payment method re-rendering
+• Better Multi-Site Support
+• Improvement on Invoicing & Taxes
+```
+
+```markdown [🐞 Bug fixes]
+• Bug fixes and Improvements
+```
+
+:::
+
 ## FluentCart v1.2.6
 *Released on October 30, 2025*
 
