@@ -82,13 +82,20 @@ Select **Subscription** for products that require recurring payments.
 
 Choose this option when your product has multiple versions, like "Standard" and "Pro". This allows you to create a table of variations, each with its own pricing structure.
 
-**1. Adding and Managing Variations in the Table**
+**Managing the Variations Table**
 
 * **To Add a New Variation:** Click the `+ Add more` button at the bottom to add a new row to the table.
+* **To Change Order:** Use the **six-dot icon** on the left to drag and reorder rows.
+* **Quick Edits:** You can edit the **Title**, **Price**, and **Compare** at price directly inside the table rows.
 * **To Configure a Variation:** To set the price and other details for a specific variation, click the pencil icon in the "Action" column. This will open a detailed configuration sidebar.
-* **To Duplicate a Variation:** Click the three-dot icon in the "Action" column to get the option for duplicating the variation.
 
-**2. Configuring a Single Variation (Pencil Icon)**
+**The Advanced Action Menu (Three-Dot Icon):** Click the **three-dot** icon to access these new time-saving tools:
+
+ * **Duplicate:** Quickly copy an existing variation to make a new one.
+ * **Copy Variation ID:** Get the unique **ID** for developers or shortcodes.
+ * **Direct Checkout:** Create a link that sends customers straight to the payment page for this version.
+
+**Configuring a Single Variation (Pencil Icon)**
 
 After clicking the pencil icon, a sidebar appears where you can set up the pricing for that specific version. You must choose a payment term: **One Time** or **Subscription**.
 
