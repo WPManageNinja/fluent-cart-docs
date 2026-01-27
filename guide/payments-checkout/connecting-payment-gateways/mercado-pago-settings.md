@@ -34,7 +34,9 @@ Once activated, you need to provide your API credentials to sync your store with
     * Webhook Secret
 
 >[!Note]
->When using **Test credentials**, you may notice many "false errors" appearing, or the API might suddenly become unavailable. These issues can prevent you from completing the proper checkout flow for your tests. Because of this, we highly recommend testing your store using your real Production credentials before officially going live to ensure everything is working perfectly.
+>**Testing Your Setup:** When using **Test credentials**, you may notice many "false errors" appearing, or the API might suddenly become unavailable. These issues can prevent you from completing the proper checkout flow for your tests. Because of this, we highly recommend testing your store using your **real Production credentials** before officially going live to ensure everything is working perfectly.
+
+>**Currency Match:** Ensure that your FluentCart store currency is set to the same currency used in your Mercado Pago account. 
 
 ![Payment Activation](/guide/public/images/payments-checkout/mercado-pago/payment-activation-3.webp)
 
