@@ -22,6 +22,8 @@ The **Payment Settings** screen in FluentCart lets you set up how your store han
     * [Paddle](/guide/payments-checkout/connecting-payment-gateways/paddle-settings)
     * [Mollie](/guide/payments-checkout/connecting-payment-gateways/mollie-settings.md)
     * [Paystack](/guide/payments-checkout/connecting-payment-gateways/paystack-settings.md)
+    * [Razorpay](/guide/payments-checkout/connecting-payment-gateways/razorpay-settings.md)
+    * [Mercado Pago](/guide/payments-checkout/connecting-payment-gateways/mercado-pago-settings.md)
     * [Cash on Delivery](/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings.md)
 
 ### 2. Checkout Settings
@@ -67,6 +69,14 @@ On this screen, you will see a list of all available payment gateways. Each gate
     * **Description:** Paystack is a modern payment gateway that helps businesses, particularly in Africa, accept payments from anyone, anywhere in the world via credit cards, bank transfers, and mobile money.
     * **Status:** Typically shown as "Active" if enabled.
     * **Management:** Click "Manage" to access detailed [Paystack Settings](/guide/payments-checkout/connecting-payment-gateways/paystack-settings.md) for configuration.
+* **Razorpay**
+    * **Description:** Razorpay is a leading payment gateway in India that lets you accept credit cards, debit cards, UPI, netbanking, and popular wallets through a single integration.
+    * **Status:** Typically shown as "Active" if enabled.
+    * **Management:** Click "Manage" to access detailed [Razorpay Settings](/guide/payments-checkout/connecting-payment-gateways/razorpay-settings.md) for configuration.
+* **Mercado Pago**
+    * **Description:** Mercado Pago is a widely used payment solution in Latin America that allows you to accept credit cards, debit cards, and local payment methods across multiple countries.
+    * **Status:** Typically shown as "Active" if enabled.
+    * **Management:** Click "Manage" to access detailed [Mercado Pago Settings](/guide/payments-checkout/connecting-payment-gateways/mercado-pago-settings.md) for configuration.
 * **Cash on Delivery (COD):** 
     * **Description:** Allows customers to pay with cash upon delivery of their order. 
     * **Status:** Typically shown as "Active" if enabled. 
