@@ -261,6 +261,7 @@ export default defineConfig({
                 { text: 'Paddle Settings', link: '/guide/payments-checkout/connecting-payment-gateways/paddle-settings' },
                 { text: 'Mollie Settings', link: '/guide/payments-checkout/connecting-payment-gateways/mollie-settings' },
                 { text: 'Paystack Settings', link: '/guide/payments-checkout/connecting-payment-gateways/paystack-settings' },
+                { text: 'Mercado Pago Settings', link: '/guide/payments-checkout/connecting-payment-gateways/mercado-pago-settings' },
                 { text: 'Razorpay Settings', link: '/guide/payments-checkout/connecting-payment-gateways/razorpay-settings' },
                 { text: 'Authorize.net Settings', link: '/guide/payments-checkout/connecting-payment-gateways/authorizenet-settings' },
                 { text: 'Cash on Delivery (COD) Settings', link: '/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings' }
