@@ -23,6 +23,7 @@ While FluentCart should work well with almost any standard theme, we have offici
 * Storefront
 * OceanWP
 * Hello Elementor
+* FSE Block Theme
 
 ### What If My Theme Isn't on the List?
 
