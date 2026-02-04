@@ -1,6 +1,30 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.10
+*Released on February 04, 2026*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds FSE Block Theme Support
+• Adds Blocks & shortcodes: Mini cart, Product Carousel, title, image
+• Adds Shortcode product categories
+```
+
+```markdown [🚀 Improvements]
+• Improves Guttenberg Blocks into latest version (v3)
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Missing tax breakdown on renewal email
+• Fixes Missing VAT info on renewal order
+• Fixes Dark-light theme conflict for addons promo
+• Fixes Modal checkout responsive issue
+```
+
+:::
+
 ## FluentCart v1.3.9
 *Released on January 28, 2026*
 
