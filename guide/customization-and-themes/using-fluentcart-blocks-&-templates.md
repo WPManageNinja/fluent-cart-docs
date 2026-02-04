@@ -24,6 +24,8 @@ FluentCart provides a comprehensive suite of blocks designed to help you build e
 
 These blocks form the backbone of your store, handling how users browse products and manage their accounts.
 
+* **Product Title:** Displays the name of your product. This is a standalone block, allowing you to place and style the title independently in your custom designs.
+* **Product Image:** Renders the featured image of your product. It provides a simple way to place the main product visual anywhere in your layout.
 * **Products:** The primary block for your shop. It displays a dynamic grid of products that you can filter by category, tag, or status.
 * **Product Carousel:** A dynamic slider block that showcases your products in a rotating carousel. Perfect for "Featured" sections or "New Arrivals" on your homepage.
 * **Product Search:** Adds a specialized search bar that searches exclusively within your FluentCart product catalog.
