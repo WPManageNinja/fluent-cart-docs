@@ -16,23 +16,51 @@ The easiest and most flexible way to build your store is with FluentCart's dedic
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/accessing-fluentcart-blocks.webp)
 
-## Understanding the Core Blocks
+### Understanding the Core Blocks
 
-FluentCart offers a set of powerful Gutenberg blocks that help you design everything—from a full shop page to a custom product layout. Each block serves a specific purpose, giving you full flexibility when building your store.
+FluentCart provides a comprehensive suite of blocks designed to help you build everything from a high-converting main shop page to highly customized product landing pages. These blocks are modular, allowing you to drag and drop elements exactly where you need them.
 
-* **Products:** This block shows a dynamic and customizable grid of all your products. Use it to build your main Shop page or display featured items anywhere on your site. You can filter products by categories, tags, and more.
-* **Product Search:** Adds a clean search bar that looks through your FluentCart products only. Helpful for giving customers a quick way to find what they need.
-* **Customer Dashboard:** Place this block on a dedicated page to create a **"My Account"** area. Logged-in customers can view their orders, manage subscriptions, download files, and update personal details.
-* **Checkout Page:** Add this block to a blank page to create your official checkout. It automatically loads the complete secure checkout form.
-* **Product Card:** Displays a single product in a beautifully styled card layout. Great for highlighting featured products or embedding items inside blog posts.
-* **Product Gallery:** Shows the image gallery of a specific product. Perfect when designing a custom product page layout and placing the gallery exactly where you want it.
-* **Product Info:** Displays the main details of a product: title, description, price, and more. A core piece of modular product page building.
-* **Buy Section:** Shows the full purchasing area for a product—including variations, quantity selector, and the **Add to Cart** button. Essential for custom product templates.
-* **Price Range:** Displays the product’s price or price range (for variable products). Useful when building modular product layouts.
-* **Excerpt:** Shows the short product description. Ideal for custom-designed product pages where you want more control over text placement.
-* **Product Button:** Adds a dedicated product action button—for example, “View Product.” Helpful when customizing lists, product highlights, or promo sections.
-* **Add to Cart Button:** Displays a standalone **Add to Cart** button for a specific product. Useful when you want to place the button separately from other product details.
-* **Stock:** Displays whether a product is currently **In Stock**, **Low Stock**, or **Out of Stock**. Great for creating urgency and increasing conversions.
+#### Store-wide & Navigation Blocks
+
+These blocks form the backbone of your store, handling how users browse products and manage their accounts.
+
+* **Product Title:** Displays the name of your product. This is a standalone block, allowing you to place and style the title independently in your custom designs.
+* **Product Image:** Renders the featured image of your product. It provides a simple way to place the main product visual anywhere in your layout.
+* **Products:** The primary block for your shop. It displays a dynamic grid of products that you can filter by category, tag, or status.
+* **Product Carousel:** A dynamic slider block that showcases your products in a rotating carousel. Perfect for "Featured" sections or "New Arrivals" on your homepage.
+* **Product Search:** Adds a specialized search bar that searches exclusively within your FluentCart product catalog.
+* **Mini Cart:** A compact cart widget for your header or sidebar. It allows shoppers to quickly peek at their items, view the total price, and see the item count without leaving their current page.
+* **Product Categories List:** Displays a organized list of your product categories, making it easy for customers to navigate different departments of your store.
+* **Customer Dashboard:** A dedicated block for the "My Account" area where customers can view orders, manage subscriptions, and update their profile.
+* **Checkout Page:** The essential block that renders the secure checkout form for completing purchases.
+
+#### Single Product Modular Blocks
+
+Use these blocks to build custom layouts for individual products or landing pages. They automatically pull data from the product they are assigned to.
+
+* **Product Card:** Displays a specific product in a visually appealing standalone card format.
+* **Product Info:** Renders the core details of a product, such as the Title and Short Description.
+* **Price Range:** Displays the price or price range (for variable products) with automatic currency formatting.
+* **Excerpt:** Shows a brief snippet or summary of the product description.
+* **Buy Section:** The functional hub of a product page, containing variation selectors (Size, Color), quantity input, and the "Add to Cart" button.
+* **Stock:** Displays the current inventory status (e.g., "In Stock" or "Out of Stock") to provide clarity to shoppers.
+
+#### Call to Action Blocks
+
+These focused blocks are designed to be placed anywhere on your site to trigger an immediate purchase action.
+
+* **Buy Now:** A direct action button that can be configured to trigger the Instant Checkout (modal) or lead directly to the checkout page for a specific product.
+* **Add to Cart:** A standalone button that adds a specific product or variation to the customer's cart while keeping them on the same page.
+
+#### Customizing Your Blocks
+
+Every FluentCart block features a **Settings Sidebar** on the right side of the WordPress editor. For example:
+
+* **Mini Cart Settings:** You can choose your preferred icon (Cart, Bag, etc.), toggle the "Total Price" display, and decide when to show the item count (Always, Only if items exist, or Never).
+* **Product Categories Settings:** You can toggle the display style between a list or dropdown and choose to show or hide the product counts for each category.
+
+> **Tip:** Use the Product Carousel block at the top of your homepage to highlight your best-selling items with high-quality imagery to grab attention immediately.
+
 
 > **Note:** Each FluentCart block comes with its own customization settings. After adding a block, check the settings panel on the right to adjust design, alignment, behavior, and visibility.
 
