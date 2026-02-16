@@ -354,7 +354,8 @@ export default defineConfig({
             { text: 'FluentCommunity Integration', link: '/guide/integrations/fluentcommunity-integration' },
             { text: 'FluentBooking Integration', link: '/guide/integrations/fluentbooking-integration' },
             { text: 'Amazon S3 Integration', link: '/guide/integrations/amazon-s3-integration' },
-            { text: 'FluentAffiliate Integration', link: '/guide/integrations/fluentaffiliate-integration.md' }
+            { text: 'FluentAffiliate Integration', link: '/guide/integrations/fluentaffiliate-integration.md' },
+            { text: 'Cloudflare Turnstile Integration', link: '/guide/integrations/cloudflare-turnstile-integration' }
           ]
         },
         {
