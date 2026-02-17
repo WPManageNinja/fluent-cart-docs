@@ -14,9 +14,11 @@ The settings are organized into three sections, allowing you to control which fi
 
 This section includes essential fields for customer identification.
 
-* **Full Name**: A system-required field to capture the customer’s name. This field cannot be disabled.
-* **Email Address**: A system-required field used for order confirmations and communication. This field cannot be disabled.
-* **Company**: An optional field for collecting a customer's company name. You can enable it with the toggle and make it mandatory by checking the **Required** box.
+* **First Name:** You can now enable this as an individual field. Enabling First/Last name will replace the default Full Name.
+* **Last Name:** You can enable this field and mark it as mandatory by checking the **Required** box.
+* **Email Address:** A system-required field used for order confirmations and communication. This field cannot be disabled.
+* **Company:** An optional field for collecting a customer's company name. You can enable it with the toggle and make it mandatory by checking the **Required** box.
+
 
 ### 2. Billing Address
 
@@ -24,8 +26,8 @@ This section allows you to define the address fields required for billing purpos
 
 * **Country**: Displays the country field. It is enabled and required by default.
 * **State**: Displays the state/province field. It is enabled and required by default.
-* **Address Line 1**: Displays the primary address line. It is enabled and required by default.
-* **Address Line 2**: Displays an optional second address line for apartment numbers or other details.
+* **Street Address:** Displays the primary address line. It is enabled and required by default.
+* **Apt, suite, unit:** Displays an optional second address line for apartment numbers or other details.
 * **City**: Displays the city field. It is enabled and required by default.
 * **Post Code**: Displays the postal/zip code field. It is enabled and required by default.
 * **Phone**: An optional field to collect the customer’s phone number.
@@ -39,8 +41,8 @@ This section lets you configure the fields for the shipping address, which is cr
 * **Full Name**: A system-required field to identify the recipient of the order.
 * **Country**: Displays the country field for shipping.
 * **State**: Displays the state/province field for shipping.
-* **Address Line 1**: Displays the primary shipping address line.
-* **Address Line 2**: Displays an optional second shipping address line.
+* **Street Address:** Displays the primary shipping address line.
+* **Apt, suite, unit:** Displays an optional second shipping address line.
 * **City**: Displays the city field for shipping.
 * **Post Code**: Displays the postal/zip code field for shipping.
 * **Phone**: An optional field to collect the recipient’s phone number for delivery purposes.
