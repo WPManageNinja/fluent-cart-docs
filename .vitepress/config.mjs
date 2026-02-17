@@ -432,7 +432,8 @@ export default defineConfig({
             { text: 'Using FluentCart Blocks & Templates', link: '/guide/customization-and-themes/using-fluentcart-blocks-&-templates.md' },
             { text: 'Customize Store with Bricks', link: '/guide/customization-and-themes/customize-store-with-bricks.md' },
             { text: 'Translating FluentCart', link: '/guide/customization-and-themes/translating-fluentcart.md' },
-            { text: 'FluentCart Shortcodes', link: '/guide/customization-and-themes/fluentcart-shortcode.md' }
+            { text: 'FluentCart Shortcodes', link: '/guide/customization-and-themes/fluentcart-shortcode.md' },
+            { text: 'FluentCart Elementor Widgets', link: '/guide/customization-and-themes/fluentcart-elementor-widgets.md' }
           ]
         },
         {
