@@ -143,6 +143,25 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       // md.use(zoomablePlugin) // Disabled - ZoomableImage component causing frontend rendering issues
+      // Open all links (internal and external) in a new tab
+      const defaultLinkOpenRenderer = md.renderer.rules.link_open || ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options))
+      md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+        const token = tokens[idx]
+        const targetIndex = token.attrIndex('target')
+        if (targetIndex < 0) {
+          token.attrPush(['target', '_blank'])
+        } else {
+          token.attrs[targetIndex][1] = '_blank'
+        }
+        const relIndex = token.attrIndex('rel')
+        const relValue = 'noopener noreferrer'
+        if (relIndex < 0) {
+          token.attrPush(['rel', relValue])
+        } else {
+          token.attrs[relIndex][1] = relValue
+        }
+        return defaultLinkOpenRenderer(tokens, idx, options, env, self)
+      }
     }
   },
   vite: {
@@ -175,8 +194,8 @@ export default defineConfig({
     outline: [2, 3],
     nav: [
       { text: 'User Docs', link: '/guide/getting-started/introduction-fluentcart.md' },
-      { text: 'Dev Docs', link: 'https://dev.fluentcart.com/' },
-      { text: 'Website', link: 'https://fluentcart.com', target: '_blank', rel: 'noopener' },
+      { text: 'Dev Docs', link: 'https://dev.fluentcart.com/', target: '_blank', rel: 'noopener noreferrer' },
+      { text: 'Website', link: 'https://fluentcart.com', target: '_blank', rel: 'noopener noreferrer' },
       { text: 'Changelog', link: '/guide/changelog' }
     ],
     sidebar: {
