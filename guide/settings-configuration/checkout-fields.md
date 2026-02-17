@@ -49,6 +49,14 @@ This section lets you configure the fields for the shipping address, which is cr
 
    ![Screenshot of Additional Info Settings Tab](/images/settings-configuration/checkout-field/shipping-address.webp)
 
+### 4. Agree Terms
+
+This section allows you to include legal agreements at checkout.
+
+* **Agree Terms and Conditions:** Use the toggle to display a terms agreement checkbox on your checkout page.
+* **Required Checkbox:** If enabled, you can make this mandatory so customers must agree before completing their purchase.
+
+
 ## Saving Your Settings
 
 After configuring the checkout fields, click the **Save** button at the bottom right of the screen to apply your changes.
