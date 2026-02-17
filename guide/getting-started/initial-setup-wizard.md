@@ -71,7 +71,7 @@ Once you've gone through all the steps of the initial setup wizard, it will usua
 
 This guide helps you start strong, but remember, making a full online store needs more than just these first steps. To make sure your business works well and easily, you will also need to:
 
-* **Setup Payment Gateways:** Set up your preferred payment methods like Stripe, PayPal, or Cash on Delivery under **[Payment Settings](/guide/payments-checkout/connecting-payment-gateways/)**.
+* **Setup Payment Gateways:** Set up your preferred payment methods like Stripe, PayPal, or Cash on Delivery under **[Payment Settings](/guide/settings-configuration/payment-settings)**.
 * **Add Your Products:** Begin creating your actual [physical products](/guide/product-types-creation/creating-physical-products), [digital products](/guide/product-types-creation/creating-digital-products), or [licensed digital products](/guide/product-types-creation/creating-digital-products-with-licenses).
 * **Review Email Notifications:** Customize your [email templates](/guide/settings-configuration/email-configuration/index.md) to ensure customers receive branded and informative updates.
 * **Explore Reports:** Utilize the [Reporting & Analytics](/guide/reporting-analytics/) section to monitor your store's performance.
