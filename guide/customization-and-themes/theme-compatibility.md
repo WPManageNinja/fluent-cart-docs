@@ -1,4 +1,4 @@
-## Theme & Page Builder Compatibility
+# Theme & Page Builder Compatibility
 
 FluentCart is designed to be lightweight, flexible, and compatible with the vast majority of modern, well-coded WordPress themes and page builders. Our goal is to give you the freedom to choose the design and tools that you love, without being locked into a specific look.
 

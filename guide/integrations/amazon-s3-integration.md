@@ -45,7 +45,6 @@ First, we need to create a "bucket," which is just what Amazon calls a storage c
 5.  On the bucket creation page, follow these instructions carefully:
     * **Bucket Name:** Give your bucket a unique name.
     * **Object Ownership:** Select **ACLs enabled**, and then choose **Object writer**. This is like telling Amazon it's okay for FluentCart to put files into this bucket.
-    * **Block Public Access Settings:** For your customers to see your product images, the files need to be public. So, uncheck the box for **Block all public access**.
     * Amazon will show a warning. Check the box that says, "**I acknowledge that the current settings might result in this bucket and the objects within becoming public.**"
 6.  Click the **Create Bucket** button at the bottom.
 

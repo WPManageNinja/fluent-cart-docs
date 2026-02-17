@@ -5,7 +5,7 @@ description: "A comprehensive guide on connecting FluentCart with FluentBooking 
 
 # FluentBooking Integration
 
-Connecting **FluentCart** with **FluentBooking** turns your appointment calendar into a powerful sales channel. This integration allows you to sell consultations, classes, services, or products directly through your booking forms without requiring third-party plugins.
+**FluentCart** is designed to be fast, flexible, and scalable, making it easy to manage your eCommerce business. With this integration, you can sell consultations, classes, services, or products directly from your booking forms-no third-party plugins required.
 
 By using FluentCart’s payment processing, you can maintain a unified ecosystem for both your products and your scheduled appointments.
 
@@ -14,8 +14,8 @@ By using FluentCart’s payment processing, you can maintain a unified ecosystem
 The connection between the two plugins is designed to be seamless. Once FluentCart is active on your site, you simply need to toggle the feature inside FluentBooking.
 
 1.  Navigate to **FluentBooking > Settings** from your WordPress dashboard.
-2.  Click on **Advanced Features & Addons** in the top menu bar.
-3.  The system should automatically detect the FluentCart plugin; ensure it is enabled to allow the two tools to communicate.
+2.  Click on **Advanced Features & Addons** in the left side bar.
+3.  The system should automatically detect the **FluentCart** plugin; ensure it is enabled to allow the two tools to communicate.
 
 ![Activating the FluentCart module within FluentBooking settings](/guide/public/images/integrations/fluentbooking-integration/activate-the-fluentcart-module.webp)
 

@@ -44,7 +44,7 @@ Once activated, you need to provide your API credentials to sync your store with
 
 To get your keys, you must first create an application in the Mercado Pago Developers portal.
 
-1.  Log in to your **Mercado Pago Developers dashboard** and go to **Your integrations**. Click the **Create application** button.
+1.  Log in to your **[Mercado Pago Developers dashboard](https://www.mercadopago.com/developers/panel/app)** and go to **Your integrations**. Click the **Create application** button.
 
 ![Create Application](/guide/public/images/payments-checkout/mercado-pago/create-application-4.webp)
 
