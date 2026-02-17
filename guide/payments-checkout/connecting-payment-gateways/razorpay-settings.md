@@ -64,13 +64,29 @@ Webhooks are like "digital status updates." They tell FluentCart exactly when a 
 ![ Add New Webhook](/guide/public/images/payments-checkout/razorpay-settings/add-new-webhook-6.webp)
 
 3.  In the popup that appears, paste the **Webhook URL** you copied before from FluentCart.
-4.  In the **Active Events** section, you must select these specific events:
-    * `payment.authorized`
-    * `payment.captured`
-    * `payment.failed`
-    * `refund.processed`
-5.  Click the **Create Webhook** button to make sure your store stays updated.
-6.  Razorpay will provide a **Webhook Secret**. Copy it for later use.
+4.  In the **Active Events** section, select these specific events to ensure your store stays updated:
+
+    **Required Payment Events:**
+
+    * `payment.authorized` — Payment authorized successfully.
+    * `payment.captured` — Payment captured and confirmed.
+    * `payment.failed` — Payment failed or declined.
+    * `refund.processed` — Refund completed successfully.
+
+    **Required Subscription Events (if applicable):**
+
+    * `subscription.authenticated` — Customer completed authentication.
+    * `subscription.activated` — Subscription is now active.
+    * `subscription.charged` — Recurring payment successful.
+    * `subscription.cancelled` — Subscription was cancelled.
+    * `subscription.halted` — Payment failures caused a halt.
+    * `subscription.completed` — All billing cycles completed.
+
+5.  Click the **Create Webhook** button to save your changes.
+6.  Razorpay will provide a **Webhook Secret**. **Copy** it for later use.
+
+> [!IMPORTANT]
+> Make sure to save the Webhook Secret in the credentials section in your FluentCart settings for secure webhook verification.
 
 ![ Create Webhook](/guide/public/images/payments-checkout/razorpay-settings/create-webhook-7.webp)
 
