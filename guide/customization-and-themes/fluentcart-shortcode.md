@@ -141,6 +141,88 @@ This shortcode helps your customers browse your store by showing a list or a dro
 | **show_empty** | Set to `true` if you want to show categories even if they don't have any products yet. |
 | **show_product_count** | Set to `true` to show the number of products next to each category name. |
 
+
+### 6. Store Logo Shortcode (`[fluent_cart_store_logo]`)
+
+Use this shortcode to display your store's branding logo anywhere on your site. It allows you to set a custom link and control the size of the image easily.
+
+#### Basic Usage
+
+```text
+[fluent_cart_store_logo is_link="true" logo_url="https://yoursite.com/logo.png" max_width="200"]
+```
+
+#### Supported Attributes
+
+| Attribute | Description |
+| :--- | :--- |
+| **logo_url** | (Required) The direct URL link to your logo image file. |
+| **is_link** | Set to `true` to make the logo clickable (usually linking to your homepage). Set to `false` for a static image. |
+| **link_target** | Choose `_self` to open in the same tab, or `_blank` to open the link in a new tab. |
+| **max_width** | Sets the maximum width of the logo in pixels (e.g., `"300"`). |
+| **max_height** | Sets the maximum height of the logo in pixels (e.g., `"200"`). |
+
+---
+
+### 7. Customer Dashboard Button (`[fluent_cart_customer_dashboard_button]`)
+
+This shortcode adds a button or link that allows logged-in customers to access their "My Profile" or "My Orders" area. It is perfect for your site's header or footer menu.
+
+#### Basic Usage
+
+```text
+[fluent_cart_customer_dashboard_button button_text="My Profile" display_type="link"]
+```
+
+#### Supported Attributes
+
+| Attribute | Description |
+| :--- | :--- |
+| **button_text** | The text displayed on the link or button (e.g., "My Account", "Profile"). |
+| **display_type** | Choose how it looks: `link` (simple text link) or `button` (styled button). |
+| **show_icon** | Set to `true` to display a small user icon next to the text, or `false` to hide it. |
+| **link_target** | Choose `_self` (same tab) or `_blank` (new tab). |
+
+---
+
+### 8. Product Title Shortcode (`[fluent_cart_product_title]`)
+
+This shortcode allows you to display the name of a specific product anywhere on your page. This is extremely useful when building custom landing pages where you want to place the product name separately from the image or description.
+
+#### Basic Usage
+
+```text
+[fluent_cart_product_title product_id="123" is_link="true"]
+```
+
+#### Supported Attributes
+
+| Attribute | Description |
+| :--- | :--- |
+| **product_id** | (Required) The ID of the specific product you want to display the title for. |
+| **is_link** | Set to `true` to make the title clickable (links to the product page). |
+| **link_target** | Choose `_self` (same tab) or `_blank` (new tab). |
+| **is_default** | Set to `true` to use default styling, or `false` to inherit the surrounding text style. |
+
+---
+
+### 9. Product Image Shortcode (`[fluent_cart_product_image]`)
+
+Similar to the Product Title shortcode, this lets you display the featured image of a specific product. You can use this to create custom layouts by placing the image in one column and the details in another.
+
+#### Basic Usage
+
+```text
+[fluent_cart_product_image product_id="123"]
+```
+
+#### Supported Attributes
+
+| Attribute | Description |
+| :--- | :--- |
+| **product_id** | (Required) The ID of the specific product you want to display the image for. |
+| **is_default** | Set to `false` to allow for custom sizing or styling via CSS, or `true` for standard output. |
+
 ---
 
 ### How to Implement
