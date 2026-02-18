@@ -8,10 +8,10 @@ When a customer proceeds to checkout, FluentCart dynamically calculates availabl
 
 The calculation follows these general steps:
 
-1.  **Zone Matching**: The customer's shipping address is matched to an [applicable shipping zone](/guide/shipping/configuring-shipping-zones.md).
-2.  **Method Selection**: All [shipping methods](/guide/shipping/setting-up-shipping-methods.md) configured for that zone become potential options.
+1.  **Zone Matching**: The customer's shipping address is matched to an [applicable shipping zone](/guide/shipping/configuring-shipping-zones).
+2.  **Method Selection**: All [shipping methods](/guide/shipping/setting-up-shipping-methods) configured for that zone become potential options.
 3.  **Base Method Cost**: For each applicable method, its base cost is calculated based on its "Rate Type" (e.g., a fixed amount, total items, or total order value).
-4.  **Shipping Class Contributions**: This is where the complexity comes in. For each product in the cart, its assigned [shipping class](/guide/shipping/understanding-shipping-classes.md) (if any) and its quantity are considered.
+4.  **Shipping Class Contributions**: This is where the complexity comes in. For each product in the cart, its assigned [shipping class](/guide/shipping/understanding-shipping-classes) (if any) and its quantity are considered.
     * The "Cost Adjustment" for that shipping class is applied based on its "Cost Type" (`Per Item` or `Fixed Amount`).
     * These individual class contributions are then gathered.
 

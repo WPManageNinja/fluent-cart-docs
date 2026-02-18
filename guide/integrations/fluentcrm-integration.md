@@ -7,7 +7,7 @@ This guide will walk you through setting up a Global Integration Feed, which run
 FluentCart offers two powerful ways to connect with FluentCRM:
 
 * **Global Integrations:** These rules apply to every single purchase in your store. They are ideal for general tasks, like adding all new customers to your main newsletter.
-* [**Product Integrations**](/guide/product-types-creation/managing-product-integrations.md): These rules are more specific and are triggered only when a customer buys a particular item. This is perfect for targeted actions, like adding a customer to a special list after they buy a specific course or e-book.
+* [**Product Integrations**](/guide/product-types-creation/managing-product-integrations): These rules are more specific and are triggered only when a customer buys a particular item. This is perfect for targeted actions, like adding a customer to a special list after they buy a specific course or e-book.
 
 This guide will focus on setting up a **Global Integration**.
 
@@ -17,7 +17,7 @@ Before you begin, it's helpful to decide which type of integration best suits yo
 
 * **Use a Global Integration when:** You want an action to apply to *every single customer*, regardless of what they buy.
     * *Example:* Adding all paying customers to your main "Newsletter" list.
-* **Use a Product Integration when:** You want an action to apply *only to customers who buy a specific item*. To learn more about setting up these powerful, product-specific automations, please follow our detailed [documentation](/guide/product-types-creation/managing-product-integrations.md).
+* **Use a Product Integration when:** You want an action to apply *only to customers who buy a specific item*. To learn more about setting up these powerful, product-specific automations, please follow our detailed [documentation](/guide/product-types-creation/managing-product-integrations).
     * *Example:* Adding customers who bought your "Advanced SEO Course" to a "Course Students" list and tagging them accordingly.
 
 

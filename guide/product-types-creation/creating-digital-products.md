@@ -38,9 +38,9 @@ By the end, you will be able to confidently sell and manage any downloadable ite
 
 Categorize and type your digital product for better structured organization.
 
-* **[Product Categories:](/guide/product-types-creation/creating-managing-product-categories/index.md)**
+* **[Product Categories:](/guide/product-types-creation/creating-managing-product-categories/index)**
     Assign the product to relevant categories (e.g., "E-Books", "Software"). Click **"+ Add More Category"** to assign additional categories.
-* **[Product Brand:](/guide/product-types-creation/creating-managing-product-brand.md)** 
+* **[Product Brand:](/guide/product-types-creation/creating-managing-product-brand)** 
     Assign the product to relevant brands. Click to **"+Add Brand”** to assign additional brands.
 
 ### 4. Pricing & Variations
@@ -126,7 +126,7 @@ This option is for a variation that is sold on a recurring payment basis.
    ![Gif of Digital Product Edit Screen (Simple VAriation)](/images/product-types-creation/creating-digital-product/simple-variation2.gif) 
 
 ::: info
-To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing.md) guide.
+To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing) guide.
 :::
 
 ### 5. Downloadable Asset(s)

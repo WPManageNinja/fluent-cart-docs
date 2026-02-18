@@ -53,8 +53,8 @@ This section is unique to bundles and allows you to link the individual products
 
 This section helps you organize and tag your bundle for better storefront filtering.
 
-* **[Product Categories:](/guide/product-types-creation/creating-managing-product-categories/index.md)** Assign the bundle to relevant categories (e.g., "Gift Sets"). You can select existing categories or click **+ Add Category** to create one instantly.
-* **[Product Brand:](/guide/product-types-creation/creating-managing-product-brand.md):** Associate the bundle with a specific brand using the dropdown or the **+ Add Brand** button.
+* **[Product Categories:](/guide/product-types-creation/creating-managing-product-categories/index)** Assign the bundle to relevant categories (e.g., "Gift Sets"). You can select existing categories or click **+ Add Category** to create one instantly.
+* **[Product Brand:](/guide/product-types-creation/creating-managing-product-brand):** Associate the bundle with a specific brand using the dropdown or the **+ Add Brand** button.
 
    ![Screenshot of Product Edit Screen (Physical Product Example)](/guide/public/images/product-types-creation/product-bundles/map-bundle-items-3.webp)
 
@@ -67,7 +67,7 @@ Set the price for your bundle using one of two methods:
 Choose this if the bundle is a single package with one price. You can set the **Price**, an optional **Compare at price** to show savings, and toggle **Manage profit/cost** for internal tracking.
 
 ::: info
-To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing.md) guide.
+To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing) guide.
 :::
 
 ![Screenshot of Simple Price](/guide/public/images/product-types-creation/product-bundles/simple-price.gif)

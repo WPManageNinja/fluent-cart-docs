@@ -35,6 +35,6 @@ This is an advanced method for businesses that are individually registered for V
 
 Once you have selected the method that best fits your business, follow the detailed guide below to complete your setup:
 
-* [**Configuring the OSS Method:**](/guide/tax-&-duties/european-vat-with-oss.md) Follow this guide if you have a single OSS VAT registration for all EU countries.
-* [**Configuring with a Home Country Registration:**](/guide/tax-&-duties/european-vat-home-country.md) Follow this guide if you are an EU-based micro-business selling less than €10,000 per year to other EU countries.
-* [**Configuring Specific Country Rates:**](/guide/tax-&-duties/european-vat-specific-country.md) Follow this guide if you manage separate VAT registrations for each EU country you sell to.
+* [**Configuring the OSS Method:**](/guide/tax-&-duties/european-vat-with-oss) Follow this guide if you have a single OSS VAT registration for all EU countries.
+* [**Configuring with a Home Country Registration:**](/guide/tax-&-duties/european-vat-home-country) Follow this guide if you are an EU-based micro-business selling less than €10,000 per year to other EU countries.
+* [**Configuring Specific Country Rates:**](/guide/tax-&-duties/european-vat-specific-country) Follow this guide if you manage separate VAT registrations for each EU country you sell to.

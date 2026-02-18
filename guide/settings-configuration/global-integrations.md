@@ -31,6 +31,6 @@ This screen provides a comprehensive overview of all the integration feeds you h
 To create a new automation, you can add a new integration feed. This is the starting point for connecting your store to a new service.
 
 1.  From the Global Integrations dashboard, click the **Add Integration** button at the top right.
-2.  A dropdown menu will appear, listing all the available integrations, here you can configure [Webhook](/guide/integrations/webhook-integration.md), [FluentCRM](/guide/integrations/fluentcrm-integration.md) and [FluentCommunity](/guide/integrations/fluentcommunity-integration.md). 
+2.  A dropdown menu will appear, listing all the available integrations, here you can configure [Webhook](/guide/integrations/webhook-integration), [FluentCRM](/guide/integrations/fluentcrm-integration) and [FluentCommunity](/guide/integrations/fluentcommunity-integration). 
 3.  Select the integration you wish to add from the list.
 4.  You will be taken to the dedicated configuration screen for that specific integration. Here, you will set up the specific rules for the automation, such as defining the triggers, mapping data fields, and configuring any service-specific options.

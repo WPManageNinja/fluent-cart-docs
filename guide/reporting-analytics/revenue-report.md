@@ -4,7 +4,7 @@ The **Revenue Report** in FluentCart shows a clear breakdown of your store’s e
 
 #### Accessing the Revenue Report
 
-Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)** in the side menu, and click on the **Revenue** tab.
+Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview)** in the side menu, and click on the **Revenue** tab.
 
 ### Report Filters and Controls
 

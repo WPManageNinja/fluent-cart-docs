@@ -32,7 +32,7 @@ Now you're on the setup page for your new zone. You only need to fill in two thi
 
 Once you're happy with the name and the regions you've selected, just click the **"Save Shipping Zone"** buttson.
 
-Your new shipping zone will now appear in the list of zones, and you can proceed to add [shipping methods](/guide/shipping/setting-up-shipping-methods.md) to it.
+Your new shipping zone will now appear in the list of zones, and you can proceed to add [shipping methods](/guide/shipping/setting-up-shipping-methods) to it.
 
 :::info
 Customers will only see shipping methods applicable to the zone their shipping address falls into.

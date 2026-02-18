@@ -14,7 +14,7 @@ This section covers the following essential aspects:
 * **[Product List Overview](/guide/product-types-creation/product-list-overview):** Understand how to view, filter, and manage your entire product catalog efficiently.
 * **[Inventory Management](/guide/product-types-creation/inventory-management/):** Understand how to track and adjust stock levels for your physical and licensed digital products.
 * **[Creating & Managing Product Categories](/guide/product-types-creation/creating-managing-product-categories/):** Learn how to organize your products into logical categories for better customer navigation and store management.
-* **[Creating & Managing Product Brands](/guide/product-types-creation/creating-managing-product-brand.md):** Learn how to create and assign brands to your products, helping customers to shop by brand and improving your store's organization.
+* **[Creating & Managing Product Brands](/guide/product-types-creation/creating-managing-product-brand):** Learn how to create and assign brands to your products, helping customers to shop by brand and improving your store's organization.
 
 
 By mastering this section, you'll be able to effectively structure your product offerings and manage your store's inventory.

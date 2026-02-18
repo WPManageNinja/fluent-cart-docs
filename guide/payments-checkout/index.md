@@ -11,10 +11,10 @@ The available gateways include:
  * **[Stripe](/guide/payments-checkout/connecting-payment-gateways/stripe-settings/):** Accepts global payments via credit/debit cards and other methods.
  * **[PayPal](/guide/payments-checkout/connecting-payment-gateways/paypal-settings/):** Enables secure online transactions and money transfers.
  * **[Paddle](/guide/payments-checkout/connecting-payment-gateways/paddle-settings/):** Offers a complete payment solution for worldwide transactions.
- * **[Mollie](/guide/payments-checkout/connecting-payment-gateways/mollie-settings.md):** A popular European payment gateway supporting major cards and local methods.
- * **[Paystack](/guide/payments-checkout/connecting-payment-gateways/paystack-settings.md):** A modern payment gateway focused on helping businesses in Africa accept payments from anyone, anywhere in the world.
- * **[Razorpay](/guide/payments-checkout/connecting-payment-gateways/razorpay-settings.md):** A popular payment solution for businesses in India, supporting UPI, Cards, NetBanking, and Wallets.
- * **[Authorize.net](/guide/payments-checkout/connecting-payment-gateways/authorizenet-settings.md):** A trusted payment gateway (Visa solution) that securely accepts credit cards, debit cards, and e-checks (ACH).
+ * **[Mollie](/guide/payments-checkout/connecting-payment-gateways/mollie-settings):** A popular European payment gateway supporting major cards and local methods.
+ * **[Paystack](/guide/payments-checkout/connecting-payment-gateways/paystack-settings):** A modern payment gateway focused on helping businesses in Africa accept payments from anyone, anywhere in the world.
+ * **[Razorpay](/guide/payments-checkout/connecting-payment-gateways/razorpay-settings):** A popular payment solution for businesses in India, supporting UPI, Cards, NetBanking, and Wallets.
+ * **[Authorize.net](/guide/payments-checkout/connecting-payment-gateways/authorizenet-settings):** A trusted payment gateway (Visa solution) that securely accepts credit cards, debit cards, and e-checks (ACH).
  * **[Cash on Delivery (COD)](/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings/):** Lets customers pay in cash when their order is delivered.
 
 By setting up these features correctly, you can ensure a smooth, secure, and flexible payment process for your customers, leading to higher conversion rates and a better shopping experience.

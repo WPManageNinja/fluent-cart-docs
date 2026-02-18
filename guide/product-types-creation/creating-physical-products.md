@@ -57,8 +57,8 @@ By the end of this guide, you will be able to confidently list and manage any ph
 
 This section helps you organize and tag your product using WordPress taxonomies for better filtering and presentation on your storefront.
 
-* **[Categories:](/guide/product-types-creation/creating-managing-product-categories/index.md)** Assign the product to one or more relevant **Categories** (e.g., "Men's Shoes"). You can select existing categories from the dropdown menu or click **+ Add Category** to create a new one instantly.
-* **[Brands:](/guide/product-types-creation/creating-managing-product-brand.md)** Use this field to associate the product with a specific **Brand**. Select the brand name from the dropdown menu or click **+ Add Brand** if the brand doesn't exist yet in your FluentCart settings.
+* **[Categories:](/guide/product-types-creation/creating-managing-product-categories/index)** Assign the product to one or more relevant **Categories** (e.g., "Men's Shoes"). You can select existing categories from the dropdown menu or click **+ Add Category** to create a new one instantly.
+* **[Brands:](/guide/product-types-creation/creating-managing-product-brand)** Use this field to associate the product with a specific **Brand**. Select the brand name from the dropdown menu or click **+ Add Brand** if the brand doesn't exist yet in your FluentCart settings.
 
 By using these taxonomies, you ensure customers can easily find and filter your products on your shop pages.
 
@@ -83,7 +83,7 @@ You will see the following fields:
 ![Screenshot of Simple Price](/images/product-types-creation/Creating-Physical-Products/simple-price.gif)
 
 ::: info
-To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing.md) guide.
+To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing) guide.
 :::
 
 #### Simple Variations (For Products with Different Versions)
@@ -109,7 +109,7 @@ To add another version of your product, click the **+ Add more** button to creat
 
 ### 5. Inventory Management
 
-To track the stock for your product, first, make sure the [**Stock Management**](/guide/product-types-creation/inventory-management.md) feature is enabled from the settings section.
+To track the stock for your product, first, make sure the [**Stock Management**](/guide/product-types-creation/inventory-management) feature is enabled from the settings section.
 
 An inventory table will then be displayed, with a separate row for each product variation. This table helps you monitor your stock levels at a glance.
 

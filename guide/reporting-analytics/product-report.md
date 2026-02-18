@@ -4,7 +4,7 @@ The **Product Report** provides detailed analytics on the performance of your in
 
 #### Accessing the Product Report
 
-Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)** in the side menu, and click on the **Product** tab.
+Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview)** in the side menu, and click on the **Product** tab.
 
 ### Report Filters and Controls
 

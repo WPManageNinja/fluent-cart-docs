@@ -1,6 +1,6 @@
 # Setting Up Shipping Methods
 
-Shipping methods are the different delivery options you offer to customers within a specific [**shipping zone**](/guide/shipping/configuring-shipping-zones.md). FluentCart allows you to create flexible shipping options, from flat rates to free shipping, ensuring you can meet your customers' needs.
+Shipping methods are the different delivery options you offer to customers within a specific [**shipping zone**](/guide/shipping/configuring-shipping-zones). FluentCart allows you to create flexible shipping options, from flat rates to free shipping, ensuring you can meet your customers' needs.
 
 This guide will show you how to add and configure shipping methods for your shipping zones.
 
@@ -45,7 +45,7 @@ This advanced setting is for when a customer's cart contains products from diffe
 * **Highest Cost:** Only the single highest shipping cost among all the shipping classes present in the cart is applied.
 
 ::: info
-The Configure Rate and Class Aggregation settings work together to give you precise control over your shipping fees. For a more detailed guide with advanced examples of how these calculations work, especially when a cart contains multiple items from different shipping classes, please see our documentation on [Advanced Shipping Calculations](/guide/shipping/advanced-shipping-calculations.md).
+The Configure Rate and Class Aggregation settings work together to give you precise control over your shipping fees. For a more detailed guide with advanced examples of how these calculations work, especially when a cart contains multiple items from different shipping classes, please see our documentation on [Advanced Shipping Calculations](/guide/shipping/advanced-shipping-calculations).
 :::
 
 * **Description:** 

@@ -9,7 +9,7 @@ Setting up your taxes is a straightforward, two-part process:
 
 This section contains two main guides to walk you through the entire setup:
 
-* [**Configuring Tax Settings & Classes:**](/guide/tax-&-duties/configuration-and-classes.md) Learn how to set your store’s main tax rules, create tax classes for different product types, and configure EU VAT settings.
-* [**Setting Up Tax Rates:**](/guide/tax-&-duties/tax-rates.md) Learn how to define the specific tax rates for each region you sell to and set up advanced rules like compound taxes and shipping tax overrides.
+* [**Configuring Tax Settings & Classes:**](/guide/tax-&-duties/configuration-and-classes) Learn how to set your store’s main tax rules, create tax classes for different product types, and configure EU VAT settings.
+* [**Setting Up Tax Rates:**](/guide/tax-&-duties/tax-rates) Learn how to define the specific tax rates for each region you sell to and set up advanced rules like compound taxes and shipping tax overrides.
 
 By following these guides, you can create a flexible and automated tax system that keeps your store compliant and your checkout process seamless for customers.

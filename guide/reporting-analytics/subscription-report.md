@@ -4,7 +4,7 @@ The **Subscription Report** provides a clear overview of your subscription growt
 
 #### Accessing the Subscription Report
 
-Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview.md)** in the side menu, and click on the **Subscription** tab.
+Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview)** in the side menu, and click on the **Subscription** tab.
 
 ### Report Filters and Controls
 

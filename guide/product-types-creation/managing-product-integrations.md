@@ -28,7 +28,7 @@ This section displays a list of all existing automation feeds created for this p
 
 Click the **Add Integration** button to set up a new automation rule. You will be given options to connect to installed Fluent products:
 
-* [**FluentCRM Integration:**](/guide/integrations/fluentcrm-integration.md) This allows you to automatically manage the customer who buys this product in FluentCRM. You can configure actions such as **Adding a user to a specific list**, **Removing a user from a list**, **Applying a Tag**, or **Removing a Tag**, based on the purchase.
-* [**FluentCommunity Integration:**](/guide/integrations/fluentcommunity-integration.md) This allows you to automatically manage user access to your community or courses. You can set actions such as **Adding a user to a specific Space** or **Course**, or **Removing a user from a Space** or **Course**.
+* [**FluentCRM Integration:**](/guide/integrations/fluentcrm-integration) This allows you to automatically manage the customer who buys this product in FluentCRM. You can configure actions such as **Adding a user to a specific list**, **Removing a user from a list**, **Applying a Tag**, or **Removing a Tag**, based on the purchase.
+* [**FluentCommunity Integration:**](/guide/integrations/fluentcommunity-integration) This allows you to automatically manage user access to your community or courses. You can set actions such as **Adding a user to a specific Space** or **Course**, or **Removing a user from a Space** or **Course**.
 
 

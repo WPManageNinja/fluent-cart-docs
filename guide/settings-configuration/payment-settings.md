@@ -18,13 +18,13 @@ The **Payment Settings** screen in FluentCart lets you set up how your store han
 * **Gateway Settings:** Configure API keys, test modes, and other gateway-specific settings.
 * **Available Gateways:**
     * [Stripe](/guide/payments-checkout/connecting-payment-gateways/stripe-settings)
-    * [PayPal](/guide/payments-checkout/connecting-payment-gateways/paypal-settings.md)
+    * [PayPal](/guide/payments-checkout/connecting-payment-gateways/paypal-settings)
     * [Paddle](/guide/payments-checkout/connecting-payment-gateways/paddle-settings)
-    * [Mollie](/guide/payments-checkout/connecting-payment-gateways/mollie-settings.md)
-    * [Paystack](/guide/payments-checkout/connecting-payment-gateways/paystack-settings.md)
-    * [Razorpay](/guide/payments-checkout/connecting-payment-gateways/razorpay-settings.md)
-    * [Mercado Pago](/guide/payments-checkout/connecting-payment-gateways/mercado-pago-settings.md)
-    * [Cash on Delivery](/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings.md)
+    * [Mollie](/guide/payments-checkout/connecting-payment-gateways/mollie-settings)
+    * [Paystack](/guide/payments-checkout/connecting-payment-gateways/paystack-settings)
+    * [Razorpay](/guide/payments-checkout/connecting-payment-gateways/razorpay-settings)
+    * [Mercado Pago](/guide/payments-checkout/connecting-payment-gateways/mercado-pago-settings)
+    * [Cash on Delivery](/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings)
 
 ### 2. Checkout Settings
 
@@ -64,19 +64,19 @@ On this screen, you will see a list of all available payment gateways. Each gate
 * **Mollie**
     * **Description:** Mollie is a popular payment gateway, primarily used in Europe, that allows you to securely accept credit cards, debit cards, and local payment methods like iDEAL and Bancontact.
     * **Status:** Typically shown as "Active" if enabled.
-    * **Management:** Click "Manage" to access detailed [Mollie Settings](/guide/payments-checkout/connecting-payment-gateways/mollie-settings.md) for configuration.
+    * **Management:** Click "Manage" to access detailed [Mollie Settings](/guide/payments-checkout/connecting-payment-gateways/mollie-settings) for configuration.
 * **Paystack**
     * **Description:** Paystack is a modern payment gateway that helps businesses, particularly in Africa, accept payments from anyone, anywhere in the world via credit cards, bank transfers, and mobile money.
     * **Status:** Typically shown as "Active" if enabled.
-    * **Management:** Click "Manage" to access detailed [Paystack Settings](/guide/payments-checkout/connecting-payment-gateways/paystack-settings.md) for configuration.
+    * **Management:** Click "Manage" to access detailed [Paystack Settings](/guide/payments-checkout/connecting-payment-gateways/paystack-settings) for configuration.
 * **Razorpay**
     * **Description:** Razorpay is a leading payment gateway in India that lets you accept credit cards, debit cards, UPI, netbanking, and popular wallets through a single integration.
     * **Status:** Typically shown as "Active" if enabled.
-    * **Management:** Click "Manage" to access detailed [Razorpay Settings](/guide/payments-checkout/connecting-payment-gateways/razorpay-settings.md) for configuration.
+    * **Management:** Click "Manage" to access detailed [Razorpay Settings](/guide/payments-checkout/connecting-payment-gateways/razorpay-settings) for configuration.
 * **Mercado Pago**
     * **Description:** Mercado Pago is a widely used payment solution in Latin America that allows you to accept credit cards, debit cards, and local payment methods across multiple countries.
     * **Status:** Typically shown as "Active" if enabled.
-    * **Management:** Click "Manage" to access detailed [Mercado Pago Settings](/guide/payments-checkout/connecting-payment-gateways/mercado-pago-settings.md) for configuration.
+    * **Management:** Click "Manage" to access detailed [Mercado Pago Settings](/guide/payments-checkout/connecting-payment-gateways/mercado-pago-settings) for configuration.
 * **Cash on Delivery (COD):** 
     * **Description:** Allows customers to pay with cash upon delivery of their order. 
     * **Status:** Typically shown as "Active" if enabled. 

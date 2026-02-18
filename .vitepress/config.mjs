@@ -193,7 +193,7 @@ export default defineConfig({
     },
     outline: [2, 3],
     nav: [
-      { text: 'User Docs', link: '/guide/getting-started/introduction-fluentcart.md' },
+      { text: 'User Docs', link: '/guide/getting-started/introduction-fluentcart' },
       { text: 'Dev Docs', link: 'https://dev.fluentcart.com/', target: '_blank', rel: 'noopener noreferrer' },
       { text: 'Website', link: 'https://fluentcart.com', target: '_blank', rel: 'noopener noreferrer' },
       { text: 'Changelog', link: '/guide/changelog' }
@@ -273,7 +273,7 @@ export default defineConfig({
           items: [
             {
               text: 'Configuring Payments Overview',
-              link: '/guide/payments-checkout/index.md', // Link to its index.md
+              link: '/guide/payments-checkout/index', // Link to its index.md
               items: [
                 { text: 'Stripe Settings', link: '/guide/payments-checkout/connecting-payment-gateways/stripe-settings' },
                 { text: 'PayPal Settings', link: '/guide/payments-checkout/connecting-payment-gateways/paypal-settings' },
@@ -310,21 +310,21 @@ export default defineConfig({
           items: [
             {
               text: 'Tax & Duties Overview',
-              link: '/guide/tax-&-duties/tax-&-duties-overview.md',
+              link: '/guide/tax-&-duties/tax-&-duties-overview',
               items: [
-                { text: 'Configuring Tax & Classes', link: '/guide/tax-&-duties/configuration-and-classes.md' },
-                { text: 'Setting Up Tax Rates', link: '/guide/tax-&-duties/tax-rates.md' },
-                { text: 'Tax Filing', link: '/guide/tax-&-duties/tax-filing.md' }
+                { text: 'Configuring Tax & Classes', link: '/guide/tax-&-duties/configuration-and-classes' },
+                { text: 'Setting Up Tax Rates', link: '/guide/tax-&-duties/tax-rates' },
+                { text: 'Tax Filing', link: '/guide/tax-&-duties/tax-filing' }
 
               ]
             },
             {
               text: 'European Union (EU) VAT',
-              link: '/guide/tax-&-duties/european-union-vat.md', 
+              link: '/guide/tax-&-duties/european-union-vat', 
               items: [
-                { text: 'European Union VAT with the OSS Method', link: '/guide/tax-&-duties/european-vat-with-oss.md' },
-                { text: 'European Union VAT with a Home Country Registration', link: '/guide/tax-&-duties/european-vat-home-country.md' },
-                { text: 'European Union VAT with Specific Country Rates', link: '/guide/tax-&-duties/european-vat-specific-country.md' },
+                { text: 'European Union VAT with the OSS Method', link: '/guide/tax-&-duties/european-vat-with-oss' },
+                { text: 'European Union VAT with a Home Country Registration', link: '/guide/tax-&-duties/european-vat-home-country' },
+                { text: 'European Union VAT with Specific Country Rates', link: '/guide/tax-&-duties/european-vat-specific-country' },
               ]
             },
           ]
@@ -373,7 +373,7 @@ export default defineConfig({
             { text: 'FluentCommunity Integration', link: '/guide/integrations/fluentcommunity-integration' },
             { text: 'FluentBooking Integration', link: '/guide/integrations/fluentbooking-integration' },
             { text: 'Amazon S3 Integration', link: '/guide/integrations/amazon-s3-integration' },
-            { text: 'FluentAffiliate Integration', link: '/guide/integrations/fluentaffiliate-integration.md' },
+            { text: 'FluentAffiliate Integration', link: '/guide/integrations/fluentaffiliate-integration' },
             { text: 'Cloudflare Turnstile Integration', link: '/guide/integrations/cloudflare-turnstile-integration' }
           ]
         },
@@ -428,12 +428,12 @@ export default defineConfig({
           text: 'Customization and Themes',
           collapsed: true,
           items: [
-            { text: 'Theme Compatibility', link: '/guide/customization-and-themes/theme-compatibility.md' },
-            { text: 'Using FluentCart Blocks & Templates', link: '/guide/customization-and-themes/using-fluentcart-blocks-&-templates.md' },
-            { text: 'Customize Store with Bricks', link: '/guide/customization-and-themes/customize-store-with-bricks.md' },
-            { text: 'Translating FluentCart', link: '/guide/customization-and-themes/translating-fluentcart.md' },
-            { text: 'FluentCart Shortcodes', link: '/guide/customization-and-themes/fluentcart-shortcode.md' },
-            { text: 'FluentCart Elementor Widgets', link: '/guide/customization-and-themes/fluentcart-elementor-widgets.md' }
+            { text: 'Theme Compatibility', link: '/guide/customization-and-themes/theme-compatibility' },
+            { text: 'Using FluentCart Blocks & Templates', link: '/guide/customization-and-themes/using-fluentcart-blocks-&-templates' },
+            { text: 'Customize Store with Bricks', link: '/guide/customization-and-themes/customize-store-with-bricks' },
+            { text: 'Translating FluentCart', link: '/guide/customization-and-themes/translating-fluentcart' },
+            { text: 'FluentCart Shortcodes', link: '/guide/customization-and-themes/fluentcart-shortcode' },
+            { text: 'FluentCart Elementor Widgets', link: '/guide/customization-and-themes/fluentcart-elementor-widgets' }
           ]
         },
         {

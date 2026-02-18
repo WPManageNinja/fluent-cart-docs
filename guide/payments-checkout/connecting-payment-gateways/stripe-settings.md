@@ -80,4 +80,4 @@ Next, type a destination name, **paste** the **webhook URL** you copied earlier 
 Your store is now configured to securely accept payments through Stripe.
 
 > **Note**
-> You can also connect your Stripe account by adding your API keys directly to your site's `wp-config.php` file for more secure setup. For detailed instructions on this advanced method, please see our guide on [**Configuring Stripe via wp-config.php**](/guide/payments-checkout/connecting-payment-gateways/configure-stripe-via-wpconfig.md).
+> You can also connect your Stripe account by adding your API keys directly to your site's `wp-config.php` file for more secure setup. For detailed instructions on this advanced method, please see our guide on [**Configuring Stripe via wp-config.php**](/guide/payments-checkout/connecting-payment-gateways/configure-stripe-via-wpconfig).

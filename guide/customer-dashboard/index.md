@@ -14,6 +14,6 @@ When a customer logs in, they'll see a quick summary of their activity. From the
 * **[Managing Subscriptions](/guide/customer-dashboard/subscriptions)**: If you sell subscription products, this is where customers can view and control their recurring plans. They can check the status, see upcoming renewal dates, and manage other details.
 * **[Managing Licenses](/guide/customer-dashboard/licenses)**: For software or other digital products that use license keys, this is a dedicated area for customers to find their keys, check activation limits, and see renewal information.
 * **[Digital Product Downloads](/guide/customer-dashboard/downloads)**: This section gives customers a neat list of all the digital products they've purchased, with a simple download button next to each one.
-* **[Update Profile Settings](/guide/customer-dashboard/profile-management.md)**: Where customers can update their personal contact information, manage billing addresses, and shipping addresses for future orders.
+* **[Update Profile Settings](/guide/customer-dashboard/profile-management)**: Where customers can update their personal contact information, manage billing addresses, and shipping addresses for future orders.
 
 This comprehensive structure ensures that customers have all the necessary tools at their fingertips for a seamless and efficient experience with your FluentCart store.
