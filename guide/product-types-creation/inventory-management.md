@@ -8,7 +8,7 @@ This guide will show you how to enable and manage inventory for your products.
 
 Before you can manage inventory for individual products, you must first activate the main Stock Management feature for your entire store.
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro** > **Settings**.
+1.  From your WordPress dashboard, navigate to **FluentCart** > **Settings**.
 2.  Click on the **Features & Addon** tab from the left-hand menu.
 3.  You will see a list of available features. Find **Stock Management** and make sure the toggle next to it is enabled.
 4.  Click the **Save Settings** button.
@@ -23,7 +23,7 @@ Once this feature is active, the **Inventory Management** section will become av
 
 With the main feature enabled, you can now manage stock levels for each of your products.
 
-1.  Navigate to **FluentCart Pro** > **Products** in your WordPress dashboard.
+1.  Navigate to **FluentCart** > **Products** in your WordPress dashboard.
 2.  Find the product you want to manage and click on its name to open the product editor.
 3.  On the Product Edit screen, scroll down to the **Inventory Management** section.
 
