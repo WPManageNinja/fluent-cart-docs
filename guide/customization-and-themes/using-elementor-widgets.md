@@ -1,4 +1,4 @@
-# FluentCart Elementor Widgets
+# Using Elementor Widgets
 
 Making a successful online store needs two things: a great look and the right tools. If you use Elementor to build your website, FluentCart gives you a set of built-in tools (widgets) that fit perfectly with your designs.
 

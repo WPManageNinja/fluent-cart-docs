@@ -430,6 +430,7 @@ export default defineConfig({
           items: [
             { text: 'Theme Compatibility', link: '/guide/customization-and-themes/theme-compatibility' },
             { text: 'Using Gutenberg Blocks', link: '/guide/customization-and-themes/using-gutenberg-blocks' },
+            { text: 'Using Elementor Widgets', link: '/guide/customization-and-themes/using-elementor-widgets' },
             { text: 'Layout and Template Customization (Block Editor)', link: '/guide/customization-and-themes/layout-template-customization' },
             { text: 'Customize Store with Bricks', link: '/guide/customization-and-themes/customize-store-with-bricks' },
             { text: 'Translating FluentCart', link: '/guide/customization-and-themes/translating-fluentcart' },
