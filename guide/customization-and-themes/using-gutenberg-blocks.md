@@ -56,19 +56,17 @@ This block displays the name of your product, pulling data automatically to keep
 
 ### 3. Product Search 
 
-Finding one specific item in a big store can sometimes feel like looking for a needle in a haystack. The Product Search block adds a simple, specialized search bar to your page so your customers can type in exactly what they want and find it in seconds.
+The Product Search block helps customers quickly find specific items in your store. Instead of browsing through many products, users can simply type what they’re looking for and get instant results.
 
-You can find this block in your editor by looking for the magnifying glass icon in the FluentCart section.
+You can add this block from the editor by selecting the magnifying glass icon under the FluentCart section.
 
 **Block Settings:** When you click on the search bar in your editor, the right-hand sidebar gives you several options to control how the search behaves:
 
-  * **Searchbar Behavior:** You can choose to have the search results open in a **New Tab** or stay on the **Current Tab**. This is great if you want to keep your main shop page open while the customer looks at specific results.
-  * **Category Filtering:** Toggle the Category option to allow the search to focus on specific groups of products, making it even easier for shoppers to narrow things down.
-  * **Link With Shop App:** Turn this on if you want your search bar to integrate directly with your Shop App settings for a more connected experience.
-
-**Advanced:** Standard block settings to help with custom designs.
-
-  * **Additional CSS Class(es):** Just like other blocks, you can add custom code here if you want to change the colors, border, or width of the search bar to match your website's unique style.
+ * **Searchbar Behavior:** Choose whether search results open in a New Tab or the Current Tab.
+ * **Category Filtering:** Enable this option to allow customers to filter their search by product categories.
+ * **Link With Shop App:** Turn this on to connect the search bar with your Shop App settings for a more integrated experience.
+ * **Advanced Settings:** Standard block options for layout and design customization.
+ * **Additional CSS Class(es):** Add custom CSS classes if you want to modify the search bar’s style, such as colors, borders, or width.
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/product-search.webp)
 
