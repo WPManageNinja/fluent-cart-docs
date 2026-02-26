@@ -1,6 +1,48 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.12
+*Released on February 26, 2026*
+
+::: code-group
+
+```markdown [🐞 Bug fixes]
+• Fixes caching issue during new version upgrades
+```
+
+:::
+
+## FluentCart v1.3.11
+*Released on February 25, 2026*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Adds GB Blocks: Related Products, Customer Dashboard Button, Store Logo
+• Adds Media Carousel Block
+• Adds Elementor Widgets: Checkout, Add to Cart, Buy Now Button, Mini Cart, Products, Product Carousel, Product Categories List
+• Adds Razorpay Subscription Supports
+• Adds Product SKU feature
+• Adds Customer LTV recalculation action
+• Adds Sync order statuses action
+• Adds Test Data Cleanup Tool
+• Adds First Name & Last Name Field Settings
+```
+
+```markdown [🚀 Improvements]
+• Improves Inventory Manager Free (Previously Pro)
+• Improves New Settings UI
+• Schedules security audit for all modules
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Gallery Image Overflow Issue
+• Fixes Subscription validity expire events issue
+• Fixes Minor issues
+```
+
+:::
+
 ## FluentCart v1.3.10
 *Released on February 04, 2026*
 
