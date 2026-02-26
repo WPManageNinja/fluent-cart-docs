@@ -186,6 +186,9 @@ This glossary defines common terms used throughout the FluentCart documentation 
 * **Simple Variations:**
     A pricing method for products that come in multiple versions. This allows each **Variation** to have its own unique price, image, stock level, or license rules. To learn more, read the price configuring documentation.
 
+* **SKU (Stock Keeping Unit):**
+    A unique alphanumeric code assigned to a specific product or product variation in your store. It serves as an internal tracking identifier to help you organize, locate, and manage your inventory accurately. 
+
 **T**
 
 * **Tax:**
