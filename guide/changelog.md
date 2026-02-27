@@ -1,8 +1,24 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
-<<<<<<< HEAD
-=======
+## FluentCart v1.3.13
+*Released on February 26, 2026*
+
+:::: code-group
+
+```markdown [✨ Newly Added]
+• Adds SKU Gutenberg block
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes SKU sanitization issue
+• Fixes Manual payment checkout instruction issue
+• Fixes Payment method settings customization issue
+• Fixes Zero decimal amount issue for Japanese currency
+```
+
+::::
+
 ## FluentCart v1.3.12
 *Released on February 26, 2026*
 
@@ -45,7 +61,7 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 
 :::
 
->>>>>>> master
+
 ## FluentCart v1.3.10
 *Released on February 04, 2026*
 
