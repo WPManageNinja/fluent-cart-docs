@@ -1,4 +1,4 @@
- # Creating Physical Products
+# Creating Physical Products
 
 This guide will walk you through the process of adding a new physical product to your FluentCart store. A physical product is any tangible item that you sell and ship to your customers.
 
