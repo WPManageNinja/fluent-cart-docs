@@ -62,7 +62,7 @@ This section helps you organize and tag your product using WordPress taxonomies 
 
 By using these taxonomies, you ensure customers can easily find and filter your products on your shop pages.
 
-   ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/Creating-Physical-Products/physical-product-2.webp)
+   ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/Creating-Physical-Products/eidt-product-1.webp)
 
 ### 4. Pricing & Variations
 
@@ -72,15 +72,18 @@ First, use the dropdown menu at the top right of the pricing section to select e
 
 #### Simple (For Products with No Variations)
 
-Choose this option when your product is a single item with only one price. For example, a book or a standard coffee mug.
+Choose this option when your product is a single item with only one price and configuration. For example, a book or a standard coffee mug.
 
 You will see the following fields:
 
+* **Select Payment Term:** Choose how the customer will be charged. For standard, single purchases, select One Time.
 * **Price:** (Required) The main selling price for the product.
-* **Compare at price:** (Optional) An original or higher price that will be shown with a strikethrough to indicate a sale.
-* **Manage profit/cost:** (Optional) Toggle this on to enter the cost of the item. FluentCart will use this to calculate your profit and margin for internal tracking.
+* **Compare at price:** (Optional) An original or higher price that will be shown with a strikethrough on your storefront to indicate a sale or discount.
+* **Calculate profit/cost:** Toggle this on to enter the base cost of the item. FluentCart will use this to automatically calculate your profit and margin for internal reporting.
+* **SKU:** Enter a Stock Keeping Unit. This is a unique internal code used to identify and track this specific item in your inventory. You can also click the "Generate SKU" link to automatically create a unique identifier.
+* **Fulfillment Type:** (Required) Select how this product is delivered to the customer. For physical items that require shipping, choose Physical.
 
-![Screenshot of Simple Price](/images/product-types-creation/Creating-Physical-Products/simple-price.gif)
+![Screenshot of Simple Price](/images/product-types-creation/Creating-Physical-Products/simple-pricing-1.webp)
 
 ::: info
 To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing) guide.
@@ -88,22 +91,23 @@ To learn more about variation pricing setups, see the [Configure Product Pricing
 
 #### Simple Variations (For Products with Different Versions)
 
-Choose this option when your product comes in different versions, such as t-shirts in various sizes and colors. This will allow you to set a different price, image, and stock level for each variation.
+Choose this option when your product comes in different versions, such as t-shirts in various sizes and colors. This allows you to set a different price, image, SKU, and fulfillment type for each specific variation.
 
-This will display a table where each row is a single variation.
+This will display a table where each row represents a single variation. You can click **+ Add more** to create a new variation. The main table columns give you a quick overview of the Image, Title, Price, and Compare at price.
 
-* **Image:** Upload a specific image for each variation (e.g., a photo of the red shirt).
-* **Title:** Name the variation clearly.
-* **Price:** Set the specific price for this individual variation.
-* **Compare at price:** (Optional) Set a sale price for this specific variation.
-* **Action:** This column contains icons to manage each variation row.
-    * **Edit Icon (Pencil):** Click this to edit the pricing variation's details.    
-    * **More Options (Three Dots):** Click this to open a menu with more options:
-        * **Skip inventory:** Check this box if you do not want to track stock for this specific variation.
-        * **Duplicate:** Click this to create an exact copy of this variation row.
-        * **Direct Checkout:** Get a direct link to purchase this specific variation, bypassing the main product page.
+#### Managing a Variation (Edit Panel)
+Clicking the **Edit Icon (Pencil)** in the Action column opens a detailed settings sidebar panel for that specific variation. Here you will configure:
 
-![Screenshot of Simple Variation](/images/product-types-creation/Creating-Physical-Products/simple-variation.gif)
+* **Title:** (Required) Name the variation clearly (e.g., "Zipper Hoodie - Red").
+* **SKU:** A unique Stock Keeping Unit identifier to track this specific variation in your inventory. You can also click the "Generate SKU" link to automatically create a unique identifier.
+* **Fulfillment Type:** (Required) Select how this specific variation is delivered to the customer (e.g., Physical).
+* **Select Payment Term:** Choose the billing cycle for this variation (e.g., One Time).
+* **Price:** (Required) Set the specific selling price for this individual variation.
+* **Compare at price:** (Optional) Set an original or higher price to indicate a sale for this specific variation.
+* **Calculate profit/cost:** Toggle this on to enter the base cost of this item to track your profit margins.
+* **Image:** Upload a specific image for this variation so customers can see exactly what they are selecting.
+
+![Screenshot of Simple Variation](/images/product-types-creation/Creating-Physical-Products/variation-pricing-2.webp)
 
 To add another version of your product, click the **+ Add more** button to create a new row in the table.
 
