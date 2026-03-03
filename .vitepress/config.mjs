@@ -223,6 +223,7 @@ export default defineConfig({
                 { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
                 { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
                 { text: 'Creating Product Bundles', link: '/guide/product-types-creation/creating-product-bundles' },
+                { text: 'Bulk Product Import', link: '/guide/product-types-creation/bulk-product-import' },
                 { text: 'Configuring Product Pricing', link: '/guide/product-types-creation/configuring-product-pricing' },
                 { text: 'Managing Product integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
                 { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
