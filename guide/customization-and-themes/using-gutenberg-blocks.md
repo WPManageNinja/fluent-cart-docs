@@ -18,19 +18,21 @@ You will see all the blocks listed below. Here is a fast look at all the FluentC
 
  * Products
  * Product Title
- * Product Carousel
+ * Product Description
  * Product Search
+ * Product Carousel
+ * Customer Dashboard
  * Product Card
  * Product Image
+ * Sale Badge
  * Product Info
  * Price Range
- * Customer Dashboard
  * Mini Cart
  * Buy Now Button
  * Add to Cart Button
- * Buy Scetion
- * Product Categories List
+ * Buy Section
  * Checkout
+ * Product Categories List
  * Excerpt
 
 
@@ -54,7 +56,28 @@ This block displays the name of your product, pulling data automatically to keep
   * **Typography & Alignment:** Use the block toolbar or sidebar to change the text alignment, adjust the font size, and pick a color that matches your brand.
   * **Additional CSS Class(es):** Enter custom code here if you want to add unique styling or specific font effects to the product title.
 
-### 3. Product Search 
+### 3. Product Description 
+
+This block is used to display the full, detailed description of your product, providing customers with all the information they need to make a purchase. It pulls data directly from your product settings to ensure your site stays up to date automatically.
+
+**Product Settings:** Use the settings tab (gear icon) to choose which product's details to show.
+
+ * **Select Product:** Click this button to search your inventory and pick the specific item whose full description you want to feature on the page.
+
+**Style Tab:** Click the style tab (half-moon icon) to customize the visual look of your text.
+
+ * **Color:** You have granular control to set individual colors for the Text, the Background of the description area, and any Links included in the content.
+ * **Typography:** Adjust the Font Size (from Small to Extra Large) and Line Height to make sure your product details are easy for customers to read.
+ * **Dimensions:** Use the Padding and Margin sliders to perfectly space the description within your page layout.
+ * **Border & Shadow:** Add specialized borders or shadow effects to the description container to make the information pop.
+
+**Additional CSS Class(es):** Enter custom code here if you want to add unique styling or specialized formatting to the product description block.
+
+
+   ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/product-description.webp)
+
+
+### 4. Product Search 
 
 The Product Search block helps customers quickly find specific items in your store. Instead of browsing through many products, users can simply type what they’re looking for and get instant results.
 
@@ -70,7 +93,7 @@ You can add this block from the editor by selecting the magnifying glass icon un
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/product-search.webp)
 
-### 4. Product Carousel 
+### 5. Product Carousel 
 
 The Product Carousel block is a dynamic tool for highlighting your best-selling or newest items in an interactive, sliding row. It is perfect for homepages or landing pages where you want to showcase multiple products in a limited space without overwhelming your shoppers.
 
@@ -84,7 +107,7 @@ The Product Carousel block is a dynamic tool for highlighting your best-selling 
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/product-carousel.webp)
 
-### 5. Customer Dashboard 
+### 6. Customer Dashboard 
 
 This block is the "home base" for your customers. It acts as a personalized portal where they can manage every part of their relationship with your store, from viewing past orders to updating their own addresses.
 
@@ -106,7 +129,7 @@ This block is the "home base" for your customers. It acts as a personalized port
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/customer-dashboard.webp)
 
-### 6. Product Card 
+### 7. Product Card 
 
 If you want to highlight one specific item on a special page—like a "Deal of the Day"—the Product Card block is the perfect tool. It puts a single product into a beautiful, standalone card that includes the featured image, price, and an "Add to Cart" button all in one neat package.
 
@@ -123,7 +146,7 @@ You can find this block in the FluentCart section of your editor, represented by
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/product-card.webp)
 
-### 7. Product Image 
+### 8. Product Image 
 
 This block allows you to showcase the visual identity of your products anywhere on your site. It renders the featured image of a specific product, making it an essential tool for building custom landing pages or highlighted product sections.
 
@@ -137,8 +160,43 @@ This block allows you to showcase the visual identity of your products anywhere 
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/product-image.webp)
 
+### 9. Sale Badge 
 
-### 8. Product Info 
+The Sale Badge block is a must-have for any store looking to boost conversions by highlighting special deals. It automatically displays a label or a discount percentage over your items whenever they are on sale, making it easy for customers to spot a bargain at a glance.
+
+**Badge Settings:** Use the settings tab (gear icon) to control how your promotional labels behave.
+
+  * **Badge Text:** Type in your own custom message like "Sale!", "Hot Deal", or "Clearance" to display when you aren't using percentages.
+  * **Show Discount Percentage:** Toggle this on to let the block do the math for you, showing customers exactly how much they save (e.g., -20%).
+  * **Percentage Format:** If you use percentages, you can customize their appearance using the {percent} placeholder.
+  * **Price Source:** Define which price the block should check to determine if a sale is active, such as the Default Variant.
+  * **Position & Style:** Choose your preferred Badge Style and set the Position to place the badge exactly where you want it on the product image, such as the Top Left.
+
+**Style Settings:** Switch to the style tab (half-moon icon) to make your badges pop.
+
+  * **Color:** Manually set the Text and Background colors to match your theme or use a bright color like red to grab attention.
+  * **Typography:** Adjust the Font Size (ranging from Small to Extra Large) and Line Height for perfect readability.
+  * **Dimensions:** Use the Padding and Margin sliders to adjust the badge's size and its distance from the product card's edge.
+  * **Border & Shadow:** Add specialized borders or shadow effects to give your badges a professional, 3D look.
+
+  * **Additional CSS Class(es):** Enter custom code here if you want to add unique styling, like custom shapes or pulsing animations, to your sale badges.
+
+     ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/sale-badge.webp)
+
+### 10. Sold Out Badge 
+
+This block displays a clear visual alert on products that are currently out of stock, helping you manage customer expectations at a glance. It automatically triggers based on your real-time inventory levels, ensuring shoppers always know which items are unavailable before they try to purchase.
+
+**Settings:** Here you control the primary behavior and placement of the badge.
+
+  * **Badge Text:** Customize the message displayed when an item is unavailable, such as "Sold Out" or "Out of Stock".
+  * **Position & Style:** Adjust the placement of the badge on your product image (e.g., Top Left) and choose a visual style that stands out clearly against your product photos.
+
+**Additional CSS Class(es):** Enter custom code here if you want to apply unique styling, such as custom colors or specialized font effects, to the sold-out label.
+
+   ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/sold-out-badge.webp)
+
+### 11. Product Info 
 
 This block is used to display essential details about your product—such as the title, description, and price—in a clean and organized way. It acts as a central hub for pulling product data directly into your custom layouts or landing pages.
 
@@ -151,7 +209,7 @@ Here you control which product's information the block displays.
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/product-info.webp)
 
-### 9. Price Range 
+### 12. Price Range 
 
 This block is designed to showcase the cost of your products with automatic currency formatting. It is especially useful for variable products, as it can dynamically display the full price range (e.g., $5.00 - $8.00) to give customers a clear idea of the cost options.
 
@@ -160,7 +218,7 @@ This block is designed to showcase the cost of your products with automatic curr
   * **Additional CSS Class(es):** Enter custom code here if you want to add unique styling, such as specific font weights, colors, or spacing, to the price display.
 
 
-### 10. Mini Cart 
+### 13. Mini Cart 
 
 This block is a compact cart widget designed to let shoppers quickly view their cart items. It allows customers to see their item count and total price at a glance without needing to leave the page they are currently browsing.
 
@@ -180,7 +238,7 @@ This block is a compact cart widget designed to let shoppers quickly view their 
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/minicart-8.webp)
 
-### 11. Buy Now Button 
+### 14. Buy Now Button 
 
 The Buy Now button is a powerful shortcut designed for landing pages to trigger an immediate purchase action. Instead of sending customers through the standard cart process, this block can be configured to take them directly to checkout or open a payment window on the same page.
 
@@ -197,7 +255,7 @@ The Buy Now button is a powerful shortcut designed for landing pages to trigger 
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/buy-now-8.webp)
 
-### 12. Add to Cart Button 
+### 15. Add to Cart Button 
 
 The Add to Cart button is a standalone tool that allows customers to add a specific product or variation to their cart while remaining on the same page. This is ideal for custom landing pages where you want to encourage multi-item shopping.
 
@@ -214,7 +272,7 @@ The Add to Cart button is a standalone tool that allows customers to add a speci
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/add-to-cart-9.webp)
 
-### 13. Buy Section 
+### 16. Buy Section 
 
 This block acts as the functional hub of your product page. It brings together all the essential purchase elements—like price, quantity, and action buttons—into one convenient area for your customers.
 
@@ -227,7 +285,7 @@ This block acts as the functional hub of your product page. It brings together a
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/buy-section-10.webp)
 
-### 14. Checkout Page 
+### 17. Checkout Page 
 
 This is the essential block that renders the secure checkout form for completing purchases. It provides a comprehensive, professional layout where customers enter their details and review their items before finalizing their order.
 
@@ -240,7 +298,7 @@ This is the essential block that renders the secure checkout form for completing
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/checkout-page-11.webp)
 
-### 15. Product Categories List 
+### 18. Product Categories List
 
 The Product Categories List block helps your customers navigate your store by displaying an organized directory of your different product departments. This is a great way to improve your site's browsing experience and help shoppers find related items quickly.
 
@@ -258,7 +316,7 @@ The Product Categories List block helps your customers navigate your store by di
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/product-category-list-12.webp)
 
-### 16. Excerpt 
+### 19. Excerpt
 
 The Excerpt block is designed to display a brief summary or snippet of your product's description. It is an ideal tool for building custom shop layouts or landing pages where you want to provide a quick preview of an item without including the full description text.
 
