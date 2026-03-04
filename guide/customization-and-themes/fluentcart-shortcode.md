@@ -14,9 +14,148 @@ To show your standard product list with default settings, simply use:
 [fluent_cart_products]
 ```
 
-#### Advanced Usage (Example)
+#### Filtering by Product IDs
 
-You can customize the grid by adding specific instructions inside the brackets. Here is a version that shows only 4 products with a sidebar filter:
+You can show specific products by passing one or more product IDs. This is useful when you want to highlight a handpicked selection of items on a landing page or a promotional section.
+
+```text
+// Show a single product
+[fluent_cart_products ids="433"]
+
+// Show multiple products
+[fluent_cart_products ids="344,346,347"]
+```
+
+To hide certain products from the list, use the `exclude_ids` parameter:
+
+```text
+// Exclude a single product
+[fluent_cart_products exclude_ids="344"]
+
+// Exclude multiple products
+[fluent_cart_products exclude_ids="3595,3493"]
+```
+
+> **Note:** If you pass an ID that does not exist (e.g., `ids="999999"`), no products will be displayed.
+
+#### Filtering by Category
+
+You can narrow the product list down to one or more categories. Categories can be referenced by their **slug** or their **term ID** — whichever is more convenient.
+
+```text
+// Filter by a single category slug
+[fluent_cart_products category="cloths"]
+
+// Filter by multiple category slugs
+[fluent_cart_products category="cloths,shoes"]
+
+// Filter by a single category term ID
+[fluent_cart_products category_id="9"]
+
+// Filter by multiple category term IDs
+[fluent_cart_products category_id="9,12"]
+
+// Combine a slug and an ID together
+[fluent_cart_products category="hoodies" category_id="8"]
+```
+
+Category filters also work seamlessly with pagination. For example, the following shortcode shows two products per page with numbered pagination, and the category filter persists when your visitors navigate between pages:
+
+```text
+[fluent_cart_products category="hoodies" per_page="2" paginator="numbers"]
+```
+
+> **Note:** If you pass a category slug that does not exist (e.g., `category="nonexistent-category-xyz"`), the filter is ignored and all products are shown.
+
+#### Filtering by Product Type & Sale Status
+
+Use the `product_type` parameter to display only a specific type of product, or use `on_sale` to showcase discounted items.
+
+```text
+// Simple products only
+[fluent_cart_products product_type="simple"]
+
+// Variation products only
+[fluent_cart_products product_type="simple_variations"]
+
+// Physical products only
+[fluent_cart_products product_type="physical"]
+
+// Digital products only
+[fluent_cart_products product_type="digital"]
+
+// Subscription products only
+[fluent_cart_products product_type="subscription"]
+
+// Only products currently on sale
+[fluent_cart_products on_sale="yes"]
+```
+
+> **Tip:** Empty parameter values (e.g., `ids=""`, `category=""`, `product_type=""`) are safely ignored, so you don't have to worry about accidental blank values breaking your page.
+
+#### Sorting Products
+
+Control the order in which products appear using the `sort_by` parameter for common presets, or the `orderby` and `order` parameters for more granular control.
+
+```text
+// Sort by price, ascending (using orderby + order)
+[fluent_cart_products orderby="price" order="ASC"]
+
+// Price low to high
+[fluent_cart_products sort_by="price-low"]
+
+// Price high to low
+[fluent_cart_products sort_by="price-high"]
+
+// Alphabetical A–Z
+[fluent_cart_products sort_by="name-asc"]
+
+// Newest first
+[fluent_cart_products sort_by="date-newest"]
+
+// Oldest first
+[fluent_cart_products sort_by="date-oldest"]
+```
+
+#### Layout & Display
+
+Adjust the number of columns and the view mode to match the look and feel of your page.
+
+```text
+// Show products in a 3-column grid
+[fluent_cart_products columns="3"]
+
+// Limit to 6 products in a 3-column grid
+[fluent_cart_products limit="6" columns="3"]
+
+// 2-column grid view
+[fluent_cart_products columns="2" view_mode="grid"]
+
+// List view with 4 products per page and numbered pagination
+[fluent_cart_products per_page="4" view_mode="list" paginator="numbers"]
+```
+
+#### Combining Parameters
+
+The real power of the shortcode comes from mixing and matching parameters. Here are a few practical combinations:
+
+```text
+// Paginate through specific products, one per page
+[fluent_cart_products ids="433,434" per_page="1" paginator="numbers"]
+
+// Specific products in a custom 3-column layout
+[fluent_cart_products ids="433,434,435" columns="3" per_page="3"]
+
+// Category products, exclude one, newest first
+[fluent_cart_products category="hoodies" exclude_ids="433" sort_by="date-newest"]
+
+// Digital products in 3 columns, sorted by price, 6 per page
+[fluent_cart_products product_type="digital" columns="3" sort_by="price-low" per_page="6"]
+```
+
+#### Advanced Usage (Filters & Sidebar)
+
+You can also enable a sidebar filter and configure it with JSON-based settings. Here is a version that shows 4 products with a sidebar filter:
 
 ```text
 [fluent_cart_products 
@@ -33,10 +172,22 @@ You can customize the grid by adding specific instructions inside the brackets. 
 
 | Parameter | Description | Default | Options |
 | :--- | :--- | :--- | :--- |
+| **ids** | Show only the products matching these IDs. Accepts a single ID or a comma-separated list. | — | Any valid product ID(s) (e.g., `433` or `344,346,347`) |
+| **exclude_ids** | Hide specific products from the list. Accepts a single ID or a comma-separated list. | — | Any valid product ID(s) (e.g., `344` or `3595,3493`) |
+| **category** | Filter products by one or more category slugs. | — | Comma-separated slugs (e.g., `cloths` or `cloths,shoes`) |
+| **category_id** | Filter products by one or more category term IDs. | — | Comma-separated IDs (e.g., `9` or `9,12`) |
+| **product_type** | Show only products of a specific type. | — | `simple`, `simple_variations`, `physical`, `digital`, `subscription` |
+| **on_sale** | Show only products that are currently discounted. | — | `yes` |
+| **sort_by** | A quick preset for sorting products. | — | `price-low`, `price-high`, `name-asc`, `date-newest`, `date-oldest` |
+| **orderby** | The field to sort products by (use with `order`). | — | `price`, `name`, `date` |
+| **order** | Sort direction (use with `orderby`). | — | `ASC`, `DESC` |
+| **columns** | Number of columns in the product grid. | — | Any number (e.g., `2`, `3`, `4`) |
+| **limit** | Maximum number of products to display. | — | Any number (e.g., `6`, `10`) |
+| **view_mode** | Choose between a grid layout or a list layout. | `grid` | `grid`, `list` |
 | **per_page** | How many products to show on one page. | 12 | Any number (e.g., 4, 8, 20) |
-| **enable_filter** | Show or hide the filter sidebar on the left/right. | true | true, false |
-| **live_filter** | If "true," products update instantly as you click filters. | true | true, false |
-| **paginator** | The style of the page navigation at the bottom. | numbers | numbers, load_more, none |
+| **paginator** | The style of the page navigation at the bottom. | `numbers` | `numbers`, `load_more`, `scroll`, `none` |
+| **enable_filter** | Show or hide the filter sidebar on the left/right. | `true` | `true`, `false` |
+| **live_filter** | If "true," products update instantly as you click filters. | `true` | `true`, `false` |
 | **custom_filters** | A list of settings to control category and price filters. | — | See JSON guide below |
 | **filters** | Settings for how products are sorted (Name, Price, etc.). | — | See JSON guide below |
 
