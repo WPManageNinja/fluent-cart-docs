@@ -31,8 +31,18 @@ By the end, you will be able to confidently sell and manage any downloadable ite
 
 ### 2. Media
 
-* **Featured Image:** Set a prominent image for your digital product (e.g., e-book cover, software icon).
-* **Add Media:** Upload additional images or videos to showcase your product.
+This section allows you to manage the visual presentation of your product, ensuring customers get a clear view of what they are buying. You can set a primary image and build a gallery to showcase different angles or use cases.
+
+**Featured Image:** Set a prominent, high-quality image that acts as the primary visual for your digital product, such as a professional book cover or a clean app icon.
+
+**Product Gallery:** By clicking the **Add Media** button, you can build a gallery that gives shoppers a better look at what's inside. You will find two distinct ways to add your visuals:
+
+ * **Gallery:** This is your standard option for picking images or videos that are already saved in your WordPress library, or for uploading fresh screenshots directly from your device.
+ * **Add by URL Tab:** If you have high-quality images hosted on a separate server or a dedicated media site, you can simply paste the direct web address here and click Add to bring them into your gallery without taking up space on your own site.
+
+Once you've picked your files or linked your URLs, just click the **Save** button at the bottom of the modal to update your product's look.
+
+ ![Screenshot of Add Media](/images/product-types-creation/creating-digital-product/product-image-add-with-url.webp) 
 
 ### 3. Product Taxonomies
 

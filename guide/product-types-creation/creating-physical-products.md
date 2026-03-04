@@ -48,10 +48,29 @@ By the end of this guide, you will be able to confidently list and manage any ph
     * **Visual Mode:** This is the standard view where you type your description directly. You'll have formatting options above (like bold, italics, lists) and options to easily add media with your text.
     * **Code Mode (HTML):** This view is for advanced users who want to write the long description using raw **HTML codes**.
 
+   ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/Creating-Physical-Products/eidt-product-1.webp)
+
+
 ### 2. Media
 
-* **Featured Image:** Set a prominent image for your product.
-* **Add Media:** Upload additional images or videos that showcase your product from different angles or in use.
+This section allows you to manage the visual presentation of your product, ensuring customers get a clear view of what they are buying. You can set a primary image and build a gallery to showcase different angles or use cases.
+
+**Featured Image:**
+
+Set a prominent, high-quality image that will act as the main face of your product on the shop page and in the cart.
+
+**Product Gallery:**
+
+By clicking the **Add Media** button, you open the **Product Gallery** modal, which offers two distinct ways to add visual content to your item:
+
+ * **Gallery:** This is the standard method for selecting images or videos already saved in your WordPress media library or uploading new files directly from your computer.
+ * **Add by URL:** This convenient option allows you to link to an image hosted elsewhere on the web. Simply paste the direct web address of the image into the input field and click the **Add** button to include it in your gallery.
+
+Once you have selected or linked your media, click the **Save** button at the bottom of the modal to update your product's gallery.
+
+   ![Add Media](/images/product-types-creation/Creating-Physical-Products/product-image-add-with-url.webp)
+
+
 
 ### 3. Product Taxonomies
 
@@ -62,7 +81,6 @@ This section helps you organize and tag your product using WordPress taxonomies 
 
 By using these taxonomies, you ensure customers can easily find and filter your products on your shop pages.
 
-   ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/Creating-Physical-Products/eidt-product-1.webp)
 
 ### 4. Pricing & Variations
 
