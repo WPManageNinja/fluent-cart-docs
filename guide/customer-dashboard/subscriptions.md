@@ -31,15 +31,22 @@ This section provides a summary of the core details of your subscription.
 * **Next Charge:** The date your next automatic renewal payment is scheduled.
 * **Payment Method:** The current payment method on file for renewals.
 
-#### Key Actions
+#### Key Actions & Early Payments
 
 Below the details, you will find several important links:
 
-* **Update Payment Method:** Click this to securely update the credit card or PayPal account used for your automatic renewals. A pop-up will appear where you can enter your new payment details.
-* **View Order:** Click this to see the original order associated with this subscription in your **Purchase History**. This is useful for finding your initial receipt or order details.
+* **Pay Remaining Installments:** This new feature is perfect for those who want to get ahead. Clicking this allows you to settle your remaining balance early, clearing your future obligations in one go.
+
+>[!Note]
+>The installment plan must be **Active** for this early payment option to be available.
+
+* **Update Payment Method:** Use this to securely swap out the credit card or account used for your renewals.
+* **View Order:** This takes you directly to the original transaction in your **Purchase History**.
+* **Connected License:** If your subscription includes software or access keys, you can view and copy your active license key right here.
 
 #### Related Transactions
 
-This section provides a complete financial history of your subscription. It lists every single transaction, from the initial purchase to every successful renewal payment. You can see the date, amount, status, and payment method for each transaction, and you can download a **Receipt** for any of them.
+At the bottom of the page, you'll find a complete financial audit trail for your subscription. This table lists every transaction from your very first purchase to the most recent renewal. You can track the Date, Amount, and Status of each payment, and even download a **Receipt** for your records whenever you need one.
+
 
 ![Screenshot of Subscription](/images/customer-dashboard/subscriptions/subscriptions-2.webp)
