@@ -284,6 +284,7 @@ export default defineConfig({
                 { text: 'Mercado Pago Settings', link: '/guide/payments-checkout/connecting-payment-gateways/mercado-pago-settings' },
                 { text: 'Razorpay Settings', link: '/guide/payments-checkout/connecting-payment-gateways/razorpay-settings' },
                 { text: 'Authorize.net Settings', link: '/guide/payments-checkout/connecting-payment-gateways/authorizenet-settings' },
+                { text: 'Flutterwave Settings', link: '/guide/payments-checkout/connecting-payment-gateways/flutterwave-settings' },
                 { text: 'Cash on Delivery (COD) Settings', link: '/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings' }
               ]
             }
