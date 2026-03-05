@@ -1,6 +1,29 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.14
+*Released on March 04, 2026*
+
+:::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Flutterwave for FluentCart
+• Adds Early Payment for installment
+• Adds Bulk product import
+• Adds Customizable product shortcodes
+• Adds Sale badge Gutenberg block
+• Adds Out of Stock badge Gutenberg block
+• Adds Product description Gutenberg block
+• Adds Product image CDN support
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Coupon per user limit issue
+• Fixes Modal checkout cart not found issue
+```
+
+::::
+
 ## FluentCart v1.3.13
 *Released on February 26, 2026*
 
