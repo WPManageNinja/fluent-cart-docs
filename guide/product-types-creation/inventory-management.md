@@ -33,7 +33,7 @@ The **Inventory Management** section gives you a clear, real-time overview of th
 
 * **Title:** The name of the product variant.
 * **SKU:** The unique Stock Keeping Unit identifier used to track this specific variation in your inventory.
-* **Total Stock:** The total quantity of this variant you currently have in your inventory.
+* **Total Stock:** The total quantity of this variant you have in your inventory.
 * **Available:** The number of units that are currently available for customers to purchase.
 * **On hold:** The number of units that are currently reserved in pending or processing orders. These units are not available for sale.
 * **Delivered:** The total number of units that have been successfully sold and fulfilled.
