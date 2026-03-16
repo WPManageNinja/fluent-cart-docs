@@ -1,6 +1,36 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.15
+*Released on March 13, 2026*
+
+:::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Schedule reminder email for payment and subscriptions
+• Adds Email preview for default template
+• Adds Email editor Gutenberg
+• Adds Email for Subscription cancel
+• Adds Subscription activity logs in subscription page
+```
+
+```markdown [🚀 Improvements]
+• Enhanced EU VAT reverse experience in checkout
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes CRM integration missing fields phone, postcode, state
+• Fixes Custom checkout discount calculation issue
+• Fixes Address validation issue
+• Fixes Customer first_name and last_name change update WP user data
+• Fixes Order payment calculation issue on amount updates
+• Fixes Timezone issue for customer email
+• Fixes Modal checkout issue with billing field
+• Fixes Report product thumbnail issue
+```
+
+::::
+
 ## FluentCart v1.3.14
 *Released on March 04, 2026*
 
