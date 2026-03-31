@@ -41,6 +41,27 @@ The table can display various configured paths, showing the flexibility of the s
 * **Yearly to Lifetime:** Upgrade from a "Single Site Yearly License" to a "Single Site Lifetime License" (often with prorated options).
 * **Tier-to-Tier:** Moving from a lower tier to a higher tier within the same license type (e.g., 5 Sites Yearly to 50 Sites Yearly).
 
+# How Customers Upgrade Their Products
+
+Once your upgrade paths are set up in the backend, the actual upgrade process is entirely self-serve and effortless for your customers. Here is exactly what they will see:
+
+* Step 1: Access the Dashboard
+Your customer logs into their account and clicks on the **Subscription Plans** (or Licenses) tab in their sidebar menu. This brings up a list of all their active purchases.
+
+* Step 2: View Plan Details
+They select the specific plan they want to upgrade (for example, "Carto App") to see their detailed subscription overview.
+
+* Step 3: Click to Upgrade
+Right below their current billing terms and payment method, they will easily spot a prominent **Upgrade Plan** button.
+
+* Step 4: Choose a New Package
+Clicking that button opens a simple "Upgrade Options" popup. Here, they can review the higher-tier plans you've made available, check the new price, and simply click the **Upgrade** button next to the one they want.
+
+* Step 5: Instant Checkout
+They are immediately taken to the checkout page to finalize the transaction. A friendly notice confirms what they are upgrading to (e.g., "You are upgrading your plan..."), and the order summary automatically calculates their new cost—applying any prorated discounts instantly!
+
+![Upgrade Path](/guide/public/images/product-types-creation/define-upgrade-path/customer-upgrade-path.webp)
+
 :::tip Streamlined Customer Experience
 Defining clear upgrade paths simplifies the process for your customers, allowing them to easily scale their usage or commitment without complex manual intervention or needing to purchase a new product entirely.
 :::
