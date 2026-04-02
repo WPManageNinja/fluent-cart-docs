@@ -1,0 +1,14 @@
+/* Mimics a small editor toolbar control (e.g. Smart Tags {{}} in block editor) */
+.fc-toolbar-btn kbd {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.2em 0.5em;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  background: var(--vp-c-bg-soft);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  vertical-align: baseline;
+}
