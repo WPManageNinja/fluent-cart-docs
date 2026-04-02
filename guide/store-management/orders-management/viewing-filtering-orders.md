@@ -21,32 +21,31 @@ Your orders are neatly organized in a table. Each row is a single order, and eac
 
     ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/orders-list.webp)
 
-## Customizing Your View
+## Customizing Your View & Actions
 
-You can change what you see on the Orders page to fit your needs. In the top-right corner, you’ll find a **More Actions** button that gives you a couple of neat options.
+You can change what you see on the Orders page to fit your needs and quickly clean up your data. In the top-right corner, you’ll find a **More actions** dropdown button that gives you a few handy options:
 
 ### Showing or Hiding Order Stats
+If you want a quick "health check" of your store, you can toggle the order stats panel. 
 
-If you want a quick "health check" of your store, you can show the order stats.
+Just click the **More actions** button and select **Show Order Stats**. A summary will appear at the top, showing you important numbers like:
 
-Just click the **More Actions** button and select **Show Order Stats**. A summary will appear at the top, showing you important numbers like:
+* **All Orders:** The total number of orders your store has ever received.
+* **Paid Orders:** How many orders have been successfully paid for.
+* **Paid Order Items:** The total number of individual items sold.
+* **Order value (Paid):** The total amount of money you've earned from paid orders.
 
-* **All orders**: The total number of orders your store has ever received.
-* **Paid Orders**: How many orders have been successfully paid for.
-* **Paid Order items**: The total number of individual items sold.
-* **Order value (Paid)**: The total amount of money you've earned from paid orders.
+*(If you want to hide this summary to get more space on your screen, just click the dropdown again and choose the **Hide Order Stats** option).*
 
-If you want to hide this summary to get more space, just click **More Actions** and choose **Hide Order Stats** option.
-
-   ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/order-stats-overview.webp)
-
-### Showing and Hiding Bulk Actions
-
-Click the **More Actions** button and select **Show Bulk Actions**. A little checkbox will appear next to each order. You can then select multiple orders and apply an action to all of them at the same time.
+### Show Bulk Actions
+Selecting this option from the dropdown will reveal checkboxes and bulk management tools on your orders list. This allows you to select multiple orders at once to change their statuses or perform other actions simultaneously, saving you a lot of time.
 
 Sometimes you need to apply the same action to many orders at once, such as removing old records. That's where bulk actions come in handy: simply select multiple orders and click **Delete Selected** button to remove them all at once.
 
-If you don't need to perform bulk actions and want a cleaner look, simply click **More Actions** again and choose **Hide Bulk Actions**. This will remove the checkboxes from the list.
+### Delete Test Orders
+When you are first setting up your store, you will likely create a few fake orders to test your payment gateways. Instead of deleting them one by one, simply click **Delete Test Orders** from the dropdown to instantly clean up your dashboard and reset your data before going live.
+
+![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/order-stats-overview.webp)
 
 ## Filtering Orders
 
