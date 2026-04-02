@@ -58,7 +58,7 @@ Right below their current billing terms and payment method, they will easily spo
 Clicking that button opens a simple "Upgrade Options" popup. Here, they can review the higher-tier plans you've made available, check the new price, and simply click the **Upgrade** button next to the one they want.
 
 * Step 5: Instant Checkout
-They are immediately taken to the checkout page to finalize the transaction. A friendly notice confirms what they are upgrading to (e.g., "You are upgrading your plan..."), and the order summary automatically calculates their new cost—applying any prorated discounts instantly!
+They are immediately taken to the checkout page to finalize the transaction. A friendly notice confirms what they are upgrading to, and the order summary automatically calculates their new cost—applying any prorated discounts instantly!
 
 ![Upgrade Path](/guide/public/images/product-types-creation/define-upgrade-path/customer-upgrade-path.webp)
 
