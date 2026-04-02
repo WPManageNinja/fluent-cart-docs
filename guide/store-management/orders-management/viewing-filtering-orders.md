@@ -88,6 +88,3 @@ You can add multiple rules by clicking the **+OR** button to create very powerfu
 ### 3. Using the Search Bar
 
 If you just need to find something fast, the search bar at the top of the page is perfect. You can type in an Order ID, customer name, email, or product name to instantly find what you're looking for.
-
-
-
