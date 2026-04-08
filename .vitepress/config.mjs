@@ -389,6 +389,7 @@ export default defineConfig({
             { text: 'Revenue Report', link: '/guide/reporting-analytics/revenue-report' },
             { text: 'Refunds Report', link: '/guide/reporting-analytics/refunds-report' },
             { text: 'Subscription Report', link: '/guide/reporting-analytics/subscription-report' },
+            { text: 'Retention Report', link: '/guide/reporting-analytics/retention' },
             { text: 'Product Report', link: '/guide/reporting-analytics/product-report' },
             { text: 'Customer Report', link: '/guide/reporting-analytics/customer-report' }
           ]
