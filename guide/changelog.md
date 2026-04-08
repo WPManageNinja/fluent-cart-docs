@@ -2,7 +2,7 @@
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
 ## FluentCart v1.3.17
-*Released on April 02, 2026*
+*Released on April 07, 2026*
 
 :::: code-group
 
