@@ -10,6 +10,8 @@ This section covers various types of reports to give you a holistic view of your
 * **[Refunds Report](/guide/reporting-analytics/refunds-report):** Specific analytics focused on refund activity, helping you understand refund trends and their impact.
 * **[Subscription Report](/guide/reporting-analytics/subscription-report):** Key insights into your recurring revenue, including active subscribers, total revenue, and retention rates.
 * **[Retention Report](/guide/reporting-analytics/retention):** Subscription retention and churn analytics, filters, charts, lifetime value, and monthly summary data.
+* **[Cohorts Report](/guide/reporting-analytics/cohorts):** Cohort-based subscription analytics with retention views, period comparisons, and exportable grouped data.
+* **[Future Renewals Report](/guide/reporting-analytics/future-renewals):** Forecasted subscription renewal revenue and counts to help with near-term cash flow planning.
 * **[Product Report](/guide/reporting-analytics/product-report):** Detailed analytics on individual product performance, including units sold and top-selling items.
 
 By regularly reviewing these reports, you can gain a deeper understanding of your store's health and strategize for future growth.
