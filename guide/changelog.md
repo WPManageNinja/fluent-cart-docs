@@ -8,8 +8,8 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 
 ```markdown [✨ Newly Added]
 • Adds Fees API for custom fees in checkout
-• Adds Filterable frontend asset loading context for cart bundle
-• Adds Shipping method options to include and exclude countries
+• Adds Add filterable frontend asset loading context for cart bundle
+• Adds Shipping method new options Include,Exclude countries
 • Adds Delete all test order action inside More option (All orders page)
 • Adds Visual PDF Invoice Customizer
 • Adds E-Invoice (ZUGFeRD / Factur-X) with EN 16931 profiling
@@ -23,12 +23,13 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 • Fixes Stock not updated after test order deletion
 • Fixes Product duplicate not working in bulk edit page
 • Fixes Downloadable file edit issue
-• Fixes and improves Turnstile
+• Fixes And Improves Turnstile
 • Fixes Decimal value not allowed in shipping fee
 • Fixes Handles Paddle recovery link
 • Fixes Checkout Summary block consolidated into a single block
 • Fixes Added restrictions to product child blocks
 • Fixes Pagination showing stale page number after changing per_page
+• Fixes Paddle discount issue
 ```
 
 ::::
