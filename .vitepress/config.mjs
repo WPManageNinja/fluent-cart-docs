@@ -436,6 +436,7 @@ export default defineConfig({
             { text: 'Using Elementor Widgets', link: '/guide/customization-and-themes/using-elementor-widgets' },
             { text: 'Layout and Template Customization (Block Editor)', link: '/guide/customization-and-themes/layout-template-customization' },
             { text: 'Customize Store with Bricks', link: '/guide/customization-and-themes/customize-store-with-bricks' },
+            { text: 'Advanced Customization with CSS Variables', link: '/guide/customization-and-themes/advanced-customization-using-css' },
             { text: 'Translating FluentCart', link: '/guide/customization-and-themes/translating-fluentcart' },
             { text: 'FluentCart Shortcodes', link: '/guide/customization-and-themes/fluentcart-shortcode' }
           ]
