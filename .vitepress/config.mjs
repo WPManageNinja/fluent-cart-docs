@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { joinURL, withoutTrailingSlash } from 'ufo'
-import { zoomablePlugin } from './theme/plugin-zoomable.ts'
+// import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
 
 export default defineConfig({
   title: 'FluentCart Documentation',
@@ -141,9 +141,8 @@ export default defineConfig({
   },
   
   markdown: {
-    lineNumbers: true,
     config: (md) => {
-      md.use(zoomablePlugin)
+      // md.use(zoomablePlugin) // Disabled - ZoomableImage component causing frontend rendering issues
       // Open all links (internal and external) in a new tab
       const defaultLinkOpenRenderer = md.renderer.rules.link_open || ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options))
       md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
@@ -163,7 +162,7 @@ export default defineConfig({
         }
         return defaultLinkOpenRenderer(tokens, idx, options, env, self)
       }
-    },
+    }
   },
   vite: {
     publicDir: 'guide/public',

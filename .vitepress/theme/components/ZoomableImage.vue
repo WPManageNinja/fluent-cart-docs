@@ -1,180 +1,137 @@
 <template>
-  <div ref="wrapperRef" class="image-wrapper">
-    <div
-      class="image-container"
-      :class="{ clicked: isZoomed }"
-      @click.stop="toggleZoom"
-    >
+  <div class="image-wrapper">
+    <div class="image-container" :class="{ clicked: isZoomed }" @click.stop="toggleZoom">
       <div class="image-padding-wrapper">
-        <img ref="imgRef" :src="src" :alt="alt" :key="src" loading="lazy" />
+        <slot></slot>
       </div>
     </div>
     <div v-if="isZoomed" class="overlay" @click.stop="toggleZoom"></div>
   </div>
 </template>
 
-<script setup>
-import { ref, onMounted, onBeforeUnmount, nextTick, watch } from "vue";
-import { useRoute, inBrowser } from "vitepress";
-
-const props = defineProps({
-  src: {
-    type: String,
-    required: true,
+<script>
+export default {
+  name: 'ZoomableImage',
+  props: {
+    src: String,
+    alt: String
   },
-  alt: {
-    type: String,
-    default: "",
-  },
-});
-
-// Only use router on client side
-const route = inBrowser ? useRoute() : null;
-
-const wrapperRef = ref(null);
-const imgRef = ref(null);
-const isZoomed = ref(false);
-const justOpened = ref(false);
-const listenersAttached = ref(false);
-
-const toggleZoom = (e) => {
-  e?.stopPropagation();
-
-  if (isZoomed.value) {
-    closeZoom();
-  } else {
-    openZoom();
-  }
-};
-
-const openZoom = () => {
-  isZoomed.value = true;
-  justOpened.value = true;
-
-  nextTick(() => {
-    centerImageInViewport();
-    setTimeout(() => {
-      justOpened.value = false;
-    }, 200);
-  });
-};
-
-const closeZoom = () => {
-  isZoomed.value = false;
-  justOpened.value = false;
-
-  if (imgRef.value) {
-    imgRef.value.style.transform = "";
-  }
-};
-
-const centerImageInViewport = () => {
-  if (!imgRef.value) return;
-
-  const imgRect = imgRef.value.getBoundingClientRect();
-  const viewportHeight = window.innerHeight;
-  const viewportWidth = window.innerWidth;
-
-  const padding = 20;
-  const targetWidth = viewportWidth - padding;
-  const targetHeight = viewportHeight - padding;
-
-  const currentWidth = imgRect.width;
-  const currentHeight = imgRect.height;
-
-  const scaleX = targetWidth / currentWidth;
-  const scaleY = targetHeight / currentHeight;
-  const scaleFactor = Math.min(scaleX, scaleY);
-
-  const viewportCenterY = viewportHeight / 2;
-  const viewportCenterX = viewportWidth / 2;
-
-  const translateY = viewportCenterY - (imgRect.top + imgRect.height / 2);
-  const translateX = viewportCenterX - (imgRect.left + imgRect.width / 2);
-
-  imgRef.value.style.transform = `scale(${scaleFactor}) translate(${translateX / scaleFactor}px, ${translateY / scaleFactor}px)`;
-};
-
-const handleScroll = () => {
-  if (isZoomed.value && !justOpened.value) {
-    closeZoom();
-  }
-};
-
-const handleClickOutside = (e) => {
-  if (
-    isZoomed.value &&
-    wrapperRef.value &&
-    !wrapperRef.value.contains(e.target)
-  ) {
-    closeZoom();
-  }
-};
-
-const handleKeydown = (e) => {
-  if (e.key === "Escape" && isZoomed.value) {
-    closeZoom();
-  }
-};
-
-const handleResize = () => {
-  if (isZoomed.value) {
-    centerImageInViewport();
-  }
-};
-
-const attachEventListeners = () => {
-  if (listenersAttached.value) return;
-
-  window.addEventListener("scroll", handleScroll, { passive: true });
-  window.addEventListener("resize", handleResize, { passive: true });
-  window.addEventListener("keydown", handleKeydown);
-  document.addEventListener("click", handleClickOutside);
-
-  listenersAttached.value = true;
-};
-
-const detachEventListeners = () => {
-  if (!listenersAttached.value) return;
-
-  window.removeEventListener("scroll", handleScroll);
-  window.removeEventListener("resize", handleResize);
-  window.removeEventListener("keydown", handleKeydown);
-  document.removeEventListener("click", handleClickOutside);
-
-  listenersAttached.value = false;
-};
-
-const cleanup = () => {
-  closeZoom();
-  detachEventListeners();
-};
-
-// Watch for route changes and cleanup (only on client side)
-if (route) {
-  watch(
-    () => route.path,
-    () => {
-      cleanup();
+  data() {
+    return {
+      isZoomed: false,
+      justOpened: false
     }
-  );
+  },
+  methods: {
+    toggleZoom(e) {
+      e.stopPropagation();
+      
+      if (this.isZoomed) {
+        this.closeZoom();
+      } else {
+        this.openZoom();
+      }
+    },
+    openZoom() {
+      this.isZoomed = true;
+      this.justOpened = true;
+      
+      this.$nextTick(() => {
+        this.centerImageInViewport();
+        // Prevent scroll-close for a short time after opening to avoid layout-triggered closes
+        setTimeout(() => {
+          this.justOpened = false;
+        }, 200);
+      });
+    },
+    closeZoom() {
+      this.isZoomed = false;
+      this.justOpened = false;
+      
+      // Reset transform when closing
+      const img = this.$el.querySelector('img');
+      if (img) {
+        img.style.transform = '';
+      }
+    },
+    centerImageInViewport() {
+      const img = this.$el.querySelector('img');
+      if (!img) return;
+      
+      const imgRect = img.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const viewportWidth = window.innerWidth;
+      
+      // Calculate scale to make image fill most of the screen
+      const padding = 20; // Smaller padding for more screen space
+      const targetWidth = viewportWidth - padding;
+      const targetHeight = viewportHeight - padding;
+      
+      // Use CURRENT rendered image dimensions (not natural dimensions)
+      const currentWidth = imgRect.width;
+      const currentHeight = imgRect.height;
+      
+      // Calculate scale based on current rendered size
+      const scaleX = targetWidth / currentWidth;
+      const scaleY = targetHeight / currentHeight;
+      
+      // Use the smaller scale to ensure it fits
+      const scaleFactor = Math.min(scaleX, scaleY);
+      
+      // Calculate the center of the viewport
+      const viewportCenterY = viewportHeight / 2;
+      const viewportCenterX = viewportWidth / 2;
+      
+      // Calculate the offset needed to center the scaled image in viewport
+      const translateY = viewportCenterY - (imgRect.top + imgRect.height / 2);
+      const translateX = viewportCenterX - (imgRect.left + imgRect.width / 2);
+      
+      // Apply transform with scale and translate
+      img.style.transform = `scale(${scaleFactor}) translate(${translateX / scaleFactor}px, ${translateY / scaleFactor}px)`;
+    },
+    handleScroll() {
+      // Don't close if the image just opened (prevents layout-triggered scroll from closing)
+      if (this.isZoomed && !this.justOpened) {
+        this.closeZoom();
+      }
+    },
+    handleClickOutside(e) {
+      if (this.isZoomed && !this.$el.contains(e.target)) {
+        this.closeZoom();
+      }
+    },
+    handleKeydown(e) {
+      if (e.key === 'Escape' && this.isZoomed) {
+        this.closeZoom();
+      }
+    },
+    handleResize() {
+      if (this.isZoomed) {
+        this.centerImageInViewport();
+      }
+    }
+  },
+  mounted() {
+    // Add zoom-in cursor to the image
+    const img = this.$el.querySelector('img');
+    if (img) {
+      img.style.cursor = 'zoom-in';
+      img.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+      img.style.transformOrigin = 'center center';
+    }
+    
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleResize);
+    window.addEventListener('keydown', this.handleKeydown);
+    document.addEventListener('click', this.handleClickOutside);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('keydown', this.handleKeydown);
+    document.removeEventListener('click', this.handleClickOutside);
+  }
 }
-
-onMounted(() => {
-  nextTick(() => {
-    if (imgRef.value) {
-      imgRef.value.style.cursor = "zoom-in";
-      imgRef.value.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
-      imgRef.value.style.transformOrigin = "center center";
-    }
-
-    attachEventListeners();
-  });
-});
-
-onBeforeUnmount(() => {
-  cleanup();
-});
 </script>
 
 <style>
@@ -196,9 +153,7 @@ onBeforeUnmount(() => {
 
 .image-container img {
   height: auto;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: block;
   margin: 0 auto;
   cursor: zoom-in;
