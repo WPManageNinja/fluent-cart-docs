@@ -39,5 +39,20 @@ The Advanced Filter enables you to combine various properties to create precise 
 1.  After setting your desired filter conditions, click the **"Apply"** button to view the filtered list of customers.
 2.  To clear all applied filters and view the complete customer list again, click the **"Reset"** button.
 
-Using the Advanced Filter effectively allows you to gain deeper insights into your customer base and perform more targeted customer management.
+## Saving Custom Filter Views (New Feature!)
+
+If you frequently use the same advanced filters, you can save them as quick-access tabs.
+
+1. **Save your filter:** After setting your desired conditions, click **"+ Save as view"** next to the **Apply** and **Reset** buttons.
+
+![Screenshot of Advanced Filter Button](/images/store-management/using-advanced-filter/filter-1.webp)
+
+2. **Name your view:** Give it a descriptive name (e.g., **"High LTV Customers"** or **"Recent Hoodie Buyers"**) and, optionally, a short description.
+3. **Access anytime:** Open the **More views** dropdown beside your default tabs to quickly reuse your saved filters.
+
+![Screenshot of Advanced Filter Button](/images/store-management/using-advanced-filter/filter-2.webp)
+
+4. **Delete a view:** In the **More views** dropdown, click the trash icon next to a view name you no longer need.
+
+Using the Advanced Filter effectively, and saving your most-used views, helps you gain deeper customer insights and manage customers faster.
 
