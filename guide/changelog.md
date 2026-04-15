@@ -1,6 +1,35 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.18
+*Released on April 15, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Filter hooks to manage specific emails
+• Adds Permission checks for the "Save as Views" filter
+```
+
+```markdown [🚀 Improvements]
+• Improves PDF download functionality on the receipt page
+• Improves Turnstile CAPTCHA handling
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Loading animation issue across all pages
+• Fixes License expiration handling issue
+• Fixes Mollie subscription issues
+• Fixes Paddle email notification compliance issue
+• Fixes Deprecated timezone alias handling in OrderParser
+• Fixes Issue where empty SKU string instead of null
+• Fixes Modal checkout visibility toggle issue
+• Fixes Typos and other issues in payment gateway settings
+• Fixes PDF template preview issue
+```
+
+:::::
+
 ## FluentCart v1.3.17
 *Released on April 07, 2026*
 
