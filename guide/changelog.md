@@ -1,6 +1,25 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.19
+*Released on April 20, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds New UI for variation editing
+• Adds Packaging support and weight attributes for products
+• Adds Search support in product list via simple filters
+• Adds fluent_cart/product_url_with_front filter for post types register
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Pricing format in price input fields
+• Fixes Saved view conflicts with filters
+```
+
+:::::
+
 ## FluentCart v1.3.18
 *Released on April 15, 2026*
 
