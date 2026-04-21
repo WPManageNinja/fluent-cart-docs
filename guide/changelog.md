@@ -1,6 +1,22 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.20
+*Released on April 21, 2026*
+
+::::: code-group
+
+```markdown [🐞 Bug fixes]
+• Fixes Products SKU index naming consistency issue
+• Fixes Allow multiple variations without SKU issue
+• Fixes Bundle product title with variation title visibility in checkout
+• Fixes Block editor CSS loading inside the editor iframe issue
+• Fixes Related Products block inspector layout and image overflow issues
+• Fixes Invoice and Packing sub-menus issue
+```
+
+:::::
+
 ## FluentCart v1.3.19
 *Released on April 20, 2026*
 
