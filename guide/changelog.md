@@ -6,6 +6,10 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 
 ::::: code-group
 
+```markdown [✨ Newly Added]
+• Adds EDD migrator
+```
+
 ```markdown [🐞 Bug fixes]
 • Fixes Products SKU index naming consistency issue
 • Fixes Allow multiple variations without SKU issue
