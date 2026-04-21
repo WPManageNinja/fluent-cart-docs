@@ -137,7 +137,7 @@ The configuration screen also surfaces the WP-CLI commands for each stage. For s
 
 Once the progress bar reaches **100%**, you'll see a green checkmark and a **Migration Completed** screen with a final breakdown of how many items were copied across each category.
 
-![Migration completion screen with stats, backward compatibility notice, and next steps](/guide/public/images/migration/edd-migrator/05-completion.webp)
+![Migration completion screen with stats, backward compatibility notice, and next steps](/guide/public/images/migration/edd-migrator/06-backward-compat.webp)
 
 The completion screen also includes an important notice — **keep the Migrator plugin active** even after the migration finishes. It provides a backward compatibility layer for existing customers. See [Backward Compatibility](/guide/migration/edd/backward-compatibility) for the full explanation.
 

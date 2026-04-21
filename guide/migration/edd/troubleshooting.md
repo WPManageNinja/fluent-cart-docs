@@ -136,11 +136,11 @@ Reset drops FluentCart tables and deletes migrated post data. Only ever run it o
 
 ### The reset button in the wizard
 
-On the migration completion screen, when Developer Mode is active, a **Reset Migration** link appears next to the **View FluentCart Dashboard** button:
+When Developer Mode is active and the wizard detects a previous migration on the current site, a **Reset Migration** link appears on the Pre-Migration Overview screen inside the "Previous migration detected" notice:
 
-![Completion screen showing the Reset Migration link next to the dashboard button](/guide/public/images/migration/edd-migrator/05-completion.webp)
+![Pre-Migration Overview with the Previous migration detected notice and Reset Migration link](/guide/public/images/migration/edd-migrator/07-reset-button.webp)
 
-Clicking it asks for confirmation, then runs the reset. On production (Developer Mode disabled), this link is hidden entirely.
+Clicking the link asks for confirmation, then runs the reset. On production (Developer Mode disabled), this link is hidden entirely — the notice still appears to confirm the previous run completed, but without the reset option.
 
 ### What reset destroys
 
