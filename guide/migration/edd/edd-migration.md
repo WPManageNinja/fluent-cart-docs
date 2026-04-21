@@ -39,13 +39,12 @@ For a deeper rehearsal before touching production, run the migration on staging 
 
 Now that you're ready, install the migration tool. Think of it as a secure, temporary bridge between your existing EDD setup and your new FluentCart store.
 
-1. Log in to your account on the **FluentCart website** and download the **FluentCart Migrator** addon `.zip` file.
+1. Go to the [**FluentCart website**](https://fluentcart.com/fluentcart-addons/) and download the **FluentCart Migrator** addon `.zip` file.
 2. Open your **WordPress admin dashboard** and go to **Plugins → Add New**.
 3. Click the **Upload Plugin** button at the top.
 4. Click **Choose File**, select the `.zip` file you just downloaded, then click **Install Now**.
 5. Once installation finishes, click **Activate Plugin**.
 
----
 
 ## Step 2: Open the Migration Dashboard
 
@@ -58,7 +57,6 @@ This launches the **Migration Wizard** — a clean, step-by-step interface that 
 
 ![FluentCart Migrator landing screen with the source platform picker](/guide/public/images/migration/edd-migrator/01-source-select.webp)
 
----
 
 ## Step 3: Select Your Source
 
@@ -68,7 +66,6 @@ Click the card to confirm: *yes, this is where my data lives.*
 
 WooCommerce and SureCart are visible as upcoming sources but are not yet active. Migrators for those platforms are on the roadmap.
 
----
 
 ## Step 4: Compatibility Check
 
@@ -80,7 +77,6 @@ Once you see the **green confirmation box**, click **Continue**.
 
 ![Compatibility check screen showing EDD 3.x detected with version number](/guide/public/images/migration/edd-migrator/02-compatibility.webp)
 
----
 
 ## Step 5: Pre-Migration Overview
 
@@ -101,7 +97,6 @@ Compare these numbers against what you know is in your EDD store. If they look r
 
 ![Pre-migration overview showing entity counts, gateways, and order statuses](/guide/public/images/migration/edd-migrator/03-pre-overview.webp)
 
----
 
 ## Step 6: Configure and Start the Migration
 
@@ -137,7 +132,6 @@ No need to panic. The Migrator tracks its progress as it goes. If your browser c
 The configuration screen also surfaces the WP-CLI commands for each stage. For stores with thousands of orders, switching to the CLI is significantly faster and avoids browser timeouts entirely. See the [WP-CLI Reference](/guide/migration/edd/edd-cli) for the full command surface.
 :::
 
----
 
 ## Step 7: Migration Complete — Verify Before Going Live
 
@@ -177,8 +171,6 @@ For the best peace of mind, find one example of each scenario in your store and 
 
 For a complete map of what transfers and what doesn't (categories, upgrade paths, payment gateway credentials, custom meta), see [What Gets Migrated](/guide/migration/edd/what-is-migrated).
 
----
-
 ## A Few Things Still Need Your Attention
 
 The Migrator handles your data automatically, but a small number of items need quick manual setup before you're fully live.
@@ -204,8 +196,6 @@ If you're using EDD shortcodes or custom purchase buttons anywhere on your site,
 **5. Review Your Tax Settings**
 Your EDD tax rates transfer over automatically, but verify the tax calculation mode in **FluentCart → Settings** matches how you were running taxes in EDD.
 
----
-
 ## Keep the Migrator Plugin Active
 
 After your migration is complete, **don't deactivate the FluentCart Migrator plugin** during your transition period. It provides a silent backward compatibility layer that keeps existing customers working seamlessly:
@@ -221,30 +211,6 @@ For the full explanation of why this layer exists and when it's safe to deactiva
 Even after everything is verified and running, don't delete your EDD database tables in a rush. The Migrator never modifies them — they're just sitting there, taking up very little space, and they're your fallback if you ever need to reference original records. Leave them until you're fully confident, then run `wp fluent_cart_migrator edd_cleanup` when you're ready.
 :::
 
----
-
-## Your Migration Checklist
-
-Use this as your final go-live checklist before opening the doors on your FluentCart store:
-
-- [ ] Database backup taken
-- [ ] FluentCart (and FluentCart Pro if using licensing) installed and active
-- [ ] FluentCart Migrator plugin installed and active
-- [ ] Migration wizard completed — all stages checked
-- [ ] Products verified — titles, prices, variations, bundles, subscription intervals
-- [ ] Orders spot-checked — amounts, line items, statuses, transaction IDs
-- [ ] Subscriptions verified — statuses, billing intervals, renewal dates
-- [ ] Licenses verified *(if applicable)* — keys, limits, site URLs, `--verify_license` clean
-- [ ] Coupons verified — discount types, limits, expiration dates
-- [ ] Customers spot-checked — names, emails, order history
-- [ ] Payment gateways reconnected with the same Stripe/PayPal accounts
-- [ ] Downloadable files confirmed and attached to products
-- [ ] Email notification templates reviewed and customized
-- [ ] Purchase buttons and checkout links updated across the site
-- [ ] Easy Digital Downloads deactivated *(Migrator plugin stays active)*
-- [ ] You're live on FluentCart! 🎉
-
----
 
 ## Need help?
 
