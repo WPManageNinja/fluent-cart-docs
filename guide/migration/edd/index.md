@@ -7,11 +7,10 @@ description: Move your Easy Digital Downloads store into FluentCart with full da
 
 The FluentCart Migrator handles end-to-end migration from **Easy Digital Downloads 3.x** into FluentCart. Products, customers, orders across every meaningful status, recurring subscriptions, software licenses with all their site activations, coupons, and tax configuration transfer in a single coordinated pipeline.
 
-The same engine is reachable three ways — pick the surface that fits your store size and comfort level:
+The same engine is reachable two ways — pick the surface that fits your store size and comfort level:
 
 - **Admin Wizard** — six-step Vue interface inside WordPress admin. Best for small to medium stores and non-technical operators.
 - **WP-CLI** — single namespaced command with flags for each stage. Faster for large stores, no browser timeouts.
-- **REST API** — same endpoints the wizard uses, available for custom automation.
 
 ::: tip Your EDD store stays untouched
 The Migrator only **reads** from EDD. Your existing store, its settings, and every record stay exactly as they are. Run both side-by-side until you're ready to switch.

@@ -40,7 +40,6 @@ With `FLUENT_CART_DEV_MODE` set to `true`, the following capabilities become ava
 | `--reset` flag on the main migration command | `wp fluent_cart_migrator migrate_from_edd --reset` |
 | Standalone reset command | `wp fluent_cart_migrator reset` |
 | Schema-refresh reset | `wp fluent_cart_migrator migrate_fresh` |
-| REST reset endpoint | `POST /fct-migrator/v1/reset` |
 | Reset button in the admin wizard | Visible at the completion screen |
 
 Without Developer Mode, every one of those paths returns blocked. The admin wizard checks the same flag and hides the reset button entirely. This is the behavior you want on production.
