@@ -60,38 +60,107 @@ This section helps you organize and tag your bundle for better storefront filter
 
 ### 5. Pricing & Variations
 
-Set the price for your bundle using one of two methods:
+A bundle is only as compelling as the deal it represents — and this section is where you make that deal concrete. Whether you're selling a single all-in-one package at one fixed price, or offering multiple tiers of bundles (a Starter Pack, a Professional Pack, and an Ultimate Pack, for instance), FluentCart gives you the same powerful pricing tools here as you'd have on any individual product.
 
-### Simple (No Variations)
+Open the **Pricing** panel and look at the dropdown in the top right corner:
 
-Choose this if the bundle is a single package with one price. You can set the **Price**, an optional **Compare at price** to show savings, and toggle **Manage profit/cost** for internal tracking.
+- **Simple** — One bundle, one price. The right choice when your bundle is a single, fixed package with no variations.
+- **Simple Variations** — Multiple versions of the bundle, each with its own price, image, and stock level.
+
+---
+
+#### Simple Pricing (One Bundle, One Price)
+
+Choose **Simple** when your bundle is a single, non-varying package — everything in the box for one price.
+
+**Price** *(Required)*
+The amount customers pay for the complete bundle. This is what shows on your store page, in the cart, and at checkout.
+
+**Additional display prices** *(Collapsible section)*
+Click the chevron to expand:
+
+- **Compare at price** *(Optional)* — Enter the combined individual retail price of all bundled items here. FluentCart will display it with a strikethrough next to your bundle price, immediately showing customers how much they're saving by buying the bundle. This single field can be one of your most powerful conversion tools on a bundle page.
+
+- **Calculate profit/cost** *(Toggle — Optional)* — Toggle on to track the total cost of goods in this bundle against your selling price. Three fields appear:
+  - **Cost per item** — The combined cost of all items in the bundle
+  - **Profit** — Auto-calculated (Price minus Cost)
+  - **Margin** — Your profit as a percentage, also auto-calculated
+
+> **💡 Pro Tip:** Use **Compare at price** to tell the story of the bundle's value instantly. If your bundle includes three products worth `$45`, `$30`, and `$25` individually, set the Compare at price to `$100` and your bundle price to `$69` — customers immediately understand the deal without reading a word.
+
+**SKU** *(Collapsible section)*
+Assign a unique tracking code to this bundle (e.g., `BUNDLE-STARTER-01`). Click **Generate SKU** to auto-generate one. Accepts up to 30 characters.
+
+**Direct Checkout** *(Link)*
+Generates a unique URL that takes customers straight to checkout with this bundle pre-loaded. Great for promotional landing pages, email campaigns, or limited-time offers where you want to reduce every step between interest and purchase.
+
+![Screenshot of Simple Price for Bundle](/guide/public/images/product-types-creation/product-bundles/simple-price.gif)
+
+---
+
+#### Simple Variations (Multiple Bundle Tiers)
+
+When you offer different levels of bundling — for example, a Starter Pack (2 items), a Professional Pack (5 items), and an Ultimate Pack (everything) — **Simple Variations** lets you price and manage each tier independently.
+
+Select **Simple Variations** from the pricing dropdown to activate this mode.
+
+**The Variations Table**
+
+Each row in the table represents one bundle tier:
+
+- **⠿ (Drag handle)** — Drag to reorder. Put your best-value or most popular bundle tier at the top.
+- **Image** — A thumbnail that represents this specific bundle tier. Click to upload or swap — use a photo that shows exactly what's in the box.
+- **Title** — The name of this tier (e.g., `Starter Pack`, `Professional Pack`, `Ultimate Bundle`). Editable directly in the table.
+- **Price** — The selling price for this bundle tier. Editable inline.
+- **Compare at price** — The combined individual retail price, shown with a strikethrough. Editable inline.
+- **Action** — A **pencil icon** to open the full tier editor, and a **three-dot icon** for quick options.
+
+Click **+ Add more** at the bottom to add a new bundle tier. Fill in the title and price inline, then use the pencil icon for the rest.
+
+The **three-dot icon** gives you:
+- **Duplicate** — Copy this bundle tier as a starting point for a new one
+- **Direct Checkout** — Generate a buy-now link that bypasses the product page entirely, sending customers straight to checkout for this specific tier
+- **Delete** — Remove this bundle tier permanently
+- **Skip inventory** — Exclude this tier from stock tracking if you don't need to limit how many bundles you sell
+
+> **📝 Note:** Quick edits to **Title**, **Price**, and **Compare at price** can be made directly in the table rows. To set up images, inventory tracking, and SKUs per tier — click the pencil icon to open the full editor.
+
+**Editing a Bundle Tier (Pencil Icon)**
+
+Click the **pencil icon** on any tier to open the variation editor — a full-screen panel with a variation list on the left and the configuration area on the right.
+
+Here you can set:
+
+**Variation image**
+Upload an image specific to this bundle tier — showing the actual items included helps customers decide which tier is right for them.
+
+**Variation Title**
+The name of this specific tier (e.g., `Starter Pack`, `Agency Bundle`).
+
+**Price** *(Required)*
+The selling price for this specific bundle tier.
+
+**Additional display prices**
+- **Compare at price** *(Optional)* — The combined retail value of everything in this tier, shown with a strikethrough.
+- **Calculate profit/cost** *(Toggle — Optional)* — Track **Cost per item**, **Profit**, and **Margin** for this specific bundle tier.
+
+**Inventory**
+Toggle **Inventory** on if you want to limit how many of this bundle tier can be sold:
+- **Total Stock** — Total units available for this tier. Click the edit icon to adjust.
+- **Available** — Units currently available (read-only, auto-calculated)
+- **On Hold** — Units reserved in pending orders (read-only)
+- **Delivered** — Units fulfilled (read-only)
+
+**SKU**
+Expand the collapsible **SKU** section to assign a unique tracking code to this bundle tier (e.g., `BUNDLE-PRO-01`). Click **Generate SKU** to auto-generate one.
+
+When you're done, click **Update** to save all your changes for this tier.
+
+![Screenshot of Simple Variation for Bundle](/guide/public/images/product-types-creation/product-bundles/simple-variation.gif)
 
 ::: info
-To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing) guide.
+For the complete field-by-field reference on every pricing option — including subscription setup, installment plans, trial days, setup fees, and the Add Package walkthrough — see the [Configuring Product Pricing & Variations](/guide/product-types-creation/configuring-product-pricing) guide.
 :::
-
-![Screenshot of Simple Price](/guide/public/images/product-types-creation/product-bundles/simple-price.gif)
-
-#### Simple Variations (For Products with Different Versions)
-
-Choose this option when your product comes in different versions, such as t-shirts in various sizes and colors. This will allow you to set a different price, image, and stock level for each variation.
-
-This will display a table where each row is a single variation.
-
-* **Image:** Upload a specific image for each variation (e.g., a photo of the red shirt).
-* **Title:** Name the variation clearly.
-* **Price:** Set the specific price for this individual variation.
-* **Compare at price:** (Optional) Set a sale price for this specific variation.
-* **Action:** This column contains icons to manage each variation row.
-    * **Edit Icon (Pencil):** Click this to edit the pricing variation's details.    
-    * **More Options (Three Dots):** Click this to open a menu with more options:
-        * **Skip inventory:** Check this box if you do not want to track stock for this specific variation.
-        * **Duplicate:** Click this to create an exact copy of this variation row.
-        * **Direct Checkout:** Get a direct link to purchase this specific variation, bypassing the main product page.
-
-![Screenshot of Simple Variation](/guide/public/images/product-types-creation/product-bundles/simple-variation.gif)
-
-To add another version of your product, click the **+ Add more** button to create a new row in the table.
 
 
 

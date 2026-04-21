@@ -61,19 +61,64 @@ Categorize and type your product for better organization.
 
 ### 5. Pricing & Variations
 
-This section is crucial for defining the different license tiers and their pricing.
+Licensed products live and breathe through their tiers — and this is the section where you bring that structure to life. Each license tier you offer (Single Site, 5 Sites, 50 Sites, Lifetime, Yearly) is defined as its own **variation**, complete with its own price, payment model, and optional setup fee. Think of the Variations table as your tier menu: it's what customers see and choose from when they land on your product page.
 
-* **Type Selection:** When [configuring product variations](/guide/product-types-creation/creating-digital-products.html#4-pricing-variatio), ensure **"Digital"** and/or **"Subscription"** (if it's a recurring license) is selected as the product type within the pricing modal for your variants.
-* **Pricing Table:** You'll define each license tier as a variation (e.g., "Single Site Yearly License", "50 Sites Lifetime License").
-    * **Image:** You can upload a specific image for each license variant.
-    * **Title:** The name of the license tier.
-    * **Price:** The selling price for this specific license variant.
-    * **Compare at price:** (Optional) A higher, struck-through price.
-    * **Payment Term:**
-        * **"One Time"** for lifetime licenses.
-        * **"Yearly"**, **"Monthly"**, **"Weekly"**, or **"Daily"** for subscription-based licenses.
-    * **Setup Fee:** (Optional) An initial fee for subscriptions.
-    * **Calculate Profit/Cost:** Enter the **"Cost per item"** for each license variant to track profitability.
+Select **Simple Variations** from the pricing dropdown in the top right of the **Pricing** panel. This is the right mode for virtually all licensed products, since each tier needs independent pricing and billing.
+
+**The Variations Table**
+
+Once in Simple Variations mode, you'll see a clean table where each row is one license tier. The columns give you a quick overview at a glance:
+
+- **⠿ (Drag handle)** — Drag to reorder tiers. The order here is the order customers see — put your most popular or recommended plan first.
+- **Image** — A thumbnail specific to this tier. Click to upload or swap.
+- **Title** — The name of this license tier (e.g., `Single Site Yearly`, `5 Sites Lifetime`). Editable directly in the table.
+- **Price** — The selling price for this tier. Editable inline.
+- **Compare at price** — The "was" price shown with a strikethrough for this tier. Also editable inline.
+- **Action** — A **pencil icon** to open the full tier editor, and a **three-dot icon** for quick actions (Duplicate, Direct Checkout, Delete).
+
+Click **+ Add more** at the bottom to add a new tier. Fill in the title and price inline, then click the pencil icon to configure the billing details.
+
+> **📝 Note:** You can make quick edits to **Title**, **Price**, and **Compare at price** directly in the table. For payment term, subscription settings, setup fee, and SKU — you'll need to open the full editor with the pencil icon.
+
+**Editing a License Tier (Pencil Icon)**
+
+Click the **pencil icon** on any tier row to open the full variation editor. This is where you define exactly how each license tier is paid for.
+
+**Variation image**
+Upload a visual specific to this tier — helpful if your tiers have distinct branding, like a "Pro" badge or different logo treatment.
+
+**Variation Title**
+The customer-facing name of this tier (e.g., `Single Site Annual License`, `Agency – 50 Sites`, `Lifetime Access`).
+
+**Price** *(Required)*
+The selling price for this specific tier.
+
+**Compare at price** *(Optional)*
+A higher original price shown with a strikethrough — great for communicating annual savings when customers compare your monthly and yearly plans.
+
+**Payment Term — the heart of license pricing**
+This is where you tell FluentCart *how* this tier is paid for. Your options are:
+
+- **One Time** — For lifetime licenses. The customer pays once and owns access permanently. No recurring billing, no renewal reminders.
+- **Subscription** *(toggle ON)* — For renewable licenses. When you switch to subscription mode, the full recurring billing setup becomes available:
+
+  - **Interval** *(Required)* — How frequently the license renews: **Daily**, **Weekly**, **Monthly**, **Quarterly**, **Half Yearly**, or **Yearly**. A "Yearly" license renews once per year; a "Monthly" license renews each month.
+  - **Trial Days** *(Optional)* — Free days before the first charge begins. Set to `0` for no trial. Even a 7-day trial can meaningfully lift conversion rates for higher-priced tiers.
+  - **Enable installment payment** *(Optional)* — Limit the subscription to a fixed number of payments instead of renewing indefinitely:
+    - **Installment Count** — Total billing cycles before the license ends automatically
+    - **Total Price** — Auto-calculated (Price × Count)
+  - **Setup fee** *(Toggle — Optional)* — A one-time charge at the very start of the subscription, in addition to the recurring price:
+    - **Setup fee label** — What customers see at checkout (e.g., `Activation Fee`, `Onboarding Fee`)
+    - **Setup fee amount** — The one-time amount
+
+**Calculate profit/cost** *(Toggle — Optional)*
+Toggle on to enter the **Cost per item** for this tier and track your **Profit** and **Margin** internally. Useful when you factor in support, hosting, or delivery costs per license.
+
+> **💡 Pro Tip:** For products with both a "Monthly" and a "Yearly" tier, set up two separate variations — each with its own Interval. Customers can then compare both options side by side on your product page. Set the yearly tier as your default variant and watch the upgrade rate improve.
+
+::: info
+For the complete, field-by-field reference on every pricing option — including all subscription interval choices, installment configuration, trial days, and setup fees — see the [Configuring Product Pricing & Variations](/guide/product-types-creation/configuring-product-pricing) guide.
+:::
 
 
 ### 6. Downloadable Asset(s)
