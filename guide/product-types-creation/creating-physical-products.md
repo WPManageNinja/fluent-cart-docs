@@ -84,50 +84,133 @@ By using these taxonomies, you ensure customers can easily find and filter your 
 
 ### 4. Pricing & Variations
 
-This section is where you will set the price for your product. FluentCart offers two methods, depending on whether the product has different versions (like size or color) or is a single item.
+This is where your physical product gets its price tag — and FluentCart gives you the control to set it up exactly how your inventory works. Selling one style at a fixed rate? Or a hoodie that comes in six colorways, each with its own weight and box size? Either way, this section has you covered.
 
-First, use the dropdown menu at the top right of the pricing section to select either **Simple** or **Simple Variations**.
+Open the **Pricing** panel and look at the dropdown in the top right corner — that's where everything starts:
 
-#### Simple (For Products with No Variations)
+- **Simple** — One version, one price. The right choice for any product with no variations.
+- **Simple Variations** — Multiple versions of the same product, each with its own price, image, SKU, and shipping details.
 
-Choose this option when your product is a single item with only one price and configuration. For example, a book or a standard coffee mug.
+Pick the method that matches your product structure, and the fields below will adapt accordingly.
 
-You will see the following fields:
+![Screenshot of the Pricing section showing the Simple/Simple Variations dropdown](/images/product-types-creation/product-pricing/product-variation-1.webp)
 
-* **Select Payment Term:** Choose how the customer will be charged. For standard, single purchases, select One Time.
-* **Price:** (Required) The main selling price for the product.
-* **Compare at price:** (Optional) An original or higher price that will be shown with a strikethrough on your storefront to indicate a sale or discount.
-* **Calculate profit/cost:** Toggle this on to enter the base cost of the item. FluentCart will use this to automatically calculate your profit and margin for internal reporting.
-* **SKU:** Enter a Stock Keeping Unit. This is a unique internal code used to identify and track this specific item in your inventory. You can also click the "Generate SKU" link to automatically create a unique identifier.
-* **Fulfillment Type:** (Required) Select how this product is delivered to the customer. For physical items that require shipping, choose Physical.
+---
 
-![Screenshot of Simple Price](/images/product-types-creation/Creating-Physical-Products/simple-pricing-1.webp)
+#### Simple Pricing
+
+Choose **Simple** when your physical product is a single item — one style, one size, one price. A standard poster, a single-run tote bag, or a fixed-rate boxed kit — this is the right mode.
+
+In the top right of the **Pricing** panel you'll also see a **Subscription** toggle. Leave it off for a standard one-time purchase, or switch it on if you're selling a recurring physical product like a monthly subscription box.
+
+**One-Time Payment**
+
+**Price** *(Required)*
+The amount customers will pay. This appears on your product page, in the cart, and at checkout. Always set this before you publish.
+
+**Additional display prices** *(Collapsible section)*
+Click the chevron to expand and reveal these optional fields:
+
+- **Compare at price** *(Optional)* — Enter a higher "original" price here and FluentCart will display it with a strikethrough next to your actual selling price. Setting **Price** to `$39.00` and **Compare at price** to `$55.00`, for example, gives customers a clear visual that they're saving — a small detail that can meaningfully lift conversions.
+
+- **Calculate profit/cost** *(Toggle — Optional)* — Turn this on to track your internal margins. Three fields appear:
+  - **Cost per item** — What this product actually costs you to source or produce
+  - **Profit** — Auto-calculated (Price minus Cost)
+  - **Margin** — Your profit as a percentage, also auto-calculated
+
+> **💡 Pro Tip:** Cost and profit fields are entirely internal — your customers will never see them. Use them to make sure you're pricing for real profit, not just revenue.
+
+**SKU** *(Collapsible section)*
+Click to expand and enter a unique tracking code for this product (e.g., `SHOE-WHT-42`). You can type your own or click **Generate SKU** to have FluentCart create one automatically. Accepts up to 30 characters.
+
+> **📝 Note:** Assigning SKUs makes inventory tracking, order fulfillment, and reporting significantly easier — especially when you're managing stock across multiple platforms or warehouses.
+
+**Shipping**
+
+Because this is a physical item, this section is critical. Getting it right means accurate carrier rates at checkout.
+
+- **Physical Product** *(Toggle)* — Make sure this is on. It tells FluentCart to apply shipping calculations to this product at checkout. If you're selling a hybrid product that also includes a digital download, you can still leave this on — just upload the digital asset separately.
+- **Package** — Select the pre-configured package this product ships in (the box, mailer, or envelope your carrier will use to calculate delivery rates). If no packages exist yet, click the dropdown and choose the option to add a new one — see [Adding a New Package](/guide/product-types-creation/configuring-product-pricing#adding-a-new-package) in the full pricing guide for a complete step-by-step walkthrough.
+
+---
+
+#### Simple Variations
+
+When your physical product comes in multiple versions — different colors, sizes, materials, or configurations — **Simple Variations** is the right choice. Each variation gets its own price, image, SKU, and shipping details, tracked completely independently so you never mix up stock between versions.
+
+Select **Simple Variations** from the pricing dropdown to activate this mode.
+
+**The Variations Table**
+
+You'll see a clean table where each row represents one version of your product:
+
+- **⠿ (Drag handle)** — Click and drag to reorder. The order here is the order customers see on your product page — put your most popular option first.
+- **Image** — A thumbnail for this variation. Click to upload or swap it.
+- **Title** — The variation name (e.g., `Red`, `XL`, `Classic Fit`). Editable directly in the table.
+- **Price** — The selling price for this variation. Editable inline.
+- **Compare at price** — The "was" price, shown with a strikethrough. Also editable inline.
+- **Action** — A **pencil icon** to open the full variation editor, and a **three-dot icon** for quick options.
+
+Click **+ Add more** at the bottom to create a new variation. A blank row appears — fill in the title and price inline, then use the pencil icon to configure the rest.
+
+The **three-dot icon** gives you these quick actions:
+- **Duplicate** — Copy this variation to use as a starting point for a new one
+- **Direct Checkout** — Generate a buy-now link for this specific version
+- **Delete** — Remove this variation permanently
+- **Skip inventory** — Exclude this variation from stock tracking if needed
+
+> **📝 Note:** You can make quick edits to **Title**, **Price**, and **Compare at price** directly in the table rows. For everything else — images, inventory, per-variation shipping — click the pencil icon to open the full editor.
+
+**Editing a Variation**
+
+Click the **pencil icon** on any row to open the full variation editor — a panel with two sides:
+
+- **Left panel** — A scrollable list of all your variations, each showing the product name, status, and total variant count. Click any item to jump to editing it without closing the panel.
+- **Right panel** — The complete configuration area for the currently selected variation, highlighted with a green dot in the left list.
+
+At the bottom: **Discard** (undo unsaved changes to this variation), **Cancel** (close without saving), and **Update** (save all changes).
+
+Here's what you configure on the right:
+
+**Variation image**
+Click the thumbnail to upload a photo specific to this version. Showing customers exactly what color, size, or material they're selecting builds confidence and reduces returns.
+
+**Variation Title**
+The name of this specific version (e.g., `White`, `XL`, `Slim Fit`).
+
+**Price** *(Required)*
+The selling price for this specific variation.
+
+**Additional display prices**
+- **Compare at price** *(Optional)* — A higher "was" price shown with a strikethrough for this variation.
+- **Calculate profit/cost** *(Toggle — Optional)* — Track **Cost per item**, **Profit**, and **Margin** for this variation internally.
+
+**Inventory**
+Toggle **Inventory** on to manage stock directly inside the variation editor — no need to navigate to a separate screen. Four fields appear:
+- **Total Stock** — Total units for this variation. Click the edit icon to adjust.
+- **Available** — Units available for customers to purchase (read-only, auto-calculated)
+- **On Hold** — Units reserved in pending or processing orders (read-only)
+- **Delivered** — Units fulfilled and shipped (read-only)
+
+> **💡 Pro Tip:** Per-variation inventory means you'll never oversell the Red hoodie just because you still have plenty of Teal ones. Every version stays tracked independently.
+
+**SKU**
+Expand the collapsible **SKU** section to assign a unique tracking code to this variation (e.g., `HOO-RED-M`). Click **Generate SKU** for an auto-generated code. Accepts up to 30 characters.
+
+**Shipping**
+Because different sizes and colorways often have different weights and dimensions, each variation gets its own shipping configuration:
+
+- **Physical Product** *(Toggle)* — On by default for physical products.
+- **Package** — Select the box or mailer for this specific variation. Different sizes can ship in different packages, so a small item and a large item don't have to share the same box.
+- **Product weight** — Enter the weight for this variation with your preferred unit (**kg** or **lb**). Per-variation weights keep your carrier rates accurate when sizes genuinely differ.
+
+When you're done, click **Update** to save all your changes.
+
+![Screenshot of the variation editor showing the left panel list and right panel configuration](/images/product-types-creation/product-pricing/product-variation-5.webp)
 
 ::: info
-To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing) guide.
+For the complete field-by-field reference — including the full subscription setup for physical subscription boxes, installment plans, trial days, setup fees, and a step-by-step walkthrough of the Add Package modal — see the [Configuring Product Pricing & Variations](/guide/product-types-creation/configuring-product-pricing) guide.
 :::
-
-#### Simple Variations (For Products with Different Versions)
-
-Choose this option when your product comes in different versions, such as t-shirts in various sizes and colors. This allows you to set a different price, image, SKU, and fulfillment type for each specific variation.
-
-This will display a table where each row represents a single variation. You can click **+ Add more** to create a new variation. The main table columns give you a quick overview of the Image, Title, Price, and Compare at price.
-
-#### Managing a Variation (Edit Panel)
-Clicking the **Edit Icon (Pencil)** in the Action column opens a detailed settings sidebar panel for that specific variation. Here you will configure:
-
-* **Title:** (Required) Name the variation clearly (e.g., "Zipper Hoodie - Red").
-* **SKU:** A unique Stock Keeping Unit identifier to track this specific variation in your inventory. You can also click the "Generate SKU" link to automatically create a unique identifier.
-* **Fulfillment Type:** (Required) Select how this specific variation is delivered to the customer (e.g., Physical).
-* **Select Payment Term:** Choose the billing cycle for this variation (e.g., One Time).
-* **Price:** (Required) Set the specific selling price for this individual variation.
-* **Compare at price:** (Optional) Set an original or higher price to indicate a sale for this specific variation.
-* **Calculate profit/cost:** Toggle this on to enter the base cost of this item to track your profit margins.
-* **Image:** Upload a specific image for this variation so customers can see exactly what they are selecting.
-
-![Screenshot of Simple Variation](/images/product-types-creation/Creating-Physical-Products/variation-pricing-2.webp)
-
-To add another version of your product, click the **+ Add more** button to create a new row in the table.
 
 ### 5. Inventory Management
 

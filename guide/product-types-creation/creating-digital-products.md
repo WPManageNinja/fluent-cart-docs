@@ -55,88 +55,177 @@ Categorize and type your digital product for better structured organization.
 
 ### 4. Pricing & Variations
 
-This section is where you will set the price for your digital product. FluentCart provides two main methods: **Simple** (for products with no variations) and **Simple Variations** (for products with different versions).
+Pricing is where your digital product becomes a real offer — and FluentCart gives you the flexibility to sell it exactly the way your business works. A single ebook for a flat fee, a software tool with a free trial period, or a tiered product with a monthly plan and a discounted yearly plan side by side — this section handles all of it.
 
-First, use the dropdown menu at the top right of the pricing section to select the pricing method that fits your product.
+Open the **Pricing** panel and look at the dropdown in the top right corner. That's your first decision:
 
+- **Simple** — One product, one price. The right choice for a single item with no variations.
+- **Simple Variations** — Multiple versions of the same product (e.g., Standard, Pro, Agency), each with its own price and billing structure.
+
+Pick the method that matches your product, and the fields below will adapt.
+
+---
 
 #### Option A: Simple Pricing
 
-Choose this option when your product is a single item that does not have different versions. Within Simple Pricing, you can choose between two payment terms.
+Choose **Simple** when your digital product is a single item — one version, one price. A single ebook, a one-off template pack, a fixed-fee service download — this is the mode for all of them.
+
+Inside the **Pricing** panel you'll notice a **Subscription** toggle in the top right. This is how you switch between the two payment modes:
+
+- **Toggle OFF** → One-time purchase
+- **Toggle ON** → Recurring subscription
 
 **1. One-Time Payment**
 
-Select **One Time** from the "Select Payment Term" dropdown for products that customers purchase with a single payment.
+When the **Subscription** toggle is off, you're setting up a standard single-payment digital product.
 
-* **Price:** Set the required selling price for the product.
-* **Compare at price:** (Optional) Enter a higher original price to show a discount.
-* **Calculate profit/cost:** (Optional) Toggle this on to enter the item's cost for internal profit tracking.
+**Price** *(Required)*
+The selling price your customers will pay. This is the number that shows on your store page, in the cart, and at checkout.
+
+**Additional display prices** *(Collapsible section)*
+Click the chevron to expand this section:
+
+- **Compare at price** *(Optional)* — Enter a higher "original" price here and FluentCart will display it with a strikethrough next to your actual price. Setting **Price** to `$12.90` and **Compare at price** to `$20.00` gives customers a clear visual that they're saving — a reliable conversion boost for digital products.
+
+- **Calculate profit/cost** *(Toggle — Optional)* — Toggle this on to track internal margins. Three fields appear:
+  - **Cost per item** — What it costs you to create or license this product
+  - **Profit** — Auto-calculated (Price minus Cost)
+  - **Margin** — Your profit as a percentage, also auto-calculated
+
+> **💡 Pro Tip:** These profit fields are completely invisible to customers. They're a smart way to know whether your pricing is sustainable before you hit publish.
+
+**SKU** *(Collapsible section)*
+Expand the **SKU** section and enter a unique tracking code (e.g., `EBOOK-MKT-01`). Click **Generate SKU** to have FluentCart create one automatically. Accepts up to 30 characters.
 
 **2. Subscription Payment**
 
-Select **Subscription** for products that require recurring payments.
+Toggle the **Subscription** switch on and the pricing fields transform into everything you need for recurring billing — ideal for software tools, membership content, course access, or any digital product your customers return to over time.
 
-* **Installment Price:** The amount for each recurring payment.
-* **Compare at price:** (Optional) A higher price to show a discount on each installment.
-* **Interval:** The billing frequency, such as monthly or yearly.
-* **Enable installment payment:** Check this box to set a fixed number of payments.
-* **Installment Count:** The total number of payments the customer will make.
-* **Total Price:** This automatically calculates the total cost based on the installment price and count.
-* **Setup fee:** (Optional) Toggle this on to add a one-time initial fee.
-* **Calculate profit/cost:** (Optional) Toggle this to track your cost and profit margin on the subscription.
+**Installment Price** *(Required)*
+The amount charged on each billing cycle. The `x1` indicator next to the field reflects how many times this price is charged per interval — it updates automatically when you configure installments.
 
-![Gif of Digital Product Edit Screen (Simple Pricing)](/images/product-types-creation/creating-digital-product/simple-price.gif) 
+**Additional display prices** *(Collapsible section)*
+
+- **Compare at price** *(Optional)* — A higher price displayed with a strikethrough, helping customers see the value of your subscription rate.
+
+- **Interval** *(Required)* — How frequently the customer is billed. Choose from:
+  - **Daily**
+  - **Weekly**
+  - **Monthly**
+  - **Quarterly**
+  - **Half Yearly (Six Month)**
+  - **Yearly**
+
+- **Trial Days** *(Optional)* — The number of free days before the first charge. Set to `0` for no trial. Even a 7-day trial on a higher-priced plan can meaningfully improve sign-up rates — it lowers the barrier to committing.
+
+**Enable installment payment** *(Checkbox — Optional)*
+Check this box to limit the subscription to a fixed number of payments instead of running indefinitely. Two fields appear:
+- **Installment Count** — The total number of payments (e.g., `12` for a year-long payment plan)
+- **Total Price** — Auto-calculated (Installment Price × Count)
+
+> **💡 Pro Tip:** Installment plans work brilliantly for online courses or coaching programs — customers pay over time with a clear end date, eliminating cancellation anxiety while guaranteeing your revenue.
+
+**Setup fee** *(Toggle — Optional)*
+Enable this to charge a one-time fee at the very start of the subscription, in addition to the recurring price. Two sub-fields appear:
+- **Setup fee label** — The name customers see for this charge at checkout (e.g., `Activation Fee`, `Enrollment Fee`)
+- **Setup fee amount** — The one-time amount charged at signup
+
+**Calculate profit/cost** *(Toggle — Optional)*
+Toggle on to track **Cost per item**, **Profit**, and **Margin** for this subscription for internal reporting.
+
+> **📝 Note:** The **SKU** section works exactly the same in subscription mode as it does for one-time payments. Digital products don't need a shipping package or physical weight — so those fields don't appear here.
+
+![Gif of Digital Product Edit Screen (Simple Pricing)](/images/product-types-creation/product-pricing/product-variation-2.webp)
+
 ---
 
 #### Option B: Simple Variations
 
-Choose this option when your product has multiple versions, like "Standard" and "Pro". This allows you to create a table of variations, each with its own pricing structure.
+When your digital product comes in multiple versions — a Standard and a Pro, different license tiers, or a monthly plan alongside a discounted yearly plan — **Simple Variations** is the right choice. Each variation gets its own price, image, and billing structure, completely independent from the others.
 
-**Managing the Variations Table**
+Select **Simple Variations** from the pricing dropdown to activate this mode.
 
-* **To Add a New Variation:** Click the `+ Add more` button at the bottom to add a new row to the table.
-* **To Change Order:** Use the **six-dot icon** on the left to drag and reorder rows.
-* **Quick Edits:** You can edit the **Title**, **Price**, and **Compare** at price directly inside the table rows.
-* **To Configure a Variation:** To set the price and other details for a specific variation, click the pencil icon in the "Action" column. This will open a detailed configuration sidebar.
+**The Variations Table**
 
-**The Advanced Action Menu (Three-Dot Icon):** Click the **three-dot** icon to access these new time-saving tools:
+You'll see a clean table where each row is one version of your product:
 
- * **Duplicate:** Quickly copy an existing variation to make a new one.
- * **Copy Variation ID:** Get the unique **ID** for developers or shortcodes.
- * **Direct Checkout:** Create a link that sends customers straight to the payment page for this version.
+- **⠿ (Drag handle)** — Click and drag to reorder. The order here controls how options appear on your product page — put your most compelling tier first.
+- **Image** — A thumbnail for this variation. Click to upload or swap.
+- **Title** — The variation name (e.g., `Standard`, `Pro`, `Agency`). Editable directly in the table.
+- **Price** — The selling price for this variation. Editable inline.
+- **Compare at price** — The "was" price for this variation, shown with a strikethrough. Also editable inline.
+- **Action** — A **pencil icon** to open the full variation editor, and a **three-dot icon** for quick options.
 
-**Configuring a Single Variation (Pencil Icon)**
+Click **+ Add more** at the bottom to add a new variation. A blank row appears — fill in the title and price, then use the pencil icon for everything else.
 
-After clicking the pencil icon, a sidebar appears where you can set up the pricing for that specific version. You must choose a payment term: **One Time** or **Subscription**.
+The **three-dot icon** gives you:
+- **Duplicate** — Copy this variation as a starting point for a new one
+- **Copy Variation ID** — Get the unique ID for developers or shortcode use
+- **Direct Checkout** — Generate a buy-now link for this specific version
+- **Delete** — Remove this variation permanently
+- **Skip inventory** — Exclude this variation from stock tracking
+
+> **📝 Note:** Quick edits to **Title**, **Price**, and **Compare at price** can be made directly in the table rows. For images, subscription configuration, and everything else — click the pencil icon.
+
+**Editing a Variation (Pencil Icon)**
+
+Click the **pencil icon** to open the full variation editor — a full-screen panel with two sides:
+
+- **Left panel** — A scrollable list of all your variations. Click any item to jump to editing it without closing the panel.
+- **Right panel** — The complete configuration for the currently selected variation, highlighted with a green dot in the left list.
+
+At the bottom: **Discard** (undo unsaved changes), **Cancel** (close without saving), and **Update** (save all changes).
 
 **A. One-Time Payment for a Variation**
 
-This option is for a variation that is sold for a single payment.
+When the **Subscription** toggle in the editor is off, you're setting up a standard single-payment tier.
 
-* **Title:** The name of the specific variation (e.g., "File Manager Pro").
-* **Select Payment Term:** Choose **One Time** from the dropdown menu.
-* **Price:** Set the selling price for this variation.
-* **Compare at price:** An optional higher price to show a discount.
-* **Calculate profit/cost:** Toggle this on to enter the **Cost per item** and track the **Profit** and **Margin**.
-* **Image:** Upload a specific image for this variation.
+**Variation image**
+Click the thumbnail to upload a photo specific to this version — helpful for visually distinguishing tiers on your product page.
+
+**Variation Title**
+The name of this specific version (e.g., `Standard`, `Pro License`, `Lifetime Access`).
+
+**Price** *(Required)*
+The selling price for this specific variation.
+
+**Additional display prices**
+- **Compare at price** *(Optional)* — A higher "was" price shown with a strikethrough for this variation.
+- **Calculate profit/cost** *(Toggle — Optional)* — Track **Cost per item**, **Profit**, and **Margin** for this variation internally.
 
 **B. Subscription Payment for a Variation**
 
-This option is for a variation that is sold on a recurring payment basis.
+Toggle the **Subscription** switch on inside the variation editor to configure this tier as a recurring plan — perfect for software license tiers or membership levels where different versions bill at different rates.
 
-* **Select Payment Term:** Choose **Subscription** from the dropdown menu.
-* **Price:** The price for each recurring payment.
-* **Compare at price:** An optional higher price to show a discount on the recurring payment.
-* **Interval:** The billing frequency (e.g., Yearly).
-* **Enable installment payment:** Check this to set a fixed number of payments.
-* **Setup fee:** Toggle this on to add a one-time initial fee for the subscription.
-* **Calculate profit/cost:** Toggle this to track profit and margin.
-* **Image:** Upload a unique image for this subscription variation.
+**Price** *(Required)*
+The recurring charge for each billing cycle of this variation.
 
-   ![Gif of Digital Product Edit Screen (Simple VAriation)](/images/product-types-creation/creating-digital-product/simple-variation2.gif) 
+**Compare at price** *(Optional)*
+A higher price shown with a strikethrough to communicate value.
+
+**Interval** *(Required)*
+The billing frequency for this specific variation — choose from **Daily**, **Weekly**, **Monthly**, **Quarterly**, **Half Yearly**, or **Yearly**. Different variations can have different intervals, so you can offer a "Monthly" and a "Yearly" tier side by side on the same product page.
+
+**Trial Days** *(Optional)*
+Free days before the first charge. Set to `0` for no trial. Offering even a short trial on a higher-priced tier can meaningfully improve sign-up rates.
+
+**Enable installment payment** *(Checkbox — Optional)*
+Limit this variation to a fixed number of billing cycles:
+- **Installment Count** — Total payments before the subscription ends automatically
+- **Total Price** — Auto-calculated total (Installment Price × Count)
+
+**Setup fee** *(Toggle — Optional)*
+Charge a one-time fee at signup for this variation:
+- **Setup fee label** — The customer-facing name (e.g., `Activation Fee`)
+- **Setup fee amount** — The one-time amount
+
+**Calculate profit/cost** *(Toggle — Optional)*
+Track your internal **Cost per item**, **Profit**, and **Margin** for this subscription variation.
+
+![Gif of Digital Product Edit Screen (Simple Variation)](/images/product-types-creation/creating-digital-product/simple-variation2.gif)
 
 ::: info
-To learn more about variation pricing setups, see the [Configure Product Pricing](/guide/product-types-creation/configuring-product-pricing) guide.
+For the complete, field-by-field reference on every pricing option — including the full breakdown of all interval choices, installment plans, setup fees, trial periods, and the Add Package walkthrough — see the [Configuring Product Pricing & Variations](/guide/product-types-creation/configuring-product-pricing) guide.
 :::
 
 ### 5. Downloadable Asset(s)
