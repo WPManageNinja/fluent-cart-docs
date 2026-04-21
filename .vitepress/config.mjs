@@ -440,7 +440,13 @@ export default defineConfig({
           text: 'Migration',
           collapsed: true,
           items: [
-            { text: 'Migrating from EDD', link: '/guide/migration/edd-migration' }
+            { text: 'Overview', link: '/guide/migration/' },
+            { text: 'Migrating from EDD', link: '/guide/migration/edd-migration' },
+            { text: 'What Gets Migrated', link: '/guide/migration/what-is-migrated' },
+            { text: 'WP-CLI Reference', link: '/guide/migration/edd-cli' },
+            { text: 'Developer Mode & Reset', link: '/guide/migration/developer-mode' },
+            { text: 'Backward Compatibility', link: '/guide/migration/backward-compatibility' },
+            { text: 'Troubleshooting', link: '/guide/migration/troubleshooting' }
           ]
         },
         {
