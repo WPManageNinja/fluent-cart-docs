@@ -11,8 +11,6 @@ The Migrator quietly provides a backward compatibility layer that keeps your exi
 
 If you deactivate the Migrator too early, customers feel it.
 
-[[toc]]
-
 ## Why this layer exists
 
 EDD and FluentCart use different URL structures, different API endpoints, and different identifier formats. After migration, your data is in FluentCart's format — but the outside world (your customers' installed software, PayPal's renewal notifications, Stripe's webhook history, bookmarked links in old emails) still speaks EDD.
@@ -98,5 +96,5 @@ The compatibility layer is lightweight. It hooks into request routing only when 
 
 ## Related
 
-- [Troubleshooting](/guide/migration/troubleshooting) — what to do if a customer reports a broken license or missing renewal
-- [WP-CLI Reference](/guide/migration/edd-cli) — `--verify_license` and `edd_cleanup` commands
+- [Troubleshooting](/guide/migration/edd/troubleshooting) — what to do if a customer reports a broken license or missing renewal
+- [WP-CLI Reference](/guide/migration/edd/edd-cli) — `--verify_license` and `edd_cleanup` commands

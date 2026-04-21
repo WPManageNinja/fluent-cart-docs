@@ -7,8 +7,6 @@ description: Complete WP-CLI reference for the FluentCart Migrator. Run full mig
 
 For stores with thousands of orders, the WP-CLI is faster than the admin wizard and avoids browser timeouts entirely. The same engine drives both interfaces, so the result is identical — only the surface differs.
 
-[[toc]]
-
 ## When to use WP-CLI
 
 Use the CLI when:
@@ -48,7 +46,7 @@ wp fluent_cart_migrator migrate_from_edd [flag]
 | `--stats` | Show pre-migration statistics for the source store. No data is migrated. |
 | `--verify_license` | Compare EDD and FluentCart licenses after migration. Reports missing licenses and status mismatches. |
 | `--log` | Display the failed payment log (`_fluent_edd_failed_payment_logs`). |
-| `--reset` | Wipe migrated data and clear migration state. **Requires Developer Mode.** See [Developer Mode & Reset](/guide/migration/developer-mode). |
+| `--reset` | Wipe migrated data and clear migration state. **Requires Developer Mode.** See [Developer Mode & Reset](/guide/migration/edd/developer-mode). |
 
 ## Common workflows
 
@@ -130,7 +128,7 @@ wp fluent_cart_migrator migrate_fresh
 
 Clears all migration progress options, refreshes the FluentCart database schema, deletes migrated FluentCart products, and removes migration metadata from EDD posts. Useful for testing on a staging environment when you want to rerun the full migration from scratch.
 
-This command requires [Developer Mode](/guide/migration/developer-mode).
+This command requires [Developer Mode](/guide/migration/edd/developer-mode).
 
 ### Reset migrated data (developer)
 
@@ -140,7 +138,7 @@ wp fluent_cart_migrator reset
 
 Wipes migrated data and clears migration state. Slightly less aggressive than `migrate_fresh` — it does not refresh the schema. Asks for confirmation before running.
 
-This command requires [Developer Mode](/guide/migration/developer-mode).
+This command requires [Developer Mode](/guide/migration/edd/developer-mode).
 
 ### Backfill missing subscription UUIDs
 
@@ -174,12 +172,12 @@ If the host has aggressive process limits, run individual stages rather than `--
 
 - The CLI does not show a live, polling progress bar in the wizard's visual style. It uses WP-CLI's built-in progress bar for the payments stage.
 - The CLI does not pause and resume mid-stage on demand — only between stages.
-- The CLI does not surface the post-migration backward compatibility notice. Read [Backward Compatibility](/guide/migration/backward-compatibility) directly to know what to keep enabled.
+- The CLI does not surface the post-migration backward compatibility notice. Read [Backward Compatibility](/guide/migration/edd/backward-compatibility) directly to know what to keep enabled.
 
 For everything else, the CLI is functionally equivalent to the wizard — and faster on real workloads.
 
 ## Related
 
-- [Migrating from EDD](/guide/migration/edd-migration) — wizard walkthrough
-- [Developer Mode & Reset](/guide/migration/developer-mode) — reset workflow for staging
-- [Troubleshooting](/guide/migration/troubleshooting) — what to do when something fails
+- [Migrating from EDD](/guide/migration/edd/edd-migration) — wizard walkthrough
+- [Developer Mode & Reset](/guide/migration/edd/developer-mode) — reset workflow for staging
+- [Troubleshooting](/guide/migration/edd/troubleshooting) — what to do when something fails

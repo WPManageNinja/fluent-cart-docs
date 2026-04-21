@@ -13,9 +13,7 @@ The **FluentCart Migrator** addon acts as your personal moving team. It automati
 This tool only **copies** your data into FluentCart. Your original Easy Digital Downloads store, all its settings, and every record stay completely untouched throughout this entire process. You can run both side-by-side until you're fully ready to switch.
 :::
 
-This page walks through the wizard step by step. For an alternative terminal-based workflow on large stores, see the [WP-CLI Reference](/guide/migration/edd-cli). For a complete inventory of what does and doesn't transfer, see [What Gets Migrated](/guide/migration/what-is-migrated).
-
-[[toc]]
+This page walks through the wizard step by step. For an alternative terminal-based workflow on large stores, see the [WP-CLI Reference](/guide/migration/edd/edd-cli). For a complete inventory of what does and doesn't transfer, see [What Gets Migrated](/guide/migration/edd/what-is-migrated).
 
 ---
 
@@ -33,7 +31,7 @@ Take two minutes to confirm these are in place before you start. Catching a miss
 Even though the Migrator only reads from EDD and never touches your existing data, take a fresh database backup before you begin. It takes five minutes and gives you complete peace of mind.
 :::
 
-For a deeper rehearsal before touching production, run the migration on staging first with [Developer Mode](/guide/migration/developer-mode) enabled. That lets you reset and re-run as many times as needed.
+For a deeper rehearsal before touching production, run the migration on staging first with [Developer Mode](/guide/migration/edd/developer-mode) enabled. That lets you reset and re-run as many times as needed.
 
 ---
 
@@ -136,7 +134,7 @@ No need to panic. The Migrator tracks its progress as it goes. If your browser c
 ![Migration steps with WP-CLI command panel below](/guide/public/images/migration/edd-migrator/04-steps-cli.webp)
 
 ::: info On the same screen: WP-CLI commands
-The configuration screen also surfaces the WP-CLI commands for each stage. For stores with thousands of orders, switching to the CLI is significantly faster and avoids browser timeouts entirely. See the [WP-CLI Reference](/guide/migration/edd-cli) for the full command surface.
+The configuration screen also surfaces the WP-CLI commands for each stage. For stores with thousands of orders, switching to the CLI is significantly faster and avoids browser timeouts entirely. See the [WP-CLI Reference](/guide/migration/edd/edd-cli) for the full command surface.
 :::
 
 ---
@@ -147,7 +145,7 @@ Once the progress bar reaches **100%**, you'll see a green checkmark and a **Mig
 
 ![Migration completion screen with stats, backward compatibility notice, and next steps](/guide/public/images/migration/edd-migrator/05-completion.webp)
 
-The completion screen also includes an important notice — **keep the Migrator plugin active** even after the migration finishes. It provides a backward compatibility layer for existing customers. See [Backward Compatibility](/guide/migration/backward-compatibility) for the full explanation.
+The completion screen also includes an important notice — **keep the Migrator plugin active** even after the migration finishes. It provides a backward compatibility layer for existing customers. See [Backward Compatibility](/guide/migration/edd/backward-compatibility) for the full explanation.
 
 Your data is in. Before opening your new store to the public, spend a few minutes verifying the result.
 
@@ -177,7 +175,7 @@ Go to **FluentCart → Customers**, open a few profiles, and confirm names, emai
 For the best peace of mind, find one example of each scenario in your store and compare it field-by-field between EDD and FluentCart: a simple one-time purchase, a subscription order with renewals, an order with a coupon applied, a refunded order, and a license-based purchase.
 :::
 
-For a complete map of what transfers and what doesn't (categories, upgrade paths, payment gateway credentials, custom meta), see [What Gets Migrated](/guide/migration/what-is-migrated).
+For a complete map of what transfers and what doesn't (categories, upgrade paths, payment gateway credentials, custom meta), see [What Gets Migrated](/guide/migration/edd/what-is-migrated).
 
 ---
 
@@ -217,7 +215,7 @@ After your migration is complete, **don't deactivate the FluentCart Migrator plu
 - **Stripe webhooks** for legacy orders are matched against the original charge IDs.
 - **Legacy EDD URLs** (download links, renewal pages, account URLs in old emails) are redirected to the right FluentCart pages.
 
-For the full explanation of why this layer exists and when it's safe to deactivate, see [Backward Compatibility](/guide/migration/backward-compatibility).
+For the full explanation of why this layer exists and when it's safe to deactivate, see [Backward Compatibility](/guide/migration/edd/backward-compatibility).
 
 ::: warning Don't delete your EDD data yet
 Even after everything is verified and running, don't delete your EDD database tables in a rush. The Migrator never modifies them — they're just sitting there, taking up very little space, and they're your fallback if you ever need to reference original records. Leave them until you're fully confident, then run `wp fluent_cart_migrator edd_cleanup` when you're ready.
@@ -250,8 +248,8 @@ Use this as your final go-live checklist before opening the doors on your Fluent
 
 ## Need help?
 
-- Stuck on a specific stage? Check the [Troubleshooting](/guide/migration/troubleshooting) page.
-- Want to know exactly what transfers? See [What Gets Migrated](/guide/migration/what-is-migrated).
-- Running on a large store? Switch to the [WP-CLI Reference](/guide/migration/edd-cli).
-- Testing on staging and want to reset between runs? Enable [Developer Mode](/guide/migration/developer-mode).
-- Customer reports a broken license post-migration? See [Backward Compatibility](/guide/migration/backward-compatibility).
+- Stuck on a specific stage? Check the [Troubleshooting](/guide/migration/edd/troubleshooting) page.
+- Want to know exactly what transfers? See [What Gets Migrated](/guide/migration/edd/what-is-migrated).
+- Running on a large store? Switch to the [WP-CLI Reference](/guide/migration/edd/edd-cli).
+- Testing on staging and want to reset between runs? Enable [Developer Mode](/guide/migration/edd/developer-mode).
+- Customer reports a broken license post-migration? See [Backward Compatibility](/guide/migration/edd/backward-compatibility).

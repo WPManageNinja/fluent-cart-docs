@@ -7,8 +7,6 @@ description: A complete reference of every entity the FluentCart Migrator transf
 
 Before you run a migration, it is worth knowing exactly what comes across, what doesn't, and why. This page covers both — so there are no surprises after the wizard finishes.
 
-[[toc]]
-
 ## What is migrated
 
 ### Products
@@ -183,7 +181,7 @@ Refund amounts and dates transfer as part of the order. The reason text — whic
 
 ### Dry-run mode
 
-All operations in 1.0.0 are live. There is no preview mode. To rehearse a migration safely, use [Developer Mode](/guide/migration/developer-mode) on a staging environment, run the full migration, review the result, then reset and run again.
+All operations in 1.0.0 are live. There is no preview mode. To rehearse a migration safely, use [Developer Mode](/guide/migration/edd/developer-mode) on a staging environment, run the full migration, review the result, then reset and run again.
 
 ---
 
@@ -216,4 +214,4 @@ All operations in 1.0.0 are live. There is no preview mode. To rehearse a migrat
 
 ## Next steps
 
-Now that you know exactly what's in scope, head to the [Migrating from EDD](/guide/migration/edd-migration) walkthrough to run your first migration.
+Now that you know exactly what's in scope, head to the [Migrating from EDD](/guide/migration/edd/edd-migration) walkthrough to run your first migration.
