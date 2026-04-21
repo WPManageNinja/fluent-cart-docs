@@ -437,6 +437,13 @@ export default defineConfig({
           ]
         },
         {
+          text: 'Migration',
+          collapsed: true,
+          items: [
+            { text: 'Migrating from EDD', link: '/guide/migration/edd-migration' }
+          ]
+        },
+        {
           text: 'Customization and Themes',
           collapsed: true,
           items: [
@@ -457,13 +464,6 @@ export default defineConfig({
             { text: 'Understanding Logs', link: '/guide/troubleshooting-support/understanding-logs' },
             { text: 'Common Issues & FAQs', link: '/guide/troubleshooting-support/common-issues-faqs' },
             { text: 'How to Get Support', link: '/guide/troubleshooting-support/how-to-get-support' }
-          ]
-        },
-        {
-          text: 'Migration',
-          collapsed: true,
-          items: [
-            { text: 'Migrating from Easy Digital Downloads', link: '/guide/migration/edd-migration' }
           ]
         }
       ]

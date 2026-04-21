@@ -22,7 +22,7 @@ Before we can start moving your store's data, we need to install the migration t
 4. Click **Choose File**, select the `.zip` file you just downloaded, then click **Install Now**.
 5. Once the installation finishes, click the **Activate Plugin** button.
 
-![Screenshot of the WordPress Upload Plugin screen with the Migrator .zip selected](/images/migration/edd-migration/step-1-install.webp)
+![Screenshot of the WordPress Upload Plugin screen with the Migrator .zip selected](/guide/public/images/migration/edd-migrator/edd-migrator-1.webp)
 
 ---
 
@@ -35,7 +35,7 @@ Now that the bridge is built, let's open the tool and get started.
 
 This will launch the easy-to-follow **Migration Wizard** — a clean, step-by-step interface that walks you through the entire transfer.
 
-![Screenshot of the FluentCart sidebar with the Migrator option highlighted](/images/migration/edd-migration/step-2-dashboard.webp)
+![Screenshot of the FluentCart sidebar with the Migrator option highlighted](/guide/public/images/migration/edd-migrator/edd-migrator-2.webp)
 
 ---
 
@@ -47,7 +47,7 @@ The Migrator is smart — it automatically scans your website to detect which e-
 
 Click directly on that card to confirm: *"Yes, this is where my data lives."*
 
-![Screenshot of the Migration Source selection screen showing the EDD card with a green DETECTED badge](/images/migration/edd-migration/step-3-select-source.webp)
+![Screenshot of the Migration Source selection screen showing the EDD card with a green DETECTED badge](/guide/public/images/migration/edd-migrator/edd-migrator-3.webp)
 
 ---
 
@@ -59,7 +59,7 @@ In this step, the system verifies that your version of Easy Digital Downloads (f
 
 Once you see the **green confirmation box** indicating a successful compatibility check, click **Continue** to proceed.
 
-![Screenshot of the compatibility check screen showing a green success confirmation](/images/migration/edd-migration/step-4-compatibility.webp)
+![Screenshot of the compatibility check screen showing a green success confirmation](/guide/public/images/migration/edd-migrator/edd-migrator-4.webp)
 
 ---
 
@@ -77,7 +77,7 @@ You will see clear summary boxes displaying the total count of:
 
 Take a moment to review these numbers. If they look accurate compared to what you know is in your EDD store, you're ready to go. Click **Continue to Configuration** when you're satisfied.
 
-![Screenshot of the Pre-Flight Summary screen showing count boxes for Products, Orders, Transactions, Customers, and Subscriptions](/images/migration/edd-migration/step-5-summary.webp)
+![Screenshot of the Pre-Flight Summary screen showing count boxes for Products, Orders, Transactions, Customers, and Subscriptions](/guide/public/images/migration/edd-migrator/edd-migrator-5.webp)
 
 ---
 
@@ -103,7 +103,7 @@ Take a deep breath, then click the **Start Migration** button.
 Do **not** close or refresh this browser tab while the migration is running. The progress bar needs an active connection to process your data. Grab a cup of coffee and let FluentCart do the heavy lifting — it'll take care of everything.
 :::
 
-![Screenshot of the Configuration screen showing Batch Size, Steps to Run checklist, and the Start Migration button](/images/migration/edd-migration/step-6-configure.webp)
+![Screenshot of the Configuration screen showing Batch Size, Steps to Run checklist, and the Start Migration button](/guide/public/images/migration/edd-migrator/edd-migrator-6.webp)
 
 ---
 
@@ -127,5 +127,3 @@ For step-by-step instructions on connecting each payment gateway, see the [Payme
 :::
 
 When you're ready, click the **View FluentCart Dashboard** button at the bottom of the screen to exit the Migrator and start exploring your fully migrated store.
-
-![Screenshot of the Migration Complete screen with a green checkmark and the final item count breakdown](/images/migration/edd-migration/step-7-complete.webp)
