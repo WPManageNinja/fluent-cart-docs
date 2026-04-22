@@ -1,14 +1,33 @@
 <script setup>
 import { ref } from 'vue'
+import TurndownService from 'turndown'
 
 const copied = ref(false)
+
+const turndown = new TurndownService({
+  headingStyle: 'atx',
+  codeBlockStyle: 'fenced',
+  bulletListMarker: '-',
+})
+
+turndown.addRule('fencedCodeBlock', {
+  filter(node) {
+    return node.nodeName === 'PRE' && node.querySelector('code') !== null
+  },
+  replacement(content, node) {
+    const code = node.querySelector('code')
+    const lang = code?.className?.match(/language-(\S+)/)?.[1] || ''
+    const text = code?.textContent || ''
+    return `\n\`\`\`${lang}\n${text}\n\`\`\`\n`
+  },
+})
 
 function copyPage() {
   const docEl = document.querySelector('.vp-doc')
   if (!docEl) return
 
-  const text = docEl.innerText
-  navigator.clipboard.writeText(text).then(() => {
+  const markdown = turndown.turndown(docEl.innerHTML)
+  navigator.clipboard.writeText(markdown).then(() => {
     copied.value = true
     setTimeout(() => {
       copied.value = false
