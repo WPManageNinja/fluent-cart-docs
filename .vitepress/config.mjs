@@ -440,8 +440,8 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'Storage Overview', link: '/guide/storage/' },
-            { text: 'Amazon S3', link: '/guide/storage/s3' },
-            { text: 'Cloudflare R2', link: '/guide/storage/r2' }
+            { text: 'Amazon S3', link: '/guide/storage/aws-s3' },
+            { text: 'Cloudflare R2', link: '/guide/storage/cloudflare-r2' }
           ]
         },
         {
