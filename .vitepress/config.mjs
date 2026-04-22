@@ -431,9 +431,17 @@ export default defineConfig({
                 { text: 'Adding New Roles', link: '/guide/settings-configuration/roles-permissions/adding-new-roles/' }
               ]
             },
-            { text: 'Storage Settings', link: '/guide/settings-configuration/storage-settings' },
             { text: 'Features & Addons', link: '/guide/settings-configuration/features-addons' },
             { text: 'Licensing Settings (FluentCart License)', link: '/guide/settings-configuration/licensing-settings' }
+          ]
+        },
+        {
+          text: 'Storage',
+          collapsed: true,
+          items: [
+            { text: 'Storage Overview', link: '/guide/storage/' },
+            { text: 'Amazon S3', link: '/guide/storage/s3' },
+            { text: 'Cloudflare R2', link: '/guide/storage/r2' }
           ]
         },
         {
