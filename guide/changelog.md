@@ -1,6 +1,27 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.21
+*Released on April 22, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Cloudflare R2 storage
+• Adds Public access management in S3
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes PDF template block styling issue
+• Fixes Warning for orderId null in checkout issue
+• Fixes PayPal checkout security to ensure pricing integrity
+• Fixes SKU duplicate issue in product variation creation
+• Fixes Provider badge not displaying correctly on files
+• Fixes S3 file deletion behavior
+```
+
+:::::
+
 ## FluentCart v1.3.20
 *Released on April 21, 2026*
 
