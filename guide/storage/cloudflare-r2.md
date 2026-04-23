@@ -50,7 +50,7 @@ You should now see the **R2 Object Storage** overview, listing any existing buck
 
 Look at the right-hand side of the R2 overview page, under **Account Details**. Your **Account ID** is displayed as a long hex string — click the copy icon next to it to grab it.
 
-![Cloudflare dashboard — Account ID location in R2 overview](/images/storage/r2/cf-account-id.webp)
+![Cloudflare dashboard — Account ID location in R2 overview](/images/storage/r2/cloudflare-r2-id.webp)
 
 Paste it somewhere safe for a moment; you will need it shortly when filling in FluentCart (Method B) or your `wp-config.php` (Method A).
 
@@ -58,7 +58,7 @@ Paste it somewhere safe for a moment; you will need it shortly when filling in F
 
 Still on the R2 overview page, look inside the **Account Details** card for the **API Tokens** row and click the **Manage** button next to it.
 
-![Cloudflare dashboard — Manage API Tokens button](/images/storage/r2/cf-api-tokens-manage.webp)
+![Cloudflare dashboard — Manage API Tokens button](/images/storage/r2/cloudflare-r2-id-manage.webp)
 
 This opens the R2 API Tokens management page, where you will create a new token.
 
@@ -71,7 +71,7 @@ The API Tokens page splits into two sections:
 
 Click **Create Account API token** (the recommended path for a real store).
 
-![Cloudflare dashboard — Create Account API Token button](/images/storage/r2/cf-create-account-token.webp)
+![Cloudflare dashboard — Create Account API Token button](/images/storage/r2/cloudflare-r2-id-api.webp)
 
 #### 5. Configure Token Permissions
 
@@ -85,7 +85,7 @@ On the **Create Account API Token** page, fill in the following:
 * **TTL (Time to live)** — choose **Forever**. You do not want your store's storage driver to silently stop working when a token expires. If your security policy requires token rotation, pick a date you can actually track and set a calendar reminder to rotate the token before it expires.
 * **Client IP Address Filtering** *(optional)* — leave blank unless your store runs from a known, fixed set of server IPs. If you do restrict by IP, remember to add any load balancer or cron-runner IPs too, or uploads from background processes will fail.
 
-![Cloudflare dashboard — Create Account API Token with Admin Read & Write and Forever TTL](/images/storage/r2/cf-token-permissions.webp)
+![Cloudflare dashboard — Create Account API Token with Admin Read & Write and Forever TTL](/images/storage/r2/cloudflare-r2-bucket-api.webp)
 
 > **Why "Admin Read & Write" rather than "Object Read & Write"?**
 > *Object Read & Write* only covers reading, writing, and listing objects in specific buckets. FluentCart additionally lets you list all your buckets and create new ones from its own UI — that needs the broader *Admin* permission. If you prefer a narrower token, use *Object Read & Write* scoped to your FluentCart bucket, but you will lose the bucket-browse and bucket-create conveniences in the plugin.
@@ -111,6 +111,8 @@ You now have all three values FluentCart needs:
 | Secret Access Key  | Create Account API Token result (step 6)  |
 
 Head back to FluentCart and continue with Step 1 below.
+
+![Cloudflare dashboard — Create Account API Token](/images/storage/r2/cloudflare-r2-api-created.webp)
 
 ---
 
