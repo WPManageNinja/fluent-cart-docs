@@ -69,11 +69,11 @@ Place the cursor where the tag should appear, click the **shortcode icon `{;}`**
 
 | Merge Tag | Renders |
 |-----------|---------|
-| `{{item.package_name}}` | The package name assigned to the product (e.g., `Gift box`, `Medium Mailer`) |
-| `{{item.package_type}}` | The package shape — `Box`, `Envelope`, or `Soft package` |
-| `{{item.dimensions}}` | The package dimensions in `L × W × H unit` format (e.g., `1 × 1 × 1 in`) |
-| `{{item.product_weight}}` | The product's own weight with its unit (e.g., `5 kg`) |
-| `{{item.shipping_weight}}` | The total shipping weight — product weight plus empty-package weight (e.g., `6 kg`) |
+| `\{\{item.package_name\}\}` | The package name assigned to the product (e.g., `Gift box`, `Medium Mailer`) |
+| `\{\{item.package_type\}\}` | The package shape - `Box`, `Envelope`, or `Soft package` |
+| `\{\{item.dimensions\}\}` | The package dimensions in `L x W x H unit` format (e.g., `1 x 1 x 1 in`) |
+| `\{\{item.product_weight\}\}` | The product's own weight with its unit (e.g., `5 kg`) |
+| `\{\{item.shipping_weight\}\}` | The total shipping weight - product weight plus empty-package weight (e.g., `6 kg`) |
 
 **Default email body already includes package info**
 
