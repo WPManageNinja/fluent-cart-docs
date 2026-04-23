@@ -27,7 +27,7 @@ This is where you define how your shipping option will work.
     * **Flat Rate:** This is a fixed-cost shipping option. Use this to set a single rate for delivery.
     * **Free Shipping:** As the name suggests, this option is free for the customer. It's an excellent incentive to encourage sales.
     * **Local Pickup:** This allows customers to pick up their order directly from your physical store or a designated location, bypassing shipping costs entirely.
-* **Amount:** If you selected "Flat Rate," enter the cost for this shipping method here (e.g., enter **10** for $10.00).
+* **Amount:** If you selected "Flat Rate," enter the cost for this shipping method here (e.g., enter **10** for $10.00). The Amount field hides automatically when **Configure Rate** is set to **Per Weight**, because the cost then comes from your weight tiers instead of a flat value.
 
 * **Configure Rate**
 
@@ -36,6 +36,38 @@ This setting determines how the "Flat Rate" cost is calculated if a customer has
 * **Per Order:** Applies a single, fixed charge for the entire order, no matter how many items are purchased. This is the most common setup.
 * **Per Item:** The shipping cost is multiplied by the number of items in the cart. For example, if the cost is $2 and a customer buys 3 items, the total shipping cost will be $6.
 * **Percentage:** The shipping cost is calculated as a percentage of the total order price. For example, a 10% rate on a $50 order would result in a $5 shipping fee.
+* **Per Weight:** Charges shipping based on the total weight of the cart, using a set of tiered rates you define (see **Weight Tiers** below). Ideal for carriers that price by weight brackets — light envelopes at one rate, medium parcels at another, heavy freight higher still.
+
+#### Weight Tiers (Per-Weight Rates)
+
+When **Configure Rate** is set to **Per Weight**, a **Weight Tiers** editor appears in place of the fixed Amount field. Each tier defines a weight range and the shipping cost that applies when the cart's total weight falls inside that range.
+
+Each row has three fields:
+
+* **Min (weight)** — The lower bound of the tier, inclusive. Editable on every tier, including the first one (it does not have to start at `0`).
+* **Max (weight)** — The upper bound of the tier. Must be greater than the tier's Min.
+* **Cost** — The shipping amount charged when the cart's total weight lands inside this tier.
+
+Click **Add Tier** to append a new row. A new tier defaults to `previous max + 0.01` for Min so you can chain ranges quickly, but every field stays editable.
+
+**Flexible, non-contiguous ranges**
+
+Tiers do not have to be continuous. You can leave gaps between ranges — for example, `0–10 kg`, then `15–20 kg` — when your carrier simply does not offer rates in the gap, or when weights in that gap should fall back to a different shipping method.
+
+**Validation**
+
+The editor validates tiers inline before you can save:
+
+* A tier whose **Max** is less than or equal to its **Min** shows an error and the **Add Tier** button is disabled until fixed.
+* A tier whose range **overlaps** an earlier tier (e.g., `0–10` followed by `8–15`) shows an error — overlapping ranges would create ambiguity when a cart weight fits both tiers.
+
+Correct the highlighted tier and the error clears immediately, re-enabling the **Add Tier** button and the **Save** action.
+
+#### How It Looks at Checkout
+
+Once saved, the shipping method appears under **Shipping Options** on the checkout page with the method title and its calculated cost. The Order summary on the right reflects the same amount under **Shipping**, so what the customer picks is exactly what they pay.
+
+![Screenshot of the checkout page showing the shipping method under Shipping Options with its price, and the Order summary reflecting the Shipping line](/images/shipping/setting-up-shipping-method/shipping-method-checkout.webp)
 
 * **Class Aggregation**
 

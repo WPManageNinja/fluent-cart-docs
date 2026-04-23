@@ -34,6 +34,7 @@ You will see all the blocks listed below. Here is a fast look at all the FluentC
  * Checkout
  * Product Categories List
  * Excerpt
+ * Product Package Description
 
 
 ### 1. Products 
@@ -331,6 +332,43 @@ Here, you can easily control the data source for the snippet.
   * **Additional CSS Class(es):** Enter custom code here if you want to apply unique styling, such as specific font weights or text effects, to the product excerpt.
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/excerpt.webp)
+
+### 20. Product Package Description
+
+The **Product Package Description** block surfaces the physical details of a product — package name, dimensions, product weight, and total shipping weight — directly on the product page in a clean, theme-aware table. It reads from the package you assigned in the product's [Pricing & Shipping settings](/guide/product-types-creation/configuring-product-pricing#adding-a-new-package), so there is no duplicate data to maintain.
+
+For stores selling furniture, books, appliances, food, or anything where size and weight meaningfully influence a buying decision, this block turns hidden shipping metadata into information customers can see *before* they check out.
+
+![Screenshot of the Product Package Description block on a single product page showing Package, Dimensions, Weight, and Shipping Weight rows next to variant selectors](/images/customization-and-themes/using-fluentcart-blocks/product-package-description.webp)
+
+**Inspector Settings:** Use the settings tab (gear icon) to control what the table displays.
+
+* **Show Package Name:** Toggle the package label row (e.g., "Gift box"). Turn off if customers only care about dimensions and weight.
+* **Show Dimensions:** Toggle the `L × W × H` row. Hides automatically if the selected package has no dimensions configured.
+* **Show Product Weight:** Toggle the product's own weight (excluding the package).
+* **Show Shipping Weight (Total):** Toggle the combined product + package weight. This value mirrors what FluentCart uses for shipping rate calculation, so the number on the product page matches the number used at checkout.
+
+**Variant-Aware Switching**
+
+When the product has variations (different sizes, colors, or configurations) and each variant ships in a different package, the block rebuilds its table instantly the moment a shopper selects a different variant — no page reload, no flicker. Each variant's package, dimensions, and weight render from data embedded in the variant buttons, so the information shoppers see is always tied to the exact version they are about to buy.
+
+**Block Theme (FSE) Support**
+
+The block ships inside FluentCart's default single-product template, so any block theme (Twenty Twenty-Four, Twenty Twenty-Five, or custom FSE themes) picks it up automatically on product pages. You can still remove it from the template via **Appearance > Editor** if you prefer not to expose package information for a particular store.
+
+**Styling**
+
+The table uses CSS variables (border, text, and background) inherited from your theme, so it adapts to light and dark modes without additional CSS. For custom tweaks, add an **Additional CSS Class** and target the `[data-fluent-cart-package-description]` wrapper.
+
+**Where Else Package Information Appears**
+
+Once you configure the package data, the same information flows through the customer's journey without further configuration:
+
+* **Checkout order summary** — package name and shipping weight appear under each cart line, so shoppers confirm shipping details before they pay.
+
+  ![Screenshot of the checkout order summary showing Gift box and shipping weight under an order line](/images/customization-and-themes/using-fluentcart-blocks/package-description-checkout.webp)
+
+* **Order confirmation emails** — the default email body and customized templates can both display package details. See [Configuring Email Notifications](/guide/settings-configuration/email-configuration/configuring-email-notification) for the merge tags.
 
 
 > **Note:** Each FluentCart block comes with its own customization settings. After adding a block, check the settings panel on the right to adjust design, alignment, behavior, and visibility.

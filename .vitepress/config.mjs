@@ -233,7 +233,8 @@ export default defineConfig({
                 { text: 'Creating & Managing Product Brands',link: '/guide/product-types-creation/creating-managing-product-brand/'}
               ]
             },
-            { text: 'Inventory Management', link: '/guide/product-types-creation/inventory-management' }
+            { text: 'Inventory Management', link: '/guide/product-types-creation/inventory-management' },
+            { text: 'Advanced Inventory', link: '/guide/product-types-creation/advanced-inventory' }
           ]
         },
         {
