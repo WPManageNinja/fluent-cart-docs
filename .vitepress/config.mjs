@@ -302,6 +302,7 @@ export default defineConfig({
                 { text: 'Setting Up Shipping Methods', link: '/guide/shipping/setting-up-shipping-methods' },
                 { text: 'Understanding Shipping Classes', link: '/guide/shipping/understanding-shipping-classes' },
                 { text: 'Advanced Shipping Calculations', link: '/guide/shipping/advanced-shipping-calculations' },
+                { text: 'Managing Packages', link: '/guide/shipping/packages' },
               ]
             }
           ]

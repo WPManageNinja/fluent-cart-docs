@@ -8,3 +8,4 @@ With FluentCart Shipping, you can:
 * **[Create Flexible Shipping Methods](/guide/shipping/setting-up-shipping-methods)**: Offer various delivery options like Flat Rate, Free Shipping, or Local Pickup, with diverse pricing structures (per order, per item, per weight, or per value).
 * **[Utilize Shipping Classes](/guide/shipping/understanding-shipping-classes)**: Group products with similar shipping characteristics (e.g., "Heavy Items," "Fragile Goods") to apply specific cost adjustments.
 * **[Control Advanced Calculations](/guide/shipping/advanced-shipping-calculations)**: Configure how shipping costs are aggregated when customers purchase multiple products from different shipping classes.
+* **[Manage Packages](/guide/shipping/packages)**: Define the boxes, envelopes, and soft packages you ship with so FluentCart can accurately calculate rates at checkout and pre-select the right packaging when fulfilling orders.
