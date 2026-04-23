@@ -43,6 +43,15 @@ A powerful tool for increasing your Average Order Value (AOV).
 
 * **Function:** Allows you to offer relevant add-on products directly on the [checkout](/guide/settings-configuration/cart-checkout-settings) page, encouraging customers to add one more item to their purchase just before they pay. See [Order Bump](/guide/store-management/orders-management/order-bump) for creating and managing order bumps.
 
+### 5. Advanced Inventory
+
+A dedicated inventory workspace for stores that need more than per-product stock fields.
+
+* **Function:** Adds a central **Inventory** admin menu (injected next to Products) with cross-catalog stock views, bulk stock updates, an auditable adjustment history, and export. Every stock change is recorded with the user, timestamp, old and new values, and an adjustment reason.
+* **Requirements:** **Stock Management** (above) must be enabled first. Advanced Inventory activates only when both toggles are on.
+* **When Inactive:** The Inventory admin menu is hidden and no adjustment history is recorded. Per-product stock still works through the basic [Inventory Management](/guide/product-types-creation/inventory-management) screen.
+* **When Active:** See [Advanced Inventory](/guide/product-types-creation/advanced-inventory) for the full workflow.
+
 ## Saving Your Changes
 
 After toggling any feature on or off:

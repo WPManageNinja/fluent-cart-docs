@@ -61,4 +61,28 @@ If you select **Customized Body**, a full rich text editor will appear.
 
 ![Email Notification Customization](/images/settings-configuration/email-notifications/email-notification-body.webp)
 
+#### Package Merge Tags
+
+For stores selling physical products, FluentCart exposes the package details of each ordered item as email merge tags. Use these to build custom order confirmations, packing notifications, or warehouse-facing receipts that show shoppers exactly what is shipping — without writing any code.
+
+Place the cursor where the tag should appear, click the **shortcode icon `{;}`**, and select the tag from the **Package** group. The tag resolves per line item at send time.
+
+| Merge Tag | Renders |
+|-----------|---------|
+| `{{item.package_name}}` | The package name assigned to the product (e.g., `Gift box`, `Medium Mailer`) |
+| `{{item.package_type}}` | The package shape — `Box`, `Envelope`, or `Soft package` |
+| `{{item.dimensions}}` | The package dimensions in `L × W × H unit` format (e.g., `1 × 1 × 1 in`) |
+| `{{item.product_weight}}` | The product's own weight with its unit (e.g., `5 kg`) |
+| `{{item.shipping_weight}}` | The total shipping weight — product weight plus empty-package weight (e.g., `6 kg`) |
+
+**Default email body already includes package info**
+
+If the notification uses the **Default Body**, package name, dimensions, product weight, and shipping weight are rendered automatically below each item line — no template changes needed. The values match what the customer saw on the product page and at checkout.
+
+![Screenshot of an order confirmation email showing Package, Dimensions, Weight, and Shipping Weight under the order line](/images/settings-configuration/email-notifications/package-info-email.webp)
+
+**Values are captured at checkout**
+
+When the order is placed, FluentCart snapshots the package data onto the order item itself. The email renderer reads from that snapshot — never re-querying the live product — so even if you rename a package, change dimensions, or adjust weights months later, every historical email (resends, reprints, subscription renewals) still displays the values that were correct when the customer placed the order.
+
 Once you are finished editing, click the **Update** button to save your changes. Your customized email will now be sent whenever its corresponding event is triggered.

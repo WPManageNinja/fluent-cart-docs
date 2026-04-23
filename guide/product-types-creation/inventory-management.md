@@ -4,6 +4,10 @@ Proper **inventory management** is essential for any e-commerce store, whether y
 
 This guide will show you how to enable and manage inventory for your products.
 
+::: tip Need a central stock workspace, bulk updates, or an audit trail?
+For a dedicated **Inventory** admin screen with cross-catalog views, bulk stock updates, adjustment history, and exports, enable the **Advanced Inventory** module. See [Advanced Inventory](/guide/product-types-creation/advanced-inventory) for the full guide.
+:::
+
 ### Step 1: Enable the Stock Management Feature
 
 Before you can manage inventory for individual products, you must first activate the main Stock Management feature for your entire store.
