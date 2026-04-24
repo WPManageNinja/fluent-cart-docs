@@ -12,7 +12,7 @@ Once the add-on is active, every new order records the browsing trail automatica
 2. Open any order by clicking its order number.
 3. On the right side of the order detail page, scroll down to the **Browsing History** panel.
 
-![Order detail page showing the Browsing History panel on the right sidebar](/images/browsing-history/order-page-with-history.png)
+![Order detail page showing the Browsing History panel on the right sidebar](/images/browsing-history/order-page-with-history.webp)
 
 The panel appears alongside the other order information (Labels, UTM Details, Tax Information), so the full context of the purchase stays in one place.
 
@@ -20,7 +20,7 @@ The panel appears alongside the other order information (Labels, UTM Details, Ta
 
 The Browsing History panel displays the pages the customer visited during the session that led to the order, in the order they visited them. Each entry includes the page address and the time it was viewed.
 
-![Close-up view of the Browsing History panel listing visited pages with timestamps](/images/browsing-history/browsing-history-widget.png)
+![Close-up view of the Browsing History panel listing visited pages with timestamps](/images/browsing-history/browsing-history-widget.webp)
 
 The number in the panel heading (for example, *Browsing History (9)*) tells you how many pages the customer viewed in total before checking out.
 
