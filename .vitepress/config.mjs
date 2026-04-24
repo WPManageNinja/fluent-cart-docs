@@ -270,6 +270,13 @@ export default defineConfig({
           ]
         },
         {
+          text: 'Browsing History',
+          collapsed: true,
+          items: [
+            { text: 'Browsing History Overview', link: '/guide/browsing-history/' }
+          ]
+        },
+        {
           text: 'Payments & Checkout',
           collapsed: true,
           items: [
