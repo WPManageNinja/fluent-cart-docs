@@ -67,6 +67,8 @@ For stores selling physical products, FluentCart exposes the package details of 
 
 Place the cursor where the tag should appear, click the **shortcode icon `{;}`**, and select the tag from the **Package** group. The tag resolves per line item at send time.
 
+<div v-pre>
+
 | Merge Tag | Renders |
 |-----------|---------|
 | `\{\{item.package_name\}\}` | The package name assigned to the product (e.g., `Gift box`, `Medium Mailer`) |
@@ -74,6 +76,8 @@ Place the cursor where the tag should appear, click the **shortcode icon `{;}`**
 | `\{\{item.dimensions\}\}` | The package dimensions in `L x W x H unit` format (e.g., `1 x 1 x 1 in`) |
 | `\{\{item.product_weight\}\}` | The product's own weight with its unit (e.g., `5 kg`) |
 | `\{\{item.shipping_weight\}\}` | The total shipping weight - product weight plus empty-package weight (e.g., `6 kg`) |
+
+</div>
 
 **Default email body already includes package info**
 
