@@ -64,4 +64,12 @@ This detailed view is broken down into several key sections:
 * **Customer Information:** This sidebar gives you a quick overview of the customer, including their contact details, their total lifetime value (LTV), and a direct link to their full customer profile.
 * **Labels:** Here, you can add internal labels to help you organize and segment your subscribers for your own reference (e.g., "VIP," "Early Adopter"). This is a great way to add internal notes and context to a subscriber's record.
 
+### Cancellation Notification to the Customer
+
+Whenever a subscription is cancelled — by the customer from their dashboard or by you from the admin — FluentCart automatically sends the customer a cancellation email that includes the **access end date**.
+
+This makes it clear when the customer's access actually ends, instead of leaving them to guess whether cancellation is immediate or runs through the paid period. For stores running memberships, courses, or licensed products, this helps reduce repeat "do I still have access?" support tickets after a cancellation.
+
+You can enable, disable, or customise the body of this email from **FluentCart Pro > Settings > Email Configuration > Notifications**. See [Configuring Email Notifications](/guide/settings-configuration/email-configuration/configuring-email-notification) for details.
+
 ![Managing Subscription Detailed View](/images/product-types-creation/managing-subscription/managing-subscription-3.webp)

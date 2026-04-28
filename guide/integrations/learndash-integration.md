@@ -56,6 +56,10 @@ Here’s what each setting does:
 * **Add to Courses:** Use the dropdown menu to select the LearnDash courses you want to enroll the user in when this rule runs.
 * **Add to LearnDash Groups:** Similarly, select any LearnDash group(s) you want to add the user to.
 * **Remove from selected Courses/Groups on Refund or Subscription Access Expiration:** This is a vital setting for managing access automatically. Check this box if you want FluentCart to automatically remove the user from the selected courses/groups if their related order is refunded, or if their subscription expires or is canceled.
+* **Set Course Expiration from Subscription / License Expiry:** Enable this option to automatically expire the customer's LearnDash course access on the same date as their **subscription expiration** or **license expiration**. When the underlying commercial relationship ends — the subscription lapses or the license reaches its expiry date — LearnDash receives the same expiry date for the enrolled course(s), so the customer loses access at exactly the right moment. This keeps course access aligned with billing instead of letting the two systems drift apart.
+    * Use this for **membership-style course bundles** where access is tied to an ongoing subscription.
+    * Use this for **time-limited licensed courses** where each license carries its own expiry (e.g., a one-year course license).
+    * If both a subscription and a license are connected to the order, FluentCart will use whichever expiry is earliest, so the customer never keeps access past either deadline.
 * **Event Trigger:** Select the FluentCart action from the dropdown that runs this rule. For course access after purchase, you can use `Order Paid (Payment / Subscription)`. Other order and subscription triggers are available for different needs. 
 * **Run on Selected Variations Only (Available for Product-Specific Feeds Only):** If the product has different variations (e.g., "Basic Access," "Premium Access"), you can use this dropdown to make the rule run only when a specific variation is purchased. Leave empty to apply to all variations.
 * **Enable this Integration:** Make sure this toggle at the top right is switched **ON** (blue) to make the rule active.
@@ -78,3 +82,14 @@ Here’s how you would set up the feeds:
 2.  **Inside "Photography Bundle" Product:** Add a LearnDash feed. In "Add to Courses," select both the "Beginner Photography" AND the "Advanced Editing" LearnDash courses. Set Trigger to **Order Paid**.
 
 With these simple, product-specific rules, FluentCart automatically handles the correct enrollment for every purchase, ensuring your students get exactly what they paid for instantly.
+
+### Use Case Example: Time-Limited Membership Course
+
+If you sell course access as a yearly subscription or a time-limited license, you can use **Set Course Expiration from Subscription / License Expiry** to keep LearnDash and FluentCart perfectly in sync:
+
+1.  Create a subscription product (e.g., "Annual Photography Membership") in FluentCart.
+2.  On the product, add a LearnDash feed and select the courses included in the membership.
+3.  Enable **Set Course Expiration from Subscription / License Expiry** in the feed.
+4.  Set Trigger to **Order Paid (Payment / Subscription)**.
+
+When a customer subscribes, LearnDash gives them access until the subscription's next expiry date. If they renew, the course expiry rolls forward automatically. If they cancel or fail to renew, course access ends on the same day as their subscription — no manual cleanup required, and no risk of a customer losing access early or keeping it for free.

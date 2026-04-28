@@ -29,4 +29,7 @@ This screen gives the customer all the essential information about their license
 * **Expiration Date:** This shows when the license is set to expire. For lifetime licenses, this will typically say "Never Expires."
 * **View Order:** This link will take the customer directly to the original order in their **Purchase History** where they bought this license.
 
+>[!Note]
+>If the license is connected to a LearnDash course through a [LearnDash integration feed](/guide/integrations/learndash-integration) with **Set Course Expiration from Subscription / License Expiry** enabled, the customer's course access will end on the same date shown here. Renewing the license automatically extends both the license and the connected LearnDash course access.
+
 ![Screenshot of Licenses](/images/customer-dashboard/licenses/licenses-2.webp)

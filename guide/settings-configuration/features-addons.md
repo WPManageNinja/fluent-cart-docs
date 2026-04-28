@@ -51,3 +51,27 @@ After toggling any feature on or off:
 2.  Click the **Save Settings** button located at the bottom right of the screen.
 
 > **Note:** Some features, like [Cloudflare Turnstile](/guide/integrations/cloudflare-turnstile-integration), may require additional configuration (such as API keys) immediately after activation to function correctly.
+
+## Installing Licensed Addons (One-Click Installer)
+
+Below the core feature toggles, the **Features & Addon** page also lists every licensed addon that ships with your FluentCart Pro license — for example, Fluent PDF and other premium extensions. You no longer need to download a ZIP file from your account, upload it through the WordPress plugin uploader, and then activate it. The whole flow has been collapsed into a single click.
+
+### Prerequisites
+
+Before the one-click installer becomes available, make sure:
+
+1.  You have a valid FluentCart Pro license verified on the site. See [Licensing Settings](/guide/settings-configuration/licensing-settings) for how to verify your license.
+2.  Your server can make outbound HTTPS requests to the FluentCart update servers (this is the case on virtually every standard WordPress host).
+
+### How to Install an Addon in One Click
+
+1.  Navigate to **FluentCart Pro > Settings > Features & Addon**.
+2.  Scroll to the **Plugin Addons** section at the bottom of the page.
+3.  Find the addon card for the addon you want to install (e.g., Fluent PDF).
+4.  Click the **Install & Activate** button on the card.
+
+FluentCart will fetch the addon directly from the licensed update server, install it, and activate it automatically. The card's status badge will switch to **Active** as soon as the process finishes — you can use the addon immediately, no page reload or upload needed.
+
+> **Note:** If the **Install & Activate** button is greyed out or replaced with a license prompt, your FluentCart Pro license either hasn't been verified or has lapsed. Verify your license from **Settings > Licensing** and the installer will become available again.
+
+This makes the addon ecosystem feel like a first-class part of FluentCart — installing a premium addon now takes the same amount of effort as flipping a feature toggle.

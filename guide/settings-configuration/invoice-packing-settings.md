@@ -43,3 +43,9 @@ The customization process is identical for each of the five templates. Select th
 After you have finished customizing your templates, you must save your changes.
 
 Scroll to the bottom of the page and click the **Save Settings** button. Your new layouts will now be used when generating these documents for future orders.
+
+### VAT Numbers on Generated PDFs
+
+When a customer provides a VAT number at checkout, FluentCart automatically renders it inside the **billing address block** of generated PDF receipts (Order Receipt, Renewal Receipt, Refund Notice, and Invoice). You don't need to edit the template or add a custom shortcode — the VAT line appears under the customer's address only when a VAT number is present, so B2C receipts are unaffected.
+
+This makes the documents compliance-ready for B2B customers in the EU, UK, and other VAT jurisdictions. See [PDF Invoice Templates](/guide/settings-configuration/email-configuration/pdf-invoice) for the full PDF customization workflow.

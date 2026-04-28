@@ -10,12 +10,15 @@ Here is your comprehensive guide to setting up and designing your first custom P
 
 ## Step 1: Install and Activate the Fluent PDF Addon
 
-Before you can start designing, you need to turn the feature on.
+Before you can start designing, you need to turn the feature on. Fluent PDF is a licensed addon, so it ships with the FluentCart Pro one-click installer — there is no ZIP to download or upload.
 
-1. Navigate to **FluentCart > Settings** in your WordPress dashboard.
-2. In the left-hand menu, click on the **Features & addon** tab.
-3. Scroll down to the bottom of the page to find the Plugin Addons section.
-4. Locate the **Fluent PDF** card and click the dark **Install & Activate** button.
+1. Make sure your FluentCart Pro license is verified on the site. See [Licensing Settings](/guide/settings-configuration/licensing-settings) if you haven't done this yet.
+2. Navigate to **FluentCart > Settings** in your WordPress dashboard.
+3. In the left-hand menu, click on the **Features & addon** tab.
+4. Scroll down to the bottom of the page to find the **Plugin Addons** section.
+5. Locate the **Fluent PDF** card and click the dark **Install & Activate** button.
+
+FluentCart will fetch the addon from the licensed update server, install it, and activate it in a single step. The card switches to **Active** as soon as it's ready.
 
 ![PDF Invoice](/images/store-management/pdf-invoice/pdf-1.webp)
 
@@ -80,6 +83,15 @@ Here are a few examples of how they work in action:
     * **What the customer sees:** A perfectly formatted, multi-row table showing every single product they bought, the quantity, and the individual prices.
 
 You can freely move these tags around, change their font size, or make them bold just like normal text!
+
+#### Customer VAT Number on Receipts
+
+If a customer provides a VAT number at checkout, FluentCart now automatically includes it inside the **billing address block** of every generated PDF (Order Receipt, Renewal Receipt, Refund Notice, and Invoice). You don't need to add a separate smart tag or modify the template — when the address renders, the VAT number is appended right under the customer's address line.
+
+This makes FluentCart receipts drop-in ready for B2B customers in the EU, UK, and other VAT jurisdictions who need a properly formatted receipt for their own bookkeeping. If the customer has not provided a VAT number, the line is omitted automatically — so receipts for B2C buyers continue to look exactly the same.
+
+>[!Note]
+>VAT numbers are captured during checkout via the EU VAT field. To learn how to enable and configure VAT collection for your store, see [Configuring European Union (EU) VAT](/guide/tax-&-duties/european-union-vat).
 
 ![PDF Invoice](/images/store-management/pdf-invoice/pdf-6.webp)
 

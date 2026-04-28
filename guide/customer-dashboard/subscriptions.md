@@ -48,5 +48,11 @@ Below the details, you will find several important links:
 
 At the bottom of the page, you'll find a complete financial audit trail for your subscription. This table lists every transaction from your very first purchase to the most recent renewal. You can track the Date, Amount, and Status of each payment, and even download a **Receipt** for your records whenever you need one.
 
+### What Happens When a Subscription Is Cancelled
+
+When a subscription is cancelled, the customer automatically receives a cancellation email that includes the **access end date** — the exact date their access will end. This removes the guesswork around whether cancellation is immediate or continues through the paid period and gives the customer a clear timeline.
+
+For stores running courses, memberships, or licensed products, this means buyers always know how much time is left on their plan after cancellation, without needing to contact support.
+
 
 ![Screenshot of Subscription](/images/customer-dashboard/subscriptions/subscriptions-2.webp)
