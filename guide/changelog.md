@@ -1,6 +1,44 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.23
+*Released on April 28, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Subscription access end date in cancellation emails
+• Adds Learndash: User specific course expiration respect to subscription/license
+• Adds VAT numbers in PDF receipt address field
+• Adds One click Licensed addon installer in addon page
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Parse download token with ported site urls issue
+• Fixes fee_total missing column issue for version upgrades
+• Fixes Missing checkout info label in gateway settings
+• Fixes Advance filter merge relation issue
+• Fixes Timezone resolution against deprecated PHP 8.4 aliases
+• Fixes Licenses package download issue for portes site urls
+• Fixes Empty state rendering in dark mode for reports and dashboard
+• Fixes Supports for comma decimal separator in product variant cost
+• Fixes Use singular form for subscription interval units
+• Fixes Close editor modal when navigating from iframe links
+• Fixes Verify stock module active before inventory menu
+• Fixes License status incorrectly shown as "Expired" during grace period.
+• Fixes PDF custom template deletion faild issue
+• Fixes Customer address update/delete permission issue
+• Fixes Regular security audits and ongoing enhancements
+• Fixes Activity title's route not working
+```
+
+```markdown [🚀 Improvements]
+• Enhanced Paddle - allows all default emails, modifiable via filter hook
+• Enhanced Adjust product-card and single-product styles
+```
+
+:::::
+
 ## FluentCart v1.3.21
 *Released on April 22, 2026*
 

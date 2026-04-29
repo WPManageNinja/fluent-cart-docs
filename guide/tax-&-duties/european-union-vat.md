@@ -38,3 +38,9 @@ Once you have selected the method that best fits your business, follow the detai
 * [**Configuring the OSS Method:**](/guide/tax-&-duties/european-vat-with-oss) Follow this guide if you have a single OSS VAT registration for all EU countries.
 * [**Configuring with a Home Country Registration:**](/guide/tax-&-duties/european-vat-home-country) Follow this guide if you are an EU-based micro-business selling less than €10,000 per year to other EU countries.
 * [**Configuring Specific Country Rates:**](/guide/tax-&-duties/european-vat-specific-country) Follow this guide if you manage separate VAT registrations for each EU country you sell to.
+
+### Customer VAT Numbers on PDF Receipts
+
+When a customer enters a VAT number at checkout, FluentCart now renders that VAT number directly inside the **billing address block** of every generated PDF receipt (Order Receipt, Renewal Receipt, Refund Notice, and Invoice).
+
+This makes FluentCart receipts drop-in ready for B2B buyers in the EU, UK, and other VAT jurisdictions who need a properly formatted receipt for their own bookkeeping — no custom template work or manual workaround needed. For B2C orders where no VAT number is provided, receipts continue to look exactly the same. See [PDF Invoice Templates](/guide/settings-configuration/email-configuration/pdf-invoice) for the full PDF setup.

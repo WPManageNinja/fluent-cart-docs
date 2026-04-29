@@ -26,6 +26,10 @@ On this screen, you will see a list of all available email notifications. For ea
 * **Send mail to customer after a refund:** Notifies the customer that a refund has been issued for their order.
 * **Send mail to customer when shipping status changed to shipped:** Informs the customer that their physical order has been shipped.
 * **Send mail to customer when shipping status changed to delivered:** Confirms to the customer that their order has been marked as delivered.
+* **Send mail to customer after a subscription is cancelled:** Notifies the customer that their subscription has been cancelled and includes the **access end date** so they know exactly when their access ends. This is especially important for stores running courses, memberships, or licensed products where billing and access are tied together.
+
+>[!Note]
+>The cancellation email is sent automatically whenever a subscription moves to a cancelled state. The access end date is pulled from the subscription's paid-through period, so customers can see at a glance whether their access ends immediately or continues through the end of the current billing cycle.
 
 #### Enabling or Disabling Notifications
 

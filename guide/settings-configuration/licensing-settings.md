@@ -31,6 +31,20 @@ The Licensing Settings section displays important information about your license
 * **Support Status:** Indicates whether you have access to premium support.
 * **Updates Status:** Shows whether you can receive automatic updates.
 
+## Installing Licensed Addons in One Click
+
+Once your FluentCart Pro license is verified on this page, every premium addon included with your license becomes installable directly from inside FluentCart — no manual download, ZIP upload, or activation step required.
+
+To install an addon:
+
+1.  Go to **FluentCart Pro > Settings > Features & Addon**.
+2.  Scroll to the **Plugin Addons** section.
+3.  Click the **Install & Activate** button on the addon card you want to install.
+
+FluentCart pulls the addon directly from the licensed update server and activates it for you in a single step. For the full walkthrough, see [Features & Addons → Installing Licensed Addons](/guide/settings-configuration/features-addons#installing-licensed-addons-one-click-installer).
+
+> **Note:** If your license expires, the one-click installer is disabled until the license is reverified. The addons you've already installed continue to run, but new installs and updates are paused until you renew.
+
 ## Troubleshooting
 
 If you encounter any issues with your license:
