@@ -429,6 +429,7 @@ export default defineConfig({
               link: '/guide/settings-configuration/email-configuration/', // Link to its index.md
               items: [
                 { text: 'Mailing Settings', link: '/guide/settings-configuration/email-configuration/mailing-settings' },
+                { text: 'Reminders', link: '/guide/settings-configuration/email-configuration/reminders' },
                 { text: 'Configuring Email Notification', link: '/guide/settings-configuration/email-configuration/configuring-email-notification' },
                 { text: 'PDF Invoice Templates', link: '/guide/settings-configuration/email-configuration/pdf-invoice' }
               ]
