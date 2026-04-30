@@ -484,7 +484,8 @@ export default defineConfig({
             { text: 'Customize Store with Bricks', link: '/guide/customization-and-themes/customize-store-with-bricks' },
             { text: 'Advanced Customization with CSS Variables', link: '/guide/customization-and-themes/advanced-customization-using-css' },
             { text: 'Translating FluentCart', link: '/guide/customization-and-themes/translating-fluentcart' },
-            { text: 'FluentCart Shortcodes', link: '/guide/customization-and-themes/fluentcart-shortcode' }
+            { text: 'FluentCart Shortcodes', link: '/guide/customization-and-themes/fluentcart-shortcode' },
+            { text: 'Code Snippets', link: '/guide/customization-and-themes/code-snippets' }
           ]
         },
         {
