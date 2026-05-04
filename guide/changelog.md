@@ -1,6 +1,32 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.25
+*Released on April 30, 2026*
+
+::::: code-group
+
+```markdown [🐞 Bug fixes]
+• Fixes Sites with www and non-www counted as separate activations
+• Fixes Subscription orders with coupon discounts getting stuck after checkout
+• Fixes Duplicate renewal records created during payment processing
+• Fixes Page freeze when clicking empty mini cart
+• Fixes Max-width constraints and responsive padding on product pages
+• Fixes Incorrect coupon expiration time in admin dashboard
+• Fixes Shipping overcharge with multiple shipping classes in cart
+• Fixes Free shipping adding class surcharges with multiple shipping classes
+• Fixes Paddle subscriptions not cancelling immediately after refund
+• Fixes Customer lifetime stats not updating after refund
+• Fixes Double encryption when saving Stripe settings
+• Fixes Raw transaction and subscription status keys shown in customer portal
+```
+
+```markdown [🚀 Improvements]
+• Improves Product variation management
+```
+
+:::::
+
 ## FluentCart v1.3.23
 *Released on April 28, 2026*
 
