@@ -61,6 +61,9 @@ Sometimes, you don’t want a coupon to be used for every single thing in your s
  * **Include/Exclude Categories:** You can choose to make a coupon work only for certain groups of products (like "Winter Gear") or keep it from working on others.
  * **Include/Exclude Products:** If you have one specific product that you don't want to discount, you can list it here to exclude it from the deal.
 
+>[!Note]
+> Both **published** and **Private** products now appear in the Include/Exclude Products dropdown. This means you can apply discounts to private (hidden) products too — perfect for VIP-only deals, beta-tester pricing, or invitation-only promotions where the product isn't publicly listed but still needs a working discount.
+
 #### Restricting by User
 
  * **By Email Address:** You can limit a coupon so only specific people can use it by entering their email addresses here. This is perfect for sending a "thank you" discount to a single loyal customer.

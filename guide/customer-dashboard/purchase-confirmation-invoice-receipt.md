@@ -30,7 +30,11 @@ FluentCart automatically generates an invoice receipt for every order. This invo
 * Payment method used
 * Total paid amount
 * Renewal information (if it’s a subscription-based order)
+* Subscription **setup fee** as a separate line item (when a one-time setup or activation fee was charged at signup)
 * Customer VAT number (rendered automatically inside the billing address block when the customer provides one at checkout)
+
+>[!Note]
+> If the purchased subscription includes a **Setup Fee**, it now appears as a clearly labeled line item on both the invoice receipt and the order confirmation email — so customers always know exactly what the one-time charge was for, on top of the recurring subscription price.
 
 This detailed invoice ensures that customers have all the necessary purchase information in one place. For B2B customers selling into the EU, UK, and other VAT jurisdictions, the VAT number on the receipt makes the document compliance-ready for the buyer's own bookkeeping — no manual workaround needed.
 

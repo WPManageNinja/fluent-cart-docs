@@ -49,7 +49,7 @@ The Order Bump configuration screen is broken down into simple, manageable steps
 
 #### **B. Promotional Product**
 
-* **Select Product:** Choose the specific product you want to offer as the bump. This item will be added to the customer's cart if they accept the offer.
+* **Select Product:** Choose the specific product you want to offer as the bump. This item will be added to the customer's cart if they accept the offer. Both **Published** and **Private** products are now available in this dropdown — so you can offer hidden, customer-specific, or invite-only items as a bump without having to make them publicly visible in your store.
 
 #### **C. Discount**
 
