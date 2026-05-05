@@ -5,7 +5,7 @@ description: ""
 
 # Square Settings
 
-Square is a globally trusted payment gateway that lets you accept Credit and Debit Cards, Apple Pay, Google Pay, and Cash App Pay through a single, secure inline checkout, with no redirects. By connecting Square with FluentCart, you can offer your customers a fast and reliable checkout experience along with support for recurring subscriptions and automatic refunds via webhooks.
+Square is a globally trusted payment gateway that lets you accept Credit and Debit Cards through a single, secure inline checkout, with no redirects. By connecting Square with FluentCart, you can offer your customers a fast and reliable checkout experience along with support for recurring subscriptions and automatic refunds via webhooks.
 
 This guide will walk you through every step of connecting your Square account to FluentCart, from activating the gateway in your store to configuring credentials and setting up webhooks.
 
