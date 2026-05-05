@@ -144,6 +144,8 @@ Enable this to charge a one-time fee at the very start of the subscription, in a
 - **Setup fee label** — The name customers see for this charge at checkout (e.g., `Activation Fee`, `Enrollment Fee`, `One-Time Setup`)
 - **Setup fee amount** — The dollar amount charged once at signup
 
+> **📝 Note:** The setup fee is automatically included as a separate line item on the customer's **purchase confirmation page**, **invoice receipt (PDF)**, and **order confirmation email** — so customers always see exactly what they were charged at signup, separate from their recurring subscription amount.
+
 **Calculate profit/cost** *(Toggle — Optional)*
 Toggle on to track **Cost per item**, **Profit**, and **Margin** for internal reporting on this subscription product.
 
@@ -270,6 +272,8 @@ Limit this variation's subscription to a fixed number of payments. When checked:
 Charge a one-time fee at signup for this variation. When toggled on:
 - **Setup fee label** — The customer-facing name for this charge (e.g., `Activation Fee`)
 - **Setup fee amount** — The one-time charge in dollars
+
+> **📝 Note:** Just like with Simple pricing, the variation's setup fee is rendered as its own line item on the **purchase confirmation page**, **invoice receipt (PDF)**, and **order confirmation email** — keeping the one-time charge transparent and clearly separated from the recurring billing amount.
 
 **Calculate profit/cost** *(Toggle — Optional)*
 Track your internal **Cost per item**, **Profit**, and **Margin** for this subscription variation.
