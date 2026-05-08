@@ -174,3 +174,28 @@ When deleting a page, also remove its sidebar entry — orphan entries produce d
 - Image base: `/images/...` (mapped from `guide/public/images/`)
 - Site assets (logos, robots.txt): `public/`
 - Home: `index.md`  •  Changelog: `guide/changelog.md`  •  Dev stub: `developer/index.md`
+
+---
+
+## 10. Code-aware doc updates (plugin → docs sync)
+
+When a request requires reading the FluentCart **plugin source code** (e.g. "update docs for v1.3.27", "document the new tax country toggle", "what changed in the plugin since 1.3.26"), load the orchestrator skill **`fluentcart-code-to-docs`**. It coordinates reading the plugin → mapping changes to doc pages → writing updates via the existing template specialists.
+
+**Plugin source location (hardcoded sibling repo):**
+```
+/Users/authlab-24/Desktop/fluent-cart
+```
+Default branch is `development`. Tags are plain numbers (`1.3.27`), no `v` prefix. The plugin clone is **read-only** from this session — never edit, commit, or push to it.
+
+**Helper scripts** under `scripts/plugin/`:
+
+| Script | Purpose |
+|---|---|
+| `./scripts/plugin/pull.sh` | Fetch + fast-forward pull on the plugin repo's current branch |
+| `./scripts/plugin/recent-changes.sh [N]` | Last N plugin commits with subject + file count (default 20) |
+| `./scripts/plugin/diff-since.sh <ref>` | Commits + changed files between `<ref>` and HEAD |
+| `./scripts/plugin/find-doc.sh <pattern>` | Locate doc pages mentioning a feature keyword |
+
+**Workflow** is defined in `.claude/skills/fluentcart-code-to-docs/SKILL.md`. Always pair the orchestrator with the master `fluentcart-doc-writer` and the matching template specialist (integration, payment-gateway, product, settings, overview).
+
+**Hard rules:** never copy plugin source code into user-facing docs (docs describe behavior, not implementation), never fabricate behavior the code doesn't support, never commit. End every code-to-docs run with the standard summary block defined in the skill.
