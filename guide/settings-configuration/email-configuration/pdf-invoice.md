@@ -84,6 +84,19 @@ Here are a few examples of how they work in action:
 
 You can freely move these tags around, change their font size, or make them bold just like normal text!
 
+#### Tax & EU VAT Smart Tags
+
+If your store collects tax — especially EU VAT or any other reverse-charge regime — these dedicated tags drop the right values into the right place on every PDF receipt:
+
+* <code v-pre>{{order.tax_breakdown}}</code> — Renders a tidy table of every tax line on the order (e.g. "VAT 19%", "Shipping Tax"). For reverse-charge orders, the amount column shows **Charge reversed** and an automatic footnote, *"\* Tax to be paid on reverse charge basis"*, is appended below the table.
+* <code v-pre>{{order.store_vat_display}}</code> — Your store's VAT number, ready to drop into the header or footer of the receipt.
+* <code v-pre>{{order.buyer_vat_display}}</code> — The buyer's VAT number, captured at checkout. Use this in B2B receipts that need both parties' tax IDs.
+* <code v-pre>{{order.buyer_company_name}}</code> — The buyer's company name from the checkout form.
+* <code v-pre>{{order.buyer_legal_registration_id}}</code> — The buyer's legal registration ID (e.g. company registration number).
+* <code v-pre>{{order.buyer_reverse_charge_declaration}}</code> — A pre-formatted reverse-charge declaration sentence that appears only on B2B EU orders where reverse charge applies. Drop this anywhere in the template; it stays empty for orders that don't qualify.
+
+These tags work alongside the automatic VAT-in-billing-address behavior covered below — they don't conflict, so a complete B2B-ready PDF can include the buyer's VAT in the address, the store's VAT in the header, and a tax breakdown table in the totals section.
+
 #### Customer VAT Number on Receipts
 
 If a customer provides a VAT number at checkout, FluentCart now automatically includes it inside the **billing address block** of every generated PDF (Order Receipt, Renewal Receipt, Refund Notice, and Invoice). You don't need to add a separate smart tag or modify the template — when the address renders, the VAT number is appended right under the customer's address line.

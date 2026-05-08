@@ -64,6 +64,24 @@ This detailed view is broken down into several key sections:
 * **Customer Information:** This sidebar gives you a quick overview of the customer, including their contact details, their total lifetime value (LTV), and a direct link to their full customer profile.
 * **Labels:** Here, you can add internal labels to help you organize and segment your subscribers for your own reference (e.g., "VIP," "Early Adopter"). This is a great way to add internal notes and context to a subscriber's record.
 
+### Subscription Cart Rules
+
+To keep recurring billing predictable, FluentCart enforces two rules at the cart level whenever a customer tries to purchase a subscription:
+
+* **One subscription per cart.** A customer cannot add more than one subscription to the cart at the same time. If they try to add a second subscription, they'll see the message *"Subscription items can't be combined with other products in the cart."*
+* **Quantity is always one.** Subscriptions can't be purchased in bulk in a single transaction. Attempting to set quantity above one returns *"You cannot purchase more than one subscription at a time."*
+* **No mixing with one-time products.** A subscription can't share a cart with one-time items, and vice versa. The same "Subscription items can't be combined…" message blocks the conflicting addition.
+
+These rules run automatically — there is nothing for you to configure. Customers who need to buy a subscription **and** a one-time product simply place two separate orders.
+
+### Reactivating a Cancelled Subscription
+
+If a customer's subscription has been **cancelled**, **paused**, **expired**, **failing**, or **past due**, you can bring it back to life from the **Subscription Details** page. Look for the **Reactivate** action — when reactivation is available for a subscription, FluentCart shows it inline so you don't have to recreate the subscription from scratch.
+
+Subscriptions that were cancelled because of a refund are **also reactivatable** in v1.3.27 and later. Previously a refund-driven cancellation locked the subscription out of reactivation; now the action is available, and FluentCart correctly recalculates the next billing date based on the most recent successful (non-refunded) charge. If every previous charge has already been fully refunded, the next renewal starts a fresh billing cycle.
+
+When a subscription is reactivated, FluentCart fires the **`SubscriptionReactivated`** event. Integrations like FluentCRM, FluentCommunity, and email automations all listen for this event so the customer's tags, course access, and notifications resume in lockstep.
+
 ### Cancellation Notification to the Customer
 
 Whenever a subscription is cancelled — by the customer from their dashboard or by you from the admin — FluentCart automatically sends the customer a cancellation email that includes the **access end date**.
