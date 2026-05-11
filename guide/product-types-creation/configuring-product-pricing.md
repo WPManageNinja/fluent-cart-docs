@@ -71,6 +71,9 @@ Select a pre-configured package from the dropdown. This is the box, envelope, or
 **Product weight**
 Enter the weight of this product and choose the unit (**kg** or **lb**) from the dropdown next to the field. Accurate weights are essential for carrier-calculated shipping rates to work correctly.
 
+**Copy Variation ID** *(Action)*
+Click **Copy Variation ID** to copy the simple product's underlying variant ID to your clipboard. This is the value you'll need when wiring the product into custom code, REST endpoints, automations, or shortcodes that expect a specific variant reference.
+
 **Direct Checkout** *(Link)*
 This generates a unique URL that takes customers straight to the checkout page with this product pre-loaded — bypassing the product page and cart entirely. It's perfect for email campaigns, social media promotions, or any landing page where you want to reduce the number of steps to purchase.
 

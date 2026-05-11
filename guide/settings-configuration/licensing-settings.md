@@ -31,6 +31,12 @@ The Licensing Settings section displays important information about your license
 * **Support Status:** Indicates whether you have access to premium support.
 * **Updates Status:** Shows whether you can receive automatic updates.
 
+## Viewing Activated Sites
+
+Once your license is in use, you can see every domain that has activated one of your products from a single screen. Open **FluentCart Pro > Licenses > Sites** to view the full list — including each site's activated licenses, status, and last-update version.
+
+To learn how to filter the list, drill into a single site's detail view, and run common workflows like renewal outreach and license audits, see [Managing Licensing Sites](/guide/settings-configuration/managing-licensing-sites).
+
 ## Installing Licensed Addons in One Click
 
 Once your FluentCart Pro license is verified on this page, every premium addon included with your license becomes installable directly from inside FluentCart — no manual download, ZIP upload, or activation step required.

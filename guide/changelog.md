@@ -1,6 +1,42 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.3.27
+*Released on May 8, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds List/Grid view switcher and advanced product filtering for Bricks
+• Adds Copy Variation ID action for simple product pricing panel
+• Adds Licensing Sites, Site pages, and advanced site filtering
+• Adds SubscriptionReactivated event
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Order bump free-shipping checkbox issue
+• Fixes Missing shortcode variables in PDF receipt emails
+• Fixes Long file names overflowing receipt page download buttons
+• Fixes Cart allowing mixed or multiple subscriptions
+• Fixes Offline subscriptions with 100% recurring coupons issue when Subscription Activated
+• Fixes Subscription reactivation after refunds
+• Fixes PayPal IPN subscription handling
+• Fixes Redundant admin table search requests
+• Fixes Amount formatting and customer profile display in Site Detail view (Pro)
+• Fixes PHP warnings from deleted/invalid store pages
+• Fixes Admin menu active state style bleeding
+• Fixes Bricks Builder dynamic tag name mismatch
+• Fixes Authorize.net subscription issue
+```
+
+```markdown [🚀 Improvements]
+• Improves Animation experience for table filters
+• Improves Bricks Builder pagination rendering and performance
+• Improves Product Pricing edit UX
+```
+
+:::::
+
 ## FluentCart v1.3.26
 *Released on May 5, 2026*
 
