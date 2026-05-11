@@ -1,6 +1,8 @@
-# Licensing Settings
+# Your FluentCart Pro License
 
-The **Licensing Settings** feature in FluentCart allows you to manage your plugin license and access premium features. This is where you'll enter and verify your license key to unlock all the functionality of FluentCart Pro.
+This page covers **your own** FluentCart Pro license — entering the key you bought from fluentcart.com so your store unlocks Pro features.
+
+If you sell licensed digital products through FluentCart and want to see which **customer sites** have activated those licenses, see [Customer License Sites](/guide/settings-configuration/managing-licensing-sites) instead.
 
 ## Accessing Licensing Settings
 
@@ -35,7 +37,7 @@ The Licensing Settings section displays important information about your license
 
 Once your license is in use, you can see every domain that has activated one of your products from a single screen. Open **FluentCart Pro > Licenses > Sites** to view the full list — including each site's activated licenses, status, and last-update version.
 
-To learn how to filter the list, drill into a single site's detail view, and run common workflows like renewal outreach and license audits, see [Managing Licensing Sites](/guide/settings-configuration/managing-licensing-sites).
+To learn how to filter the list, drill into a single site's detail view, and run common workflows like renewal outreach and license audits, see [Customer License Sites](/guide/settings-configuration/managing-licensing-sites).
 
 ## Installing Licensed Addons in One Click
 

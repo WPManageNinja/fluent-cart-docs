@@ -16,7 +16,16 @@ The plugin's default branch is `development`. Tags are plain `1.3.27` (no `v` pr
 
 ---
 
-## Workflow (5 steps — follow in order)
+## Workflow (6 steps — follow in order)
+
+### 0. Load plugin memory FIRST
+Before doing anything else, **read both** of these files:
+- `.claude/plugin-memory/CATALOG.md` — module-level table of contents (what each plugin module does and which doc page it drives)
+- `.claude/plugin-memory/CHANGES.md` — per-release delta log, newest at top (what the previous release already addressed and what was deferred)
+
+Together these give you the module map and the most recent release context, so you can scope your work *without* rescanning the plugin tree.
+
+If the catalog lists a `Last fully audited:` version older than the version the user is asking about — and you can see they've pulled new code (e.g. `git -C /Users/authlab-24/Desktop/fluent-cart rev-parse HEAD` differs from what's reflected in `CHANGES.md`) — prompt the user to run `./scripts/plugin/sync-memory.sh <prev-tag>` first. That refreshes the FTS5 index (Layer 2) and prints a CHANGES.md skeleton you can build on.
 
 ### 1. Confirm scope
 Before reading any code, decide which of these the user is asking for:
@@ -72,7 +81,8 @@ Use this table. Confirmed against the live plugin layout:
 When a path doesn't fit the table, use `./scripts/plugin/find-doc.sh <feature-name>` to locate doc pages that mention the feature. If nothing matches, the change may need a **new** page — propose its location to the user before creating one.
 
 ### 4. Read the plugin code to understand the feature
-- Read the changed files at the plugin path. Prefer `Read` for files you'll cite; only use `Grep` to locate symbols across the plugin.
+- **Prefer `ctx_search` over `grep` / `find` for symbol lookups in plugin source.** The plugin is FTS5-indexed via context-mode (Layer 2 of `.claude/plugin-memory/`). Searches like `"SubscriptionReactivated"`, `"free_shipping bump"`, `"tax country toggle"` return matching files in milliseconds without re-walking the tree.
+- Use native `Read` only for the specific files surfaced by `ctx_search` or named explicitly in `CATALOG.md`. Don't open files the catalog doesn't list as doc-relevant unless `ctx_search` results point you there.
 - Look for: PHP class docblocks, Vue component prop comments, hook names (`apply_filters`, `do_action`), settings keys, and translatable strings (`__('...', 'fluent-cart')`) — the user-visible surface lives in those.
 - If the change is purely internal (refactor, dead-code removal, type tightening), it usually does **not** need a doc update. Note it and move on.
 
@@ -131,3 +141,10 @@ End your turn with a concise summary:
 ```
 
 This format makes the run reviewable in seconds.
+
+After printing the summary block:
+1. **Append a new entry to `.claude/plugin-memory/CHANGES.md`** at the top, following the shape used by the most recent existing entry. The `sync-memory.sh` skeleton (if the user ran it) gives you most of the body — fill in the doc pages updated/created/skipped sections from your actual run.
+2. **Bump `Last fully audited:`** in `.claude/plugin-memory/CATALOG.md` for every Modules/<X> section the run touched. Use the new release version (e.g. `v1.3.28`).
+3. If a new module was added to the plugin or a doc page was moved, also update the matching CATALOG.md entry's structure (Key files, Drives docs).
+
+Skipping these maintenance steps causes drift — the next session will think the catalog is current when it isn't.

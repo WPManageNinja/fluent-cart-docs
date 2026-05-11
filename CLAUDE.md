@@ -191,11 +191,25 @@ Default branch is `development`. Tags are plain numbers (`1.3.27`), no `v` prefi
 
 | Script | Purpose |
 |---|---|
-| `./scripts/plugin/pull.sh` | Fetch + fast-forward pull on the plugin repo's current branch |
+| `./scripts/plugin/pull.sh` | Fetch + fast-forward pull on the plugin repo's current branch *(legacy — the user now owns pulls; see plugin-memory note below)* |
 | `./scripts/plugin/recent-changes.sh [N]` | Last N plugin commits with subject + file count (default 20) |
 | `./scripts/plugin/diff-since.sh <ref>` | Commits + changed files between `<ref>` and HEAD |
 | `./scripts/plugin/find-doc.sh <pattern>` | Locate doc pages mentioning a feature keyword |
+| `./scripts/plugin/sync-memory.sh <prev-ref>` | Refresh the plugin-memory layer after a pull. Lists changed PHP/Vue files, prints the `ctx_index` invocation Claude should run, and prints a `CHANGES.md` skeleton |
+
+**Plugin memory layer** (added to avoid re-exploring the plugin every release):
+
+```
+.claude/plugin-memory/
+├── CATALOG.md   — module-level table of contents (always loaded by the orchestrator)
+├── CHANGES.md   — per-release delta log, newest first (read first to see what's already addressed)
+└── README.md    — overview of the 3-layer design
+```
+
+Plus an FTS5 index of `app/**/*.php` (and a small Vue allowlist) maintained via `mcp__plugin_context-mode_context-mode__ctx_index` and queried via `ctx_search`. Use `ctx_search` for symbol lookups in plugin source instead of `grep` / `find`.
+
+**Pull rhythm:** the **user** owns `git pull` on the plugin repo. After pulling, the user runs `./scripts/plugin/sync-memory.sh <prev-ref>` and pastes the changelog. Claude does **not** auto-pull and does **not** auto-reindex — keeps memory state unambiguous.
 
 **Workflow** is defined in `.claude/skills/fluentcart-code-to-docs/SKILL.md`. Always pair the orchestrator with the master `fluentcart-doc-writer` and the matching template specialist (integration, payment-gateway, product, settings, overview).
 
-**Hard rules:** never copy plugin source code into user-facing docs (docs describe behavior, not implementation), never fabricate behavior the code doesn't support, never commit. End every code-to-docs run with the standard summary block defined in the skill.
+**Hard rules:** never copy plugin source code into user-facing docs (docs describe behavior, not implementation), never fabricate behavior the code doesn't support, never commit. End every code-to-docs run with the standard summary block defined in the skill, then append a new entry to `.claude/plugin-memory/CHANGES.md` and bump `Last fully audited:` in `CATALOG.md` for every module the run touched.
