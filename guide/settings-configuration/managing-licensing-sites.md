@@ -1,8 +1,10 @@
-# Managing Licensing Sites (Pro)
+# Customer License Sites (Pro)
 
-The **Sites** view in FluentCart Pro gives you a complete picture of every site that has activated one of your licenses. Instead of scrolling through individual licenses to find which domains are using them, you can see the full activation footprint at a glance, drill into any single site, and filter the list to surface exactly the activations you care about.
+This page is for **vendors**: store owners who sell licensed digital products through FluentCart's License module and need to see every **customer site** that has activated one of those licenses.
 
-This page is part of the **Licensing** module and requires an active FluentCart Pro license. To activate or troubleshoot the license itself, see [Licensing Settings](/guide/settings-configuration/licensing-settings).
+If you're trying to activate **your own** FluentCart Pro license (the one you bought to unlock Pro features), see [Your FluentCart Pro License](/guide/settings-configuration/licensing-settings) instead.
+
+The Sites view gives you a complete picture of every site running one of your licenses — without scrolling through individual licenses to find which domains are using them. You can see the full activation footprint at a glance, drill into any single site, and filter the list to surface exactly the activations you care about.
 
 ## Accessing Licensing Sites
 

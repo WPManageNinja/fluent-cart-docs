@@ -443,8 +443,14 @@ export default defineConfig({
               ]
             },
             { text: 'Features & Addons', link: '/guide/settings-configuration/features-addons' },
-            { text: 'Licensing Settings (FluentCart License)', link: '/guide/settings-configuration/licensing-settings' },
-            { text: 'Managing Licensing Sites (Pro)', link: '/guide/settings-configuration/managing-licensing-sites' }
+            {
+              text: 'Licensing',
+              collapsed: true,
+              items: [
+                { text: 'Your License', link: '/guide/settings-configuration/licensing-settings' },
+                { text: 'Customer Sites (Pro)', link: '/guide/settings-configuration/managing-licensing-sites' }
+              ]
+            }
           ]
         },
         {
