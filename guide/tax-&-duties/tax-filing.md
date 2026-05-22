@@ -6,11 +6,15 @@ This guide will show you how to use this feature to make your tax season much ea
 
 ### Accessing the Taxes Screen
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro**.
+1.  From your WordPress dashboard, navigate to **FluentCart**.
 2.  Hover over the **More** menu item in the top navigation bar.
 3.  Click on **Taxes**.
 
 This will take you to the main Taxes screen, where you'll see a comprehensive table of all the taxes your store has collected.
+
+::: info
+The Taxes screen is the reporting view for the rates you've already configured on the [Tax Regions](/guide/tax-&-duties/tax-rates) and [EU VAT](/guide/tax-&-duties/european-union-vat) pages. Set those up first if you're starting fresh — there's nothing to file until orders have been placed against active rates.
+:::
 
 ![Tax Filing](/guide/public/images/tax/tax-filing/tax-filing-1.png)
 

@@ -69,6 +69,22 @@ Don't write "Hope this helps!" / "That's it!" / "Conclusion".
 
 ## 3. Formatting conventions
 
+### 3.0 Punctuation discipline — no em dashes
+
+**Do not use em dashes (`—`) in doc pages** unless they are critically needed. Em dashes were over-used in earlier writing; new pages should prefer cleaner alternatives. Reach for, in order:
+
+1. **Colon** — for label-then-description (`**Cost per item:** What this product costs to produce`).
+2. **Comma or parentheses** — for parenthetical asides (`Inventory (visible only when tax is enabled)`).
+3. **Period + new sentence** — when the second clause is a full thought.
+
+Only keep an em dash if removing it genuinely hurts readability — e.g., setting off a stark contrast inside a sentence that no other punctuation handles cleanly. When in doubt, rewrite without it.
+
+This applies to:
+- Body prose
+- Bullet item descriptions
+- Inline annotations (`*(Toggle, optional)*` not `*(Toggle — Optional)*`)
+- Callout text
+
 ### 3.1 Bold patterns (memorize these four)
 
 | Use | Example |
@@ -87,19 +103,21 @@ Two acceptable patterns. Pick one per page and stay consistent.
 * **Email Address:** A system-required field used for order confirmations and communication. This field cannot be disabled.
 ```
 
-**Pattern B — Bold label, em dash, short phrase (used for compact lists):**
+**Pattern B — Bold label, colon, short phrase (used for compact lists):**
 ```
-- **Cost per item** — What this product actually costs you to source or produce
-- **Profit** — Auto-calculated (Price minus Cost)
-- **Margin** — Your profit as a percentage, also auto-calculated
+- **Cost per item:** What this product actually costs you to source or produce
+- **Profit:** Auto-calculated (Price minus Cost)
+- **Margin:** Your profit as a percentage, also auto-calculated
 ```
 
-Annotate optional/required state inline: `*(Required)*`, `*(Optional)*`, `*(Collapsible section)*`, `*(Toggle — Optional)*`.
+Both patterns use a colon — Pattern A for full descriptions, Pattern B for terse one-liners. Do not use em dashes between the label and the description.
+
+Annotate optional/required state inline: `*(Required)*`, `*(Optional)*`, `*(Collapsible section)*`, `*(Toggle, optional)*`.
 
 ### 3.3 Lists
 - Numbered (`1.` / `1.  ` with two trailing spaces is also seen) for sequential procedures.
-- Bullets (`*` or `-` — match the surrounding file) for non-sequential enumerations.
-- Always introduce a list with a bridge sentence — never drop the list in cold.
+- Bullets (`*` or `-`, matching the surrounding file) for non-sequential enumerations.
+- Always introduce a list with a bridge sentence. Never drop the list in cold.
 
 ### 3.4 Cross-link density
 About one internal link per 3–4 sentences in narrative prose. Weave links into the bold name of the linked feature:
@@ -162,6 +180,7 @@ This setting is directly linked to your payment gateways. When you set the store
 - Write `target="_blank"` on links.
 - Drop a numbered list without a bridge sentence above it.
 - End a page with a generic "That's it!" / "Hope this helps!" sign-off.
-- Invent screenshots — only reference images that physically exist or that the user has indicated will be added.
+- Invent screenshots. Only reference images that physically exist or that the user has indicated will be added.
+- Use em dashes (`—`) in body prose, bullets, or annotations unless removing the em dash genuinely hurts readability. Prefer colon, comma, parentheses, or a period (see §3.0).
 - Edit `.vitepress/dist/` or `.vitepress/cache/` (generated).
 - Commit unless the user explicitly asks.

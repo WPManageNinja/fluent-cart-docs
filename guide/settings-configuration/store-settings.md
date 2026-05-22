@@ -38,7 +38,18 @@ Provide your physical business address details. This information can be used for
 
     ![Screenshot of Store Settings - Store Setup Tab](/images/settings-configuration/store-setting/store-settings-setup.webp)
 
-### 4. Currency
+### 4. Business Details
+
+Below the address fields you'll find the **Business Details** block — your legal business identity, used on receipts, invoices, and anywhere FluentCart needs to display official store information for compliance.
+
+* **Company Name:** Your registered business name as it should appear on receipts and invoices.
+* **Legal Registration ID:** Your company registration number (Companies House number in the UK, state filing number in the US, etc.). Shown on PDF receipts where local rules require business identification.
+* **Seller VAT ID:** Your store's EU VAT registration number. Appears in PDF receipts and is rendered into the <code v-pre>{{order.store_vat_display}}</code> smart tag for email templates. Use this field if you collect EU VAT — see [Configuring European Union (EU) VAT](/guide/tax-&-duties/european-union-vat) for how the VAT ID ties into reverse-charge handling.
+* **Seller Tax ID:** Your jurisdiction's general tax identification number (US EIN, UK UTR, AU ABN, etc.). Use this field when you need a non-VAT tax ID on receipts.
+
+![Screenshot of Store Settings - Business Details block]()
+
+### 5. Currency
 
 Configure the currency settings for your store's transactions.
 
@@ -48,7 +59,7 @@ Configure the currency settings for your store's transactions.
 
     ![Screenshot of Store Settings - Store Setup Tab](/images/settings-configuration/store-setting/store-currency-setup.webp)
 
-### 5. Payment View
+### 6. Payment View
 
 The Payment View setting allows you choose how payment methods look to your customers on the checkout page. You can pick from a dropdown options:
 

@@ -225,6 +225,7 @@ export default defineConfig({
                 { text: 'Creating Product Bundles', link: '/guide/product-types-creation/creating-product-bundles' },
                 { text: 'Bulk Product Import', link: '/guide/product-types-creation/bulk-product-import' },
                 { text: 'Configuring Product Pricing', link: '/guide/product-types-creation/configuring-product-pricing' },
+                { text: 'Per-Variation Tax Settings', link: '/guide/product-types-creation/per-variation-tax' },
                 { text: 'Managing Product integrations (Product-Specific)', link: '/guide/product-types-creation/managing-product-integrations' },
                 { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
                 { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' },
@@ -326,17 +327,8 @@ export default defineConfig({
               items: [
                 { text: 'Configuring Tax & Classes', link: '/guide/tax-&-duties/configuration-and-classes' },
                 { text: 'Setting Up Tax Rates', link: '/guide/tax-&-duties/tax-rates' },
+                { text: 'European Union (EU) VAT', link: '/guide/tax-&-duties/european-union-vat' },
                 { text: 'Tax Filing', link: '/guide/tax-&-duties/tax-filing' }
-
-              ]
-            },
-            {
-              text: 'European Union (EU) VAT',
-              link: '/guide/tax-&-duties/european-union-vat', 
-              items: [
-                { text: 'European Union VAT with the OSS Method', link: '/guide/tax-&-duties/european-vat-with-oss' },
-                { text: 'European Union VAT with a Home Country Registration', link: '/guide/tax-&-duties/european-vat-home-country' },
-                { text: 'European Union VAT with Specific Country Rates', link: '/guide/tax-&-duties/european-vat-specific-country' },
               ]
             },
           ]
