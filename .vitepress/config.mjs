@@ -325,7 +325,7 @@ export default defineConfig({
               text: 'Tax & Duties Overview',
               link: '/guide/tax-&-duties/tax-&-duties-overview',
               items: [
-                { text: 'Configuring Tax & Classes', link: '/guide/tax-&-duties/configuration-and-classes' },
+                { text: 'Tax Configuration', link: '/guide/tax-&-duties/configuration-and-classes' },
                 { text: 'Setting Up Tax Rates', link: '/guide/tax-&-duties/tax-rates' },
                 { text: 'European Union (EU) VAT', link: '/guide/tax-&-duties/european-union-vat' },
                 { text: 'Tax Filing', link: '/guide/tax-&-duties/tax-filing' }
