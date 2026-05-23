@@ -99,27 +99,44 @@ Some regions apply more than one tax to the same line — for example a federal 
 
 ### Understanding Compound Taxes: A Practical Example
 
-Imagine you are a Canadian store selling a product for $100. You need to apply two taxes:
+The fastest way to see what **Compound** actually does is to compare the same order with the checkbox switched off versus on. Below is the classic Canadian setup: a federal **GST** plus a Quebec **PST** stacked on top of a $100 product.
 
-* A 5% **GST** (Goods and Services Tax), a federal tax.
-* A 7% **PST** (Provincial Sales Tax), a provincial tax that must be calculated *after* the GST has been added.
+**The shared setup (only the Compound flag changes between the two scenarios below):**
 
-**Setup:**
+| Tax | Rate | Priority | Compound |
+|---|---|---|---|
+| **GST** (Goods and Services Tax) | 5% | 1 | No |
+| **PST** (Provincial Sales Tax) | 7% | 2 | *toggled per scenario* |
 
-* **GST:** Rate 5%, Priority 1, Compound **No**.
-* **PST:** Rate 7%, Priority 2, Compound **Yes**.
+#### Scenario A: Compound OFF (both taxes calculated on the $100 subtotal)
 
-**How FluentCart calculates the total:**
+| Step | Calculation | Amount |
+|---|---|---|
+| 1. GST applied first (Priority 1) | $100 × 5% | $5.00 |
+| 2. PST applied next, Compound OFF | $100 × 7% | $7.00 |
+| Total tax | $5.00 + $7.00 | **$12.00** |
+| **Order total** | $100 + $12.00 | **$112.00** |
 
-1. Priority 1 (GST) first — $100 × 5% = **$5.00**. Running total: $105.00.
-2. Priority 2 (PST) next — because Compound is on, it's calculated against the new total: $105.00 × 7% = **$7.35**.
+Each tax is calculated independently against the original $100. The order of priority doesn't change the final number.
 
-**Final totals:**
+#### Scenario B: Compound ON (PST calculated on the GST-inclusive total, the real Quebec rule)
 
-* Total tax: $5.00 (GST) + $7.35 (PST) = **$12.35**.
-* Final order total: $100 + $12.35 = **$112.35**.
+| Step | Calculation | Amount | Running total |
+|---|---|---|---|
+| 1. GST applied first (Priority 1) | $100 × 5% | $5.00 | $105.00 |
+| 2. PST applied next, Compound ON | $105.00 × 7% | $7.35 | $112.35 |
+| Total tax | $5.00 + $7.35 | **$12.35** | |
+| **Order total** | $100 + $12.35 | **$112.35** | |
 
-Setting PST to **Compound** with a higher priority number ensures the calculation happens in the correct order.
+Because Compound is on, PST is charged against the running total *after* GST, not against the original subtotal. That's the "tax on tax" effect.
+
+#### Why the difference matters
+
+The gap is $0.35 on a $100 order. On a $1,000 order it grows to $3.50, on a $10,000 order to $35.00, and on a $100,000 invoice to $350. Getting **Compound** right matters more as orders scale.
+
+#### When to turn Compound on
+
+Switch **Compound** on whenever your local tax law says a tax must be applied **on top of** another tax that's already in the cart (Quebec PST on GST, Indian SGST on CGST, and similar stacked regimes are the common cases). Leave it off when each tax is calculated independently against the line subtotal. If you're not sure which model your jurisdiction follows, confirm with a tax advisor before going live.
 
 ## Tax Overrides
 
@@ -142,7 +159,7 @@ Click **Add Tax Override** to open the modal. Fill in:
 * **Tax label** — the label shown on the matched line at checkout and on receipts.
 * **Location** — the country this override applies in.
 * **City (optional)** — narrows the override to a specific city. Leave empty to match every city in the country.
-* **Postcode (optional)** — narrows further by postcode. You can enter a single value (`9302`) or a range (`9302-9399`) to match any postcode in that band.
+* **Postcode (optional)** — narrows further by postcode. You can enter a single value (`9302`) or a range (`9302:9399`) to match any postcode in that band. Here you have to use `:` to define the range.
 * **Tax rate (%)** — the rate to apply on a match.
 
 Click **Add override** to save. The override appears in the table.
