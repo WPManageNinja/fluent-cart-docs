@@ -11,13 +11,11 @@ This guide walks through the list, the region detail page, multi-class rates, mu
 
 This opens the **Tax Regions** screen.
 
----
-
 ## The Tax Regions List
 
 The Tax Regions screen is a single sortable table of every country FluentCart knows about (pre-seeded — you don't need to add countries first).
 
-![Screenshot of the Tax Regions list with the EU row collecting and other countries inactive]()
+![Screenshot of the Tax Regions list with the EU row collecting and other countries inactive](/images/tax/tax-rates/tax-rates-settings.webp)
 
 ### Reading the List
 
@@ -40,21 +38,31 @@ Both write to the same setting. Switching a region off doesn't delete its config
 
 Use the **Search regions...** box at the top right to jump to a country by name. Helpful when the list is long.
 
----
-
 ## Setting Rates for a Region
 
 Click any row to open the **region detail page**, where you configure rates for that country.
 
-![Screenshot of the EU region detail page with the Standard class tab active and country rates visible]()
+![Screenshot of a region detail page with the VAT/GST/Tax Number card and the Base taxes card visible](/images/tax/tax-rates/tax-rates-settings-1.webp)
 
-### The Region Detail Page
+The breadcrumb at the top reads **Tax Regions > [Region name]** so you always know which region you're editing. The page itself is two cards stacked above the Tax Overrides block.
 
-At the top you'll see a card describing what's being collected (e.g. **Collect VAT cross-border** for the EU, **Collect Tax** for non-EU countries) plus a status badge and the enable/disable toggle described above. Below the card is the **Destination country rates** section — this is where you actually set rates.
+#### VAT/GST/Tax Number
+
+The top card holds a single field where you record **your store's own registration number** for this region (for example your Canadian GST/HST number, a UK VAT number, or any equivalent identifier the region requires). Enter the number and click **Save** in the card's top-right to persist it. The number is used on receipts and PDF invoices that ship to customers in the region.
+
+Leave the field blank if you aren't registered in this region yet.
+
+#### Base Taxes
+
+The second card is where you set the actual rates. A pink advisory banner at the top of the card reminds you that:
 
 ::: info
-Rates are **pre-filled with defaults** for many countries and tax classes, including the EU. You should still verify them against current tax law — FluentCart's defaults are a convenience, not a legal guarantee. The on-screen advisory says it well: "Rates are pre-filled for convenience and may not reflect current laws — verify with a tax advisor before going live."
+Rates are **pre-filled for convenience** and may not reflect current laws. Verify them against current tax law before going live, and use the **+** button next to the class tabs to add tax classes for products taxed at different rates (food, books, digital goods, etc.). FluentCart's defaults are a starting point, not a legal guarantee.
 :::
+
+Below the banner you'll find the **class tabs**, a **Search country/s in region…** field to jump to a specific sub-region, and the **per-region rate table** itself. The columns map to a row's **Region**, its **Rate (%)**, the customer-facing **Tax Label**, and a **Compound** dropdown that controls how the row stacks on top of other taxes in the same region (covered in [Compound and Priority](#compound-and-priority-multi-tax-scenarios) below).
+
+When you're done editing a class tab, click **Save Rates** at the bottom-right of the card. **Reset to default** sits next to it and reverts the active class's rows to FluentCart's shipped defaults.
 
 ### Tax Class Tabs
 
@@ -81,8 +89,6 @@ Click **Reset to default** to discard the rates in the current class tab and res
 ### Saving Rates
 
 Click **Save Rates** at the bottom of the rate table to persist your changes for the active class. Switch tabs and click Save again on each class you've edited.
-
----
 
 ## Compound and Priority (Multi-Tax Scenarios)
 
@@ -115,13 +121,11 @@ Imagine you are a Canadian store selling a product for $100. You need to apply t
 
 Setting PST to **Compound** with a higher priority number ensures the calculation happens in the correct order.
 
----
-
 ## Tax Overrides
 
 Overrides let you charge a different rate when a more specific condition is met — for example, a different VAT rate on shipping to Vienna, or a reduced rate for the `books` category in France. They live in a dedicated section below the rate table on every region detail page.
 
-![Screenshot of the Tax Overrides section with the Add Tax Override modal opened]()
+![Screenshot of the Tax Overrides section with the Add Tax Override modal opened](/images/tax/tax-rates/tax-rates-settings-2.webp)
 
 ### What Overrides Do
 
@@ -165,11 +169,3 @@ Each row in the **Tax Overrides** table has action icons:
 ### Setup-Fee Tax Display
 
 When a tax rate matches a setup fee (one-time fees on subscription products), the matching rate's own label is shown on the receipt line — not a generic "Setup Fee Tax". This keeps customer-facing copy consistent with how you've labelled the underlying rate.
-
----
-
-## Next Steps
-
-* If you sell into the EU, configure cross-border collection on the [EU VAT page](/guide/tax-&-duties/european-union-vat).
-* Once you start collecting, use the [Tax Filing screen](/guide/tax-&-duties/tax-filing) to review and report what you've collected.
-* For per-variation tax behaviour (e.g. one variant is tax-exempt or uses a different class), see [Per-Variation Tax Settings](/guide/product-types-creation/per-variation-tax).

@@ -58,7 +58,9 @@ Click **Configure** (or **Save** on later edits) to apply.
 
 ![Screenshot of the OSS registration form]()
 
-Once saved, FluentCart applies the correct destination-country VAT rate to every EU sale automatically, all reported under your single OSS registration. Rates and labels are managed from the **Destination country rates** table beneath the card — see [Managing Per-Class Rates and Labels](#managing-per-class-rates-and-labels).
+Once saved, the cross-border card's header switches into status mode: a green checkmark next to the card title, an **EU (OSS)** chip, and a **Collecting in N regions** counter (where N reflects how many countries are currently active). A kebab (`⋮`) menu on the right of the header is where the **Stop collecting** action lives once a method is configured.
+
+FluentCart now applies the correct destination-country VAT rate to every EU sale automatically, all reported under your single OSS registration. Rates and labels are managed from the **Destination country rates** panel inside the card, see [Managing Per-Class Rates and Labels](#managing-per-class-rates-and-labels).
 
 ---
 
@@ -139,7 +141,15 @@ Each row in the inline registration list has action icons:
 
 ## Managing Per-Class Rates and Labels
 
-All three methods share the same rate-management UI in the **Destination country rates** table. This section covers the mechanics once.
+All three methods share the same rate-management UI in the **Destination country rates** panel, which sits inside the cross-border card as a collapsible section. Its header shows the active country count (for example, **Destination country rates (28)**) so you can see the scope at a glance. This section covers the mechanics once.
+
+A pink advisory banner runs across the top of the panel:
+
+::: info
+Rates are **pre-filled for convenience** and may not reflect current laws. Verify them against current law before going live, and use the **+** button next to the class tabs to add tax classes for products taxed at different rates (food, books, digital goods, etc.). FluentCart's defaults are a starting point, not a legal guarantee.
+:::
+
+A **Search country or region…** field sits directly above the table, handy when the panel is showing all 27 EU member states (plus any extras) and you want to jump straight to a specific row.
 
 ![Screenshot of the destination country rates table with per-class tabs and Tax Label inputs]()
 
@@ -196,7 +206,7 @@ See [Tax Overrides on the Setting Up Tax Rates page](/guide/tax-&-duties/tax-rat
 
 ### Stop Collecting
 
-Click **Stop collecting** at the top of the cross-border card to clear the current method. The card re-shows the initial setup prompt so you can pick again from scratch.
+Open the kebab (`⋮`) menu on the right of the cross-border card header and choose **Stop collecting** to clear the current method. The card re-shows the initial setup prompt so you can pick again from scratch.
 
 ### Switch to a Different Method
 
