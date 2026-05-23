@@ -54,7 +54,7 @@ Leave the field blank if you aren't registered in this region yet.
 
 #### Base Taxes
 
-The second card is where you set the actual rates. A pink advisory banner at the top of the card reminds you that:
+The second card is where you set the actual rates. A advisory banner at the top of the card reminds you that:
 
 ::: info
 Rates are **pre-filled for convenience** and may not reflect current laws. Verify them against current tax law before going live, and use the **+** button next to the class tabs to add tax classes for products taxed at different rates (food, books, digital goods, etc.). FluentCart's defaults are a starting point, not a legal guarantee.
