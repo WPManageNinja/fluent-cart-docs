@@ -166,6 +166,3 @@ Each row in the **Tax Overrides** table has action icons:
 * **Edit (pencil)** — re-opens the override form with current values.
 * **Delete (trash)** — removes the override (confirmation required).
 
-### Setup-Fee Tax Display
-
-When a tax rate matches a setup fee (one-time fees on subscription products), the matching rate's own label is shown on the receipt line — not a generic "Setup Fee Tax". This keeps customer-facing copy consistent with how you've labelled the underlying rate.
