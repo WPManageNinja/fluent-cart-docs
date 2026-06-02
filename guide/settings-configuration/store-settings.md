@@ -45,8 +45,9 @@ Below the address fields you'll find the **Business Details** block — your leg
 * **Company Name:** Your registered business name as it should appear on receipts and invoices.
 * **Legal Registration ID:** Your company registration number (Companies House number in the UK, state filing number in the US, etc.). Shown on PDF receipts where local rules require business identification.
 * **Seller VAT ID:** Your store's EU VAT registration number. Appears in PDF receipts and is rendered into the <code v-pre>{{order.store_vat_display}}</code> smart tag for email templates. Use this field if you collect EU VAT — see [Configuring European Union (EU) VAT](/guide/tax-&-duties/european-union-vat) for how the VAT ID ties into reverse-charge handling.
+* **Seller Tax ID:** Your jurisdiction's general tax identification number (US EIN, UK UTR, AU ABN, etc.). Use this field when you need a non-VAT tax ID on receipts.
 
-![Screenshot of Store Settings - Business Details block](/images/settings-configuration/store-setting/store-business-tax.webp)
+![Screenshot of Store Settings - Business Details block]()
 
 ### 5. Currency
 
