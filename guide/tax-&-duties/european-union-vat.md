@@ -12,7 +12,7 @@ This guide walks through accessing the screen, the €10,000 micro-business thre
 
 This opens the EU region detail page, where the **Collect VAT cross-border** card is your starting point.
 
-![Screenshot of the EU VAT cross-border setup card](/images/tax/european-union-vat/eu-tax-settings-2.webp)
+![Screenshot of the EU VAT cross-border setup card]()
 
 ## EU Micro-Business Threshold
 
@@ -25,16 +25,7 @@ If your sales cross the threshold mid-year, you'll need to switch methods. The c
 
 ## Choosing Your VAT Collection Method
 
-The **Collect VAT cross-border** card has two visual states, and it helps to recognise both before you commit to a method:
-
-* **Initial setup state:** shown the first time you open the EU region, before any method is configured. The card lists the three collection methods and asks you to pick one.
-* **Configured state (shown below):** once a method is saved, the card header switches into a status mode with a green check next to the title, the active method as a chip (for example, **EU (OSS)**), and a **Collecting in regions** counter that reflects how many countries are currently active. A three-dot (`⋮`) menu on the right of the header reveals two actions:
-    * **Edit registration:** re-opens the current method's form so you can amend the registration country or VAT number without clearing your rate configuration.
-    * **Stop collecting:** clears the current method entirely. The card re-shows the initial setup prompt so you can pick again from scratch.
-
-![Screenshot of the EU VAT cross-border card in configured state with the kebab menu opened, showing Edit registration and Stop collecting](/images/tax/european-union-vat/eu-tax-settings-3.webp)
-
-The three methods available from the initial setup state are:
+The cross-border card offers three methods. Pick the one that matches how you're registered for VAT in the EU:
 
 | Method | Who it's for | Jump to |
 |---|---|---|
@@ -44,7 +35,7 @@ The three methods available from the initial setup state are:
 
 The shared mechanics — per-class tabs, per-country labels, rate inputs, custom classes, Reset to default, save — work identically across all three methods. They're covered once in [Managing Per-Class Rates and Labels](#managing-per-class-rates-and-labels).
 
-![Screenshot of the EU VAT cross-border setup card](/images/tax/european-union-vat/eu-tax-settings-4.webp)
+---
 
 ## OSS Method
 
@@ -65,7 +56,13 @@ From the cross-border card, select **Collect using a One Stop Shop (OSS) registr
 
 Click **Configure** (or **Save** on later edits) to apply.
 
-Once saved, the card switches into the configured status state described in [Choosing Your VAT Collection Method](#choosing-your-vat-collection-method). FluentCart now applies the correct destination-country VAT rate to every EU sale automatically, all reported under your single OSS registration. Rates and labels are managed from the **Destination country rates** panel inside the card, see [Managing Per-Class Rates and Labels](#managing-per-class-rates-and-labels).
+![Screenshot of the OSS registration form]()
+
+Once saved, the cross-border card's header switches into status mode: a green checkmark next to the card title, an **EU (OSS)** chip, and a **Collecting in N regions** counter (where N reflects how many countries are currently active). A kebab (`⋮`) menu on the right of the header is where the **Stop collecting** action lives once a method is configured.
+
+FluentCart now applies the correct destination-country VAT rate to every EU sale automatically, all reported under your single OSS registration. Rates and labels are managed from the **Destination country rates** panel inside the card, see [Managing Per-Class Rates and Labels](#managing-per-class-rates-and-labels).
+
+---
 
 ## Home Country Method
 
@@ -89,11 +86,15 @@ From the cross-border card, choose **Collect using your home country registratio
 
 Click **Configure** (or **Save** on edits) to apply.
 
+![Screenshot of the home country registration form]()
+
 ### How It Works at Checkout
 
 With this method active, FluentCart applies your **home country's VAT rate** to every EU customer's order, regardless of where they're buying from. For example, if your business is registered in Austria and a customer from Germany makes a purchase, the order is taxed at the Austrian rate — not the German one.
 
 If you've enabled **Local Reverse Charge** on the [Tax Configuration page](/guide/tax-&-duties/configuration-and-classes#vat-reverse-charge-settings), the **Tax-Inclusive Price Mode** setting (Fixed vs Dynamic) controls how reverse-charged B2B orders are invoiced.
+
+---
 
 ## Specific Country Method
 
@@ -119,6 +120,8 @@ Larger sellers and businesses with specific legal or contractual reasons to main
    * **Per-class Tax Label** — the customer-facing label for each class in this country.
 5. Click **Save** to add the registration. The country appears in the inline list.
 
+![Screenshot of the country registration form]()
+
 ::: info
 At least one of the per-class rates must be greater than 0% — FluentCart blocks saving a registration where every rate is zero, to prevent accidentally registering with no working rate.
 :::
@@ -134,6 +137,8 @@ Each row in the inline registration list has action icons:
 * **Edit (pencil)** — re-opens the form with the country's current values for amendment.
 * **Delete (trash)** — removes the registration. If the class assignments inside this registration are used elsewhere (other registrations, product/variation assignments), FluentCart shows a confirmation warning before the delete completes.
 
+---
+
 ## Managing Per-Class Rates and Labels
 
 All three methods share the same rate-management UI in the **Destination country rates** panel, which sits inside the cross-border card as a collapsible section. Its header shows the active country count (for example, **Destination country rates (28)**) so you can see the scope at a glance. This section covers the mechanics once.
@@ -145,6 +150,8 @@ Rates are **pre-filled for convenience** and may not reflect current laws. Verif
 :::
 
 A **Search country or region…** field sits directly above the table, handy when the panel is showing all 27 EU member states (plus any extras) and you want to jump straight to a specific row.
+
+![Screenshot of the destination country rates table with per-class tabs and Tax Label inputs]()
 
 ### Per-Class Tabs
 
@@ -185,11 +192,29 @@ The **Reset to default** button restores the plugin's shipped rates for the acti
 
 Click **Save Rates** to persist changes for the active class. Switch tabs and save again on each class you've edited.
 
+---
+
 ## Tax Overrides on EU Regions
 
 In rare cases you'll need to charge a different rate for a specific scope inside an EU country — a particular product category, a different shipping rate to a region, or a temporary promotional rate. The **Tax Overrides** section below the rate table handles that on EU regions the same way it does for any other region.
 
 See [Tax Overrides on the Setting Up Tax Rates page](/guide/tax-&-duties/tax-rates#tax-overrides) for the full walkthrough — override type (Products or Shipping), country, optional city, optional postcode with range syntax, and rate.
+
+---
+
+## Switching or Stopping a Method
+
+### Stop Collecting
+
+Open the kebab (`⋮`) menu on the right of the cross-border card header and choose **Stop collecting** to clear the current method. The card re-shows the initial setup prompt so you can pick again from scratch.
+
+### Switch to a Different Method
+
+Stopping the current method and selecting a new one is the workflow for switching — for example, when your cross-border sales cross the €10,000 threshold and you need to move from **Home Country** to **OSS**.
+
+Saved registrations from the previous method are cleared when you save the new method's configuration, so export anything you need first.
+
+---
 
 ## Customer VAT Numbers on PDF Receipts
 
