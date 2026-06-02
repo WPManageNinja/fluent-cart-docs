@@ -16,7 +16,7 @@ This will take you to the main Taxes screen, where you'll see a comprehensive ta
 The Taxes screen is the reporting view for the rates you've already configured on the [Tax Regions](/guide/tax-&-duties/tax-rates) and [EU VAT](/guide/tax-&-duties/european-union-vat) pages. Set those up first if you're starting fresh — there's nothing to file until orders have been placed against active rates.
 :::
 
-![Screenshot of the Taxes screen with the collected-tax table]()
+![Tax Filing](/guide/public/images/tax/tax-filing/tax-filing-1.png)
 
 ### Reviewing Your Collected Taxes
 
@@ -46,7 +46,7 @@ Before clicking the main button, you must select which tax records you want to i
 
 Once you have selected the desired tax records, click the **Tax Filing** button at the top right of the screen.
 
-![Screenshot of the Tax Filing summary modal with the selected records]()
+![Tax Filing](/guide/public/images/tax/tax-filing/tax-filing-2.png)
 
 A pop-up window will appear, showing a summary of the taxes you have selected.
 
@@ -64,7 +64,7 @@ Review this information to ensure it is correct.
 
 Click the **Download & Continue** button. This action performs two important tasks simultaneously:
 
-![Screenshot of the Download & Continue confirmation step]()
+![Tax Filing](/guide/public/images/tax/tax-filing/tax-filing-3.png)
 
 1.  It downloads a **CSV file** to your computer. This file contains a detailed breakdown of all the tax records you selected, which you can use for your accounting or to file your tax returns with the relevant authorities.
 2.  It marks all the selected tax records as **"Filed"** within FluentCart. Their "Filed" status will change to "Yes," so you know they have been processed.

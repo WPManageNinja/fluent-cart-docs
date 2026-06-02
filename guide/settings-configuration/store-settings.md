@@ -1,43 +1,42 @@
-# Store Settings
+ # Store Settings
 
-The **Store Setup** tab is where you configure the fundamental information about your FluentCart store: your store's name, logo, physical address, business details, currency, payment view, and units of measurement. These values feed into receipts, emails, checkout, shipping calculations, and tax handling, so it's the first screen to configure on a fresh install.
+The **Store Settings** screen is where you configure the fundamental information about your FluentCart store. This includes your store's name, logo, physical address, and essential currency settings, all of which are crucial for the basic operation and branding of your online business.
 
-## Accessing the Store Setup Tab
+## Accessing General Settings
 
-1. From your WordPress dashboard, go to **FluentCart > Settings**.
-2. In the left-hand menu, click **Store Settings**. The group expands.
-3. Click **Store Setup** to open the tab.
-
-![Screenshot of the full Store Setup tab](/images/settings-configuration/store-setting/store-settings-setup.webp)
+Go to your WordPress dashboard, then go to **FluentCart Pro** > **Settings** in the side menu, and click on the **Pages Setup** tab.
 
 ## Configuring Your Store Details
 
-### 1. Store Name and Logo
+### 1. General Information
 
-* **Store Name:** The public name of your online store. This name appears in your storefront header, transactional emails, receipts, and reports.
-* **Store Logo:** Click **Add Media** to upload your brand's logo. Recommended width is 512 pixels minimum. The logo is used in receipts, invoices, and other store documents.
+* **Store Name:** Enter the official name of your online store. This name will often appear in various parts of your store, emails, and reports.
+* **Store Logo:** You can upload your brand's logo here. This logo may be used in receipts, invoices, or other areas of your store.
+    * Click the **"Remove"** button if you wish to remove an existing logo.
 
 ### 2. Store Mode
 
-Select your store's operating mode. This is a critical setting that controls whether your store processes real payments.
+Select your store's current operating mode. This is a critical setting that controls whether your store can process real payments.
 
-* **Live:** The standard mode for an active store. In **Live** mode, all transactions are real and your payment gateways process actual payments.
-* **Test:** Designed for setup, development, and rehearsal. In **Test** mode you can place dummy orders without any money changing hands.
+* **Live:** This is the standard mode for an active store. In **Live** mode, all transactions are real, and your payment gateways will process actual payments from customers.
+* **Test:** This mode is designed for development and setup purposes. When **Test** mode is active, you can place test orders using dummy payment details without any real money being charged.
 
 ::: info
-This setting is directly linked to your payment gateways. When you set the store to **Live**, your payment methods also switch to their live credentials. When you switch to **Test**, your payment gateways automatically use their sandbox credentials.
+This setting is directly linked to your payment gateways. When you set the store to **Live Mode**, your payment methods will also switch to their live settings. When you select **Test Mode**, your payment gateways will automatically use their test or "sandbox" credentials.
 :::
 
 ### 3. Store Address
 
-Provide your physical business address. FluentCart uses this for PayPal verification, default shipping calculations, tax base lookups, and as the address displayed on receipts and other store documents.
+Provide your physical business address details. This information can be used for PayPal, shipping calculations, tax purposes, and displayed in various store documents.
 
-* **Country:** Select your store's country from the dropdown. This is the default country for shipping and tax calculations.
-* **State / Region:** Pick the state, province, or region from the dropdown. The options shown depend on the country you selected.
-* **Street Address:** The primary street name and number for your business location.
-* **Apt, suite, unit:** Any secondary address information such as an apartment number, suite, or unit.
-* **City:** The city or town where your business is located.
-* **Postcode:** The postal or ZIP code for your business address.
+* **Country:** Select your store's country from the dropdown menu. This is used as the default country for shipping and tax calculations.
+* **District:** Enter the district, state, province, or region where your business is located.
+* **Street Address:** Provide the primary street name and number for your business location.
+* **Apt, suite, unit:** Enter any secondary address information, such as an apartment number, suite, or unit number.
+* **City/Town:** Enter the city or town where your business is located.
+* **Zip Code:** Provide the postal or zip code for your business address.
+
+    ![Screenshot of Store Settings - Store Setup Tab](/images/settings-configuration/store-setting/store-settings-setup.webp)
 
 ### 4. Business Details
 
@@ -53,29 +52,20 @@ Below the address fields you'll find the **Business Details** block — your leg
 
 Configure the currency settings for your store's transactions.
 
-* **Checkout Currency:** The primary currency your products are priced in and payments are processed in. Pick from the dropdown.
-* **Number Format:** Controls how numbers (especially prices) are displayed. Choose between **Comma & Dot (eg 10,000.00)** or **Dot & Comma (eg 10.000,00)** to match your locale.
-* **Currency Formatting:** Controls where the currency symbol or code appears relative to the amount. The dropdown includes options like **Symbol before (eg: $100)**, symbol after, and currency code formatting.
+* **Checkout Currency:** Select the primary currency in which your products will be priced and payments will be processed.
+* **Number Format:** This setting lets you choose how numbers, especially prices, are shown in your store. It controls whether you use commas or dots to separate thousands and decimals.
+* **Currency Position:** Select where the currency symbol should appear relative to the amount.
+
+    ![Screenshot of Store Settings - Store Setup Tab](/images/settings-configuration/store-setting/store-currency-setup.webp)
 
 ### 6. Payment View
 
-The **Payment View** setting controls how payment methods appear to customers on the checkout page. Pick between two visual styles:
+The Payment View setting allows you choose how payment methods look to your customers on the checkout page. You can pick from a dropdown options:
 
-* **Logo:** Displays each payment method as its brand logo (for example, the PayPal logo rather than the word "PayPal"). Best for visually rich checkouts.
-* **Radio:** Displays each payment method as a labelled radio button. Cleaner and more compact, useful when you want the checkout to stay text-driven.
-
-### 7. Units of Measurement
-
-These two units are used across the product editor, package definitions, and shipping calculations.
-
-* **Weight Unit:** The unit used for product weight measurements. Choose from the dropdown (e.g. `kg`, `lb`, `g`, `oz`). Setting this consistently ensures carrier rates and shipping labels stay accurate.
-* **Dimension Unit:** The unit used for product dimension measurements (length, width, height). Choose from the dropdown (e.g. `cm`, `mm`, `m`, `in`).
-
-::: info
-Changing these units does not retroactively convert values you've already entered on existing products or packages. Pick the right units early in your setup so you don't have to re-enter measurements later.
-:::
+* **Logo:** This option displays the actual brand picture (logo) for each payment method (e.g., the PayPal logo instead of just the word "PayPal").
+* **Radio** This shows payment methods as simple choices you can click, like a small circle next to their name (e.g., "PayPal" as text).
 
 ## Saving Your Settings
 
-Click the **Save** button at the top right of the screen to apply your changes. You can also press **Cmd+S** (macOS) or **Ctrl+S** (Windows/Linux) to save without leaving the keyboard.
+After making any changes to your General Settings, remember to click the **"Save Settings"** button at the bottom right of the screen to apply your configurations.
 
