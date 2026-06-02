@@ -242,9 +242,6 @@ Configure the physical shipping details for this specific variation:
 - **Package** — Select the package type for this variation (different variations can use different package sizes)
 - **Product weight** — Enter the weight for this specific variation, with your preferred unit (**kg** or **lb**). Since different sizes or configurations often weigh differently, per-variation weight ensures your carrier rates stay accurate
 
-**Tax** *(visible only when store-level tax is enabled)*
-Each variation also has its own tax controls — a Tax Inclusion override in the Pricing section, a Charge-tax checkbox, and a per-variation Tax Class. See [Per-Variation Tax Settings](/guide/product-types-creation/per-variation-tax) for the full walkthrough.
-
 When you've finished configuring this variation, click **Update** to save all your changes.
 
 ---
