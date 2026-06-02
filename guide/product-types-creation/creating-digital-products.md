@@ -190,6 +190,7 @@ The name of this specific version (e.g., `Standard`, `Pro License`, `Lifetime Ac
 The selling price for this specific variation.
 
 **Additional display prices**
+
 - **Compare at price** *(Optional)* — A higher "was" price shown with a strikethrough for this variation.
 - **Calculate profit/cost** *(Toggle — Optional)* — Track **Cost per item**, **Profit**, and **Margin** for this variation internally.
 
@@ -230,20 +231,32 @@ For the complete, field-by-field reference on every pricing option — including
 
 ### 5. Downloadable Asset(s)
 
-This crucial section is where you manage the actual digital files customers will receive.
+This is where you attach the actual files your customers will receive after purchase. Toggle the **Downloadable Asset(s)** switch on to enable the section, then click **+ Add** to attach your first file.
 
-* Initially, you'll see a list of any previously added assets.
-* Click **"+ Add Asset"** to upload or link a new downloadable file.
-    ![Screenshot of Add Downloadable Asset(s) Button](/images/product-types-creation/creating-digital-product/Digital-product-5.webp) 
-* An **"Add Downloadable Asset(s)"** modal will appear.
+![Screenshot of the Downloadable Asset(s) section with the Add button](/images/product-types-creation/creating-digital-product/digital-asset-section.png)
 
-    * **Choose variant:** (Optional) If your digital product has multiple variations, you can select which specific variant(s) this asset applies to. Leave empty for all variants.
-    * **Choose File:** Click this button to upload a file from your local computer or select from existing files in your FluentCart storage.
-        * This will open a **"Storage Drivers"** modal, showing options like **Local** storage (drag & drop or browse) or **S3** (if configured).
-![Screenshot of Choose File Modal (Storage Drivers)](/images/product-types-creation/creating-digital-product/Digital-product-6.webp)
-    * **File URL:** (Alternative) Provide a URL if your digital asset is hosted externally.
-    * **File Name:** Enter a display name for the downloaded file. You can [edit this file name](/guide/product-types-creation/creating-digital-products#editing-uploaded-file-names) after upload if needed.
-    * Click **"Save Asset"** to add the file to your product.
+The **Add Downloadable Asset(s)** modal opens with the following options:
+
+* **Choose variant** *(Optional)* — If your product has multiple variations, select the specific variant this file belongs to. Leave it empty to make the asset available across all variants.
+* **Choose File** — Click this button to open the **Storage Providers** modal and pick or upload your file.
+
+![Screenshot of the Add Downloadable Asset(s) modal](/images/product-types-creation/creating-digital-product/digital-asset-add-modal.png)
+
+**Storage Providers modal**
+
+The **Storage Providers** modal is where you manage and select the file to attach. The left panel lists your configured providers — **Local** (your WordPress server) and **Cloudflare R2** if you have it connected. Select a provider to load its contents on the right.
+
+Each provider offers two tabs:
+
+* **Select Files** — Browse files already uploaded to that provider. Use the search bar to find a file by name, check the box next to it, and click **Confirm** to attach it.
+
+    ![Screenshot of the Storage Providers modal showing the Select Files tab](/images/product-types-creation/creating-digital-product/storage-providers-select-files.png)
+
+* **Upload** — Drag and drop a new file directly onto the upload area, or click **Browse/Upload Files** to pick one from your computer. Any file format is accepted, up to **300 MB** per file.
+
+    ![Screenshot of the Storage Providers modal showing the Upload tab](/images/product-types-creation/creating-digital-product/storage-providers-upload.png)
+
+Once you've selected or uploaded your file, click **Confirm** to return to the asset modal, then click **Save Asset** to attach it to your product.
 
 ### 6. Digital Product Licensed
 
