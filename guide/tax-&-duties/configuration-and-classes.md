@@ -77,9 +77,15 @@ Choose the option that fits the busyness of your checkout layout.
 
 #### How tax appears at checkout
 
-With a breakdown option selected, your customers see the tax context directly in the **Order summary** on the checkout page. Each taxable line item carries a tax label badge (for example **Tax (15%)**) with its tax amount, and a dedicated **TAX** block totals the tax for the whole order under **Total tax in this order**.
+With a breakdown option selected, your customers see the tax context directly in the **Order summary** on the checkout page. Each taxable line item carries a tax label badge (for example **Tax (15%)**), and a dedicated **TAX** block totals the tax for the whole order. Exactly how this reads depends on your **Prices entered with tax** setting.
 
-![Screenshot of the checkout Order summary showing a per-item Tax (15%) badge and the Total tax in this order row](/images/tax/configuration-and-classes/checkout-tax-display.webp)
+**When prices Tax Include,** the line badge shows the tax already contained in the price (for example `incl. $1.68`) and the **TAX** block reads **Total tax in this order**. The order total stays the same, because tax was already part of the price.
+
+![Screenshot of the checkout Order summary with tax-inclusive pricing, showing a Tax (15%) badge marked incl. and the Total tax in this order row](/images/tax/configuration-and-classes/checkout-tax-display.webp)
+
+**When prices Tax Excluded,** the line badge shows the tax added on top (for example `+ $1.94`) and the **TAX** block reads **Total payable tax**. This amount is added to the order total.
+
+![Screenshot of the checkout Order summary with tax-exclusive pricing, showing a Tax (15%) badge marked with a plus and the Total payable tax row](/images/tax/configuration-and-classes/checkout-tax-display-excluded.webp)
 
 ### Saving Your Settings
 
