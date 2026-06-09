@@ -75,6 +75,12 @@ Controls how the per-line tax context appears on the checkout summary:
 
 Choose the option that fits the busyness of your checkout layout.
 
+#### How tax appears at checkout
+
+With a breakdown option selected, your customers see the tax context directly in the **Order summary** on the checkout page. Each taxable line item carries a tax label badge (for example **Tax (15%)**) with its tax amount, and a dedicated **TAX** block totals the tax for the whole order under **Total tax in this order**.
+
+![Screenshot of the checkout Order summary showing a per-item Tax (15%) badge and the Total tax in this order row](/images/tax/configuration-and-classes/checkout-tax-display.webp)
+
 ### Saving Your Settings
 
 Click **Save** in the top-right corner to apply changes. You can also use the keyboard shortcut **Cmd+S** (macOS) or **Ctrl+S** (Windows/Linux), handy when you're tweaking several fields in a row.

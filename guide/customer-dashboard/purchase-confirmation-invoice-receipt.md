@@ -17,6 +17,9 @@ This page contains a clear summary of the order, including:
 * **Subscription Details:** Information about renewal periods and next billing dates.
 * **Downloads:** Direct download links for purchased digital files (e.g., fluentcampaign-pro.zip).
 * **Licenses:** Displays license keys associated with the product.
+* **Tax Breakdown:** Each taxable item shows its tax label and rate (for example **Tax (15%)** and **State Tax (20%)**) with the tax amount, and a **TAX SUMMARY** line reports the **Total tax in this order**.
+
+![Screenshot of the Purchase Successful page showing per-item tax badges and the TAX SUMMARY Total tax in this order row](/images/customer-dashboard/purchase-confirmation/purchase-bill-tax.webp)
 
 ### Invoice & Receipt Details
 
