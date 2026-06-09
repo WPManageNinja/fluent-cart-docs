@@ -13,7 +13,7 @@ Getting these settings right is the foundation for accurate calculations everywh
 You can also set the basics during the install **Onboarding Wizard's Tax step**. It writes to the same settings, so anything you choose there shows up here and can be edited later.
 :::
 
-![Screenshot of the Tax Configuration screen with all sections visible](/images/tax/configuration-and-classes/tax-settings-1.webp)
+![Screenshot of the Tax Configuration screen with all sections visible](/images/tax/configuration-and-classes/tax-1.webp)
 
 ## Tax Configuration Settings
 
@@ -31,6 +31,20 @@ Tells FluentCart how your product prices are entered:
 * **Excluded:** the price you set excludes tax. At checkout, tax is added on top.
 
 This single choice has the biggest downstream effect on what customers see, so set it deliberately. Individual variations can override this; see [Per-Variation Tax Settings](/guide/product-types-creation/per-variation-tax).
+
+### Tax-Inclusive Price Mode
+
+Visible only when **Local Reverse Charge** is on. Controls how a reverse charge affects products whose price was entered tax-inclusive:
+
+* **Fixed:** the listed price stays the same. The invoice shows the same total, but the tax line is zeroed.
+* **Dynamic:** VAT is stripped from the price. The customer pays the net (ex-VAT) amount.
+
+**Practical example.** A €120 inclusive price (€100 net + €20 VAT) sold to a B2B EU buyer with reverse charge:
+
+* In **Fixed** mode, buyer is invoiced **€120** with a €0 VAT line.
+* In **Dynamic** mode, buyer is invoiced **€100** net.
+
+![Screenshot of the Tax Configuration](/images/tax/configuration-and-classes/tax-4.webp)
 
 ### Calculate Tax Based On
 
@@ -53,7 +67,7 @@ Leave either field blank to skip its suffix.
 
 Controls how the per-line tax context appears on the checkout summary:
 
-![Screenshot of the Checkout Tax Breakdown Display dropdown with Item label and tooltip, Item label only, and Tooltip only options](/images/tax/configuration-and-classes/checkout-tax-breakdown-display.webp)
+![Screenshot of the Checkout Tax Breakdown Display dropdown with Item label and tooltip, Item label only, and Tooltip only options](/images/tax/configuration-and-classes/tax-2.webp)
 
 * **Item label and tooltip:** shows the tax label on each line item *and* a hover tooltip with the breakdown.
 * **Item label only:** shows just the label.
@@ -69,7 +83,7 @@ Click **Save** in the top-right corner to apply changes. You can also use the ke
 
 If you sell to business customers in the European Union, you'll likely need to handle the **reverse-charge** mechanism, where the buyer is responsible for self-accounting VAT instead of paying it to you. This sub-section configures that behaviour.
 
-![Screenshot of the VAT Reverse Charge Settings sub-panel with all controls visible](/images/tax/configuration-and-classes/tax-settings-2.webp)
+![Screenshot of the VAT Reverse Charge Settings sub-panel with all controls visible](/images/tax/configuration-and-classes/tax-3.webp)
 
 ### Local Reverse Charge
 
@@ -81,18 +95,6 @@ Toggle. **Default: off.** There are no other settings for this option.
 ### Exclude Categories from VAT Reverse
 
 A multi-select product-category picker. Any category you select here is **never** reverse-charged: VAT is always added, even when the customer has a valid EU VAT ID. Use this for product types that are explicitly outside reverse-charge scope.
-
-### Tax-Inclusive Price Mode
-
-Visible only when **Local Reverse Charge** is on. Controls how a reverse charge affects products whose price was entered tax-inclusive:
-
-* **Fixed:** the listed price stays the same. The invoice shows the same total, but the tax line is zeroed.
-* **Dynamic:** VAT is stripped from the price. The customer pays the net (ex-VAT) amount.
-
-**Practical example.** A €120 inclusive price (€100 net + €20 VAT) sold to a B2B EU buyer with reverse charge:
-
-* In **Fixed** mode, buyer is invoiced **€120** with a €0 VAT line.
-* In **Dynamic** mode, buyer is invoiced **€100** net.
 
 Pick the one that matches how your accounting and contracts are written.
 
