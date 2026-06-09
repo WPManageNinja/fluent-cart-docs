@@ -2,7 +2,7 @@
 
 The **Email Configuration** section is the central hub for managing all aspects of the emails your FluentCart store sends to customers and administrators. Properly configuring these settings is essential for maintaining brand consistency, ensuring reliable email delivery, and keeping everyone informed about store activity.
 
-This area is divided into two main sections, each handling a different aspect of your store's email communications.
+This area is divided into the following sections, each handling a different aspect of your store's email communications.
 
 ---
 
@@ -26,3 +26,14 @@ In this section, you will learn how to:
 * Enable or disable individual email notifications (e.g., "Order Created," "Payment Paid").
 * Edit the subject line for any notification.
 * Customize the email body with your own text and branding using a rich text editor and shortcodes.
+
+---
+
+#### Store Digest
+
+This section sends you a scheduled summary of your store's performance, so you can track sales without opening the dashboard. The figures match your Reports dashboard.
+
+In this section, you will learn how to:
+* Choose who receives the digest and whether quiet periods are emailed.
+* Enable a daily, weekly, or monthly digest, each on its own schedule.
+* Send a test digest and understand what each email contains.
