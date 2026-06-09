@@ -14,19 +14,21 @@ These controls are visible **only when store-level tax is enabled** on the [Tax 
 2. In the **Pricing** section, make sure the pricing method is set to **Simple Variations**.
 3. Click the **pencil icon** in the **Action** column of the variation you want to configure.
 
-The variation editor opens as a side panel. The three tax controls are split across two sections — **Pricing** at the top and **Tax** further down.
+The variation editor opens as a side panel. The three tax controls are split across two sections: a **Tax** dropdown in **Pricing** (next to the **Price** field) and a **Tax** block further down (below **Shipping**).
 
-![Screenshot of the variation editor panel with the Tax dropdown in Pricing and the Tax section visible]()
+![Screenshot of the variation editor with the Tax dropdown in Pricing and the Tax section at the bottom showing Charge tax on this variation and Class Standard](/images/product-types-creation/per-variation-tax/per-variation-tax-overview.webp)
 
 ## The Three Variation Tax Controls
 
 ### 1. Tax Inclusion (Pricing section)
 
-A dropdown directly beneath the **Price** field, with three options:
+A **Tax** dropdown next to the **Price** field, with three options:
 
-* **Store default** — inherit the store-level **Prices entered with tax** setting from Tax Configuration. This is the default — most variations should keep it.
-* **Tax included** — this variation's price already contains tax. Use when one variation needs the opposite of the store default (e.g. your store ships prices tax-exclusive but this single variation is quoted tax-inclusive on supplier paperwork).
-* **Tax excluded** — this variation's price excludes tax; FluentCart adds the applicable tax on top at checkout.
+![Screenshot of the Tax inclusion dropdown open with Store default, Tax included, and Tax excluded](/images/product-types-creation/per-variation-tax/per-variation-tax-inclusion.webp)
+
+* **Store default:** inherit the store-level **Prices entered with tax** setting from Tax Configuration. This is the default; use the other options if you collect tax differently for this variation.
+* **Tax included:** this variation's price already contains tax. Use when one variation needs the opposite of the store default (e.g. your store ships prices tax-exclusive but this single variation is quoted tax-inclusive on supplier paperwork).
+* **Tax excluded:** this variation's price excludes tax; FluentCart adds the applicable tax on top at checkout.
 
 **Use case.** Imagine your store is configured for tax-inclusive pricing across the board. You add a variation sourced from a different supplier whose price sheet is net of tax — set just that variation to **Tax excluded** without flipping your store-wide default.
 
@@ -41,10 +43,13 @@ A checkbox in the dedicated **Tax** section near the bottom of the variation edi
 
 ### 3. Tax Class (Tax section)
 
-A selector immediately beside the Charge-tax checkbox. Lists every tax class configured on your store — **Standard** (default), **Reduced**, **Zero**, and any custom classes you've created.
+When **Charge tax on this variation** is checked, a **Class:** row appears below the checkbox showing the active class (for example, **Standard**). Click the **pencil icon** beside the class name to open a dropdown and pick a different class.
 
-* Click the **pencil icon** beside the class name to open the tax-class manager inline if you need to add or rename a class without leaving the variation editor.
-* The selected class determines which rate row applies on the [Tax Rates](/guide/tax-&-duties/tax-rates) page when an order comes in for this variation.
+![Screenshot of the Tax class dropdown open with Standard, Reduced, and Zero options](/images/product-types-creation/per-variation-tax/per-variation-tax-class.webp)
+
+The list includes every tax class configured on your store: **Standard** (default), **Reduced**, **Zero**, and any custom classes you've created. To add or rename classes store-wide, use [Configuring Tax Settings & Classes](/guide/tax-&-duties/configuration-and-classes) or the class tabs on [Tax Rates](/guide/tax-&-duties/tax-rates).
+
+* The selected class determines which rate row applies when an order includes this variation.
 
 **Use case.** A book-set product where one variation is a hardback (Standard) and another is an audiobook (Zero in your jurisdiction). Same product, different class per variation.
 

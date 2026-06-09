@@ -21,7 +21,7 @@ The EU sets a **€10,000 per year** threshold for total cross-border B2C sales 
 * **Under €10,000/year** — you may charge your home country's VAT rate to all EU customers using the **Home Country Method**.
 * **Over €10,000/year** — you must apply the destination country's VAT rate to each customer, typically via the **OSS Method** (or **Specific Country** registrations if you prefer).
 
-If your sales cross the threshold mid-year, you'll need to switch methods. The cross-border card displays a micro-business alert with the threshold so you can see at a glance whether you still qualify. Switching is covered in [Switching or Stopping a Method](#switching-or-stopping-a-method) below.
+If your sales cross the threshold mid-year, you'll need to switch methods. When the **Home Country Method** is active, the cross-border card shows an informational notice about the €10,000 limit. It does not track your sales or tell you whether you still qualify, so monitor your cross-border totals in your own records. Switching is covered in [Switching or Stopping a Method](#switching-or-stopping-a-method) below.
 
 ## Choosing Your VAT Collection Method
 

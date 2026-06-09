@@ -2,7 +2,7 @@
 
 Once you have your global tax behaviour configured and your tax classes created, the next step is to tell FluentCart what tax rate to charge in each region you sell into. The **Tax Regions** screen is the entry point: it lists every country, lets you toggle which ones are actively collecting tax, and opens a per-region detail page where you set the actual rates, custom labels, and overrides.
 
-This guide walks through the list, the region detail page, multi-class rates, multi-tax scenarios with priority and compound rules, and the new product/shipping overrides with city + postcode granularity.
+This guide walks through the list, the region detail page, multi-class rates, multi-tax compound rules for federal-plus-state regions, and the new product/shipping overrides with city + postcode granularity.
 
 ## Accessing Tax Regions
 
@@ -54,13 +54,13 @@ Leave the field blank if you aren't registered in this region yet.
 
 #### Base Taxes
 
-The second card is where you set the actual rates. A advisory banner at the top of the card reminds you that:
+The second card is where you set the actual rates. **Read the warning at the top of the card before you rely on any pre-filled rate.**
 
-::: info
-Rates are **pre-filled for convenience** and may not reflect current laws. Verify them against current tax law before going live, and use the **+** button next to the class tabs to add tax classes for products taxed at different rates (food, books, digital goods, etc.). FluentCart's defaults are a starting point, not a legal guarantee.
+::: warning Verify rates before going live
+Rates are **pre-filled for convenience** and may not reflect current laws. **Always verify them against the relevant country's tax law before going live.** Use the **+** button next to the class tabs to add tax classes for products taxed at different rates (food, books, digital goods, etc.). FluentCart's defaults are a starting point, not a legal guarantee.
 :::
 
-Below the banner you'll find the **class tabs**, a **Search country/s in region…** field to jump to a specific sub-region, and the **per-region rate table** itself. The columns map to a row's **Region**, its **Rate (%)**, the customer-facing **Tax Label**, and a **Compound** dropdown that controls how the row stacks on top of other taxes in the same region (covered in [Compound and Priority](#compound-and-priority-multi-tax-scenarios) below).
+Below the banner you'll find the **class tabs**, a **Search country or region…** field to jump to a specific sub-region, and the **per-region rate table** itself. The columns map to a row's **Region**, its **Rate (%)**, the customer-facing **Tax Label**, and (on sub-region rows) a **Compound** dropdown that controls how that rate relates to the parent region's tax (covered in [Compound (Multi-Tax Scenarios)](#compound-multi-tax-scenarios) below).
 
 When you're done editing a class tab, click **Save Rates** at the bottom-right of the card. **Reset to default** sits next to it and reverts the active class's rows to FluentCart's shipped defaults.
 
@@ -90,53 +90,76 @@ Click **Reset to default** to discard the rates in the current class tab and res
 
 Click **Save Rates** at the bottom of the rate table to persist your changes for the active class. Switch tabs and click Save again on each class you've edited.
 
-## Compound and Priority (Multi-Tax Scenarios)
+## Compound (Multi-Tax Scenarios)
 
-Some regions apply more than one tax to the same line — for example a federal tax plus a provincial tax, or a base tax plus a city-level tax. FluentCart handles this with two fields on a rate row, surfaced in the rate editor:
+Some countries charge more than one tax on the same order line. The **United States** is the clearest example: a federal rate on the parent row plus a state rate on each sub-row. FluentCart surfaces this in the **Base taxes** table as a parent **Region** row (e.g. **United States (US)**) and child rows for each state.
 
-* **Priority** — a number that determines the order in which taxes are applied. Lower priority numbers (e.g. `1`) are applied **first**.
-* **Compound** — when on, the tax is calculated on the running total *including* any lower-priority taxes already applied. When off, the tax is calculated only on the line subtotal.
+The parent row holds your federal (or national) **Rate** and **Tax Label**. Each state row has its own rate and label, plus a **Compound** dropdown that tells FluentCart how that state tax relates to the federal rate. The dropdown label updates dynamically to include whatever federal rate you've entered (e.g. `added to 10% federal tax`).
 
-### Understanding Compound Taxes: A Practical Example
+![Screenshot of the US Base taxes table with the Compound column and per-state stacking options](/images/tax/tax-rates/tax-rates-compound.webp)
 
-The fastest way to see what **Compound** actually does is to compare the same order with the checkbox switched off versus on. Below is the classic Canadian setup: a federal **GST** plus a Quebec **PST** stacked on top of a $100 product.
+The **Compound** column appears only when the region has sub-divisions. Single-country regions without states do not show it.
 
-**The shared setup (only the Compound flag changes between the two scenarios below):**
+### The three Compound options
 
-| Tax | Rate | Priority | Compound |
-|---|---|---|---|
-| **GST** (Goods and Services Tax) | 5% | 1 | No |
-| **PST** (Provincial Sales Tax) | 7% | 2 | *toggled per scenario* |
+Open any state row's **Compound** dropdown to pick one of three modes:
 
-#### Scenario A: Compound OFF (both taxes calculated on the $100 subtotal)
+![Screenshot of the Compound dropdown expanded with added to, instead of, and compounded on top of options](/images/tax/tax-rates/tax-rates-compound-options.webp)
+
+* **Added to [federal rate]:** the state tax is calculated on the line subtotal and charged **alongside** the federal tax. Both lines appear at checkout.
+* **Instead of [federal rate]:** the state tax **replaces** the federal tax for orders shipped to that state. Only the state rate applies.
+* **Compounded on top of [federal rate]:** the state tax is calculated on the subtotal **plus the federal tax already applied**. This is the tax-on-tax model.
+
+Each state can use a different mode. Alabama might replace the federal rate while Arizona compounds on top of it, all within the same class tab.
+
+### A practical example
+
+The fastest way to see what each option does is to walk the same $100 order through all three modes. Assume the parent row is **10%** federal tax and a state row is **5%** state tax.
+
+#### Added to 10% federal tax
 
 | Step | Calculation | Amount |
 |---|---|---|
-| 1. GST applied first (Priority 1) | $100 × 5% | $5.00 |
-| 2. PST applied next, Compound OFF | $100 × 7% | $7.00 |
-| Total tax | $5.00 + $7.00 | **$12.00** |
-| **Order total** | $100 + $12.00 | **$112.00** |
+| 1. Federal tax | $100 × 10% | $10.00 |
+| 2. State tax (added) | $100 × 5% | $5.00 |
+| Total tax | $10.00 + $5.00 | **$15.00** |
+| **Order total** | $100 + $15.00 | **$115.00** |
 
-Each tax is calculated independently against the original $100. The order of priority doesn't change the final number.
+Both taxes are calculated independently against the original $100 subtotal.
 
-#### Scenario B: Compound ON (PST calculated on the GST-inclusive total, the real Quebec rule)
+#### Instead of 10% federal tax
+
+| Step | Calculation | Amount |
+|---|---|---|
+| 1. Federal tax | *(skipped for this state)* | — |
+| 2. State tax (instead) | $100 × 5% | $5.00 |
+| Total tax | | **$5.00** |
+| **Order total** | $100 + $5.00 | **$105.00** |
+
+The federal rate is not applied when the customer's state is set to **instead of**.
+
+#### Compounded on top of 10% federal tax
 
 | Step | Calculation | Amount | Running total |
 |---|---|---|---|
-| 1. GST applied first (Priority 1) | $100 × 5% | $5.00 | $105.00 |
-| 2. PST applied next, Compound ON | $105.00 × 7% | $7.35 | $112.35 |
-| Total tax | $5.00 + $7.35 | **$12.35** | |
-| **Order total** | $100 + $12.35 | **$112.35** | |
+| 1. Federal tax | $100 × 10% | $10.00 | $110.00 |
+| 2. State tax (compounded) | $110.00 × 5% | $5.50 | $115.50 |
+| Total tax | $10.00 + $5.50 | **$15.50** | |
+| **Order total** | $100 + $15.50 | **$115.50** | |
 
-Because Compound is on, PST is charged against the running total *after* GST, not against the original subtotal. That's the "tax on tax" effect.
+The state tax is charged against the running total after federal tax, not against the original subtotal.
 
-#### Why the difference matters
+### Why the difference matters
 
-The gap is $0.35 on a $100 order. On a $1,000 order it grows to $3.50, on a $10,000 order to $35.00, and on a $100,000 invoice to $350. Getting **Compound** right matters more as orders scale.
+On a $100 order the gap between **added to** and **compounded on top of** is only $0.50. On a $1,000 order it grows to $5.00, and on a $10,000 order to $50.00. Picking the wrong **Compound** mode scales with order size.
 
-#### When to turn Compound on
+### When to use each option
 
-Switch **Compound** on whenever your local tax law says a tax must be applied **on top of** another tax that's already in the cart (Quebec PST on GST, Indian SGST on CGST, and similar stacked regimes are the common cases). Leave it off when each tax is calculated independently against the line subtotal. If you're not sure which model your jurisdiction follows, confirm with a tax advisor before going live.
+* Choose **added to** when federal and state taxes are both due and each is calculated on the pre-tax amount.
+* Choose **instead of** when a state has no federal tax obligation or its rate fully replaces the federal rate for in-state sales.
+* Choose **compounded on top of** when local law requires the state tax to apply after the federal tax is already in the total (Quebec PST on GST and similar stacked regimes follow this pattern even outside the US).
+
+If you're not sure which mode your jurisdiction requires, confirm with a tax advisor before going live.
 
 ## Tax Overrides
 

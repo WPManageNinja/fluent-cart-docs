@@ -53,6 +53,8 @@ Leave either field blank to skip its suffix.
 
 Controls how the per-line tax context appears on the checkout summary:
 
+![Screenshot of the Checkout Tax Breakdown Display dropdown with Item label and tooltip, Item label only, and Tooltip only options](/images/tax/configuration-and-classes/checkout-tax-breakdown-display.webp)
+
 * **Item label and tooltip:** shows the tax label on each line item *and* a hover tooltip with the breakdown.
 * **Item label only:** shows just the label.
 * **Tooltip only:** shows only the hover tooltip.
@@ -71,10 +73,10 @@ If you sell to business customers in the European Union, you'll likely need to h
 
 ### Local Reverse Charge
 
-Toggle. **Default: off.**
+Toggle. **Default: off.** There are no other settings for this option.
 
-* **Off:** reverse charge applies only when the customer is in a different EU country than your home country.
-* **On:** reverse charge also applies when the customer is in your home country (some jurisdictions require this; check with a tax advisor).
+* **On:** home country reverse charge applies when the customer is in your home country (some jurisdictions require this; check with a tax advisor).
+* **Off:** home country reverse charge does not apply. Reverse charge still applies when the customer is in a different EU country than your home country.
 
 ### Exclude Categories from VAT Reverse
 
