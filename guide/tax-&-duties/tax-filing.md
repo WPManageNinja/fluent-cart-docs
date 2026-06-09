@@ -6,13 +6,17 @@ This guide will show you how to use this feature to make your tax season much ea
 
 ### Accessing the Taxes Screen
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro**.
+1.  From your WordPress dashboard, navigate to **FluentCart**.
 2.  Hover over the **More** menu item in the top navigation bar.
 3.  Click on **Taxes**.
 
 This will take you to the main Taxes screen, where you'll see a comprehensive table of all the taxes your store has collected.
 
-![Tax Filing](/guide/public/images/tax/tax-filing/tax-filing-1.png)
+::: info
+The Taxes screen is the reporting view for the rates you've already configured on the [Tax Regions](/guide/tax-&-duties/tax-rates) and [EU VAT](/guide/tax-&-duties/european-union-vat) pages. Set those up first if you're starting fresh — there's nothing to file until orders have been placed against active rates.
+:::
+
+![Screenshot of the Taxes screen with the collected-tax table](/images/tax/tax-filing/tax-filing-1.webp)
 
 ### Reviewing Your Collected Taxes
 
@@ -42,7 +46,7 @@ Before clicking the main button, you must select which tax records you want to i
 
 Once you have selected the desired tax records, click the **Tax Filing** button at the top right of the screen.
 
-![Tax Filing](/guide/public/images/tax/tax-filing/tax-filing-2.png)
+![Screenshot of the Tax Filing summary modal with the selected records](/images/tax/tax-filing/tax-filing-2.webp)
 
 A pop-up window will appear, showing a summary of the taxes you have selected.
 
@@ -60,7 +64,7 @@ Review this information to ensure it is correct.
 
 Click the **Download & Continue** button. This action performs two important tasks simultaneously:
 
-![Tax Filing](/guide/public/images/tax/tax-filing/tax-filing-3.png)
+![Screenshot of the Download & Continue confirmation step](/images/tax/tax-filing/tax-filing-3.webp)
 
 1.  It downloads a **CSV file** to your computer. This file contains a detailed breakdown of all the tax records you selected, which you can use for your accounting or to file your tax returns with the relevant authorities.
 2.  It marks all the selected tax records as **"Filed"** within FluentCart. Their "Filed" status will change to "Yes," so you know they have been processed.

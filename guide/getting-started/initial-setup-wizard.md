@@ -1,45 +1,67 @@
 # Initial Setup Wizard
 
-After successfully installing and activating FluentCart, a setup guide will usually appear.  This guide helps you configure the foundational settings of your store quickly and efficiently.
+After successfully installing and activating FluentCart, a setup wizard appears automatically to walk you through the foundational settings of your store. The wizard is four short steps and covers your store details, tax collection, core pages, and starter products.
 
 :::tip First-Time Setup
-The setup wizard is designed to make your initial configuration smooth. If you skip it, you can always configure these settings later from the FluentCart **Settings** menu.
+The wizard is designed to make your initial configuration smooth. If you skip it, you can configure these settings later from the FluentCart **Settings** menu. Most steps also expose a **Skip for now** or **Skip All** action in the footer if you want to defer them.
 :::
 
 ## Steps of the Initial Setup Wizard
 
-The FluentCart setup wizard guides you through the following crucial configurations to get your store up and running.
+A progress bar runs along the top of every step (**Step N of 4**) so you always know how far through you are. **Go Back** moves you to the previous step, **Continue** advances, and the final step replaces Continue with a **Save** button (keyboard shortcut **Cmd+S** on macOS, **Ctrl+S** on Windows/Linux).
 
 ### 1. Store Details
 
-The first step of the wizard prompts you to enter basic information about your store.
+The first step captures the basics about your store so FluentCart can pre-fill currency, address, and locale defaults across the rest of the admin.
 
-* **Shop Name:** Enter the public name of your online store.
-* **Store Currency:** Select the primary currency for your store's transactions.
-* **Shop Image/Logo:** Upload your brand's logo. FluentCart supports HEIC, WEBP, SVG, PNG, or JPG formats, with a recommended minimum width of 512 pixels.
+* **Store Country:** Pick the country where your business is based. The selection feeds the next step's tax setup and your default shipping calculations.
+* **Shop Name:** The public name of your online store. Appears in receipts, emails, and the storefront header.
+* **Store Currency:** The primary currency your products are priced in. Defaults to **United States Dollar**; change it before you start adding products.
+* **Shop Image/Logo:** Click **Upload** to add your brand's logo. Accepted formats: HEIC, WEBP, SVG, PNG, or JPG. Recommended width: 512 pixels minimum.
 
-Click **"Continue"** to proceed to the next step.
+Click **Continue** to proceed to the next step.
 
-![Screenshot of Initial Setup Wizard - Store Details](/images/getting-started/initial-setup-wizard/initial-setup-wizard-step1.webp)
+![Screenshot of Initial Setup Wizard - Store Details (Step 1 of 4)](/images/getting-started/initial-setup-wizard/onboarding-1.webp)
 
 :::info Where to find later?
-These settings can be accessed and modified anytime from **FluentCart Pro > Settings > Settings > Store Setup**.
+These settings can be accessed and modified anytime from **FluentCart → Settings → Store Settings → Store Setup**.
 :::
 
-### 2. Page Setup
+### 2. Set Up Tax Collection
 
-The second step of the wizard helps you assign core FluentCart functionalities to specific WordPress pages on your site. This ensures that customers can access the Shop, Cart, Checkout, and other essential pages correctly.
+The second step turns tax collection on or off and captures the high-level tax behaviour for your store. The card pre-fills your **Store country** from Step 1, so make sure that's right before continuing.
 
-You have several options for setting up these pages:
+* **Collect taxes for my store:** Master toggle. Leave it on to collect tax at checkout; switch it off to ship without any tax calculations.
+* **How do you display your prices?** Pick one:
+    * **Prices include tax:** the price on a product already contains tax. FluentCart splits the tax out for reporting, and the customer pays the listed number.
+    * **Add tax at checkout:** the listed price excludes tax. Tax is shown separately and added to the subtotal.
+* **Tax ID / VAT Number** *(optional)*: Your registration number. Printed on invoices and PDF receipts where local rules require it.
 
-* **Select Individual Pages:** Use the "Select" dropdown next to each page type to choose an an existing WordPress page from your site.
-* **Create Pages (via `+` icon):** Click the **`+` icon** next to a page type. This will automatically create a new WordPress page for that specific function.
-* **Generate All Pages:** Click the **"Generate All Pages"** button at the bottom. This will automatically create all necessary pages (Checkout, Cart, Receipt, Shop, Customer Profile) with their respective FluentCart shortcodes embedded and assign them for you.
+An advisory at the bottom of the card reminds you that a **standard tax class will be created automatically for your store country**, and that the actual per-region rates are set later under **Tax → Tax Rates**.
 
-![Screenshot of Initial Setup Wizard - Page Setup](/images/getting-started/initial-setup-wizard/initial-setup-wizard-step2.webp)
+Click **Continue** to proceed. You can also choose **Skip for now** to leave tax disabled (configure it later) or **Skip All** to jump straight past the remaining wizard steps.
 
-:::warning Important Shortcodes
-For each of these pages, you *must* ensure the correct FluentCart shortcode is embedded in the page content for the functionality to work. The wizard typically prompts you or automatically adds them.
+![Screenshot of Initial Setup Wizard - Set Up Tax Collection (Step 2 of 4)](/images/getting-started/initial-setup-wizard/onboarding-2.webp)
+
+:::info Where to find later?
+These settings can be accessed and modified anytime from **FluentCart → Settings → Tax Settings → Configuration**, and per-region rates from **Tax Settings → Rates**. See [Tax Configuration](/guide/tax-&-duties/configuration-and-classes) and [Setting Up Tax Rates](/guide/tax-&-duties/tax-rates) for the full walkthroughs.
+:::
+
+### 3. Setup Your Pages
+
+The third step assigns FluentCart's core storefront functions (Checkout, Cart, Receipt, Shop, Customer Profile) to actual WordPress pages on your site. This is what makes the cart icon, the checkout form, and the customer dashboard reachable from the front-end.
+
+You have three ways to fill in the page slots:
+
+* **Pick an existing WordPress page** from each dropdown (the dropdown shows page titles followed by their ID, for example `Checkout( 159 )`).
+* **Click the `+` icon** next to a slot to create a fresh WordPress page wired up for that role with the correct shortcode embedded.
+* **Click Generate All Pages** at the top of the list to create all five pages in one shot, each with the right shortcode and assigned automatically.
+
+![Screenshot of Initial Setup Wizard - Setup Your Pages (Step 3 of 4)](/images/getting-started/initial-setup-wizard/onboarding-3.webp)
+
+:::warning Shortcodes powering each page
+Every page must carry the matching FluentCart shortcode for its function to work. Using **Generate All Pages** or the per-slot `+` icon handles this automatically:
+
 * Shop Page: `[fluent_cart_products]`
 * Customer Profile Page: `[fluent_cart_customer_profile]`
 * Cart Page: `[fluent_cart_cart]`
@@ -48,32 +70,32 @@ For each of these pages, you *must* ensure the correct FluentCart shortcode is e
 :::
 
 :::info Where to find later?
-These settings can be accessed and modified anytime from **FluentCart Pro > Settings > Store Settings > Pages Setup**.
+These settings can be accessed and modified anytime from **FluentCart → Settings → Store Settings → Pages Setup**.
 :::
 
-### 3. Product Setup
+### 4. Setup Your Products
 
-The third and final step of the wizard allows you to quickly get started with products in your store.
+The final step gets your store off zero by either letting you start fresh or seeding it with sample content you can iterate on.
 
-You have two main options:
+You have two paths:
 
-* **Start From scratch:** Choose this option if you prefer to build your product catalog manually, adding each product individually after the wizard is complete.
-* **Generate Dummy Content:** Select this to automatically import a set of sample products, categories, and other dummy data into your store. This is useful for quickly seeing how your store looks with content. 
-The content will be uploaded in the background and may take a few seconds depending on your network. You might need to reload the page a few times to see the imported data appear in your product lists and reports.
+* **Start From scratch:** Pick this if you'd rather build the catalogue yourself, one product at a time, after the wizard closes.
+* **Generate dummy content (Men's Shoes, Menswear, etc.):** Pick one of the sample bundles to import a ready-made set of products, categories, and media. Useful for evaluating layouts, themes, and reports without typing in your own data first. A checkmark on a tile indicates it's selected.
 
-Click the **"Save"** button to finalize the wizard setup.
+Sample content uploads in the background and may take a few seconds depending on your network. You might need to reload the page once or twice for the imported items to show up in your product list and reports.
 
-![Screenshot of Initial Setup Wizard - Product Setup](/images/getting-started/initial-setup-wizard/initial-setup-wizard-step3.webp)
+Click **Save** (or press **Cmd+S** / **Ctrl+S**) to finalize the wizard.
 
-## Completing the Wizard & Next Steps for Your Business
+![Screenshot of Initial Setup Wizard - Setup Your Products (Step 4 of 4)](/images/getting-started/initial-setup-wizard/onboarding-4.webp)
 
-Once you've gone through all the steps of the initial setup wizard, it will usually confirm everything is set up and take you to your FluentCart Dashboard.
+## Completing the Wizard and Next Steps for Your Business
 
-This guide helps you start strong, but remember, making a full online store needs more than just these first steps. To make sure your business works well and easily, you will also need to:
+Once you've gone through all four steps, the wizard confirms the setup and drops you onto your FluentCart Dashboard.
 
-* **Setup Payment Gateways:** Set up your preferred payment methods like Stripe, PayPal, or Cash on Delivery under **[Payment Settings](/guide/settings-configuration/payment-settings)**.
-* **Add Your Products:** Begin creating your actual [physical products](/guide/product-types-creation/creating-physical-products), [digital products](/guide/product-types-creation/creating-digital-products), or [licensed digital products](/guide/product-types-creation/creating-digital-products-with-licenses).
-* **Review Email Notifications:** Customize your [email templates](/guide/settings-configuration/email-configuration/index) to ensure customers receive branded and informative updates.
-* **Explore Reports:** Utilize the [Reporting & Analytics](/guide/reporting-analytics/) section to monitor your store's performance.
-* **Configure Integrations:** Connect FluentCart with other tools you use for CRM, marketing, or other business processes.
+The wizard gets you to a working baseline, but a production-ready store needs a few more touches:
 
+* **Set up Payment Gateways:** Connect Stripe, PayPal, Cash on Delivery, or any of the supported gateways under [Payment Settings](/guide/settings-configuration/payment-settings).
+* **Add Your Products:** Start creating [physical products](/guide/product-types-creation/creating-physical-products), [digital products](/guide/product-types-creation/creating-digital-products), or [licensed digital products](/guide/product-types-creation/creating-digital-products-with-licenses).
+* **Review Email Notifications:** Customize the [email templates](/guide/settings-configuration/email-configuration/index) so customers receive branded, informative updates.
+* **Explore Reports:** Use the [Reporting & Analytics](/guide/reporting-analytics/) section to monitor store performance.
+* **Configure Integrations:** Connect FluentCart to your CRM, marketing tools, and other business systems.
