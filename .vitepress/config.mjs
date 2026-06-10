@@ -436,6 +436,7 @@ export default defineConfig({
               ]
             },
             { text: 'Features & Addons', link: '/guide/settings-configuration/features-addons' },
+            { text: 'AI Assistants (MCP)', link: '/guide/settings-configuration/mcp' },
             {
               text: 'Licensing',
               collapsed: true,

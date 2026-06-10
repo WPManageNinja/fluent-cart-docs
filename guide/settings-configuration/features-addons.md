@@ -52,6 +52,13 @@ A dedicated inventory workspace for stores that need more than per-product stock
 * **When Inactive:** The Inventory admin menu is hidden and no adjustment history is recorded. Per-product stock still works through the basic [Inventory Management](/guide/product-types-creation/inventory-management) screen.
 * **When Active:** See [Advanced Inventory](/guide/product-types-creation/advanced-inventory) for the full workflow.
 
+### 6. MCP (AI Assistant Access)
+
+This module exposes a secure endpoint that lets AI assistants like Claude, Cursor, and Codex connect to your store.
+
+* **Function:** Turns on the FluentCart MCP server so AI clients can read store data and run operator tasks, scoped to the connecting account's permissions.
+* **Configuration:** Ships off. See [Connecting AI Assistants (MCP)](/guide/settings-configuration/mcp) for requirements, enabling, and client setup.
+
 ## Saving Your Changes
 
 After toggling any feature on or off:
