@@ -1,6 +1,72 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.4.0
+*Released on Jun 11, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds EU B2B reverse charge support across all order surfaces
+• Adds Per-item tax rate breakdowns on checkout, admin, emails, PDFs, and receipts
+• Adds Mixed-cart tax handling for inclusive and exclusive tax products
+• Adds Per-variation tax inclusion overrides
+• Adds Tax class selector for shipping overrides
+• Adds City and postcode-based tax overrides
+• Adds Country-specific EU VAT collection mode
+• Adds Built-in tax rates for Africa, Americas, Asia, Europe, and Oceania
+• Adds Tax enable/disable controls per country
+• Adds Automatic tax calculation for admin-created orders
+• Adds Tax setup step to the onboarding wizard
+• Adds Separate price suffix labels for inclusive and exclusive taxes
+• Adds Seller Tax ID in store settings
+• Adds Reverse Charge (RC) badge on the Taxes admin page
+• Adds `fluentcart_eu_vat_number_validate` filter for custom VAT validation
+• Adds `fluent_cart/tax_collecting` filter for runtime tax control
+• Adds `reset_tax` WP-CLI command
+• Adds Store Digest emails with daily, weekly, and monthly schedules
+• Adds Per-item coupon discounts in line meta with strikethrough display
+• Adds B2B badges on admin and customer order pages
+• Adds B2B purchase and reverse charge filters in orders table
+• Adds Unit price rounding tooltip for 1-cent mismatches
+• Adds Hash-based deep linking for settings sections
+• Adds Configurable product list columns
+• Adds `fluent_cart/show_admin_top_bar` filter
+• Adds Bricks BuySection support with query-based product selection
+• Adds Bricks product selection controls for Gallery, Content, Short Description, Stock, and Price Range elements
+• Adds Bricks iframe embed support in Product Content element
+• Adds Pricing Table product-per-row layout and configurable badges
+• Adds Live settings propagation without page reloads
+• Adds Automatic selection of the only available shipping method at checkout
+• Adds Permission-based global search result visibility
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Tax calculations and display issues across reverse charge, mixed carts, shipping labels, tax breakdowns, rate badges, tooltips, and coupon calculations
+• Fixes Subscription currency display in billing columns
+• Fixes Zero-value renewal orders appearing after subscription reactivation
+• Fixes Subscription expiry race conditions, orphaned metadata, and invalid next billing dates
+• Fixes Canceled subscriptions incorrectly retaining grace periods
+• Fixes Missing subscription links on renewal orders and parent order fallback handling
+• Fixes Payment retries being incorrectly blocked
+• Fixes Stripe refund retrieval when refund data is not included in charge objects
+• Fixes Paddle renewal migrations, double submissions, cancellation overlays, receipt validation, and end-of-period cancellation emails (Pro)
+• Fixes Mollie mixed-cart tax calculations before payment processing (Pro)
+• Fixes Checkout address priority, state validation, B2B field preservation, and country detection
+• Fixes Coupon strikethrough display in modal checkout
+• Fixes Coupon null reference errors when no coupons are applied
+• Fixes Order currency display using store currency instead of order currency
+• Fixes Fulfillment type inheritance from product variations in admin orders
+• Fixes Shipping method title display on admin order details
+• Fixes PDF rendering for billing names, fee summaries, and seller identity information (Pro)
+• Fixes SVG logo path warnings after ZIP installation
+• Fixes Webhook failures caused by 301 redirects on subdirectory installs
+• Fixes Turnstile fallback handling when auto-verification fails
+• Fixes NULL value rounding issues in subscription reports
+```
+
+:::::
+
 ## FluentCart v1.3.28
 *Released on May 14, 2026*
 
