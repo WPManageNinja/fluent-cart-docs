@@ -1,6 +1,22 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.4.1
+*Released on Jun 12, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds MCP support for AI agents
+• Adds Real-time cart sync across browser tabs
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Duplicate database upgrade runs after plugin updates
+```
+
+:::::
+
 ## FluentCart v1.4.0
 *Released on Jun 11, 2026*
 
