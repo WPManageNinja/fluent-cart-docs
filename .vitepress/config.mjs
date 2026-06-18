@@ -444,7 +444,8 @@ export default defineConfig({
                 { text: 'Your License', link: '/guide/settings-configuration/licensing-settings' },
                 { text: 'Customer Sites (Pro)', link: '/guide/settings-configuration/managing-licensing-sites' }
               ]
-            }
+            },
+            { text: 'Withdrawal (EU)', link: '/guide/settings-configuration/withdrawal-eu' }
           ]
         },
         {
