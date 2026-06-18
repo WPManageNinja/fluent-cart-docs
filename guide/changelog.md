@@ -1,6 +1,27 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.4.2
+*Released on Jun 18, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds EU/German withdrawal (Widerrufsbutton) compliance with public withdrawal page and two-step confirmation flow
+• Adds Full order details, invoice numbers, and line items support for Authorize.net transactions
+• Adds Paddle cross-currency handling support
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Customer profile page issues when avatar requests are blocked by cookie banners
+• Fixes Paddle currency detection during cross-currency validation
+• Fixes Paddle and Authorize.net setup instructions and documentation
+• Fixes Currency formatting consistency in the withdrawal admin table
+• Fixes Security issues with ongoing audits and platform hardening
+```
+
+:::::
+
 ## FluentCart v1.4.1
 *Released on Jun 12, 2026*
 
