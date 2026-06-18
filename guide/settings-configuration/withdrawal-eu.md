@@ -65,8 +65,8 @@ These options shape what the customer sees and how strictly each declaration is 
 * **Show the optional note field:** *(Toggle)* Lets the customer add an optional free-text note to their declaration. This is for any extra context. The choice of which items to withdraw is handled separately by the item-selection step.
 * **Allow partial revocations:** *(Toggle)* When **on**, customers can withdraw from some items while keeping others. When **off**, every request is treated as a full contract withdrawal and the item-selection step is hidden.
 * **Item selection step (who can use it):** Controls which customers see the item-selection step.
-  * **Account owner:** Only customers who are logged in with the account that placed the order see the step.
-  * **Smart verified:** The step is also shown to any customer (including guests) who correctly matches the receipt number and billing email.
+  * **Account owner (logged in, email + invoice match):** Only customers who are logged in with the account that placed the order, and whose email and invoice match, see the step.
+  * **Email-verified submitter (invoice + email match):** The step is also shown to any customer (including guests) who correctly matches the receipt number and billing email.
 
 ::: info
 The emails that go out during the withdrawal flow (acknowledgment, accepted, and declined) are managed under **Email Configuration > Notifications**. See [Configuring Email Notification](/guide/settings-configuration/email-configuration/configuring-email-notification) to customize their wording.
