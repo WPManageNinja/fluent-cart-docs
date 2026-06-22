@@ -142,4 +142,24 @@ To switch an existing product, follow these steps:
 
 Once confirmed, the old variations are removed and the Pricing panel resets to the Advanced Variations empty state. From here, follow [Step 2: Add Options in the Pricing Panel](#step-2-add-options-in-the-pricing-panel) to build out your new attribute-based options.
 
+## How Advanced Variations Appear to Customers
+
+Once your product is published, all the attributes you configured turn into interactive selectors on the storefront. Each attribute renders in the style you chose, so customers can mix and match options to land on the exact variant they want.
+
+![Screenshot of a storefront product page showing Images, Material, and Size attribute selectors for a Reglan Tshirt](/images/product-types-creation/advanced-variations/tg_image_1025992249.webp)
+
+In this example, the **Reglan Tshirt** uses three attributes, and here is how each one behaves for the customer:
+
+* **Images:** An image-type attribute appears as clickable photo swatches, with the selected value named beside the label (for example, "Images : Sand Olive"). Picking a swatch updates the main product image so shoppers see exactly what they are choosing.
+* **Material:** An options-type attribute styled as buttons (Cotton, Polyester). The customer taps one to make their selection.
+* **Size:** Another button-styled attribute (XS through XXL), letting the customer pick a size in a single click.
+
+A few details work together to keep the experience clear:
+
+* **Price range:** Before a full combination is selected, the product shows a range (for example, `$7.00 - $15.00`) that spans your lowest and highest variant prices.
+* **Live price update:** As the customer settles on a combination, the displayed price updates to match that specific variant.
+* **Add to cart:** Once a valid combination is selected, the customer can set a quantity and use **Buy Now** or **Add To Cart** to purchase that exact variant.
+
+> **📝 Note:** The way each attribute looks on the storefront comes straight from its **Attribute Type** and **Styling** settings. Revisit [Creating an Attribute Group](#creating-an-attribute-group) if you want to switch an attribute between buttons, a dropdown, color swatches, or image swatches.
+
 Your product is now running on Advanced Variations, ready for you to assign attributes and let FluentCart generate every combination for you.
