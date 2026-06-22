@@ -16,8 +16,14 @@ This glossary defines common terms used throughout the FluentCart documentation 
 * **Advanced Filters:**
     A set of powerful tools in the admin dashboard for searching and segmenting records like orders or customers based on specific, detailed criteria.
 
+* **Advanced Variations:**
+    A pricing method for products built from reusable **Attributes** such as Color, Size, or Material. You pick the option dimensions and their values, and FluentCart automatically generates every possible combination as a **Variation**. To learn more, read the [Advanced Variations](/guide/product-types-creation/advanced-variations) documentation.
+
 * **Applied Coupon:**
     A record that tracks the use of a specific **Coupon** on an order, detailing the discount amount that was applied.
+
+* **Attribute:**
+    A reusable option dimension used to build product variations, such as Color or Size. Each attribute is made up of **Attribute Terms** (its individual values) and is managed globally under **Products > Attributes**.
 
 * **AWS S3 (Amazon Simple Storage Service):**
     A secure cloud storage service used by FluentCart for delivering digital products. This ensures that large files are delivered quickly and that access is controlled and secure.
@@ -193,3 +199,6 @@ This glossary defines common terms used throughout the FluentCart documentation 
 
 * **Tax:**
     A tax is a charge imposed by a government on the sale of goods and services. In FluentCart, this refers to the sales tax, VAT (Value Added Tax), or GST (Goods and Services Tax) that you are required to collect from customers. You can manage these charges through **Tax Classes** (for grouping products with similar tax rules) and **Tax Rates** (for defining the specific tax percentages for different regions).
+
+* **Term (Attribute Term):**
+    An individual value inside an **Attribute**, for example Red inside Color, or Large inside Size. The terms you assign to a product become the building blocks FluentCart uses to generate its **Advanced Variations**.

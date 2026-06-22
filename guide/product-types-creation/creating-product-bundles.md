@@ -66,6 +66,7 @@ Open the **Pricing** panel and look at the dropdown in the top right corner:
 
 - **Simple** — One bundle, one price. The right choice when your bundle is a single, fixed package with no variations.
 - **Simple Variations** — Multiple versions of the bundle, each with its own price, image, and stock level.
+- **Advanced Variations** — Bundle tiers built from reusable attributes, where FluentCart generates every combination automatically. See the [Advanced Variations](/guide/product-types-creation/advanced-variations) guide.
 
 ---
 

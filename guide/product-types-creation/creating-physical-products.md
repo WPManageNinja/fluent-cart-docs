@@ -90,6 +90,7 @@ Open the **Pricing** panel and look at the dropdown in the top right corner — 
 
 - **Simple** — One version, one price. The right choice for any product with no variations.
 - **Simple Variations** — Multiple versions of the same product, each with its own price, image, SKU, and shipping details.
+- **Advanced Variations** — Versions built from reusable attributes like Color and Size, where FluentCart generates every combination automatically. See the [Advanced Variations](/guide/product-types-creation/advanced-variations) guide.
 
 Pick the method that matches your product structure, and the fields below will adapt accordingly.
 

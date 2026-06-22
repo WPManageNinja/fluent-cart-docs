@@ -12,6 +12,7 @@ To get started, open any product in edit mode and scroll down to the **Pricing**
 
 - **Simple** — For products sold as a single item with no variations (one price fits all)
 - **Simple Variations** — For products that come in multiple versions, like different colors, sizes, or license tiers, each with its own unique price
+- **Advanced Variations** — For products built from reusable attributes (Color, Size, Material), where FluentCart generates every combination automatically. See the [Advanced Variations](/guide/product-types-creation/advanced-variations) guide.
 
 ![Screenshot of the Pricing section showing the Simple/Simple Variations dropdown](/images/product-types-creation/product-pricing/product-variation-1.webp)
 
@@ -287,6 +288,16 @@ Track your internal **Cost per item**, **Profit**, and **Margin** for this subsc
 **Inventory**, **SKU**, and **Shipping** work exactly the same as described in the one-time variation section — configure stock levels, assign a unique SKU, and set the package and weight specific to this variation.
 
 When everything is set up the way you want, click **Update** to save your subscription variation.
+
+---
+
+## Option 3: Advanced Variations
+
+When your product comes in combinations of options, like a shirt offered in several colors across several sizes, **Advanced Variations** saves you from building each version by hand. Instead of naming every variant yourself, you pick reusable attributes (Color, Size, Material) and the values that apply, and FluentCart generates the full variant matrix for you.
+
+This method relies on global **Attributes** and **Terms** that you set up once under **Products > Attributes**, then reuse across any product. Once your options are saved, each generated variant gets its own price, image, inventory, and SKU, exactly like Simple Variations.
+
+Because the setup flow is different, Advanced Variations has its own dedicated walkthrough. See the [Advanced Variations](/guide/product-types-creation/advanced-variations) guide for the complete step-by-step, from creating attributes to switching an existing product over.
 
 ---
 

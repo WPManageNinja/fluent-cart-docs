@@ -221,6 +221,7 @@ export default defineConfig({
               items: [
                 { text: 'Creating Physical Products', link: '/guide/product-types-creation/creating-physical-products' },
                 { text: 'Creating Digital Products', link: '/guide/product-types-creation/creating-digital-products' },
+                { text: 'Advanced Variations', link: '/guide/product-types-creation/advanced-variations' },
                 { text: 'Creating Licensed Product', link: '/guide/product-types-creation/creating-digital-products-with-licenses' },
                 { text: 'Creating Product Bundles', link: '/guide/product-types-creation/creating-product-bundles' },
                 { text: 'Bulk Product Import', link: '/guide/product-types-creation/bulk-product-import' },

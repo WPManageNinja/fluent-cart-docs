@@ -61,6 +61,7 @@ Open the **Pricing** panel and look at the dropdown in the top right corner. Tha
 
 - **Simple** — One product, one price. The right choice for a single item with no variations.
 - **Simple Variations** — Multiple versions of the same product (e.g., Standard, Pro, Agency), each with its own price and billing structure.
+- **Advanced Variations** — Versions built from reusable attributes like License Tier or Format, where FluentCart generates every combination automatically. See the [Advanced Variations](/guide/product-types-creation/advanced-variations) guide.
 
 Pick the method that matches your product, and the fields below will adapt.
 

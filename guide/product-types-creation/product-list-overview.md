@@ -15,7 +15,7 @@ The Products list table provides key information for each product at a glance:
 
 * **Products:** Displays the product's name and its unique ID (e.g.,"Purple Air Max trainers #33"). 
 * **Type:** Indicates the fundamental nature of the product (e.g., "Digital", "Physical"). 
-* **Variation:** Shows if the product has variations and their type (e.g., "Simple Variations"). 
+* **Variation:** Shows if the product has variations and their type (e.g., "Simple Variations" or "Advanced Variations"). 
 * **Price:** Displays the product's selling price or a price range if it has variations. 
 * **Stock:** Shows the current stock level for the product or its variants. 
 * **Status:** Indicates the product's publishing status. 
