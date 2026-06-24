@@ -13,10 +13,6 @@ layout: home
   <div class="hero-content">
     <h1>FluentCart Documentation</h1>
     <p class="hero-description">Everything you need to build and manage your online store with FluentCart</p>
-    <div class="hero-badges">
-      <Badge type="tip">Version: Pre-Release Beta</Badge>
-      <Badge type="warning">Doc Status: Under Development</Badge>
-    </div>
   </div>
 </div>
 
@@ -91,13 +87,6 @@ layout: home
   font-size: 1.5rem;
   color: var(--vp-c-text-2);
   margin-bottom: 2rem;
-}
-
-.hero-badges {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
 }
 
 .home-features {
