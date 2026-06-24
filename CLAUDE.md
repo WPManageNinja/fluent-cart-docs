@@ -13,7 +13,7 @@ A **VitePress 1.6.4** static documentation site for **FluentCart**, a WordPress 
 | Live site | https://docs.fluentcart.com |
 | Dev docs (separate repo) | https://dev.fluentcart.com/ |
 | Marketing site | https://fluentcart.com |
-| Status | Pre-Release Beta |
+| Status | Released |
 | Working dir | `/Users/authlab-24/Desktop/fluent-cart-docs` |
 | Git branch | `master` (also the PR base) |
 
