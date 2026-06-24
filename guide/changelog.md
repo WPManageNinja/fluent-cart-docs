@@ -1,6 +1,29 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.5.0
+*Released on Jun 23, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Advanced Variations with automatic combination generation, reusable attributes, swatches, smart variation selection, and bulk editing tools
+• Adds Attribute Manager with reusable option sets, inline term creation, drag-and-drop sorting, and cross-tab synchronization
+• Adds 8 built-in attribute sets including Color, Size, Material, Storage, Memory, Weight, Style, and Pattern
+• Adds staged-save workflow with persistent save bar, discard support, and improved editing experience for complex products
+• Adds guest-accessible payment links via the new {{order.payment_link}} smart code
+• Adds fluent_cart/product_card/enqueue_assets hook for extending storefront product components
+• Improves variation management performance, navigation, pricing tables, mobile responsiveness, admin layouts, and internationalization support
+• Improves inventory integrations with enhanced stock change event handling
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Variation editing, bulk update workflows, bundle synchronization, subscription stock switching, product search links, and PDF receipt tax display
+• Fixes Security and stability issues with ongoing hardening across FluentCart Core and Pro
+```
+
+:::::
+
 ## FluentCart v1.4.2
 *Released on Jun 18, 2026*
 
