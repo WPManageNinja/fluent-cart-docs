@@ -28,7 +28,7 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 ::::: code-group
 
 ```markdown [✨ Newly Added]
-• Adds MCP support for AI agents
+• Adds MCP support 
 • Adds Real-time cart sync across browser tabs
 ```
 
