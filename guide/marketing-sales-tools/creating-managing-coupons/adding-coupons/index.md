@@ -121,3 +121,35 @@ First, find the coupon you want to manage in your coupons list. On the far right
 
 
     ![Screenshot of Edit or Delete existing Coupons](/images/marketing-sales-tools/edit-delete-coupons.webp)
+
+## Applying Coupons via URL
+
+You can automatically apply a coupon at checkout by adding the `coupons` parameter to an [Instant Checkout](/guide/store-management/orders-management/instant-modal-checkout) URL. This is useful for promotional links, email campaigns, or affiliate partnerships where you want the discount to be applied without the customer needing to enter a code manually.
+
+### Single Coupon
+
+Add the `coupons` parameter with the coupon code as the value:
+
+```
+https://yourdomain.com/?fluent-cart=instant_checkout&item_id=209&quantity=1&coupons=SUMMER20
+```
+
+### Multiple Coupons
+
+To apply more than one coupon, pass the codes as comma-separated values:
+
+```
+https://yourdomain.com/?fluent-cart=instant_checkout&item_id=209&quantity=1&coupons=CODE1,CODE2
+```
+
+### URL Parameters
+
+| Parameter | Description |
+|---|---|
+| `fluent-cart` | Must be set to `instant_checkout` |
+| `item_id` | The product variation ID |
+| `quantity` | Number of items (default: 1) |
+| `coupons` | One or more coupon codes, separated by commas |
+
+>[!Note]
+> This feature works with the **redirect-based Instant Checkout** only. It is not supported in the **Modal (popup) Checkout**.
