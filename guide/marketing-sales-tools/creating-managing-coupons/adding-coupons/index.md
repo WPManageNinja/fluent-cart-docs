@@ -124,7 +124,7 @@ First, find the coupon you want to manage in your coupons list. On the far right
 
 ## Applying Coupons via URL
 
-You can automatically apply a coupon at checkout by adding the `coupons` parameter to an [Instant Checkout](/guide/store-management/orders-management/instant-modal-checkout) URL. This is useful for promotional links, email campaigns, or affiliate partnerships where you want the discount to be applied without the customer needing to enter a code manually.
+You can automatically apply a coupon at checkout by adding the `coupons` parameter to an Instant Checkout URL. This is useful for promotional links, email campaigns, or affiliate partnerships where you want the discount to be applied without the customer needing to enter a code manually.
 
 ### Single Coupon
 
