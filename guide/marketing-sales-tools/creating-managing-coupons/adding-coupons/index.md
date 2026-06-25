@@ -124,7 +124,9 @@ First, find the coupon you want to manage in your coupons list. On the far right
 
 ## Applying Coupons via URL
 
-You can automatically apply a coupon at checkout by adding the `coupons` parameter to an Instant Checkout URL. This is useful for promotional links, email campaigns, or affiliate partnerships where you want the discount to be applied without the customer needing to enter a code manually.
+You can pre-apply a coupon by adding the `coupons` parameter to a product URL. When a customer clicks the link, the coupon is automatically applied to their cart and they land on the checkout page ready to pay — no need to manually enter a code.
+
+This is useful for promotional links, email campaigns, or affiliate partnerships.
 
 ### Single Coupon
 
@@ -152,4 +154,4 @@ https://yourdomain.com/?fluent-cart=instant_checkout&item_id=209&quantity=1&coup
 | `coupons` | One or more coupon codes, separated by commas |
 
 >[!Note]
-> This feature works with the **redirect-based Instant Checkout** only. It is not supported in the **Modal (popup) Checkout**.
+> This feature is not supported in the **Modal (popup) Checkout**.
