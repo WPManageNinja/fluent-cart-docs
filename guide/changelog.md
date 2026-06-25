@@ -1,6 +1,22 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.5.1
+*Released on Jun 24, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Improves Advanced variations UI/UX
+• Improves Inventory managements UI/UX
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Schedule plugin audit issues recommended by WP Plugin Team
+```
+
+:::::
+
 ## FluentCart v1.5.0
 *Released on Jun 23, 2026*
 
