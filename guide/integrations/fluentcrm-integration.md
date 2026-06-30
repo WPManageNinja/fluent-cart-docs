@@ -11,6 +11,8 @@ FluentCart offers two powerful ways to connect with FluentCRM:
 
 This guide will focus on setting up a **Global Integration**.
 
+<YouTubeEmbed id="ySPK5SuQ8zo" />
+
 ### When to Use Each Integration Type
 
 Before you begin, it's helpful to decide which type of integration best suits your goal:

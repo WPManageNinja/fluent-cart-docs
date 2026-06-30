@@ -6,6 +6,8 @@ After successfully installing and activating FluentCart, a setup wizard appears 
 The wizard is designed to make your initial configuration smooth. If you skip it, you can configure these settings later from the FluentCart **Settings** menu. Most steps also expose a **Skip for now** or **Skip All** action in the footer if you want to defer them.
 :::
 
+<YouTubeEmbed id="z_QaFONgsNo" />
+
 ## Steps of the Initial Setup Wizard
 
 A progress bar runs along the top of every step (**Step N of 4**) so you always know how far through you are. **Go Back** moves you to the previous step, **Continue** advances, and the final step replaces Continue with a **Save** button (keyboard shortcut **Cmd+S** on macOS, **Ctrl+S** on Windows/Linux).

@@ -2,6 +2,8 @@
 
 This guide will show you how to install and activate the FluentCart plugin on your WordPress website. It will also explain how to activate your license so you can receive all updates and access premium features.
 
+<YouTubeEmbed id="jwmNOpnvvws" />
+
 #### Server & Hosting Requirements
 
 Before you install FluentCart, make sure your hosting environment meets the following requirements. This ensures that the plugin runs smoothly and delivers the best performance for your store.
