@@ -8,6 +8,8 @@ This page explains the law in plain terms, walks through every admin setting, an
 This guide is a practical explanation of how the feature works. It is not legal advice. Consumer law differs from country to country, so check your own obligations or speak to a qualified advisor before relying on these settings for compliance.
 :::
 
+<YouTubeEmbed id="ib_NVgdbxbE" />
+
 ## Understanding the Right of Withdrawal
 
 The right of withdrawal comes from the EU **Consumer Rights Directive (2011/83/EU)**. It lets consumers cancel most distance and off-premises purchases (for example, anything bought online) and get their money back. The key points that shape how FluentCart behaves are below.

@@ -4,6 +4,8 @@ The **Product Types & Creation** section is the core of setting up your store in
 
 FluentCart's flexibility allows you to sell a wide variety of items with tailored settings for each.
 
+<YouTubeEmbed id="zdOasr1wDVQ" />
+
 This section covers the following essential aspects:
 
 * **[Creating Physical Products](/guide/product-types-creation/creating-physical-products):** A guide to setting up tangible goods that require shipping and inventory tracking.

@@ -4,6 +4,8 @@ FluentCart includes a built-in **MCP (Model Context Protocol)** server that lets
 
 The feature ships **turned off**. You enable it, connect a client with a WordPress application password, and the assistant can then reach a curated set of FluentCart tools. The numbers it returns match what you see in your [Reports dashboard](/guide/reporting-analytics/reports-dashboard-overview), because both read from the same data.
 
+<YouTubeEmbed id="_4dyJPVeDT8" />
+
 ## What You Need
 
 Before you start, make sure you have the following in place:
