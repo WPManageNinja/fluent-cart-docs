@@ -2,6 +2,8 @@
 
 FluentCart’s powerful shipping system allows you to set up flexible shipping rules based on your customer’s location, what they’re buying, and how shipping costs are calculated. This easy guide will help you set up shipping for your store so your physical products are delivered correctly and on time.
 
+<YouTubeEmbed id="uBOIQXh0yDo" />
+
 With FluentCart Shipping, you can:
 
 * **[Define Shipping Zones](/guide/shipping/configuring-shipping-zones)**: Group geographical areas to apply specific shipping rules.
