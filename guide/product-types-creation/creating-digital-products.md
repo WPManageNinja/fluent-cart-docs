@@ -12,6 +12,8 @@ In this guide, you will learn how to:
 
 By the end, you will be able to confidently sell and manage any downloadable item.
 
+<YouTubeEmbed id="ZG97gQdGttU" />
+
 ## Steps to Create a New Digital Product
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Products** in the left WordPress sidebar.

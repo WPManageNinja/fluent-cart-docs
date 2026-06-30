@@ -4,6 +4,8 @@ When a single product comes in many combinations, like a hoodie sold in five col
 
 This guide walks you through the complete journey: understanding how the feature works, setting up your global attributes and terms, creating a new product with Advanced Variations, and switching an existing product over to it.
 
+<YouTubeEmbed id="J0H9UoJ4XCE" />
+
 ## Understanding Advanced Variations
 
 It helps to know how Advanced Variations differs from Simple Variations before you start.
@@ -15,6 +17,8 @@ Here is what makes Advanced Variations powerful:
 * **Attributes are global and reusable.** You set up an attribute like Color once under **Products > Attributes**, then reuse it across as many products as you need. Update it in one place and it stays consistent everywhere.
 * **The variant matrix builds itself.** Once you choose your options and values, FluentCart generates every combination automatically, so you never have to type "Red / Small", "Red / Large", "Blue / Small", and so on.
 * **Color and image swatches are supported.** Beyond plain text options, you can present values as color swatches or image thumbnails, giving customers a richer way to choose on your storefront.
+
+<YouTubeEmbed id="NuphNzpv75g" />
 
 ::: info
 Advanced Variations shines when a product has two or more dimensions that combine, like color and size. If your product only has one dimension and a few versions, [Simple Variations](/guide/product-types-creation/creating-physical-products) is quicker to set up.

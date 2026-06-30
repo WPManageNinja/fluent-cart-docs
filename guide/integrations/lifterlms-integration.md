@@ -2,9 +2,7 @@
 
 Connecting FluentCart with LifterLMS allows you to sell access to your online courses and memberships, and automatically manage student enrollment. When an event happens in your FluentCart store (like a successful purchase), this integration can instantly enroll customers into the correct LifterLMS courses or memberships, providing a smooth and automated experience.
 
-<div style="text-align: center;">
-  <iframe width="688" height="370" src="https://www.youtube.com/embed/zd8ogjvdSO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<YouTubeEmbed id="zd8ogjvdSO4" />
 
 This guide will show you how to activate the integration and configure enrollment rules using Integration Feeds.
 
