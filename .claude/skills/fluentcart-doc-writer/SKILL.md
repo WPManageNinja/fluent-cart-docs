@@ -142,6 +142,20 @@ This setting is directly linked to your payment gateways. When you set the store
 - One image per step in step-based pages; one or two per feature section in reference pages.
 - Reference path always begins with `/images/<section>/...` (the public-dir mapping). Some older pages use `/guide/public/images/...` — both work, but new pages should use `/images/...`.
 
+### 3.7 YouTube video embeds
+
+Use the global `<YouTubeEmbed>` Vue component. **Never use a raw `<iframe>`.** The component shows a thumbnail click-to-load facade that avoids YouTube's bot-check prompt (triggered in all browsers with third-party cookie blocking enabled) and is fully responsive at 16:9.
+
+```md
+<YouTubeEmbed id="VIDEO_ID" />
+```
+
+- `id` is the 11-character YouTube video ID from the watch URL (`watch?v=<id>`).
+- **Placement:** after the opening paragraph/intro block, before the first `##` section heading.
+- **Channel rule:** only embed videos from the **WPManageNinja** channel. Verify with the oEmbed API before adding: `curl "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=VIDEO_ID&format=json"` — `author_name` must be `WPManageNinja`.
+- The component is registered globally in `.vitepress/theme/index.js`. No import needed in markdown files.
+- Source: `.vitepress/theme/components/YouTubeEmbed.vue`.
+
 ---
 
 ## 4. Workflow checklist (every new or renamed page)
