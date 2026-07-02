@@ -1,6 +1,37 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.5.2
+*Released on Jun 30, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds SSLCommerz payment gateway support
+• Adds Product template type support for Bricks Builder
+• Adds Inline variant selector in Advanced Variations group-edit summary bar
+• Adds Per-variant checkboxes to scope bulk updates to selected variants only
+• Adds Card update redirect flow for customer portal (Paddle and redirect-only gateways)
+• Adds Dynamic extra settings fields extension point for Email Notifications
+• Adds Filter fluent_cart/transaction/max_refundable_amount for gateway-level refund cap
+• Improves Admin order builder to show labeled variation attributes
+• Improves Tax breakdown with per-rate VAT lines across checkout, emails, PDF, and order views
+• Improves EU VAT validation to work independently of reverse charge for domestic B2B
+• Improves Subscription and order item names to show resolved variation attribute labels
+• Improves Paddle multi currency handling
+• Improves Labeled variation attributes consistently across Cart, Checkout, Customer dashboard, Emails, Invoices, PDF receipt, and admin order
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Variation attribute label leaking into Authorize.Net and Mollie gateway names
+• Fixes Duplicated variation titles in cart and checkout display
+• Fixes Dark mode colors for alerts, inputs, icon buttons, and popover links
+• Fixes Category block select border issue
+• Fixes Stripe duplicate charges issue
+```
+
+:::::
+
 ## FluentCart v1.5.1
 *Released on Jun 24, 2026*
 

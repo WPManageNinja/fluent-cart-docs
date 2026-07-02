@@ -40,7 +40,7 @@ Below the details, you will find several important links:
 >[!Note]
 >The installment plan must be **Active** for this early payment option to be available.
 
-* **Update Payment Method:** Use this to securely swap out the credit card or account used for your renewals.
+* **Update Payment Method:** Use this to securely swap out the credit card or account used for your renewals. For gateways like Stripe and PayPal, you can enter the new details right in the dashboard. For Paddle and other gateways that manage cards on their own site, a short notice tells you that you will be redirected to complete the update: click **Continue** and the gateway's secure card-update page opens in a new tab, where you can finish the change.
 * **View Order:** This takes you directly to the original transaction in your **Purchase History**.
 * **Connected License:** If your subscription includes software or access keys, you can view and copy your active license key right here.
 
