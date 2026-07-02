@@ -146,6 +146,45 @@ To switch an existing product, follow these steps:
 
 Once confirmed, the old variations are removed and the Pricing panel resets to the Advanced Variations empty state. From here, follow [Step 2: Add Options in the Pricing Panel](#step-2-add-options-in-the-pricing-panel) to build out your new attribute-based options.
 
+## Bulk Editing Variants (Group Edit)
+
+A large variant matrix often needs the same change applied to many variants at once, like raising the price of every Red variant or restocking all Cotton ones. **Group Edit** handles this: instead of opening variants one by one, you edit a whole attribute group in a single pass and choose exactly which variants the change touches.
+
+### Opening Group Edit
+
+Group Edit lives inside the variant editing drawer:
+
+1. On the product edit screen, scroll to the **Pricing** panel and click any variant to open the **Pricing** drawer.
+2. At the top of the drawer, above the variant list, you'll see one group button per attribute value (for example, one per Color). Each button carries a small edit icon.
+3. Click the group you want to edit. The drawer switches to group-edit mode.
+
+<!-- TODO(screenshot): add guide/public/images/product-types-creation/advanced-variations/advanced-variation-group-edit.webp, then restore:
+![Screenshot of the Pricing drawer showing the group-edit buttons above the variant list](/images/product-types-creation/advanced-variations/advanced-variation-group-edit.webp)
+-->
+
+### The Editing Group Summary Bar
+
+In group-edit mode, a summary bar labeled **Editing group:** appears with the group's name, and it gives you everything you need to scope the update:
+
+* **Inline variant list:** Every variant in the group is listed right in the summary bar by its attribute combination, so you always know exactly what the edit covers.
+* **Per-variant checkboxes:** Each listed variant has a checkbox, and all of them start selected. Uncheck any variant to exclude it from the bulk update.
+* **Live count:** The hint under the group name reads "Changes will apply to X of Y variants in this group." and updates as you check and uncheck variants.
+
+### Applying the Bulk Update
+
+With your variants selected, fill in only the fields you want to change. The group-edit form covers:
+
+* **Price:** The selling price and compare-at price.
+* **Inventory:** Stock management fields for the selected variants.
+* **Shipping:** Shipping settings that apply per variant.
+* **Tax Class:** Visible only when tax is enabled for your store.
+
+When everything looks right, click **Update X variants** at the bottom of the form. The button always shows how many variants are about to change, and fields you leave untouched keep each variant's existing value.
+
+> **📝 Note:** The update needs at least one selected variant and at least one filled-in field. If either is missing, FluentCart shows an error instead of saving, so you cannot accidentally blank out a whole group.
+
+Clicking **Cancel** leaves group-edit mode and returns you to the regular single-variant view without applying anything.
+
 ## How Advanced Variations Appear to Customers
 
 Once your product is published, all the attributes you configured turn into interactive selectors on the storefront. Each attribute renders in the style you chose, so customers can mix and match options to land on the exact variant they want.
