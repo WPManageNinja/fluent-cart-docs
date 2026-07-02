@@ -10,7 +10,7 @@ Before configuring the gateway, you need to install the specific add-on for it.
 
 1.  Download the [SSL Commerz add-on](https://fluentcart.com/fluentcart-addons/) from the FluentCart website.
 2.  Go to your **WordPress dashboard → Plugins → Add New**, **upload** the plugin file, and **activate** it.
-3.  Then, go to **FluentCart Pro → Settings → Payment Settings**.
+3.  Then, go to **FluentCart → Settings → Payment Settings**.
 4.  Locate **SSLCommerz** in the list and click the **Manage** button.
 
 ![SSL Commerz in Fluentcart](/guide/public/images/payments-checkout/ssl-commerz/manage-1.webp)
