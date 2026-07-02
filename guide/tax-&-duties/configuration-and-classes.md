@@ -87,6 +87,10 @@ With a breakdown option selected, your customers see the tax context directly in
 
 ![Screenshot of the checkout Order summary with tax-exclusive pricing, showing a Tax (15%) badge marked with a plus and the Total payable tax row](/images/tax/configuration-and-classes/checkout-tax-display-excluded.webp)
 
+::: info
+When an order mixes items taxed at different rates, FluentCart shows one tax line per rate (with the rate percentage and its amount) instead of a single combined figure. This per-rate breakdown appears everywhere the order is rendered: the checkout summary, order emails, receipts, PDF invoices, and the order views in both the admin area and the customer dashboard. Orders placed before FluentCart 1.5.2 keep their original single-line tax total.
+:::
+
 ### Saving Your Settings
 
 Click **Save** in the top-right corner to apply changes. You can also use the keyboard shortcut **Cmd+S** (macOS) or **Ctrl+S** (Windows/Linux), handy when you're tweaking several fields in a row.

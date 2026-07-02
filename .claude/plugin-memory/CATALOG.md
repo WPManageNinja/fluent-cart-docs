@@ -41,8 +41,8 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Purpose:** All payment gateway implementations (Stripe, PayPal, Square, Mollie, Paddle, Razorpay, Mercado Pago, Flutterwave, Paystack, Authorize.net, Cash on Delivery) plus shared `Core/` contracts.
 - **Key files:** `PaymentMethods/<Gateway>Gateway/*`, `PaymentMethods/Core/*` (abstracts, manager, IPN/webhook plumbing).
 - **User-facing surface:** Per-gateway settings page, webhook URL field, test/live toggles, button-text customizations, e-check toggles.
-- **Drives docs:** `guide/payments-checkout/connecting-payment-gateways/<gateway>-settings.md`. **Core changes** mean re-read every gateway page.
-- **Last fully audited:** v1.3.27
+- **Drives docs:** `guide/payments-checkout/connecting-payment-gateways/<gateway>-settings.md`. **Core changes** mean re-read every gateway page. Promo/install cards for addon gateways live under `PromoGateways/Addons/` (e.g. SSLCommerz since 1.5.2 — real gateway ships as a separate addon plugin).
+- **Last fully audited:** v1.5.2
 
 ### Modules/ProductIntegration
 - **Purpose:** Bridges between product types and external systems (license fulfillment, file delivery, course enrollment).
@@ -83,22 +83,22 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Purpose:** Subscription billing lifecycle — creation, renewals, trial, cancellation, reactivation, refund-aware reactivation, upgrades, cart rules, recurring coupons.
 - **Key files:** `SubscriptionsModule.php`, `SubscriptionService.php`, `Models/Subscription.php`, listeners that fire `SubscriptionActivated` / `SubscriptionReactivated` events.
 - **User-facing surface:** Subscription dashboard, detail page, reactivate action, cancellation email with access-end date, cart restrictions ("one subscription per cart", "qty must be 1"), reactivation-after-refund flow.
-- **Drives docs:** `guide/product-types-creation/managing-subscriptions.md`
-- **Last fully audited:** v1.3.27
+- **Drives docs:** `guide/product-types-creation/managing-subscriptions.md` (customer-portal payment-method updates also touch `guide/customer-dashboard/subscriptions.md`)
+- **Last fully audited:** v1.5.2
 
 ### Modules/Tax
 - **Purpose:** Tax classes, regional tax rules, EU VAT, country-level tax toggles, reverse-charge handling.
 - **Key files:** `TaxModule.php`, `TaxService.php`, `Http/Controllers/AppControllers/TaxRateController.php`, `Modules/Tax/CountryToggle*.php`.
 - **User-facing surface:** Tax settings UI (classes, regions, EU VAT field, per-country tax toggle), tax breakdown on order pages and PDF receipts, reverse-charge declaration on B2B EU receipts.
 - **Drives docs:** `guide/tax-&-duties/*.md` (literal `&` in folder name — do not rename)
-- **Last fully audited:** v1.3.27
+- **Last fully audited:** v1.5.2
 
 ### Modules/Templating
 - **Purpose:** Frontend templating + page-builder integrations (Bricks, Gutenberg, Elementor).
 - **Key files:** `Templating/Bricks/Elements/ProductsCollection.php` (and siblings), `Hooks/Handlers/BlockEditors/*`.
 - **User-facing surface:** FluentCart elements inside Bricks/Gutenberg/Elementor editors — Products grid/list, filters, single-product, cart, checkout shortcodes.
 - **Drives docs:** `guide/customization-and-themes/customize-store-with-bricks.md`, `customize-store-with-gutenberg.md`, `customize-store-with-elementor.md`
-- **Last fully audited:** v1.3.27
+- **Last fully audited:** v1.5.2
 
 ### Modules/Turnstile
 - **Purpose:** Cloudflare Turnstile bot protection on checkout / forms.
@@ -159,6 +159,8 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - `resources/admin/Modules/Subscriptions/Components/SubscriptionDetails.vue` — Subscription detail screen
 - `resources/admin/Charts/LicenseStatistics.vue` — License analytics chart
 - `resources/admin/BlockEditor/**/*.vue` — Gutenberg block UIs (cart, checkout, customer dashboard, etc.)
+- `resources/admin/Modules/Products/parts/AdvancedVariationTable.vue` + `VariantForm/GroupBulkEditForm.vue` — Advanced Variations table, group-edit summary bar, per-variant bulk-update checkboxes (drives `guide/product-types-creation/advanced-variations.md`)
+- `resources/public/customer-profile/Vue/subcriptions/UpdatePaymentInfos/index.vue` — customer-portal payment-method update, incl. redirect flow for `card_update_url` gateways (drives `guide/customer-dashboard/subscriptions.md`)
 
 **Pro-only Vue (lives in `fluent-cart-pro`, not in this OSS clone):**
 - `ActivatedSitesList.vue`, `ViewSite.vue` — Licensing Sites list + Site Detail (drives `guide/settings-configuration/managing-licensing-sites.md`). Flag in CHANGES.md when Pro features ship; we cannot index them until a Pro clone is available.
