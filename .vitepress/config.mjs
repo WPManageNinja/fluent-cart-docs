@@ -296,7 +296,8 @@ export default defineConfig({
                 { text: 'Authorize.net Settings', link: '/guide/payments-checkout/connecting-payment-gateways/authorizenet-settings' },
                 { text: 'Square Settings', link: '/guide/payments-checkout/connecting-payment-gateways/square-settings' },
                 { text: 'Flutterwave Settings', link: '/guide/payments-checkout/connecting-payment-gateways/flutterwave-settings' },
-                { text: 'Cash on Delivery (COD) Settings', link: '/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings' }
+                { text: 'Cash on Delivery (COD) Settings', link: '/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings' },
+                { text: 'SSL Commerz Settings', link: '/guide/payments-checkout/connecting-payment-gateways/sslcommerz-settings' }
               ]
             }
           ]
