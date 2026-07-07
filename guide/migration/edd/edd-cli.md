@@ -23,7 +23,7 @@ The wizard remains the right choice for small-to-medium stores or for non-techni
 
 The wizard surfaces the most common commands inside the **WP-CLI (Recommended for Large Stores)** panel:
 
-![Migration steps with the WP-CLI command panel below](/guide/public/images/migration/edd-migrator/04-steps-cli.webp)
+![Migration steps with the WP-CLI command panel below](/images/migration/edd-migrator/04-steps-cli.webp)
 
 ## The primary command
 

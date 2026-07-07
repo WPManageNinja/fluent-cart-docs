@@ -21,7 +21,7 @@ The main feature of this report is an interactive chart that visualizes your pro
 * **Count (Light Grey Bars):** Represents the number of individual renewals happening each month.
 * **Combined View:** By seeing both the line and the bars together, you can determine if your revenue is coming from a high volume of small transactions or a few high-value renewals.
 
-![Future Renewals](/guide/public/images/reporting-analytics/subscription/future-renewals/future-renewals-1.webp)
+![Future Renewals](/images/reporting-analytics/subscription/future-renewals/future-renewals-1.webp)
 
 ## Feature Breakdown & Controls
 

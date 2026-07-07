@@ -18,7 +18,7 @@ First, you need to enable Mercado Pago as a payment method in your store.
 3.  Find **Mercado Pago** in the list of available gateways and click the **Manage** button.
 4.  If the addon is not yet installed, click the **Install & Activate** button to begin the setup.
 
-![Mercado Pago Install & Activate](/guide/public/images/payments-checkout/mercado-pago/install-activate-mercado-pago-1.webp)
+![Mercado Pago Install & Activate](/images/payments-checkout/mercado-pago/install-activate-mercado-pago-1.webp)
 
 ## Step 2: Configure Mercado Pago Settings
 
@@ -38,7 +38,7 @@ Once activated, you need to provide your API credentials to sync your store with
 
 >**Currency Match:** Ensure that your FluentCart store currency is set to the same currency used in your Mercado Pago account. 
 
-![Payment Activation](/guide/public/images/payments-checkout/mercado-pago/payment-activation-3.webp)
+![Payment Activation](/images/payments-checkout/mercado-pago/payment-activation-3.webp)
 
 ## Step 3: Create an Application in Mercado Pago
 
@@ -46,20 +46,20 @@ To get your keys, you must first create an application in the Mercado Pago Devel
 
 1.  Log in to your **[Mercado Pago Developers dashboard](https://www.mercadopago.com/developers/panel/app)** and go to **Your integrations**. Click the **Create application** button.
 
-![Create Application](/guide/public/images/payments-checkout/mercado-pago/create-application-4.webp)
+![Create Application](/images/payments-checkout/mercado-pago/create-application-4.webp)
 
 2.  Enter your **Application name** and click **Continue**.
 
-![Application Name](/guide/public/images/payments-checkout/mercado-pago/application-name-5.webp)
+![Application Name](/images/payments-checkout/mercado-pago/application-name-5.webp)
 
 3.  Select **Online payments** and choose the option to create your store. Click on the **Continue** button.
 
-![Online Payment](/guide/public/images/payments-checkout/mercado-pago/online-payment-6.webp)
+![Online Payment](/images/payments-checkout/mercado-pago/online-payment-6.webp)
 
 4.  Confirm your details and click **Confirm** to generate your application.
 5.  Navigate to **Production credentials** in the side menu to copy your **Public Key** and **Access Token** for later use.
 
-![Copy Public Key & Access Token](/guide/public/images/payments-checkout/mercado-pago/copy-public-key-7.webp)
+![Copy Public Key & Access Token](/images/payments-checkout/mercado-pago/copy-public-key-7.webp)
 
 ## Step 4: Set up Webhooks
 
@@ -68,7 +68,7 @@ Webhooks are essential for FluentCart to receive real-time updates about transac
 1.  **Copy the Webhook URL:** On your FluentCart Mercado Pago settings page, copy the unique **Webhook URL** provided.
 2.  **Configure in Mercado Pago:** In your Mercado Pago application, navigate to **Notifications > Webhooks** and click **Configure notifications**.
 
-![Configure Notification](/guide/public/images/payments-checkout/mercado-pago/configure-notification-8.webp)
+![Configure Notification](/images/payments-checkout/mercado-pago/configure-notification-8.webp)
 
 3.  **Paste the URL:** Paste the link into the **URL for testing** (for Test mode) or **Production method** (for Live mode) field.
 4.  **Select Events:** Under "Recommended events," check the boxes for:
@@ -76,12 +76,12 @@ Webhooks are essential for FluentCart to receive real-time updates about transac
     * Plans and subscriptions
 5.  **Get Your Secret:** Click **Save settings**. A **Secret signature (Webhook Secret)** will be generated.
 
-![Configure Webhook Notification](/guide/public/images/payments-checkout/mercado-pago/configure-webhook-notification-9.webp)
+![Configure Webhook Notification](/images/payments-checkout/mercado-pago/configure-webhook-notification-9.webp)
 
 6.  **Add to FluentCart:** Copy this secret and paste it into the **Test/Live Webhook Secret** field back in your FluentCart settings.
 
 Once all fields are filled, click the **Save Settings** button at the bottom of the page to finalize your integration.
 
-![Add To FluentCart](/guide/public/images/payments-checkout/mercado-pago/save-settings-10.webp)
+![Add To FluentCart](/images/payments-checkout/mercado-pago/save-settings-10.webp)
 
 ---

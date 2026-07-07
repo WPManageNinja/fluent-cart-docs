@@ -29,7 +29,7 @@ If you have purchased FluentCart Pro Addons for advanced features, you will need
 
 1.  Download the FluentCart Pro Addons `.zip` file from [FluentCart](https://fluentcart.com/).
 
-![Download Plugin](/guide/public/images/getting-started/install-activation/download-plugin.png)
+![Download Plugin](/images/getting-started/install-activation/download-plugin.png)
 
 2.  Navigate to your WordPress dashboard.
 3.  Go to **Plugins > Add New**.
@@ -48,7 +48,7 @@ After installing the Pro Addons, you will need to activate your license key. Thi
 4.  Click on the **"License Settings"** tab.
 5.  In the "License Key" field, enter the unique license key you received upon purchasing FluentCart Pro Addons from the [site](https://fluentcart.com/account/).
 
-![License Key](/guide/public/images/getting-started/install-activation/get-license.png)
+![License Key](/images/getting-started/install-activation/get-license.png)
 
 6.  Click the **"Verify License"** button.
  ![Screenshot of Licensing Settings Tab](/images/getting-started/install-activation/licensing-1.webp)

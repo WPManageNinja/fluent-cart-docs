@@ -17,15 +17,15 @@ First, you need to install and enable **Square** as a payment method in your sto
 2.  Click on the **Payment Settings** tab.
 3.  You will see a list of available payment gateways. Find **Square** and click the **Manage** button next to it.
 
-![Find Square in FluentCart Payment Settings](/guide/public/images/payments-checkout/square/square-1.webp)
+![Find Square in FluentCart Payment Settings](/images/payments-checkout/square/square-1.webp)
 
 4.  Since Square is a premium add-on, you will be taken to the Square Payment Gateway page. Click the **Install & Activate** button to enable it for your store.
 
-![Install and activate Square Payment Gateway](/guide/public/images/payments-checkout/square/square-2.webp)
+![Install and activate Square Payment Gateway](/images/payments-checkout/square/square-2.webp)
 
 Once activated, you will land on the main **Square Settings** page where you will configure the connection.
 
-![Square Settings page in FluentCart](/guide/public/images/payments-checkout/square/square-3.webp)
+![Square Settings page in FluentCart](/images/payments-checkout/square/square-3.webp)
 
 On this page you will see two tabs, **Test credentials** and **Live credentials**. It is highly recommended to start with **Test credentials** to make sure everything is working correctly before accepting real payments. You will need to fill in the following fields:
 
@@ -43,11 +43,11 @@ To connect your store, you need to create a new application in the Square Develo
 1.  Log in to your [**Square Developer Dashboard**](https://developer.squareup.com/apps).
 2.  On the **Applications** page, click the **+** (plus) card to create a new application.
 
-![Create a new application in Square Developer Dashboard](/guide/public/images/payments-checkout/square/square-4.webp)
+![Create a new application in Square Developer Dashboard](/images/payments-checkout/square/square-4.webp)
 
 3.  A modal titled **Name your application** will appear. Type a name for your application (e.g., `FluentCart`) and click **Next**. Follow the remaining prompts as per your requirements to finish creating the application.
 
-![Name your Square application](/guide/public/images/payments-checkout/square/square-5.webp)
+![Name your Square application](/images/payments-checkout/square/square-5.webp)
 
 ## Step 3: Get Your API Credentials from Square
 
@@ -60,7 +60,7 @@ Once your application is created, you can grab the credentials FluentCart needs.
     * **Sandbox Application ID** - paste this into the **Test Application ID** field in FluentCart.
     * **Sandbox Access token** - click **Replace** if needed, then paste this into the **Test Access Token** field in FluentCart.
 
-![Copy Sandbox Application ID and Access token from Square](/guide/public/images/payments-checkout/square/square-6.webp)
+![Copy Sandbox Application ID and Access token from Square](/images/payments-checkout/square/square-6.webp)
 
 > **Info: Test Mode vs. Live Mode**
 > The **Sandbox** credentials let you test transactions without using real money. When you are ready to go live, repeat these steps from the **Production** tab and paste the values into the **Live credentials** tab in FluentCart.
@@ -74,7 +74,7 @@ Square uses **Locations** to represent the source of your orders.
 3.  Copy the value under the **Location ID** column.
 4.  Paste it into the **Test Location ID** field in FluentCart.
 
-![Copy Location ID from Square Developer Dashboard](/guide/public/images/payments-checkout/square/square-7.webp)
+![Copy Location ID from Square Developer Dashboard](/images/payments-checkout/square/square-7.webp)
 
 ## Step 4: Set Up the Webhook in Square
 
@@ -84,7 +84,7 @@ Webhooks are essential for Square to send real-time updates to FluentCart, such 
 2.  In your Square Developer Dashboard, expand **Webhooks** in the left sidebar and click **Subscriptions**.
 3.  Click the **Add subscription** button on the right side of the page.
 
-![Add a new webhook subscription in Square](/guide/public/images/payments-checkout/square/square-8.webp)
+![Add a new webhook subscription in Square](/images/payments-checkout/square/square-8.webp)
 
 4.  In the **Add a webhook subscription** form, fill in the following:
     * **Subscription name:** Give it a recognizable name like `FluentCart-WH`.
@@ -98,11 +98,11 @@ Webhooks are essential for Square to send real-time updates to FluentCart, such 
     * `invoice.scheduled_charge_failed`
 6.  Click **Save** at the top right to create the subscription.
 
-![Configure webhook subscription details and events](/guide/public/images/payments-checkout/square/square-9.webp)
+![Configure webhook subscription details and events](/images/payments-checkout/square/square-9.webp)
 
 Once saved, your new webhook will appear in the **Webhooks** list with the **Enabled** status and **5** events selected.
 
-![Square webhook subscription created and enabled](/guide/public/images/payments-checkout/square/square-10.webp)
+![Square webhook subscription created and enabled](/images/payments-checkout/square/square-10.webp)
 
 ### Copy the Signature Key
 
@@ -112,7 +112,7 @@ Now you need to grab the **Signature Key** that secures the webhook communicatio
 2.  Locate the **Signature key** field and click the **Copy** icon next to it.
 3.  Paste the value into the **Test Webhook Signature Key** field in FluentCart.
 
-![Copy the webhook signature key from Square](/guide/public/images/payments-checkout/square/square-11.webp)
+![Copy the webhook signature key from Square](/images/payments-checkout/square/square-11.webp)
 
 ## Step 5: Activate Payment and Save Settings
 
@@ -127,7 +127,7 @@ Now that you have all four credentials in place, it's time to activate the gatew
 3.  Switch the **Payment Activation** toggle at the top right to **ON**. This makes Square available as a payment option at checkout.
 4.  Click the **Save Settings** button at the bottom of the page.
 
-![Enable Payment Activation and save Square settings](/guide/public/images/payments-checkout/square/square-12.webp)
+![Enable Payment Activation and save Square settings](/images/payments-checkout/square/square-12.webp)
 
 Your Square integration is now complete and running in **Test Mode**. We recommend running a test transaction with a Square test card to make sure everything is working correctly.
 

@@ -60,7 +60,7 @@ Clicking that button opens a simple "Upgrade Options" popup. Here, they can revi
 * Step 5: Instant Checkout
 They are immediately taken to the checkout page to finalize the transaction. A friendly notice confirms what they are upgrading to, and the order summary automatically calculates their new cost—applying any prorated discounts instantly!
 
-![Upgrade Path](/guide/public/images/product-types-creation/define-upgrade-path/customer-upgrade-path.webp)
+![Upgrade Path](/images/product-types-creation/define-upgrade-path/customer-upgrade-path.webp)
 
 :::tip Streamlined Customer Experience
 Defining clear upgrade paths simplifies the process for your customers, allowing them to easily scale their usage or commitment without complex manual intervention or needing to purchase a new product entirely.

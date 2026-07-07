@@ -47,7 +47,7 @@ FluentCart automatically generates an invoice receipt for every order. This invo
 
 This detailed invoice ensures that customers have all the necessary purchase information in one place. For B2B customers selling into the EU, UK, and other VAT jurisdictions, the VAT number on the receipt makes the document compliance-ready for the buyer's own bookkeeping — no manual workaround needed.
 
-![Purchase Confirmation](/guide/public/images/customer-dashboard/purchase-confirmation/purchase-confirmation.webp)
+![Purchase Confirmation](/images/customer-dashboard/purchase-confirmation/purchase-confirmation.webp)
 
 ### Downloading the Invoice Receipt
 

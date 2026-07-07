@@ -16,7 +16,7 @@ In this guide, you’ll learn how to create, configure, and manage bundle produc
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Products** in the left sidebar.
 2.  On the Products screen, click the **"Add Product"** button at the top right.
 
-    ![Screenshot of Add Product Button](/guide/public/images/product-types-creation/product-bundles/add-product-1.webp)
+    ![Screenshot of Add Product Button](/images/product-types-creation/product-bundles/add-product-1.webp)
 
 3.  This action will open a new **Add New Product** modal. 
     * Enter the **Bundle Title**. 
@@ -24,7 +24,7 @@ In this guide, you’ll learn how to create, configure, and manage bundle produc
     * Check the box labeled **Add as a Bundle** to combine multiple items into one package. 
 4.  Click the **"Add Product"** button, and you will be redirected to the **"Edit Product"** page to configure all details.
 
-    ![Screenshot of Add as a bundle](/guide/public/images/product-types-creation/product-bundles/add-as-a-bundle-2.webp)
+    ![Screenshot of Add as a bundle](/images/product-types-creation/product-bundles/add-as-a-bundle-2.webp)
 
 ### 1. Basic Product Information
 
@@ -56,7 +56,7 @@ This section helps you organize and tag your bundle for better storefront filter
 * **[Product Categories:](/guide/product-types-creation/creating-managing-product-categories/index)** Assign the bundle to relevant categories (e.g., "Gift Sets"). You can select existing categories or click **+ Add Category** to create one instantly.
 * **[Product Brand:](/guide/product-types-creation/creating-managing-product-brand):** Associate the bundle with a specific brand using the dropdown or the **+ Add Brand** button.
 
-   ![Screenshot of Product Edit Screen (Physical Product Example)](/guide/public/images/product-types-creation/product-bundles/map-bundle-items-3.webp)
+   ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/product-bundles/map-bundle-items-3.webp)
 
 ### 5. Pricing & Variations
 
@@ -95,7 +95,7 @@ Assign a unique tracking code to this bundle (e.g., `BUNDLE-STARTER-01`). Click 
 **Direct Checkout** *(Link)*
 Generates a unique URL that takes customers straight to checkout with this bundle pre-loaded. Great for promotional landing pages, email campaigns, or limited-time offers where you want to reduce every step between interest and purchase.
 
-![Screenshot of Simple Price for Bundle](/guide/public/images/product-types-creation/product-bundles/simple-price.gif)
+![Screenshot of Simple Price for Bundle](/images/product-types-creation/product-bundles/simple-price.gif)
 
 ---
 
@@ -157,7 +157,7 @@ Expand the collapsible **SKU** section to assign a unique tracking code to this 
 
 When you're done, click **Update** to save all your changes for this tier.
 
-![Screenshot of Simple Variation for Bundle](/guide/public/images/product-types-creation/product-bundles/simple-variation.gif)
+![Screenshot of Simple Variation for Bundle](/images/product-types-creation/product-bundles/simple-variation.gif)
 
 ::: info
 For the complete field-by-field reference on every pricing option — including subscription setup, installment plans, trial days, setup fees, and the Add Package walkthrough — see the [Configuring Product Pricing & Variations](/guide/product-types-creation/configuring-product-pricing) guide.

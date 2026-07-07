@@ -16,7 +16,7 @@ The Cohorts dashboard offers powerful filtering options to help you drill down i
 * **Reset Filters:** Instantly clear your custom selections to return to the default overview.
 * **Advanced Filters (Funnel Icon):** Filter your cohort data by **Order Type**, **Subscription Type**, or specific **Products** to see how different offerings perform over time.
 
-![Accessing the Cohorts Report](/guide/public/images/reporting-analytics/subscription/cohorts/accessing-the-cohorts-report-1.webp)
+![Accessing the Cohorts Report](/images/reporting-analytics/subscription/cohorts/accessing-the-cohorts-report-1.webp)
 
 ## Cohort Visualization & Table
 
@@ -59,6 +59,6 @@ FluentCart allows you to manage and export this data for external reporting or d
 * **Generate Snapshots:** Click this button to refresh and capture the latest data for your cohorts.
 * **Export:** Use the Export button to download your cohort data as a CSV file for use in spreadsheet software like Excel or Google Sheets.
 
-![Cohort Table](/guide/public/images/reporting-analytics/subscription/cohorts/cohorts-2.webp)
+![Cohort Table](/images/reporting-analytics/subscription/cohorts/cohorts-2.webp)
 
 With the **Subscription Cohorts** report, you can identify exactly when customers are most likely to leave and which products attract the most loyal subscribers. By understanding these patterns, you can make data-driven decisions to improve your long-term recurring revenue

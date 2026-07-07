@@ -13,11 +13,11 @@ Before heading to Cloudflare, you need to prepare the integration within your Wo
 3.  Click on the **Features & Addon** section in the left-hand sidebar.
 4.  Find the **Cloudflare Turnstile** card and toggle the switch to **Active**.
 
-![Cloudflare Turnstile Integration](/guide/public/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-1.webp)
+![Cloudflare Turnstile Integration](/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-1.webp)
 
 Once enabled, two configuration fields will appear: **Turnstile Site Key** and **Turnstile Secret Key**. You will need to keep this tab open as you’ll be pasting your keys here in Step 3.
 
-![Cloudflare Turnstile Integration](/guide/public/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-2.webp)
+![Cloudflare Turnstile Integration](/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-2.webp)
 
 ## Step 2: Generating Your Keys in Cloudflare
 
@@ -26,13 +26,13 @@ To connect your store, you need to register your domain with Cloudflare. You can
 1.  **Access the Turnstile Dashboard:** Log in to Cloudflare, and in the sidebar, navigate to **Protect & Connect > Turnstile**.
 2.  **Add Your Website:** Click the **Add Widget** button.
 
-![Cloudflare Turnstile Integration](/guide/public/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-3.webp)
+![Cloudflare Turnstile Integration](/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-3.webp)
 
 3.  **Configure the Widget:**
     * **Widget Name:** Enter a name to identify this site (e.g., "Main Store Checkout").
     * **Hostname Management:** Click the **Add Hostnames** button. A popup will appear—enter your store’s primary domain name (e.g., `mystore.com`) and click **Add**.
 
-![Cloudflare Turnstile Integration](/guide/public/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-4.webp)
+![Cloudflare Turnstile Integration](/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-4.webp)
 
 4.  **Select Widget Mode:**
     * **Managed (Recommended):** Cloudflare will only show an interactive checkbox if the visitor looks suspicious. Otherwise, it stays invisible.
@@ -40,11 +40,11 @@ To connect your store, you need to register your domain with Cloudflare. You can
     * **Invisible:** Stays completely hidden from the user at all times.
 5.  **Finalize:** Click **Create** at the bottom of the page.
 
-![Cloudflare Turnstile Integration](/guide/public/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-5.webp)
+![Cloudflare Turnstile Integration](/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-5.webp)
 
 Cloudflare will now display your **Site Key** and **Secret Key**. These are unique to your domain and should be kept secure.
 
-![Cloudflare Turnstile Integration](/guide/public/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-6.webp)
+![Cloudflare Turnstile Integration](/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-6.webp)
 
 ## Step 3: Connecting the Keys to FluentCart
 
@@ -58,7 +58,7 @@ Now, let's link the two platforms to finalize the security layer.
 
 You should see a "Settings Saved" confirmation. Your checkout page is now officially protected by Cloudflare Turnstile.
 
-![Cloudflare Turnstile Integration](/guide/public/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-7.webp)
+![Cloudflare Turnstile Integration](/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-7.webp)
 
 ## How to Verify the Integration
 

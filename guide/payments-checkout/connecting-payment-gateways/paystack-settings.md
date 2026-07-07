@@ -18,7 +18,7 @@ First, you need to install and enable Paystack as a payment method in your store
 3.  You will see a list of available payment gateways. Find **Paystack** and click the **Install & Activate** button next to it.
 4.  After a moment, the page will refresh, and the button will change to **Manage**. Click the **Manage** button to open the Paystack Settings page.
 
-![Installing and activating Paystack in FluentCart Payment Settings](/guide/public/images/payments-checkout/paystack-settings/enable-paystack-payment.webp)
+![Installing and activating Paystack in FluentCart Payment Settings](/images/payments-checkout/paystack-settings/enable-paystack-payment.webp)
 
 ## Step 2: Configure Paystack Settings in FluentCart
 
@@ -41,7 +41,7 @@ Webhooks are essential for Paystack to send real-time updates to FluentCart, suc
 
 * **Copy the Webhook URL:** In your FluentCart Paystack settings, copy the entire **Webhook URL** provided.
 
-![Set Up Webhooks](/guide/public/images/payments-checkout/paystack-settings/payment-activation-2.webp)
+![Set Up Webhooks](/images/payments-checkout/paystack-settings/payment-activation-2.webp)
 
 
 ## Step 4: Get the Credential from Paystack
@@ -51,12 +51,12 @@ Now, open a new tab and log in to your **Paystack dashboard**. Go to **Settings 
 1.  **Paste the Webhook URL:** Find the **Test Webhook URL** field. Paste the URL you just copied from FluentCart into this field.
 2.  **Copy Your API Keys:** On this same page, you will find your **Test Public Key** and **Test Secret Key**. Click the "**copy**" icon next to each key.
 
-![Finding API Keys and Webhook fields in the Paystack dashboard](/guide/public/images/payments-checkout/paystack-settings/paystack-settings-3.webp)
+![Finding API Keys and Webhook fields in the Paystack dashboard](/images/payments-checkout/paystack-settings/paystack-settings-3.webp)
 
 3.  **Paste Keys into FluentCart:** Now, go back to your FluentCart settings page. **Paste** the **Test Public Key** and **Test Secret Key** into their matching fields.
 4.  **Save Changes:** Click **Save changes** in your Paystack dashboard, and then click the **Save Settings** button in your FluentCart dashboard.
 
-![Finding API Keys and Webhook fields in the Paystack dashboard](/guide/public/images/payments-checkout/paystack-settings/save-settings-4.webp)
+![Finding API Keys and Webhook fields in the Paystack dashboard](/images/payments-checkout/paystack-settings/save-settings-4.webp)
 
 Your Paystack integration is now complete and in **Test Mode**. We recommend running a test transaction with a Paystack test card to ensure the connection is working.
 

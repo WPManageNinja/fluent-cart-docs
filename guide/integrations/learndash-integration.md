@@ -31,7 +31,7 @@ Use this method if you want a rule to apply based on events happening anywhere i
 4.  A dropdown menu will appear. Choose **LearnDash** from the list.
 5.  You will now be taken to the feed configuration screen where you can define the specifics of your global rule (explained in the below section).
 
-![Global Integration](/guide/public/images/integrations/learndash/global-integration-1.png)
+![Global Integration](/images/integrations/learndash/global-integration-1.png)
 
 #### Method 2: Creating a Product-Specific Feed (Recommended for Selling Courses)
 
@@ -44,7 +44,7 @@ Use this method to link a specific FluentCart product directly to the LearnDash 
 5.  A dropdown menu will appear. Choose **LearnDash** from the list.
 6.  You will now be taken to the feed configuration screen, specifically for this product, where you can define the enrollment rule (explained in the next section).
 
-![Product Integration](/guide/public/images/integrations/learndash/product-integration-2.png)
+![Product Integration](/images/integrations/learndash/product-integration-2.png)
 
 ### Configuring the Feed Settings
 
@@ -66,7 +66,7 @@ Here’s what each setting does:
 
 Click **Create LearnDash Feed** (or similar button) to save your rule.
 
-![Global Integration Feed](/guide/public/images/integrations/learndash/integration-feed-3.png)
+![Global Integration Feed](/images/integrations/learndash/integration-feed-3.png)
 
 ### Use Case Example: Selling a Course Bundle
 
