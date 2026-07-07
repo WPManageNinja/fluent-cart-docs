@@ -5,7 +5,7 @@ import Feedback from './components/Feedback.vue' // Import the file for feedback
 import GistEmbed from './components/GistEmbed.vue'
 import YouTubeEmbed from './components/YouTubeEmbed.vue'
 import Layout from './Layout.vue' // Import new layout file
-// import ZoomableImage from './components/ZoomableImage.vue' // Disabled - causing frontend rendering issues
+import ZoomableImage from './components/ZoomableImage.vue'
 
 export default {
   extends: DefaultTheme,
@@ -15,6 +15,10 @@ export default {
     app.component('Feedback', Feedback)
     app.component('GistEmbed', GistEmbed)
     app.component('YouTubeEmbed', YouTubeEmbed)
-    // app.component('ZoomableImage', ZoomableImage) // Disabled - causing frontend rendering issues
+    // Register ZoomableImage component globally
+    // This ensures it's available for markdown rendering
+    if (!app.component('ZoomableImage')) {
+      app.component('ZoomableImage', ZoomableImage)
+    }
   }
 } 

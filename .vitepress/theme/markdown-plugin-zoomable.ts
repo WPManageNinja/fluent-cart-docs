@@ -1,5 +1,14 @@
 import type { MarkdownRenderer } from 'vitepress'
 
+/** Escape for HTML attribute value to avoid broken markup and XSS. */
+function escapeAttr(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+}
+
 export function zoomablePlugin(md: MarkdownRenderer) {
   const defaultRender = md.renderer.rules.image || ((tokens, idx, options, env, self) => {
     return self.renderToken(tokens, idx, options)
@@ -15,10 +24,9 @@ export function zoomablePlugin(md: MarkdownRenderer) {
     const src = token.attrs[srcIndex][1]
     const alt = token.content || ''
 
-    // First render the image normally so VitePress can process it
-    const originalImage = defaultRender(tokens, idx, options, env, self)
-    
-    // Then wrap it with our ZoomableImage component
-    return `<ZoomableImage src="${src}" alt="${alt}">${originalImage}</ZoomableImage>`
+    // Use explicit closing tag with the image inside as a child element
+    // This ensures SSR and client rendering produce the exact same HTML
+    // The wrapper div creates a proper block boundary
+    return `<ClientOnly><ZoomableImage src="${escapeAttr(src)}" alt="${escapeAttr(alt)}"></ZoomableImage></ClientOnly>`
   }
-} 
+}
