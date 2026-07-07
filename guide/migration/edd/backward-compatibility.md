@@ -23,7 +23,7 @@ This layer is what turns a migration from a hard cutover into a soft transition.
 
 The completion screen lists the four areas the Migrator continues to bridge:
 
-![Completion screen showing the backward compatibility notice listing License API, PayPal IPN, Stripe webhooks, and download/renewal URLs](/guide/public/images/migration/edd-migrator/06-backward-compat.webp)
+![Completion screen showing the backward compatibility notice listing License API, PayPal IPN, Stripe webhooks, and download/renewal URLs](/images/migration/edd-migrator/06-backward-compat.webp)
 
 ### License API endpoints
 

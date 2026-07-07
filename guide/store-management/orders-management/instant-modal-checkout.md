@@ -13,7 +13,7 @@ When Instant Checkout is active, clicking a **Buy Now** button won't take the cu
 3.  **The purchase is completed** without ever leaving the product page.
 
 
-![Instant Modal Checkout](/guide/public/images/store-management/instant-modal-checkout/fluentcart-instant-checkout.gif)
+![Instant Modal Checkout](/images/store-management/instant-modal-checkout/fluentcart-instant-checkout.gif)
 
 ---
 
@@ -48,7 +48,7 @@ add_filter('fluent_cart/modal_checkout/filter_active_payment_methods', function(
 
 Once saved, your shop is ready for instant purchases!
 
-![Instant Modal Checkout](/guide/public/images/store-management/instant-modal-checkout/fluentcart-instant-checkout-1.webp)
+![Instant Modal Checkout](/images/store-management/instant-modal-checkout/fluentcart-instant-checkout-1.webp)
 
 ## Implementation Method 2: The Gutenberg Block (The No-Code Way)
 
@@ -69,7 +69,7 @@ If you prefer building your pages visually using the WordPress Block Editor (Gut
 This specific button will now trigger the instant checkout popup for the product you've selected.
 
 
-![Instant Modal Checkout](/guide/public/images/store-management/instant-modal-checkout/instant-chekout-modal.webp)
+![Instant Modal Checkout](/images/store-management/instant-modal-checkout/instant-chekout-modal.webp)
 
 > ⚠️ **Important Reminder**  
 > For Instant Checkout to work, you must first have your payment gateways (like Stripe or PayPal) set up and active. You can check this by going to **FluentCart Settings > Payment Settings**. If your gateways aren't active, the pop-up won't be able to process payments!

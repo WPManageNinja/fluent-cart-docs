@@ -13,7 +13,7 @@ Use the controls at the top of the page to customize the data displayed in your 
 * **Date Filter:** Define a specific date range to analyze retention trends over weeks, months, or years.
 * **Reset Filters:** Instantly clear your custom date selections to return to the default report view.
 
-![Retention Report](/guide/public/images/reporting-analytics/subscription/retention/retention-report-1.webp)
+![Retention Report](/images/reporting-analytics/subscription/retention/retention-report-1.webp)
 
 ## Subscription & MRR Retention
 
@@ -30,7 +30,7 @@ The **Retention Rate** chart provides a visual month-over-month comparison of yo
 * **Subscription Retention vs. MRR Retention:** The chart plots both metrics side-by-side, allowing you to see if customer loss is impacting your revenue proportionally.
 * **Interactive Controls:** Use the icons in the top-right corner to zoom into specific dates, toggle between chart types, or download the graph for your internal business reviews.
 
-![Retention Chart](/guide/public/images/reporting-analytics/subscription/retention/retention-rate-2.webp)
+![Retention Chart](/images/reporting-analytics/subscription/retention/retention-rate-2.webp)
 
 ## Lifetime Analysis
 
@@ -47,7 +47,7 @@ Churn is the measure of lost customers. Monitoring this helps you identify "leak
 * **MRR Churn:** The total amount of recurring revenue lost due to cancellations or downgrades.
 * **Churn Rate Trend:** This line graph visualizes whether your churn is increasing or decreasing over time, helping you spot negative trends before they impact your bottom line.
 
-![Lifetime Analysis](/guide/public/images/reporting-analytics/subscription/retention/lifetime-analysis-3.webp)
+![Lifetime Analysis](/images/reporting-analytics/subscription/retention/lifetime-analysis-3.webp)
 
 
 

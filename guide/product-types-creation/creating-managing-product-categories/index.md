@@ -22,7 +22,7 @@ Here’s a breakdown of the fields:
 
 After filling in the details, click the **Add New Category** button. Your new category will now appear in the list on the right.
 
-![Add New Categories](/guide/public/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-1.webp)
+![Add New Categories](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-1.webp)
 
 ### Managing Existing Categories
 

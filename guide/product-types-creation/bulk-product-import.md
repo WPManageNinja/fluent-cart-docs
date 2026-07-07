@@ -17,7 +17,7 @@ First, let's navigate to the right tool in your dashboard.
 3. Look at the top right corner of your product list and click on the white **More actions** dropdown button.
 4. Select **Bulk Product Insert** from the menu.
 
-![Bulk Product Import](/guide/public/images/product-types-creation/bulk-product-import/product-import-1.webp)
+![Bulk Product Import](/images/product-types-creation/bulk-product-import/product-import-1.webp)
 
 ## Step 2: Upload Your CSV File (Your Product Spreadsheet)
 
@@ -25,7 +25,7 @@ You will now be looking at a blank Bulk Insert page. This is where you will hand
 
 1. Click the **Import** button located at the top right of the screen.
 
-![Bulk Product Import](/guide/public/images/product-types-creation/bulk-product-import/product-import-2.webp)
+![Bulk Product Import](/images/product-types-creation/bulk-product-import/product-import-2.webp)
 
 2. A popup window will appear asking for your file.
 3. Here upload your CSV file that is saved to your computer, simply drag and drop the file into the upload area, or click the **Browse/Upload Files** text to select it.
@@ -34,7 +34,7 @@ You will now be looking at a blank Bulk Insert page. This is where you will hand
 
 > **Need a template?** If you are unsure how to format your spreadsheet, look at the bottom left of this popup and click **Download a Sample CSV File**. This gives you a perfectly formatted template you can fill out in Excel or Google Sheets!
 
-![Bulk Product Import](/guide/public/images/product-types-creation/bulk-product-import/product-import-3.webp)
+![Bulk Product Import](/images/product-types-creation/bulk-product-import/product-import-3.webp)
 
 ## Step 3: Map Your Columns (Connecting the Dots)
 
@@ -54,7 +54,7 @@ Carefully match them up. For example:
 
 When everything looks correctly matched, click the **Add Products** button at the bottom of the window.
 
-![Bulk Product Import](/guide/public/images/product-types-creation/bulk-product-import/product-import-4.webp)
+![Bulk Product Import](/images/product-types-creation/bulk-product-import/product-import-4.webp)
 
 ## Step 4: The Staging Table (Your Safe Review Zone)
 
@@ -69,7 +69,7 @@ Think of this as a final rehearsal. You can use this table to quickly review and
 * **Pin Actions:** If you have many columns and need to scroll horizontally, check the **Pin Actions** box at the top right. This freezes your action buttons so they are always visible, no matter how far you scroll.
 
 
-![Bulk Product Import](/guide/public/images/product-types-creation/bulk-product-import/product-import-5.webp)
+![Bulk Product Import](/images/product-types-creation/bulk-product-import/product-import-5.webp)
 
 ## Step 5: Save and Publish (Going Live!)
 

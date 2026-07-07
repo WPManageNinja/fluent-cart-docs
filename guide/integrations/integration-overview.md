@@ -17,7 +17,7 @@ This section, located at the top of the page, is where you create powerful, stor
 These integration rules apply globally to all your orders. For more targeted rules, you can also set up integrations on a [per-product basis](/guide/product-types-creation/managing-product-integrations).
 :::
 
-![Integration Overview](/guide/public/images/integrations/integration-overview/integration-overview.png)
+![Integration Overview](/images/integrations/integration-overview/integration-overview.png)
 
 ### Integration Modules
 
@@ -32,7 +32,7 @@ The activation process is largely automatic.
 
 To help you find what you need, you can also use the filter tabs (**ALL, CRM, LMS, CORE, MARKETING**) or the search bar to find a specific module.
 
-![Available Integration Modules](/guide/public/images/integrations/integration-overview/integration-overview-1.png)
+![Available Integration Modules](/images/integrations/integration-overview/integration-overview-1.png)
 
 ### Available Integration Modules
 

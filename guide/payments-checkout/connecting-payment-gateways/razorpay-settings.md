@@ -18,7 +18,7 @@ Before you can use Razorpay, you need to add the feature to your FluentCart stor
 3.  You will see a list of available payment gateways. Find **Razorpay** and click the **Manage** button next to it.
 4.  If it isn't ready yet, you will see a screen with an **Install & Activate** button. Click on it.
 
-![ Activate Razorpay](/guide/public/images/payments-checkout/razorpay-settings/access-razorpay-1.webp)
+![ Activate Razorpay](/images/payments-checkout/razorpay-settings/access-razorpay-1.webp)
 
 ## Step 2: Configure Razorpay Settings
 
@@ -34,7 +34,7 @@ First, enable the payment gateway by toggling the **Payment Activation** switch 
 > [!TIP]
 > Now, copy the **Webhook URL** from this page for future use in Step 4.
 
-![ Configure Razorpay Settings](/guide/public/images/payments-checkout/razorpay-settings/payment-activation-2.webp)
+![ Configure Razorpay Settings](/images/payments-checkout/razorpay-settings/payment-activation-2.webp)
 
 ## Step 3: Get Your Keys from Razorpay
 
@@ -44,15 +44,15 @@ To integrate your store with Razorpay, you require two special codes: a **Key ID
 2.  In the left sidebar, go to **Accounts & Settings**.
 3.  Click on the **API Keys** tab.
 
-![ Get API Keys From Razorpay](/guide/public/images/payments-checkout/razorpay-settings/razorpay-account-settings-3.webp)
+![ Get API Keys From Razorpay](/images/payments-checkout/razorpay-settings/razorpay-account-settings-3.webp)
 
 4.  Click the **Regenerate Test Key** (or "Generate Key") button.
 
-![ Get API Keys From Razorpay](/guide/public/images/payments-checkout/razorpay-settings/Regenarate-Test-Key-4.webp)
+![ Get API Keys From Razorpay](/images/payments-checkout/razorpay-settings/Regenarate-Test-Key-4.webp)
 
 5.  Copy the **Key ID** and **Key Secret** that appear. Keep these safe!
 
-![ Copy Key ID and Secret](/guide/public/images/payments-checkout/razorpay-settings/Copy-the-public-key-secret-key-5.webp)
+![ Copy Key ID and Secret](/images/payments-checkout/razorpay-settings/Copy-the-public-key-secret-key-5.webp)
 
 ## Step 4: Set Up Webhooks
 
@@ -61,7 +61,7 @@ Webhooks are like "digital status updates." They tell FluentCart exactly when a 
 1.  In your Razorpay Dashboard, go to **Settings > Webhooks**. 
 2.  Click on the **Add New Webhook** button.
 
-![ Add New Webhook](/guide/public/images/payments-checkout/razorpay-settings/add-new-webhook-6.webp)
+![ Add New Webhook](/images/payments-checkout/razorpay-settings/add-new-webhook-6.webp)
 
 3.  In the popup that appears, paste the **Webhook URL** you copied before from FluentCart.
 4.  In the **Active Events** section, select these specific events to ensure your store stays updated:
@@ -88,7 +88,7 @@ Webhooks are like "digital status updates." They tell FluentCart exactly when a 
 > [!IMPORTANT]
 > Make sure to save the Webhook Secret in the credentials section in your FluentCart settings for secure webhook verification.
 
-![ Create Webhook](/guide/public/images/payments-checkout/razorpay-settings/create-webhook-7.webp)
+![ Create Webhook](/images/payments-checkout/razorpay-settings/create-webhook-7.webp)
 
 ## Step 5: Finalize Configuration in FluentCart
 
@@ -102,7 +102,7 @@ Now, take those keys and put them into your store settings.
 >[Tip] 
 >We recommend starting with "Test" mode to make sure everything works before you take real money!
 
-![ Finalize Configuration](/guide/public/images/payments-checkout/razorpay-settings/razorpay-settings-8.webp)
+![ Finalize Configuration](/images/payments-checkout/razorpay-settings/razorpay-settings-8.webp)
 
 ---
 

@@ -15,7 +15,7 @@ This method is typically used by larger businesses or those with specific legal 
 
 Select **"Collect specific country rate"** from the main EU VAT setup wizard, you will be taken to a configuration screen where you can choose the countries you are registered in.
 
-![Specific Country Settings](/guide/public/images/tax/european-union/specific-country-rate/specific-country-1.png)
+![Specific Country Settings](/images/tax/european-union/specific-country-rate/specific-country-1.png)
 
 #### Step 1: Configure Your Registered Countries
 
@@ -23,12 +23,12 @@ First, you need to tell FluentCart which EU countries you will be collecting VAT
 
 1.  On the **"Collect specific country VAT"** screen, click the **Configure Countries** button.
 
-![Specific Country Settings](/guide/public/images/tax/european-union/specific-country-rate/specific-country-2.png)
+![Specific Country Settings](/images/tax/european-union/specific-country-rate/specific-country-2.png)
 
 2.  A pop-up window will appear, listing all the countries in the European Union.
 3.  Click the **Select** button next to each country where you have a VAT registration.
 
-![Specific Country Settings](/guide/public/images/tax/european-union/specific-country-rate/specific-country-3.png)
+![Specific Country Settings](/images/tax/european-union/specific-country-rate/specific-country-3.png)
 
 4.  Once you have selected all the relevant countries, close the pop-up.
 
@@ -40,7 +40,7 @@ The countries you selected will now be listed on the main screen, ready for you 
 
 From the list of your configured countries, click the arrow icon for the country you wish to manage (e.g., Austria). This will take you to the detailed tax rate settings page for that country.
 
-![Specific Country Settings](/guide/public/images/tax/european-union/specific-country-rate/specific-country-4.png)
+![Specific Country Settings](/images/tax/european-union/specific-country-rate/specific-country-4.png)
 
 On this page, you can manage several key settings:
 

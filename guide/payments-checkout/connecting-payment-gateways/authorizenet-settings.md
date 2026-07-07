@@ -12,7 +12,7 @@ First, you need to locate the integration settings within your WordPress site.
 2.  Select the **Payment Settings** tab from the sidebar.
 3.  Scroll down to find **Authorize.net** and click the **Manage** button.
 
-![Authorize.net Settings](/guide/public/images/payments-checkout/authorize.net/authorize-payment-method-1.webp)
+![Authorize.net Settings](/images/payments-checkout/authorize.net/authorize-payment-method-1.webp)
 
 ## Step 2: Obtain API Credentials from Authorize.net
 
@@ -23,7 +23,7 @@ To connect your store, you need to retrieve four specific keys from your Authori
 3.  Click on **Account and API Settings** (located under the Account section).
 4.  Select **API Credentials and Keys**.
 
-![Authorize.net Settings](/guide/public/images/payments-checkout/authorize.net/authorize-payment-method-2.webp)
+![Authorize.net Settings](/images/payments-checkout/authorize.net/authorize-payment-method-2.webp)
 
 
 **Collect your Keys:**
@@ -33,7 +33,7 @@ To connect your store, you need to retrieve four specific keys from your Authori
 * **Signature Key:** Select "Generate New Signature Key," click **Submit**, and copy it.
 * **Public Client Key:** Click the "Generate New Public Client Key" button and copy the resulting string.
 
-![Authorize.net Settings](/guide/public/images/payments-checkout/authorize.net/authorize-payment-method-3.webp)
+![Authorize.net Settings](/images/payments-checkout/authorize.net/authorize-payment-method-3.webp)
 
 ## Step 3: Configure Credentials in FluentCart
 
@@ -51,7 +51,7 @@ Now, return to your WordPress site to input the credentials you just gathered.
     * **Button Colors:** Use the color pickers to match the button background and hover colors to your website's branding.
 5.  **Enable Debug Logging:** Log Authorize.Net API interactions for troubleshooting.
 
-![Authorize.net Settings](/guide/public/images/payments-checkout/authorize.net/authorize-payment-method-4.webp)
+![Authorize.net Settings](/images/payments-checkout/authorize.net/authorize-payment-method-4.webp)
 
 ## Step 4: Configure Webhooks
 
@@ -62,7 +62,7 @@ Webhooks are critical for communication. They allow Authorize.net to notify Flue
     * In your Authorize.net dashboard, go to **Account > Webhook Notifications > Webhooks**.
     * Click the **+ Create a webhook notification** button.
 
-![Authorize.net Settings](/guide/public/images/payments-checkout/authorize.net/authorize-payment-method-5.webp)
+![Authorize.net Settings](/images/payments-checkout/authorize.net/authorize-payment-method-5.webp)
 
 3.  **Fill in Webhook Details:**
     * **Name:** Give a name to your Webhook like "FluentCart Webhook."
@@ -79,7 +79,7 @@ Webhooks are critical for communication. They allow Authorize.net to notify Flue
     * `net.authorize.customer.subscription.expiring`
 5.  Click **Save** to finalize.
 
-![Authorize.net Settings](/guide/public/images/payments-checkout/authorize.net/authorize-payment-method-6.webp)
+![Authorize.net Settings](/images/payments-checkout/authorize.net/authorize-payment-method-6.webp)
 
 ## Step 5: Activation and Final Save
 

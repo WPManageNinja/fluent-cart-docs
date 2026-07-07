@@ -15,11 +15,11 @@ First, you need to get your **API Key** from your Mollie dashboard. This key is 
 
 > **Info: Test Mode vs. Live Mode** It is highly recommended to start with your **Test API key**. This allows you to make test purchases on your store without using real money. Once you are sure the connection is working correctly, you can switch to your Live API key to begin accepting real payments.
 
-![Mollie API Configuration](/guide/public/images/payments-checkout/mollie/mollie-2.webp)
+![Mollie API Configuration](/images/payments-checkout/mollie/mollie-2.webp)
 
 For now, click the **Copy** button next to your **Test API key**.
 
-![Mollie API Configuration](/guide/public/images/payments-checkout/mollie/mollie-3.webp)
+![Mollie API Configuration](/images/payments-checkout/mollie/mollie-3.webp)
 
 ### Step 2: Configure Mollie in FluentCart
 
@@ -37,7 +37,7 @@ Now that you have your test key, let's go back to your WordPress dashboard to pa
 * **You can configure methods here:** From here you can directly visit to select Payment page of Mollie.
 * **Save Settings:** Click the **Save Settings** button at the bottom of the page.
 
-![Mollie API Configuration](/guide/public/images/payments-checkout/mollie/mollie-7.webp)
+![Mollie API Configuration](/images/payments-checkout/mollie/mollie-7.webp)
 
 ### Step 3: Go Live with Real Payments
 

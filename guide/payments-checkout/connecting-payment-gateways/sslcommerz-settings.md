@@ -13,7 +13,7 @@ Before configuring the gateway, you need to install the specific add-on for it.
 3.  Then, go to **FluentCart Pro → Settings → Payment Settings**.
 4.  Locate **SSLCommerz** in the list and click the **Manage** button.
 
-![SSL Commerz in Fluentcart](/guide/public/images/payments-checkout/ssl-commerz/manage-1.webp)
+![SSL Commerz in Fluentcart](/images/payments-checkout/ssl-commerz/manage-1.webp)
 
 ## Step 2: Getting Your Credentials
 
@@ -26,7 +26,7 @@ To connect your store, you need your unique Store ID and Secret Key directly fro
 
 **Copy** both of these values so you can **paste** them into your FluentCart payment settings.
 
-![Get the Credentials](/guide/public/images/payments-checkout/ssl-commerz/copy-credential-2.webp)
+![Get the Credentials](/images/payments-checkout/ssl-commerz/copy-credential-2.webp)
 
 ## Step 3: Configuring SSL Commerz Settings
 
@@ -40,7 +40,7 @@ Once you are on the SSL Commerz settings page in FluentCart, you can enter your 
  * **Modal Checkout Button Settings:** If you select the Modal Checkout, you can customize the Button Text, Button Color, Hover Color, and Text Color to match your brand's design.
  * **Payment Activation:** **Toggle** this switch at the top right to turn the SSL Commerz gateway on or off for your store.
 
-![Activation](/guide/public/images/payments-checkout/ssl-commerz/payment-activation-3.webp)
+![Activation](/images/payments-checkout/ssl-commerz/payment-activation-3.webp)
 
 ## Step 4: Setting Up the IPN/Webhook URL
 
@@ -53,7 +53,7 @@ To ensure FluentCart receives automatic updates when a customer completes a paym
  5. **Paste** the URL you copied from FluentCart into the provided input field.
  6. Click the **Save** button to finish the setup.
 
-![Settings Up IBN/Webhook](/guide/public/images/payments-checkout/ssl-commerz/setup-webhook-4.webp)
+![Settings Up IBN/Webhook](/images/payments-checkout/ssl-commerz/setup-webhook-4.webp)
 
 ## Step 5: Activate and Save
 

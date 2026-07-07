@@ -55,7 +55,7 @@ Now that the bridge is built, open the tool.
 
 This launches the **Migration Wizard** — a clean, step-by-step interface that walks you through the entire transfer.
 
-![FluentCart Migrator landing screen with the source platform picker](/guide/public/images/migration/edd-migrator/01-source-select.webp)
+![FluentCart Migrator landing screen with the source platform picker](/images/migration/edd-migrator/01-source-select.webp)
 
 
 ## Step 3: Select Your Source
@@ -75,7 +75,7 @@ This step verifies that your installation of Easy Digital Downloads is fully com
 
 Once you see the **green confirmation box**, click **Continue**.
 
-![Compatibility check screen showing EDD 3.x detected with version number](/guide/public/images/migration/edd-migrator/02-compatibility.webp)
+![Compatibility check screen showing EDD 3.x detected with version number](/images/migration/edd-migrator/02-compatibility.webp)
 
 
 ## Step 5: Pre-Migration Overview
@@ -95,7 +95,7 @@ The wizard also surfaces detected payment gateways and the order statuses presen
 
 Compare these numbers against what you know is in your EDD store. If they look right, proceed.
 
-![Pre-migration overview showing entity counts, gateways, and order statuses](/guide/public/images/migration/edd-migrator/03-pre-overview.webp)
+![Pre-migration overview showing entity counts, gateways, and order statuses](/images/migration/edd-migrator/03-pre-overview.webp)
 
 
 ## Step 6: Configure and Start the Migration
@@ -126,7 +126,7 @@ Don't close or refresh this browser tab while the migration is running. The prog
 No need to panic. The Migrator tracks its progress as it goes. If your browser closes, your session times out, or anything else interrupts the process, return to the Migrator screen and start it again. It will automatically skip everything that already completed and resume the payments stage from the exact batch where it stopped.
 :::
 
-![Migration steps with WP-CLI command panel below](/guide/public/images/migration/edd-migrator/04-steps-cli.webp)
+![Migration steps with WP-CLI command panel below](/images/migration/edd-migrator/04-steps-cli.webp)
 
 ::: info On the same screen: WP-CLI commands
 The configuration screen also surfaces the WP-CLI commands for each stage. For stores with thousands of orders, switching to the CLI is significantly faster and avoids browser timeouts entirely. See the [WP-CLI Reference](/guide/migration/edd/edd-cli) for the full command surface.
@@ -137,7 +137,7 @@ The configuration screen also surfaces the WP-CLI commands for each stage. For s
 
 Once the progress bar reaches **100%**, you'll see a green checkmark and a **Migration Completed** screen with a final breakdown of how many items were copied across each category.
 
-![Migration completion screen with stats, backward compatibility notice, and next steps](/guide/public/images/migration/edd-migrator/06-backward-compat.webp)
+![Migration completion screen with stats, backward compatibility notice, and next steps](/images/migration/edd-migrator/06-backward-compat.webp)
 
 The completion screen also includes an important notice — **keep the Migrator plugin active** even after the migration finishes. It provides a backward compatibility layer for existing customers. See [Backward Compatibility](/guide/migration/edd/backward-compatibility) for the full explanation.
 
