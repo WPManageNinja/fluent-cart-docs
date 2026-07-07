@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { joinURL, withoutTrailingSlash } from 'ufo'
-// import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
+import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
 
 export default defineConfig({
   title: 'FluentCart Documentation',
@@ -142,7 +142,7 @@ export default defineConfig({
   
   markdown: {
     config: (md) => {
-      // md.use(zoomablePlugin) // Disabled - ZoomableImage component causing frontend rendering issues
+      md.use(zoomablePlugin)
       // Open all links (internal and external) in a new tab
       const defaultLinkOpenRenderer = md.renderer.rules.link_open || ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options))
       md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
