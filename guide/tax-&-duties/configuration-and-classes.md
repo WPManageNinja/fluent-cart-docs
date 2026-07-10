@@ -63,21 +63,26 @@ Short pieces of text shown next to your prices on the storefront, to make tax ha
 
 Leave either field blank to skip its suffix.
 
-### Checkout Tax Breakdown Display
+### Tax Display Style
 
-Controls how the per-line tax context appears on the checkout summary:
+Controls how tax is presented to shoppers and on your documents — the checkout and cart summary, receipts, PDF invoices, order emails, and the order views in both the admin area and the customer dashboard. Pick a style from the **Tax Display Style** dropdown:
 
-![Screenshot of the Checkout Tax Breakdown Display dropdown with Item label and tooltip, Item label only, and Tooltip only options](/images/tax/configuration-and-classes/tax-2.webp)
+![Screenshot of the Tax Display Style dropdown showing the Simplified and Itemized options with the Tax Label field](/images/tax/configuration-and-classes/tax-display-style.webp)
 
-* **Item label and tooltip:** shows the tax label on each line item *and* a hover tooltip with the breakdown.
-* **Item label only:** shows just the label.
-* **Tooltip only:** shows only the hover tooltip.
+* **Simplified (single line + details):** tax is shown as a single, tidy line (one label and one amount) with a **See details** link that expands the full per-rate breakdown on demand. Per-item tax badges are hidden to keep the summary clean. This is the Amazon-style presentation most storefronts expect.
+* **Itemized (per-item tax + breakdown):** the detailed presentation. Every taxable line item carries its own tax badge, and the full tax-breakdown-by-rate table is always visible. Choose this when you want tax spelled out on each line.
 
-Choose the option that fits the busyness of your checkout layout.
+::: info
+Stores upgrading from an earlier version keep **Itemized**, so nothing changes unexpectedly, while brand-new installs start on **Simplified**. You can switch styles at any time.
+:::
+
+#### Tax Label (Simplified mode)
+
+When **Simplified** is selected, a **Tax Label** field appears so you can rename that single tax line to whatever your customers expect — for example `VAT`, `GST`, or `MwSt`. Leave it as the default **Tax** if a generic label suits your store.
 
 #### How tax appears at checkout
 
-With a breakdown option selected, your customers see the tax context directly in the **Order summary** on the checkout page. Each taxable line item carries a tax label badge (for example **Tax (15%)**), and a dedicated **TAX** block totals the tax for the whole order. Exactly how this reads depends on your **Prices entered with tax** setting.
+Your customers see the tax context directly in the **Order summary** on the checkout page. In **Itemized** mode, each taxable line item carries a tax label badge (for example **Tax (15%)**); in **Simplified** mode those per-line badges collapse into the single tax line you labelled above. Either way, a dedicated **TAX** block totals the tax for the whole order, and exactly how it reads depends on your **Prices entered with tax** setting.
 
 **When prices Tax Include,** the line badge shows the tax already contained in the price (for example `incl. $1.68`) and the **TAX** block reads **Total tax in this order**. The order total stays the same, because tax was already part of the price.
 
@@ -88,7 +93,7 @@ With a breakdown option selected, your customers see the tax context directly in
 ![Screenshot of the checkout Order summary with tax-exclusive pricing, showing a Tax (15%) badge marked with a plus and the Total payable tax row](/images/tax/configuration-and-classes/checkout-tax-display-excluded.webp)
 
 ::: info
-When an order mixes items taxed at different rates, FluentCart shows one tax line per rate (with the rate percentage and its amount) instead of a single combined figure. This per-rate breakdown appears everywhere the order is rendered: the checkout summary, order emails, receipts, PDF invoices, and the order views in both the admin area and the customer dashboard. Orders placed before FluentCart 1.5.2 keep their original single-line tax total.
+When an order mixes items taxed at different rates, FluentCart lists one tax line per rate (with the rate percentage and its amount) instead of a single combined figure — in the always-on breakdown under **Itemized**, or inside the **See details** popover under **Simplified**. This per-rate breakdown appears everywhere the order is rendered: the checkout summary, order emails, receipts, PDF invoices, and the order views in both the admin area and the customer dashboard. Reverse-charge (B2B) orders use the very same table, showing a **VAT reversed** total in place of a charged amount. Orders placed before FluentCart 1.5.2 keep their original single-line tax total.
 :::
 
 ### Saving Your Settings
@@ -113,4 +118,18 @@ Toggle. **Default: off.** There are no other settings for this option.
 A multi-select product-category picker. Any category you select here is **never** reverse-charged: VAT is always added, even when the customer has a valid EU VAT ID. Use this for product types that are explicitly outside reverse-charge scope.
 
 Pick the one that matches how your accounting and contracts are written.
+
+### Automatic Reverse-Charge Notice
+
+When an order qualifies for reverse charge, FluentCart prints the required legal mention **automatically** — you no longer ask customers to type their own declaration. The default notice reads:
+
+> Reverse charge — Article 196, Council Directive 2006/112/EC. Customer is liable for VAT.
+
+![Screenshot of a PDF invoice showing the automatic reverse-charge legal notice beneath the tax breakdown](/images/tax/configuration-and-classes/reverse-charge-notice.webp)
+
+This mention appears at checkout and on every generated document — order and renewal receipts, refund notices, PDF invoices, and order emails — satisfying the EU VAT Directive's Article 226(11a) requirement. Orders placed before the upgrade keep whatever declaration was stored with them at the time.
+
+::: info
+Developers can customise the wording with the `fluent_cart/tax/reverse_charge_notice_text` filter.
+:::
 
