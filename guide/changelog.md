@@ -1,6 +1,51 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.5.3
+*Released on Jul 9, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Configurable Tax Display Styles with customizable tax labels
+• Adds MCP AI support for profitability, subscription forecasts, and payment ledger access
+• Adds Advanced AI report filters, pagination, coupon usage, and margin insights
+• Adds Support for report add-ons in the Reports sidebar
+• Adds Inline tax class creation for Tax and EU VAT settings
+• Adds An option to hide product SKUs
+• Improves Duplicate order protection during checkout
+• Improves AI refund and subscription cancellation safety with confirmation
+• Improves EU B2B reverse charge declarations on generated documents
+• Improves Authorize.Net subscription reliability and retry handling
+• Improves Bricks element labels
+• Improves Storefront, checkout, and cart drawer styling
+• Improves Expiration filters to include past-due subscriptions
+• Improves Translation coverage across the admin and storefront
+• Improves Integration support with partial product price updates
+• Improves Security through ongoing audits and hardening
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Shipping calculation for Stripe subscriptions with physical products
+• Fixes Shipping tax calculation based on the selected shipping method
+• Fixes Per-item shipping allocation accuracy
+• Fixes Reverse-charge tax breakdowns across all order views
+• Fixes Installment counts after checkout discounts
+• Fixes Authorize.Net and Mollie installment billing cycles
+• Fixes PayPal amount formatting
+• Fixes PayPal installment cancellation detection
+• Fixes Carts remaining locked after completed checkouts
+• Fixes Product creation dates being overwritten during edits
+• Fixes Stock badge labels for default variations
+• Fixes Bricks Products Collection loading state
+• Fixes Price range labels on Bricks product pages
+• Fixes Database upgrades after plugin updates
+• Fixes Licensed add-on downloads, including Page History
+• Fixes Capability checks for the current customer session
+```
+
+:::::
+
 ## FluentCart v1.5.2
 *Released on Jun 30, 2026*
 

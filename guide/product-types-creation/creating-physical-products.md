@@ -126,6 +126,8 @@ Click to expand and enter a unique tracking code for this product (e.g., `SHOE-W
 
 > **📝 Note:** Assigning SKUs makes inventory tracking, order fulfillment, and reporting significantly easier — especially when you're managing stock across multiple platforms or warehouses.
 
+> **💡 Tip — hide a SKU from the storefront:** Leave the **SKU** field empty and FluentCart shows no SKU line on the product page for that item, so it stays hidden from customers.
+
 **Shipping**
 
 Because this is a physical item, this section is critical. Getting it right means accurate carrier rates at checkout.

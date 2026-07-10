@@ -23,6 +23,10 @@ The reporting hub is divided into several focused tabs, giving you a comprehensi
 * **Product:** Analyzes individual item performance, units sold, and provides side-by-side product comparisons.
 * **Customer:** Monitors your store’s customer acquisition and growth, helping you understand long-term customer value.
 
+::: info
+The Reports sidebar is **extensible**. When you install a FluentCart add-on that ships its own reports, those report pages appear automatically in this same sidebar alongside the built-in tabs — there's nothing to configure. If you don't have any reporting add-ons active, the menu simply shows the core reports listed above.
+:::
+
 
 ## Reports Dashboard Overview (The Summary Page)
 

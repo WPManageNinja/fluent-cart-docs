@@ -56,7 +56,7 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Key files:** `ReportingModule.php`, controllers under `Http/Controllers/Reports/*`.
 - **User-facing surface:** Every report screen under FluentCart Pro → Reports.
 - **Drives docs:** `guide/reporting-analytics/*.md`
-- **Last fully audited:** v1.3.27
+- **Last fully audited:** v1.5.3
 
 ### Modules/Shipping
 - **Purpose:** Shipping zones, methods, rates, packages, carrier-rate calculation.
@@ -91,7 +91,7 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Key files:** `TaxModule.php`, `TaxService.php`, `Http/Controllers/AppControllers/TaxRateController.php`, `Modules/Tax/CountryToggle*.php`.
 - **User-facing surface:** Tax settings UI (classes, regions, EU VAT field, per-country tax toggle), tax breakdown on order pages and PDF receipts, reverse-charge declaration on B2B EU receipts.
 - **Drives docs:** `guide/tax-&-duties/*.md` (literal `&` in folder name — do not rename)
-- **Last fully audited:** v1.5.2
+- **Last fully audited:** v1.5.3
 
 ### Modules/Templating
 - **Purpose:** Frontend templating + page-builder integrations (Bricks, Gutenberg, Elementor).

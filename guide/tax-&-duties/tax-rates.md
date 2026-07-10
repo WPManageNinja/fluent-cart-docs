@@ -69,8 +69,16 @@ When you're done editing a class tab, click **Save Rates** at the bottom-right o
 Each region carries a separate rate table per tax class. You'll see tabs at the top of the rate area: **Standard**, **Reduced**, **Zero**, plus a **+** button to add more.
 
 * Click a class tab to view and edit that class's rates.
-* Click **+** to add another class to this region — a small dropdown appears with **Zero** (if not already added) and **Custom Class…** (lets you name a new class on the spot).
-* An **×** appears on optional class tabs (Reduced, Zero, custom) so you can remove them from this region; the **Standard** class is always present.
+* Click **+** to add another class to this region — a small dropdown appears with **Zero** (if not already added) and **Custom Class…**.
+* An **×** appears on optional class tabs (Reduced, Zero, custom) so you can remove them from this region; the **Standard** class is always present and can't be deleted.
+
+#### Creating a Tax Class Inline
+
+Choosing **Custom Class…** lets you name a brand-new class **right there in the tab bar** — no pop-up dialog and no page reload. Type the class name in the inline input and confirm; the new tab and its rate rows appear immediately, ready to fill in.
+
+![Screenshot of the inline tax class input open in the class tab bar with a new class name being typed](/images/tax/tax-rates/inline-tax-class.webp)
+
+If you enter a name that already exists, the input turns **red** to flag the duplicate — just edit the name and the error clears. This same inline flow is available on the [EU VAT screens](/guide/tax-&-duties/european-union-vat#per-class-tabs), so a class you create in one place is available to assign to products everywhere.
 
 ### Per-Country Rate and Label
 

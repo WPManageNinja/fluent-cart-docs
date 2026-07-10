@@ -5,6 +5,30 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## v1.5.3 — Jul 9, 2026
+- **Range:** `1.5.2..HEAD` (149a488b2 on `development`), ~70 commits. Version bump confirmed (`fluent-cart.php` `FLUENTCART_VERSION = '1.5.3'`, DB `1.0.46`).
+- **Modules touched:** Tax (display style + label, inline tax classes, EU reverse-charge notice), MCP (`app/Modules/MCP/`), Reports (extensible sidebar), Products (SKU rendering fix)
+- **Doc-relevant files of note:**
+  - `resources/admin/Modules/Tax/TaxConfigurations.vue` (L140–161) — **Tax Display Style** dropdown `checkout_tax_breakdown_display` = `simplified` | `itemized`; `tax_display_label` input shown only in Simplified (default "Tax"). `defaultSettings()` = `itemized`, but fresh installs seed `simplified`. Commit `f2660e908`, `2c81990ad`
+  - `app/Modules/Tax/TaxModule.php` (`getTaxDisplayLabel()`, `getReverseChargeNoticeText()`), `app/Services/Renderer/Receipt/TaxSummaryHelper.php` — single-line label + auto reverse-charge notice ("Reverse charge — Article 196, Council Directive 2006/112/EC…"), filter `fluent_cart/tax/reverse_charge_notice_text`. Commits `7ed6b259a`, `aec3f3c18`, `861163679`
+  - `resources/admin/Modules/Tax/TaxRates.vue`, `EUVatSettings.vue`, `useTaxClassCrud.js` — inline tax-class creation (modal removed); "+" in tab bar, red on duplicate, no reload; Standard protected. Commit `35ba5c9d7`
+  - `app/Modules/MCP/` — new report engine: `get-product-financials` (ProductFinancialsCalculator: revenue/MRR/ARR/margin-leakage), `get-upcoming-payments` (PaymentProjector: subscription forecasts + at-risk), `list-transactions` (payment ledger), coupon usage counts, product/variation filters, live/test mode, hourly/custom date windows, pagination. `WriteGuard` = dry-run + confirm_token + idempotency for refund/cancel; live-gateway opt-in
+  - `resources/admin/Modules/Reports/Components/ReportNavLinks.vue` + `app/Hooks/Handlers/MenuHandler.php` (`addon_report_sidebar` via `fluent_cart/admin_app_data`) — add-ons register report pages into the Reports sidebar. Commit `875da356c`
+  - `app/Services/Renderer/ProductRenderer.php` (`renderSku()`), `resources/public/single-product/similar-product.scss` — SKU CSS fix (`:not(.is-hidden)`); blank/inactive-variant SKUs no longer leak. Commit `773554f10`
+- **Doc pages updated:**
+  - `guide/changelog.md` — appended v1.5.3 entry (16 added/improved + 16 fixes)
+  - `guide/tax-&-duties/configuration-and-classes.md` — rewrote "Checkout Tax Breakdown Display" → **Tax Display Style** (Simplified/Itemized + Tax Label); updated per-rate info note (incl. reverse-charge "VAT reversed"); added **Automatic Reverse-Charge Notice** subsection
+  - `guide/tax-&-duties/tax-rates.md` — added "Creating a Tax Class Inline" under Tax Class Tabs
+  - `guide/tax-&-duties/european-union-vat.md` — inline tax-class note on Per-Class Tabs; auto reverse-charge notice reference in PDF Receipts section
+  - `guide/settings-configuration/mcp.md` — extended "What an assistant can look up" (subscription forecasts, payment ledger, product profitability/margin leakage, flexible date windows + live/test scoping)
+  - `guide/reporting-analytics/reports-dashboard-overview.md` — info note on extensible Reports sidebar (report add-ons)
+  - `guide/product-types-creation/creating-physical-products.md` — SKU tip: leave SKU blank to hide it (accurate behavior + 1.5.3 display fix)
+- **Doc pages created:** none (no sidebar changes — all edits to already-linked pages)
+- **Changelog line corrected (no code support):** "Adds an option to hide product SKUs" is NOT a toggle — commit `773554f10` is a 4-line CSS fix; real behavior is "empty SKU renders nothing." Documented honestly, no fake setting.
+- **Plugin changes flagged but skipped (no doc-body impact):** duplicate-order/idempotency protection (Stripe/PayPal), installment bill_times fixes (Authorize.Net/Mollie/PayPal), PayPal amount formatting + cancel detection, per-item shipping allocation, shipping-tax method fix, Bricks label/loading fixes, product post_date preserve, stock badge label, DB migration/upgrade fixes, licensing/Page-History add-on download, current-customer capability checks, i18n coverage — internal/no configurable surface
+- **Screenshots pending (placeholders embedded, `.webp` not yet added):** `tax/configuration-and-classes/tax-display-style.webp`, `tax/configuration-and-classes/reverse-charge-notice.webp`, `tax/tax-rates/inline-tax-class.webp`. Note: `tax/configuration-and-classes/tax-2.webp` (old 3-option dropdown) is now unreferenced.
+- **Build status:** `npm run docs:build` clean (11.12s)
+
 ## v1.5.2 — Jun 30, 2026
 - **Range:** `1.5.1..HEAD` (bde065d85 on `development`), 30 commits, 102 files. Version bump confirmed (`fluent-cart.php`, readme.txt `Stable tag: 1.5.2`).
 - **Modules touched:** Templating/Bricks, PaymentMethods (SSLCommerz promo addon card), Tax, Subscriptions/customer portal, product-variations admin UI, Email Notifications (dev extension point)
