@@ -162,8 +162,11 @@ These are read-only. Ask in plain language and the assistant pulls the answer fr
 * **Customers:** find customers by name, email, location, or lifetime value, and open a full profile with order and subscription history.
 * **Products & inventory:** search products, see full product detail with per-variation stock, and get a "what needs restocking?" view.
 * **Subscriptions:** search subscriptions and open one to see its billing schedule and renewal history.
-* **Coupons:** list coupons with their usage counts and validity windows.
-* **Reports & analytics:** sales summaries with period-over-period comparison, revenue trends over time, best-selling products, refund metrics, and flexible breakdowns by order, product, customer, or marketing source (UTM attribution).
+* **Subscription forecasts:** ask what recurring revenue is coming — upcoming renewals grouped by date, split into fixed-length installments versus open-ended renewals, with an at-risk figure estimated from past-due subscriptions.
+* **Coupons:** list coupons with their usage counts and validity windows, so you can ask which coupons are used most or which have expired.
+* **Payment ledger:** pull every transaction — charges, refunds, disputes, and signup fees — across all orders and subscriptions, filterable by type, status, gateway, customer, or date, with totals kept separate per currency.
+* **Product profitability:** open a single product's full financial picture — gross and net revenue, refunds, average order value, and recurring run-rate (**MRR/ARR**) with a forward payment schedule. It also surfaces discount-driven **margin leakage** (list price versus what actually sold), so you can see where discounts are eroding revenue. *(This "profitability" is revenue- and discount-based; it does not include cost-of-goods.)*
+* **Reports & analytics:** sales summaries with period-over-period comparison, revenue trends over time, best-selling products, refund metrics, and flexible breakdowns by order, product, variation, customer, or marketing source (UTM attribution). Reports accept flexible time windows — relative ranges like "last quarter," explicit start/end dates, even hour-precise custom windows — and can be scoped to **live**, **test**, or all orders, so a figure is never quietly skewed by test data.
 
 ### Actions an assistant can take
 
