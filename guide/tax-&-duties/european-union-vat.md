@@ -154,6 +154,8 @@ Rates are organised by tax class. Tabs above the rate table let you switch betwe
 * Click the **+** button to add another class — a small dropdown lets you choose **Zero** or **Custom Class…**.
 * An **×** on a tab removes that class from the current setup; the **Standard** class is always present.
 
+Choosing **Custom Class…** lets you name a new class **inline in the tab bar** — no dialog, no page reload. A duplicate name turns the input red until you change it. Classes you create here are the same ones you assign to products, and the identical inline flow works on the [Setting Up Tax Rates](/guide/tax-&-duties/tax-rates#creating-a-tax-class-inline) screen.
+
 ### Per-Country Tax Label
 
 Each country row carries its own **Tax Label** input. The label is what customers see on the checkout breakdown and on their receipt — set it to the locally-recognised term:
@@ -196,5 +198,7 @@ See [Tax Overrides on the Setting Up Tax Rates page](/guide/tax-&-duties/tax-rat
 When a customer enters a VAT number at checkout, FluentCart renders that VAT number directly inside the **billing address block** of every generated PDF receipt (Order Receipt, Renewal Receipt, Refund Notice, and Invoice).
 
 This makes FluentCart receipts drop-in ready for B2B buyers in the EU, UK, and other VAT jurisdictions who need a properly formatted receipt for their own bookkeeping — no custom template work or manual workaround needed. For B2C orders where no VAT number is provided, receipts continue to look exactly the same.
+
+When an order is reverse-charged, FluentCart also prints the required legal declaration automatically on those documents (for example *"Reverse charge — Article 196, Council Directive 2006/112/EC. Customer is liable for VAT."*), so no manual note is needed. See [Automatic Reverse-Charge Notice](/guide/tax-&-duties/configuration-and-classes#automatic-reverse-charge-notice) for details.
 
 See [PDF Invoice Templates](/guide/settings-configuration/email-configuration/pdf-invoice) for the full PDF setup, and [Tax Configuration → VAT Reverse Charge Settings](/guide/tax-&-duties/configuration-and-classes#vat-reverse-charge-settings) for the reverse-charge behaviour that drives those receipt lines.
