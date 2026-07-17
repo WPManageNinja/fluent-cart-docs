@@ -12,9 +12,9 @@ For every module below: what it does, the highest-signal files in it, the user-v
 ### Modules/Coupon
 - **Purpose:** Coupon generation, validation, redemption, recurring-coupon handling, free-shipping bumps.
 - **Key files:** `CouponModule.php`, `Services/CouponService.php`, controllers under `Http/Controllers/AppControllers/CouponController.php`.
-- **User-facing surface:** Coupon CRUD UI, checkout coupon redemption, coupon-on-bump stacking, recurring coupon behavior on subscriptions.
+- **User-facing surface:** Coupon CRUD UI, checkout coupon redemption, coupon-on-bump stacking, recurring coupon behavior on subscriptions. Since 1.5.4 a coupon passed via the `coupons` URL param that fails validation surfaces its reason as a checkout notice (`__checkout_error_notices` on the cart) instead of failing silently.
 - **Drives docs:** `guide/marketing-sales-tools/creating-managing-coupons/*.md`
-- **Last fully audited:** v1.3.27
+- **Last fully audited:** v1.5.4
 
 ### Modules/Data
 - **Purpose:** Internal data-layer helpers (seed data, default settings payloads, lookup tables).
@@ -36,6 +36,14 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **User-facing surface:** Integrations settings page, per-integration field maps, opt-in toggles, sync triggers.
 - **Drives docs:** `guide/integrations/<service>-integration.md` (one page per integration).
 - **Last fully audited:** v1.3.27
+
+### Modules/MCP
+- **Purpose:** Model Context Protocol server that lets AI assistants (Claude, Cursor, Codex) read store data and run scoped operator tasks.
+- **Key files:** `MCP/Tools/*` (tool definitions, incl. `SearchTools.php`), `MCP/Support/*` (`AdvancedSearch.php`, `PermissionGate.php`, `WriteGuard`, `ProductFinancialsCalculator`, `PaymentProjector`, `MCPHelper.php`).
+- **User-facing surface:** The MCP toggle on Features & Addon, the connection panel (application password + generated snippet), and everything an assistant can then look up or do. `WriteGuard` gates mutations behind dry-run + confirm_token + idempotency. Several tools are **Pro-gated** (advanced search is).
+- **Drives docs:** `guide/settings-configuration/mcp.md` (toggle itself also noted on `features-addons.md`)
+- **Note:** Tool `label`/`description` strings are the best source of user-facing copy. Capability changes usually mean editing the "What an assistant can look up" / "Actions an assistant can take" lists rather than adding a section.
+- **Last fully audited:** v1.5.4
 
 ### Modules/PaymentMethods
 - **Purpose:** All payment gateway implementations (Stripe, PayPal, Square, Mollie, Paddle, Razorpay, Mercado Pago, Flutterwave, Paystack, Authorize.net, Cash on Delivery) plus shared `Core/` contracts.
@@ -61,9 +69,9 @@ For every module below: what it does, the highest-signal files in it, the user-v
 ### Modules/Shipping
 - **Purpose:** Shipping zones, methods, rates, packages, carrier-rate calculation.
 - **Key files:** `ShippingModule.php`, `ShippingService.php`, `Models/ShippingZone.php`.
-- **User-facing surface:** Shipping settings UI, zone editor, package picker on product/variation, checkout shipping selector.
+- **User-facing surface:** Shipping settings UI, zone editor, package picker on product/variation, checkout shipping selector. Since 1.5.4 the chosen method's title (`config.shipping_method_title`) also surfaces on the admin order detail, the customer's order view, and order emails.
 - **Drives docs:** `guide/shipping/*.md`
-- **Last fully audited:** v1.3.27
+- **Last fully audited:** v1.5.4
 
 ### Modules/StockManagement
 - **Purpose:** Inventory tracking, stock holds on pending orders, low-stock thresholds.
@@ -82,9 +90,9 @@ For every module below: what it does, the highest-signal files in it, the user-v
 ### Modules/Subscriptions
 - **Purpose:** Subscription billing lifecycle — creation, renewals, trial, cancellation, reactivation, refund-aware reactivation, upgrades, cart rules, recurring coupons.
 - **Key files:** `SubscriptionsModule.php`, `SubscriptionService.php`, `Models/Subscription.php`, listeners that fire `SubscriptionActivated` / `SubscriptionReactivated` events.
-- **User-facing surface:** Subscription dashboard, detail page, reactivate action, cancellation email with access-end date, cart restrictions ("one subscription per cart", "qty must be 1"), reactivation-after-refund flow.
-- **Drives docs:** `guide/product-types-creation/managing-subscriptions.md` (customer-portal payment-method updates also touch `guide/customer-dashboard/subscriptions.md`)
-- **Last fully audited:** v1.5.2
+- **User-facing surface:** Subscription dashboard, detail page, reactivate action, cancellation email with access-end date, cart restrictions ("one subscription per cart", "qty must be 1"), reactivation-after-refund flow. Since 1.5.4 an installment plan must bill **at least twice** (`MIN_INSTALLMENT_TIMES = 2`); saves below that are rejected. Installment fields are documented on `configuring-product-pricing.md`, not the subscriptions page.
+- **Drives docs:** `guide/product-types-creation/managing-subscriptions.md`, `configuring-product-pricing.md` (customer-portal payment-method updates also touch `guide/customer-dashboard/subscriptions.md`)
+- **Last fully audited:** v1.5.4
 
 ### Modules/Tax
 - **Purpose:** Tax classes, regional tax rules, EU VAT, country-level tax toggles, reverse-charge handling.
@@ -97,8 +105,9 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Purpose:** Frontend templating + page-builder integrations (Bricks, Gutenberg, Elementor).
 - **Key files:** `Templating/Bricks/Elements/ProductsCollection.php` (and siblings), `Hooks/Handlers/BlockEditors/*`.
 - **User-facing surface:** FluentCart elements inside Bricks/Gutenberg/Elementor editors — Products grid/list, filters, single-product, cart, checkout shortcodes.
-- **Drives docs:** `guide/customization-and-themes/customize-store-with-bricks.md`, `customize-store-with-gutenberg.md`, `customize-store-with-elementor.md`
-- **Last fully audited:** v1.5.2
+- **Drives docs:** `guide/customization-and-themes/customize-store-with-bricks.md`, `fluentcart-bricks-blocks.md`, `using-gutenberg-blocks.md`, `using-elementor-widgets.md`
+- **Addon split (since 1.5.4):** core registers **8** Bricks elements from `Bricks/Elements/` and they load automatically with the Bricks theme. A further **15** ship in the separate **`fluent-cart-bricks-blocks`** addon plugin (**not in this clone**; card registered in `Http/Controllers/ModuleSettingsController.php`). An **Elementor Blocks** addon exists on the same card list but is **undocumented and unindexed**. When Bricks/Elementor work ships, check whether it belongs to core or an addon before writing.
+- **Last fully audited:** v1.5.4
 
 ### Modules/Turnstile
 - **Purpose:** Cloudflare Turnstile bot protection on checkout / forms.
