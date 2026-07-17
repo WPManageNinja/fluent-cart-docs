@@ -91,3 +91,17 @@ FluentCart will fetch the addon directly from the licensed update server, instal
 > **Note:** If the **Install & Activate** button is greyed out or replaced with a license prompt, your FluentCart Pro license either hasn't been verified or has lapsed. Verify your license from **Settings > Licensing** and the installer will become available again.
 
 This makes the addon ecosystem feel like a first-class part of FluentCart — installing a premium addon now takes the same amount of effort as flipping a feature toggle.
+
+### FluentCart Bricks Blocks
+
+If you build your site with the **Bricks** theme, the **FluentCart Bricks Blocks** addon adds fifteen more FluentCart elements to the Bricks editor, covering the cart, checkout, product search, categories, and the customer dashboard.
+
+The card appears in the **Plugin Addons** section like any other addon, and installs with the same single click:
+
+1.  Navigate to **FluentCart Pro > Settings > Features & addon**.
+2.  Scroll to the **Plugin Addons** section and find the **FluentCart Bricks Blocks** card.
+3.  Click the **Install & Activate** button on the card.
+
+::: info
+This addon requires the **Bricks** theme to be installed and active. Without it, the elements have no editor to load into. See [FluentCart Bricks Blocks](/guide/customization-and-themes/fluentcart-bricks-blocks) for the full block list and workflow.
+:::
