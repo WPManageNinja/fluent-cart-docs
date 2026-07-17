@@ -77,3 +77,41 @@ add_action('init', function () {
 ```
 
 If you use `render_callback`, FluentCart will display the callback output for the menu item. If you want to show a specific WordPress page instead, skip the `render_callback` method and provide the `page_id`.
+
+## Product Pricing
+
+### Add a Suffix Next to Prices
+
+Use the `fluent_cart/product/price_suffix_atts` filter to print a short note after a price, such as "incl. VAT" or "per seat". Return your text and FluentCart renders it in a `fct_price_suffix` span next to the price.
+
+```php
+add_filter('fluent_cart/product/price_suffix_atts', function ($suffix, $context) {
+    return 'incl. VAT';
+}, 10, 2);
+```
+
+The `$context` array gives you `product`, `variant`, and `scope`, so you can vary the suffix by product or by where the price is being shown. Returning an empty string prints nothing.
+
+::: info
+If your tax settings already display a tax suffix, FluentCart sets one for you and your filter runs afterwards, so whatever you return wins. See [Tax Configuration and Classes](/guide/tax-&-duties/configuration-and-classes) for the built-in tax display options, which cover most stores without any code.
+:::
+
+## Attribution
+
+### Preserving Campaign Attribution Across Multiple Sites
+
+If your store spans more than one domain, for example a marketing site that sends buyers to a separate checkout domain, campaign attribution can break at the hand-off. The second site sees the first one as the referrer, so the original `utm_source` is lost and your reports credit the sale to your own site instead of the ad or newsletter that earned it.
+
+Tell FluentCart which domains belong to you and it treats movement between them as internal navigation. Your own domains are never recorded as the referrer, and the original campaign values are carried across on the link.
+
+```php
+add_filter('fluent_cart/utm/internal_domains', function ($domains) {
+    return ['shop.example.com', 'checkout.example.com'];
+});
+```
+
+Add every domain in your network, including the checkout site. Matching covers the bare domain, its `www.` form, and any subdomain, so listing `example.com` also covers `shop.example.com`.
+
+::: info
+FluentCart applies no internal domains by default, so attribution behaves exactly as before until you add this snippet. Campaign values are stored in the visitor's browser for 30 days. The captured data then appears in your reports under marketing source, which you can read about in [Sales Report](/guide/reporting-analytics/sales-report).
+:::

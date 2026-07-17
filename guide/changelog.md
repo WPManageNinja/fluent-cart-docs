@@ -1,6 +1,42 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.5.4
+*Released on Jul 17, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Bricks Blocks dedicated add-on with 15 new blocks
+• Adds Cross-site campaign attribution with UTM tracking across connected sites
+• Adds A "Getting Started" onboarding flow with Bricks and Elementor steps
+• Adds Advanced MCP search across orders, customers, products, and subscriptions
+• Improves Confirmation before switching to Advanced Variations
+• Improves Shipping method visibility for admins and customers
+• Improves Customer dashboard with date and loading refinements
+• Improves Installment billing by enforcing a minimum of two installments
+• Improves Storefront support for the price suffix filter hook
+• Improves Translation readiness across the plugin
+• Improves Security through ongoing audits and hardening across Core and Pro
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes PayPal first payments activating the correct subscription
+• Fixes Duplicate PayPal subscription activations from simultaneous payment notifications
+• Fixes PayPal refunds syncing correctly with FluentCart
+• Fixes Paddle subscription status synchronization across additional billing scenarios (Pro)
+• Fixes Bricks Products Grid responsive column layouts
+• Fixes Custom Product Stock labels in Bricks rendering on the storefront
+• Fixes Add to Cart shortcode honoring custom button text
+• Fixes Rejected URL coupons not displaying an error message
+• Fixes Revenue and order reports failing with missing grouping options
+• Fixes Dashboard activity counts matching the activity list
+• Fixes A rare crash when loading product variations
+• Fixes Nested layouts rendering correctly in receipt PDFs (Pro)
+```
+
+:::::
+
 ## FluentCart v1.5.3
 *Released on Jul 9, 2026*
 

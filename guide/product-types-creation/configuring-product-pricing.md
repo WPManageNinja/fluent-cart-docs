@@ -137,7 +137,7 @@ Expand this section to access the subscription-specific display and billing opti
 **Enable installment payment** *(Checkbox — Optional)*
 Check this box if you want to offer the subscription for a fixed number of payments instead of recurring indefinitely. Once checked, two fields appear:
 
-- **Installment Count** — The total number of payments the customer will make (e.g., `3` for a three-month payment plan)
+- **Installment Count** — The total number of payments the customer will make (e.g., `3` for a three-month payment plan). This must be **2 or more**. A single installment is just a one-time payment, so if that's what you want, set the payment type to one-time instead
 - **Total Price** — Auto-calculated by multiplying **Installment Price** by **Installment Count**
 
 > **💡 Pro Tip:** Installment plans are ideal for online courses, coaching programs, or any product where you want customers to pay over time with a clear end date — no cancellation anxiety for them, guaranteed revenue for you.
@@ -272,7 +272,7 @@ The number of free days before the first charge is made. Set to `0` for no trial
 
 **Enable installment payment** *(Checkbox — Optional)*
 Limit this variation's subscription to a fixed number of payments. When checked:
-- **Installment Count** — Total number of billing cycles before the subscription ends automatically
+- **Installment Count** — Total number of billing cycles before the subscription ends automatically. Must be **2 or more**
 - **Total Price** — Auto-calculated total (Installment Price × Count)
 
 **Setup fee** *(Toggle — Optional)*

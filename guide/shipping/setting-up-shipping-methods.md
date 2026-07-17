@@ -87,3 +87,15 @@ You can add a short description for the shipping method. Depending on your theme
  ![Screenshot of Shipping Method](/images/shipping/setting-up-shipping-method/shipping-method-2.webp)
 
 Once you have configured all the details, click the **Save** button. Your new shipping method is now active and will be offered to customers in the selected shipping zone.
+
+### Where the Method Name Appears After Checkout
+
+The name you give a shipping method is not just a checkout label. Once an order is placed, the method the customer picked travels with the order and appears in three places:
+
+* **The order detail page** in your admin, so your team knows how the order should be packed and sent. See [Order Details Overview](/guide/store-management/orders-management/order-details-overview).
+* **The customer's order view** in their account area, so they can see what they paid for.
+* **Order emails**, listed alongside the shipping address.
+
+::: info
+This is worth keeping in mind when you name a method. A customer-facing name like "Express (2-3 days)" reads far better on a receipt than an internal one like "Zone 2 tier B".
+:::
