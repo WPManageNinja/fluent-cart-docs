@@ -5,6 +5,45 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## v1.5.4 — Jul 17, 2026
+- **Range:** `1.5.3..HEAD` (9f8ac14f5 on `development`), 77 commits, 215 files. Version bump confirmed (`fluent-cart.php` `FLUENTCART_VERSION = '1.5.4'`, readme.txt `Stable tag: 1.5.4`). DB version unchanged (`1.0.46`). **NOTE: no `1.5.4` git tag exists yet** — release was still untagged at sync time.
+- **Modules touched:** Templating/Bricks (addon card + element fixes), Subscriptions (installment minimum), Shipping (method title visibility), Coupon (URL rejection notice), MCP (advanced search), Helpers/UtmHelper (cross-site attribution), Dashboard onboarding
+- **Changelog lines corrected (code contradicted the claim) — 3 of the 4 "Adds":**
+  - "Bricks Blocks dedicated add-on with **15 new blocks**" — core gained only an **addon card** (`ModuleSettingsController.php` L272, commit `70bc740ec`, slug `fluent-cart-bricks-blocks`, CDN install, requires Bricks theme). The 15 blocks live in a separate addon plugin **not in this repo**. Core keeps its own 8 Bricks elements (`app/Modules/Templating/Bricks/Elements/`), still auto-loading, **not gated** on the addon. Documented the card only; block list deliberately omitted (user-approved).
+  - "Cross-site campaign attribution" — real but **zero UI**. Filter `fluent_cart/utm/internal_domains` defaults to `[]`, so inert until a dev adds a snippet. Documented as a code snippet (user-approved).
+  - "Advanced AI search across orders, customers…" — **MCP-only and Pro-gated**, not an admin search box. One tool: `fluent-cart/get-search-schema`.
+- **Doc-relevant files of note:**
+  - `app/Http/Controllers/ModuleSettingsController.php` (L272) — Bricks Blocks addon card. Description: "Enable to get Bricks Builder elements for FluentCart. Requires the Bricks theme." Commit `70bc740ec`
+  - `app/Http/Controllers/DashboardController.php` + `resources/admin/Pages/Dashboard/Components/Onboarding.vue` — widget renamed "Onboarding Checklist" → **"Getting Started"**; conditional steps `install_bricks_addon` (gated on `BRICKS_VERSION`) and `install_elementor_addon` (gated on `ELEMENTOR_VERSION`), each auto-completing when the addon plugin constant is defined. Commits `05d5fcaa5`, `5413ba166`
+  - `app/Modules/MCP/Tools/SearchTools.php` + `Support/AdvancedSearch.php` — `get-search-schema` tool; returns filterable properties/operators/enums per entity so an assistant can build the same condition-group queries as the admin advanced filter. Read-only, `PermissionGate::readRoleCaps()`, docblock states "Requires FluentCart Pro". Commit `88f90be5a`
+  - `b7b985929` / `5459133a5` — `MIN_INSTALLMENT_TIMES = 2`; save rejected below 2. Error string: "Installment count must be 2 or more. A single installment is just a one-time payment…". Guard only fires when the request touches `installment`/`times` (legacy bulk price edits still save)
+  - `resources/admin/Modules/Products/parts/ProductPricing.vue` — type-to-confirm guard broadened from `currentType === 'simple_variations'` to `currentType !== 'advanced_variations'`, so plain **Simple** products now warn too. Switch is terminal from every source. Commit `26b7cf94d`
+  - `7417efa0a` (PR #2228) — `shipping_method_title` surfaced on admin order detail, customer order view, and order emails. Admin bug was `(int)` casting non-numeric live-rate carrier IDs (e.g. `carrier:shippo:usps_priority`) to 0, collapsing the payload; now gated on title alone. Customers never saw it on any surface before
+  - `bf44adcee` (PR #2189) — rejected URL coupons write `__checkout_error_notices` onto the cart; surfaced as a checkout toast via `AssetLoader.php`. Previously silent
+  - `app/Helpers/UtmHelper.php` + `resources/public/globals/utils/UTMManager.js` (`9565967c0`, PR #2252) — internal domains never recorded as `refer_url`; stored UTM appended to links pointing at them. `localStorage` key `fc_utm_data`, 30-day expiry. Filters: `fluent_cart/utm/internal_domains`, `fluent_cart/utm/allowed_keys` (defaults incl. `refer_url`, `fbclid`, `gclid`). Subdomain + `www.` matching
+- **Doc pages updated:**
+  - `guide/changelog.md` — appended v1.5.4 entry (11 added/improved + 12 fixes); Bricks line drops unverifiable "15 blocks", AI-search line scoped to MCP
+  - `guide/getting-started/dashboard-overview.md` — renamed "Onboarding Checklist" → **Getting Started**; added "Page Builder Steps" sub-section (conditional Bricks/Elementor steps)
+  - `guide/settings-configuration/features-addons.md` — new "FluentCart Bricks Blocks" sub-section under the one-click installer
+  - `guide/customization-and-themes/customize-store-with-bricks.md` — info callout pointing at the addon (page's "integration is automatic" line stays accurate for the 8 core elements)
+  - `guide/settings-configuration/mcp.md` — new "Precise, filtered searches" bullet, marked Pro
+  - `guide/product-types-creation/configuring-product-pricing.md` — "2 or more" on both Installment Count bullets (simple ~L140 and per-variation ~L275)
+  - `guide/product-types-creation/advanced-variations.md` — warning rewritten to cover Simple **and** Simple Variations sources; dropdown step text updated
+  - `guide/shipping/setting-up-shipping-methods.md` — new "Where the Method Name Appears After Checkout" section
+  - `guide/marketing-sales-tools/creating-managing-coupons/adding-coupons/index.md` — new "When a URL Coupon Is Rejected" section
+  - `guide/customization-and-themes/code-snippets.md` — new `## Attribution` section with the `internal_domains` snippet
+- **Doc pages created:** none (no sidebar changes — all edits to already-linked pages)
+- **Plugin changes flagged but skipped (no doc-body impact):** PayPal activation atomicity/refund-webhook null-checks/UUID subscription matching (`0b224762d`, `f5db8903c`, `d5b1de7d6`, `17f92ab21`, `42b72a22c`); `fluent_cart/product/price_suffix_atts` filter now produces visible output (`e65de6d95`, dev-docs domain); report `groupKey` SQL fix (`c99dc4406`); dashboard activity count (`7626af114`); Bricks responsive columns + Product Stock label rendering (`49366a9bf`, `007a5132e`); Add to Cart shortcode button text; test-tooling reorg under `dev/` (~79 files, `b660c7564`, `cddb3b784`, `24699c26b`); i18n wrapping (`a4dfd655b`); dead bulk-order status code removal (`ce143b202`)
+- **Screenshots pending (NOT embedded — no placeholders left in the build):** Getting Started panel with builder steps, Bricks Blocks addon card, rejected-URL-coupon checkout notice, shipping method name on order detail. All four sections read fine without images.
+- **Open questions carried forward:**
+  - **1.5.4 untagged** — confirm release is final before the changelog entry is treated as shipped
+  - **GitHub Releases stale** — newest release entry is 1.3.25 (Apr 2026); stray `2.11.4` framework tag sits above the 1.5.x line. Tags + readme.txt are the real release trail
+  - **Bricks Blocks addon source needed** to document the 15 blocks (same shape as the SSLCommerz deferral from 1.5.2)
+  - **Cross-site attribution has no UI** — if an admin field for internal domains is planned, move the snippet out of `code-snippets.md` into a settings section
+  - Still outstanding from 1.5.3: three `.webp` screenshots (tax display style, reverse-charge notice, inline tax class); `tax/configuration-and-classes/tax-2.webp` now unreferenced
+  - Still outstanding from 1.5.2: SSLCommerz settings page deferred; two `TODO(screenshot)` stubs commented out (Bricks product template dropdown, group-edit drawer); releases 1.3.28–1.5.1 never run through this pipeline
+- **Build status:** `npm run docs:build` clean (9.60s)
+
 ## v1.5.3 — Jul 9, 2026
 - **Range:** `1.5.2..HEAD` (149a488b2 on `development`), ~70 commits. Version bump confirmed (`fluent-cart.php` `FLUENTCART_VERSION = '1.5.3'`, DB `1.0.46`).
 - **Modules touched:** Tax (display style + label, inline tax classes, EU reverse-charge notice), MCP (`app/Modules/MCP/`), Reports (extensible sidebar), Products (SKU rendering fix)
