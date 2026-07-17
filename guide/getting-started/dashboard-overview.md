@@ -32,9 +32,9 @@ At the top of the main dashboard area, you'll find a welcome message and quick a
 
 * **Add Product Button:** A quick-access button to create a new product, allowing you to quickly expand your inventory.
 
-### 2. Onboarding Checklist
+### 2. Getting Started
 
-On the right side of the FluentCart dashboard, you’ll see the **Onboarding Checklist**. This helps you quickly set up your store by walking through the essential first steps.
+On the right side of the FluentCart dashboard, you’ll see the **Getting Started** panel. This helps you quickly set up your store by walking through the essential first steps.
 
 The checklist includes:
 
@@ -49,6 +49,16 @@ The checklist includes:
 
 - **Add Payments**  
   Configure Stripe, PayPal, or other payment gateways so you can start accepting payments.
+
+#### Page Builder Steps
+
+Two more steps appear only when they apply to your site, so you'll see them only if you build pages with one of the supported builders:
+
+- **Install Bricks Addon**  
+  Appears when the **Bricks** theme is active. It points you to the add-on that brings extra FluentCart elements into the Bricks editor, and ticks itself off once that add-on is installed. See [Customize Store with Bricks](/guide/customization-and-themes/customize-store-with-bricks).
+
+- **Install Elementor Addon**  
+  Appears when **Elementor** is active, and works the same way for FluentCart's Elementor widgets. See [Using Elementor Widgets](/guide/customization-and-themes/using-elementor-widgets).
 
 :::info
 As you complete each step, FluentCart will mark it off automatically. This guide disappears once your setup is complete.

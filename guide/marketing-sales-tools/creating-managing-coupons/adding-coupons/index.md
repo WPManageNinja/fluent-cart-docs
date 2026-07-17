@@ -155,3 +155,13 @@ https://yourdomain.com/?fluent-cart=instant_checkout&item_id=209&quantity=1&coup
 
 >[!Note]
 > This feature is not supported in the **Modal (popup) Checkout**.
+
+### When a URL Coupon Is Rejected
+
+A coupon in a URL can still fail the same checks as one typed in by hand. It may have expired, hit its usage limit, or not apply to the items in the cart.
+
+When that happens, the customer lands on checkout and sees a notice explaining why the coupon did not apply, instead of a silently full-price cart. The order total stays correct, and they can still complete the purchase or enter a different code.
+
+::: info
+This makes expired campaign links much easier to spot. If customers report that a promotional link "isn't working," the notice on the checkout page tells you exactly which check the coupon failed.
+:::

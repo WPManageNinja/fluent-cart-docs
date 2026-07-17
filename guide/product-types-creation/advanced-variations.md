@@ -127,13 +127,13 @@ After saving, every generated variant appears in the variant editor, where you c
 You can convert a product that currently uses **Simple** or **Simple Variations** pricing over to **Advanced Variations** at any time. Before you do, understand that this is a permanent, one-way change.
 
 ::: warning
-Switching to Advanced Variations permanently deletes all current variations for the product. This cannot be undone, and you cannot switch back to Simple Variations afterward.
+Switching to Advanced Variations permanently deletes the product's current pricing setup, whether that is a plain **Simple** price or a set of **Simple Variations**. This cannot be undone, and you cannot switch back afterward.
 :::
 
 To switch an existing product, follow these steps:
 
 1. Open the product on its edit screen and scroll to the **Pricing** panel.
-2. Click the variation type dropdown at the top right of the panel. It currently shows your active type, such as "Simple Variations".
+2. Click the variation type dropdown at the top right of the panel. It currently shows your active type, such as "Simple" or "Simple Variations".
 3. Select **Advanced Variations** from the dropdown.
 
    ![Screenshot of an existing product Pricing panel with the variation type dropdown open and Advanced Variations highlighted](/images/product-types-creation/advanced-variations/advanced-variation-8.webp)
