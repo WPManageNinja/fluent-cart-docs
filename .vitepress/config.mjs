@@ -231,6 +231,7 @@ export default defineConfig({
                 { text: 'Defining Upgrade Paths', link: '/guide/product-types-creation/defining-upgrade-paths' },
                 { text: 'Product List Overview', link: '/guide/product-types-creation/product-list-overview' },
                 { text: 'Managing Subscriptions', link: '/guide/product-types-creation/managing-subscriptions' },
+                { text: 'Manual Subscriptions', link: '/guide/product-types-creation/manual-subscriptions' },
                 { text: 'Creating & Managing Product Categories', link: '/guide/product-types-creation/creating-managing-product-categories/'},
                 { text: 'Creating & Managing Product Brands',link: '/guide/product-types-creation/creating-managing-product-brand/'}
               ]

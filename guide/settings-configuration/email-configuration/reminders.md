@@ -43,6 +43,8 @@ This reminder notifies customers before an upcoming subscription renewal charge.
 
 You can enable reminders for one or more billing frequencies at the same time, each with its own lead time.
 
+Reminders are especially useful for store-managed subscriptions, where the customer pays each renewal by hand rather than being charged automatically. To learn how those renewals are generated and billed, see [Manual Subscriptions](/guide/product-types-creation/manual-subscriptions).
+
 ### Saving Your Changes
 
 After configuring your reminder preferences, click the **Save** button in the top-right corner to apply your changes.

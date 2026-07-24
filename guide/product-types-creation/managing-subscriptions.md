@@ -22,7 +22,7 @@ The main dashboard is a powerful table that gives you a complete overview of eve
 * **Billing:** The price and billing frequency of the subscription (e.g., "$99.00 per year, until cancel").
 * **Created At:** The date the subscription was first initiated.
 * **Next Billing Date:** The upcoming date when the next automatic renewal payment is scheduled to be processed.
-* **Collection Method:** How payments are processed. Automatic means the payment will be charged to the customer's saved payment method without any action required from them.
+* **Collection Method:** How payments are processed. **Automatic** means the payment gateway charges the customer's saved payment method on its own schedule without any action required from them. **Manual** means your store owns the billing schedule and the customer pays each renewal through a **Pay Now** link. To learn how store-owned billing works, see [Manual Subscriptions](/guide/product-types-creation/manual-subscriptions).
 * **Bills Count:** The number of successful payments that have been made for this subscription, including the initial purchase.
 * **Payment Method:** The payment gateway used for the subscription (e.g., Stripe, PayPal).
 * **Order ID:** The ID of the very first order that created this subscription.

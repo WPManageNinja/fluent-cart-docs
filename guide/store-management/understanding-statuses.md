@@ -80,6 +80,8 @@ These statuses track the lifecycle of a customer subscription.
 | `expiring` | The subscription is nearing its expiration. |
 | `completed` | The subscription has completed its term. |
 
+For store-managed subscriptions, FluentCart drives the move from `active` to `past_due` and finally to `expired` on its own schedule, using a grace period tied to the billing interval. See [Manual Subscriptions](/guide/product-types-creation/manual-subscriptions) for how that escalation works.
+
 #### 6. Shipping status
 
 These statuses track the fulfillment of physical goods. 
