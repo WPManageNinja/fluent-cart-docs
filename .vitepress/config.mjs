@@ -493,6 +493,7 @@ export default defineConfig({
             { text: 'Customize Store with Bricks', link: '/guide/customization-and-themes/customize-store-with-bricks', items: [
               { text: 'FluentCart Bricks Blocks', link: '/guide/customization-and-themes/fluentcart-bricks-blocks' },
             ]},
+            { text: 'FluentCart Divi Modules', link: '/guide/customization-and-themes/fluentcart-divi-modules' },
             { text: 'Advanced Customization with CSS Variables', link: '/guide/customization-and-themes/advanced-customization-using-css' },
             { text: 'Translating FluentCart', link: '/guide/customization-and-themes/translating-fluentcart' },
             { text: 'FluentCart Shortcodes', link: '/guide/customization-and-themes/fluentcart-shortcode' },
