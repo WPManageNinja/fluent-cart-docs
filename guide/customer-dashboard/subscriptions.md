@@ -45,7 +45,7 @@ Below the details, you will find several important links:
 * **Connected License:** If your subscription includes software or access keys, you can view and copy your active license key right here.
 
 ::: info
-Some subscriptions are billed manually by the store rather than charged automatically by the gateway. If yours is, you pay each renewal yourself using the **Pay Now** link sent with your renewal email, and you can use any available payment method. To understand how store-managed billing works, see [Manual Subscriptions](/guide/product-types-creation/manual-subscriptions).
+Some subscriptions are billed manually by the store rather than charged automatically by the gateway. If yours is, you pay each renewal yourself using the **Pay Now** link sent with your renewal email, and you can use any available payment method. To understand how store-managed billing works, see [Store Managed Subscriptions](/guide/product-types-creation/store-managed-subscriptions).
 :::
 
 #### Related Transactions
