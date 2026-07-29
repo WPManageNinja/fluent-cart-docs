@@ -1,8 +1,8 @@
-# Store Managed Subscriptions
+# Store Billing for Subscriptions
 
-FluentCart can bill your recurring products in two very different ways, and **Store Managed** is the mode where your store keeps control of the billing schedule instead of handing it to the payment gateway. Rather than letting Stripe or PayPal decide when to charge, FluentCart generates each renewal itself and invites the customer to pay, which is ideal for stores using offline payments, bank transfers, or gateways that do not support automatic recurring billing.
+FluentCart can bill your recurring products in two very different ways, and **Store Billing** is the mode where your store keeps control of the billing schedule instead of handing it to the payment gateway. Rather than letting Stripe or PayPal decide when to charge, FluentCart creates a renewal invoice itself and invites the customer to pay, which is ideal for stores using offline payments, bank transfers, or gateways that do not support automatic recurring billing.
 
-This guide explains how store-managed subscriptions work end to end. You will learn how FluentCart decides which billing mode a subscription uses, how a manual renewal moves from creation to payment to expiry, and what you can do from the admin to keep recurring revenue on track.
+This guide explains how store billing works end to end. You will learn how FluentCart decides which billing mode a subscription uses, how a renewal invoice moves from creation to payment to expiry, and what you can do from the admin to keep recurring revenue on track.
 
 ## How Subscription Billing Works in FluentCart
 
@@ -10,86 +10,73 @@ Every subscription answers one question: **who owns the billing schedule, the pa
 
 FluentCart supports three collection methods, grouped under two billing models:
 
-* **Gateway-Managed (Automatic):** The payment gateway owns the schedule. It creates its own recurring subscription (for example a Stripe or PayPal subscription) and charges the customer automatically. FluentCart simply mirrors the result when the gateway sends a notification.
-* **Store-Managed (Manual):** Your store owns the schedule. FluentCart creates each renewal on its own timeline and the customer pays every renewal by hand through a **Pay Now** link.
-* **Store-Managed with Auto-Charge:** The same store-owned schedule as Manual, with one addition. FluentCart saves the customer's payment method and attempts to charge it automatically for each renewal, so the customer does not have to pay by hand.
+* **Gateway Billing (Automatic):** The payment gateway owns the schedule. It creates its own recurring subscription (for example a Stripe or PayPal subscription) and charges the customer automatically. FluentCart simply mirrors the result when the gateway sends a notification.
+* **Store Billing (Manual):** Your store owns the schedule. FluentCart creates a renewal invoice on its own timeline and the customer pays every renewal by hand through a **Pay Now** link.
+* **Store Billing with Auto-Charge:** The same store-owned schedule as above, with one addition. FluentCart saves the customer's payment method and attempts to charge it automatically for each renewal, so the customer does not have to pay by hand.
 
 The table below sums up the practical difference between the three.
 
-| | Gateway-Managed | Manual (Store-Managed) | Store-Managed + Auto-Charge |
+| | Gateway Billing | Store Billing | Store Billing + Auto-Charge |
 |---|---|---|---|
 | **Who bills the customer** | The payment gateway | Your store, customer pays by hand | Your store, saved payment method charged automatically |
-| **How a renewal arrives** | A notification from the gateway | A renewal FluentCart generates on a schedule | A renewal FluentCart generates, then charges |
+| **How a renewal arrives** | A notification from the gateway | An invoice FluentCart generates on a schedule | An invoice FluentCart generates, then charges |
 | **Renewal email with a Pay Now link** | No | Yes | No (the payment method is charged instead) |
 | **Failed-payment handling** | The gateway's retry logic | FluentCart reminders, grace period, expiry | FluentCart retries, then reminders and expiry |
 | **You can edit the recurring amount** | No | Yes | Yes |
 
 ::: info
-Manual and Auto-Charge are the same engine. Auto-charge simply adds a saved payment method and an automatic payment attempt on top of the manual renewal flow. Everything in this guide about renewals, reminders, grace periods, and expiry applies to both.
+Store Billing and Auto-Charge are the same engine. Auto-charge simply adds a saved payment method and an automatic payment attempt on top of the invoicing flow. Everything in this guide about renewals, reminders, grace periods, and expiry applies to both.
 :::
 
-## Choosing Who Manages Subscriptions
+## Choosing How Renewals Are Billed
 
-Which model a subscription uses is controlled by a single store-wide setting, **Who manages subscriptions?**, plus the capabilities of the gateway the customer checks out with.
+Which model a subscription uses is controlled by a single store-wide setting, **Renewal Billing**, plus the capabilities of the gateway the customer checks out with.
 
-To configure it, navigate to **FluentCart Pro > Settings** in the left sidebar, open **Store Settings**, and select the **Subscriptions** tab. The **Who manages subscriptions?** panel shows your current mode and a **Change** button.
+To configure it, navigate to **FluentCart Pro > Settings** in the left sidebar, open **Store Settings**, and select the **Subscriptions** tab. The **Renewal Billing** panel shows your current mode as a badge, a plain-language summary of what it does, the schedule FluentCart uses to create renewal invoices, and a **Change** button.
 
-![Screenshot of the Who manages subscriptions setting showing Gateway Managed as the current mode](/images/product-types-creation/store-managed-subscription/store-managed-subscription-1.webp)
+![Screenshot of the Renewal Billing setting showing Store Billing as the current mode](/images/product-types-creation/store-managed-subscription/store-managed-subscription-1.webp)
 
-Follow these steps to switch to store-managed billing:
+Follow these steps to switch to store billing:
 
-1.  Click the **Change** button. Because this is a store-wide billing decision that affects checkout, renewals, and which payment methods customers can use, FluentCart first shows a confirmation. It reminds you that the change **only affects new subscriptions**. Click **I understand, continue**.
+1.  Click the **Change** button to open the **Renewal Billing** dialog, then choose one of the two modes:
 
-    ![Screenshot of the confirmation dialog explaining the change only affects new subscriptions](/images/product-types-creation/store-managed-subscription/store-managed-subscription-2.webp)
+    * **Gateway Billing** *(Recommended)*: Stripe, PayPal, and other subscription-ready gateways charge customers automatically each cycle.
+    * **Store Billing:** Your store creates a renewal invoice before each due date, and customers pay via a link in the email.
 
-2.  Choose how renewals are handled. Select **Store Managed (manual renewals)** to have FluentCart own the schedule and email a renewal order before each due date. The **Gateway Managed** option leaves recurring billing to the payment gateway, and hides gateways without subscription support on subscription products unless you opt in with the **Allow gateways without subscription support** checkbox beneath it.
+    ![Screenshot of the Renewal Billing dialog with Gateway Billing and Store Billing options](/images/product-types-creation/store-managed-subscription/store-managed-subscription-2.webp)
 
-    ![Screenshot of the Who manages subscriptions dialog with Gateway Managed and Store Managed options](/images/product-types-creation/store-managed-subscription/store-managed-subscription-3.webp)
+2.  With **Store Billing** selected, an extra option appears inside its card: **Auto-charge saved payment methods**. Leave it unchecked for plain invoicing, where the customer pays each renewal by hand. Check it to have FluentCart charge the customer's saved payment method automatically on each renewal due date wherever the gateway supports it. The dialog notes which gateways qualify, currently **Stripe** and **PayPal**. Expand **When are renewal orders created?** to see the full schedule.
 
-3.  When **Store Managed** is selected, an extra option appears: **Automatically charge saved payment methods**. Leave it unchecked for plain manual renewals, where the customer pays each renewal by hand. Check it to have FluentCart save the customer's payment method and charge it automatically on each due date wherever the gateway supports it; gateways without that support keep plain manual renewals. If none of your enabled gateways can charge automatically, the dialog tells you which ones to connect. The dialog also lists exactly when renewal orders are created ahead of the due date. Click **Apply**.
+3.  Click **Apply**. The change saves straight away, with no separate save step, and FluentCart confirms with a **Renewal billing updated** message. The panel now shows a **Store Billing** badge and the schedule on which renewal invoices are created.
 
-    ![Screenshot of the dialog with Store Managed selected and the Automatically charge saved payment methods option](/images/product-types-creation/store-managed-subscription/store-managed-subscription-4.webp)
+    ![Screenshot of the setting showing Store Billing as the current mode after applying](/images/product-types-creation/store-managed-subscription/store-managed-subscription-3.webp)
 
-4.  **Apply saves the change straight away.** There is no separate save step for this setting. The panel now reflects your choice. Plain manual renewals show a **Store Managed · Manual Renewals** badge, along with the schedule FluentCart uses to create renewal orders ahead of each due date.
+    If you enabled automatic charging, the badge reads **Store Billing · Auto-Charge** instead, and the summary confirms that your store creates renewal invoices and charges saved payment methods automatically.
 
-    ![Screenshot of the setting showing Store Managed Manual Renewals as the current mode](/images/product-types-creation/store-managed-subscription/store-managed-subscription-5.webp)
+    ![Screenshot of the setting showing Store Billing Auto-Charge as the current mode](/images/product-types-creation/store-managed-subscription/store-managed-subscription-4.webp)
 
-    If you enabled automatic charging, the panel shows a **Store Managed · Auto-Charge** badge instead, and the description notes that supported gateways charge the saved payment method while others fall back to pay-now renewal emails.
-
-    ![Screenshot of the setting showing Store Managed Auto-Charge as the current mode](/images/product-types-creation/store-managed-subscription/store-managed-subscription-6.webp)
-
-### Allowing Gateways Without Subscription Support
-
-Under **Gateway Managed**, FluentCart assumes the gateway owns the schedule, so a gateway that cannot handle recurring billing has nothing to own. By default those gateways are **hidden at checkout on subscription products**, which keeps customers from starting a subscription your gateway cannot renew.
-
-Check **Allow gateways without subscription support** if you would rather keep them available. Offline and one-time-only gateways then stay visible on subscription products, and FluentCart handles their renewals itself: those individual subscriptions become store-managed and the customer receives a renewal order to pay before each due date, exactly as described in the rest of this guide.
-
-This gives you a mixed store. Subscription-capable gateways keep auto-charging on the gateway's schedule, while offline and one-time-only gateways fall to FluentCart's manual renewal engine.
+::: info
+**Changing the mode only affects new subscriptions.** The dialog states this directly: existing subscriptions keep their current billing method. Flipping the setting never converts a running subscription from one model to the other, so you can switch safely without disrupting current subscribers.
+:::
 
 How the mode combines with the checkout gateway determines the final collection method:
 
-| Mode | Extra option | Gateway at checkout | Result |
+| Mode | Auto-charge | Gateway at checkout | Result |
 |---|---|---|---|
-| Gateway Managed | (any) | Supports recurring billing (Stripe, PayPal, etc.) | Automatic |
-| Gateway Managed | Allow gateways without subscription support **off** | No recurring support (offline, bank transfer) | Gateway hidden on subscription products |
-| Gateway Managed | Allow gateways without subscription support **on** | No recurring support (offline, bank transfer) | Manual |
-| Store Managed | Automatic charging **off** | Any gateway | Manual |
-| Store Managed | Automatic charging **on** | Supports automatic charging | Auto-charge |
-| Store Managed | Automatic charging **on** | No automatic-charging support | Manual |
+| Gateway Billing | (not applicable) | Subscription-ready (Stripe, PayPal, etc.) | Automatic |
+| Store Billing | Off | Any gateway | Manual invoice |
+| Store Billing | On | Stripe or PayPal | Auto-charge |
+| Store Billing | On | Any other gateway | Manual invoice |
 
-::: info
-**Changing the mode only affects new subscriptions.** Flipping the setting never converts an existing subscription from one billing model to another. Existing gateway-managed subscriptions keep auto-charging, and existing store-managed ones keep generating renewals, so you can safely switch the store setting without disrupting your current subscribers.
-:::
+## How a Store Billing Subscription Renews
 
-## How a Store Managed Subscription Renews
-
-Once a manual subscription is active, FluentCart drives the whole renewal cycle on an hourly schedule. You do not have to trigger anything, and the customer is never charged without being asked.
+Once a store-billed subscription is active, FluentCart drives the whole renewal cycle on an hourly schedule. You do not have to trigger anything, and the customer is never charged without being asked.
 
 Here is the lifecycle of a single renewal:
 
-1. **The renewal is created ahead of the due date.** FluentCart generates the next renewal order a little before it is actually due, so the customer has time to pay. How far ahead depends on the billing interval (see the table below).
+1. **The renewal is created ahead of the due date.** FluentCart creates the next renewal invoice a little before it is actually due, so the customer has time to pay. How far ahead depends on the billing interval (see the table below).
 2. **The customer receives a renewal email.** The email includes a **Pay Now** link that opens a checkout bound to that specific renewal.
-3. **The customer pays with any enabled gateway.** They are not locked to the gateway they originally used. A manual renewal can be paid with any active payment method in your store.
+3. **The customer pays with any enabled gateway.** They are not locked to the gateway they originally used. A renewal invoice can be paid with any active payment method in your store.
 4. **The next billing date advances.** Once the renewal is paid, FluentCart schedules the following cycle and the subscription stays active.
 
 The window for creating renewals early, and the grace period allowed after the due date, both scale with the billing interval:
@@ -120,17 +107,17 @@ Because past due and expiry are two separate stages, a customer always gets the 
 
 ### Reviving an Expired Subscription with a Late Payment
 
-An expired manual subscription is not a dead end. If the customer pays the outstanding renewal after it has expired, FluentCart **revives the subscription** and puts it back on schedule automatically. There is no need to recreate it.
+An expired store-billed subscription is not a dead end. If the customer pays the outstanding renewal after it has expired, FluentCart **revives the subscription** and puts it back on schedule automatically. There is no need to recreate it.
 
 FluentCart is also smart about the next billing date. If the renewal is paid on or before its due date, the schedule is preserved exactly, so billing dates never drift earlier over time. If it is paid late, the next cycle is measured from the payment date instead.
 
-## Store-Managed with Auto-Charge
+## Store Billing with Auto-Charge
 
-When you enable **Automatically charge saved payment methods** under Store Managed mode, the panel switches to a **Store Managed · Auto-Charge** badge and FluentCart keeps everything about the manual renewal engine but tries to pay each renewal for the customer first.
+When you enable **Auto-charge saved payment methods** under Store Billing, the panel switches to a **Store Billing · Auto-Charge** badge and FluentCart keeps everything about the invoicing engine but tries to pay each renewal for the customer first.
 
 At checkout, FluentCart saves the customer's payment method with their explicit consent. Then, for every renewal:
 
-* The renewal is created on the same schedule as a manual subscription, but **no Pay Now email is sent**. The customer is not asked to pay something that is about to be charged for them.
+* The renewal invoice is created on the same schedule as plain Store Billing, but **no Pay Now email is sent**. The customer is not asked to pay something that is about to be charged for them.
 * On the due date, FluentCart attempts to charge the saved payment method automatically.
 * If the charge succeeds, the renewal is settled and the subscription continues, exactly as if the customer had paid.
 * If the charge is declined, FluentCart automatically retries within the grace period, sends a charge-failed notification, and then falls back to the normal reminder and expiry flow if every attempt fails.
@@ -138,14 +125,14 @@ At checkout, FluentCart saves the customer's payment method with their explicit 
 To avoid spamming customers, the charge-failed email defaults to the **first failure only**, so silent automatic retries do not generate an email each time.
 
 ::: info
-**Auto-charge only applies on gateways that support it, currently Stripe and PayPal.** If a store-managed subscription is later moved onto a gateway that cannot save and charge a payment method (for example, when a customer pays a failed renewal with a different gateway), FluentCart quietly steps the subscription down to plain **Manual Renewals** and resumes sending the Pay Now email. In store-managed mode, manual invoicing is always the floor. A subscription never falls back to gateway billing.
+**Auto-charge only applies on gateways that support it, currently Stripe and PayPal.** If a store-billed subscription is later moved onto a gateway that cannot save and charge a payment method (for example, when a customer pays a failed renewal with a different gateway), FluentCart quietly steps the subscription down to plain **Store Billing** and resumes sending the Pay Now email. Under Store Billing, manual invoicing is always the floor. A subscription never falls back to gateway billing.
 :::
 
-## Managing Store Managed Subscriptions from the Admin
+## Managing Store Billing Subscriptions from the Admin
 
-Store-managed subscriptions give you far more hands-on control than gateway-managed ones, because your store owns the schedule. From a subscription's detail page you can take the following actions. For where these live and how the detail page is organized, see [Managing Subscriptions](/guide/product-types-creation/managing-subscriptions).
+Store-billed subscriptions give you far more hands-on control than gateway-billed ones, because your store owns the schedule. From a subscription's detail page you can take the following actions. For where these live and how the detail page is organized, see [Managing Subscriptions](/guide/product-types-creation/managing-subscriptions).
 
-* **Edit Subscription:** Change the recurring amount, billing interval, billing count, next billing date, or status. This is available for store-managed subscriptions, since the gateway is not the source of truth.
+* **Edit Subscription:** Change the recurring amount, billing interval, billing count, next billing date, or status. This is available for store-billed subscriptions, since the gateway is not the source of truth.
 * **Skip Next Period:** Push the next billing date forward by one cycle without charging.
 * **Pause Subscription** and **Resume Subscription:** Temporarily halt and later restart billing.
 * **Charge Now:** For a subscription with automatic charging, immediately attempt to charge an existing open renewal instead of waiting for the scheduled attempt.
@@ -158,18 +145,16 @@ Customers can also settle an open renewal themselves at any time using the **Pay
 
 Not every gateway can play every role. The essentials:
 
-* **Automatic (Gateway-Managed)** works with gateways that support native recurring billing, including **Stripe**, **PayPal**, **Paddle**, **Mollie**, **Authorize.net**, **Square**, **Paystack**, **Flutterwave**, and **Razorpay**.
-* **Manual (Store-Managed)** works with **any enabled gateway**, including offline methods like Cash on Delivery and bank transfer. Because the customer pays each renewal through a Pay Now link, no special recurring capability is required.
-* **Automatic Charging** is supported by **Stripe** and **PayPal**, the gateways that can save a payment method and charge it off-session under FluentCart's own schedule. Every other gateway keeps plain manual renewals.
-
-In Gateway Managed mode, gateways in the second group are hidden on subscription products unless you enable **Allow gateways without subscription support**.
+* **Gateway Billing** works with gateways that support native recurring billing, including **Stripe**, **PayPal**, **Paddle**, **Mollie**, **Authorize.net**, **Square**, **Paystack**, **Flutterwave**, and **Razorpay**.
+* **Store Billing** works with **any enabled gateway**, including offline methods like Cash on Delivery and bank transfer. Because the customer pays each renewal invoice through a Pay Now link, no special recurring capability is required.
+* **Auto-charge** is supported by **Stripe** and **PayPal**, the gateways that can save a payment method and charge it off-session under FluentCart's own schedule. Every other gateway keeps plain invoicing.
 
 For setup details on any individual gateway, see [Payment Settings](/guide/settings-configuration/payment-settings) and the [Connecting Payment Gateways](/guide/payments-checkout/connecting-payment-gateways/stripe-settings) guides.
 
 ## A Few Things to Keep in Mind
 
-* **Switching a store-managed subscription onto a gateway's own billing is intentionally not supported.** Doing so would let the gateway bill on its schedule while FluentCart also issues renewals for the same periods, resulting in a double charge. Customers change the **card on file** instead of switching billing models.
+* **Switching a store-billed subscription onto a gateway's own billing is intentionally not supported.** Doing so would let the gateway bill on its schedule while FluentCart also issues renewals for the same periods, resulting in a double charge. Customers change the **card on file** instead of switching billing models.
 * **Renewals are never duplicated.** If an open renewal already exists, FluentCart will not create another one, whether the trigger is the hourly schedule or an admin action.
 * **A queued automatic charge blocks expiry.** An automatic-charging subscription can never expire while a charge attempt is still armed, so it will not be cancelled out from under a pending payment.
 
-With Store Managed Subscriptions, your store stays in full control of recurring billing, whether that means inviting customers to pay each renewal by hand or charging their saved payment method automatically on a schedule you own.
+With Store Billing, your store stays in full control of recurring billing, whether that means inviting customers to pay each renewal by hand or charging their saved payment method automatically on a schedule you own.

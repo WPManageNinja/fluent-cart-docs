@@ -38,12 +38,12 @@ The notifications are grouped below by what they cover.
 
 * **Send mail to customer after a subscription renewed:** Confirms to the customer that their subscription renewal payment was successful.
 * **Send mail to admin after a subscription renewed:** Alerts the admin that a subscription renewal payment has been made.
-* **Send the renewal order to the customer when a renewal order is created:** Delivers the renewal order to the customer when FluentCart generates one for a store-managed subscription. This is the email carrying the **Pay Now** link.
+* **Send the renewal order to the customer when a renewal order is created:** Delivers the renewal order to the customer when FluentCart generates one for a store-billed subscription. This is the email carrying the **Pay Now** link.
 * **Notify admin when a renewal order is created:** The admin-side copy of the same event.
 
 **Automatic renewal charges**
 
-These apply when your store charges saved payment methods automatically. See [Store Managed Subscriptions](/guide/product-types-creation/store-managed-subscriptions) for how that mode works.
+These apply when your store charges saved payment methods automatically. See [Store Billing for Subscriptions](/guide/product-types-creation/store-managed-subscriptions) for how that mode works.
 
 * **Notify customer before an automatic renewal charge:** Tells the customer the amount and date of the upcoming automatic charge to their saved payment method, sent when the renewal order is created ahead of the due date.
 * **Notify customer when an automatic renewal charge fails:** Sent when the saved payment method could not be charged. It includes the failure reason and a **Pay Now** link so the customer can settle it manually.
