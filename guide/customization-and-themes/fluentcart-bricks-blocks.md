@@ -74,7 +74,7 @@ These blocks are the ones that actually take the money:
 
 These blocks help customers find their way around your catalog:
 
-* **Products:** A grid of your products, the quickest way to build a shop page.
+* **Products:** A grid of your products, the quickest way to build a shop page. It carries the richest control set of any block, covered in [Products Block Controls](#products-block-controls) below.
 * **Product Carousel:** Products in a sliding carousel. Set **Slides to Show**, **Space Between**, and **Autoplay** with its **Autoplay Speed**, then choose whether **Infinite Loop**, **Show Arrows**, and **Show Pagination** are on.
 * **Product Categories:** A list of your product categories. **Display Style** sets the look, while **Show Product Count**, **Show Hierarchy**, and **Show Empty Categories** control what is listed.
 * **Related Products:** Products related to the one being viewed. **Related By** matches on **Categories** or **Brands**, and you can set the **Heading Text**, **Order By**, **Columns**, and **Products Per Page**.
@@ -91,6 +91,42 @@ These blocks cover the rest of the storefront:
 ::: info
 A handful of these elements, including **Products**, **Product Title**, **Product Gallery**, and **Buy Section**, are built into FluentCart and appear in Bricks even without the addon. Installing the addon adds the other fifteen and completes the set, so you can build a whole store page without leaving the builder.
 :::
+
+## Products Block Controls
+
+The **Products** block is the one you will reach for most, so it is worth knowing what it can do. Its controls are split across three groups in the Bricks panel.
+
+### Query
+
+These controls decide which products appear and how the grid is arranged.
+
+* **View Mode:** Whether the products render as a grid or a list.
+* **Show View Switcher:** Lets visitors flip between the view modes themselves.
+* **Pagination Type:** How customers move through long result sets.
+* **Columns** and **Gap:** The grid layout and the spacing between items.
+* **Products per page:** How many products to load at a time.
+* **Is main query:** Ties the block to the page's main query, which is what you want on a shop or archive template.
+* **Order by** and **Order:** The sort field and direction.
+* **Product type:** Narrows the grid to a single product type.
+* **Include** and **Exclude:** Hand-pick individual products to force in or leave out.
+* **Product categories:** Restricts the grid to the categories you select.
+* **On sale Products only:** Shows only products currently on sale.
+* **Allow Out Of Stock:** Keeps out-of-stock products in the grid instead of hiding them.
+
+### Filter
+
+Turn on **Enable Filter** to give customers a filter panel alongside the grid. The rest of the controls in this group only appear once it is enabled.
+
+* **Enable Sort By:** Adds a sort control to the filter panel. On by default.
+* **Live Filter:** Updates results as the customer changes a filter, with no page reload.
+* **Wildcard Filter:** Broadens text matching so partial terms still return results.
+* **Taxonomy toggles:** FluentCart lists a checkbox for each product taxonomy, such as **Categories** and **Brands**. Tick one to offer it as a filter, leave it unticked to keep it out of the panel. This is how you control which taxonomies customers can filter by.
+* **Show empty:** Appears beneath each taxonomy you enable and displays that taxonomy's terms even when they have no products in them. Leave it off to keep empty categories and tags out of the filter panel.
+* **Price Range:** Adds a price filter, with **Display Name** to override its label.
+
+### Fields
+
+* **Link entire product:** Makes the whole product card clickable. It only takes effect if none of your product fields already contain a link.
 
 ## Building a Single Product Template
 

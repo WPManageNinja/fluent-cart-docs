@@ -2,7 +2,7 @@
 
 Making a successful online store needs two things: a great look and the right tools. If you use Elementor to build your website, FluentCart gives you a set of built-in widgets that fit perfectly with your designs.
 
-With these widgets, you can drag and drop product lists, checkout forms, single-product layouts, search bars, and more anywhere on your site — without writing any code.
+With these widgets, you can drag and drop product lists, checkout forms, single-product layouts, search bars, and more anywhere on your site, without writing any code.
 
 ## Turn on the Elementor Widgets
 
@@ -12,6 +12,10 @@ FluentCart starts with only the basics to keep your site fast. To use the Elemen
 2. **Open Features & Addons:** Click the **Features & addon** tab on the left.
 3. **Find Plugin Addons:** Scroll to the bottom of the page to find the **Plugin Addons** section.
 4. **Turn it On:** Find the **Elementor Blocks** card and click **Install & Activate**.
+
+::: info
+The Elementor Blocks add-on is available on **FluentCart Free** as well as Pro, and it installs in one click from the Plugin Addons section. It requires **Elementor 3.34 or later**.
+:::
 
 ![Screenshot of the FluentCart widget category panel in the Elementor editor](/images/customization-and-themes/fluentcart-elementor-widgets/elementor-widget-1.webp)
 
