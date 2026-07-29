@@ -64,6 +64,43 @@ This detailed view is broken down into several key sections:
 * **Customer Information:** This sidebar gives you a quick overview of the customer, including their contact details, their total lifetime value (LTV), and a direct link to their full customer profile.
 * **Labels:** Here, you can add internal labels to help you organize and segment your subscribers for your own reference (e.g., "VIP," "Early Adopter"). This is a great way to add internal notes and context to a subscriber's record.
 
+### Subscription Actions
+
+Every subscription carries a badge next to the **Subscription Details** heading telling you who owns its billing, and the actions available to you depend on that answer. Open the **more options** menu at the top right of the Subscription Details card to see everything you can do.
+
+* **Sync from gateway:** Pulls the latest state straight from the payment gateway, with the gateway's name shown in the menu item. Use this when you suspect FluentCart and the gateway have drifted apart.
+* **Edit Subscription:** Opens the subscription's terms for editing. See [Editing Subscription Terms](#editing-subscription-terms) below.
+* **Pause Subscription:** Temporarily halts billing while keeping the subscription intact.
+* **Resume Subscription:** Restarts billing on a paused subscription.
+* **Reactivate Subscription:** Brings a cancelled, expired, failing, or past due subscription back to life.
+* **Cancel Subscription:** Ends the subscription. The customer receives a cancellation email that includes their access end date.
+* **Send Reminder:** Emails the customer a reminder about a pending renewal payment.
+* **Create Renewal Now:** Generates the next renewal order ahead of schedule and emails it to the customer with a **Pay Now** link. On a subscription that charges saved payment methods automatically, this item instead reads **Charge Next Renewal Now** and creates the renewal *and* charges it in one step.
+* **Skip Next Period:** Pushes the next billing date forward by one full cycle without charging the customer. FluentCart records who skipped it and shows "Billing resumes on the date shown" on the subscription.
+* **Charge Now:** Immediately attempts to charge an open renewal against the saved payment method, rather than waiting for the scheduled attempt.
+
+::: info
+Menu items appear only when they apply. A gateway-managed subscription hides the store-owned actions such as **Skip Next Period** and **Charge Now**, because the gateway owns that schedule rather than your store. To understand which mode a subscription is in, see [Store Managed Subscriptions](/guide/product-types-creation/store-managed-subscriptions).
+:::
+
+#### Editing Subscription Terms
+
+Choosing **Edit Subscription** lets you correct the commercial terms of a running subscription without cancelling and recreating it. You can change:
+
+* **Recurring amount:** What the customer is billed each cycle. It cannot be negative.
+* **Billing interval:** How often the subscription renews.
+* **Billing count:** How many times the subscription bills in total. Leave it at zero for a subscription that runs until cancelled.
+* **Next billing date:** When the next renewal is due. Moving this date reschedules the whole cycle from that point.
+* **Status:** Set the subscription to Active, Paused, Trialing, Cancelled, Expired, Completed, or Past Due.
+
+> **📝 Note:** Editing terms is available for store-managed subscriptions. When the payment gateway owns the billing schedule, the gateway is the source of truth for the amount and dates, so those values are changed on the gateway's side instead.
+
+### Renewal and Payment History
+
+The **Related Orders** section on the Subscription Details page is the financial record of the subscription. It lists the original purchase alongside every renewal order FluentCart has generated, so you can trace the full billing history in one place.
+
+For each entry you can see the date, the total amount, the payment status, and the order type, which makes it straightforward to spot a renewal that was never paid. When an automatic charge attempt fails or a renewal is waiting on the customer, FluentCart also surfaces an alert at the top of the Subscription Details card explaining the current charge state.
+
 ### Subscription Cart Rules
 
 To keep recurring billing predictable, FluentCart enforces two rules at the cart level whenever a customer tries to purchase a subscription:

@@ -50,7 +50,7 @@ Follow these steps to switch to store-managed billing:
 
     ![Screenshot of the dialog with Store Managed selected and the Automatically charge saved payment methods option](/images/product-types-creation/store-managed-subscription/store-managed-subscription-4.webp)
 
-4.  **Apply saves the change straight away** — there is no separate save step for this setting. The panel now reflects your choice. Plain manual renewals show a **Store Managed · Manual Renewals** badge, along with the schedule FluentCart uses to create renewal orders ahead of each due date.
+4.  **Apply saves the change straight away.** There is no separate save step for this setting. The panel now reflects your choice. Plain manual renewals show a **Store Managed · Manual Renewals** badge, along with the schedule FluentCart uses to create renewal orders ahead of each due date.
 
     ![Screenshot of the setting showing Store Managed Manual Renewals as the current mode](/images/product-types-creation/store-managed-subscription/store-managed-subscription-5.webp)
 
@@ -138,19 +138,19 @@ At checkout, FluentCart saves the customer's payment method with their explicit 
 To avoid spamming customers, the charge-failed email defaults to the **first failure only**, so silent automatic retries do not generate an email each time.
 
 ::: info
-**Auto-charge only applies on gateways that support it — currently Stripe and PayPal.** If a store-managed subscription is later moved onto a gateway that cannot save and charge a payment method (for example, when a customer pays a failed renewal with a different gateway), FluentCart quietly steps the subscription down to plain **Manual Renewals** and resumes sending the Pay Now email. In store-managed mode, manual invoicing is always the floor. A subscription never falls back to gateway billing.
+**Auto-charge only applies on gateways that support it, currently Stripe and PayPal.** If a store-managed subscription is later moved onto a gateway that cannot save and charge a payment method (for example, when a customer pays a failed renewal with a different gateway), FluentCart quietly steps the subscription down to plain **Manual Renewals** and resumes sending the Pay Now email. In store-managed mode, manual invoicing is always the floor. A subscription never falls back to gateway billing.
 :::
 
 ## Managing Store Managed Subscriptions from the Admin
 
 Store-managed subscriptions give you far more hands-on control than gateway-managed ones, because your store owns the schedule. From a subscription's detail page you can take the following actions. For where these live and how the detail page is organized, see [Managing Subscriptions](/guide/product-types-creation/managing-subscriptions).
 
-* **Edit the terms:** Change the recurring amount, interval, billing count, or next billing date. This is available only for store-managed subscriptions, since the gateway is not the source of truth.
-* **Skip the next period:** Push the next billing date forward by one cycle without charging.
-* **Pause and Resume:** Temporarily halt and later restart billing.
+* **Edit Subscription:** Change the recurring amount, billing interval, billing count, next billing date, or status. This is available for store-managed subscriptions, since the gateway is not the source of truth.
+* **Skip Next Period:** Push the next billing date forward by one cycle without charging.
+* **Pause Subscription** and **Resume Subscription:** Temporarily halt and later restart billing.
 * **Charge Now:** For a subscription with automatic charging, immediately attempt to charge an existing open renewal instead of waiting for the scheduled attempt.
-* **Charge Next Renewal Now:** Create the next renewal ahead of schedule. On a manual subscription this generates the renewal and sends the Pay Now email. On an automatic-charging subscription it creates the renewal and charges the saved payment method in one step.
-* **Reactivate:** Bring a cancelled, paused, or expired subscription back to life.
+* **Create Renewal Now:** Generate the next renewal ahead of schedule and send the Pay Now email. On a subscription with automatic charging this action reads **Charge Next Renewal Now** instead, and it creates the renewal and charges the saved payment method in one step.
+* **Reactivate Subscription:** Bring a cancelled, paused, or expired subscription back to life.
 
 Customers can also settle an open renewal themselves at any time using the **Pay Now** link from their emails or the [customer dashboard](/guide/customer-dashboard/subscriptions). Paying early on an automatic-charging subscription simply cancels the queued automatic attempt, so a renewal is never billed twice.
 
