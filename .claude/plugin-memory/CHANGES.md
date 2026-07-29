@@ -5,6 +5,33 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## v1.6.0 — Jul 29, 2026
+- **Range:** changelog supplied by user; **plugin clone NOT pulled** for this run. Clone sat at `70b6c38ba` on `development` (Jul 24), i.e. **pre-1.6.0**. User explicitly chose to proceed without pulling. Everything below was verified against that Jul 24 tree, which already contained the subscription engine, the email registry, and the Bricks core elements. **The one thing the clone did NOT have was the new subscription-mode dialog copy** (see "Verified from screenshots only").
+- **Modules touched:** Subscriptions (lifecycle actions + store-managed engine), Services/Email (notification registry), Templating/Bricks (Products element controls), Templating/Elementor (addon availability)
+- **Changelog lines checked against code:**
+  - "Optional automatic renewal charging … (stripe, paypal)" — **CONFIRMED**. Supersedes the old Stripe-only claim. Docs previously said "Stripe only" in two places; both corrected.
+  - "Full subscription lifecycle management (pause, resume, skip, schedule, amount, status, billing date)" — **CONFIRMED** against `Modules/Subscriptions/Http/subscriptions-api.php` (routes) and `SubscriptionDetails.vue` (labels). Exact menu labels captured in CATALOG.md.
+  - "Subscription emails for renewals, reminders, upcoming charges, payment failures, and past-due notices" — **CONFIRMED**. `app/Services/Email/EmailNotifications.php` registers **26** notifications; the docs listed only **9**. View templates corroborate: `Views/emails/subscription/{charge_failed,past_due,period_skipped,reminder,renewal,trial_end,upcoming_charge,canceled}` + `Views/emails/renewal/{created,reminder}`.
+  - "Bricks Products controls for empty categories, tags, and category visibility" — **CONFIRMED** as the per-taxonomy checkboxes + `showEmpty_<taxonomy>` children in the core `ProductsCollection.php` filter group. Not an addon change.
+  - "Elementor blocks availability for FluentCart Free as an add-on" — **CONFIRMED indirectly**: `getRegisteredPluginAddons()` has no Pro/license gating. Min requirement Elementor 3.34 taken from the card description.
+- **Verified from screenshots only (clone was behind):** the **Who manages subscriptions?** dialog gained an **Allow gateways without subscription support** checkbox under Gateway Managed; non-subscription gateways are now **hidden on subscription products** by default instead of silently falling back. Apply now **saves immediately** (old copy: "Changes apply after you save the settings page"). The clone's `SubscriptionModeManager.vue` still had the OLD strings at `70b6c38ba`. **Re-verify these three against source after the next pull.**
+- **Doc pages updated:**
+  - `guide/changelog.md` — appended v1.6.0 entry (11 added/improved + 10 fixes), gateway names sentence-cased
+  - `guide/product-types-creation/store-managed-subscriptions.md` — **renamed** from `manual-subscriptions.md` (user-directed; slug changed too). New "Allowing Gateways Without Subscription Support" section, rewritten mode/gateway outcome table, Apply-saves-immediately step, Stripe-only → Stripe **and** PayPal, "saved card" → "saved payment method" throughout, action list aligned to verified UI labels. All 6 screenshots replaced and renamed to `store-managed-subscription-N.webp`
+  - `guide/product-types-creation/managing-subscriptions.md` — new **Subscription Actions** section (10 menu items) + **Editing Subscription Terms** + **Renewal and Payment History**. This page previously documented none of the lifecycle actions despite being cross-referenced for them
+  - `guide/settings-configuration/email-configuration/configuring-email-notification.md` — notification list expanded 9 → 26, grouped under six sub-headings
+  - `guide/customization-and-themes/fluentcart-bricks-blocks.md` — new "Products Block Controls" section (query / filter / fields groups)
+  - `guide/customization-and-themes/using-elementor-widgets.md` — info callout: add-on available on Free, requires Elementor 3.34
+  - **Sidebar + 4 inbound links** updated for the page rename (`understanding-statuses.md`, `customer-dashboard/subscriptions.md`, `email-configuration/reminders.md`, `managing-subscriptions.md`)
+- **Plugin changes flagged but skipped (no doc impact):** storefront styling across checkout/profile/shop/product; admin table column layouts and loading states; onboarding step-description polish and post-completion redirect fix; Advanced Variation gallery sync; content-editor dialog toolbar + multisite; email preview/background rendering; storage connection error messages; Reports iPad layout; variant list filters; stale next-billing-date on completed subs; Bricks category filter dynamic updates; Paddle `custom_data` reuse (internal sync mechanics, no user-facing setting)
+- **Screenshots:** 6 new subscription-settings PNGs supplied by user, converted with `cwebp -q 82` (91–115 KB each). **Screenshots 1, 2, 5, 6 were functionally identical to the old ones** (admin nav bar differs only); 3 and 4 carry the real UI changes. Still missing, no placeholders left in the build: subscription actions dropdown, Edit Subscription modal, expanded email notification list, Bricks Products filter controls
+- **Open questions carried forward:**
+  - **Old URL will 404.** `/guide/product-types-creation/manual-subscriptions` is live and indexed; VitePress has no in-repo redirect mechanism, so a host/CDN redirect is needed
+  - **Pull the plugin and re-verify** the three screenshot-only findings above, plus confirm 1.6.0 is tagged (1.5.4 was still untagged at its sync)
+  - Onboarding "Generate All Pages" was already documented in `initial-setup-wizard.md`; the 1.6.0 "clearer step descriptions" polish needs no edit unless the step copy changed materially
+
+---
+
 ## v1.5.4 — Jul 17, 2026
 - **Range:** `1.5.3..HEAD` (9f8ac14f5 on `development`), 77 commits, 215 files. Version bump confirmed (`fluent-cart.php` `FLUENTCART_VERSION = '1.5.4'`, readme.txt `Stable tag: 1.5.4`). DB version unchanged (`1.0.46`). **NOTE: no `1.5.4` git tag exists yet** — release was still untagged at sync time.
 - **Modules touched:** Templating/Bricks (addon card + element fixes), Subscriptions (installment minimum), Shipping (method title visibility), Coupon (URL rejection notice), MCP (advanced search), Helpers/UtmHelper (cross-site attribution), Dashboard onboarding

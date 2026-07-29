@@ -1,6 +1,40 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.6.0
+*Released on Jul 29, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Subscription engine with store-managed subscription support
+• Adds Store-managed renewal orders with payment links for all supported gateways
+• Adds Optional automatic renewal charging with saved payment methods on supported gateways (Stripe, PayPal)
+• Adds Full subscription lifecycle management, including pause, resume, skip, schedule, amount, status, and billing date controls
+• Adds Subscription emails for renewals, reminders, upcoming charges, payment failures, and past-due notices
+• Adds Bricks Products controls for empty categories, tags, and category visibility
+• Improves Onboarding with clearer step descriptions and a prominent "Generate All Pages" action
+• Improves Elementor blocks availability for FluentCart Free as an add-on
+• Improves Storefront styling across checkout, customer profile, shop, and product pages
+• Improves Admin tables with better column layouts and loading states
+• Improves The subscription admin page with richer payment history and renewal details
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Advanced Variation galleries syncing correctly on single product pages
+• Fixes The content editor dialog toolbar and multisite editing issues
+• Fixes Email preview and background email rendering
+• Fixes Onboarding redirecting to the dashboard after completion
+• Fixes File storage connection errors displaying proper error messages
+• Fixes Reports page layout on iPad
+• Fixes Product variant lists opening without filters
+• Fixes Completed subscriptions showing stale next billing dates
+• Fixes Bricks Products category filter controls updating dynamically
+• Fixes Paddle price/product reuse to sync product/variation custom_data instead of creating duplicate catalog entries
+```
+
+:::::
+
 ## FluentCart v1.5.5
 *Released on Jul 17, 2026*
 

@@ -91,8 +91,9 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Purpose:** Subscription billing lifecycle — creation, renewals, trial, cancellation, reactivation, refund-aware reactivation, upgrades, cart rules, recurring coupons.
 - **Key files:** `SubscriptionsModule.php`, `SubscriptionService.php`, `Models/Subscription.php`, listeners that fire `SubscriptionActivated` / `SubscriptionReactivated` events.
 - **User-facing surface:** Subscription dashboard, detail page, reactivate action, cancellation email with access-end date, cart restrictions ("one subscription per cart", "qty must be 1"), reactivation-after-refund flow. Since 1.5.4 an installment plan must bill **at least twice** (`MIN_INSTALLMENT_TIMES = 2`); saves below that are rejected. Installment fields are documented on `configuring-product-pricing.md`, not the subscriptions page.
-- **Drives docs:** `guide/product-types-creation/managing-subscriptions.md`, `configuring-product-pricing.md` (customer-portal payment-method updates also touch `guide/customer-dashboard/subscriptions.md`)
-- **Last fully audited:** v1.5.4
+- **Drives docs:** `guide/product-types-creation/managing-subscriptions.md`, `store-managed-subscriptions.md`, `configuring-product-pricing.md` (customer-portal payment-method updates also touch `guide/customer-dashboard/subscriptions.md`)
+- **Actions menu (verified 1.6.0, `resources/admin/Modules/Subscriptions/Components/SubscriptionDetails.vue`):** Sync from gateway, Edit Subscription, Pause/Resume/Reactivate/Cancel Subscription, Send Reminder, **Create Renewal Now** (manual) which becomes **Charge Next Renewal Now** on auto-charge subs, Skip Next Period, Charge Now. Routes in `Modules/Subscriptions/Http/subscriptions-api.php`. Editable terms per `UpdateSubscriptionRequest`: `recurring_total`, `bill_times`, `billing_interval`, `status`, `next_billing_date`.
+- **Last fully audited:** v1.6.0
 
 ### Modules/Tax
 - **Purpose:** Tax classes, regional tax rules, EU VAT, country-level tax toggles, reverse-charge handling.
@@ -106,8 +107,9 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Key files:** `Templating/Bricks/Elements/ProductsCollection.php` (and siblings), `Hooks/Handlers/BlockEditors/*`.
 - **User-facing surface:** FluentCart elements inside Bricks/Gutenberg/Elementor editors — Products grid/list, filters, single-product, cart, checkout shortcodes.
 - **Drives docs:** `guide/customization-and-themes/customize-store-with-bricks.md`, `fluentcart-bricks-blocks.md`, `using-gutenberg-blocks.md`, `using-elementor-widgets.md`
-- **Addon split (since 1.5.4):** core registers **8** Bricks elements from `Bricks/Elements/` and they load automatically with the Bricks theme. A further **15** ship in the separate **`fluent-cart-bricks-blocks`** addon plugin (**not in this clone**; card registered in `Http/Controllers/ModuleSettingsController.php`). An **Elementor Blocks** addon exists on the same card list but is **undocumented and unindexed**. When Bricks/Elementor work ships, check whether it belongs to core or an addon before writing.
-- **Last fully audited:** v1.5.4
+- **Addon split (since 1.5.4):** core registers **8** Bricks elements from `Bricks/Elements/` and they load automatically with the Bricks theme. A further **15** ship in the separate **`fluent-cart-bricks-blocks`** addon plugin (**not in this clone**; card registered in `Http/Controllers/ModuleSettingsController.php`). The **Elementor Blocks** addon (`elementor-block`, slug `fluent-cart-elementor-blocks`, CDN zip, min Elementor 3.34) sits on the same card list; `getRegisteredPluginAddons()` applies **no Pro gating**, so it is available on FluentCart Free. When Bricks/Elementor work ships, check whether it belongs to core or an addon before writing.
+- **Products element (core, `Bricks/Elements/ProductsCollection.php`):** control groups are `query`, `filter`, `fields`. Filter group builds a checkbox **per taxonomy** from `Taxonomy::getTaxonomies()` plus a `showEmpty_<taxonomy>` "Show empty" child for each. This is what the 1.6.0 changelog means by "controls for empty categories, tags, and category visibility". Documented in `fluentcart-bricks-blocks.md` under "Products Block Controls".
+- **Last fully audited:** v1.6.0
 
 ### Modules/Turnstile
 - **Purpose:** Cloudflare Turnstile bot protection on checkout / forms.
