@@ -53,6 +53,66 @@ $data = [
 
 The `item` value is the reliable source for line item details. Use `$data['item']['line_meta']` when you need to show per-item details such as gift messages, engraving text, license information, booking dates, or other custom options stored with the line item.
 
+### Hide Billing Fields for Zero-Total Checkouts
+
+For a free webinar or another checkout where no payment is required, you can hide the billing-address fields when the cart total is zero. The second filter removes validation errors for the same fields so customers can complete checkout without entering a billing address.
+
+```php
+<?php
+
+/**
+ * Hide billing-address fields for zero-payment checkouts.
+ */
+add_filter(
+    'fluent_cart/checkout_renderer/billing_fields',
+    function ($fields, $data) {
+        $cart = $data['cart'] ?? null;
+
+        if ($cart && $cart->isZeroPayment()) {
+            return [];
+        }
+
+        return $fields;
+    },
+    10,
+    2
+);
+
+/**
+ * Remove billing-address validation errors for zero-payment checkouts.
+ */
+add_filter(
+    'fluent_cart/checkout/validate_data',
+    function ($errors, $data) {
+        $cart = $data['cart'] ?? null;
+
+        if (!$cart || !$cart->isZeroPayment()) {
+            return $errors;
+        }
+
+        $addressFields = [
+            'billing_country',
+            'billing_state',
+            'billing_address_1',
+            'billing_address_2',
+            'billing_city',
+            'billing_postcode',
+            'billing_phone',
+        ];
+
+        foreach ($addressFields as $field) {
+            unset($errors[$field]);
+        }
+
+        return $errors;
+    },
+    10,
+    2
+);
+```
+
+Both filters check `$cart->isZeroPayment()`, so billing fields and their validation remain unchanged for checkouts that require payment.
+
 ## Customer Profile
 
 ### Add a Custom Menu Item to the Customer Profile
