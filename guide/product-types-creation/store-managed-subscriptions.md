@@ -100,7 +100,7 @@ The next billing date is worked out sensibly too. Pay on or before the due date 
 
 ## When Auto-Charge Is On
 
-Auto-charge keeps the whole invoicing flow and simply tries to pay each renewal for the customer first. At checkout, FluentCart saves their payment method with their consent. After that, on every renewal:
+Auto-charge keeps the whole invoicing flow and simply tries to pay each renewal for the customer first. At checkout, with the customer's consent, FluentCart saves their payment method so it can be reused later. After that, on every renewal:
 
 * The invoice is created on the same schedule as plain Store Billing, but **no Pay Now email goes out**. There is no point asking someone to pay what is about to be charged.
 * On the due date, FluentCart charges the saved payment method.
@@ -110,6 +110,10 @@ Auto-charge keeps the whole invoicing flow and simply tries to pay each renewal 
 The charge-failed email defaults to the **first failure only**, so silent retries do not fill the customer's inbox.
 
 You can follow the same story from the admin. The subscription's detail page shows **Automatic charge processing** while the provider confirms an attempt, and **Automatic charge failed** when one is declined, naming the attempt number, the reason, and when the next retry runs. A healthy subscription shows no banner at all.
+
+::: info
+**FluentCart never stores your customers' card details.** With the customer's consent, it saves a secure **token** from the payment gateway, such as **Stripe** or **PayPal**, and the gateway is what actually holds the card data. When a renewal is due, FluentCart simply sends that token back to the gateway to charge it. Customers change their card through **Update Payment Method** in their [customer dashboard](/guide/customer-dashboard/subscriptions).
+:::
 
 ::: info
 **Auto-charge needs Stripe or PayPal.** If a subscription moves to a gateway that cannot save and charge a payment method, for example when a customer pays a failed renewal with a different gateway, FluentCart quietly drops it back to plain **Store Billing** and resumes the Pay Now email. Manual invoicing is always the floor, and a subscription never switches to gateway billing on its own.
