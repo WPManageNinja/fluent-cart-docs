@@ -50,7 +50,18 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Key files:** `PaymentMethods/<Gateway>Gateway/*`, `PaymentMethods/Core/*` (abstracts, manager, IPN/webhook plumbing).
 - **User-facing surface:** Per-gateway settings page, webhook URL field, test/live toggles, button-text customizations, e-check toggles.
 - **Drives docs:** `guide/payments-checkout/connecting-payment-gateways/<gateway>-settings.md`. **Core changes** mean re-read every gateway page. Promo/install cards for addon gateways live under `PromoGateways/Addons/` (e.g. SSLCommerz since 1.5.2 — real gateway ships as a separate addon plugin).
-- **Last fully audited:** v1.5.2
+- **Stripe client SFU filter (since 1.6.1):** `Stripe.php:852-855` exposes `fluent_cart/stripe/client_setup_future_usage($value, ['data'=>…, 'has_subscription'=>bool])`; a falsy return unsets `setup_future_usage`. The browser cannot pass this per-request, and a mismatch between the mounted Elements config and the confirmation is a guaranteed Stripe failure. Documented in `code-snippets.md`.
+- **Last fully audited:** v1.6.1
+
+### Modules/SavedPaymentMethods *(Pro only)*
+- **Lives in:** `/Users/authlab-24/Desktop/fluent-cart-pro` → `app/Modules/SavedPaymentMethods/`. **Not in the core clone.** Decision recorded in core commit `1f54f2f9d` ("ship 100% in fluent-cart-pro").
+- **Purpose:** Cards on file. Save at checkout, pay with a saved card, manage cards from the customer portal, default card propagates account-wide.
+- **Key files:** `Settings/SettingsHandler.php` (merchant switch), `Checkout/CheckoutSaveHandler.php` (opt-in checkbox), `Checkout/SavedCardSelector.php` (checkout list), `Checkout/SavePaymentMethodHandler.php` (vaulting), `ProfileSection.php` (portal page + **the full user-facing string table at L141-176**), `ManageCardService.php` (set-default/delete), `AddCardService.php` (portal add + rate limit), `Gateway/SavedCardGateway.php` (off-session charge).
+- **User-facing surface:** `enable_saved_payment_methods` switch (**default off**) in **Store Settings > Cart & Checkout**; "Save this card for faster checkout next time" checkbox; "Your saved cards" list with "Pay another way"; portal **Payment Methods** page (add/set-default/remove, Default and On-a-subscription badges).
+- **Gateway support:** **Stripe only in v1.** `SavePaymentMethodHandler.php:51` returns early for any other gateway; PayPal is deferred to later tickets despite what `dev-docs/saved-payment-method/prd.md` claims.
+- **Caution:** `dev-docs/saved-payment-method/{prd,design,kanban}.md` are **stale specs** (kanban still reads `status: planning`, all tickets `todo`, after the feature shipped) and contradict shipped behavior on gateway support, control type, and default. **Always read the module, never the spec.**
+- **Drives docs:** `guide/customer-dashboard/payment-methods.md`, `guide/settings-configuration/cart-checkout-settings.md`, `guide/payments-checkout/connecting-payment-gateways/stripe-settings.md`, `guide/product-types-creation/managing-subscriptions.md`
+- **Last fully audited:** v1.6.1
 
 ### Modules/ProductIntegration
 - **Purpose:** Bridges between product types and external systems (license fulfillment, file delivery, course enrollment).
@@ -85,7 +96,8 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Key files:** `StorageDrivers/S3/*`, driver registration in module bootstrap.
 - **User-facing surface:** Storage settings → driver picker; per-product file upload destination.
 - **Drives docs:** `guide/integrations/amazon-s3-integration.md`, `guide/storage/*.md`
-- **Last fully audited:** v1.3.27
+- **Note (1.6.1):** `cf39e3ceb` stopped S3 saves wiping stored credentials when the secret field is submitted blank. Bug fix only, no settings surface changed.
+- **Last fully audited:** v1.6.1
 
 ### Modules/Subscriptions
 - **Purpose:** Subscription billing lifecycle — creation, renewals, trial, cancellation, reactivation, refund-aware reactivation, upgrades, cart rules, recurring coupons.
@@ -109,7 +121,8 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Drives docs:** `guide/customization-and-themes/customize-store-with-bricks.md`, `fluentcart-bricks-blocks.md`, `using-gutenberg-blocks.md`, `using-elementor-widgets.md`
 - **Addon split (since 1.5.4):** core registers **8** Bricks elements from `Bricks/Elements/` and they load automatically with the Bricks theme. A further **15** ship in the separate **`fluent-cart-bricks-blocks`** addon plugin (**not in this clone**; card registered in `Http/Controllers/ModuleSettingsController.php`). The **Elementor Blocks** addon (`elementor-block`, slug `fluent-cart-elementor-blocks`, CDN zip, min Elementor 3.34) sits on the same card list; `getRegisteredPluginAddons()` applies **no Pro gating**, so it is available on FluentCart Free. When Bricks/Elementor work ships, check whether it belongs to core or an addon before writing.
 - **Products element (core, `Bricks/Elements/ProductsCollection.php`):** control groups are `query`, `filter`, `fields`. Filter group builds a checkbox **per taxonomy** from `Taxonomy::getTaxonomies()` plus a `showEmpty_<taxonomy>` "Show empty" child for each. This is what the 1.6.0 changelog means by "controls for empty categories, tags, and category visibility". Documented in `fluentcart-bricks-blocks.md` under "Products Block Controls".
-- **Last fully audited:** v1.6.0
+- **Divi addon (since 1.6.1):** third builder addon, **not in any cloned repo**. Card at `ModuleSettingsController.php:282-293`, key `divi-blocks`, slug `fluent-cart-divi-blocks`, CDN zip, requires Divi 5.0+ and FluentCart 1.3.4+. Commit `61ccce6c7` reverts an earlier removal of the card, so it is live. Ships **18** modules plus a Template Library (8 layouts), `?fc_campaign=` landing routing, and Dynamic Content tokens. `guide/customization-and-themes/fluentcart-divi-modules.md` currently covers only **15** modules and none of the three extra features. **Not installed on the `cart` Local site**, so verification needs the Divi theme + addon installed first.
+- **Last fully audited:** v1.6.1
 
 ### Modules/Turnstile
 - **Purpose:** Cloudflare Turnstile bot protection on checkout / forms.

@@ -5,6 +5,39 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## v1.6.1 — Jul 31, 2026
+- **Range:** `1.6.0..HEAD` on core (`f58f82c03`, `development`), 25 commits / 52 files. **Core version NOT bumped** (`FLUENTCART_VERSION = '1.6.0'`, `Stable tag: 1.6.0`, no `1.6.1` tag). Version `1.6.1` chosen by the user. Release date is provisional.
+- **Second repo used for the first time:** `/Users/authlab-24/Desktop/fluent-cart-pro` @ `5513de12` (`development`). **Saved Payment Methods ships 100% in Pro** (`app/Modules/SavedPaymentMethods/`), decided in core commit `1f54f2f9d`. Core carries only the plumbing. Recorded in the session memory file `fluentcart-source-repo-locations`.
+- **Modules touched:** PaymentMethods/StripeGateway (client SFU filter + consent sync), StorageDrivers/S3, Templating (addon cards), CustomerProfile (portal section extension point), ProductVariation (bulk update validation), Pro/SavedPaymentMethods (new)
+- **Changelog lines checked against code — three PRD claims proved WRONG, do not trust `dev-docs/` specs:**
+  - "Adds a store setting to enable or disable Saved Payment Methods" — **CONFIRMED.** Key `enable_saved_payment_methods`, registered into `setting_tabs.schema.cart_and_checkout.schema` via the additive `fluent_cart/store_settings/{values,fields,sanitizer}` filter trio (`Settings/SettingsHandler.php:17,21-23,41`). Renders as a **switch**, **default `'no'` (off)** at L33. The PRD said "checkbox"; the `'default' => 1` at L64 is the **grid column count**, not the setting default.
+  - "Adds Saved Payment Methods for faster future checkouts" — **CONFIRMED but Stripe-only.** `Checkout/SavePaymentMethodHandler.php:51` hard-returns for any `payment_method !== 'stripe'`, comment: "Stripe one-time only in v1 (PayPal + the saved-card gateway persist via their own paths in later tickets)." **The PRD's Stripe+PayPal claim is false for v1.** Docs say Stripe only.
+  - "Adds instant Pay Now with saved payment methods for invoices and renewals" — **PARTIALLY VERIFIED.** No literal "Pay Now" string exists anywhere in the SPM module (only unrelated AuthorizeNet/Mollie button text). `Gateway/SavedCardGateway.php:114-115` charges `off_session` against an order keyed by `invoice_no`, so the capability is real. **Documented functionally; no button label invented.** Re-verify the actual surface before writing a dedicated section.
+  - "Adds a customer Payment Methods management page" — **CONFIRMED.** `ProfileSection.php`, REST base `saved-payment-methods`, legacy slug `payment-methods`. Full user-facing string table at L141-176.
+  - Set-default propagation — **CONFIRMED.** `ManageCardService.php:48` writes `invoice_settings.default_payment_method` on the Stripe customer, so renewals follow the default card. Delete-in-use blocked at L83.
+  - "Improves bulk product editing with billing interval validation" — **CONFIRMED.** `662391ad2` validates at request level, returns 422 with "A valid billing interval is required for subscription variants." before the transaction opens.
+  - "Improves Stripe card-saving customization with a developer filter hook" — **CONFIRMED.** `fluent_cart/stripe/client_setup_future_usage` (`Stripe.php:852-855`), args `($value, ['data'=>…, 'has_subscription'=>bool])`; falsy return unsets `setup_future_usage`.
+- **Divi Modules — addon is NOT in any cloned repo.** Core carries only the addon card: `ModuleSettingsController.php:282-293`, key `divi-blocks`, slug `fluent-cart-divi-blocks`, CDN install, description "Native Divi 5 modules for FluentCart products, cart, and checkout. Requires Divi 5.0+ and FluentCart 1.3.4+." Commit `61ccce6c7` **reverts** the earlier "remove Divi Modules from plugin addons list for now", so the card is live again. The docs page and its 4 images had been deleted on the docs side in `4cd1e5a` and were **restored this session** from `4cd1e5a^`.
+- **Doc pages updated:**
+  - `guide/changelog.md` — v1.6.1 entry; 18 Divi lines condensed to 5 (following the v1.5.4 Bricks precedent), `(Pro)` markers kept
+  - `guide/customer-dashboard/payment-methods.md` — **NEW**, customer-facing, all labels from Pro source
+  - `guide/customer-dashboard/index.md` — Payment Methods added to Key Sections
+  - `guide/settings-configuration/cart-checkout-settings.md` — new `#### Saved Payment Methods` (placed last, since the schema filter appends after Receipt Settings behind an `<hr>`)
+  - `guide/payments-checkout/connecting-payment-gateways/stripe-settings.md` — new "Letting Customers Save Their Card" section
+  - `guide/product-types-creation/managing-subscriptions.md` — info callout on default card driving renewals + delete-blocked rule
+  - `guide/product-types-creation/advanced-variations.md` — group-edit field list gained payment type/billing; new note on the 422
+  - `guide/customization-and-themes/code-snippets.md` — new Checkout snippet for the SFU filter, with a determinism warning
+  - `.vitepress/config.mjs` — sidebar: Payment Methods (customer dashboard) + **restored** FluentCart Divi Modules entry
+- **Plugin changes flagged but skipped (no doc impact):** S3 credential wipe (`cf39e3ceb`), store settings object-cache staleness (`80785a98c`, adds `StoreSettings::clearCache()`), shipping_total cents (`7bc40afd8`) — all changelog-only. `fluent_cart/customer_portal/<section>` extension point (`2c9d87962`) → dev-docs domain. Test-suite and `dev-docs/` churn ignored.
+- **Screenshots: NONE taken.** All three browsing routes failed. Chrome extension loads an error page on `cart.local` although `curl` returns 200 on both IPv4 and IPv6; `npx playwright install` and `wp eval-file` were both denied by the permission classifier. **No placeholder images were added** — every new section is text-only and image slots are clean.
+- **wp-cli does work** against the Local site, which is how the install was inspected: PHP `/Applications/Local.app/Contents/Resources/extraResources/lightning-services/php-8.2.29+0/bin/darwin-arm64/bin/php`, `-c "/Users/authlab-24/Library/Application Support/Local/run/Ecc_Xk6CZ/conf/php"`, run from `/Users/authlab-24/Local Sites/cart/app/public`. Use `wp option get` / `wp eval` (mysqli path); `wp db query` fails, it shells out to a `mysql` client that cannot find the socket.
+- **Open questions carried forward:**
+  - **Divi docs are incomplete and blocked.** Page documents **15** of **18** modules. Missing: **Cart page**, **Receipt**, **Archive Header**. Missing whole features: **Template Library** (8 layouts), **campaign landing routing** (`?fc_campaign=`), **Dynamic Content tokens**. Under-documented: product pickers on Add to Cart/Buy Now, Buy Now modal checkout, Mini Cart live count, Product Info section toggles, Sold Out badge, category/brand pickers. Also the L112-114 "canvas is only a preview" callout conflicts with the changelog's "real front-end canvas previews" and needs rewording. **cart.local has no Divi theme and no addon**, so screenshots require installing both.
+  - Confirm the provisional **1.6.1** number and date once the release is tagged.
+  - PayPal saved-card support is deferred in code; revisit when those "later tickets" land.
+
+---
+
 ## v1.6.0 — Jul 29, 2026
 - **Range:** changelog supplied by user; **plugin clone NOT pulled** for this run. Clone sat at `70b6c38ba` on `development` (Jul 24), i.e. **pre-1.6.0**. User explicitly chose to proceed without pulling. Everything below was verified against that Jul 24 tree, which already contained the subscription engine, the email registry, and the Bricks core elements. **The one thing the clone did NOT have was the new subscription-mode dialog copy** (see "Verified from screenshots only").
 - **Modules touched:** Subscriptions (lifecycle actions + store-managed engine), Services/Email (notification registry), Templating/Bricks (Products element controls), Templating/Elementor (addon availability)
