@@ -1,6 +1,41 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.6.1
+*Released on Jul 31, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds FluentCart Divi Modules add-on with 18 native Divi 5 modules covering products, cart, checkout, and the customer dashboard
+• Adds Divi Template Library with eight ready-made layouts for shop, single product, cart, checkout, thank you, product category, customer dashboard, and campaign landing pages
+• Adds Divi campaign landing routing, so a library layout can be served as a standalone landing page
+• Adds Divi Dynamic Content tokens for FluentCart product fields
+• Adds Divi Theme Builder support that resolves the current product in single-product templates
+• Adds Saved Payment Methods, letting logged-in customers save a card at checkout for faster future purchases (Pro)
+• Adds A customer Payment Methods page for adding, setting a default, and removing saved cards (Pro)
+• Adds Instant Pay Now with saved payment methods for invoices and renewals (Pro)
+• Adds A store setting to enable or disable Saved Payment Methods (Pro)
+• Improves The customer Profile page with add-on section support
+• Improves Bulk product editing with billing interval validation
+• Improves Stripe card-saving customization with a developer filter hook
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Saved payment cards respecting customer consent across gateway changes (Pro)
+• Fixes Saved cards not working with Stripe Hosted Checkout (Pro)
+• Fixes Saved payment methods not appearing on some stores (Pro)
+• Fixes Duplicate charges when using saved payment methods (Pro)
+• Fixes Stripe refunds for saved-card payments (Pro)
+• Fixes Licensed download links with secure signed URLs (Pro)
+• Fixes Store-managed Mollie renewals remaining unpaid (Pro)
+• Fixes S3 credentials being cleared when saving settings
+• Fixes Settings changes not applying on hosts with persistent caching
+• Fixes Shipping totals on newly created orders
+```
+
+:::::
+
 ## FluentCart v1.6.0
 *Released on Jul 29, 2026*
 

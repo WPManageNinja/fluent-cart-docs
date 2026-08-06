@@ -349,7 +349,8 @@ export default defineConfig({
                 { text: 'Managing Subscriptions', link: '/guide/customer-dashboard/subscriptions' },
                 { text: 'Managing Licenses', link: '/guide/customer-dashboard/licenses' },
                 { text: 'Digital Product Downloads', link: '/guide/customer-dashboard/downloads' },
-                { text: 'Profile & Address Settings', link: '/guide/customer-dashboard/profile-management' }
+                { text: 'Profile & Address Settings', link: '/guide/customer-dashboard/profile-management' },
+                { text: 'Payment Methods', link: '/guide/customer-dashboard/payment-methods' }
               ]
             }
           ]
