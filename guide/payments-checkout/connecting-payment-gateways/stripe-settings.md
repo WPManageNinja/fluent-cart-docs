@@ -81,3 +81,11 @@ Your store is now configured to securely accept payments through Stripe.
 
 > **Note**
 > You can also connect your Stripe account by adding your API keys directly to your site's `wp-config.php` file for more secure setup. For detailed instructions on this advanced method, please see our guide on [**Configuring Stripe via wp-config.php**](/guide/payments-checkout/connecting-payment-gateways/configure-stripe-via-wpconfig).
+
+## Letting Customers Save Their Card
+
+Stripe is the gateway behind FluentCart's **Saved Payment Methods** feature, which lets logged-in customers keep a card on file and pay with it in a single step next time.
+
+Your store never stores the card itself. Stripe keeps it and returns a token, which is charged only for an order the customer places or a subscription they already signed up for. Customers opt in with an unticked checkbox at checkout and can remove a saved card whenever they want.
+
+The feature is turned off until you enable it in [Cart & Checkout Settings](/guide/settings-configuration/cart-checkout-settings). Once it is on, the card a customer marks as their default is also used for their subscription renewals, so updating it in one place keeps their recurring payments running.

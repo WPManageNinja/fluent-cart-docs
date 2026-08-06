@@ -113,6 +113,36 @@ add_filter(
 
 Both filters check `$cart->isZeroPayment()`, so billing fields and their validation remain unchanged for checkouts that require payment.
 
+### Control Whether Stripe Is Asked to Store a Card
+
+When a customer pays with Stripe, FluentCart decides whether to ask Stripe to keep the card on file for later. This filter lets you override that decision, which is useful if you want saved cards on subscription checkouts but never on plain one-time purchases.
+
+The filter receives the current value and a context array containing `data` and `has_subscription`. Return `on_session` or `off_session` to have the card stored, or a falsy value to leave it unstored.
+
+```php
+<?php
+
+/**
+ * Only let Stripe store a card when the checkout includes a subscription.
+ */
+add_filter(
+    'fluent_cart/stripe/client_setup_future_usage',
+    function ($setupFutureUsage, $context) {
+        if (empty($context['has_subscription'])) {
+            return null;
+        }
+
+        return $setupFutureUsage;
+    },
+    10,
+    2
+);
+```
+
+::: info
+Stripe rejects a payment when the value the card element was built with does not match the one sent at confirmation. Keep the logic here deterministic, so the same checkout always produces the same result, rather than depending on anything that can change between the two requests.
+:::
+
 ## Customer Profile
 
 ### Add a Custom Menu Item to the Customer Profile
