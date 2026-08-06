@@ -15,5 +15,6 @@ When a customer logs in, they'll see a quick summary of their activity. From the
 * **[Managing Licenses](/guide/customer-dashboard/licenses)**: For software or other digital products that use license keys, this is a dedicated area for customers to find their keys, check activation limits, and see renewal information.
 * **[Digital Product Downloads](/guide/customer-dashboard/downloads)**: This section gives customers a neat list of all the digital products they've purchased, with a simple download button next to each one.
 * **[Update Profile Settings](/guide/customer-dashboard/profile-management)**: Where customers can update their personal contact information, manage billing addresses, and shipping addresses for future orders.
+* **[Payment Methods](/guide/customer-dashboard/payment-methods)**: If your store allows saved payment methods, this is where customers add a card, choose which one is used by default, and remove cards they no longer want on file.
 
 This comprehensive structure ensures that customers have all the necessary tools at their fingertips for a seamless and efficient experience with your FluentCart store.

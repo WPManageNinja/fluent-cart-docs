@@ -101,6 +101,10 @@ The **Related Orders** section on the Subscription Details page is the financial
 
 For each entry you can see the date, the total amount, the payment status, and the order type, which makes it straightforward to spot a renewal that was never paid. When an automatic charge attempt fails or a renewal is waiting on the customer, FluentCart also surfaces an alert at the top of the Subscription Details card explaining the current charge state.
 
+::: info
+If your store has **Saved Payment Methods** enabled, the card a customer marks as their default is what renewals draw on. When a renewal keeps failing, the quickest fix is often for the customer to add a fresh card and set it as their default from [Payment Methods](/guide/customer-dashboard/payment-methods) in their dashboard. A card that is actively paying for a subscription cannot be removed until that subscription is moved to another card, so renewals do not break silently.
+:::
+
 ### Subscription Cart Rules
 
 To keep recurring billing predictable, FluentCart enforces two rules at the cart level whenever a customer tries to purchase a subscription:

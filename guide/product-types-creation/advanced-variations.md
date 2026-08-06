@@ -178,10 +178,13 @@ With your variants selected, fill in only the fields you want to change. The gro
 * **Inventory:** Stock management fields for the selected variants.
 * **Shipping:** Shipping settings that apply per variant.
 * **Tax Class:** Visible only when tax is enabled for your store.
+* **Payment type and billing:** Switch the selected variants between one-time pricing and subscription pricing, along with the billing details that go with it.
 
 When everything looks right, click **Update X variants** at the bottom of the form. The button always shows how many variants are about to change, and fields you leave untouched keep each variant's existing value.
 
 > **📝 Note:** The update needs at least one selected variant and at least one filled-in field. If either is missing, FluentCart shows an error instead of saving, so you cannot accidentally blank out a whole group.
+
+> **📝 Note:** Switching the selected variants to subscription pricing requires a valid billing interval in the same update. Without one, FluentCart rejects the whole operation with "A valid billing interval is required for subscription variants." and no variant in the group is changed.
 
 Clicking **Cancel** leaves group-edit mode and returns you to the regular single-variant view without applying anything.
 
