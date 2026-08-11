@@ -1,6 +1,70 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.6.1
+*Released on Aug 11, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Add-on: FluentCart Divi Modules — 18 native Divi 5 Visual Builder modules for products, cart, and checkout, plus 8 ready-made layouts
+• Adds Saved Payment Methods for cards and PayPal accounts
+• Adds Customer Payment Methods management
+• Adds Failed subscription renewal email notifications for customers and admins
+• Adds Product insertion progress to onboarding
+```
+
+```markdown [⚡ Improvements]
+• Improves The customer Profile page with add-on extension support
+• Improves Bulk product editing with billing interval validation
+• Improves Checkout with an option to pre-select the Save Payment Method checkbox
+• Improves The subscription admin view with transaction details and upgrade eligibility
+• Improves Subscription search with partial customer email matching
+• Improves Coupon lists with accurate usage counts
+• Improves Advanced Inventory loading performance
+• Improves Stripe webhook logs with unmatched event details
+• Improves Admin-created orders to prevent incorrect integration attribution
+• Removes The non-functional bulk capture payments action
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Duplicate charges when using saved payment methods
+• Fixes Saved cards removing previously saved PayPal accounts
+• Fixes Saved cards not being stored in Stripe Hosted Checkout
+• Fixes Refunds on saved PayPal orders being sent to the wrong provider
+• Fixes Removed saved PayPal accounts remaining chargeable
+• Fixes Unstyled Payment Methods pages in the customer portal
+• Fixes False payment method update failures after successful updates
+• Fixes Licensed download links with secure signed URLs
+• Fixes Store-managed Mollie renewals remaining unpaid
+• Fixes Stripe renewal retries not being recorded correctly
+• Fixes Reactivation of past-due or expiring subscriptions
+• Fixes Subscription cancellation reasons and concurrent settings updates
+• Fixes Public product listings exposing cost prices and stock counts
+• Fixes Product and order endpoints accepting unsafe relation and scope parameters
+• Fixes Unsafe input handling in retention reports
+• Fixes Storefront coupon stacking to preserve the first applied coupon
+• Fixes Maximum discount limits not applying at checkout
+• Fixes Coupon restrictions not being enforced on admin orders
+• Fixes Invalid coupon schedules and limits causing server errors
+• Fixes Coupons not applying correctly to admin orders with variations
+• Fixes Custom line items not being saved on existing orders
+• Fixes Physical custom line items not entering shipping workflows
+• Fixes Manual orders using incorrect subscription types
+• Fixes Transaction endpoints returning unrelated transactions
+• Fixes Incomplete refund details causing errors
+• Fixes Payment links using the current catalog price instead of the order price
+• Fixes Shop price range sliders rounding cents incorrectly
+• Fixes Parent category filtering returning unrelated categories
+• Fixes Variant search not matching variation titles
+• Fixes Shipping zone edits clearing assigned shipping classes
+• Fixes S3 credentials being cleared when saving settings
+• Fixes Settings changes not applying with persistent caching
+• Fixes Shipping totals on newly created orders
+```
+
+:::::
+
 ## FluentCart v1.6.0
 *Released on Jul 29, 2026*
 
@@ -1089,4 +1153,3 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 ```
 
 :::
-
