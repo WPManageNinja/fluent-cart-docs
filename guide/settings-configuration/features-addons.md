@@ -108,14 +108,14 @@ This addon requires the **Bricks** theme to be installed and active. Without it,
 
 ### FluentCart Divi Modules
 
-If you build your site with **Divi**, the **FluentCart Divi Modules** addon adds native Divi 5 modules for FluentCart to the Divi builder, covering your products, cart, checkout, and customer dashboard.
+If you build your site with **Divi**, the **FluentCart Divi Modules** plugin adds native Divi 5 modules for FluentCart to the Divi builder, covering your products, cart, checkout, and customer dashboard.
 
-The card appears in the **Plugin Addons** section like any other addon, and installs with the same single click:
+The card appears in the **Plugin Addons** section and installs with a single click:
 
 1.  Navigate to **FluentCart Pro > Settings > Features & addon**.
 2.  Scroll to the **Plugin Addons** section and find the **FluentCart Divi Modules** card.
 3.  Click the **Install & Activate** button on the card.
 
 ::: info
-This addon requires **Divi 5.0+** and **FluentCart 1.3.4+**. See [FluentCart Divi Modules](/guide/customization-and-themes/fluentcart-divi-modules) for the full module list and workflow.
+This plugin uses the slug `fluent-cart-divi-modules` and requires **Divi 5.0+** and **FluentCart 1.3.4+**. See [FluentCart Divi Modules](/guide/customization-and-themes/fluent-cart-divi-modules) for the full module list and workflow.
 :::

@@ -1,19 +1,19 @@
 # FluentCart Divi Modules
 
-The **FluentCart Divi Modules** addon brings a full set of FluentCart building blocks into the **Divi** builder. Instead of dropping in a shortcode and hoping it fits your layout, you get a dedicated module for each part of your store, from a product grid and carousel right through to the cart, checkout, and customer dashboard. Drag in the pieces you want, style them with the Divi controls you already know, and build your store pages exactly the way you picture them.
+The **FluentCart Divi Modules** plugin (`fluent-cart-divi-modules`) brings a full set of FluentCart building blocks into the **Divi** builder. Instead of dropping in a shortcode and hoping it fits your layout, you get a dedicated module for each part of your store, from a product grid and carousel right through to the cart, checkout, and customer dashboard. Drag in the pieces you want, style them with the Divi controls you already know, and build your store pages exactly the way you picture them.
 
-This guide walks you through installing the addon, finding the modules inside Divi, and using them to build your shop.
+This guide walks you through installing the plugin, finding the modules inside Divi, and using them to build your shop.
 
 ## What You Need
 
-Before you install the addon, make sure of two things:
+Before you install the plugin, make sure of two things:
 
 1. **Divi 5.0 or newer** is installed and active on your site. These are native Divi 5 modules, so they render inside the Divi 5 builder and need that version to appear.
 2. **FluentCart 1.3.4 or newer** is installed, and your FluentCart Pro license is verified. See [Licensing Settings](/guide/settings-configuration/licensing-settings) if you have not done this yet.
 
-## Installing the Addon
+## Installing the Plugin
 
-The modules ship as a separate addon, so you install it once from the FluentCart settings before they show up in Divi.
+The modules ship as a separate plugin, so you install it once from the FluentCart settings before they show up in Divi.
 
 1. From your WordPress dashboard, navigate to **FluentCart Pro > Settings > Features & addon**.
 2. Scroll to the **Plugin Addons** section.
@@ -22,7 +22,7 @@ The modules ship as a separate addon, so you install it once from the FluentCart
 
 ![Screenshot of the Plugin Addons section with the FluentCart Divi Modules card and its Install & Activate button highlighted](/images/customization-and-themes/divi/divi-1.webp)
 
-FluentCart fetches the addon, installs it, and activates it for you. No upload or manual download is needed. When it finishes, the card's status badge switches to **Active**.
+FluentCart fetches the plugin, installs it, and activates it for you. No upload or manual download is needed. When it finishes, the card's status badge switches to **Active**.
 
 ![Screenshot of the FluentCart Divi Modules card showing the Active status badge](/images/customization-and-themes/divi/divi-2.webp)
 
@@ -34,7 +34,7 @@ If the **Install & Activate** button is greyed out or replaced with a license pr
 
 ## Finding the Modules in Divi
 
-Once the addon is active, the modules are ready to use straight away.
+Once the plugin is active, the modules are ready to use straight away.
 
 1. Open any page or Theme Builder template with the **Divi** builder.
 2. Click the plus icon (**+**) to open the **Insert Module Or Row** dialog, and stay on the **New Module** tab.
