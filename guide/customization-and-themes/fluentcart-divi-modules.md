@@ -59,6 +59,7 @@ These modules help customers find their way around your catalog:
 * **FluentCart Related Products:** Products related to the one being viewed, perfect for encouraging a second purchase on a single product layout.
 * **FluentCart Product Search:** A search field scoped to your products.
 * **FluentCart Media Carousel:** A carousel of product media, useful for showcasing imagery in a rich page section.
+* **FluentCart Archive Header:** Shows the queried category or brand's name and description on an archive page, matching what FluentCart's own archive pages show. Pair it with **FluentCart Products** in a Theme Builder archive layout, where the products module automatically scopes to the same category or brand.
 
 ### Product Details
 
@@ -74,7 +75,9 @@ These modules are the ones that actually take the money:
 * **FluentCart Add to Cart:** An add to cart button you can place anywhere, with your own button text.
 * **FluentCart Buy Now:** Sends the customer straight to checkout, skipping the cart.
 * **FluentCart Mini Cart:** A compact cart summary, well suited to a header or a sticky bar.
+* **FluentCart Cart:** The full cart page, with item rows, quantity steppers, totals, and the checkout button, so you can design the cart experience inside Divi.
 * **FluentCart Checkout Page:** The full checkout form, so you can design the checkout experience inside Divi.
+* **FluentCart Receipt:** The post-purchase thank-you page a customer lands on after paying, showing their order details.
 
 ### Store and Account
 
@@ -116,6 +119,33 @@ The Divi canvas renders a **preview** of your products. Interactive behavior, in
 ## Using the Modules in Theme Builder Templates
 
 The single-product modules, such as **FluentCart Product Info** and **FluentCart Product Card**, come into their own inside Divi's **Theme Builder**. Build the layout once in a template, and each module pulls its content from the product being viewed, so every product page follows the same design without you rebuilding it product by product.
+
+## Using the Bundled Template Library
+
+The addon also seeds eight ready-made page layouts straight into Divi's own library, so you can start from a finished design instead of building one from scratch.
+
+1. Open the **Load From Library** dialog in the Divi builder.
+2. Switch to the **Your Saved Layouts** tab.
+3. Under **My Library** you will see the layouts prefixed **FluentCart —**, for example **FluentCart — Single Product** or **FluentCart — Checkout**.
+4. Click a layout to load it into your page.
+
+![Screenshot of the Divi Load From Library dialog showing the eight bundled FluentCart layouts under Your Saved Layouts](/images/customization-and-themes/divi/divi-5.webp)
+
+The bundled layouts cover **Single Product**, **Shop**, **Product Category**, **Cart**, **Checkout**, **Thank You** (the receipt page), **Customer Dashboard**, and **Campaign Landing**. Each one is built from the FluentCart modules above, so you can drop it in as-is or use it as a starting point and swap in your own sections.
+
+Each layout is also filed under a matching **category**, so you can narrow the list using the **Categories** checkboxes on the left: **Account**, **Campaign**, **Cart**, **Category**, **Checkout**, **Product**, **Receipt**, and **Shop**.
+
+## Adding Product Data to Any Text Field
+
+Beyond the dedicated modules, the addon plugs FluentCart product data into Divi 5's own **Dynamic Content** picker, the small icon next to any text-based field. That means you can pull a product's title, price, or description into a plain **Heading**, **Text**, **Blurb**, **Button**, or **Image** module, not only the FluentCart-specific ones.
+
+1. Open the field on any Divi module that supports Dynamic Content (its icon sits beside the field).
+2. Choose **FluentCart Product** from the group list.
+3. Pick a token, such as **Product Price** or **Product Featured Image**.
+
+Available tokens: Product Title, Product Price, Product SKU, Product Short Description, Product Description, Product Stock Status, Product ID, Product Permalink, Product Featured Image, Product Categories, and Product Brands.
+
+These tokens resolve per product, so they are most useful inside a Theme Builder **Single Product** template, where each token automatically reflects whichever product a shopper is viewing.
 
 If you prefer other builders, FluentCart offers the same depth elsewhere: see [FluentCart Bricks Blocks](/guide/customization-and-themes/fluentcart-bricks-blocks) for the Bricks equivalent, [Using Elementor Widgets](/guide/customization-and-themes/using-elementor-widgets) for Elementor, and [Using Gutenberg Blocks](/guide/customization-and-themes/using-gutenberg-blocks) for the block editor.
 
