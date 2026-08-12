@@ -38,57 +38,57 @@ Once the addon is active, the modules are ready to use straight away.
 
 1. Open any page or Theme Builder template with the **Divi** builder.
 2. Click the plus icon (**+**) to open the **Insert Module Or Row** dialog, and stay on the **New Module** tab.
-3. Type **FC** into the search box to filter the list down to the FluentCart modules.
+3. Type **fluent** into the search box to filter the list down to the FluentCart modules.
 4. Click any module to add it to your layout, then style it using the **Content**, **Design**, and **Advanced** tabs on the right.
 
-![Screenshot of the Divi Insert Module dialog filtered to the FluentCart FC modules](/images/customization-and-themes/divi/divi-3.webp)
+![Screenshot of the Divi Insert Module dialog filtered to the FluentCart modules](/images/customization-and-themes/divi/divi-3.webp)
 
-Every FluentCart module is prefixed with **FC** in its name, so you can tell them apart from the built-in Divi modules at a glance.
+Every module is prefixed with **FluentCart** in its name, so you can tell them apart from the built-in Divi modules at a glance.
 
 ## The Available Modules
 
-The modules are grouped below by what they do, rather than the order they appear in the search, so you can find the right one quickly. Every module is prefixed with **FC** in the builder.
+The modules are grouped below by what they do, rather than the order they appear in the search, so you can find the right one quickly. Every module is prefixed with **FluentCart** in the builder.
 
 ### Browsing and Discovery
 
 These modules help customers find their way around your catalog:
 
-* **FC Products:** A grid of your products, the quickest way to build a shop page. This is the workhorse module, covered in detail under [Building Your Shop Page](#building-your-shop-page).
-* **FC Product Carousel:** Your products in a sliding carousel, ideal for a "Featured" or "New Arrivals" strip on a landing page.
-* **FC Product Categories List:** A list of your product categories, so shoppers can jump straight to the section they want.
-* **FC Related Products:** Products related to the one being viewed, perfect for encouraging a second purchase on a single product layout.
-* **FC Product Search:** A search field scoped to your products.
-* **FC Media Carousel:** A carousel of product media, useful for showcasing imagery in a rich page section.
+* **FluentCart Products:** A grid of your products, the quickest way to build a shop page. This is the workhorse module, covered in detail under [Building Your Shop Page](#building-your-shop-page).
+* **FluentCart Product Carousel:** Your products in a sliding carousel, ideal for a "Featured" or "New Arrivals" strip on a landing page.
+* **FluentCart Product Categories List:** A list of your product categories, so shoppers can jump straight to the section they want.
+* **FluentCart Related Products:** Products related to the one being viewed, perfect for encouraging a second purchase on a single product layout.
+* **FluentCart Product Search:** A search field scoped to your products.
+* **FluentCart Media Carousel:** A carousel of product media, useful for showcasing imagery in a rich page section.
 
 ### Product Details
 
 These modules render the pieces of a single product, which makes them the building blocks of a custom product layout:
 
-* **FC Product Card:** A complete product summary, useful for custom grids and feature sections.
-* **FC Product Info:** A combined module covering several product details at once, such as the gallery, title, price, and buy controls.
+* **FluentCart Product Card:** A complete product summary, useful for custom grids and feature sections.
+* **FluentCart Product Info:** A combined module covering several product details at once, such as the gallery, title, price, and buy controls.
 
 ### Selling and Checkout
 
 These modules are the ones that actually take the money:
 
-* **FC Add to Cart:** An add to cart button you can place anywhere, with your own button text.
-* **FC Buy Now:** Sends the customer straight to checkout, skipping the cart.
-* **FC Mini Cart:** A compact cart summary, well suited to a header or a sticky bar.
-* **FC Checkout Page:** The full checkout form, so you can design the checkout experience inside Divi.
+* **FluentCart Add to Cart:** An add to cart button you can place anywhere, with your own button text.
+* **FluentCart Buy Now:** Sends the customer straight to checkout, skipping the cart.
+* **FluentCart Mini Cart:** A compact cart summary, well suited to a header or a sticky bar.
+* **FluentCart Checkout Page:** The full checkout form, so you can design the checkout experience inside Divi.
 
 ### Store and Account
 
 These modules cover the rest of the storefront:
 
-* **FC Store Logo:** Your store's logo, with the option to link it back to the home page.
-* **FC Customer Dashboard:** The full customer account area, where shoppers manage their orders, subscriptions, and downloads.
-* **FC Customer Dashboard Button:** A link into the customer dashboard, handy in a header or menu.
+* **FluentCart Store Logo:** Your store's logo, with the option to link it back to the home page.
+* **FluentCart Customer Dashboard:** The full customer account area, where shoppers manage their orders, subscriptions, and downloads.
+* **FluentCart Customer Dashboard Button:** A link into the customer dashboard, handy in a header or menu.
 
 ## Building Your Shop Page
 
-The easiest way to display your catalog is with the **FC Products** module. Add it to a row, then open its **Content** tab to control exactly what it shows and how it behaves. The Divi canvas shows a live preview, and filters, sorting, and pagination all work on the published page.
+The easiest way to display your catalog is with the **FluentCart Products** module. Add it to a row, then open its **Content** tab to control exactly what it shows and how it behaves. The Divi canvas shows a live preview, and filters, sorting, and pagination all work on the published page.
 
-![Screenshot of the FC Products module showing a product grid with its settings panel open in Divi](/images/customization-and-themes/divi/divi-4.webp)
+![Screenshot of the FluentCart Products module showing a product grid with its settings panel open in Divi](/images/customization-and-themes/divi/divi-4.webp)
 
 The **Content** tab groups the settings into a few clear sections:
 
@@ -115,7 +115,7 @@ The Divi canvas renders a **preview** of your products. Interactive behavior, in
 
 ## Using the Modules in Theme Builder Templates
 
-The single-product modules, such as **FC Product Info** and **FC Product Card**, come into their own inside Divi's **Theme Builder**. Build the layout once in a template, and each module pulls its content from the product being viewed, so every product page follows the same design without you rebuilding it product by product.
+The single-product modules, such as **FluentCart Product Info** and **FluentCart Product Card**, come into their own inside Divi's **Theme Builder**. Build the layout once in a template, and each module pulls its content from the product being viewed, so every product page follows the same design without you rebuilding it product by product.
 
 If you prefer other builders, FluentCart offers the same depth elsewhere: see [FluentCart Bricks Blocks](/guide/customization-and-themes/fluentcart-bricks-blocks) for the Bricks equivalent, [Using Elementor Widgets](/guide/customization-and-themes/using-elementor-widgets) for Elementor, and [Using Gutenberg Blocks](/guide/customization-and-themes/using-gutenberg-blocks) for the block editor.
 
