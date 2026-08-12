@@ -5,6 +5,32 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## v1.6.1 gap-closure — Aug 12, 2026
+- **Trigger:** user merged commits into docs `master`; asked for a fresh compare against "the last update" (changelog + plugin git history).
+- **Range:** core `f58f82c03..HEAD` (`48639a20f`, `development`), 234 commits / 425 files — the tail end of the SAME v1.6.1 release cycle the prior entry below covered (core is now version-bumped + tagged `1.6.1`, `readme.txt` `Stable tag: 1.6.1`, confirming the prior entry's provisional number/date). Pro moved `5513de12..644b8c0e7` over the same window.
+- **Found: PayPal Saved Payment Methods shipped after the prior audit cutoff, before the tag.** The v1.6.1 entry below (audited Jul 31) correctly flagged the changelog's "cards and PayPal accounts" claim as false at the time ("Stripe only"). Between that audit and the final tag, the `saved-paypal-gateway` branch merged into Pro `development` (PRs #283–#285, tickets SPMP-01/02/04): save PayPal at checkout (same consent checkbox shared with Stripe — literal label unchanged, "Save this card for faster checkout next time"), pay with a saved PayPal in-page (`SavedCardSelector.php`, tagged `PYPL`, identified by payer email, no brand/last4), remove-with-provider-revoke (`PayPalTokenRevoker`), and a vaulting-capability guard (`PayPalVaultCapability`/`PayPalVaultNotice`) that silently withholds the consent checkbox + shows an admin notice when the merchant's PayPal account isn't approved for vaulting. **`setDefault` stays Stripe-only by design** (`ManageCardService.php:44-49`, error string "This payment method cannot be set as the default yet.") — a PayPal entry is listed/chargeable/removable but never becomes the default. Portal "Add a payment method" (`AddCardService.php`) is still Stripe-only — a PayPal account can only be saved at checkout. The checkout picker title also changed from "Your saved cards" to "Your saved payment methods" (`SavedCardSelector.php:123-124`) in the same window.
+- **Doc pages updated:**
+  - `guide/customer-dashboard/payment-methods.md` — full pass for PayPal: saving/paying/removing a PayPal account, default-is-Stripe-only note, "Your saved payment methods" title fix, PayPal cannot be added standalone
+  - `guide/payments-checkout/connecting-payment-gateways/paypal-settings.md` — new "Letting Customers Save Their PayPal Account" section, including the vaulting-approval caveat
+  - `guide/settings-configuration/cart-checkout-settings.md` — Saved Payment Methods description generalized to both gateways + vaulting-approval info box
+  - `guide/product-types-creation/managing-subscriptions.md` — **left unchanged.** Its "default card drives renewals" note is Stripe-default-consistent and describes a different mechanism than the core Subscriptions-engine's own PayPal auto-renewal capability (v1.6.0); did not conflate the two without more verification
+- **Found: Divi Modules doc gap (flagged in the prior entry below) confirmed and closed via the live addon zip**, not the git clone (addon still isn't in any cloned repo). Downloaded `https://addons-cdn.fluentcart.com/fluent-cart-divi-modules.zip` (note: **not** `fluent-cart-divi-blocks.zip` — that 404s; the real CDN slug is `fluent-cart-divi-modules`) and inspected `app/Modules/*` directly:
+  - Confirmed **exactly 18** modules. 3 were undocumented: `FluentCart Cart`, `FluentCart Receipt`, `FluentCart Archive Header` — added to the doc.
+  - Confirmed a **Template Library** (`app/Services/TemplateLibrary/`) seeding **8** bundled layouts into Divi's native library (Single Product, Shop, Product Category, Cart, Checkout, Thank You, Customer Dashboard, Campaign Landing) — new doc section added.
+  - Confirmed **Dynamic Content tokens** (`app/DynamicContent/DynamicContentRegistry.php`) — 11 FluentCart product tokens (title/price/SKU/short+long description/stock/ID/permalink/image/categories/brands) exposed in Divi 5's Dynamic Content picker for ANY text field, not just FluentCart modules — new doc section added.
+  - **Corrected a prior-entry claim:** the earlier note's "campaign landing routing (`?fc_campaign=`)" does not exist as code — no `campaign` string anywhere in the addon. What's real is a bundled template literally named `fc-campaign-landing` (one of the 8 layouts). Documented as a template name only; the routing claim is dropped.
+- **Doc pages updated:**
+  - `guide/customization-and-themes/fluentcart-divi-modules.md` — added the 3 missing modules to their category groups (Archive Header → Browsing and Discovery; Cart, Receipt → Selling and Checkout), new "Using the Bundled Template Library" and "Adding Product Data to Any Text Field" H2 sections
+- **Plugin changes flagged but skipped (no doc impact):** the other ~230 commits in the post-audit range are internal bug fixes/hardening (PayPal button rerender-DOM fix, mini-cart `button_class` XSS escape, i18n route-title wrapping, Divi addon-card dedup key, admin customer-name-mode form fix, subscription-list fatal on missing payment method, advanced-filter data-key gating) — all changelog-only or pure correctness, no user-facing setting or behavior change beyond what the changelog already states.
+- **Screenshots: none taken.** Divi still isn't installed on the `cart` Local site (per the entry below), so the 3 new modules and 2 new sections ship text-only, same as the rest of the page.
+- **Build status:** `npm run docs:build` clean (8.96s)
+- **Open questions carried forward:**
+  - Still no way to screenshot the Divi builder locally — needs the Divi theme + this addon installed on `cart.local`
+  - Elementor Blocks addon, FluentCart Migrator, FluentCart Customer Rights addon cards remain undocumented (carried forward from v1.5.4)
+  - `store-managed-subscriptions` old-slug 404 redirect still outstanding (infra, not content)
+
+---
+
 ## v1.6.1 — Jul 31, 2026
 - **Range:** `1.6.0..HEAD` on core (`f58f82c03`, `development`), 25 commits / 52 files. **Core version NOT bumped** (`FLUENTCART_VERSION = '1.6.0'`, `Stable tag: 1.6.0`, no `1.6.1` tag). Version `1.6.1` chosen by the user. Release date is provisional.
 - **Second repo used for the first time:** `/Users/authlab-24/Desktop/fluent-cart-pro` @ `5513de12` (`development`). **Saved Payment Methods ships 100% in Pro** (`app/Modules/SavedPaymentMethods/`), decided in core commit `1f54f2f9d`. Core carries only the plumbing. Recorded in the session memory file `fluentcart-source-repo-locations`.
