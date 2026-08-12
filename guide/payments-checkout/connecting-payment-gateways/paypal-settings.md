@@ -16,3 +16,15 @@ Please note that you must have a PayPal Business or Merchant account to accept p
     Here, you don't need any API keys. Just click on the **Connect with PayPal** button. You'll then be directed to "PayPal" to log in to your account. Once logged in, you will see that your PayPal account is successfully connected with your FluentCart store.
 5.  **Payment Activation:** In the top right corner of this page, ensure the PayPal **Payment Activation** option is "Active".
 6.  Click the **"Save Settings"** button to apply your changes. 
+
+## Letting Customers Save Their PayPal Account
+
+PayPal is also a supported gateway for FluentCart's **Saved Payment Methods** feature, alongside Stripe. It lets logged-in customers keep a PayPal account on file and pay with it in a single step next time, without being redirected to PayPal again.
+
+Your store never stores PayPal login details. PayPal keeps the account and returns a token, which is charged only for an order the customer places or a subscription they already signed up for. Customers opt in with an unticked checkbox at checkout and can remove a saved PayPal account whenever they want, just like a saved card.
+
+::: info
+Saving a PayPal account requires your PayPal business account to be approved for vaulting. If it is not, FluentCart automatically stops offering the save option to customers at checkout and shows an admin notice explaining why.
+:::
+
+See [Payment Methods](/guide/customer-dashboard/payment-methods) for what your customers see once this is enabled, and [Cart & Checkout Settings](/guide/settings-configuration/cart-checkout-settings) to turn the feature on.

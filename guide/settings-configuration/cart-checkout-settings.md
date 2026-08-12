@@ -38,17 +38,21 @@ This section allows you to customize the numbering format for your store's offic
 
 #### Saved Payment Methods
 
-At the bottom of the section you will find the **Saved Payment Methods** switch, which lets logged-in customers keep a card on file for faster checkout next time.
+At the bottom of the section you will find the **Saved Payment Methods** switch, which lets logged-in customers keep a card or PayPal account on file for faster checkout next time.
 
-Card details are never stored by your store or in your database. Your payment provider keeps the card and returns a token, which is charged only for an order the customer places or a subscription they already signed up for. Customers can remove a saved method at any time.
+Payment details are never stored by your store or in your database. Your payment provider keeps them and returns a token, which is charged only for an order the customer places or a subscription they already signed up for. Customers can remove a saved method at any time.
 
 Turning the switch on adds three things to your storefront:
 
-* A **Save this card for faster checkout next time** checkbox on the checkout page, unticked by default so customers opt in deliberately.
-* A **Your saved cards** list at checkout, with the customer's default card preselected.
-* A **Payment Methods** page in the customer dashboard, where customers manage the cards they have saved.
+* A **Save this card for faster checkout next time** checkbox on the checkout page, unticked by default so customers opt in deliberately. It appears for both Stripe and PayPal.
+* A **Your saved payment methods** list at checkout, with the customer's default method preselected.
+* A **Payment Methods** page in the customer dashboard, where customers manage the cards and PayPal accounts they have saved.
 
-The switch is off until you turn it on, so no cards are saved until you decide to offer it. Saved cards currently work with **Stripe** payments. Other gateways continue to work normally at checkout, they simply cannot save a card for reuse yet.
+The switch is off until you turn it on, so nothing is saved until you decide to offer it. Saved payment methods currently work with **Stripe** and **PayPal**. Other gateways continue to work normally at checkout, they simply cannot save a payment method for reuse yet.
+
+::: info
+Saving a PayPal account also requires your PayPal business account to be approved for vaulting by PayPal. See [PayPal Settings](/guide/payments-checkout/connecting-payment-gateways/paypal-settings) for details.
+:::
 
 ::: info
 Saved Payment Methods is a **FluentCart Pro** feature. For what your customers see once it is enabled, see [Payment Methods](/guide/customer-dashboard/payment-methods).
