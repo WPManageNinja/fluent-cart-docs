@@ -148,7 +148,8 @@ export default defineConfig({
     //   settings-configuration--roles-permissions-index.png.
     // Pages without a matching generated file (e.g. changelog.md, and
     // anything outside guide/) fall through to the generic static
-    // og:image fallback in the `head` config below (config.mjs:523) —
+    // og:image fallback in the `head` config below (the static fallback
+    // og:image in themeConfig head below) —
     // that fallback is intentionally kept and never removed.
     if (pageData.relativePath.startsWith('guide/')) {
       const guideRelPath = pageData.relativePath.slice('guide/'.length)

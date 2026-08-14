@@ -63,6 +63,7 @@ npm run docs:dev           # Local dev with HMR
 npm run docs:build         # Production build → .vitepress/dist/
 npm run docs:clean-build   # Wipe .vitepress/cache + .vitepress/dist, then build
 npm run docs:preview       # Preview the built site
+npm run featured:generate  # Generate branded OG images for doc pages
 ```
 
 There is **no** lint, no typecheck, no test command. Don't invent ones.

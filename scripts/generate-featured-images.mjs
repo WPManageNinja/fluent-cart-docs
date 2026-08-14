@@ -72,6 +72,11 @@ function buildNameParts(relPath) {
   const parts = relPath.split('/');
   const section = parts[0];
   const rest = parts.slice(1); // everything after the section folder
+
+  if (rest.length === 0) {
+    throw new Error(`Invalid path: guide/${relPath} must be inside a section folder (e.g. guide/section-name/page.md), not at the root.`);
+  }
+
   const filename = rest[rest.length - 1].replace(/\.md$/, '');
 
   let slug;

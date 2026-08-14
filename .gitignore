@@ -23,4 +23,7 @@ dist/
 .vscode/
 
 # Exclude other docs projects
-fluent-affiliate-docs/ 
+fluent-affiliate-docs/
+
+# Superpowers directory
+.superpowers/ 
