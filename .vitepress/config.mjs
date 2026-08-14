@@ -1,6 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { joinURL, withoutTrailingSlash } from 'ufo'
+import { existsSync } from 'node:fs'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const FEATURED_IMAGES_DIR = join(__dirname, '..', 'guide', 'public', 'images', 'featured')
 
 export default defineConfig({
   title: 'FluentCart Documentation',
@@ -126,6 +132,68 @@ export default defineConfig({
         }
       ]
     )
+
+    // Per-page og:image / twitter:image, if a generated featured image
+    // exists for this page. Naming rule is duplicated (not imported) from
+    // scripts/generate-featured-images.mjs buildNameParts() — see that
+    // file's header for the full rationale — since config.mjs runs in a
+    // context where importing the generator isn't worth the coupling.
+    // Keep this block's logic in sync with buildNameParts() if that rule
+    // ever changes:
+    //   <section>--<page-slug>.png, where section = first path segment
+    //   under guide/, slug = md filename without extension; a depth-1
+    //   index.md (guide/<section>/index.md) uses slug "index"; a NESTED
+    //   index.md folds the intervening folder names into the slug, e.g.
+    //   guide/settings-configuration/roles-permissions/index.md ->
+    //   settings-configuration--roles-permissions-index.png.
+    // Pages without a matching generated file (e.g. changelog.md, and
+    // anything outside guide/) fall through to the generic static
+    // og:image fallback in the `head` config below (config.mjs:523) —
+    // that fallback is intentionally kept and never removed.
+    if (pageData.relativePath.startsWith('guide/')) {
+      const guideRelPath = pageData.relativePath.slice('guide/'.length)
+      const parts = guideRelPath.split('/')
+      const section = parts[0]
+      const rest = parts.slice(1)
+
+      if (rest.length > 0) {
+        const filename = rest[rest.length - 1].replace(/\.md$/, '')
+        let slug
+        if (filename === 'index') {
+          if (rest.length === 1) {
+            slug = 'index'
+          } else {
+            const parents = rest.slice(0, -1).join('-')
+            slug = `${parents}-index`
+          }
+        } else {
+          slug = filename
+        }
+
+        const featuredName = `${section}--${slug}.png`
+        const featuredPath = join(FEATURED_IMAGES_DIR, featuredName)
+
+        if (existsSync(featuredPath)) {
+          const featuredUrl = `https://docs.fluentcart.com/images/featured/${featuredName}`
+          pageData.frontmatter.head.push(
+            [
+              'meta',
+              {
+                property: 'og:image',
+                content: featuredUrl,
+              }
+            ],
+            [
+              'meta',
+              {
+                name: 'twitter:image',
+                content: featuredUrl,
+              }
+            ]
+          )
+        }
+      }
+    }
   },
   
   base: '/',
