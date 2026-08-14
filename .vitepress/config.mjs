@@ -14,6 +14,7 @@ export default defineConfig({
   description: 'Comprehensive documentation for FluentCart - your all-in-one e-commerce solution.',
   lang: 'en-US',
   cleanUrls: true,
+  srcExclude: ['CLAUDE.md'],
   ignoreDeadLinks: true,
   showingLastUpdated: true,
   
