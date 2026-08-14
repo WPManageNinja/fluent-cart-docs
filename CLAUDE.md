@@ -213,3 +213,13 @@ Plus an FTS5 index of `app/**/*.php` (and a small Vue allowlist) maintained via 
 **Workflow** is defined in `.claude/skills/fluentcart-code-to-docs/SKILL.md`. Always pair the orchestrator with the master `fluentcart-doc-writer` and the matching template specialist (integration, payment-gateway, product, settings, overview).
 
 **Hard rules:** never copy plugin source code into user-facing docs (docs describe behavior, not implementation), never fabricate behavior the code doesn't support, never commit. End every code-to-docs run with the standard summary block defined in the skill, then append a new entry to `.claude/plugin-memory/CHANGES.md` and bump `Last fully audited:` in `CATALOG.md` for every module the run touched.
+
+---
+
+## 11. Featured images workflow
+
+Every doc page under `guide/` gets an auto-generated 1200×630 branded PNG (used as `og:image`/`twitter:image` and an on-page hero) written to `guide/public/images/featured/<section>--<page-slug>.png`.
+
+- **New page added or an H1 title changed:** run `npm run featured:generate`. The script (`scripts/generate-featured-images.mjs`) is idempotent — it skips any file whose output PNG already exists. Pass `--force` to regenerate everything.
+- Naming rule: `<section>` = first folder under `guide/`; `<page-slug>` = filename without `.md`. `index.md` directly under a section becomes `<section>--index.png`; a **nested** `index.md` (more than one level deep) gets the intervening path folded into the slug (e.g. `guide/settings-configuration/roles-permissions/index.md` → `settings-configuration--roles-permissions-index.png`) to avoid collisions with sibling nested indexes — see the `buildNameParts()` comment in the script for the exact rule. Any code that re-derives this filename (e.g. `.vitepress/config.mjs`, the on-page hero component) must replicate that full rule, not just the simple case.
+- `guide/changelog.md` and everything under `guide/public/` are excluded.

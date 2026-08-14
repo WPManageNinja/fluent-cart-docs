@@ -3,9 +3,11 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:clean-build": "rm -rf .vitepress/cache .vitepress/dist && vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "featured:generate": "node scripts/generate-featured-images.mjs"
   },
   "devDependencies": {
+    "sharp": "^0.35.3",
     "turndown": "^7.2.4",
     "ufo": "^1.6.1",
     "vitepress": "^1.6.4"
