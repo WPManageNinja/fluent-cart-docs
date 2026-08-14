@@ -5,7 +5,8 @@ import CopyPage from './components/CopyPage.vue'
 import FeaturedImage from './components/FeaturedImage.vue'
 
 // Single toggle to switch the on-page featured-image hero off everywhere.
-const SHOW_FEATURED_HERO = true
+// Featured images are for social sharing (og:image/twitter:image) only.
+const SHOW_FEATURED_HERO = false
 
 const { Layout } = DefaultTheme
 </script>
