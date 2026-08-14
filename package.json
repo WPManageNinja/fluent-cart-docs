@@ -6,6 +6,9 @@
     "docs:preview": "vitepress preview",
     "featured:generate": "node scripts/generate-featured-images.mjs"
   },
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "devDependencies": {
     "sharp": "^0.35.3",
     "turndown": "^7.2.4",
