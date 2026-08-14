@@ -235,14 +235,17 @@ function buildLogoMarkup() {
 // -------------------------------------------------------------------------
 
 function buildSvg({ title, section }) {
-  const escapedTitle = escapeXml(title);
   const escapedSection = escapeXml(section.toUpperCase());
-  const { fontSize, lines } = wrapTitle(escapedTitle);
+  // Font-size tier and line-wrapping must be computed from the raw
+  // (unescaped) title so that titles containing &, <, > aren't pushed
+  // into a smaller-font tier by the escaped string's inflated length.
+  // Each line is escaped individually right before it's emitted below.
+  const { fontSize, lines } = wrapTitle(title);
   const lineHeight = fontSize * 1.18;
   const titleStartY = lines.length === 1 ? 400 : 372;
 
   const titleTspans = lines
-    .map((line, i) => `<tspan x="80" y="${titleStartY + i * lineHeight}">${line}</tspan>`)
+    .map((line, i) => `<tspan x="80" y="${titleStartY + i * lineHeight}">${escapeXml(line)}</tspan>`)
     .join('');
 
   return `<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
