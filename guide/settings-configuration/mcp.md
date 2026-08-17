@@ -12,7 +12,7 @@ Before you start, make sure you have the following in place:
 
 * **WordPress 6.9 or newer.** MCP is built on the WordPress core **Abilities API**, which arrived in 6.9.
 * **An MCP adapter.** FluentCart doesn't bundle one, so it uses whichever adapter is installed:
-    * **FluentToolkit** *(recommended)*. The MCP card can install it for you, or you can [download it manually](https://static.wpmanageninja.com/fluent-toolkit.zip).
+    * **FluentHub** *(recommended)*. The MCP card can install it for you, or you can [download it manually](https://static.wpmanageninja.com/fluent-toolkit.zip).
     * The standalone **MCP Adapter** plugin works too.
 * **A WordPress application password** for the account the assistant will sign in as.
 * **An MCP-capable client** on your computer, such as Cursor, Claude Desktop, Claude Code, or Codex.
@@ -33,14 +33,14 @@ When MCP hasn't been set up yet, the card shows a **Setup Required** badge.
 
 If no adapter is active yet, the **MCP Connection** panel asks you to install one before the endpoint can respond.
 
-* Click **Download FluentToolkit** to install the recommended adapter, then activate it and reload the page.
+* Click **Download FluentHub** to install the recommended adapter, then activate it and reload the page.
 * Prefer to do it yourself? Download the ZIP from [https://static.wpmanageninja.com/fluent-toolkit.zip](https://static.wpmanageninja.com/fluent-toolkit.zip) and upload it via **Plugins → Add New → Upload Plugin**, then activate it.
-* If you already have FluentToolkit or the standalone MCP Adapter active, FluentCart skips this step and you can move straight to enabling MCP.
+* If you already have FluentHub or the standalone MCP Adapter active, FluentCart skips this step and you can move straight to enabling MCP.
 
-![Screenshot of the MCP Connection panel showing the FluentToolkit is required notice with the Download FluentToolkit button](/images/settings-configuration/mcp/fluentcart-mcp-2.webp)
+![Screenshot of the MCP Connection panel showing the FluentHub is required notice with the Download FluentHub button](/images/settings-configuration/mcp/fluentcart-mcp-2.webp)
 
 ::: tip
-FluentCart Pro can install FluentToolkit for you in one click. The tip inside the panel will point this out when it's available.
+FluentCart Pro can install FluentHub for you in one click. The tip inside the panel will point this out when it's available.
 :::
 
 ## Step 3: Turn On MCP
