@@ -5,9 +5,9 @@ Amazon S3 now has its own dedicated section under the **Storage** menu in Fluent
 
 Head to the new guide for the current setup:
 
-* [Amazon S3 setup guide →](/guide/storage/s3)
+* [Amazon S3 setup guide →](/guide/storage/aws-s3)
 * [Storage Overview →](/guide/storage/)
-* [Cloudflare R2 setup guide →](/guide/storage/r2)
+* [Cloudflare R2 setup guide →](/guide/storage/cloudflare-r2)
 :::
 
 The old location is kept here only so existing bookmarks and inbound links keep resolving.

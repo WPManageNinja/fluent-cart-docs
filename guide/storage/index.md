@@ -28,13 +28,13 @@ Files are saved directly on your website's server. This is the simplest option a
 
 Amazon S3 is AWS's cloud object storage — the industry standard for offloading large file libraries from your web server. Choose S3 if you sell large digital files, want to keep your site fast under load, or already live inside the AWS ecosystem.
 
-[Read the full Amazon S3 setup guide →](/guide/storage/s3)
+[Read the full Amazon S3 setup guide →](/guide/storage/aws-s3)
 
 ### Cloudflare R2
 
 Cloudflare R2 is Cloudflare's object storage — S3-compatible at the API level, but delivered through Cloudflare's global network with **zero egress fees**. Choose R2 if you have media-heavy downloads, international customers, or want predictable costs as traffic grows.
 
-[Read the full Cloudflare R2 setup guide →](/guide/storage/r2)
+[Read the full Cloudflare R2 setup guide →](/guide/storage/cloudflare-r2)
 
 ## Provider List, Enable / Disable, and Edit
 
