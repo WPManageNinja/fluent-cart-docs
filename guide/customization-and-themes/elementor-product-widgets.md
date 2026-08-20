@@ -1,6 +1,6 @@
 # FluentCart Product Widgets for Elementor
 
-The **FluentCart Product** category in the Elementor editor groups 10 focused widgets built for **Elementor Pro Theme Builder**. Use them inside single-product templates, archive templates, or theme parts — they automatically read the current product's data, so the same template works across your entire catalog.
+The **FluentCart Product** category in the Elementor editor groups 9 focused widgets built for **Elementor Pro Theme Builder**. Use them inside single-product templates, archive templates, or theme parts — they automatically read the current product's data, so the same template works across your entire catalog.
 
 ::: info
 Theme Builder widgets work best when **Source** is set to **Current Product** inside a Theme Builder template. Setting **Source** to **Custom** lets you preview a specific product while editing the template.
@@ -127,20 +127,12 @@ Renders the long-form product content — the rich-text body of the product. Use
 
 ![Screenshot of the Product Content widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/product-widgets/fluentcart-elementor-10.webp)
 
-## 10. Related Products
-
-Renders a row of products related to the current product. FluentCart picks the related items based on shared categories and tags, plus any manual relations you set in the product editor.
-
-* **Content Tab:** Configure the query.
-    * **Source:** Pull from the **Current Product** or a **Custom** product.
-    * **Select Product:** When **Source** is **Custom**, pick the product whose related items you want to preview.
-* **Style Tab:** Customize the card spacing, typography, button styles, and image aspect ratio.
-* **Advanced Tab:** Standard Elementor controls.
-
-![Screenshot of the Related Products widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/product-widgets/fluentcart-elementor-11.webp)
+::: info Looking for Related Products?
+The **Related Products** widget reads product data like the widgets above, but Elementor lists it in the store-wide **FluentCart** category rather than **FluentCart Product** — so you can also use it outside a product template. It's documented at [Related Products](/guide/customization-and-themes/elementor-fluentcart-widgets#_16-related-products).
+:::
 
 ---
 
 ## What's Next
 
-Looking for the store-wide widgets (cart, checkout, search bar, store logo, etc.)? Head to [FluentCart Widgets for Elementor](/guide/customization-and-themes/elementor-fluentcart-widgets).
+Looking for the store-wide widgets (cart, checkout, order receipt, customer dashboard, search bar, store logo, etc.)? Head to [FluentCart Widgets for Elementor](/guide/customization-and-themes/elementor-fluentcart-widgets).

@@ -1,6 +1,6 @@
 # FluentCart Widgets for Elementor
 
-The **FluentCart** category in the Elementor editor groups 12 store-wide widgets you can drop on any page — your home page, shop page, header, footer, or a custom landing page. They cover product display, cart, checkout, navigation, branding, and the all-in-one Product Info summary.
+The **FluentCart** category in the Elementor editor groups 16 store-wide widgets you can drop on any page — your home page, shop page, header, footer, or a custom landing page. They cover product display, cart, checkout, the post-purchase receipt, the customer account area, navigation, branding, and the all-in-one Product Info summary.
 
 ::: info
 Before you can use these widgets, make sure the Elementor Blocks addon is turned on. See [Using Elementor Widgets](/guide/customization-and-themes/using-elementor-widgets) for the activation steps.
@@ -43,7 +43,17 @@ A compact cart icon that usually sits in your site header. It lets customers see
 
 ![Screenshot of the Mini Cart widget edit panel in Elementor showing Style controls](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-4.webp)
 
-## 4. Products
+## 4. Cart
+
+Renders the full FluentCart shopping cart — item rows, quantities, line totals, the cart summary, and the empty-cart state. Use it to build a custom cart page instead of relying on the default one.
+
+* **Content Tab:** No configuration needed. The widget renders the live cart, and its behavior comes from FluentCart core.
+* **Style Tab:** Two design groups.
+    * **Item Row:** Set the **Background Color**, **Border Radius**, **Padding**, and **Row Spacing** for each line in the cart.
+    * **Checkout Button:** Style the **Text Color** and **Background Color** for both **Normal** and **Hover** states, plus **Border Radius** and **Padding**.
+* **Advanced Tab:** Standard Elementor margin, padding, and responsive controls.
+
+## 5. Products
 
 The main widget for building shop pages. It renders your product catalog as a clean grid or list and supports filters, sorting, and pagination.
 
@@ -57,7 +67,7 @@ The main widget for building shop pages. It renders your product catalog as a cl
 
 ![Screenshot of the Products widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-5.webp)
 
-## 5. Product Card
+## 6. Product Card
 
 Renders a single product as a card — the same card layout used in the Products grid, but for a product you pick yourself. Great for highlighting a featured product anywhere on the page.
 
@@ -70,7 +80,7 @@ Renders a single product as a card — the same card layout used in the Products
 
 ![Screenshot of the Product Card widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-6.webp)
 
-## 6. Product Carousel
+## 7. Product Carousel
 
 Use this on home pages or landing pages to show off a sliding row of products — perfect for "Best Sellers," "New Arrivals," or seasonal lineups.
 
@@ -83,7 +93,7 @@ Use this on home pages or landing pages to show off a sliding row of products �
 
 ![Screenshot of the Product Carousel widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-7.webp)
 
-## 7. Product Categories List
+## 8. Product Categories List
 
 Helps customers navigate your store by listing all of your product categories. Use it in sidebars, mega menus, or category landing pages.
 
@@ -97,7 +107,7 @@ Helps customers navigate your store by listing all of your product categories. U
 
 ![Screenshot of the Product Categories List widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-8.webp)
 
-## 8. Checkout
+## 9. Checkout
 
 Place the FluentCart checkout form on any page. This gives you full control over the layout of your sales funnel — useful for one-page checkouts, dedicated landing pages, and custom upsell flows.
 
@@ -111,7 +121,22 @@ Place the FluentCart checkout form on any page. This gives you full control over
 
 ![Screenshot of the Checkout widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-9.webp)
 
-## 9. Customer Dashboard Button
+## 10. Order Receipt
+
+Renders the post-purchase receipt — the "thank you" page customers land on after checkout. Use it to design a branded order confirmation instead of the default page.
+
+* **Content Tab:** Choose what appears and preview it against real data.
+    * **Sections:** Show or hide each block independently — **Confirmation**, **Order Information**, **Order Items**, **Order Summary**, **Billing Address**, **Shipping Address**, and **Actions**.
+    * **Confirmation:** Available when the Confirmation section is shown. Set a custom **Title** (default *Purchase Successful!*) and a rich-text **Message** that replaces the default confirmation line. Both accept shortcodes such as <code v-pre>{{order.customer.first_name}}</code> — the **Short Codes** button in the editor toolbar inserts them for you. Leave either empty to keep the default.
+    * **Preview Settings:** Choose **Preview order with → Latest Order** or **Order ID**, then enter an **Order ID** to design against a specific order. Find order IDs under **FluentCart → Orders**. If no order matches, a sample receipt is shown.
+* **Style Tab:** Each part of the receipt has its own group — **Confirmation** (background, icon background, title color and typography), **Headings**, **Paragraph**, **Links** (color and hover color), **Item Table** (header background, header text, body text, divider color), and **View Order Button** (normal/hover colors, border radius, padding).
+* **Advanced Tab:** Standard Elementor controls.
+
+::: info Preview settings are editor-only
+The **Preview Settings** controls affect only what you see while designing. On the live page, the receipt always renders the order from the checkout redirect URL.
+:::
+
+## 11. Customer Dashboard Button
 
 A button that links to your customer's account dashboard. Drop it into your header, account area, or post-purchase pages so signed-in customers can jump to their orders in one click.
 
@@ -127,7 +152,22 @@ The dashboard page itself is configured under **FluentCart Pro → Settings → 
 
 ![Screenshot of the Customer Dashboard Button widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-10.webp)
 
-## 10. Product Search Bar
+## 12. Customer Dashboard
+
+Renders the entire FluentCart customer account area — dashboard, orders, subscriptions, downloads, and profile — for the signed-in customer. Visitors who aren't logged in see a login prompt instead. Use it to build a custom account page.
+
+This is the widget equivalent of the `[fluent_cart_customer_profile]` shortcode.
+
+* **Content Tab:** No configuration needed. The widget renders the account area, and its layout and behavior come from FluentCart core.
+* **Advanced Tab:** Standard Elementor margin, padding, and responsive controls.
+
+::: info What you see in the editor
+The customer dashboard is a JavaScript app that only starts up on the frontend, so the Elementor canvas shows a static layout preview badged *"Layout preview — the interactive dashboard loads on the frontend."* That's expected. Preview or visit the page to see the working dashboard.
+:::
+
+Pair this with the [Customer Dashboard Button](#_11-customer-dashboard-button) widget, which links customers here from your header or post-purchase pages.
+
+## 13. Product Search Bar
 
 A search input that lets customers find products from anywhere on your site. Use it in headers, hero sections, or a dedicated search page.
 
@@ -140,7 +180,7 @@ A search input that lets customers find products from anywhere on your site. Use
 
 ![Screenshot of the Product Search Bar widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-11.webp)
 
-## 11. Store Logo
+## 14. Store Logo
 
 Renders the store logo you configured in your FluentCart store settings. Drop it into headers, footers, or invoice templates so the logo updates everywhere when you change it.
 
@@ -154,7 +194,7 @@ To set or change the logo image itself, open your FluentCart store settings.
 
 ![Screenshot of the Store Logo widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-12.webp)
 
-## 12. Product Info
+## 15. Product Info
 
 An all-in-one product summary widget. Instead of stacking a dozen smaller widgets, Product Info lets you compose the entire product summary block — title, price, stock, SKU, excerpt, package details, and buy section — inside a single widget with drag-and-drop reordering.
 
@@ -192,8 +232,25 @@ Each section has its own style panel — Title, Price, SKU, Excerpt, Description
 
 Standard Elementor controls for margin, padding, and responsive visibility.
 
+## 16. Related Products
+
+Renders a row of products related to the current product. FluentCart picks the related items based on shared categories and tags, plus any manual relations you set in the product editor.
+
+* **Content Tab:** Configure the query and badges.
+    * **Source:** Pull from the **Current Product** or a **Custom** product.
+    * **Select Product:** When **Source** is **Custom**, pick the product whose related items you want to preview.
+    * **Badge:** Configure the sale or status badge shown on each card.
+* **Style Tab:** Six design groups — **Heading** (color, typography, spacing), **Grid** (columns, gap), **Card** (background, border radius, padding), **Product Title** (color, hover color, typography), **Price** (color, compare-price color), and **Button**, plus badge styling.
+* **Advanced Tab:** Standard Elementor controls.
+
+![Screenshot of the Related Products widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/product-widgets/fluentcart-elementor-11.webp)
+
+::: info Works on any page, not just product templates
+Related Products lives in the store-wide **FluentCart** category even though it reads product data. Set **Source** to **Current Product** inside a single-product Theme Builder template, or to **Custom** to show a specific product's related items anywhere else on your site.
+:::
+
 ---
 
 ## What's Next
 
-Looking for the single-product Theme Builder widgets? Head to [FluentCart Product Widgets for Elementor](/guide/customization-and-themes/elementor-product-widgets) for the 10 widgets that power your single-product templates.
+Looking for the single-product Theme Builder widgets? Head to [FluentCart Product Widgets for Elementor](/guide/customization-and-themes/elementor-product-widgets) for the 9 widgets that power your single-product templates.
