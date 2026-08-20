@@ -173,6 +173,19 @@ Once the add-on is enabled, you can configure the license settings for each prod
      * **Required PHP Version (optional):** If your plugin needs a minimum version of PHP to work, you can specify it here.
      * **Required WP Version (optional):** Similarly, if your plugin requires a minimum WordPress version, enter it here.
 
+6.  **Signed Releases (optional):** If you sign your releases, you can publish a signature alongside each version so customer sites can verify a package before installing it.
+
+     * **Release Manifest:** The signed manifest for the current release, as a base64 value.
+     * **Release Signature:** The detached signature for that manifest, also base64.
+
+    Both values are stored and served exactly as you enter them. Paste each one as a single unbroken line — a value that gets line-wrapped, re-encoded, or URL-decoded on the way in is still a valid-looking string that will no longer verify, and FluentCart rejects a malformed value rather than silently repairing it.
+
+    ::: info Off unless you sign your releases
+    Signed releases are optional and disabled by default. Most vendors don't sign, and nothing about licensing or updates depends on this — leave the fields empty if signing isn't part of your release process.
+
+    FluentCart never generates, verifies, or parses these values. The signing key belongs to your release pipeline and should never be stored on your store's server.
+    :::
+
 After you've configured these settings, just click the **Update Settings** button to save your changes.
 
 ### 8. Managing Product Integrations (Product-Specific)

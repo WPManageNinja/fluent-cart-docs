@@ -78,6 +78,19 @@ Every subscription carries a badge next to the **Subscription Details** heading 
 * **Create Renewal Now:** Generates the next renewal order ahead of schedule and emails it to the customer with a **Pay Now** link. On a subscription that charges saved payment methods automatically, this item instead reads **Charge Next Renewal Now** and creates the renewal *and* charges it in one step.
 * **Skip Next Period:** Pushes the next billing date forward by one full cycle without charging the customer. FluentCart records who skipped it and shows "Billing resumes on the date shown" on the subscription.
 * **Charge Now:** Immediately attempts to charge an open renewal against the saved payment method, rather than waiting for the scheduled attempt.
+* **Edit Vendor IDs:** Corrects the gateway identifiers stored against the subscription. This one is off by default — see below.
+
+#### Editing Vendor IDs
+
+A subscription stores the gateway's own identifiers for itself and for the customer. FluentCart uses them to match renewals, webhooks, and payment methods to the right record.
+
+Occasionally those identifiers need correcting by hand — most often after migrating a store, or when a subscription was rebuilt at the gateway and the stored ID no longer points anywhere. **Edit Vendor IDs** lets an administrator set them directly.
+
+::: danger This is an opt-in repair tool, not a routine action
+The menu item is hidden unless it has been deliberately enabled, because a wrong vendor ID silently breaks renewals: FluentCart charges or matches against something that isn't your customer's subscription. Nothing warns you — renewals simply stop working, or attach to the wrong record.
+
+Only use it when you know the correct identifier from the gateway's own dashboard, and verify the subscription's next renewal afterwards.
+:::
 
 ::: info
 Menu items appear only when they apply. A gateway-billed subscription hides the store-owned actions such as **Skip Next Period** and **Charge Now**, because the gateway owns that schedule rather than your store. To understand which mode a subscription is in, see [Store Billing for Subscriptions](/guide/product-types-creation/store-managed-subscriptions).
