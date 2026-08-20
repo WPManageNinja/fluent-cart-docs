@@ -5,6 +5,37 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## v1.6.2 — Aug 20, 2026
+- **Trigger:** user pasted the 1.6.2 changelog (46 entries) and asked for a gap analysis, then for all resulting docs to be written with screenshots tracked as a TODO.
+- **Range:** core `1.6.1..HEAD` (`971404358`, `development`) — 93 commits. **Core clone still reports `FLUENTCART_VERSION 1.6.1`**, so the version bump had not landed locally; several changelog lines could not be verified in this clone. Pro at `0c7b7ad5` (`development`).
+- **Key finding: Data Export is a split Free/Pro feature.** Free owns the whole admin surface (`resources/admin/Bits/Components/ExportDialog.vue`, `utils/export/useExport.js`, `BrowserExportWriter.js`) and deliberately ships **no** REST controller; Pro owns routes, policies, schema, filtering and queries (`app/Modules/DataExport/*`). On Free the dialog renders a `ProFeatureNotice` instead of the config. The four permission keys (`orders/export`, `customers/export`, `subscriptions/export`, `licenses/export`) live in Free's `PermissionManager` so roles and Pro policies share one contract. Two in-repo dev docs were the highest-signal source: `dev-docs/export-system.md` and `DATA_EXPORT_TRACKER.md`.
+- **Key finding: Order Sources report was entirely undocumented** before this run, despite existing well before 1.6.2. `SourceReportService::getSourceReportData()` groups on campaign/source/medium and **excludes orders with an empty `utm_source`** — worth knowing, since it explains why report totals sit below real order counts. Advanced filtering is Pro-only via the `fluent_cart/report/sources_query` filter; free forwards `filter_type` + `advanced_filters` untouched.
+- **Key finding: attribution is last-touch, whole-block.** `UtmHelper::resolveUtmData()` takes the browser-posted block *whole* rather than merging it key-by-key with the cart row, because the cart is reused across visits. Allow-list now carries ad click identifiers: `gclid`, `gbraid`, `wbraid`, `gad_campaignid`, `gad_source`, `fbclid`, `msclkid` — these land in order meta, not UTM columns. Internal-domain referrers are ignored so cross-site navigation can't overwrite the real source.
+- **Key finding: settlement time.** `OrderTransaction::boot()` stamps `meta.settled_at` on the transition into `TRANSACTION_SUCCEEDED`, and never overwrites a value a gateway set itself. Distinct from `created_at`, which is checkout time.
+- **Doc pages created (sidebar entries added):**
+  - `guide/store-management/exporting-data.md` — full Data Export page: scopes, formats, per-entity CSV column and JSON module tables, CSV injection/BOM handling, JSON redaction, browser-writer vs 64 MiB Blob fallback, permissions, troubleshooting
+  - `guide/reporting-analytics/order-sources-report.md` — Order Sources report + the attribution model (last touch, click identifiers, referring URL)
+- **Doc pages updated:**
+  - `guide/store-management/orders-management/order-details-overview.md` — Settlement Time on the transaction table; UTM Details section rewritten for the full parameter set, ad click identifiers, referring URL, last-touch note
+  - `guide/settings-configuration/roles-permissions/index.md` — new Export Permissions section
+  - `guide/product-types-creation/creating-digital-products-with-licenses.md` — Signed Releases fields (verbatim base64, off by default, store never signs/verifies)
+  - `guide/product-types-creation/managing-subscriptions.md` — Edit Vendor IDs action + danger callout (opt-in repair tool)
+  - `guide/product-types-creation/configuring-product-pricing.md`, `bulk-product-import.md` — comma decimal separator support
+  - `guide/product-types-creation/advanced-inventory.md` — Load More for products with many variants
+  - `guide/reporting-analytics/index.md`, `guide/store-management/index.md` — index entries for the two new pages
+  - `guide/changelog.md` — v1.6.2 entry
+- **Verified as already correct, no edit needed:** Divi addon naming — `ModuleSettingsController.php:283` already reads "FluentCart Divi Modules", matching the docs.
+- **Changelog lines NOT documented (could not verify in either clone — do not assume shipped):** S3 overwrite-prevention option (no `overwrite` setting found in `Modules/StorageDrivers` in core or Pro); Mollie correct cart amount/currency and optional billing address (no matching code in the core Mollie gateway); coupon Expiry Date sorting (no sort config found under `resources/admin/Modules/Coupons`); early renewal + customer-profile reactivation; admin translations via WP translation support; Stripe mixed test/live notifications; nested-folder R2/S3 downloads. These are likely in commits after this clone's HEAD or in an addon repo — **re-check after the user pulls a clone that reports 1.6.2.**
+- **Dev-docs domain (not this repo):** hide product regions by surface, Paddle checkout custom-data filter hook, extensible admin table sorting, payment success URL filtering.
+- **Screenshots: none taken.** All new/updated sections ship text-only. A tracker was created at `.claude/SCREENSHOT-TODO.md` listing 16 outstanding captures with target paths; inline `<!-- TODO(screenshot): ... -->` markers sit in the two new pages.
+- **Build status:** `npm run docs:build` clean; `npm run featured:generate` produced 2 new featured images.
+- **Open questions carried forward:**
+  - Re-verify the seven unverifiable changelog lines once the plugin clone reports 1.6.2
+  - Elementor Blocks / Migrator / Customer Rights addon cards still undocumented (carried from v1.6.1)
+  - `store-managed-subscriptions` old-slug 404 redirect still outstanding
+
+---
+
 ## v1.6.1 gap-closure — Aug 12, 2026
 - **Trigger:** user merged commits into docs `master`; asked for a fresh compare against "the last update" (changelog + plugin git history).
 - **Range:** core `f58f82c03..HEAD` (`48639a20f`, `development`), 234 commits / 425 files — the tail end of the SAME v1.6.1 release cycle the prior entry below covered (core is now version-bumped + tagged `1.6.1`, `readme.txt` `Stable tag: 1.6.1`, confirming the prior entry's provisional number/date). Pro moved `5513de12..644b8c0e7` over the same window.

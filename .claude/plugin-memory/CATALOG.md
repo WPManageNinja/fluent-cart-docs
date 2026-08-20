@@ -75,7 +75,7 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Key files:** `ReportingModule.php`, controllers under `Http/Controllers/Reports/*`.
 - **User-facing surface:** Every report screen under FluentCart Pro → Reports.
 - **Drives docs:** `guide/reporting-analytics/*.md`
-- **Last fully audited:** v1.5.3
+- **Last fully audited:** v1.6.2
 
 ### Modules/Shipping
 - **Purpose:** Shipping zones, methods, rates, packages, carrier-rate calculation.
@@ -89,7 +89,7 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Key files:** `StockManagementModule.php`, related stock-event listeners.
 - **User-facing surface:** Inventory toggles on product/variation editor, "On Hold / Available / Delivered" counts, stock-out behavior at checkout.
 - **Drives docs:** `guide/product-types-creation/inventory-management.md`, `guide/product-types-creation/advanced-inventory.md`
-- **Last fully audited:** v1.3.27
+- **Last fully audited:** v1.6.2
 
 ### Modules/StorageDrivers
 - **Purpose:** File-storage drivers for digital downloads (Amazon S3, local, future drivers).
@@ -105,7 +105,7 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **User-facing surface:** Subscription dashboard, detail page, reactivate action, cancellation email with access-end date, cart restrictions ("one subscription per cart", "qty must be 1"), reactivation-after-refund flow. Since 1.5.4 an installment plan must bill **at least twice** (`MIN_INSTALLMENT_TIMES = 2`); saves below that are rejected. Installment fields are documented on `configuring-product-pricing.md`, not the subscriptions page.
 - **Drives docs:** `guide/product-types-creation/managing-subscriptions.md`, `store-managed-subscriptions.md`, `configuring-product-pricing.md` (customer-portal payment-method updates also touch `guide/customer-dashboard/subscriptions.md`)
 - **Actions menu (verified 1.6.0, `resources/admin/Modules/Subscriptions/Components/SubscriptionDetails.vue`):** Sync from gateway, Edit Subscription, Pause/Resume/Reactivate/Cancel Subscription, Send Reminder, **Create Renewal Now** (manual) which becomes **Charge Next Renewal Now** on auto-charge subs, Skip Next Period, Charge Now. Routes in `Modules/Subscriptions/Http/subscriptions-api.php`. Editable terms per `UpdateSubscriptionRequest`: `recurring_total`, `bill_times`, `billing_interval`, `status`, `next_billing_date`.
-- **Last fully audited:** v1.6.0
+- **Last fully audited:** v1.6.2
 
 ### Modules/Tax
 - **Purpose:** Tax classes, regional tax rules, EU VAT, country-level tax toggles, reverse-charge handling.
