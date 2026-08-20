@@ -340,6 +340,7 @@ export default defineConfig({
                 { text: 'Customer Details Overview', link: '/guide/store-management/customers-management/customer-details-overview' }
               ]
             },
+            { text: 'Exporting Your Store Data', link: '/guide/store-management/exporting-data' },
           ]
         },
         {
@@ -475,7 +476,8 @@ export default defineConfig({
               ]
             },
             { text: 'Product Report', link: '/guide/reporting-analytics/product-report' },
-            { text: 'Customer Report', link: '/guide/reporting-analytics/customer-report' }
+            { text: 'Customer Report', link: '/guide/reporting-analytics/customer-report' },
+            { text: 'Order Sources Report', link: '/guide/reporting-analytics/order-sources-report' }
           ]
         },
         {
