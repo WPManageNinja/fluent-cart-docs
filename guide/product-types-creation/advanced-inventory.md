@@ -76,6 +76,12 @@ Use the checkboxes at the start of each row (or the master checkbox in the heade
 
 Click **Expand All** at the top right to reveal every variation under every variable product at once — useful before exporting or bulk editing a large catalog.
 
+### Products with many variants
+
+A product with a large number of variants doesn't load all of them at once. FluentCart shows the first batch and adds a **Load More** control beneath them; click it to pull in the next batch.
+
+This keeps the Inventory screen responsive on catalogs where a single product might carry hundreds of variants — the screen no longer has to build every row before it can show you anything. Bulk selection still applies to the variants currently loaded, so expand what you need before selecting.
+
 ---
 
 ## Step 3: Updating Stock

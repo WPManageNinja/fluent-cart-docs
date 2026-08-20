@@ -75,6 +75,8 @@ Think of this as a final rehearsal. You can use this table to quickly review and
 
 Take your time reviewing the staging table. Check that your prices are accurate, your SKUs are in place, and your product types (Physical vs. Digital) are correct.
 
+> **Note on price formats:** Prices in your CSV are read using the decimal separator your store is configured for. If your store uses the European convention, a value like `1.299,50` imports correctly — you don't need to reformat your spreadsheet first. Just keep one convention throughout the file.
+
 Once you are 100% satisfied that your data is perfect:
 1. Click the dark **Save All Products** button located at the top right of the screen.
 2. A progress bar will appear as FluentCart processes the data.

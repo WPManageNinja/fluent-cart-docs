@@ -34,6 +34,12 @@ When the **Subscription** toggle is off, you're setting up a standard single-pay
 **Price** *(Required)*
 The selling price your customers will pay. This is the number that shows up on your store page, in the cart, and at checkout. Always set this before publishing.
 
+::: info Typing prices with a comma decimal separator
+Price fields follow the decimal separator configured in your store settings. If your store uses the European convention — `10.000,59` rather than `10,000.59` — you can type prices that way and FluentCart reads them correctly. The same applies to prices in a CSV you import.
+
+Enter the number the way your store displays it, and don't mix conventions within one value.
+:::
+
 **Additional display prices** *(Collapsible section)*
 Click the chevron to expand this section and access the optional display price settings:
 
