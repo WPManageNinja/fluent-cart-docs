@@ -13,5 +13,6 @@ This section covers various types of reports to give you a holistic view of your
 * **[Cohorts Report](/guide/reporting-analytics/cohorts):** Cohort-based subscription analytics with retention views, period comparisons, and exportable grouped data.
 * **[Future Renewals Report](/guide/reporting-analytics/future-renewals):** Forecasted subscription renewal revenue and counts to help with near-term cash flow planning.
 * **[Product Report](/guide/reporting-analytics/product-report):** Detailed analytics on individual product performance, including units sold and top-selling items.
+* **[Order Sources Report](/guide/reporting-analytics/order-sources-report):** Revenue grouped by marketing campaign, source, and medium, so you can see which channels produce paying customers.
 
 By regularly reviewing these reports, you can gain a deeper understanding of your store's health and strategize for future growth.
