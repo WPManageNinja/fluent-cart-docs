@@ -54,6 +54,13 @@ This table provides a log of all payment transactions related to this specific o
 * **Payment Method:** The method used for the transaction.
 * **Total:** The amount of the individual transaction.
 * **Status:** The status of the transaction.
+* **Settlement Time:** When the payment actually settled with the provider.
+
+::: info Why settlement time differs from the order date
+An order's date is when the customer checked out. That can be days or weeks before the money moves — a payment link paid later, a delayed webhook, or an offline payment confirmed by hand. Settlement time records the moment the payment succeeded, so reconciling FluentCart against a payout statement lines up.
+
+Gateways that report an exact charge time supply it directly. For the rest, FluentCart records the moment the transaction became successful.
+:::
 
 ### 5. Customer Information
 
@@ -80,9 +87,32 @@ A complete, time-ordered record of all important events and changes related to t
 
 ### 8. UTM Details
 
-This section shows any UTM (Urchin Tracking Module) parameters that were recorded when the customer placed their order.
+This section shows the marketing attribution recorded when the customer placed their order — where they came from, and which campaign brought them.
 
- * **UTM Campaign:** Shows the specific marketing campaign that brought the customer to your store. This information is valuable for tracking the effectiveness of your advertising and marketing efforts.
+**UTM parameters**
+
+* **UTM Campaign:** The specific marketing campaign that brought the customer to your store.
+* **UTM Source:** Where the traffic came from, such as `google` or `newsletter`.
+* **UTM Medium:** The type of channel, such as `cpc` or `email`.
+* **UTM Term:** The keyword, for paid search traffic.
+* **UTM Content:** Which variant of an ad or link was clicked.
+* **UTM ID:** Your own campaign identifier.
+
+**Ad click identifiers**
+
+When the customer arrived from a paid ad, the platform's click identifier is recorded alongside the UTM values — `gclid`, `gbraid`, or `wbraid` for Google Ads, `fbclid` for Meta, `msclkid` for Microsoft Advertising, plus `gad_campaignid` and `gad_source` where Google supplies them.
+
+These let you match an individual FluentCart order back to the exact click in your ad platform's reporting, which UTM parameters alone can't do. They also travel on the URL rather than in a cookie, so they survive cases where cookie-based tracking is blocked.
+
+**Referring URL**
+
+If the customer arrived without any UTM tags, FluentCart records the referring URL instead. Referrals from your own domains are ignored, so navigation within your own site never overwrites the real external source.
+
+::: info Attribution is last-touch
+Every order records attribution. When a returning visitor arrives through a new tagged link, that newer touch replaces the previous one — so this card credits the campaign that brought them back for the visit where they bought, not the one that first introduced them.
+
+For campaign-level totals across all orders, see the [Order Sources Report](/guide/reporting-analytics/order-sources-report).
+:::
 
 ### 9. Tax Information
 
