@@ -64,7 +64,7 @@ The wizard auto-detects which eCommerce plugins are installed. If you're running
 
 Click the card to confirm: *yes, this is where my data lives.*
 
-WooCommerce and SureCart are visible as upcoming sources but are not yet active. Migrators for those platforms are on the roadmap.
+WooCommerce appears alongside it as a second supported source — see [Migrating from WooCommerce](/guide/migration/woocommerce/) — and SureCart is visible as an upcoming one.
 
 
 ## Step 4: Compatibility Check

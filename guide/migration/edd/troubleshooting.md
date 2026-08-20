@@ -236,7 +236,7 @@ Yes. Every stage is idempotent. Re-running products updates existing migrated pr
 
 ### What about WooCommerce or SureCart migrations?
 
-The source picker shows WooCommerce and SureCart cards marked "coming soon." The architecture supports multiple sources, but only EDD 3.x is implemented in the current release. WooCommerce and SureCart sources are on the roadmap.
+WooCommerce is supported — see [Migrating from WooCommerce](/guide/migration/woocommerce/) for its own walkthrough, data inventory, and CLI reference. SureCart is still shown in the source picker as "coming soon".
 
 ### Where do I get help if I'm stuck?
 

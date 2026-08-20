@@ -547,6 +547,19 @@ export default defineConfig({
                 { text: 'Backward Compatibility', link: '/guide/migration/edd/backward-compatibility' },
                 { text: 'Troubleshooting', link: '/guide/migration/edd/troubleshooting' }
               ]
+            },
+            {
+              text: 'WooCommerce',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/guide/migration/woocommerce/' },
+                { text: 'Wizard Walkthrough', link: '/guide/migration/woocommerce/woocommerce-migration' },
+                { text: 'What Gets Migrated', link: '/guide/migration/woocommerce/woocommerce-what-is-migrated' },
+                { text: 'Subscriptions & Renewals', link: '/guide/migration/woocommerce/subscription-renewals' },
+                { text: 'WP-CLI Reference', link: '/guide/migration/woocommerce/woocommerce-cli' },
+                { text: 'Developer Mode', link: '/guide/migration/woocommerce/woocommerce-developer-mode' },
+                { text: 'Troubleshooting', link: '/guide/migration/woocommerce/woocommerce-troubleshooting' }
+              ]
             }
           ]
         },
