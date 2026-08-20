@@ -1,6 +1,68 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.6.2
+*Released on Aug 20, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Data Export for orders, customers, subscriptions, and licenses in CSV or JSON
+• Adds WooCommerce Migration support for products, orders, customers, coupons, tax rates, and subscription management in FluentCart migrator
+• Adds Export permissions by user role
+• Adds Transaction settlement time from payment providers
+• Adds Advanced filtering to the Order Sources report
+• Adds Ad click identifiers to the order UTM card
+• Adds Signed release fields to product license settings
+• Adds An opt-in tool to edit vendor IDs from the subscription page
+• Adds Inline inventory management controls to the variant pricing drawer
+• Adds Developer controls to hide product regions by surface
+• Adds An option to prevent S3 file overwrites
+• Adds Developer-extensible admin table sorting, including Expiry Date sorting for coupons
+• Adds Filter hook to allow third party custom data on Paddle checkout
+```
+
+```markdown [⚡ Improvements]
+• Improves Inventory screen performance with paged variants and Load More
+• Improves Export dialog labels and filter status indicators
+• Improves Product price support for comma decimal separators in the editor and CSV imports
+• Improves License renewal with early renewal and customer-profile reactivation
+• Improves Traffic attribution with last-touch tracking on every order
+• Improves Payment success URL filtering across all gateways
+• Improves Mollie checkout methods using the correct cart amount and currency
+• Improves Stripe notifications for mixed test and live events
+• Improves Admin translations through WordPress translation support
+• Improves Report chart tooltips
+• Improves The Add-ons screen for the renamed FluentCart Divi Modules
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Stripe subscription checkout getting stuck after failed card or 3D Secure payments
+• Fixes Stripe card changes not syncing and duplicate saved-card records
+• Fixes PayPal capture fallback failures with empty requests
+• Fixes Duplicate order-paid emails and integration runs
+• Fixes Admin order-paid emails being sent before integrations complete
+• Fixes Subscription reactivation links failing after login
+• Fixes Licensed downloads being accessible for unrelated products
+• Fixes Lifetime license detection and license settings save errors
+• Fixes Order Sources "Equals" filtering by order hash and payer email
+• Fixes Mollie payments remaining unconfirmed with custom success URLs
+• Fixes Dashboard and admin screens displaying order currency instead of store currency
+• Fixes The Add-on gateway Active badge in Payment Settings
+• Fixes The Dashboard page-setup warning link for add-on pages
+• Fixes Advanced Variation variants missing from admin product pickers
+• Fixes Profit calculations and stock adjustments for unsaved variants
+• Fixes Nested-folder downloads on Cloudflare R2 and S3-compatible storage
+• Fixes "Includes" filters for customer email and UTM fields
+• Fixes Report product filtering and fluctuation badge display
+• Fixes Order bumps appearing on checkouts that cannot accept additional items
+• Fixes Checkout being blocked when attribution fails to load
+• Fixes Mobile settings panel heights, export dialog overflow, and report card scrollbars
+• Fixes Required billing address made optional (Mollie)
+```
+
+:::::
+
 ## FluentCart v1.6.1
 *Released on Aug 11, 2026*
 
