@@ -91,6 +91,8 @@ If a customer with the same email already exists in FluentCart when an order is 
 
 Every order transfers — including line items, taxes, shipping, fees, discounts, transactions, refunds, and notes. Only WooCommerce's `checkout-draft` status (unfinished block-checkout attempts) is excluded.
 
+Orders in **custom statuses** registered by a plugin migrate too, as long as that plugin is still active when you run the migration — any status WooCommerce doesn't recognize as FluentCart's own maps to **On Hold**. Orders sitting in a status whose plugin has been deactivated can't be read at all; those are recorded in the [failed order log](/guide/migration/woocommerce/woocommerce-troubleshooting) instead of being silently dropped.
+
 | WooCommerce status | FluentCart order status | FluentCart payment status |
 |--------------------|------------------------|---------------------------|
 | `completed` | Completed | Paid |
@@ -118,6 +120,8 @@ Each order brings:
 - Order notes — both system notes and notes to the customer — as FluentCart activity entries
 - Customer note, IP address, completion date, and refund date
 
+**Invoice numbers.** If your store used a sequential invoice or order number plugin, that number is kept verbatim so the invoice a customer already has still matches. Orders carrying nothing but a bare WooCommerce ID get FluentCart's own invoice prefix applied instead.
+
 **Totals reconciliation.** The Migrator rebuilds the order total from its components and compares it to WooCommerce's recorded total. Any positive difference is recorded as a manual discount; any negative difference is absorbed as a fee. Migrated orders therefore always add up to the same total your customer actually paid.
 
 **Refund allocation.** When WooCommerce recorded a refund at the order level without allocating it to line items, the amount is spread proportionally across items by line total, so per-item refund figures stay sensible.
@@ -138,6 +142,7 @@ When **WooCommerce Subscriptions** is active, subscriptions come across with the
 |-------|----------|
 | Status | `active`, `on-hold` → Paused, `pending`, `pending-cancel` → Canceled, `cancelled`, `expired`, `switched` → Canceled |
 | Billing interval | Mapped to FluentCart's slugs — daily, weekly, monthly, quarterly (3 months), half-yearly (6 months), yearly |
+| Billing schedule snapshot | The true cadence — period × interval plus the calendar anchor — stored alongside the interval |
 | Recurring amount, tax, and total | Split so the recurring amount is ex-tax and the total is gross |
 | Signup fee | Preserved |
 | Bill times and trial days | Read from the subscription's product or variation |
@@ -146,7 +151,9 @@ When **WooCommerce Subscriptions** is active, subscriptions come across with the
 | Notes | Migrated as subscription activity entries |
 | Renewal order history | Linked back to the subscription |
 
-An otherwise-active subscription whose end date has already passed is imported as **expired** — WooCommerce sometimes leaves such records active until a cron run catches up.
+An otherwise-active subscription whose end date has already passed is imported as **expired** — WooCommerce sometimes leaves such records active until a cron run catches up. Likewise, an active subscription still inside its free trial is imported as **trialing**, even though WooCommerce keeps no separate status for it.
+
+**Odd cadences survive the interval mapping.** FluentCart's named intervals can't express *every two weeks*, and WooCommerce Subscriptions' synchronized renewals (all subscribers billed on the 1st, for example) have no named equivalent either. So alongside the mapped interval, the Migrator stores a snapshot of the real schedule — the period, its multiplier, and the calendar day it's anchored to — and renewals are generated from that. A fortnightly subscription keeps renewing fortnightly rather than collapsing to monthly.
 
 **Collection method** is the field that decides whether renewals keep charging automatically. It's important enough to have its own page: read [Subscriptions & Renewals](/guide/migration/woocommerce/subscription-renewals).
 
@@ -223,19 +230,78 @@ The featured image transfers. Additional gallery images are not migrated.
 
 WooCommerce stores reviews as WordPress comments on the product. They are not migrated, and average ratings and review counts are not carried over.
 
+### Weight, dimensions, and shipping classes
+
+Per-product weight, length, width, height, and shipping class assignments are not mapped — FluentCart handles physical shipping differently. Re-enter them for the products that need them after migration.
+
+### Scheduled sale dates
+
+A product currently on sale migrates at its sale price, with the regular price kept as the compare-at price. But WooCommerce's **sale schedule** — the "sale price dates from / to" fields — is not carried over, so a sale that was set to end on its own will simply keep running in FluentCart until you end it.
+
+### Cross-sells, up-sells, and other catalog extras
+
+Cross-sell and up-sell product links, the *sold individually* flag, the purchase note, and menu order are not mapped.
+
+### Trashed products
+
+Only published, private, and draft products are read. Products in the trash are left behind.
+
+### Bundle extensions other than grouped and Product Bundles
+
+WooCommerce core **grouped** products and the official **Product Bundles** extension both migrate as FluentCart bundles. Composite Products, Mix & Match, and other bundle-style extensions are not recognized — their products migrate as ordinary products without the bundle relationship.
+
+And even for the two that are supported, only the **relationship** transfers. Per-item quantities (minimum and maximum), per-item discounts, optional-item flags, and bundle-level dynamic pricing have no equivalent in FluentCart's bundle model and are not migrated. Review your bundles and re-price them after the import.
+
+::: info Children that failed to migrate
+A bundle is wired up after every product exists, so its children can be resolved. If a child product failed to migrate, it is dropped from the bundle; if every child failed, the parent migrates as a normal product rather than an empty bundle.
+:::
+
 ### Custom product and order metadata
 
-Only known fields from WooCommerce core, WooCommerce Subscriptions, and Product Bundles are parsed. Custom meta written by other third-party extensions is not preserved. If you have important custom data on products or orders, export it separately before migrating.
+Only known fields from WooCommerce core, WooCommerce Subscriptions, and Product Bundles are parsed. Custom meta written by other third-party extensions is not preserved. That includes **product add-on** selections stored as line-item meta — the order line migrates with its price and quantity, but the add-on choices attached to it do not. If you have important custom data on products or orders, export it separately before migrating.
 
 ### Checkout-draft orders
 
-Orders left in WooCommerce's `checkout-draft` status — abandoned block-checkout attempts — are filtered out. Every other status migrates.
+Orders left in WooCommerce's `checkout-draft` status — abandoned block-checkout attempts — are filtered out. Every other status migrates, provided the plugin that registered it is still active.
+
+### Orders in a deactivated custom status
+
+WooCommerce can only return orders whose status is currently registered. If a plugin that added custom statuses has been deactivated, its orders are invisible to the query. Rather than pretending they don't exist, the Migrator lists them in the failed order log with their number, date, total, and an edit link. Reactivate the plugin and re-run the orders stage to bring them in.
+
+### Line-item structure and the chosen shipping method
+
+Two order details flatten during migration:
+
+- **Bundle and grouped structure inside an order.** Line items migrate individually; the parent-child grouping WooCommerce uses to show a bundle and its contents together is not preserved.
+- **The shipping method chosen on each order.** Shipping totals and shipping tax migrate accurately, but the name of the rate the customer picked — *Flat Rate*, *Local Pickup*, a table-rate row — is not stored on the migrated order.
 
 ### Payment gateway credentials and saved cards beyond Stripe
 
 Transaction records and gateway transaction IDs come across, so history is intact. **Gateway API keys never transfer.** Reconnect Stripe, PayPal, and any other gateway in FluentCart after migration using the same accounts you used in WooCommerce.
 
 Saved payment methods are only carried forward for Stripe subscriptions holding a modern PaymentMethod token. See [Subscriptions & Renewals](/guide/migration/woocommerce/subscription-renewals) for the exact rule and what happens to everything else.
+
+### Subscription retry schedules and pending switches
+
+WooCommerce Subscriptions' failed-payment retry rules — how many times to retry, at what spacing, and which emails to send — are not migrated. FluentCart's own retry behavior takes over; set it under **FluentCart → Settings → Store Settings → Subscriptions**.
+
+A subscription switch or upgrade is recorded as a marker on the migrated order with the subscription IDs involved, but the switch history and any proration WooCommerce calculated are not reconstructed.
+
+### Webhooks and REST API keys
+
+WooCommerce webhooks and REST API consumer keys are not migrated. Anything integrating with your store over the WooCommerce API needs pointing at FluentCart's own API and re-authorizing.
+
+### Extension data: gift cards, memberships, bookings, and rewards
+
+Gift cards, store credit, points and rewards balances, memberships, bookings, and deposit or partial-payment records are not migrated. Only WooCommerce core, WooCommerce Subscriptions, and Product Bundles are read.
+
+### Analytics and reporting history
+
+WooCommerce's analytics tables and stored report data are not copied. FluentCart recalculates its own statistics from the migrated orders during the **Recount & Verify** step, so your reports rebuild from real data rather than being imported.
+
+### Licenses and legacy endpoint compatibility
+
+WooCommerce core has no licensing system, and software-licensing extensions built on top of it are not supported — no license keys or activations migrate. There is also no compatibility shim for old WooCommerce API or endpoint URLs, unlike the [EDD migration](/guide/migration/edd/backward-compatibility), which ships one for legacy EDD download and API links.
 
 ### Email templates
 
@@ -271,6 +337,12 @@ All operations are live. There is no preview mode. To rehearse a migration safel
 | Product gallery images | ❌ | |
 | Product tags / custom taxonomies | ❌ | |
 | Product reviews and ratings | ❌ | |
+| Weight, dimensions, shipping classes | ❌ | Re-enter after migration |
+| Scheduled sale dates | ❌ | Sale price migrates; its end date does not |
+| Cross-sells, up-sells, purchase note, menu order | ❌ | |
+| Trashed products | ❌ | Publish, private, and draft only |
+| Bundles: per-item quantities, discounts, optional flags | ❌ | Relationship migrates, per-item config does not |
+| Composite Products, Mix & Match | ❌ | Migrate as ordinary products |
 | Downloadable files | ✅ | Local files copied into FluentCart storage |
 | Stock levels and backorders | ✅ | Parent stock flag rolled up from variations |
 | SKUs | ✅ | De-duplicated on collision |
@@ -278,12 +350,18 @@ All operations are live. There is no preview mode. To rehearse a migration safel
 | Customers (without orders) | ✅ | Via the Missing Customers step |
 | Customer addresses | ✅ | Billing and shipping |
 | Orders (all statuses) | ✅ | `checkout-draft` excluded |
+| Orders in a deactivated custom status | ❌ | Logged to the failed order log; reactivate and re-run |
 | Order line items, tax, shipping, fees, discounts | ✅ | Totals reconciled to the WooCommerce total |
+| Invoice numbers | ✅ | Sequential-plugin numbers kept verbatim |
+| Bundle grouping inside orders | ❌ | Line items migrate flat |
+| Chosen shipping method per order | ❌ | Shipping amounts migrate, the rate name does not |
 | Transactions | ✅ | Gateway transaction IDs preserved |
 | Refunds | ✅ | Per-refund records; reason text not extracted |
 | Order notes | ✅ | As activity entries |
 | Subscriptions | ✅ | Requires WooCommerce Subscriptions |
 | Subscription renewal history | ✅ | Linked back to the subscription |
+| Subscription billing schedule | ✅ | True cadence preserved, incl. synchronized renewals |
+| Subscription retry / dunning schedules | ❌ | FluentCart's own retry settings apply |
 | Saved cards for renewals | ⚠️ | Stripe PaymentMethod tokens only |
 | Coupons | ✅ | Product and category restrictions remapped |
 | Tax configuration and rates | ✅ | Only if enabled in WooCommerce |
@@ -291,7 +369,11 @@ All operations are live. There is no preview mode. To rehearse a migration safel
 | Shipping zones, methods, rates | ❌ | Recreate in FluentCart |
 | Payment gateway credentials | ❌ | Reconnect in FluentCart |
 | Email templates | ❌ | Set up fresh in FluentCart |
-| Custom meta from third-party extensions | ❌ | Only known fields parsed |
+| Custom meta from third-party extensions | ❌ | Only known fields parsed, add-on line meta included |
+| Webhooks and REST API keys | ❌ | Re-authorize against FluentCart's API |
+| Gift cards, memberships, bookings, rewards, deposits | ❌ | Extension data is out of scope |
+| Analytics and report history | ❌ | Recalculated from migrated orders |
+| Licenses / legacy endpoint compatibility | ❌ | No WooCommerce equivalent of the EDD shim |
 | WooCommerce pages, shortcodes, blocks | ❌ | Replace during cutover |
 
 ---
