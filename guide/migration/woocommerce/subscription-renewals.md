@@ -88,11 +88,15 @@ Two edge cases are handled explicitly:
 Go to **FluentCart → Subscriptions** and check a representative sample:
 
 - **Status** matches what WooCommerce showed. Note that an active subscription whose end date has passed is imported as **expired** on purpose.
-- **Billing interval** is right. WooCommerce's period-plus-multiplier is collapsed into FluentCart's named intervals: 3 months becomes quarterly, 6 months becomes half-yearly, and other multiples fall back to the base period.
+- **Billing interval** is right. WooCommerce's period-plus-multiplier is collapsed into FluentCart's named intervals: 3 months becomes quarterly, 6 months becomes half-yearly, and other multiples fall back to the base period. The displayed interval is only half the story though — see the note below.
 - **Next renewal date** matches the source.
 - **Collection method** is what you expect — and if a subscription you believed was card-backed shows Manual, check the token type in WooCommerce against the rules above.
 - **Bill count** matches the number of renewal orders. If it doesn't, re-run recount.
 - **Card on file** displays for System subscriptions.
+
+::: info The real schedule is preserved even when the label rounds
+A subscription billed *every two weeks* has no matching FluentCart interval, and neither does a WooCommerce Subscriptions **synchronized** renewal — the setting that bills every subscriber on the same calendar day. So alongside the named interval, the Migrator stores a snapshot of the actual schedule: the period, its multiplier, and the day it's anchored to. Renewals are generated from that snapshot, so a fortnightly subscription keeps billing fortnightly and a synced subscription keeps landing on its anchor day, even if the label in the interval column reads differently.
+:::
 
 ## Related
 
