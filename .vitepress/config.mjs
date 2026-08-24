@@ -537,6 +537,7 @@ export default defineConfig({
           text: 'Migration',
           collapsed: true,
           items: [
+            { text: 'Migration Overview', link: '/guide/migration/' },
             {
               text: 'EDD',
               collapsed: true,
