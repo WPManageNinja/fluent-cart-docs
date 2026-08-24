@@ -37,6 +37,10 @@ The Migration screen opens with a **Select Migration Source** panel listing ever
 
 You'll pick your source platform here, and the Migrator carries you into a guided wizard from that point on.
 
+::: info SureCart migration is coming soon
+Currently, the Migrator supports moving your store from **Easy Digital Downloads** and **WooCommerce**. **SureCart** is listed on the screen too, but it's marked **Coming Soon** — support for it is on the way, so keep an eye on the [changelog](/guide/changelog) for updates.
+:::
+
 ## Before You Start: Install and Activate the Source Platform
 
 The Migrator needs a live copy of your old store to read from, so the source plugin — **Easy Digital Downloads** or **WooCommerce** — must be installed and active on the same site as FluentCart before you begin. If it isn't detected, install and activate it first, then return to the Migration screen.
