@@ -30,6 +30,12 @@ The completion screen surfaces an expandable **Error Log** section. Click to exp
 3. Fix the source data in WooCommerce.
 4. Re-run the orders stage: `wp fluent_cart_migrator migrate_from_woo --payments`. Already-migrated orders are skipped.
 
+### Orders in an unregistered custom status
+
+One entry type in the log isn't a data problem. WooCommerce can only return orders whose status is currently registered, so if a plugin that added custom order statuses has been deactivated, its orders can't be queried at all. Rather than leaving them unaccounted for, the Migrator lists each one with its order number, status, date, total, customer email, and an edit link.
+
+**Fix:** reactivate the plugin that registered the status, then re-run the orders stage. The orders become queryable again and migrate normally.
+
 ## Common issues
 
 ### "WooCommerce is not active"
