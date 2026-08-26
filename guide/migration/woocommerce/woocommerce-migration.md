@@ -15,6 +15,10 @@ This tool only **copies** your data into FluentCart. Your original WooCommerce s
 
 This page walks through the wizard step by step. For an alternative terminal-based workflow on large stores, see the [WP-CLI Reference](/guide/migration/woocommerce/woocommerce-cli). For a complete inventory of what does and doesn't transfer, see [What Gets Migrated](/guide/migration/woocommerce/woocommerce-what-is-migrated).
 
+Prefer to watch first? This video walks through the full WooCommerce migration from start to finish.
+
+<YouTubeEmbed id="8BStT5F-8S8" />
+
 ---
 
 ## Before You Begin
