@@ -303,7 +303,7 @@ export default defineConfig({
                 { text: 'Managing Subscriptions', link: '/guide/product-types-creation/managing-subscriptions' },
                 { text: 'Store Billing for Subscriptions', link: '/guide/product-types-creation/store-managed-subscriptions' },
                 { text: 'Creating & Managing Product Categories', link: '/guide/product-types-creation/creating-managing-product-categories/'},
-                { text: 'Creating & Managing Product Brands',link: '/guide/product-types-creation/creating-managing-product-brand/'}
+                { text: 'Creating & Managing Product Brands', link: '/guide/product-types-creation/creating-managing-product-brand' }
               ]
             },
             { text: 'Inventory Management', link: '/guide/product-types-creation/inventory-management' },
@@ -428,6 +428,7 @@ export default defineConfig({
         },
         {
           text: 'Marketing & Sales Tools',
+          link: '/guide/marketing-sales-tools/',
           collapsed: true,
           items: [
             {
@@ -458,6 +459,7 @@ export default defineConfig({
         },
         {
           text: 'Reporting & Analytics',
+          link: '/guide/reporting-analytics/',
           collapsed: true,
           items: [
             { text: 'Reports Dashboard Overview', link: '/guide/reporting-analytics/reports-dashboard-overview' },
@@ -482,6 +484,7 @@ export default defineConfig({
         },
         {
           text: 'Settings & Configuration',
+          link: '/guide/settings-configuration/',
           collapsed: true,
           items: [
             { text: 'Store Settings', link: '/guide/settings-configuration/store-settings',   
@@ -589,6 +592,7 @@ export default defineConfig({
         },
         {
           text: 'Troubleshooting & Support',
+          link: '/guide/troubleshooting-support/',
           collapsed: true,
           items: [
             { text: 'Understanding Logs', link: '/guide/troubleshooting-support/understanding-logs' },
