@@ -7,6 +7,8 @@ description: Move your WooCommerce store into FluentCart with full data fidelity
 
 The FluentCart Migrator handles end-to-end migration from **WooCommerce 3.0+** into FluentCart. Your product catalog with its categories, attributes and variations, every customer, orders across every status, WooCommerce Subscriptions records, coupons, and tax configuration transfer in a single coordinated pipeline.
 
+<YouTubeEmbed id="8BStT5F-8S8" />
+
 The Migrator reads WooCommerce through its own CRUD API (`wc_get_products`, `wc_get_orders`, `WC_Coupon`), so it works identically on **HPOS (High-Performance Order Storage)** stores and on legacy post-table stores. You don't need to know which one you're running.
 
 The same engine is reachable two ways — pick the surface that fits your store size and comfort level:
