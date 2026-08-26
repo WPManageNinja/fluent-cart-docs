@@ -119,12 +119,56 @@ Annotate optional/required state inline: `*(Required)*`, `*(Optional)*`, `*(Coll
 - Bullets (`*` or `-`, matching the surrounding file) for non-sequential enumerations.
 - Always introduce a list with a bridge sentence. Never drop the list in cold.
 
-### 3.4 Cross-link density
-About one internal link per 3–4 sentences in narrative prose. Weave links into the bold name of the linked feature:
+### 3.4 Internal linking (Wikipedia-style, sparse and purposeful)
 
-> Connect seamlessly with tools like **[FluentCRM](/guide/integrations/fluentcrm-integration)** to automatically tag customers and start email sequences.
+**Do not cross-link aggressively.** Too many internal links make a page look cluttered and untrustworthy, and they train the reader to ignore links entirely. There is no link quota and no target density. A page with two well-placed links is better than a page with ten decorative ones.
 
-> To learn more about how shipping classes work, see the [Understanding Shipping Classes](/guide/shipping/understanding-shipping-classes) guide.
+#### The three conditions for adding a link
+
+Add an internal link **only** when at least one of these is true. If none apply, do not link.
+
+1. **The linked concept is critical to understanding this sentence.** The reader genuinely cannot act on or understand what they are reading without knowing that other thing. The link is load-bearing, not decorative.
+2. **Explaining it here would bloat the page.** You are about to add a paragraph of background that would make the current page vague, bulky, or off-topic. Linking is the cleaner way to hand the reader the full scenario elsewhere, keeping this page focused on its own job.
+3. **The reader needs the whole picture to proceed.** The current page covers one slice, and the linked page is the natural next stop in their journey.
+
+#### Anchor text rule: link the main word, inline
+
+Follow Wikipedia's linking style. The link wraps the **key noun or feature name already sitting naturally in the sentence**, not an appended phrase.
+
+**Correct** — the concept itself is the anchor:
+```
+Assign the product a [shipping class](/guide/shipping/understanding-shipping-classes) so the rate rules apply.
+Orders placed through the [instant modal checkout](/guide/store-management/orders-management/instant-modal-checkout) skip the cart page entirely.
+```
+
+**Wrong** — bolted-on referral phrasing and link-as-sentence-filler:
+```
+To learn more about how shipping classes work, see the [Understanding Shipping Classes](/guide/shipping/understanding-shipping-classes) guide.
+Click [here](/guide/shipping/understanding-shipping-classes) to read more.
+For more information, please refer to [this page](/guide/shipping/packages).
+```
+
+More anchor rules:
+- **Never** use `here`, `this page`, `this guide`, `read more`, `click here`, or `learn more` as anchor text.
+- Keep the anchor short: the feature name or concept, typically 1–4 words. Do not wrap a whole clause.
+- Do not restructure a sentence just to create a link. If the key word isn't there, the link probably fails condition 1.
+- Avoid stacking `**bold**` and a link on the same word in body prose. Bold is for UI labels; a link already signals importance. (Curated "where to go next" bullet lists on overview/index pages are the exception — there the bold-name-plus-link pattern is correct.)
+
+#### Repetition rule
+
+Link a given destination **once per page**, at its first meaningful mention. Repeating the same link in later sections is noise. The exception is a long reference page where a section is likely to be read standalone, deep out of context.
+
+#### Where links belong
+
+- **Body prose:** sparse, inline, load-bearing only, per the three conditions above.
+- **Overview / section index pages:** the curated bullet list of child pages is the page's whole purpose. Density rules do not apply there — that list is navigation, not prose linking.
+- **End of a procedural page:** at most one forward link to the genuine next step in the user's journey, only when a real next step exists. Do not invent one.
+
+#### Before adding any link, ask
+
+> Would the reader be **stuck, misled, or forced to guess** without this link right here?
+
+If the honest answer is no, leave it out.
 
 ### 3.5 Callouts
 - `::: info ... :::` for context, gotchas, and "FYI" notes. Used sparingly (~1 per 300–400 words).

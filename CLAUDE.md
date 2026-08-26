@@ -108,7 +108,7 @@ There is **no** lint, no typecheck, no test command. Don't invent ones.
 ### 4.7 Voice & tone
 - Second person ("you"), present tense, action-first.
 - Friendly, concise, instructional. Avoid marketing fluff inside guides.
-- Cross-link aggressively to related pages — see `guide/getting-started/introduction-fluentcart.md` as the model.
+- Cross-link **sparingly and purposefully**, Wikipedia-style. Link only when the concept is critical to understanding the sentence, when explaining it inline would bloat the page, or when the reader needs the linked page to see the whole scenario. Anchor the link on the main word already in the sentence — never on `here`, `this guide`, or `read more`. Full rules: `fluentcart-doc-writer` skill §3.4.
 
 ### 4.8 Directives in use
 - `::: info ... :::` for informational callouts. Other VitePress containers (tip/warning/danger/details) are available; use sparingly and only when consistent with neighboring pages.
