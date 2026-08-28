@@ -127,7 +127,7 @@ This section is where you manage the digital files associated with your licensed
 
 * Click **"+ Add Asset"** to upload or link your software package, documentation, or other digital content.
 * You can choose to link assets to **specific variants** (e.g., a "pro" version download for a higher-tier license) or leave it empty for all variants.
-* See [Adding & Managing Downloadable Assets](/guide/product-types-creation/creating-digital-products#5-downloadable-assets) for detailed steps.
+* See [Adding & Managing Downloadable Assets](/guide/product-types-creation/creating-digital-products#_5-downloadable-asset-s) for detailed steps.
 
 ### 7. Product-Specific License Settings
 
