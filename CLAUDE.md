@@ -48,7 +48,7 @@ A **VitePress 1.6.4** static documentation site for **FluentCart**, a WordPress 
 │   ├── troubleshooting-support/
 │   └── changelog.md
 ├── developer/index.md          # Stub — main dev docs are at dev.fluentcart.com
-├── public/                     # Site-level assets: logo-full.png, logo-full-dark.svg, robots.txt
+├── public/                     # NOT deployed - `vite.publicDir` is 'guide/public', which overrides this dir
 └── index.md                    # Home page (uses layout: home)
 ```
 
@@ -173,7 +173,7 @@ When deleting a page, also remove its sidebar entry — orphan entries produce d
 - Sidebar lives at: `.vitepress/config.mjs` → `themeConfig.sidebar['/guide/']`
 - Nav lives at: `.vitepress/config.mjs` → `themeConfig.nav`
 - Image base: `/images/...` (mapped from `guide/public/images/`)
-- Site assets (logos, robots.txt): `public/`
+- Site assets (logos, robots.txt, favicon): `guide/public/` — the root `public/` is NOT copied into the build
 - Home: `index.md`  •  Changelog: `guide/changelog.md`  •  Dev stub: `developer/index.md`
 
 ---
