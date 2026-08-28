@@ -1,20 +1,63 @@
 import { defineConfig } from 'vitepress'
-import { joinURL, withoutTrailingSlash } from 'ufo'
-import { existsSync } from 'node:fs'
+import { joinURL } from 'ufo'
+import { existsSync, readFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { zoomablePlugin } from './theme/markdown-plugin-zoomable'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const FEATURED_IMAGES_DIR = join(__dirname, '..', 'guide', 'public', 'images', 'featured')
+const REPO_ROOT = join(__dirname, '..')
+const FEATURED_IMAGES_DIR = join(REPO_ROOT, 'guide', 'public', 'images', 'featured')
+
+const SITE_ORIGIN = 'https://docs.fluentcart.com'
+const SITE_DESCRIPTION =
+  'Comprehensive documentation for FluentCart - your all-in-one e-commerce solution.'
+
+// Map a source file path to the URL the host actually serves.
+// Cloudflare Pages 308-redirects a directory path to its trailing-slash form,
+// so index.md pages MUST keep the trailing slash — a canonical or a breadcrumb
+// @id pointing at the slash-less form points at a redirect.
+const cleanUrlFor = (relPath) => {
+  if (/(^|\/)index\.md$/.test(relPath)) {
+    const dir = relPath.replace(/(^|\/)index\.md$/, '')
+    return dir ? `${joinURL(SITE_ORIGIN, dir)}/` : `${SITE_ORIGIN}/`
+  }
+  return joinURL(SITE_ORIGIN, relPath.replace(/\.md$/, ''))
+}
+
+// Breadcrumb names come from the real H1 of each section's index.md, not from
+// a de-slugged folder name, so "product-types-creation" reads as
+// "Product Types & Creation". Returns null when a folder has no index.md —
+// those levels are skipped rather than linked to a URL that 404s.
+const sectionTitleCache = new Map()
+const sectionIndexTitle = (dirRelPath) => {
+  if (sectionTitleCache.has(dirRelPath)) return sectionTitleCache.get(dirRelPath)
+
+  const indexFile = join(REPO_ROOT, dirRelPath, 'index.md')
+  let title = null
+
+  if (existsSync(indexFile)) {
+    const heading = readFileSync(indexFile, 'utf-8').match(/^#\s+(.+?)\s*$/m)
+    title = heading
+      ? heading[1].replace(/[*`]/g, '').trim()
+      : dirRelPath
+          .split('/')
+          .pop()
+          .replace(/-/g, ' ')
+          .replace(/\b[a-z]/g, (c) => c.toUpperCase())
+  }
+
+  sectionTitleCache.set(dirRelPath, title)
+  return title
+}
 
 export default defineConfig({
   title: 'FluentCart Documentation',
   titleTemplate: ':title - FluentCart Documentation',
-  description: 'Comprehensive documentation for FluentCart - your all-in-one e-commerce solution.',
+  description: SITE_DESCRIPTION,
   lang: 'en-US',
   cleanUrls: true,
-  srcExclude: ['CLAUDE.md'],
+  srcExclude: ['CLAUDE.md', 'README.md'],
   ignoreDeadLinks: true,
   showingLastUpdated: true,
   
@@ -22,38 +65,62 @@ export default defineConfig({
     // Initialize the "head" frontmatter if it doesn't exist.
     pageData.frontmatter.head ??= []
 
-    // Create the canonical URL
-    const canonicalUrl = joinURL(
-      'https://docs.fluentcart.com',
-      withoutTrailingSlash(pageData.filePath.replace(/(index)?\.md$/, ''))
-    )
+    const relativePath = pageData.relativePath
+    const pageTitle = pageData.frontmatter.title || pageData.title
+    const pageDescription =
+      pageData.frontmatter.description || pageData.description || SITE_DESCRIPTION
 
-    // Generate breadcrumb path
-    const pathSegments = pageData.relativePath.split('/')
-    const breadcrumbs = pathSegments.map((segment, index) => {
-      const path = pathSegments.slice(0, index + 1).join('/')
-      return {
-        '@type': 'ListItem',
-        'position': index + 1,
-        'item': {
-          '@id': joinURL('https://docs.fluentcart.com', path),
-          'name': segment.replace(/(index)?\.md$/, '').replace(/-/g, ' ').replace(/^[a-z]/, c => c.toUpperCase())
-        }
-      }
-    })
+    // Create the canonical URL
+    const canonicalUrl = cleanUrlFor(relativePath)
+
+    // Generate breadcrumb path.
+    // Every @id must be a URL that resolves — a breadcrumb pointing at a 404
+    // lets search engines pull the 404 page's title into the result snippet.
+    const segments = relativePath.split('/')
+    const fileName = segments.pop()
+    const isIndexPage = fileName === 'index.md'
+    // An index.md IS its own folder, so its folder is the leaf, not an ancestor.
+    const ancestorDirs = isIndexPage ? segments.slice(0, -1) : segments
+
+    const crumbs = [{ '@id': `${SITE_ORIGIN}/`, name: 'Documentation' }]
+
+    for (let i = 0; i < ancestorDirs.length; i++) {
+      const dirRelPath = ancestorDirs.slice(0, i + 1).join('/')
+      const name = sectionIndexTitle(dirRelPath)
+      // `guide/` and sections without an index.md have no page to link to.
+      if (!name) continue
+      crumbs.push({ '@id': cleanUrlFor(`${dirRelPath}/index.md`), name })
+    }
+
+    if (pageTitle && crumbs[crumbs.length - 1]['@id'] !== canonicalUrl) {
+      crumbs.push({ '@id': canonicalUrl, name: pageTitle })
+    }
+
+    const breadcrumbs = crumbs.map((crumb, index) => ({
+      '@type': 'ListItem',
+      'position': index + 1,
+      'item': crumb
+    }))
 
     // Create JSON-LD structured data
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': pageData.frontmatter.title || pageData.title,
-      'description': pageData.frontmatter.description || pageData.description,
+      'headline': pageTitle,
+      'description': pageDescription,
       'url': canonicalUrl,
-      'dateModified': pageData.lastUpdated,
-      'breadcrumb': {
+    }
+
+    // A single-item trail (the home page) is not a breadcrumb — omit it.
+    if (breadcrumbs.length > 1) {
+      jsonLd.breadcrumb = {
         '@type': 'BreadcrumbList',
         'itemListElement': breadcrumbs
       }
+    }
+
+    if (pageData.lastUpdated) {
+      jsonLd.dateModified = new Date(pageData.lastUpdated).toISOString()
     }
 
     // Add JSON-LD script
@@ -94,21 +161,14 @@ export default defineConfig({
         'meta',
         {
           property: 'og:title',
-          content: pageData.frontmatter.title || pageData.title,
+          content: pageTitle,
         }
       ],
       [
         'meta',
         {
           property: 'og:description',
-          content: pageData.frontmatter.description || pageData.description,
-        }
-      ],
-      [
-        'meta',
-        {
-          property: 'article:modified_time',
-          content: pageData.lastUpdated,
+          content: pageDescription,
         }
       ],
       [
@@ -122,17 +182,29 @@ export default defineConfig({
         'meta',
         {
           name: 'twitter:title',
-          content: pageData.frontmatter.title || pageData.title,
+          content: pageTitle,
         }
       ],
       [
         'meta',
         {
           name: 'twitter:description',
-          content: pageData.frontmatter.description || pageData.description,
+          content: pageDescription,
         }
       ]
     )
+
+    // Only emit a modified time when there is one — an empty `content`
+    // attribute is invalid and gets flagged by crawlers.
+    if (pageData.lastUpdated) {
+      pageData.frontmatter.head.push([
+        'meta',
+        {
+          property: 'article:modified_time',
+          content: new Date(pageData.lastUpdated).toISOString(),
+        }
+      ])
+    }
 
     // Per-page og:image / twitter:image, if a generated featured image
     // exists for this page. Naming rule is duplicated (not imported) from
