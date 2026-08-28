@@ -48,6 +48,6 @@ This table lists all orders placed by this specific customer.
 For customers who have purchased digital products with licenses, this section displays their associated license keys.
 
 * **License Details:** Includes columns for License Key, Product name, Order ID, and Activations.
-* **Clickable License Keys:** Each license key is clickable, allowing you to navigate to the [License Details screen](/guide/product-types-creation/creating-digital-products-with-licenses#product-specific-license-settings) for that specific license.
+* **Clickable License Keys:** Each license key is clickable, allowing you to navigate to the [License Details screen](/guide/product-types-creation/creating-digital-products-with-licenses#_7-product-specific-license-settings) for that specific license.
 
 The Customer Details page is an invaluable tool for understanding your customers' interactions with your store and providing personalized support.
