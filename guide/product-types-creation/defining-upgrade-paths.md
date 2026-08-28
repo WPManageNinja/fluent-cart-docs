@@ -41,7 +41,7 @@ The table can display various configured paths, showing the flexibility of the s
 * **Yearly to Lifetime:** Upgrade from a "Single Site Yearly License" to a "Single Site Lifetime License" (often with prorated options).
 * **Tier-to-Tier:** Moving from a lower tier to a higher tier within the same license type (e.g., 5 Sites Yearly to 50 Sites Yearly).
 
-# How Customers Upgrade Their Products
+## How Customers Upgrade Their Products
 
 Once your upgrade paths are set up in the backend, the actual upgrade process is entirely self-serve and effortless for your customers. Here is exactly what they will see:
 
