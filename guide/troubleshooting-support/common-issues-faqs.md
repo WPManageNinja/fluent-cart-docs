@@ -23,7 +23,7 @@ This section provides solutions to frequently encountered issues and answers to 
 
 **A:**
 * **Check Order Status:** Ensure the customer's order for the licensed product is marked as "Completed" and fully paid.
-* **Verify License Status:** On the [License Details screen](/guide/product-types-creation/creating-digital-products-with-licenses#product-specific-license-settings) for that customer's license, ensure its status is "Active" and the "Activation Limit" has not been exceeded.
+* **Verify License Status:** On the [License Details screen](/guide/product-types-creation/creating-digital-products-with-licenses#_7-product-specific-license-settings) for that customer's license, ensure its status is "Active" and the "Activation Limit" has not been exceeded.
 * **License Key Activation:** Guide the customer to activate their license key on their site if it's for a WordPress plugin, as outlined in the plugin's instructions.
 * **FluentCart License Activation:** Ensure *your* FluentCart plugin license is active in [FluentCart Pro > Settings > Licensing](/guide/settings-configuration/licensing-settings) to receive updates.
 
