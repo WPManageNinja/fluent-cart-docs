@@ -1,0 +1,16 @@
+# Cloudflare Pages redirect map.
+#
+# This file MUST live in guide/public/ — `vite.publicDir` is set to
+# 'guide/public', so the repo-root public/ directory is never copied
+# into the build. Contents land at the site root on deploy.
+#
+# Format:  /from-path   /to-path   <status>
+
+# --- Retired: EU VAT method pages -------------------------------------
+# The three per-method guides were consolidated into the single
+# "Configuring European Union (EU) VAT" page, which documents the current
+# UI (methods are chosen inline in the cross-border card). The old URLs
+# are indexed, so 301 them onto the page that replaced them.
+/guide/tax-&-duties/european-vat-with-oss          /guide/tax-&-duties/european-union-vat  301
+/guide/tax-&-duties/european-vat-home-country      /guide/tax-&-duties/european-union-vat  301
+/guide/tax-&-duties/european-vat-specific-country  /guide/tax-&-duties/european-union-vat  301

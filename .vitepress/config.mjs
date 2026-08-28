@@ -587,6 +587,8 @@ export default defineConfig({
               ]
             },
             { text: 'Features & Addons', link: '/guide/settings-configuration/features-addons' },
+            { text: 'Global Integrations', link: '/guide/settings-configuration/global-integrations' },
+            { text: 'Storage Settings', link: '/guide/settings-configuration/storage-settings' },
             { text: 'AI Assistants (MCP)', link: '/guide/settings-configuration/mcp' },
             {
               text: 'Licensing',
