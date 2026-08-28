@@ -6,12 +6,12 @@ Properly configuring these settings ensures your store operates efficiently, sec
 
 This section covers the following critical areas:
 
-* **[General Settings (Store Setup)](/guide/settings-configuration/general-settings):** Configure your basic store information, including name, logo, address, and currency settings.
+* **[Store Settings](/guide/settings-configuration/store-settings):** Configure your basic store information, including name, logo, address, and currency settings.
 * **[Pages Setup](/guide/settings-configuration/pages-setup):** Assign essential FluentCart functionalities (like shop, cart, and checkout) to specific WordPress pages using shortcodes.
-* **[Single Product & Order Setup](/guide/settings-configuration/single-product-order-setup):** Customize how individual products are displayed and manage general order-related settings.
-* **[Additional Info Settings](/guide/settings-configuration/additional-info-settings):** Configure various optional settings related to cart display, checkout requirements, and address fields.
+* **[Product Page Settings](/guide/settings-configuration/product-page):** Customize how individual products are displayed on your storefront.
+* **[Cart & Checkout Settings](/guide/settings-configuration/cart-checkout-settings):** Configure optional settings related to cart display, checkout requirements, and address fields.
 * **[Payment Settings Overview](/guide/settings-configuration/payment-settings):** A general overview of available payment gateways and links to their detailed setup guides.
-* **[Email Notifications](/guide/settings-configuration/email-notifications):** Manage and customize automated email communications sent to both administrators and customers.
+* **[Email Configuration](/guide/settings-configuration/email-configuration/):** Manage and customize automated email communications sent to both administrators and customers.
 * **[Roles & Permissions](/guide/settings-configuration/roles-permissions):** Define and assign different user roles with specific access levels within your FluentCart store.
 * **[Storage Settings](/guide/settings-configuration/storage-settings):** Configure where your digital product files and other assets are stored, including local and cloud (S3) options.
 * **[Licensing Settings (FluentCart Product License)](/guide/settings-configuration/licensing-settings):** Activate your FluentCart plugin license key to ensure regular updates and access to premium features.
