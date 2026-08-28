@@ -71,7 +71,7 @@ Displays key details about the customer who placed the order.
 * **Shipping Address:** The address provided for shipping, if applicable.
 * **Billing Address:** The address provided for billing.
 * **Labels:** Any custom labels assigned to the customer.
-* This panel also offers quick links to [edit customer information](/guide/store-management/customers-management/customer-details-overview#editing-customer-information), [manage shipping address](/guide/store-management/customers-management/customer-details-overview#managing-customer-addresses), and [manage billing address](/guide/store-management/customers-management/customer-details-overview#managing-customer-addresses).
+* This panel also offers quick links to [edit customer information](/guide/store-management/customers-management/customer-details-overview#_2-customer-information-panel), [manage shipping address](/guide/store-management/customers-management/customer-details-overview#_2-customer-information-panel), and [manage billing address](/guide/store-management/customers-management/customer-details-overview#_2-customer-information-panel).
 
     ![Screenshot of Order Details Page](/images/store-management/order-details-overview/order-details.webp)
 
@@ -118,5 +118,5 @@ For campaign-level totals across all orders, see the [Order Sources Report](/gui
 
 This section on the sidebar shows the tax details the customer provided during checkout.
 
- * **Tax ID:** Displays the customer's **Tax Identification** Number. This is especially useful for B2B (business-to-business) sales or for complying with regional tax regulations that require collecting this information. To learn more about Tax, read the [Documentation](/guide/tax-&-duties/configuration-and-classes/).
+ * **Tax ID:** Displays the customer's **Tax Identification** Number. This is especially useful for B2B (business-to-business) sales or for complying with regional tax regulations that require collecting this information. Learn more about [tax configuration and classes](/guide/tax-&-duties/configuration-and-classes).
 
