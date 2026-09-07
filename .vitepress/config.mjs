@@ -336,6 +336,7 @@ export default defineConfig({
     outline: [2, 3],
     nav: [
       { text: 'User Docs', link: '/guide/getting-started/introduction-fluentcart' },
+      { text: 'Try It Free', link: 'https://try.wpmanageninja.com/?products=fluent-cart', target: '_blank', rel: 'noopener noreferrer' },
       { text: 'Dev Docs', link: 'https://dev.fluentcart.com/', target: '_blank', rel: 'noopener noreferrer' },
       { text: 'Website', link: 'https://fluentcart.com', target: '_blank', rel: 'noopener noreferrer' },
       { text: 'Changelog', link: '/guide/changelog' }
