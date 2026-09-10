@@ -62,6 +62,18 @@ They are immediately taken to the checkout page to finalize the transaction. A f
 
 ![Upgrade Path](/images/product-types-creation/define-upgrade-path/customer-upgrade-path.webp)
 
+### Upgrades on One-Time Purchases
+
+Upgrade paths are not limited to subscriptions and licenses. When you publish a path for a product sold as a one-time purchase, the customer gets the same **Upgrade Plan** button on the order itself, inside **Purchase History** in their dashboard. Clicking it opens the same **Upgrade Options** window and sends them to checkout for the difference.
+
+Three conditions decide whether that button appears on an item:
+
+* The item was bought as a **one-time purchase**, not as part of a subscription.
+* The order is **paid**, partially paid, or partially refunded. An unpaid order shows no upgrade button.
+* The variation the customer bought has at least one upgrade path published for it.
+
+Because the gate is per item, a customer with a multi-product order sees the button only beside the products you have actually opened a path for.
+
 :::tip Streamlined Customer Experience
 Defining clear upgrade paths simplifies the process for your customers, allowing them to easily scale their usage or commitment without complex manual intervention or needing to purchase a new product entirely.
 :::

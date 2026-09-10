@@ -87,6 +87,22 @@ These appear on the order's source card rather than as report columns, and they'
 
 When a visitor arrives without UTM parameters, FluentCart records the referring URL instead. Referrals from your own domains are ignored, so a customer moving between your own pages doesn't overwrite the real external source that brought them.
 
+### Consent and stored attribution
+
+To credit the right campaign at checkout, FluentCart has to remember the marketing touch that brought a visitor in, and it does that by storing the campaign values in the visitor's own browser. Privacy rules such as GDPR and Germany's TDDDG treat that storage the same way they treat cookies, and campaign attribution is not something a shop strictly needs in order to sell.
+
+FluentCart therefore announces every attribution write before it happens, so a consent manager can step in and decide. Three things can follow:
+
+* **No consent integration is present.** The write goes ahead exactly as it always has, which is the case for most stores. Nothing changes and nothing needs configuring.
+* **A consent manager holds the decision.** The campaign values stay in page memory only and are never written to the device. If the visitor accepts on that same page, the touch is stored and the campaign is not lost.
+* **The visitor refuses, or withdraws later.** Nothing is written, and anything already stored is cleared, so a withdrawal takes effect on past data rather than only on future visits.
+
+Orders that arrive without stored attribution still appear in your reports. They simply carry no marketing source, the same as any untagged visit.
+
+::: info
+Wiring your consent banner to this gate takes a few lines of JavaScript, and there is a working example among the [code snippets](/guide/customization-and-themes/code-snippets).
+:::
+
 ### Where to see a single order's attribution
 
 The report shows aggregates. To see the attribution recorded against one specific order, open the order and check its source card — see [Order Details Overview](/guide/store-management/orders-management/order-details-overview).

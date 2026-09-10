@@ -67,3 +67,16 @@ The final charts focus on catalog performance and the health of your customer ba
 * **Customer LifeTime Value (CLTV):** Metrics showing the expected total revenue from a customer over their entire relationship with your store, which is key for marketing decisions.
 
 By reviewing the Overview first, you get a clean summary of the most critical numbers, allowing you to choose which detailed tab (Sales, Refunds, etc.) you need to investigate further.
+
+## Choosing How a Trend Chart Is Grouped
+
+The **Orders**, **Revenue**, **Refunds**, **Subscription**, **Product**, and **Customer** tabs each carry a trend chart with a small grouping dropdown above it. That dropdown decides how tightly the timeline is bucketed, and it changes the shape of what you see without changing the numbers underneath.
+
+* **Auto:** Lets FluentCart pick the grouping from the date range you selected. This is the default.
+* **Daily:** One point per day. Best for spotting the exact day a campaign landed or a problem started.
+* **Monthly:** One point per month, which smooths daily noise into a readable trend.
+* **Yearly:** One point per year, for long-range comparisons.
+
+**Auto** tells you what it decided rather than leaving you guessing. While it is the active choice, the option reads **Auto (Daily)**, **Auto (Monthly)**, or **Auto (Yearly)** to show which grouping your current date range resolves to. Ranges up to about three months group daily, up to a year group monthly, and anything longer groups yearly.
+
+Pick a grouping explicitly when Auto is not what you want, such as reading a full year day by day to find a single spike. The label goes back to a plain **Auto** while an explicit choice is active, so it never echoes your own selection back at you.

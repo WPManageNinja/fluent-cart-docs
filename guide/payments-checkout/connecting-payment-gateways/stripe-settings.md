@@ -40,6 +40,18 @@ FluentCart gives you two different ways for customers to pay:
 
 ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/stripe-settings.webp)
 
+If you pick **Stripe Hosted checkout**, one more control appears.
+
+ * **Submit Button Label:** Sets the wording Stripe uses on the payment button, and on the supporting copy around it. Choose **Automatic (Pay / Subscribe)** to let Stripe decide from the purchase, or pick **Pay**, **Book**, **Donate**, or **Subscribe** to match how you sell.
+
+Not every label suits every purchase, so Stripe applies the closest fit. A one-time order can use **Pay**, **Book**, or **Donate**, while a subscription can use **Subscribe** or **Donate**. When the label you chose does not apply to the purchase in front of the customer, Stripe falls back to its own wording rather than showing something misleading.
+
+::: info
+This setting only reaches **Stripe Hosted checkout**. Embedded checkout renders on your own site, so its button text comes from your [cart and checkout settings](/guide/settings-configuration/cart-checkout-settings) instead.
+:::
+
+Hosted checkout also itemises the order. Instead of one combined line named after your store, customers see each product they are buying, plus separate lines for shipping and tax where they apply. Subscriptions break out their parts the same way, so a setup fee, a one-time add-on, and the recurring plan each appear under their own name. If a particular order cannot be broken down so the parts add up exactly to the amount charged, FluentCart falls back to the single combined line. The customer is always charged the correct total either way.
+
 #### Step 4: Configure Webhooks
 
 Webhooks are essential for the integration to function correctly. They allow Stripe to send real-time notifications to your store about payment events, such as successful charges, refunds, and subscription updates.
