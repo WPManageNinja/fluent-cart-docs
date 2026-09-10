@@ -12,6 +12,7 @@ The top of the dashboard gives you key controls to choose what data appears in t
 
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
 * **Compare To:** This dropdown allows you to choose a past time period to compare with your current data.
+* **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
 * **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
   ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-report.webp)

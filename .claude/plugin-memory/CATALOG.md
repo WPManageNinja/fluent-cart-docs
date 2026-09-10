@@ -51,7 +51,7 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **User-facing surface:** Per-gateway settings page, webhook URL field, test/live toggles, button-text customizations, e-check toggles.
 - **Drives docs:** `guide/payments-checkout/connecting-payment-gateways/<gateway>-settings.md`. **Core changes** mean re-read every gateway page. Promo/install cards for addon gateways live under `PromoGateways/Addons/` (e.g. SSLCommerz since 1.5.2 — real gateway ships as a separate addon plugin).
 - **Stripe client SFU filter (since 1.6.1):** `Stripe.php:852-855` exposes `fluent_cart/stripe/client_setup_future_usage($value, ['data'=>…, 'has_subscription'=>bool])`; a falsy return unsets `setup_future_usage`. The browser cannot pass this per-request, and a mismatch between the mounted Elements config and the confirmation is a guaranteed Stripe failure. Documented in `code-snippets.md`.
-- **Last fully audited:** v1.6.1
+- **Last fully audited:** v1.6.4
 
 ### Modules/SavedPaymentMethods *(Pro only)*
 - **Lives in:** `/Users/authlab-24/Desktop/fluent-cart-pro` → `app/Modules/SavedPaymentMethods/`. **Not in the core clone.** Decision recorded in core commit `1f54f2f9d` ("ship 100% in fluent-cart-pro").
@@ -75,7 +75,7 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Key files:** `ReportingModule.php`, controllers under `Http/Controllers/Reports/*`.
 - **User-facing surface:** Every report screen under FluentCart Pro → Reports.
 - **Drives docs:** `guide/reporting-analytics/*.md`
-- **Last fully audited:** v1.6.2
+- **Last fully audited:** v1.6.4
 
 ### Modules/Shipping
 - **Purpose:** Shipping zones, methods, rates, packages, carrier-rate calculation.
@@ -105,7 +105,7 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **User-facing surface:** Subscription dashboard, detail page, reactivate action, cancellation email with access-end date, cart restrictions ("one subscription per cart", "qty must be 1"), reactivation-after-refund flow. Since 1.5.4 an installment plan must bill **at least twice** (`MIN_INSTALLMENT_TIMES = 2`); saves below that are rejected. Installment fields are documented on `configuring-product-pricing.md`, not the subscriptions page.
 - **Drives docs:** `guide/product-types-creation/managing-subscriptions.md`, `store-managed-subscriptions.md`, `configuring-product-pricing.md` (customer-portal payment-method updates also touch `guide/customer-dashboard/subscriptions.md`)
 - **Actions menu (verified 1.6.0, `resources/admin/Modules/Subscriptions/Components/SubscriptionDetails.vue`):** Sync from gateway, Edit Subscription, Pause/Resume/Reactivate/Cancel Subscription, Send Reminder, **Create Renewal Now** (manual) which becomes **Charge Next Renewal Now** on auto-charge subs, Skip Next Period, Charge Now. Routes in `Modules/Subscriptions/Http/subscriptions-api.php`. Editable terms per `UpdateSubscriptionRequest`: `recurring_total`, `bill_times`, `billing_interval`, `status`, `next_billing_date`.
-- **Last fully audited:** v1.6.2
+- **Last fully audited:** v1.6.4
 
 ### Modules/Tax
 - **Purpose:** Tax classes, regional tax rules, EU VAT, country-level tax toggles, reverse-charge handling.
@@ -122,7 +122,7 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Addon split (since 1.5.4):** core registers **8** Bricks elements from `Bricks/Elements/` and they load automatically with the Bricks theme. A further **15** ship in the separate **`fluent-cart-bricks-blocks`** addon plugin (**not in this clone**; card registered in `Http/Controllers/ModuleSettingsController.php`). The **Elementor Blocks** addon (`elementor-block`, slug `fluent-cart-elementor-blocks`, CDN zip, min Elementor 3.34) sits on the same card list; `getRegisteredPluginAddons()` applies **no Pro gating**, so it is available on FluentCart Free. When Bricks/Elementor work ships, check whether it belongs to core or an addon before writing.
 - **Products element (core, `Bricks/Elements/ProductsCollection.php`):** control groups are `query`, `filter`, `fields`. Filter group builds a checkbox **per taxonomy** from `Taxonomy::getTaxonomies()` plus a `showEmpty_<taxonomy>` "Show empty" child for each. This is what the 1.6.0 changelog means by "controls for empty categories, tags, and category visibility". Documented in `fluentcart-bricks-blocks.md` under "Products Block Controls".
 - **Divi addon (since 1.6.1):** third builder addon, **not in any cloned repo** — install key/admin slug is `divi-blocks` / `fluent-cart-divi-blocks` (`ModuleSettingsController.php:282-293`), but the **CDN zip filename is `fluent-cart-divi-modules.zip`** (`fluent-cart-divi-blocks.zip` 404s — don't reuse the Bricks naming pattern blindly). Requires Divi 5.0+ and FluentCart 1.3.4+. Commit `61ccce6c7` reverts an earlier removal of the card, so it is live. Ships **exactly 18** modules (`app/Modules/*`: AddToCart, ArchiveHeader, BuyNow, Cart, Checkout, CustomerDashboard, CustomerDashboardButton, MediaCarousel, MiniCart, ProductCard, ProductCarousel, ProductCategoriesList, ProductInfo, ProductSearch, Receipt, RelatedProducts, ShopApp [= "FluentCart Products"], StoreLogo), an 8-layout **Template Library** (`app/Services/TemplateLibrary/`, seeds into Divi's native library: Single Product, Shop, Product Category, Cart, Checkout, Thank You, Customer Dashboard, Campaign Landing), and **Dynamic Content tokens** (`app/DynamicContent/DynamicContentRegistry.php`, 11 product tokens exposed in Divi 5's Dynamic Content picker for any text field). **Corrected:** no `?fc_campaign=` routing exists in code — that was a mis-read of the `fc-campaign-landing` template's slug; do not repeat that claim. `guide/customization-and-themes/fluentcart-divi-modules.md` now covers all 18 modules + Template Library + Dynamic Content (closed in the Aug 12 2026 gap-closure pass). **Still not installed on the `cart` Local site**, so all of this remains text-only — no screenshots yet.
-- **Last fully audited:** v1.6.1 (gap-closure pass, Aug 12 2026)
+- **Last fully audited:** v1.6.4
 
 ### Modules/Turnstile
 - **Purpose:** Cloudflare Turnstile bot protection on checkout / forms.
