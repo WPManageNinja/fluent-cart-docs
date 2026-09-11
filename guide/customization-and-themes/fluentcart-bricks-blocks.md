@@ -94,7 +94,7 @@ A handful of these elements, including **Products**, **Product Title**, **Produc
 
 ## Products Block Controls
 
-The **Products** block is the one you will reach for most, so it is worth knowing what it can do. Its controls are split into groups in the Bricks panel, most of them on the **Content** tab.
+The **Products** block is the one you will reach for most, so it is worth knowing what it can do. Its controls are split across three groups in the Bricks panel.
 
 ### Query
 
@@ -123,47 +123,6 @@ Turn on **Enable Filter** to give customers a filter panel alongside the grid. T
 * **Taxonomy toggles:** FluentCart lists a checkbox for each product taxonomy, such as **Categories** and **Brands**. Tick one to offer it as a filter, leave it unticked to keep it out of the panel. This is how you control which taxonomies customers can filter by.
 * **Show empty:** Appears beneath each taxonomy you enable and displays that taxonomy's terms even when they have no products in them. Leave it off to keep empty categories and tags out of the filter panel.
 * **Price Range:** Adds a price filter, with **Display Name** to override its label.
-
-### Default Filter
-
-The **Filter** group above builds the panel your visitors touch. **Default Filter** does the opposite job: it narrows the grid before anyone touches anything, which is how you build a curated section such as "New in outerwear" without hand-picking products one by one.
-
-Turn on **Enable Default Filter** to reveal the rest of the group.
-
-* **Allow Out Of Stock:** Keeps out-of-stock products in the results instead of hiding them.
-* **Search:** A preset search term. The grid loads already filtered to it, and the term survives pagination and live-filter refreshes.
-* **Taxonomy selects:** One searchable multi-select per product taxonomy, such as **Categories** and **Brands**. Pick the terms this block should be limited to. Child terms are listed alongside their parents, so you can target a single sub-category.
-
-::: info
-Default Filter is ignored when **Is main query** is on. A shop or archive template is already scoped by WordPress, so the two would fight over the same query.
-:::
-
-### Sale Badge
-
-Switch on **Show Sale Badge** to flag discounted products in the grid. FluentCart works out the discount for you and hides the badge on anything not currently on sale.
-
-* **Badge Text:** What the badge says. Defaults to **Sale!**
-* **Show discount percentage instead:** Swaps the fixed text for the live discount figure.
-* **Percentage Text:** The template for that figure, using `{percent}` where the number should go. Defaults to `-{percent}%`, so a quarter off reads `-25%`.
-* **Price Source:** Which price the discount is measured against. **Default Variant** uses the variant customers see first, while **Best Discount (All Variants)** advertises the biggest saving anywhere in the product.
-* **Badge Shape:** **Badge** or **Ribbon**.
-* **Position:** Which corner of the product image the badge sits in.
-
-The matching **Sale Badge** group on the **Style** tab carries **Typography**, **Background Color**, and **Text Color**.
-
-### Sold Out Badge
-
-**Show Sold Out Badge** marks products that have run out, so shoppers know before they click through.
-
-* **Badge Text:** Defaults to **Out of Stock**.
-* **Badge Shape:** **Badge** or **Ribbon**.
-* **Position:** Which corner of the product image the badge sits in.
-
-Styling works the same way, from the **Sold Out Badge** group on the **Style** tab.
-
-::: info
-Both badges are overlays anchored to the product image, and a discounted product can also be out of stock. Give the two badges different corners so they never land on the same spot.
-:::
 
 ### Fields
 

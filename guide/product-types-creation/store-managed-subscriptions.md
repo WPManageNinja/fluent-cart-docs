@@ -59,22 +59,6 @@ Your mode and the gateway the customer checks out with together decide how renew
 | Store Billing, auto-charge on | Stripe or PayPal | Your store charges the saved payment method |
 | Store Billing, auto-charge on | Any other gateway | The customer pays each invoice |
 
-## Keeping Staging Sites from Billing Customers
-
-Cloning a live store to a staging or development site used to be risky. The copy inherited every subscription, kept its own hourly schedule running, and happily invoiced, charged, and emailed the same customers your production site was already billing. **Staging Protection** closes that gap.
-
-The setting sits on the same **Subscriptions** tab, just below **Renewal Billing**:
-
-* **Don't bill live subscriptions from this site while it is in test mode:** On by default. While the site's [Store Mode](/guide/settings-configuration/store-settings) is **Test**, this site will not create renewal invoices, charge saved payment methods, reconcile pending charges with the gateway, or send renewal and subscription reminder emails for live subscriptions.
-
-That single condition, live subscription plus a site in test mode, is what a staging copy always looks like, so a clone stops billing the moment you flip it to **Test** and nothing else has to change. Test-mode subscriptions on a test-mode site keep working normally, so you can still rehearse the full renewal flow.
-
-Nothing is lost while the protection holds. Held renewals are re-checked daily and resume on their own once the site is back in **Live** mode.
-
-::: info
-Leave this on for every copy of your store. Turn it off only when a site is deliberately running in test mode while still needing to bill real subscriptions, which is an unusual setup and worth a second look before you commit to it.
-:::
-
 ## How a Renewal Works
 
 FluentCart checks store-billed subscriptions every hour, so renewals run on their own. You never have to trigger one.
@@ -96,8 +80,6 @@ FluentCart never creates a second renewal while an open one is still waiting to 
 ### Renewal Reminders
 
 Reminder emails are **off by default**. Turn them on to nudge customers around the due date: one reminder on the due date, then overdue reminders **1, 3, and 7 days** after it.
-
-Those overdue days are yours to change, and the wording escalates with them. The earliest day sends a gentle first reminder, the last day sends a final notice, and any day you put in between sends a follow-up. Set the schedule under [Reminders](/guide/settings-configuration/email-configuration/reminders), then edit the three emails in **Email Notification Settings**.
 
 You manage them from **FluentCart Pro → Settings → Email Configuration**. See [Configuring Email Notifications](/guide/settings-configuration/email-configuration/configuring-email-notification) for the full list of subscription emails.
 
