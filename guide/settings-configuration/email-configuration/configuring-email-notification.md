@@ -54,9 +54,6 @@ These apply when your store charges saved payment methods automatically. See [St
 * **Renewal due reminder to customer:** Sent before or on the renewal due date while payment is still pending.
 * **Renewal due reminder copy to admin:** The admin-side copy of the due reminder.
 * **Payment reminder to customer:** A general reminder about a pending payment.
-* **First overdue renewal reminder to customer:** Sent on the earliest overdue day you configured, once a renewal due date has passed with payment still pending.
-* **Follow-up overdue renewal reminder to customer:** Sent on the overdue days between the first and the last.
-* **Final overdue renewal notice to customer:** Sent on the last overdue day you configured while payment is still pending.
 * **Upcoming renewal reminder to customer:** Sent ahead of a subscription's auto-renewal date.
 * **Upcoming renewal reminder copy to admin:** The admin-side copy of the upcoming renewal reminder.
 * **Trial ending soon reminder to customer:** Sent before a trial period ends and converts to a paid subscription.

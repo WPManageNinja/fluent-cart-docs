@@ -28,8 +28,6 @@ Select your store's operating mode. This is a critical setting that controls whe
 This setting is directly linked to your payment gateways. When you set the store to **Live**, your payment methods also switch to their live credentials. When you switch to **Test**, your payment gateways automatically use their sandbox credentials.
 :::
 
-Store Mode also protects your subscribers. A site left in **Test** mode stops invoicing, charging, and emailing live subscriptions, which is what keeps a staging clone of your store from double-billing real customers. See [Staging Protection](/guide/product-types-creation/store-managed-subscriptions) for how that works and when to turn it off.
-
 ### 3. Store Address
 
 Provide your physical business address. FluentCart uses this for PayPal verification, default shipping calculations, tax base lookups, and as the address displayed on receipts and other store documents.

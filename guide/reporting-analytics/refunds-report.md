@@ -13,7 +13,6 @@ The top of the dashboard gives you key controls to choose what data appears in y
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
 * **Compare To:** This dropdown lets you pick a past period (for example, the previous week, last month, or the same time last year). Your current data is then compared with that past period. This helps you see if your store is doing better, worse, or staying the same over time.
 * **Advanced Filters:** Click the **filter** icon to segment the report by criteria such as **Order Type** or specific **Products**, allowing you to isolate refunds associated with certain items.
-* **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
 * **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
 
    ![Screenshot of Refunds Report Page](/images/reporting-analytics/refunds/refunds-report.webp)
