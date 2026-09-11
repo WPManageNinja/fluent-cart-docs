@@ -366,9 +366,27 @@ Once you configure the package data, the same information flows through the cust
 
 * **Checkout order summary** — package name and shipping weight appear under each cart line, so shoppers confirm shipping details before they pay.
 
-  ![Screenshot of the checkout order summary showing Gift box and shipping weight under an order line](/images/customization-and-themes/using-fluentcart-blocks/package-description-checkout.webp)
+  ![Checkout order summary showing Gift box and shipping weight under an order line](/images/customization-and-themes/using-fluentcart-blocks/package-description-checkout.webp)
 
 * **Order confirmation emails** — the default email body and customized templates can both display package details. See [Configuring Email Notifications](/guide/settings-configuration/email-configuration/configuring-email-notification) for the merge tags.
 
+### 21. Cart
 
-> **Note:** Each FluentCart block comes with its own customization settings. After adding a block, check the settings panel on the right to adjust design, alignment, behavior, and visibility.
+The **Cart** block builds your cart page in the block editor, so you no longer need to drop the `[fluent_cart_cart]` shortcode into a page to get one. Drop it on the page assigned as your cart in [Pages Setup](/guide/settings-configuration/pages-setup) and customers get the same cart the shortcode produces.
+
+What makes this block different is that it is a container rather than a single fixed slab of markup. Adding it gives you three child blocks inside it, and each one is a region you can move:
+
+* **Cart Items:** The list of products in the cart, with quantity controls and per-line totals.
+* **Cart Total:** The cart's running total.
+* **Cart Checkout Button:** The button that sends the customer to checkout.
+
+Because they are ordinary blocks, you can reorder them, delete one you don't want, or slot your own blocks between them, such as a shipping notice above the total or a trust badge under the button.
+
+**Editable Text**
+
+Two of the children let you override their wording, either by clicking the text in the canvas or by opening the **Text** panel in the sidebar.
+
+  ![Cart](/images/customization-and-themes/using-fluentcart-blocks/cart-20.webp)
+
+> [!Note]
+> Each FluentCart block comes with its own customization settings. After adding a block, check the settings panel on the right to adjust design, alignment, behavior, and visibility.
