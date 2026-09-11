@@ -32,3 +32,22 @@ Here’s what you might see on the details page:
 
 
 ![Screenshot of Purchase History](/images/customer-dashboard/purchase-history/purchase-history-2.webp)
+
+## Upgrading a One time Purchases
+
+Some products can be moved up to a bigger package after you have bought them, and you no longer have to own an active subscription to do it! If the store has set up an [upgrade path](/guide/product-types-creation/defining-upgrade-paths) for something you bought outright, an **Upgrade Plan** button appears next to that item on the order details page.
+
+### How to Upgrade an Item:
+
+1. Click the **Upgrade Plan** button located right beside the item. An **Upgrade** options window will open.
+
+![Upgrade Plan](/images/customer-dashboard/purchase-history/upgrade-3.webp)
+
+2. Review the available packages. Each row shows the package name, its regular price, and the **Amount** to pay (which automatically credits your original purchase amount).
+
+3. Click **Upgrade** next to the package you want. You will be taken directly to **checkout** to pay the remaining difference.
+
+> [!Note]
+> The **Upgrade Plan** button only appears on items that qualify. Your original order must be paid, and the store must currently offer an active upgrade path for that exact product.
+
+![Upgrade Plan](/images/customer-dashboard/purchase-history/popup-upgrade-4.webp)
