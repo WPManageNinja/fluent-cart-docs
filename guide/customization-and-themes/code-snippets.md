@@ -2,6 +2,10 @@
 
 Here you'll find ready-to-use code snippets for FluentCart. These snippets help you customize and extend your store's functionality. Simply copy the code and add it to your theme's `functions.php` file or use a code snippets plugin.
 
+::: info What's a hook?
+A hook is a small connection point built into FluentCart where you, or your developer, can plug in a few lines of code to change how something works. They live in code, not the dashboard, so you won't find them as a toggle or field in the admin area. Every snippet on this page works through one.
+:::
+
 ## Checkout
 
 ### Hide Unnecessary Decimals
@@ -145,7 +149,7 @@ Stripe rejects a payment when the value the card element was built with does not
 
 ### Adjust Order Data Before the Order Is Created
 
-FluentCart works out the totals for a checkout, then builds the order from that data. This filter hands you the finished data one moment before the order, its transaction, and any subscription are created from it, so you can change currency, exchange rate, totals, mode, or any other field and have every record follow your change.
+Right before FluentCart saves a new order, this hook hands it to you first. Change whatever you need, an order note, the currency, a total, and that's what gets saved to the order, its transaction, and its subscription (if any).
 
 The filter receives the prepared order data and a context array holding `items`, the formatted line items with their prices and quantities, and `args`, the checkout arguments such as customer details, payment method, shipping, tax, coupons, and fees.
 
@@ -177,7 +181,7 @@ Return the full array every time. Anything you drop is dropped from the order, a
 
 ### Change an Email Just Before It Sends
 
-FluentCart prepares each notification in full, subject, body, recipient, and attachments, before handing it to the mailer. This filter gives you that prepared email at the last possible moment, which is where you add a CC or BCC, change the From or Reply-To address, or attach a file of your own.
+FluentCart prepares each notification in full, subject, body, recipient, and attachments, before handing it to the mailer. This filter gives you that prepared email at the last possible moment.
 
 You receive the mailer plus a context array containing `event`, `mail_name`, `recipient`, `notification`, and `data`. Return the mailer when you are done. Returning anything else leaves the original email untouched, so a mistake in your snippet cannot stop mail going out.
 
