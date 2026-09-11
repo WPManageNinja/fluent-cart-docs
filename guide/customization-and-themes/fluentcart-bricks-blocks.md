@@ -18,7 +18,7 @@ The blocks ship as a separate addon, so you install it once from the FluentCart 
 3. Find the **FluentCart Bricks Blocks** card. Its description reads "Enable to get Bricks Builder elements for FluentCart. Requires the Bricks theme."
 4. Click the **Install & Activate** button on the card.
 
-![FluentCart Bricks Blocks card ](/images/customization-and-themes/bricks-blocks/bricks-blocks-addon-install.webp)
+![Screenshot of the Plugin Addons section with the FluentCart Bricks Blocks card and its Install & Activate button highlighted](/images/customization-and-themes/bricks-blocks/bricks-blocks-addon-install.webp)
 
 FluentCart fetches the addon, installs it, and activates it for you. The card's status badge switches to **Active** when it finishes, and no upload or page reload is needed. For more on this installer, see [Features & Addons](/guide/settings-configuration/features-addons).
 
