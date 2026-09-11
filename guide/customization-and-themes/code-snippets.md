@@ -143,6 +143,68 @@ add_filter(
 Stripe rejects a payment when the value the card element was built with does not match the one sent at confirmation. Keep the logic here deterministic, so the same checkout always produces the same result, rather than depending on anything that can change between the two requests.
 :::
 
+### Adjust Order Data Before the Order Is Created
+
+FluentCart works out the totals for a checkout, then builds the order from that data. This filter hands you the finished data one moment before the order, its transaction, and any subscription are created from it, so you can change currency, exchange rate, totals, mode, or any other field and have every record follow your change.
+
+The filter receives the prepared order data and a context array holding `items`, the formatted line items with their prices and quantities, and `args`, the checkout arguments such as customer details, payment method, shipping, tax, coupons, and fees.
+
+```php
+<?php
+
+/**
+ * Stamp a fulfilment note onto every order created at checkout.
+ */
+add_filter(
+    'fluent_cart/checkout/order_data',
+    function ($orderData, $context) {
+        $orderData['note'] = 'Priority handling';
+
+        return $orderData;
+    },
+    10,
+    2
+);
+```
+
+The same filter runs on orders you create by hand from the admin, with `args` carrying the admin order arguments instead. That means one snippet covers both routes and your orders stay consistent no matter who placed them.
+
+::: info
+Return the full array every time. Anything you drop is dropped from the order, and totals are used as given, so recalculate them yourself if you change an amount.
+:::
+
+## Emails
+
+### Change an Email Just Before It Sends
+
+FluentCart prepares each notification in full, subject, body, recipient, and attachments, before handing it to the mailer. This filter gives you that prepared email at the last possible moment, which is where you add a CC or BCC, change the From or Reply-To address, or attach a file of your own.
+
+You receive the mailer plus a context array containing `event`, `mail_name`, `recipient`, `notification`, and `data`. Return the mailer when you are done. Returning anything else leaves the original email untouched, so a mistake in your snippet cannot stop mail going out.
+
+```php
+<?php
+
+/**
+ * BCC the warehouse on every paid-order email to the customer.
+ */
+add_filter(
+    'fluent_cart/email_notification/mailer',
+    function ($mailer, $context) {
+        if ($context['mail_name'] === 'order_paid_customer') {
+            $mailer->addBCC('warehouse@example.com');
+        }
+
+        return $mailer;
+    },
+    10,
+    2
+);
+```
+
+The mailer exposes `addCC()`, `addBCC()`, `setFrom()`, `setReplyTo()`, `setSubject()`, `body()`, `addAttachment()`, and `setIsHtml()`, so most last-minute adjustments are a single chained call.
+
+Because the filter sits at the send step, it covers order and subscription emails delivered in the background as well as the ones sent immediately.
+
 ## Customer Profile
 
 ### Add a Custom Menu Item to the Customer Profile
@@ -204,4 +266,41 @@ Add every domain in your network, including the checkout site. Matching covers t
 
 ::: info
 FluentCart applies no internal domains by default, so attribution behaves exactly as before until you add this snippet. Campaign values are stored in the visitor's browser for 30 days. The captured data then appears in your reports under marketing source, which you can read about in [Sales Report](/guide/reporting-analytics/sales-report).
+:::
+
+### Gating Attribution Storage on Cookie Consent
+
+Campaign attribution is kept in the visitor's browser, and privacy rules such as GDPR and the German TDDDG treat that storage the way they treat cookies. If your store runs a consent banner, this is how you put attribution behind it.
+
+FluentCart fires a cancellable `fluent_cart_utm_before_store` event on `window` immediately before it writes. Call `preventDefault()` to claim the write, then answer with `allow()` or `deny()` from the event's detail. This snippet is JavaScript, so enqueue it on the front end rather than dropping it in `functions.php`.
+
+```js
+window.addEventListener('fluent_cart_utm_before_store', function (event) {
+    // Claim the write. Nothing is stored until you answer.
+    event.preventDefault();
+
+    myConsentBanner.ask('marketing').then(function (granted) {
+        if (granted) {
+            event.detail.allow();
+        } else {
+            event.detail.deny();
+        }
+    });
+});
+```
+
+Three details make this safe to ship:
+
+* **Answer whenever you like.** While the decision is outstanding, the campaign values sit in page memory and are never written to the device. A visitor who accepts on the page they landed on keeps their attribution.
+* **`deny()` also clears.** Denying wipes anything already stored, so it doubles as your withdrawal handler and satisfies the "as easy to withdraw as to give" requirement.
+* **Doing nothing changes nothing.** If no listener claims the event, the write happens inline exactly as it always has, so stores without a consent banner are unaffected.
+
+To withdraw consent later, from a preferences link for example, call the manager directly:
+
+```js
+window.fluentCartUtmManager?.revokeConsent();
+```
+
+::: info
+Check what the visitor already decided with `window.fluentCartUtmManager?.hasConsent()`. It returns `true` while attribution may be read or written, which is the state to test before wiring your own tracking alongside FluentCart's.
 :::
