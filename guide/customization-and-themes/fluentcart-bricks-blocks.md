@@ -18,7 +18,7 @@ The blocks ship as a separate addon, so you install it once from the FluentCart 
 3. Find the **FluentCart Bricks Blocks** card. Its description reads "Enable to get Bricks Builder elements for FluentCart. Requires the Bricks theme."
 4. Click the **Install & Activate** button on the card.
 
-![Screenshot of the Plugin Addons section with the FluentCart Bricks Blocks card and its Install & Activate button highlighted](/images/customization-and-themes/bricks-blocks/bricks-blocks-addon-install.webp)
+![FluentCart Bricks Blocks card ](/images/customization-and-themes/bricks-blocks/bricks-blocks-addon-install.webp)
 
 FluentCart fetches the addon, installs it, and activates it for you. The card's status badge switches to **Active** when it finishes, and no upload or page reload is needed. For more on this installer, see [Features & Addons](/guide/settings-configuration/features-addons).
 
@@ -35,7 +35,7 @@ Once the addon is active, the blocks are ready to use straight away.
 3. Scroll to the **FluentCart** category.
 4. Click any block to add it to your canvas, then style it using the Bricks controls on the left.
 
-![Screenshot of the Bricks editor elements panel showing the FluentCart category with blocks including Mini Cart, Add to Cart, Buy Now, Product Card, and Product Carousel](/images/customization-and-themes/bricks-blocks/bricks-blocks-elements-panel.webp)
+![Screenshot of the Bricks editor elements panel](/images/customization-and-themes/bricks-blocks/bricks-blocks-elements-panel.webp)
 
 Every FluentCart block carries the FluentCart badge in its corner, so you can tell them apart from the built-in Bricks elements at a glance.
 
@@ -96,37 +96,87 @@ A handful of these elements, including **Products**, **Product Title**, **Produc
 
 The **Products** block is the one you will reach for most, so it is worth knowing what it can do. Its controls are split across three groups in the Bricks panel.
 
-### Query
+### Query Controls
 
-These controls decide which products appear and how the grid is arranged.
+These settings determine which products appear and how the grid is arranged:
 
-* **View Mode:** Whether the products render as a grid or a list.
-* **Show View Switcher:** Lets visitors flip between the view modes themselves.
-* **Pagination Type:** How customers move through long result sets.
-* **Columns** and **Gap:** The grid layout and the spacing between items.
-* **Products per page:** How many products to load at a time.
-* **Is main query:** Ties the block to the page's main query, which is what you want on a shop or archive template.
-* **Order by** and **Order:** The sort field and direction.
-* **Product type:** Narrows the grid to a single product type.
-* **Include** and **Exclude:** Hand-pick individual products to force in or leave out.
-* **Product categories:** Restricts the grid to the categories you select.
-* **On sale Products only:** Shows only products currently on sale.
-* **Allow Out Of Stock:** Keeps out-of-stock products in the grid instead of hiding them.
+ * **View Mode & Switcher:** Choose between a grid or list layout, and optionally let visitors flip between them.
 
-### Filter
+ * **Pagination & Columns:** Control how customers navigate long lists and define the grid spacing.
 
-Turn on **Enable Filter** to give customers a filter panel alongside the grid. The rest of the controls in this group only appear once it is enabled.
+ * **Is main query:** Ties the block to the page's main WordPress query, which is essential when building a shop or archive template.
 
-* **Enable Sort By:** Adds a sort control to the filter panel. On by default.
-* **Live Filter:** Updates results as the customer changes a filter, with no page reload.
-* **Wildcard Filter:** Broadens text matching so partial terms still return results.
-* **Taxonomy toggles:** FluentCart lists a checkbox for each product taxonomy, such as **Categories** and **Brands**. Tick one to offer it as a filter, leave it unticked to keep it out of the panel. This is how you control which taxonomies customers can filter by.
-* **Show empty:** Appears beneath each taxonomy you enable and displays that taxonomy's terms even when they have no products in them. Leave it off to keep empty categories and tags out of the filter panel.
-* **Price Range:** Adds a price filter, with **Display Name** to override its label.
+ * **Filtering Options:** Narrow the grid by specific product types, categories, on-sale status, or manually include/exclude items.
+
+
+### Filter Controls
+
+Turn on **Enable Filter** to provide your customers with a front-end filter panel alongside the product grid.
+
+ * **Live Filter:** Updates results instantly as the customer changes a filter, without reloading the page.
+
+ * **Wildcard Filter:** Broadens text matching so partial terms still return accurate results.
+
+ * **Taxonomy toggles:** Choose exactly which taxonomies (like Categories or Brands) customers are allowed to filter by.
+
+ * **Price Range & Sort By:** Adds sorting controls and a price slider to the panel.
+
+### Default Filter
+
+While the standard Filter group builds the panel your visitors touch, the Default Filter narrows the grid before anyone touches anything. This is ideal for building curated sections like "New in Outerwear" without hand-picking products.
+
+ * **Enable Default Filter:** Turn this on to reveal the curated filter settings.
+
+ * **Allow Out Of Stock:** Keeps out-of-stock products in the results instead of hiding them.
+
+ * **Search:** Set a preset search term. The grid loads already filtered to this term, and it survives live-filter refreshes.
+
+ * **Taxonomy selects:** Pick specific terms (like a single sub-category) that this block should be limited to.
+
+::: info
+The Default Filter is ignored when **Is main query** is enabled, as the shop template is already scoped by WordPress.
+:::
+
+![Screenshot of the Default Filter panel with Enable Default Filter switched on, alongside Allow Out Of Stock, Search, Product Categories, and Product Brands controls](/images/customization-and-themes/bricks-blocks/bricks-blocks-default-filter.webp)
+
+### Sale Badge
+
+Switch on **Show Sale Badge** to flag discounted products in the grid. FluentCart works out the discount for you and hides the badge on anything not currently on sale.
+
+* **Badge Text:** What the badge says. Defaults to **Sale!**
+* **Show discount percentage instead:** Swaps the fixed text for the live discount figure.
+* **Percentage Text:** The template for that figure, using `{percent}` where the number should go. Defaults to `-{percent}%`, so a quarter off reads `-25%`.
+* **Price Source:** Which price the discount is measured against. **Default Variant** uses the variant customers see first, while **Best Discount (All Variants)** advertises the biggest saving anywhere in the product.
+* **Badge Shape:** **Badge** or **Ribbon**.
+* **Position:** Which corner of the product image the badge sits in.
+
+The matching **Sale Badge** group on the **Style** tab carries **Typography**, **Background Color**, and **Text Color**.
+
+
+![Screenshot of the Sale Badge panel with Show Sale Badge switched on, alongside Badge Text, Price Source, Badge Shape, and Position controls](/images/customization-and-themes/bricks-blocks/bricks-blocks-sale-badge.webp)
+
+### Sold Out Badge
+
+**Show Sold Out Badge** marks products that have run out, so shoppers know before they click through.
+
+* **Badge Text:** Defaults to **Out of Stock**.
+* **Badge Shape:** **Badge** or **Ribbon**.
+* **Position:** Which corner of the product image the badge sits in.
+
+Styling works the same way, from the **Sold Out Badge** group on the **Style** tab.
+
+::: info
+Both badges are overlays anchored to the product image, and a discounted product can also be out of stock. Give the two badges different corners so they never land on the same spot.
+:::
+
+![Screenshot of the Sold Out Badge panel with Show Sold Out Badge switched on, alongside Badge Text, Badge Shape, and Position controls](/images/customization-and-themes/bricks-blocks/bricks-blocks-sold-out-badge.webp)
 
 ### Fields
 
+* **Fields:** The list of merge tags that build the product card, such as `{fct_product_image:link}`, `{fct_product_title:linked}`, `{fct_product_excerpt}`, `{fct_product_price}`, and `{fct_product_button}`. Reorder, remove, or click **Add Field** to bring in another.
 * **Link entire product:** Makes the whole product card clickable. It only takes effect if none of your product fields already contain a link.
+
+![Screenshot of the Fields panel listing the product card's merge tag fields, the Add Field button, and the Link entire product toggle](/images/customization-and-themes/bricks-blocks/bricks-blocks-fields.webp)
 
 ## Building a Single Product Template
 
