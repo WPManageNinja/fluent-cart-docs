@@ -33,36 +33,46 @@ The "Upgrade Paths" tab displays a table where you define the upgrade logic.
 
     ![Screenshot of Product Upgrade Paths Tab](/images/product-types-creation/define-upgrade-path/add-Upgrade-Paths.webp)
 
-### 2. Examples of Upgrade Paths
+## The Customer Upgrade Experience
 
-The table can display various configured paths, showing the flexibility of the system:
+Once your upgrade paths are set up, the actual upgrade process is entirely self-serve and effortless for your customers. The process varies slightly depending on whether they are upgrading a **subscription** or a **one-time purchase**.
 
-* **Yearly to Yearly:** Upgrade from a "Single Site Yearly License" to a "5 Sites Yearly License".
-* **Yearly to Lifetime:** Upgrade from a "Single Site Yearly License" to a "Single Site Lifetime License" (often with prorated options).
-* **Tier-to-Tier:** Moving from a lower tier to a higher tier within the same license type (e.g., 5 Sites Yearly to 50 Sites Yearly).
+### Upgrading Subscriptions and Licenses
 
-## How Customers Upgrade Their Products
+ * **Access the Dashboard:** Your customer logs into their account and clicks on the **Subscription Plans** (or Licenses) tab to see active purchases.  
 
-Once your upgrade paths are set up in the backend, the actual upgrade process is entirely self-serve and effortless for your customers. Here is exactly what they will see:
+ * **View Plan Details:** They select the specific plan they want to upgrade.
 
-* Step 1: Access the Dashboard
-Your customer logs into their account and clicks on the **Subscription Plans** (or Licenses) tab in their sidebar menu. This brings up a list of all their active purchases.
+ * **Click to Upgrade:** Right below their current billing terms, they click the **Upgrade Plan** button.
 
-* Step 2: View Plan Details
-They select the specific plan they want to upgrade (for example, "Carto App") to see their detailed subscription overview.
+ * **Choose a New Package:** An **Upgrade** options popup appears where they can review available higher-tier plans and click **Upgrade**.
 
-* Step 3: Click to Upgrade
-Right below their current billing terms and payment method, they will easily spot a prominent **Upgrade Plan** button.
+ * **Instant Checkout:** They are taken directly to the checkout page, where the order summary automatically calculates their new cost with any prorated discounts applied.
 
-* Step 4: Choose a New Package
-Clicking that button opens a simple "Upgrade Options" popup. Here, they can review the higher-tier plans you've made available, check the new price, and simply click the **Upgrade** button next to the one they want.
-
-* Step 5: Instant Checkout
-They are immediately taken to the checkout page to finalize the transaction. A friendly notice confirms what they are upgrading to, and the order summary automatically calculates their new cost—applying any prorated discounts instantly!
 
 ![Upgrade Path](/images/product-types-creation/define-upgrade-path/customer-upgrade-path.webp)
 
-:::tip Streamlined Customer Experience
-Defining clear upgrade paths simplifies the process for your customers, allowing them to easily scale their usage or commitment without complex manual intervention or needing to purchase a new product entirely.
-:::
+### Upgrading One-Time Purchases
+
+When you publish a path for a product sold as a one-time purchase, the customer handles the upgrade from their order receipt.
+
+ * **Access Purchase History:** The customer navigates to the **Purchase History** tab and opens the order containing the item.
+
+ * **Click to Upgrade:** An **Upgrade Plan** button appears directly beside the qualified item on the order details page.
+
+![Upgrade Path](/images/product-types-creation/define-upgrade-path/upgrade-3.webp)
+
+ * **Choose a New Package:** Clicking the button opens the **Upgrade** options window, allowing them to select a new package and proceed to checkout to pay the difference.
+
+### Conditions for One-Time Upgrades
+
+The button only appears on items that qualify based on three specific conditions:
+
+ - The item was bought as a one-time purchase, not as part of a subscription.
+ - The order is paid, partially paid, or partially refunded (unpaid orders show no button).
+ - The store has published an upgrade path for that exact product variation.
+
+![Upgrade Path](/images/product-types-creation/define-upgrade-path/popup-upgrade-4.webp)
+
+
 
