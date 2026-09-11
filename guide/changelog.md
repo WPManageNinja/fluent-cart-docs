@@ -37,7 +37,6 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 ```markdown [🐞 Bug fixes]
 • Fixes PayPal zero-decimal currency checkout, subscriptions, renewals, and refunds
 • Fixes Stripe zero-decimal currency subscription resync totals
-• Fixes Mollie and Authorize.Net zero-decimal currency overcharging (Pro)
 • Fixes Mollie one-off payment methods for store-managed subscriptions (Pro)
 • Fixes PayPal renewal bill counts and failed renewal email delivery
 • Fixes Duplicate charges from simultaneous admin mark-as-paid requests
