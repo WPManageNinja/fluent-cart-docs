@@ -15,7 +15,7 @@ This guide will walk you through connecting your Stripe account to FluentCart to
 2.  Click on the **Payment Settings** tab.
 3.  Locate **Stripe** in the list of payment gateways and click the **Manage** button next to it.
 
-#### Step 2: Connect Your Stripe Account
+## Step 2: Connect Your Stripe Account
 
 The Stripe settings page allows you to connect your store in both Test and Live modes. You must select the appropriate mode before initiating the connection.
 
@@ -31,7 +31,7 @@ The Stripe settings page allows you to connect your store in both Test and Live 
 FluentCart securely stores your Stripe connection information using a salt key encryption method. This ensures your informations remain fully encrypted in the database and protected from unauthorized access.
 :::
 
-#### Step 3: Choose Your Checkout Mode
+## Step 3: Choose Your Checkout Mode
 
 FluentCart gives you two different ways for customers to pay:
 
@@ -40,7 +40,29 @@ FluentCart gives you two different ways for customers to pay:
 
 ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/stripe-settings.webp)
 
-#### Step 4: Configure Webhooks
+### Hosted Checkout Customizations
+
+If you pick Stripe Hosted checkout, an additional control appears to help you tailor the payment page.
+
+* **Submit Button Label:** This sets the wording Stripe uses on the payment button and the supporting copy around it.
+  - Choose Automatic (Pay / Subscribe) to let Stripe decide the best fit based on the purchase.
+  - Alternatively, pick Pay, Book, Donate, or Subscribe to precisely match how you sell.
+
+> [!Note]
+> Not every label suits every purchase. A one-time order can use Pay, Book, or Donate, while a subscription uses Subscribe or Donate. If the chosen label does not apply, Stripe will intelligently fall back to its own wording to avoid misleading the customer.
+
+#### Itemized Orders on Hosted Checkout
+
+Hosted checkout also itemizes the order automatically. Instead of seeing one combined line named after your store, customers see each product they are buying, plus separate lines for shipping and tax. 
+
+Subscriptions break out their parts the same way—meaning a setup fee, a one-time add-on, and the recurring plan each appear under their own name. If an order cannot be broken down exactly, FluentCart falls back to a single combined line to ensure the correct total is always charged.
+
+>[!Note]
+> The Submit Button Label setting only reaches Stripe Hosted checkout. Embedded checkout renders on your own site, so its button text comes directly from your Cart & Checkout Settings.
+
+![Submit Button](/images/payments-checkout/stripe-payment/submit-button-label-3.webp)
+
+## Step 4: Configure Webhooks
 
 Webhooks are essential for the integration to function correctly. They allow Stripe to send real-time notifications to your store about payment events, such as successful charges, refunds, and subscription updates.
 
@@ -72,14 +94,14 @@ Next, type a destination name, **paste** the **webhook URL** you copied earlier 
 
    ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/create-destination.webp)
 
-#### Step 5: Activate and Save
+## Step 5: Activate and Save
 
 1.  **Payment Activation:** Back on the **FluentCart Stripe settings** page, ensure the **Payment Activation** toggle at the top right is switched on.
 2.  **Save Settings:** Click the **Save Settings** button at the bottom to finalize the setup.
 
 Your store is now configured to securely accept payments through Stripe.
 
-> **Note**
+> [!Note]
 > You can also connect your Stripe account by adding your API keys directly to your site's `wp-config.php` file for more secure setup. For detailed instructions on this advanced method, please see our guide on [**Configuring Stripe via wp-config.php**](/guide/payments-checkout/connecting-payment-gateways/configure-stripe-via-wpconfig).
 
 ## Letting Customers Save Their Card
