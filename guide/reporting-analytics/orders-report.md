@@ -38,9 +38,9 @@ Each metric also includes a percentage that indicates the increase or decrease c
 
 #### Order Chart
 
-Just below the KPIs, you’ll see the Order **Report Chart**. This bar chart gives you a clear visual of your store’s performance over time.
+Just below the KPIs, the Order Report Chart gives you a clear visual of your store’s performance over time.
 
-You can adjust the chart view to show data by month or year. By default, it’s set to the standard format. To change it, use the dropdown menu located at the top-right corner of the chart section.
+ * **Chart View Dropdown:** You can easily adjust the chart's timeline using the dropdown menu located at the top-right corner of the chart section. By default, it is set to Auto (Yearly), but you can change it to display data Daily, Monthly, or Yearly depending on how granular you need the trends to be.
 
    ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/orders-report-chart.webp)
 
