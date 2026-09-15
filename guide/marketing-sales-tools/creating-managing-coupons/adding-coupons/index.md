@@ -70,11 +70,21 @@ Sometimes, you don’t want a coupon to be used for every single thing in your s
 
 ### Recurring Coupons 
 
-FluentCart supports 100% recurring discounts for subscriptions. This means a coupon can apply not just to the first payment, but to every renewal for as long as the subscription remains active.
+FluentCart supports recurring discounts (including 100% off) for subscriptions. This means a coupon can apply not just to the first payment, but to every renewal for as long as the subscription remains active.
 
 #### Make this coupon recurring
 
 When enabled, the discount will automatically apply on each billing cycle—no manual work required.
+
+#### What Happens with a One-Time Coupon on a Subscription
+
+If you leave **Make this coupon recurring** off, the discount only applies to the first payment. Because payment gateways bill a fixed recurring price, FluentCart handles the discounted first payment differently:
+
+* The customer pays the discounted amount right away as their first payment.
+* The gateway's regular billing starts one billing cycle later, when the first full-price renewal is charged.
+* During that first cycle the subscription shows as **Trialing** in your admin, even though the customer has already paid. The customer sees it as **Active** in their account.
+
+This is expected behavior, not a free trial. Once the first renewal is charged, the status changes to **Active** in the admin as well. If you want the discount on every renewal instead, turn on **Make this coupon recurring**.
 
 #### Why Use This
 

@@ -27,6 +27,10 @@ The main dashboard is a powerful table that gives you a complete overview of eve
 * **Payment Method:** The payment gateway used for the subscription (e.g., Stripe, PayPal).
 * **Order ID:** The ID of the very first order that created this subscription.
 
+::: info Trialing after a coupon?
+If a customer used a **one-time (non-recurring) coupon** on a subscription, the subscription shows as **Trialing** for its first billing cycle even though the customer has paid. This is how FluentCart applies a one-off discount without changing the recurring price at the gateway. The status becomes **Active** after the first full-price renewal. See [one-time coupons on subscriptions](/guide/marketing-sales-tools/creating-managing-coupons/adding-coupons/#what-happens-with-a-one-time-coupon-on-a-subscription).
+:::
+
 ### Filtering and Searching Subscriptions
 
 As your subscriber base grows, finding specific subscriptions becomes essential. FluentCart provides powerful filtering tools to help you do just that.

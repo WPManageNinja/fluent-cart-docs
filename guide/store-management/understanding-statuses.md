@@ -70,7 +70,7 @@ These statuses track the lifecycle of a customer subscription.
 |---|---|
 | `pending` | The subscription is created but waiting for the first payment to become active. |
 | `intended` | An early state before a subscription becomes pending. |
-| `trialing` | The subscription is in a trial period. |
+| `trialing` | The subscription is in a trial period. A subscription also shows as `trialing` for its first billing cycle when a one-time (non-recurring) coupon was used at checkout, even though the customer has paid. |
 | `active` | The subscription is currently active. |
 | `canceled` | The subscription has been canceled. |
 | `paused` | The subscription is temporarily paused. |
