@@ -88,3 +88,7 @@ On the main **Order Bumps** screen, you can manage all your existing offers:
 * **Checkout View:** Once active, the offers appear on your store's checkout page, clearly labeled (e.g., **Recommended**) with the title, description, and discount, ready for the customer to accept with a single click.
 
 ![Order Bump](/images/store-management/order-bump/order-bump-5.webp)
+
+::: info
+Some integrations lock the checkout to a single item, for example a booking that must not be swapped or removed. Bumps stay hidden on those locked checkouts unless the integration explicitly opts in to them, in which case the customer can still accept a matching offer alongside the locked item. Developers can find the `fluent_cart/cart/accepts_additional_items` hook that controls this at [dev.fluentcart.com](https://dev.fluentcart.com/).
+:::
