@@ -157,6 +157,18 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Purpose:** Read/write of every settings page payload (store, payment, cart, email, licensing).
 - **Drives docs:** `guide/settings-configuration/*.md` — re-read the matching page when this controller's payload shape changes.
 
+### app/Services/Theme/ (Storefront Appearance) — *on branch `feat/storefront-appearance-colours` until merged*
+- **Purpose:** Store-owner control of the storefront colour palette: keep defaults, inherit from the block theme, or customise 20 global `--fct-*` colours, with a live admin preview.
+- **Key files:** `ColorPalette.php` (registry = single source of truth for CSS, schema, sanitizer; filter `fluent_cart/theme/color_globals`), `ThemePalette.php` (reads theme.json palette, maps 4 anchors → roles, derives tones, WCAG button text), `ColorMath.php`, `FrontendTheme.php` (prints at `wp_head:100`), schema in `api/StoreSettings.php::getAppearanceSchema()`, Vue `resources/admin/Bits/Components/Form/Components/StoreSettings/Appearance{Component,Preview}.vue`, route `/settings/store-settings/appearance`.
+- **User-facing surface:** Store Settings > **Appearance** tab. Keys `appearance_source` (`default`/`inherit_from_theme`/`customize`) + `appearance_colors`. Reset is an icon-only button; per-field default hints exist in PHP but are not rendered.
+- **Drives docs:** `guide/settings-configuration/appearance.md`; cross-ref callout on `customization-and-themes/advanced-customization-using-css.md`.
+- **Last fully audited:** unreleased branch @ `a6cb9896b` (Sep 18 2026)
+
+### app/Services/DateTime/DateFormatter.php
+- **Purpose:** Every user-facing date renders through here using two Store Setup settings: `date_time_format_source` (`wordpress` default / `fluent_cart` = "Smart") and `timezone_source` (`fluent_cart` default = "Browser" / `wordpress`).
+- **Drives docs:** `guide/settings-configuration/store-settings.md` §7.
+- **Last fully audited:** develop @ `b94513421` (post-1.6.4, Sep 18 2026)
+
 ### app/Http/Controllers/Reports/
 - **Purpose:** Report data endpoints (sales, customer, product, subscription).
 - **Drives docs:** `guide/reporting-analytics/*.md`
