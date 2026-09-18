@@ -48,6 +48,7 @@ Below the address fields you'll find the **Business Details** block — your leg
 * **Company Name:** Your registered business name as it should appear on receipts and invoices.
 * **Legal Registration ID:** Your company registration number (Companies House number in the UK, state filing number in the US, etc.). Shown on PDF receipts where local rules require business identification.
 * **Seller VAT ID:** Your store's EU VAT registration number. Appears in PDF receipts and is rendered into the <code v-pre>{{order.store_vat_display}}</code> smart tag for email templates. Use this field if you collect EU VAT — see [Configuring European Union (EU) VAT](/guide/tax-&-duties/european-union-vat) for how the VAT ID ties into reverse-charge handling.
+* **Seller Tax ID:** Any other tax registration number your store operates under, such as a US EIN, an Australian ABN, or a GST number. It is available to receipts, invoices, and email templates through the <code v-pre>{{settings.seller_tax_id}}</code> and <code v-pre>{{order.store_seller_tax_id}}</code> smart tags, and FluentCart Pro includes it in the seller block of PDF invoices.
 
 ![Screenshot of Store Settings - Business Details block](/images/settings-configuration/store-setting/store-business-tax.webp)
 
