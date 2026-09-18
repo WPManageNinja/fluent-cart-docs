@@ -5,6 +5,34 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+<<<<<<< Updated upstream
+=======
+## Unreleased (post-1.6.4) — Sep 18, 2026
+- **Trigger:** user asked what shipped after the last public release, then to document it with real screenshots from `cart.local`.
+- **Range:** core `1.6.4..HEAD` on `develop` (`b94513421`, 18 commits / 144 files). **Note: the clone's default branch is now `develop`, not `development`** (CLAUDE.md §10 still says `development`). Plus the **unmerged** branch `feat/storefront-appearance-colours` (5 commits, +5128, last commit `a6cb9896b` Sep 9; merge-base predates the date/time work, so it does NOT contain the develop-only changes below).
+- **Key finding: Date & Time Format / Timezone are two NEW Store Setup settings**, not just a reorder. `0c76956e8` (#2592) adds `date_time_format_source` (`wordpress` default = follow Settings → General via `wp_date()`; `fluent_cart` = "Smart", keeps the literal `M j, Y` / `M d, Y h:i A` patterns) and `timezone_source` (`fluent_cart` default = "Browser": admin/dashboard in viewer TZ, emails/invoices in the order's checkout-captured `user_tz`, UTC fallback; `wordpress` = site TZ). `c8f471727` only moves both grids after Payment View. Engine: `app/Services/DateTime/DateFormatter.php`; filters `fluent_cart/date_time_strings`, `fluent_cart/date_time_separator`. English stores see `Aug 16, 2026` → `August 16, 2026` on upgrade.
+- **Key finding: the Search Help "description" field is old** (`d538c0381`, in 1.3.20). `6fc01d850` (#1409) only adds the **Wildcard Matching** section + better SKU examples to `TableNew/SearchGuide.vue`. The dialog is reached via the search icon → **Search Help** link under the field (not a visible input).
+- **Key finding: order bumps on locked carts is a hook only.** `b94513421` adds `fluent_cart/cart/accepts_additional_items` (`Models/Cart.php:327`); core does NOT opt FluentBooking in itself, so no customer-facing claim was made on the FluentBooking page.
+- **Storefront Appearance (branch):** `api/StoreSettings.php::getAppearanceSchema()`, `app/Services/Theme/{ColorPalette,ThemePalette,ColorMath,FrontendTheme}.php`, Vue `Bits/Components/Form/Components/StoreSettings/Appearance{Component,Preview}.vue`, route `/settings/store-settings/appearance`. Keys `appearance_source` (`default` | `inherit_from_theme` | `customize`) + `appearance_colors`. **20 globals** (commit msg says nineteen; registry has 20), groups Text / Backgrounds and borders / Buttons / Form inputs. Per-field `note`/`default` exist in PHP but the Vue does not render them. Reset is an icon-only `.fct-reset-color-btn`. Filter `fluent_cart/theme/color_globals`. Twenty Twenty-Five publishes 7 palette colours; Astra/Kadence/GeneratePress emit `var(--…)` refs the preview can't resolve.
+- **Doc pages created (sidebar entry added under Store Settings):**
+  - `guide/settings-configuration/appearance.md` — full page, 7 screenshots incl. a before/after storefront composite
+- **Doc pages updated:**
+  - `guide/settings-configuration/store-settings.md` — new `### 7. Date & Time Format and Timezone`, Units renumbered to 8, intro updated; `store-settings-setup.webp` regenerated
+  - `guide/settings-configuration/index.md` — Appearance entry
+  - `guide/customization-and-themes/advanced-customization-using-css.md` — info callout pointing to the Appearance tab (existing `--fct-card-bg` vs registry `--fct-card-bg-color` mismatch left as-is, unverified)
+  - `guide/product-types-creation/product-list-overview.md` — new `### 3. Searching with Operators and Wildcards`
+  - `guide/store-management/orders-management/order-bump.md` — info callout on locked checkouts (hook-level, no integration named)
+  - `guide/changelog.md` — **NOT touched**: no version number or date exists yet
+- **Screenshot pipeline (new, reusable):** Claude-in-Chrome could not reach `cart.local` (extension bound to a different device), and `osascript`/System Events clicking was blocked by Accessibility permission. What worked: **headless Playwright** (`playwright-core` from the plugin's `node_modules`, launching `/Applications/Google Chrome.app`) at 1600px / DSF 2, logging in with admin/admin, hiding WP chrome via `visibility:hidden` and clipping at `x:160,y:32`, then `sharp` composites brand-blue (`#00009F`) curved arrows + webp export. **Now productised:** `scripts/screenshots/` (`shoot.cjs` runner + `lib/harness.cjs` + `lib/annotate.cjs`), declarative plans in `scripts/screenshots/plans/` (`store-setup.json`, `products-search.json`, `appearance.json` — all three re-run cleanly and reproduce today's images), `scripts/screenshots/plugin-branch.sh` for unreleased branches, `npm run shots`, and the skill `.claude/skills/fluentcart-doc-screenshots/SKILL.md` (referenced from CLAUDE.md §12, doc-writer §3.6, code-to-docs §6). `npm run build` in the plugin resets `config/app.php` to `env=production, using_faker=false` and dirties `vendor/composer/autoload_*` — `plugin-branch.sh` snapshots/restores the former and discards the latter.
+- **Storefront facts:** product slug is `item` (`/item/noteplus/` is a simple $90 digital product with a buy section; Zipper Hoodie has no buy section). `/shop/` is WooCommerce, `/products/` is EDD, `/shop-2/` is the FluentCart shop archive; the site is in "coming soon" mode so front-end shots need a logged-in session.
+- **Open questions carried forward:**
+  - Merge status of `feat/storefront-appearance-colours` — page is written; verify nothing changed once it lands, then add the changelog line
+  - CLAUDE.md §10 default branch (`development` → `develop`)
+  - Sibling branch `feat/storefront-photos-on-submit` not reviewed
+
+---
+
+>>>>>>> Stashed changes
 ## v1.6.2 — Aug 20, 2026
 - **Trigger:** user pasted the 1.6.2 changelog (46 entries) and asked for a gap analysis, then for all resulting docs to be written with screenshots tracked as a TODO.
 - **Range:** core `1.6.1..HEAD` (`971404358`, `development`) — 93 commits. **Core clone still reports `FLUENTCART_VERSION 1.6.1`**, so the version bump had not landed locally; several changelog lines could not be verified in this clone. Pro at `0c7b7ad5` (`development`).

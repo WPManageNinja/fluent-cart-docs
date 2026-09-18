@@ -64,6 +64,7 @@ npm run docs:build         # Production build → .vitepress/dist/
 npm run docs:clean-build   # Wipe .vitepress/cache + .vitepress/dist, then build
 npm run docs:preview       # Preview the built site
 npm run featured:generate  # Generate branded OG images for doc pages
+npm run shots -- scripts/screenshots/plans/<plan>.json   # Take doc screenshots from cart.local (see §12)
 ```
 
 There is **no** lint, no typecheck, no test command. Don't invent ones.
@@ -94,6 +95,7 @@ There is **no** lint, no typecheck, no test command. Don't invent ones.
 - Store: `guide/public/images/<section>/<subsection>/<file>.webp`
 - Reference: `![Descriptive alt text](/images/<section>/<subsection>/<file>.webp)`
 - Prefer `.webp`. Always include meaningful alt text (existing convention is `Screenshot of <thing>`).
+- **Never take screenshots by hand.** Every screenshot comes from the headless runner described in §12 and the `fluentcart-doc-screenshots` skill, so framing, scale, and arrows stay identical across the site.
 
 ### 4.5 Bold formatting (existing convention — match it)
 - UI navigation paths: `**FluentCart Pro → Integrations**`
@@ -186,7 +188,7 @@ When a request requires reading the FluentCart **plugin source code** (e.g. "upd
 ```
 /Users/authlab-24/Desktop/fluent-cart
 ```
-Default branch is `development`. Tags are plain numbers (`1.3.27`), no `v` prefix. The plugin clone is **read-only** from this session — never edit, commit, or push to it.
+Default branch is `develop` (it was `development` before Sep 2026). Tags are plain numbers (`1.3.27`), no `v` prefix. The plugin clone is **read-only** from this session — never edit, commit, or push to it.
 
 **Helper scripts** under `scripts/plugin/`:
 
@@ -225,3 +227,17 @@ Every doc page under `guide/` gets an auto-generated 1200×630 branded PNG (used
 - Naming rule: `<section>` = first folder under `guide/`; `<page-slug>` = filename without `.md`. `index.md` directly under a section becomes `<section>--index.png`; a **nested** `index.md` (more than one level deep) gets the intervening path folded into the slug (e.g. `guide/settings-configuration/roles-permissions/index.md` → `settings-configuration--roles-permissions-index.png`) to avoid collisions with sibling nested indexes — see the `buildNameParts()` comment in the script for the exact rule. Any code that re-derives this filename (e.g. `.vitepress/config.mjs`, the on-page hero component) must replicate that full rule, not just the simple case.
 - `guide/changelog.md` and everything under `guide/public/` are excluded.
 - The on-page hero (`.vitepress/theme/components/FeaturedImage.vue`, registered in the `doc-before` slot in `.vitepress/theme/Layout.vue`) computes the same URL client-side and hides itself on 404; toggle it off everywhere by flipping `SHOW_FEATURED_HERO` to `false` in `Layout.vue`.
+
+---
+
+## 12. Screenshot workflow (dev site → docs)
+
+Whenever a page needs an image of a FluentCart screen, load the skill **`fluentcart-doc-screenshots`** and follow it end to end. Summary of the contract it enforces:
+
+- **Source:** the local dev site `http://cart.local` (`admin`/`admin`), whose plugin folder is a symlink to `/Users/authlab-24/Desktop/fluent-cart`. Whatever branch that clone is on is what the site renders; Vue changes need `npm run build` there.
+- **Tooling:** `scripts/screenshots/shoot.cjs` drives the real Google Chrome headlessly through `playwright-core` (resolved from this repo or the plugin's `node_modules`). It logs in, hides the WordPress bar and menu, clips to the FluentCart app (`x:160, y:32`) or to an element / settings row, draws brand-blue (`#00009F`) arrows with `sharp`, and writes `.webp` (q82) straight into `guide/public/images/<section>/<sub>/`. Viewport 1600 px, DSF 2 → ~2880 px images, the same scale as the existing library.
+- **Input:** a JSON plan in `scripts/screenshots/plans/<page-slug>.json` (step vocabulary documented at the top of `shoot.cjs`; three worked examples ship in that folder). Plans are kept as regression fixtures; re-run them after a release to refresh stale images.
+- **Unreleased UI:** `./scripts/screenshots/plugin-branch.sh <branch>` switches the plugin clone and rebuilds; **always** finish with `./scripts/screenshots/plugin-branch.sh --restore`. The plugin's own build resets `config/app.php` and dirties `vendor/composer/autoload_*`; the script snapshots/restores the former and discards the latter.
+- **Never** use the Claude-in-Chrome extension or macOS `screencapture` for this: the extension is attached to a different device and cannot resolve `cart.local`; screen capture grabs overlapping windows and needs OS permissions the CLI does not have.
+- **Verify** every produced image with the Read tool before referencing it (no WP chrome, control fully framed, arrow not covering text, sane size), then `npm run docs:build`.
+
