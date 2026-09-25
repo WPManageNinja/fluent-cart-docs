@@ -16,5 +16,6 @@ This section covers the following critical areas:
 * **[Roles & Permissions](/guide/settings-configuration/roles-permissions):** Define and assign different user roles with specific access levels within your FluentCart store.
 * **[Storage Settings](/guide/settings-configuration/storage-settings):** Configure where your digital product files and other assets are stored, including local and cloud (S3) options.
 * **[Licensing Settings (FluentCart Product License)](/guide/settings-configuration/licensing-settings):** Activate your FluentCart plugin license key to ensure regular updates and access to premium features.
+* **[Compliance Settings](/guide/settings-configuration/compliance-settings):** Control whether new customer accounts are logged in automatically after creation.
 
 By thoroughly configuring these settings, you can ensure your FluentCart store runs exactly as you intend.

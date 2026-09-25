@@ -23,7 +23,7 @@ To ensure you receive the quickest and most effective assistance, please follow 
     * **Error Messages:** If you see any error messages on your screen or in your WordPress debug log, copy and paste them.
     * **Relevant Log Entries:** Check your FluentCart [Logs](/guide/troubleshooting-support/understanding-logs) screen for any "Warning" or "Failed" entries related to the issue and include them.
     * **Your WordPress Version.**
-    * **Your FluentCart Plugin Version.**
+    * **Your FluentCart Plugin Version.** You'll find this at the bottom of any FluentCart admin screen.
     * **Any Other Plugins Active on Your Site:** List them, especially if they are related to e-commerce, payments, or forms.
 
 4.  **Support Hours:**
