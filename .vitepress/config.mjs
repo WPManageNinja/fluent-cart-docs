@@ -601,7 +601,8 @@ export default defineConfig({
                 { text: 'Customer Sites (Pro)', link: '/guide/settings-configuration/managing-licensing-sites' }
               ]
             },
-            { text: 'Withdrawal (EU)', link: '/guide/settings-configuration/withdrawal-eu' }
+            { text: 'Withdrawal (EU)', link: '/guide/settings-configuration/withdrawal-eu' },
+            { text: 'Compliance Settings', link: '/guide/settings-configuration/compliance-settings' }
           ]
         },
         {
