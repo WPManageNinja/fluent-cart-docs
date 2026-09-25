@@ -61,7 +61,7 @@ The groups and what each color drives:
 * **Form inputs**
     * **Input background**, **Input text**, **Placeholder text**, and **Disabled input background:** The fields on the checkout, address forms, and customer dashboard.
 
-To set a color, click a picker, choose a color or type a hex value such as `#00009F`, and confirm. The preview repaints as soon as the value is applied, so you can see a button or border change before saving. Click the **×** on a picker to clear that single color.
+To set a color, click a picker's swatch to choose visually, or type a hex value such as `#00009F` directly into its text field. Either way the preview repaints as soon as the value is valid, so you can see a button or border change before saving. Click the **×** on a picker to clear that single color.
 
 To start over, click the **Reset all colors** icon (the circular arrow) at the top right of the picker list. It empties every picker, which is the same as never having set one. Like every other change on this tab, the reset takes effect when you save.
 
@@ -80,5 +80,7 @@ Here is the same product page before and after switching to **Customize** with a
 ::: info
 The Appearance tab covers the global colors that the rest of the storefront cascades from. If you need to restyle a single element, or adjust spacing, radius, or typography, you can still override FluentCart's [CSS variables](/guide/customization-and-themes/advanced-customization-using-css) directly. Anything you set on this tab is written to the page as those same variables, so your custom CSS can build on top of it.
 :::
+
+When you accept card payments through the embedded [Stripe](/guide/payments-checkout/connecting-payment-gateways/stripe-settings) checkout, its payment form picks up your input background, input text, and primary background colors too, so it doesn't look out of place next to the rest of your branded checkout.
 
 Your storefront now reflects the colors you chose, and every page that shares them stays consistent.
