@@ -24,6 +24,10 @@ This is a crucial setting that defines how customer accounts are handled during 
 * **Give checkbox to create account on checkout page:** This adds an "Create an account?" checkbox to the checkout page. It gives customers the choice, balancing the benefits of account creation with the convenience of a faster checkout.
 * **No need to create account for onetime purchases:** This enables a full **"guest checkout"** experience for non-subscription products. It offers the lowest possible friction for new or one-time buyers and can significantly reduce cart abandonment.
 
+::: info
+Whichever mode creates the account, whether it's signed in right away or asked to set a password first is a separate choice. See [Compliance Settings](/guide/settings-configuration/compliance-settings).
+:::
+
 #### Hide coupon field on checkout
 
 Enable this option to remove the coupon code input field from the checkout page. This can be a strategic move to prevent customers from leaving your site to search for discount codes, a common cause of cart abandonment.

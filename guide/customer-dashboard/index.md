@@ -4,6 +4,18 @@ Tired of answering emails from customers asking for their past orders or downloa
 
 Ensure you have set the Customer Dashboard page from **FluentCart Pro** > **Settings** > **Pages Setup**, and your users can access their dashboard on that particular page. For detailed instructions on setting this up, please refer to our [Pages Setup documentation](/guide/settings-configuration/pages-setup).
 
+## Confirming Your Email Address
+
+Before a customer's dashboard shows any orders, subscriptions, or profile data, FluentCart asks them to confirm the email address on their account. This proves the account actually owns that inbox before it can see purchase history tied to it.
+
+The first time a customer opens the dashboard without a confirmed address, they see a **Confirm your email address** notice instead of their usual dashboard content, with a button to send the confirmation email. Once they open the link from their inbox and confirm, the dashboard unlocks immediately.
+
+If the customer had bought something as a guest with that same email before creating an account, confirming also brings that purchase history into their account. Small histories are recovered right away; larger ones finish in the background, and the customer can keep using their dashboard while that happens.
+
+::: info
+This confirmation step also runs again if a customer's account email changes and no longer matches their stored purchase records, so their history always stays tied to a proven address. Checkout itself is unaffected. Guests can still buy without creating or confirming anything.
+:::
+
 ## Key Sections of the Customer Dashboard
 
 When a customer logs in, they'll see a quick summary of their activity. From there, they can dive into several key sections to manage their account:
