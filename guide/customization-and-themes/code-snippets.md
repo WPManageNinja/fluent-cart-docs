@@ -234,6 +234,18 @@ add_action('init', function () {
 
 If you use `render_callback`, FluentCart will display the callback output for the menu item. If you want to show a specific WordPress page instead, skip the `render_callback` method and provide the `page_id`.
 
+### Turn Off Email Confirmation and Guest Purchase Recovery
+
+By default, a new customer account must confirm its email address before the customer dashboard shows any account data, and confirming brings in any guest purchases made earlier with that same address. If this conflicts with your own registration flow, this filter turns the whole gate off.
+
+```php
+add_filter('fluent_cart/customer/enable_email_claim', '__return_false');
+```
+
+::: info
+With the gate off, an account whose email diverges from its customer record keeps that mismatch until a staff member resolves it, and guest purchases are never offered for automatic recovery.
+:::
+
 ## Product Pricing
 
 ### Add a Suffix Next to Prices
@@ -251,6 +263,23 @@ The `$context` array gives you `product`, `variant`, and `scope`, so you can var
 ::: info
 If your tax settings already display a tax suffix, FluentCart sets one for you and your filter runs afterwards, so whatever you return wins. See [Tax Configuration and Classes](/guide/tax-&-duties/configuration-and-classes) for the built-in tax display options, which cover most stores without any code.
 :::
+
+## Appearance
+
+### Override the Colors Stripe's Payment Form Uses
+
+When your [Appearance](/guide/settings-configuration/appearance) source is set to inherit from your theme or to a custom palette, FluentCart derives a matching background, text, and accent color for the embedded Stripe payment form automatically. Use this filter to override that result, or to set your own colors when the source is FluentCart's own default.
+
+```php
+add_filter('fluent_cart/stripe_appearance', function ($appearance) {
+    $appearance['theme'] = 'night';
+    $appearance['variables']['colorPrimary'] = '#7c3aed';
+
+    return $appearance;
+}, 10, 1);
+```
+
+The filter receives Stripe's [Appearance API](https://docs.stripe.com/elements/appearance-api) configuration array (`theme` plus `variables`) and expects the same shape back. Anything you don't touch, including a value FluentCart already derived from the palette, is left as is.
 
 ## Attribution
 
