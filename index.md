@@ -17,47 +17,47 @@ layout: home
 </div>
 
 <div class="home-features">
-  <div class="feature-card">
+  <a href="/guide/getting-started/installation-activation.html" class="feature-card">
     <div class="feature-icon">🚀</div>
     <h3>Getting Started</h3>
     <p>Learn the basics of FluentCart and set up your first store</p>
-    <a href="/guide/getting-started/installation-activation.html" class="feature-link">Get Started →</a>
-  </div>
+    <span class="feature-link">Get Started →</span>
+  </a>
 
-  <div class="feature-card">
+  <a href="/guide/store-management/" class="feature-card">
     <div class="feature-icon">🛍️</div>
     <h3>Store Management</h3>
     <p>Manage products, orders, and customers efficiently</p>
-    <a href="/guide/store-management/" class="feature-link">Learn More →</a>
-  </div>
+    <span class="feature-link">Learn More →</span>
+  </a>
 
-  <div class="feature-card">
+  <a href="/guide/product-types-creation/" class="feature-card">
     <div class="feature-icon">📦</div>
     <h3>Inventory & Products</h3>
     <p>Handle inventory and create different product types</p>
-    <a href="/guide/product-types-creation/" class="feature-link">Explore →</a>
-  </div>
+    <span class="feature-link">Explore →</span>
+  </a>
 
-  <div class="feature-card">
-    <div class="feature-icon">💳</div>
-    <h3>Payments & Shipping</h3>
-    <p>Set up payment gateways and shipping methods</p>
-    <a href="/guide/payments-checkout/" class="feature-link">Configure →</a>
-  </div>
-
-  <div class="feature-card">
+  <a href="/guide/reporting-analytics/" class="feature-card">
     <div class="feature-icon">📊</div>
     <h3>Analytics & Reports</h3>
     <p>Track your store's performance and growth</p>
-    <a href="/guide/reporting-analytics/" class="feature-link">View Reports →</a>
-  </div>
+    <span class="feature-link">View Reports →</span>
+  </a>
 
-  <div class="feature-card">
-    <div class="feature-icon">🛠️</div>
-    <h3>Developer Docs</h3>
-    <p>Extend FluentCart with custom functionality</p>
-    <a href="https://dev.fluentcart.com/" class="feature-link">Start Coding →</a>
-  </div>
+  <a href="/guide/customization-and-themes/theme-compatibility" class="feature-card">
+    <div class="feature-icon">🎨</div>
+    <h3>Customization and Themes</h3>
+    <p>Adapt your storefront's look with themes, blocks, and custom code</p>
+    <span class="feature-link">Customize →</span>
+  </a>
+
+  <a href="/guide/tax-&-duties/tax-&-duties-overview" class="feature-card">
+    <div class="feature-icon">🧾</div>
+    <h3>Tax & Duties</h3>
+    <p>Configure tax rates, classes, and regional compliance</p>
+    <span class="feature-link">Set Up Tax →</span>
+  </a>
 </div>
 
 <style>
@@ -78,9 +78,11 @@ layout: home
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(120deg, var(--vp-c-brand), var(--vp-c-brand-light));
+  background: linear-gradient(120deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: var(--vp-c-brand-1);
 }
 
 .hero-description {
@@ -96,17 +98,21 @@ layout: home
   padding: 2rem 0;
 }
 
-.feature-card {
+.home-features .feature-card {
+  display: block;
   background: var(--vp-c-bg-soft);
   border-radius: 8px;
   padding: 2rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 1px solid var(--vp-c-border);
+  color: inherit;
+  text-decoration: none;
 }
 
-.feature-card:hover {
+.home-features .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  color: inherit;
 }
 
 .feature-icon {
@@ -126,15 +132,15 @@ layout: home
 }
 
 .feature-link {
-  color: var(--vp-c-brand);
+  color: var(--vp-c-brand-1);
   text-decoration: none;
   font-weight: 500;
   display: inline-block;
   transition: color 0.2s ease;
 }
 
-.feature-link:hover {
-  color: var(--vp-c-brand-light);
+.feature-card:hover .feature-link {
+  color: var(--vp-c-brand-2);
 }
 
 @media (max-width: 768px) {
