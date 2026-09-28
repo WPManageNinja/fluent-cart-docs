@@ -26,13 +26,23 @@ This is the default. The storefront keeps the colors FluentCart ships with, and 
 
 Select this card to rebuild the storefront palette from your active WordPress theme. FluentCart reads the colors the theme publishes, maps them onto the storefront's surfaces, text, accent, and button roles, and derives the in-between tones no theme declares on its own, such as hairlines, dividers, muted captions, hover tints, and placeholder text. Button text is chosen for contrast against the button color, so a pale brand color still produces readable buttons. If you later switch themes, the storefront follows the new theme automatically.
 
+This only pulls the theme's color palette. It does not import fonts, spacing, layout, or any other styling, so the rest of the storefront's design stays exactly as FluentCart built it.
+
 The card's description tells you how many palette colors your current theme provides. In the example below, Twenty Twenty-Five publishes seven, and the preview on the right immediately picks up the theme's black buttons and yellow accent.
 
 ![Screenshot of the Appearance tab with Inherit from the active theme selected and the preview showing the theme's colors](/images/settings-configuration/appearance/appearance-inherit-theme.webp)
 
-::: info
-Some themes, including Astra, Kadence, and GeneratePress, publish their palette as CSS variables rather than as fixed colors. FluentCart passes those straight through and your storefront renders them correctly, but the admin preview cannot resolve them, so it shows FluentCart's own colors in their place and tells you why. If a theme publishes nothing FluentCart can use, the storefront simply keeps its default colors.
-:::
+How closely the result matches your theme's colors depends on what color information that theme publishes:
+
+| Theme type | How FluentCart reads it |
+|---|---|
+| Any theme that publishes a color palette to WordPress: all block themes (Twenty Twenty-Three, Twenty Twenty-Four, Twenty Twenty-Five, and other full-site editing themes), classic themes that register an editor palette, and GeneratePress | FluentCart reads the palette and matches common color roles, such as base, contrast, primary, and accent, to FluentCart's own colors. GeneratePress publishes its colors as live references rather than fixed values, so the live storefront always picks them up correctly, but the admin preview may show FluentCart's own colors in the meantime. |
+| Block themes that set button colors in the site editor, including the hover state | FluentCart reads those button colors directly. |
+| Astra and Kadence | FluentCart resolves the theme's colors to their actual values through the theme's own settings, so the admin preview and the live storefront match. |
+| Blocksy | FluentCart estimates which of the theme's colors to use. The live storefront renders correctly, but the admin preview may fall back to FluentCart's own colors in the meantime. |
+| Divi and Bricks | Neither theme publishes colors FluentCart can read, so the storefront keeps FluentCart's default colors. |
+
+If your theme isn't covered by any of these, or you'd rather not rely on guesswork, switch to **Customize** and set the colors yourself.
 
 ### 3. Customize
 

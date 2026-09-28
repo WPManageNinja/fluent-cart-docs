@@ -268,7 +268,7 @@ If your tax settings already display a tax suffix, FluentCart sets one for you a
 
 ### Override the Colors Stripe's Payment Form Uses
 
-When your [Appearance](/guide/settings-configuration/appearance) source is set to inherit from your theme or to a custom palette, FluentCart derives a matching background, text, and accent color for the embedded Stripe payment form automatically. Use this filter to override that result, or to set your own colors when the source is FluentCart's own default.
+When your [Appearance](/guide/settings-configuration/appearance) source is set to inherit your theme's color palette or to a custom palette, FluentCart derives a matching background, text, and accent color for the embedded Stripe payment form automatically. Use this filter to override that result, or to set your own colors when the source is FluentCart's own default.
 
 ```php
 add_filter('fluent_cart/stripe_appearance', function ($appearance) {
