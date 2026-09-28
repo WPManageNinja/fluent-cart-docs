@@ -41,7 +41,7 @@ FluentCart gives you two different ways for customers to pay:
 ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/stripe-settings.webp)
 
 ::: info
-Embedded checkout's card fields automatically match your storefront's [Appearance](/guide/settings-configuration/appearance) colors when you use **Inherit from the active theme** or **Customize**. If your theme only publishes its palette as CSS variables, which Stripe's payment form cannot read, the fields keep Stripe's own default look instead.
+Embedded checkout automatically matches your storefront's [Appearance](/guide/settings-configuration/appearance) colors when you use **Inherit from the active theme** or **Customize**, both on the card fields and on the Card, Bank, Cash App Pay, and Klarna payment-method tabs. If your theme only publishes its palette as CSS variables that Stripe's payment form cannot read, the fields keep Stripe's own default look instead.
 :::
 
 ### Hosted Checkout Customizations

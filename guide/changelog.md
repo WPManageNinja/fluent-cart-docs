@@ -1,6 +1,22 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.6.6
+*Released on Sep 25, 2026*
+
+::::: code-group
+
+```markdown [⚡ Improvements]
+• Improves Theme support for Astra, Blocksy, Kadence, Divi, GeneratePress, Bricks, and more
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Stripe wallet checkout issue for Apple Pay
+• Fixes Stripe payment-method tabs not matching the storefront button color
+```
+
+:::::
+
 ## FluentCart v1.6.5
 *Released on Sep 24, 2026*
 
@@ -49,7 +65,7 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 • Fixes Order bump removal affecting booking items
 ```
 
-::::
+:::::
 
 ## FluentCart v1.6.4
 *Released on Sep 11, 2026*
