@@ -88,11 +88,11 @@ class Harness {
 
   // Any front-end URL (path or absolute). Logged in by default because the dev
   // store sits in "coming soon" mode for visitors.
-  async gotoFront(url, { hideThemeHeader = true, login = true } = {}) {
+  async gotoFront(url, { hideThemeHeader = true, login = true, waitUntil = 'networkidle' } = {}) {
     if (login && !this.loggedIn) await this.login();
     const p = this.page;
     const full = /^https?:/.test(url) ? url : this.o.site + url;
-    await p.goto(full, { waitUntil: 'networkidle', timeout: 90000 });
+    await p.goto(full, { waitUntil, timeout: 90000 });
     await p.waitForTimeout(1200);
     await p.addStyleTag({ content: `
       #wpadminbar { display: none !important; } html { margin-top: 0 !important; }
