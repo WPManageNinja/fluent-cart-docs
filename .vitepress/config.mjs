@@ -675,6 +675,7 @@ export default defineConfig({
           items: [
             { text: 'Understanding Logs', link: '/guide/troubleshooting-support/understanding-logs' },
             { text: 'Common Issues & FAQs', link: '/guide/troubleshooting-support/common-issues-faqs' },
+            { text: 'Caching and Optimization Exclusions', link: '/guide/troubleshooting-support/caching-exclusions' },
             { text: 'How to Get Support', link: '/guide/troubleshooting-support/how-to-get-support' }
           ]
         }
