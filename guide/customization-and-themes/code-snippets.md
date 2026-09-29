@@ -236,14 +236,14 @@ If you use `render_callback`, FluentCart will display the callback output for th
 
 ### Turn Off Email Confirmation and Guest Purchase Recovery
 
-By default, a new customer account must confirm its email address before the customer dashboard shows any account data, and confirming brings in any guest purchases made earlier with that same address. If this conflicts with your own registration flow, this filter turns the whole gate off.
+When **Customer email verification** is set to **Required** in Compliance Settings (it is off by default), a new customer account must confirm its email address before the dashboard shows any account data, and confirming brings in any guest purchases made earlier with that same address. If this conflicts with your own registration flow, this filter turns off the confirmation and recovery flow.
 
 ```php
 add_filter('fluent_cart/customer/enable_email_claim', '__return_false');
 ```
 
 ::: info
-With the gate off, an account whose email diverges from its customer record keeps that mismatch until a staff member resolves it, and guest purchases are never offered for automatic recovery.
+With the filter off, an account whose email diverges from its customer record keeps that mismatch until a staff member resolves it, and guest purchases are never offered for automatic recovery. The filter does not switch off the setting itself, so with verification still set to **Required**, unconfirmed accounts remain locked out of the dashboard.
 :::
 
 ## Product Pricing
