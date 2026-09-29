@@ -1,6 +1,19 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.7.0
+*Released on Sep 29, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Product Reviews with star ratings, verified purchase badges, moderation, store replies, customer review management, and configurable review settings
+• Adds Product schema (JSON-LD) on the product page, with offers, aggregate rating, and reviews, for rich results in search
+• Adds Compliance settings to disable customer email verification
+```
+
+:::::
+
 ## FluentCart v1.6.6
 *Released on Sep 25, 2026*
 
