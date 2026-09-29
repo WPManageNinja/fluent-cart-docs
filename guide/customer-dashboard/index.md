@@ -6,14 +6,14 @@ Ensure you have set the Customer Dashboard page from **FluentCart Pro** > **Sett
 
 ## Confirming Your Email Address
 
-Before a customer's dashboard shows any orders, subscriptions, or profile data, FluentCart asks them to confirm the email address on their account. This proves the account actually owns that inbox before it can see purchase history tied to it.
+If you set **Customer email verification** to **Required** in [Compliance Settings](/guide/settings-configuration/compliance-settings), FluentCart asks customers to confirm the email address on their account before the dashboard shows any orders, subscriptions, or profile data. This proves the account actually owns that inbox before it can see purchase history tied to it. By default this is off: customers reach their dashboard directly, and earlier guest purchases with the same email attach automatically.
 
-The first time a customer opens the dashboard without a confirmed address, they see a **Confirm your email address** notice instead of their usual dashboard content, with a button to send the confirmation email. Once they open the link from their inbox and confirm, the dashboard unlocks immediately.
+With verification required, the first time a customer opens the dashboard without a confirmed address, they see a **Confirm your email address** notice instead of their usual dashboard content, with a button to send the confirmation email. Once they open the link from their inbox and confirm, the dashboard unlocks immediately.
 
 If the customer had bought something as a guest with that same email before creating an account, confirming also brings that purchase history into their account. Small histories are recovered right away; larger ones finish in the background, and the customer can keep using their dashboard while that happens.
 
 ::: info
-This confirmation step also runs again if a customer's account email changes and no longer matches their stored purchase records, so their history always stays tied to a proven address. Checkout itself is unaffected. Guests can still buy without creating or confirming anything.
+This confirmation step also runs again if a customer's account email changes and no longer matches their stored purchase records, so their history always stays tied to a proven address. Checkout itself is unaffected, and guests can still buy without creating or confirming anything. Until an account is confirmed, checkout just won't fill in saved profile details for it.
 :::
 
 ## Key Sections of the Customer Dashboard
