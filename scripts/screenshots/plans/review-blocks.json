@@ -1,0 +1,340 @@
+{
+ "outDir": "guide/public/images/store-management/product-reviews",
+ "viewport": {
+  "width": 1600,
+  "height": 1500
+ },
+ "steps": [
+  {
+   "front": "http://cart.local/wp-admin/post.php?post=825&action=edit",
+   "hideThemeHeader": false
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "css": "#adminmenumain,#adminmenuback,#adminmenuwrap,#wpfooter{display:none !important} #wpcontent{margin-left:0 !important} .interface-interface-skeleton{left:0 !important} .components-notice-list, .components-snackbar-list{display:none !important}"
+  },
+  {
+   "eval": "(() => { const f = document.querySelector('iframe[name=\"editor-canvas\"]'); const d = f && f.contentDocument; if (d) { const s = d.createElement('style'); s.textContent = '.edit-post-visual-editor__post-title-wrapper, .editor-post-title { display: none !important } .is-root-container { padding-top: 40px !important }'; d.head.appendChild(s); } })()"
+  },
+  {
+   "eval": "(() => { wp.data.dispatch('core/edit-post').closeGeneralSidebar(); const ed = wp.data.dispatch('core/editor'); const ep = wp.data.dispatch('core/edit-post'); if (ed && ed.setIsInserterOpened) ed.setIsInserterOpened(true); else ep.setIsInserterOpened(true); })()"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "fill": {
+    "selector": ".block-editor-inserter__search input",
+    "value": "fluentcart"
+   }
+  },
+  {
+   "wait": 3500
+  },
+  {
+   "shot": {
+    "name": "review-blocks-inserter",
+    "clip": {
+     "x": 0,
+     "y": 32,
+     "width": 1600,
+     "height": 1200
+    },
+    "arrows": [
+     {
+      "target": ".block-editor-inserter__search input",
+      "from": "bottom",
+      "len": 40
+     }
+    ]
+   }
+  },
+  {
+   "front": "http://cart.local/wp-admin/post.php?post=825&action=edit",
+   "hideThemeHeader": false
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "css": "#adminmenumain,#adminmenuback,#adminmenuwrap,#wpfooter{display:none !important} #wpcontent{margin-left:0 !important} .interface-interface-skeleton{left:0 !important} .components-notice-list, .components-snackbar-list{display:none !important}"
+  },
+  {
+   "eval": "(() => { const f = document.querySelector('iframe[name=\"editor-canvas\"]'); const d = f && f.contentDocument; if (d) { const s = d.createElement('style'); s.textContent = '.edit-post-visual-editor__post-title-wrapper, .editor-post-title { display: none !important } .is-root-container { padding-top: 40px !important }'; d.head.appendChild(s); } })()"
+  },
+  {
+   "eval": "(() => { const id = wp.data.select('core/block-editor').getBlocks()[0].clientId; wp.data.dispatch('core/block-editor').selectBlock(id); wp.data.dispatch('core/edit-post').openGeneralSidebar('edit-post/block'); })()"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "click": ".interface-complementary-area button:has-text(\"Classic\")"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "eval": "document.activeElement && document.activeElement.blur()"
+  },
+  {
+   "wait": 500
+  },
+  {
+   "shot": {
+    "name": "product-reviews-block",
+    "clip": {
+     "x": 0,
+     "y": 98,
+     "width": 1600,
+     "height": 1402
+    },
+    "arrows": [
+     {
+      "target": ".interface-complementary-area button:has-text(\"Classic\")",
+      "from": "left",
+      "len": 110
+     }
+    ]
+   }
+  },
+  {
+   "front": "http://cart.local/wp-admin/post.php?post=826&action=edit",
+   "hideThemeHeader": false
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "css": "#adminmenumain,#adminmenuback,#adminmenuwrap,#wpfooter{display:none !important} #wpcontent{margin-left:0 !important} .interface-interface-skeleton{left:0 !important} .components-notice-list, .components-snackbar-list{display:none !important}"
+  },
+  {
+   "eval": "(() => { const f = document.querySelector('iframe[name=\"editor-canvas\"]'); const d = f && f.contentDocument; if (d) { const s = d.createElement('style'); s.textContent = '.edit-post-visual-editor__post-title-wrapper, .editor-post-title { display: none !important } .is-root-container { padding-top: 40px !important }'; d.head.appendChild(s); } })()"
+  },
+  {
+   "eval": "(() => { const id = wp.data.select('core/block-editor').getBlocks()[0].clientId; wp.data.dispatch('core/block-editor').selectBlock(id); wp.data.dispatch('core/edit-post').openGeneralSidebar('edit-post/block'); })()"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "shot": {
+    "name": "rating-summary-with-review-block",
+    "clip": {
+     "x": 0,
+     "y": 98,
+     "width": 1600,
+     "height": 1402
+    },
+    "arrows": [
+     {
+      "target": ".interface-complementary-area button.components-panel__body-toggle:has-text(\"Product\")",
+      "from": "left",
+      "len": 120
+     }
+    ]
+   }
+  },
+  {
+   "click": ".interface-complementary-area button.components-panel__body-toggle:has-text(\"Product\")"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "shot": {
+    "name": "review-block-product-panel",
+    "clip": {
+     "x": 1180,
+     "y": 98,
+     "width": 420,
+     "height": 560
+    },
+    "arrows": [
+     {
+      "target": ".interface-complementary-area button:has-text(\"Custom\")",
+      "from": "right",
+      "len": 70
+     }
+    ]
+   }
+  },
+  {
+   "front": "http://cart.local/wp-admin/post.php?post=827&action=edit",
+   "hideThemeHeader": false
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "css": "#adminmenumain,#adminmenuback,#adminmenuwrap,#wpfooter{display:none !important} #wpcontent{margin-left:0 !important} .interface-interface-skeleton{left:0 !important} .components-notice-list, .components-snackbar-list{display:none !important}"
+  },
+  {
+   "eval": "(() => { const f = document.querySelector('iframe[name=\"editor-canvas\"]'); const d = f && f.contentDocument; if (d) { const s = d.createElement('style'); s.textContent = '.edit-post-visual-editor__post-title-wrapper, .editor-post-title { display: none !important } .is-root-container { padding-top: 40px !important }'; d.head.appendChild(s); } })()"
+  },
+  {
+   "eval": "(() => { const id = wp.data.select('core/block-editor').getBlocks()[0].clientId; wp.data.dispatch('core/block-editor').selectBlock(id); wp.data.dispatch('core/edit-post').openGeneralSidebar('edit-post/block'); })()"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "click": ".interface-complementary-area button.components-panel__body-toggle:has-text(\"Layout\")"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "shot": {
+    "name": "review-list-block",
+    "clip": {
+     "x": 0,
+     "y": 98,
+     "width": 1600,
+     "height": 1402
+    },
+    "arrows": [
+     {
+      "target": ".interface-complementary-area button:has-text(\"Grid\")",
+      "from": "bottom",
+      "len": 90
+     }
+    ]
+   }
+  },
+  {
+   "front": "http://cart.local/wp-admin/post.php?post=828&action=edit",
+   "hideThemeHeader": false
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "css": "#adminmenumain,#adminmenuback,#adminmenuwrap,#wpfooter{display:none !important} #wpcontent{margin-left:0 !important} .interface-interface-skeleton{left:0 !important} .components-notice-list, .components-snackbar-list{display:none !important}"
+  },
+  {
+   "eval": "(() => { const f = document.querySelector('iframe[name=\"editor-canvas\"]'); const d = f && f.contentDocument; if (d) { const s = d.createElement('style'); s.textContent = '.edit-post-visual-editor__post-title-wrapper, .editor-post-title { display: none !important } .is-root-container { padding-top: 40px !important }'; d.head.appendChild(s); } })()"
+  },
+  {
+   "eval": "(() => { const id = wp.data.select('core/block-editor').getBlocks()[0].clientId; wp.data.dispatch('core/block-editor').selectBlock(id); wp.data.dispatch('core/edit-post').openGeneralSidebar('edit-post/block'); })()"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "click": ".interface-complementary-area button.components-panel__body-toggle:has-text(\"Visibility\")"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "shot": {
+    "name": "product-rating-block",
+    "clip": {
+     "x": 0,
+     "y": 98,
+     "width": 1600,
+     "height": 760
+    },
+    "arrows": [
+     {
+      "target": ".interface-complementary-area input >> nth=0",
+      "from": "left",
+      "len": 120
+     }
+    ]
+   }
+  },
+  {
+   "front": "http://cart.local/wp-admin/post.php?post=829&action=edit",
+   "hideThemeHeader": false
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "css": "#adminmenumain,#adminmenuback,#adminmenuwrap,#wpfooter{display:none !important} #wpcontent{margin-left:0 !important} .interface-interface-skeleton{left:0 !important} .components-notice-list, .components-snackbar-list{display:none !important}"
+  },
+  {
+   "eval": "(() => { const f = document.querySelector('iframe[name=\"editor-canvas\"]'); const d = f && f.contentDocument; if (d) { const s = d.createElement('style'); s.textContent = '.edit-post-visual-editor__post-title-wrapper, .editor-post-title { display: none !important } .is-root-container { padding-top: 40px !important }'; d.head.appendChild(s); } })()"
+  },
+  {
+   "eval": "(() => { const id = wp.data.select('core/block-editor').getBlocks()[0].clientId; wp.data.dispatch('core/block-editor').selectBlock(id); wp.data.dispatch('core/edit-post').openGeneralSidebar('edit-post/block'); })()"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "click": ".interface-complementary-area button.components-panel__body-toggle:has-text(\"Button Settings\")"
+  },
+  {
+   "click": ".interface-complementary-area button.components-panel__body-toggle:has-text(\"Button Text\")"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "shot": {
+    "name": "write-a-review-block",
+    "clip": {
+     "x": 0,
+     "y": 98,
+     "width": 1600,
+     "height": 1080
+    },
+    "arrows": [
+     {
+      "target": ".interface-complementary-area select >> nth=0",
+      "from": "left",
+      "len": 120
+     }
+    ]
+   }
+  },
+  {
+   "front": "http://cart.local/wp-admin/post.php?post=830&action=edit",
+   "hideThemeHeader": false
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "css": "#adminmenumain,#adminmenuback,#adminmenuwrap,#wpfooter{display:none !important} #wpcontent{margin-left:0 !important} .interface-interface-skeleton{left:0 !important} .components-notice-list, .components-snackbar-list{display:none !important}"
+  },
+  {
+   "eval": "(() => { const f = document.querySelector('iframe[name=\"editor-canvas\"]'); const d = f && f.contentDocument; if (d) { const s = d.createElement('style'); s.textContent = '.edit-post-visual-editor__post-title-wrapper, .editor-post-title { display: none !important } .is-root-container { padding-top: 40px !important }'; d.head.appendChild(s); } })()"
+  },
+  {
+   "eval": "(() => { const id = wp.data.select('core/block-editor').getBlocks()[0].clientId; wp.data.dispatch('core/block-editor').selectBlock(id); wp.data.dispatch('core/edit-post').openGeneralSidebar('edit-post/block'); })()"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "click": ".interface-complementary-area button.components-panel__body-toggle:has-text(\"Form Settings\")"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "shot": {
+    "name": "review-form-block",
+    "clip": {
+     "x": 1180,
+     "y": 98,
+     "width": 420,
+     "height": 520
+    },
+    "arrows": [
+     {
+      "target": ".interface-complementary-area select >> nth=0",
+      "from": "left",
+      "len": 110
+     }
+    ]
+   }
+  }
+ ]
+}

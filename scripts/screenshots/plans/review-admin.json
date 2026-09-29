@@ -1,0 +1,318 @@
+{
+  "outDir": "guide/public/images/store-management/product-reviews",
+  "viewport": {
+    "width": 1600,
+    "height": 1200
+  },
+  "steps": [
+    {
+      "admin": "/reviews"
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "click": {
+        "selector": ".fct_menu_item_products",
+        "hasText": "Products"
+      }
+    },
+    {
+      "wait": 600
+    },
+    {
+      "shot": {
+        "name": "reviews-menu",
+        "clip": "app",
+        "crop": {
+          "height": 620
+        },
+        "arrows": [
+          {
+            "target": ".fct_menu_child_item_reviews:visible",
+            "from": "right",
+            "len": 150
+          }
+        ]
+      }
+    },
+    {
+      "admin": "/reviews"
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "click": {
+        "text": "More views"
+      }
+    },
+    {
+      "wait": 600
+    },
+    {
+      "shot": {
+        "name": "reviews-more-views-trash",
+        "clip": "app",
+        "crop": {
+          "height": 805
+        },
+        "arrows": [
+          {
+            "target": ".fct-fluid-tab-select .el-select-dropdown__item:has-text(\"Trash\")",
+            "from": "right",
+            "len": 150
+          }
+        ]
+      }
+    },
+    {
+      "admin": "/reviews"
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "click": {
+        "text": "Approved"
+      }
+    },
+    {
+      "wait": 1200
+    },
+    {
+      "click": ".more-btn >> nth=0"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "shot": {
+        "name": "review-row-actions",
+        "clip": {
+          "element": ".fct-all-reviews-wrap",
+          "pad": 70
+        },
+        "crop": {
+          "height": 1000
+        },
+        "arrows": [
+          {
+            "target": ".more-btn >> nth=0",
+            "from": "left",
+            "len": 55
+          }
+        ]
+      }
+    },
+    {
+      "admin": "/reviews"
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "click": ".el-table__body .el-checkbox >> nth=3"
+    },
+    {
+      "click": ".el-table__body .el-checkbox >> nth=4"
+    },
+    {
+      "click": ".el-table__body .el-checkbox >> nth=5"
+    },
+    {
+      "wait": 500
+    },
+    {
+      "click": ".bulk-select"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "shot": {
+        "name": "review-bulk-actions",
+        "clip": {
+          "element": ".fct-all-reviews-wrap",
+          "pad": 70
+        },
+        "crop": {
+          "height": 900
+        },
+        "arrows": [
+          {
+            "target": ".bulk-select",
+            "from": "left",
+            "len": 110
+          }
+        ]
+      }
+    },
+    {
+      "admin": "/reviews"
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "click": {
+        "text": "Approved"
+      }
+    },
+    {
+      "wait": 1200
+    },
+    {
+      "click": ".more-btn >> nth=3"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "click": ".el-dropdown-menu__item:visible:has-text(\"View\")"
+    },
+    {
+      "wait": 2500
+    },
+    {
+      "shot": {
+        "name": "single-review-view",
+        "clip": "app",
+        "crop": {
+          "height": 1500
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "helpful-votes-admin",
+        "clip": {
+          "element": ".fct-card:has-text(\"Helpful Votes\") >> nth=-1",
+          "pad": 24
+        }
+      }
+    },
+    {
+      "admin": "/products"
+    },
+    {
+      "wait": 2500
+    },
+    {
+      "shot": {
+        "name": "products-list-reviews-column",
+        "clip": "app",
+        "crop": {
+          "height": 800
+        }
+      }
+    },
+    {
+      "admin": "/products/741"
+    },
+    {
+      "wait": 2500
+    },
+    {
+      "shot": {
+        "name": "disable-reviews-for-product",
+        "clip": {
+          "element": ".fct-card:visible:has-text(\"Disable reviews for this product\")",
+          "pad": 24
+        },
+        "arrows": [
+          {
+            "target": ".el-checkbox:visible:has-text(\"Disable reviews for this product\")",
+            "from": "right",
+            "len": 150
+          }
+        ]
+      }
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 4200
+      }
+    },
+    {
+      "admin": "/settings/email_notifications"
+    },
+    {
+      "wait": 2500
+    },
+    {
+      "shot": {
+        "name": "review-notification",
+        "clip": {
+          "element": ".fct-notification-group:has-text(\"Review Actions\") >> nth=0",
+          "pad": 24
+        },
+        "arrows": [
+          {
+            "target": ".fct-notification-group:has-text(\"Review Actions\") >> nth=0 >> .el-switch",
+            "from": "right",
+            "len": 150
+          }
+        ]
+      }
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 1300
+      }
+    },
+    {
+      "admin": "/reviews"
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "click": {
+        "text": "All"
+      }
+    },
+    {
+      "wait": 800
+    },
+    {
+      "shot": {
+        "name": "review-add-button",
+        "clip": "app",
+        "crop": {
+          "height": 520
+        },
+        "arrows": [
+          {
+            "target": {
+              "role": "button",
+              "name": "Add Review"
+            },
+            "from": "left",
+            "len": 150
+          }
+        ]
+      }
+    },
+    {
+      "click": {
+        "role": "button",
+        "name": "Add Review"
+      }
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "review-add-modal",
+        "clip": {
+          "element": ".el-dialog:visible",
+          "pad": 24
+        }
+      }
+    }
+  ]
+}

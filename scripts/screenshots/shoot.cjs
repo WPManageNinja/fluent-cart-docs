@@ -14,6 +14,7 @@
 // STEP TYPES (one key per step object):
 //   {"admin": "/settings/store-settings/appearance"}   go to an admin SPA hash route (logs in first, hides WP chrome)
 //   {"front": "/item/noteplus/", "hideThemeHeader": true}  go to a storefront URL (logged in; hides admin bar + theme header)
+//       optional "waitUntil": "load" for pages that never go network-idle (the Elementor editor)
 //   {"viewport": {"width":1600,"height":1400}}         resize
 //   {"click": <sel>}                                   click; <sel> = "css" | {"text":"Save"} | {"role":"button","name":"^save$"} | {"selector":"css","hasText":"Customize"}
 //   {"fill": {"selector": <sel>, "value": "..."}}      type into an input
@@ -21,6 +22,8 @@
 //   {"setColor": {"label":"Button background","hex":"#00009F"}}            Appearance-tab colour picker
 //   {"hideCss": "header.wp-block-template-part"}        display:none for anything noisy
 //   {"scrollTop": true}                                 reset every scroll container (pickers scroll the panel)
+//   {"css": "#adminmenumain{display:none}"}            inject arbitrary CSS (e.g. to hide chrome around the WordPress block editor)
+//   {"eval": "wp.data.dispatch('core/block-editor').selectBlock(...)"}   run JS in the page (block/Elementor editors expose no stable selectors)
 //   {"wait": 800}                                       ms
 //   {"shot": {                                          take + annotate + export
 //       "name": "appearance-tab",                        -> <outDir>/<name>.webp
@@ -72,7 +75,7 @@ async function main() {
       const tag = `[${n}] ${type}`;
       switch (type) {
         case 'admin': console.log(tag, v); await h.gotoAdmin(v); break;
-        case 'front': console.log(tag, v); await h.gotoFront(v, { hideThemeHeader: step.hideThemeHeader !== false, login: step.login !== false }); break;
+        case 'front': console.log(tag, v); await h.gotoFront(v, { hideThemeHeader: step.hideThemeHeader !== false, login: step.login !== false, waitUntil: step.waitUntil || 'networkidle' }); break;
         case 'viewport': console.log(tag, JSON.stringify(v)); await h.setViewport(v); break;
         case 'click': console.log(tag, JSON.stringify(v)); await h.click(v); break;
         case 'fill': console.log(tag, JSON.stringify(v.selector)); await h.fill(v.selector, v.value); break;
@@ -80,6 +83,8 @@ async function main() {
         case 'setColor': console.log(tag, v.label, v.hex); await h.setColor(v.label, v.hex); break;
         case 'hideCss': console.log(tag, v); await h.hideCss(v); break;
         case 'scrollTop': console.log(tag); await h.scrollTop(); break;
+        case 'css': console.log(tag, v.slice(0, 60)); await h.page.addStyleTag({ content: v }); await h.page.waitForTimeout(300); break;
+        case 'eval': console.log(tag, v.slice(0, 60)); await h.page.evaluate(v); await h.page.waitForTimeout(600); break;
         case 'wait': console.log(tag, v); await h.page.waitForTimeout(v); break;
         case 'shot': {
           if (only.length && !only.includes(v.name)) { console.log(tag, v.name, '(skipped)'); break; }
