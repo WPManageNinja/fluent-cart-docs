@@ -77,6 +77,18 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Drives docs:** `guide/reporting-analytics/*.md`
 - **Last fully audited:** v1.6.2
 
+### Modules/Reviews
+- **Purpose:** Product reviews and ratings: star ratings, moderation, Add Review, My Reviews / order review page, three review emails, six blocks with 11 layout presets, the reviews shortcode, ratings on product list and shop card.
+- **Key files:** `ReviewModule.php` (registers the module, sidebar child under Products, settings field), `Services/ProductReviewService.php`, `Services/Renderer/ProductReviewRenderer.php` (+ `ReviewListRenderer`, `ReviewModalRenderer`, `ReviewThreadMarkup`), `Services/Reviews/LayoutPresets.php` (single source for the 11 presets), `Hooks/Handlers/ShortCodes/ProductReviewsShortCode.php`, `Hooks/Handlers/BlockEditors/ProductReview*BlockEditor.php` + `WriteAReviewButtonBlockEditor.php` + `ProductRatingBlockEditor.php`, admin Vue `resources/admin/Modules/Reviews/` and `Modules/Settings/ReviewSettings.vue`, storefront `resources/public/single-product/{Reviews,ReviewForm}.js`. Pro adds photo uploads and helpful votes (`fluent-cart-pro/resources/public/reviews/`).
+- **Drives docs:** `guide/store-management/product-reviews/*` (5 pages), `settings-configuration/product-page.md` (Show Reviews In Single Page, Product Rating), `customization-and-themes/using-gutenberg-blocks.md` (block summary), `customization-and-themes/elementor-review-widgets.md`.
+- **Last fully audited:** Sep 29 2026 (develop `915dad4fe`, unreleased)
+
+### External addon: fluent-cart-elementor-blocks (Elementor)
+- **Location:** `/Users/authlab-24/Local Sites/cart/app/public/wp-content/plugins/fluent-cart-elementor-blocks` (own git repo, v1.1.0 at time of audit).
+- **Review surface:** `app/Modules/Integrations/Elementor/Widgets/ThemeBuilder/Product{Reviews,ReviewList,ReviewSummary,ReviewForm,Rating}Widget.php` + `WriteAReviewButtonWidget.php`, shared `ReviewStyleControls.php`, layout picker `Controls/ReviewLayoutPresetControl.php` (+ `resources/elementor/review-layout-picker.js`), `Support/Review*.php`. Widget slugs `fluentcart_product_reviews`, `_review_list`, `_review_summary`, `_review_form`, `_write_a_review_button`, `_product_rating`; Shop widget slug `fluent_cart_shop_app` (titled "Products" in the panel), repeater `card_elements` with `element_type`.
+- **Drives docs:** `customization-and-themes/elementor-review-widgets.md`, cross-refs in `elementor-fluentcart-widgets.md` and `using-elementor-widgets.md`.
+- **Last fully audited:** v1.1.0, Sep 29 2026
+
 ### Modules/Shipping
 - **Purpose:** Shipping zones, methods, rates, packages, carrier-rate calculation.
 - **Key files:** `ShippingModule.php`, `ShippingService.php`, `Models/ShippingZone.php`.
