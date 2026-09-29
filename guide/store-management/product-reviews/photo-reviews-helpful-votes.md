@@ -66,10 +66,7 @@ To turn voting on:
 4.  Make sure the **Helpful Votes** toggle is on. It is on by default once FluentCart Pro is active.
 5.  Click **Save**.
 
-<!-- TODO screenshot: Helpful vote buttons on a review
-     How to capture: On the front end with helpful votes enabled, log in as a customer and open a product with approved reviews. Capture a single review card showing the Helpful and Not Helpful buttons with their counts.
-     Save as: guide/public/images/store-management/product-reviews/helpful-votes.webp
-     Reference as: /images/store-management/product-reviews/helpful-votes.webp -->
+![Screenshot of the Helpful and Not Helpful buttons under a review on the product page](/images/store-management/product-reviews/helpful-votes.webp)
 
 ### How Voting Works
 
