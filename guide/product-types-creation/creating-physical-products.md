@@ -281,6 +281,7 @@ This section on the right side of the product edit page controls your product's 
  * **Status:** This sets whether your product is live on your store (Publish) or saved as a hidden Draft.
  * **URL Slug:** This is the unique, URL-friendly part of the web address for this product. FluentCart automatically creates one from the title, but you can click it to make edits.
  * **Default Variant:** If your product has options (like different sizes or subscription plans), this setting pre-selects one for the customer when they visit the page.
+ * **Group By:** If your product uses [Advanced Variations](/guide/product-types-creation/advanced-variations) with two or more attribute groups (e.g., Color and Size), a **Group by** dropdown appears in the variations editor, letting you choose which attribute group the variations are grouped by while you manage them.
  * **Limit purchases to 1 item per order:** Check this box to prevent customers from buying more than one of this specific item in a single transaction. This is useful for things like event tickets or exclusive items.
 
 Once you have configured all the necessary details, click the **"Update"** (or "Save") button on the top right to make your product live in your store. You can also click **"Preview"** to see how the product page will look before publishing.
