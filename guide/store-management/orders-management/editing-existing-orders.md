@@ -3,8 +3,16 @@
 FluentCart provides robust functionality to edit an order even after it has been placed. This allows you to make necessary adjustments such as adding or removing products, changing quantities, applying coupons, or modifying shipping costs.
 
 
+:::info When Editing Is Disabled
+The **Edit** button is disabled, with an explanatory tooltip, whenever any of the following is true:
+
+* The order has already been **paid** — *"Order cannot be edited once paid."*
+* The order's status is **Completed**, **Archived**, or **Canceled** — *"Order cannot be edited once it is {status}."*
+* The order is a **subscription** order — *"Subscription Order cannot be edited."*
+:::
+
 :::info Returning to Processing Status
-If an order was marked as "Completed" but needs editing, you can use the "Back to processing" option from the "More Actions" dropdown on the Order Details page to revert its status and enable editing.
+If a Completed order needs editing, you can use the "Back to processing" option from the "More Actions" dropdown on the Order Details page to revert its status to Processing. This only reverts the order **status** — it does not change the order's payment status. If the order is already paid, editing stays disabled afterward; this action only restores editability for a completed order that isn't marked as paid.
 :::
 
 ## Entering Edit Mode
@@ -51,12 +59,26 @@ You can apply or modify coupon codes for the order:
 2.  Enter the coupon code in the provided field.
 3.  Click **"Apply"**.
 
+Applying a coupon removes any manual discount already added to the order — see [Adding a Manual Discount](#_5-adding-a-manual-discount) below.
+
 ### 4. Adding Shipping Costs
 
 For physical products, you can manually add or adjust shipping costs:
 
 1.  Locate the **"Add Shipping"** option in the financial summary area.
 2.  Enter the desired shipping amount.
+
+### 5. Adding a Manual Discount
+
+You can apply an order-level discount instead of a coupon. This option is only available when no coupon is applied to the order:
+
+1.  Locate the **"Add Discount"** option in the financial summary area.
+2.  In the dialog, enter a **Discount value** and, optionally, a **Reason for discount** — customers can see this reason.
+3.  Click **"Apply"**. The discount is staged on the order and saved along with your other changes when you click **"Disable Editing"**.
+
+:::info Manual Discounts and Tax
+A coupon and a manual discount can't be on the same order at the same time: the **Add Discount** option is hidden whenever a coupon is applied, and applying a coupon while a manual discount is set removes that discount. They also affect tax differently: coupons are applied at the product/line-item level and can reduce that item's taxable amount, while a manual discount is a single order-level amount subtracted from the subtotal — it does not reduce the product taxable base or recalculate product tax. For example, a €100 taxable product with €20 tax and a €10 manual discount still totals €110, with tax unchanged at €20. See [Manual Discounts and Tax](/guide/store-management/orders-management/creating-new-orders#manual-discounts-and-tax) for more detail.
+:::
 
 ## Saving Your Changes
 

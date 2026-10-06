@@ -157,6 +157,36 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Purpose:** Read/write of every settings page payload (store, payment, cart, email, licensing).
 - **Drives docs:** `guide/settings-configuration/*.md` — re-read the matching page when this controller's payload shape changes.
 
+### Compliance settings (`api/StoreSettings.php::compliance`, key `auto_login_after_account_creation`)
+- **Purpose:** One radio setting, default `'no'`, controlling whether `api/User.php` (direct registration) and `app/Listeners/Order/OrderPaid.php` (guest-account-on-payment) log the new customer in immediately or leave them to set a password first.
+- **User-facing surface:** Its own top-level **Compliance** sidebar tab (`resources/admin/Modules/Settings/SettingsView.vue`, route `/settings/compliance`, icon `ShieldCheck`) — not nested under Store Setup despite living in the same PHP schema array as Store Setup's other sections.
+- **Drives docs:** `guide/settings-configuration/compliance-settings.md` (new page); cross-ref on `cart-checkout-settings.md`'s User Account Creation Mode section.
+- **Last fully audited:** v1.6.5 (Sep 24 2026) — merged via `badb39aff` (#2875)
+
+### app/Modules/AdminFooter/AdminFooter.php
+- **Purpose:** On FluentCart admin screens, replaces the WordPress footer text with a "leave a review" link and the WordPress version number with the FluentCart (and Pro, if active/different) version.
+- **Drives docs:** brief mention in `guide/troubleshooting-support/how-to-get-support.md` (where to find your plugin version for a support ticket). No dedicated section — cosmetic footer change.
+- **Last fully audited:** v1.6.5 (Sep 24 2026) — merged via `e4cc58916` (#2888)
+
+### app/Services/Theme/ (Storefront Appearance) — **merged to `develop`** (`1d65896b2`, PR #2865)
+- **Purpose:** Store-owner control of the storefront colour palette: keep defaults, inherit from the block theme, or customise 20 global `--fct-*` colours, with a live admin preview. Also now feeds Stripe's embedded payment form.
+- **Key files:** `ColorPalette.php` (registry = single source of truth for CSS, schema, sanitizer; filter `fluent_cart/theme/color_globals`), `ThemePalette.php` (reads theme.json palette, maps 4 anchors → roles, derives tones, WCAG button text; `measurable()` rejects unresolved CSS `var()` refs), `ColorMath.php`, `FrontendTheme.php` (prints at `wp_head:100`; `stripeAppearance()`/`filterStripeAppearance()` seed the `fluent_cart/stripe_appearance` filter), schema in `api/StoreSettings.php::getAppearanceSchema()`, Vue `ColorPicker.vue` (hex input added `049dabda6`, PR #2889) + `resources/admin/Bits/Components/Form/Components/StoreSettings/Appearance{Component,Preview}.vue`, route `/settings/store-settings/appearance`.
+- **User-facing surface:** Store Settings > **Appearance** tab. Keys `appearance_source` (`default`/`inherit_from_theme`/`customize`) + `appearance_colors`. Each color picker now has an editable hex text field alongside the swatch (typing commits live; invalid drafts snap back on blur). Reset is an icon-only button; per-field default hints exist in PHP but are not rendered. When source is `inherit_from_theme` or `customize`, Stripe's embedded card fields inherit `colorBackground`/`colorText` (from Input background/text) and `colorPrimary` (from Primary background) automatically, switching to Stripe's `night` theme on a dark input surface; falls back to Stripe's own default when the palette's input colors aren't a resolvable hex (e.g. theme publishes only CSS vars).
+- **Drives docs:** `guide/settings-configuration/appearance.md`; cross-ref on `customization-and-themes/advanced-customization-using-css.md` and `payments-checkout/connecting-payment-gateways/stripe-settings.md`; dev filter documented in `customization-and-themes/code-snippets.md` (`fluent_cart/stripe_appearance`).
+- **Last fully audited:** v1.6.5 (Sep 24 2026)
+
+### app/Services/CustomerIdentity/ (Email Verification & Guest Purchase Recovery)
+- **Purpose:** Gates the customer portal behind a confirmed email address and, once confirmed, recovers any guest purchases made earlier under that same address into the now-verified account.
+- **Key files:** `EmailVerificationService.php` (`isRequired()` = the gate check: user meta `verified` flag plus a live re-check that the linked `Customer.email` still matches the WP account email), `EmailClaimService.php` (`isEnabled()` guards the whole feature behind `fluent_cart/customer/enable_email_claim`, default true; `getOffer()`/`issue()`/`confirm()` mail + validate the signed 24h token, `RATE_LIMIT = 5`), `EmailClaimPortal.php` (renders the notice/form, handles the POST), `CustomerMerger.php` + `CustomerRecoveryService.php` (bounded, transactional recovery: synchronous under 5 source customers/100 rows, otherwise queued in WP-Cron per batch), `Views/frontend/customer/email_claim.php` (the notice markup).
+- **User-facing surface:** Customer dashboard shows a **Confirm your email address** notice in place of all dashboard content until confirmed; a mailed link auto-submits when opened in the same signed-in browser. Confirming also merges any guest history at that address. Checkout itself is never gated.
+- **Drives docs:** `guide/customer-dashboard/index.md` (new "Confirming Your Email Address" section); disable filter documented in `customization-and-themes/code-snippets.md`.
+- **Last fully audited:** v1.6.5 (Sep 24 2026) — merged via `73e570573` (#2883), same release also merged the ownership-preservation fixes `946341202` and `177c1b629`.
+
+### app/Services/DateTime/DateFormatter.php
+- **Purpose:** Every user-facing date renders through here using two Store Setup settings: `date_time_format_source` (`wordpress` default / `fluent_cart` = "Smart") and `timezone_source` (`fluent_cart` default = "Browser" / `wordpress`).
+- **Drives docs:** `guide/settings-configuration/store-settings.md` §7.
+- **Last fully audited:** develop @ `b94513421` (post-1.6.4, Sep 18 2026)
+
 ### app/Http/Controllers/Reports/
 - **Purpose:** Report data endpoints (sales, customer, product, subscription).
 - **Drives docs:** `guide/reporting-analytics/*.md`

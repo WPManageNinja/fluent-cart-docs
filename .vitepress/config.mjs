@@ -567,7 +567,8 @@ export default defineConfig({
                 { text: 'Pages Setup', link: '/guide/settings-configuration/pages-setup' },
                 { text: 'Product Page Settings', link: '/guide/settings-configuration/product-page' },
                 { text: 'Cart & Checkout Settings', link: '/guide/settings-configuration/cart-checkout-settings' },
-                { text: 'Checkout Fields', link: '/guide/settings-configuration/checkout-fields' }
+                { text: 'Checkout Fields', link: '/guide/settings-configuration/checkout-fields' },
+                { text: 'Appearance', link: '/guide/settings-configuration/appearance' }
               ]},
             { text: 'Payment Settings Overview', link: '/guide/settings-configuration/payment-settings' },
             { text: 'Invoice & Packing Settings', link: '/guide/settings-configuration/invoice-packing-settings' },
@@ -601,7 +602,8 @@ export default defineConfig({
                 { text: 'Customer Sites (Pro)', link: '/guide/settings-configuration/managing-licensing-sites' }
               ]
             },
-            { text: 'Withdrawal (EU)', link: '/guide/settings-configuration/withdrawal-eu' }
+            { text: 'Withdrawal (EU)', link: '/guide/settings-configuration/withdrawal-eu' },
+            { text: 'Compliance Settings', link: '/guide/settings-configuration/compliance-settings' }
           ]
         },
         {
@@ -674,6 +676,7 @@ export default defineConfig({
           items: [
             { text: 'Understanding Logs', link: '/guide/troubleshooting-support/understanding-logs' },
             { text: 'Common Issues & FAQs', link: '/guide/troubleshooting-support/common-issues-faqs' },
+            { text: 'Caching and Optimization Exclusions', link: '/guide/troubleshooting-support/caching-exclusions' },
             { text: 'How to Get Support', link: '/guide/troubleshooting-support/how-to-get-support' }
           ]
         }

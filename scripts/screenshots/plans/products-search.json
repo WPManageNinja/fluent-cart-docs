@@ -1,0 +1,16 @@
+{
+  "outDir": "guide/public/images/product-types-creation/product-list",
+  "viewport": { "width": 1600, "height": 1100 },
+  "steps": [
+    { "admin": "/products" },
+    { "click": ".fct-btn-group button.icon-button:visible" },
+    { "wait": 800 },
+    { "shot": { "name": "products-search-help", "clip": "app", "crop": { "height": 1000 },
+        "arrows": [ { "target": ".fct-search-guide-btn:visible", "from": "bottom", "len": 150 } ] } },
+
+    { "click": ".fct-search-guide-btn:visible" },
+    { "wait": 800 },
+    { "shot": { "name": "products-search-operators-guide", "clip": { "element": ".fct-search-guide-dialog" },
+        "arrows": [ { "target": { "selector": ".fct-search-guide-dialog .el-tag", "hasText": "Contains" }, "from": "right", "len": 150 } ] } }
+  ]
+}

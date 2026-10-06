@@ -16,8 +16,8 @@ FluentCart allows you to manually create new orders directly from your WordPress
     * **Products:** Search for and add the products the customer is purchasing.
         * You can select product variants if applicable.
         * Specify the quantity for each product.
-    * **Have a Coupon:** If a discount coupon applies to this manual order, you can enter and apply it here.
-    * **Add Discount:** If you want to add a discount for the order, click the Add Discount option.
+    * **Have a Coupon:** If a discount coupon applies to this manual order, you can enter and apply it here. Applying a coupon removes any manual discount already added to the order.
+    * **Add Discount:** If you want to add a discount for the order instead of a coupon, click the **Add Discount** option to enter a discount value and an optional reason. This option is only available when no coupon is applied — see [Manual Discounts and Tax](#manual-discounts-and-tax) below.
     * **Add Shipping Cost:** Manually you can add shipping charges for physical products.
     * **Review Totals:** Ensure the order subtotal and total amount are correct after adding products and any discounts/shipping.
     * **Notes:** Click the **Notes** icon to add any private notes or comments relevant to the order.
@@ -30,6 +30,25 @@ FluentCart allows you to manually create new orders directly from your WordPress
 
 5.  **Finalize Order:** Once all details are correct and the payment method is selected, click the **Save** button finalize the order.
 ![Screenshot of Create Order Button](/images/store-management/creating-new-orders/create-order-button2.webp) 
+
+## Manual Discounts and Tax
+
+A coupon and a manual discount can't be on the same order at the same time: the **Add Discount** option is hidden whenever a coupon is applied, and applying a coupon while a manual discount is set removes that discount.
+
+Coupons and manual discounts also affect the order total differently:
+
+* **Coupons** are applied at the product/line-item level, reducing each affected item's taxable amount before tax is calculated.
+* **Manual discounts** are applied as a single order-level amount subtracted from the subtotal. They do not reduce the product taxable base or recalculate product tax — tax stays based on the full product amount.
+
+**Example:**
+| | Amount |
+|---|---|
+| Product Subtotal | €100 |
+| Tax | €20 |
+| Manual Discount | -€10 |
+| **Total** | **€110** |
+
+This is FluentCart's current calculation behavior — the €20 tax isn't reduced by the €10 manual discount, so it's worth accounting for when discounting a taxable order manually.
 
 :::tip Manual Order Use Cases
 Manual order creation is great for:

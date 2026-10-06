@@ -185,6 +185,8 @@ This setting is directly linked to your payment gateways. When you set the store
 - Insert immediately after the action sentence the image illustrates, not at the end of a section.
 - One image per step in step-based pages; one or two per feature section in reference pages.
 - Reference path always begins with `/images/<section>/...` (the public-dir mapping). Some older pages use `/guide/public/images/...` — both work, but new pages should use `/images/...`.
+- **Producing the images:** never capture by hand. Load the `fluentcart-doc-screenshots` skill and drive `scripts/screenshots/shoot.cjs` with a JSON plan; it logs into `cart.local`, clips to the FluentCart app, draws brand-blue arrows on click targets, and writes the `.webp` into the right folder. Write the doc text first, derive the shot list from the steps that say "click/select/open", then shoot.
+- Arrows only on images that illustrate a click; field-reference images get none. Alt text: `Screenshot of <what the reader sees>`.
 
 ### 3.7 YouTube video embeds
 

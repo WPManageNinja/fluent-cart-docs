@@ -1,0 +1,22 @@
+{
+  "outDir": "guide/public/images/settings-configuration/store-setting",
+  "viewport": { "width": 1600, "height": 1100 },
+  "steps": [
+    { "admin": "/settings/store-settings/" },
+
+    { "fillByLabel": { "label": "Company Name", "value": "Cartuz Studio LLC" } },
+    { "fillByLabel": { "label": "Legal Registration ID", "value": "LLC-4471902" } },
+    { "fillByLabel": { "label": "Seller VAT ID", "value": "DE123456789" } },
+    { "fillByLabel": { "label": "Seller Tax ID", "value": "82-1234567" } },
+
+    { "viewport": { "width": 1600, "height": 1620 } },
+    { "shot": { "name": "store-settings-setup", "clip": "app", "crop": { "height": 3140 } } },
+
+    { "shot": { "name": "store-business-tax", "clip": { "rows": ["Business Details"], "pad": 24 } } },
+
+    { "shot": { "name": "store-settings-date-time", "clip": { "rows": ["Date & Time Format", "Timezone"], "pad": 24 },
+        "arrows": [ { "target": { "row": "Date & Time Format", "part": "control" }, "from": "right", "len": 140 } ] } },
+    { "shot": { "name": "store-settings-timezone", "clip": { "rows": ["Date & Time Format", "Timezone"], "pad": 24 },
+        "arrows": [ { "target": { "row": "Timezone", "part": "control" }, "from": "right", "len": 140 } ] } }
+  ]
+}

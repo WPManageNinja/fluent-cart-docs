@@ -62,6 +62,19 @@ For more detailed control, use the **Advanced Filter** option:
 
     ![Screenshot of Product Advanced Filter Button](/images/product-types-creation/product-list/Products-list-2.webp) 
 
+### 3. Searching with Operators and Wildcards
+
+The search box does more than plain text matching. Click the search icon at the top right of the list to open it, then use the **Search Help** link underneath the field to see every operator and field the products table understands.
+
+![Screenshot of the product search box with the Search Help link](/images/product-types-creation/product-list/products-search-help.webp)
+
+A plain query with no operator searches across all text fields. To target one field, write `field operator value`:
+
+* **Comparison operators:** `>`, `<`, `>=`, `<=`, `=`, and `!=` work on numeric fields, for example `id > 5` or `id :: 1-10` for a range.
+* **Wildcards:** With `=` and `!=` you can use `*` to match part of a value. `sku = ABC*` finds SKUs that start with `ABC`, `sku = *123` finds SKUs that end with `123`, and `sku = *pro*` finds any SKU that contains `pro`.
+* **Description search:** `description = *course*` matches the product's long description, which is handy when the title alone does not tell products apart.
+
+![Screenshot of the Search Operators Guide dialog showing the wildcard matching section](/images/product-types-creation/product-list/products-search-operators-guide.webp)
 
 ## Pagination
 

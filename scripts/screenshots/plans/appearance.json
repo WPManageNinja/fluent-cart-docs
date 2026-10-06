@@ -1,0 +1,51 @@
+{
+  "outDir": "guide/public/images/settings-configuration/appearance",
+  "viewport": { "width": 1600, "height": 1100 },
+  "_note": "Requires the plugin clone on a branch that has the Appearance tab (feat/storefront-appearance-colours until merged) and a fresh `npm run build` there.",
+  "steps": [
+    { "admin": "/settings/store-settings/appearance" },
+    { "click": { "selector": "[role=\"radio\"]", "hasText": "FluentCart's own colors" } },
+
+    { "shot": { "name": "appearance-tab", "clip": "app",
+        "arrows": [ { "target": "a[href*=\"store-settings/appearance\"]:visible", "from": "right", "len": 130 } ] } },
+    { "shot": { "name": "appearance-color-source", "clip": "app" } },
+
+    { "click": { "selector": "[role=\"radio\"]", "hasText": "Inherit from the active theme" } },
+    { "wait": 800 },
+    { "shot": { "name": "appearance-inherit-theme", "clip": "app",
+        "arrows": [ { "target": { "selector": "[role=\"radio\"]", "hasText": "Inherit from the active theme" }, "from": "left", "len": 150 } ] } },
+
+    { "viewport": { "width": 1600, "height": 1400 } },
+    { "click": { "selector": "[role=\"radio\"]", "hasText": "Customize" } },
+    { "wait": 800 },
+    { "setColor": { "label": "Button background", "hex": "#00009F" } },
+    { "setColor": { "label": "Button text", "hex": "#FFFFFF" } },
+    { "setColor": { "label": "Primary background", "hex": "#00009F" } },
+    { "setColor": { "label": "Active text", "hex": "#00009F" } },
+    { "setColor": { "label": "Active border", "hex": "#00009F" } },
+    { "scrollTop": true },
+
+    { "shot": { "name": "appearance-customize", "clip": "app",
+        "arrows": [ { "target": ".fct-appearance-color-field:has(.setting-label:text-is(\"Button background\")) .fct-color-picker-box", "from": "left", "len": 150 } ] } },
+    { "shot": { "name": "appearance-reset-colors", "clip": "app",
+        "arrows": [ { "target": ".fct-reset-color-btn", "from": "right", "len": 160 } ] } },
+    { "shot": { "name": "appearance-save", "clip": "app", "crop": { "height": 1500 },
+        "arrows": [ { "target": { "role": "button", "name": "^save$" }, "from": "bottom", "len": 160 } ] } },
+
+    { "click": { "role": "button", "name": "^save$" } },
+    { "wait": 2500 },
+
+    { "viewport": { "width": 1400, "height": 1000 } },
+    { "front": "/item/noteplus/" },
+    { "shot": { "name": "front-custom", "export": false, "clip": { "element": ".fct-product-gallery-wrapper", "pad": 40, "extendRight": true } } },
+
+    { "admin": "/settings/store-settings/appearance" },
+    { "click": { "selector": "[role=\"radio\"]", "hasText": "FluentCart's own colors" } },
+    { "click": { "role": "button", "name": "^save$" } },
+    { "wait": 2500 },
+    { "front": "/item/noteplus/" },
+    { "shot": { "name": "front-default", "export": false, "clip": { "element": ".fct-product-gallery-wrapper", "pad": 40, "extendRight": true } } },
+
+    { "stack": { "raws": ["front-default", "front-custom"], "labels": ["Before: FluentCart's own colors", "After: Customize with brand colors applied"], "name": "appearance-storefront-before-after" } }
+  ]
+}

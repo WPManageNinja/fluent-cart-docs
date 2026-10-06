@@ -4,7 +4,8 @@
     "docs:build": "vitepress build",
     "docs:clean-build": "rm -rf .vitepress/cache .vitepress/dist && vitepress build",
     "docs:preview": "vitepress preview",
-    "featured:generate": "node scripts/generate-featured-images.mjs"
+    "featured:generate": "node scripts/generate-featured-images.mjs",
+    "shots": "node scripts/screenshots/shoot.cjs"
   },
   "engines": {
     "node": ">=20.9.0"

@@ -27,3 +27,6 @@ fluent-affiliate-docs/
 
 # Superpowers directory
 .superpowers/ 
+
+# Screenshot pipeline raw captures
+scripts/screenshots/raw/

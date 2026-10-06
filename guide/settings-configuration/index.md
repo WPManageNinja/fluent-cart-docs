@@ -10,10 +10,12 @@ This section covers the following critical areas:
 * **[Pages Setup](/guide/settings-configuration/pages-setup):** Assign essential FluentCart functionalities (like shop, cart, and checkout) to specific WordPress pages using shortcodes.
 * **[Product Page Settings](/guide/settings-configuration/product-page):** Customize how individual products are displayed on your storefront.
 * **[Cart & Checkout Settings](/guide/settings-configuration/cart-checkout-settings):** Configure optional settings related to cart display, checkout requirements, and address fields.
+* **[Appearance Settings](/guide/settings-configuration/appearance):** Choose whether the storefront keeps FluentCart's colors, inherits your theme's palette, or uses colors you pick, with a live preview.
 * **[Payment Settings Overview](/guide/settings-configuration/payment-settings):** A general overview of available payment gateways and links to their detailed setup guides.
 * **[Email Configuration](/guide/settings-configuration/email-configuration/):** Manage and customize automated email communications sent to both administrators and customers.
 * **[Roles & Permissions](/guide/settings-configuration/roles-permissions):** Define and assign different user roles with specific access levels within your FluentCart store.
 * **[Storage Settings](/guide/settings-configuration/storage-settings):** Configure where your digital product files and other assets are stored, including local and cloud (S3) options.
 * **[Licensing Settings (FluentCart Product License)](/guide/settings-configuration/licensing-settings):** Activate your FluentCart plugin license key to ensure regular updates and access to premium features.
+* **[Compliance Settings](/guide/settings-configuration/compliance-settings):** Control whether new customer accounts are logged in automatically after creation.
 
 By thoroughly configuring these settings, you can ensure your FluentCart store runs exactly as you intend.

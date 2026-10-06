@@ -102,6 +102,9 @@ After writing:
 - Update the sidebar in `.vitepress/config.mjs` if you added a page.
 - Mention in your final report which doc pages changed and which sidebar entries (if any) you edited.
 
+### 6. Screenshots
+Every new or changed UI section needs real images from the dev site. Load **`fluentcart-doc-screenshots`** and follow it: write a JSON plan under `scripts/screenshots/plans/`, run `npm run shots -- <plan>`, verify each `.webp` with Read, then place them per the doc-writer rules. If the feature is on an unmerged plugin branch, use `./scripts/screenshots/plugin-branch.sh <branch>` first and `--restore` after. Record which branch/commit the images came from in `.claude/plugin-memory/CHANGES.md`. Only leave a `<!-- TODO(screenshot) -->` marker when the UI genuinely cannot be reached on `cart.local` (addon not installed, Pro-only screen with no Pro build) and say so in the summary.
+
 ---
 
 ## Hard rules

@@ -2,6 +2,10 @@
 
 FluentCart provides a powerful set of CSS variables that let you customize the appearance of your store without writing complex CSS or modifying theme files. Whether you want to change button colors, adjust text styles, or completely transform the look of your checkout, CSS variables make it easy to match your brand.
 
+::: info
+You no longer need CSS to change the storefront's main colors. The [Appearance settings](/guide/settings-configuration/appearance) tab under **Store Settings** lets you inherit your theme's palette or pick the global button, text, background, border, and input colors with color pickers and a live preview. It writes the same `--fct-*` variables described on this page, so use it for the global palette and reserve custom CSS for finer, element-level tweaks.
+:::
+
 ## Quick Start
 
 The fastest way to customize your store is by using the WordPress Customizer:

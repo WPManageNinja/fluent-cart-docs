@@ -1,6 +1,6 @@
 # Store Settings
 
-The **Store Setup** tab is where you configure the fundamental information about your FluentCart store: your store's name, logo, physical address, business details, currency, payment view, and units of measurement. These values feed into receipts, emails, checkout, shipping calculations, and tax handling, so it's the first screen to configure on a fresh install.
+The **Store Setup** tab is where you configure the fundamental information about your FluentCart store: your store's name, logo, physical address, business details, currency, payment view, date and time display, and units of measurement. These values feed into receipts, emails, checkout, shipping calculations, and tax handling, so it's the first screen to configure on a fresh install.
 
 ## Accessing the Store Setup Tab
 
@@ -48,6 +48,7 @@ Below the address fields you'll find the **Business Details** block — your leg
 * **Company Name:** Your registered business name as it should appear on receipts and invoices.
 * **Legal Registration ID:** Your company registration number (Companies House number in the UK, state filing number in the US, etc.). Shown on PDF receipts where local rules require business identification.
 * **Seller VAT ID:** Your store's EU VAT registration number. Appears in PDF receipts and is rendered into the <code v-pre>{{order.store_vat_display}}</code> smart tag for email templates. Use this field if you collect EU VAT — see [Configuring European Union (EU) VAT](/guide/tax-&-duties/european-union-vat) for how the VAT ID ties into reverse-charge handling.
+* **Seller Tax ID:** Any other tax registration number your store operates under, such as a US EIN, an Australian ABN, or a GST number. It is available to receipts, invoices, and email templates through the <code v-pre>{{settings.seller_tax_id}}</code> and <code v-pre>{{order.store_seller_tax_id}}</code> smart tags, and FluentCart Pro includes it in the seller block of PDF invoices.
 
 ![Screenshot of Store Settings - Business Details block](/images/settings-configuration/store-setting/store-business-tax.webp)
 
@@ -66,7 +67,26 @@ The **Payment View** setting controls how payment methods appear to customers on
 * **Logo:** Displays each payment method as its brand logo (for example, the PayPal logo rather than the word "PayPal"). Best for visually rich checkouts.
 * **Radio:** Displays each payment method as a labelled radio button. Cleaner and more compact, useful when you want the checkout to stay text-driven.
 
-### 7. Units of Measurement
+### 7. Date & Time Format and Timezone
+
+Every date FluentCart shows your customers and your team runs through these two settings: order emails, invoices and PDF receipts, the thank-you page, subscription and license dates, the customer dashboard, and the admin order and report screens.
+
+![Screenshot of the Date & Time Format and Timezone options on the Store Setup tab](/images/settings-configuration/store-setting/store-settings-date-time.webp)
+
+* **Date & Time Format:** Controls how dates and times are written.
+    * **WordPress:** Follows the date and time formats you set under **Settings > General** in WordPress. Month and weekday names are translated into your site language, and the field order follows your format, so a German store shows `16. August 2026 15:30` rather than an English-ordered date. This is the default.
+    * **Smart:** Keeps FluentCart's own compact style, for example `Aug 16, 2026 03:30 PM`, no matter what WordPress is set to.
+* **Timezone:** Controls which timezone dates are displayed in.
+    * **Browser:** Admin screens and the customer dashboard show dates in the viewer's own timezone. Emails and invoices are rendered in the timezone captured at checkout, so a customer in Sydney sees their order time as it happened for them. This is the default.
+    * **WordPress:** Uses the site timezone from **Settings > General** everywhere.
+
+![Screenshot of the Timezone option on the Store Setup tab](/images/settings-configuration/store-setting/store-settings-timezone.webp)
+
+::: info
+If your store previously showed dates like `Aug 16, 2026`, switching to **WordPress** changes them to whatever your WordPress format produces (for most English sites that is `August 16, 2026`). Pick **Smart** if you want to keep the shorter style. Either way, the change applies to newly rendered emails and pages; documents that were already sent do not change.
+:::
+
+### 8. Units of Measurement
 
 These two units are used across the product editor, package definitions, and shipping calculations.
 
