@@ -29,6 +29,7 @@ FluentCart supports a wide range of global and regional payment processors to en
  * **[PayPal](/guide/payments-checkout/connecting-payment-gateways/paypal-settings):** One of the most trusted ways for customers to pay via their PayPal balance, linked bank accounts, or credit cards.
  * **[Paddle](/guide/payments-checkout/connecting-payment-gateways/paddle-settings):** An all-in-one payment and tax solution (Merchant of Record) that handles global payments and compliance effortlessly.
  * **[Square](/guide/payments-checkout/connecting-payment-gateways/square-settings):** Securely accept payments via Credit and Debit Cards, Apple Pay, Google Pay, and Cash App Pay.
+ * **[Airwallex](/guide/payments-checkout/connecting-payment-gateways/airwallex-settings):** A global financial platform for accepting payments from customers worldwide, with webhook-synced refunds, disputes, and recurring subscriptions (Pro).
 
 #### Regional & Specialized Gateways
 

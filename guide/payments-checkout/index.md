@@ -16,6 +16,7 @@ The available gateways include:
  * **[Razorpay](/guide/payments-checkout/connecting-payment-gateways/razorpay-settings):** A popular payment solution for businesses in India, supporting UPI, Cards, NetBanking, and Wallets.
  * **[Authorize.net](/guide/payments-checkout/connecting-payment-gateways/authorizenet-settings):** A trusted payment gateway (Visa solution) that securely accepts credit cards, debit cards, and e-checks (ACH).
  * **[Square](/guide/payments-checkout/connecting-payment-gateways/square-settings):** A globally trusted payment gateway that accepts Credit and Debit Cards, Apple Pay, Google Pay, and Cash App Pay through a single inline checkout.
+ * **[Airwallex](/guide/payments-checkout/connecting-payment-gateways/airwallex-settings):** A global financial platform for accepting payments worldwide, with support for refunds, disputes, and subscriptions (Pro).
  * **[Cash on Delivery (COD)](/guide/payments-checkout/connecting-payment-gateways/cash-on-delivery-settings):** Lets customers pay in cash when their order is delivered.
 
 By setting up these features correctly, you can ensure a smooth, secure, and flexible payment process for your customers, leading to higher conversion rates and a better shopping experience.
