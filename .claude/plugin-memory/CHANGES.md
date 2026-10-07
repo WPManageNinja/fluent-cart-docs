@@ -5,6 +5,37 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## 1.7.0 changelog match (Sep 29, 2026)
+- **Trigger:** user pasted the 1.7.0 changelog (Product Reviews, Product schema JSON-LD, Compliance email-verification setting) and asked for the docs to match.
+- **Updated:** `settings-configuration/compliance-settings.md` (added Customer email verification Required/Not required, default Not required; corrected auto-login default to "Log in automatically"; path is FluentCart > Settings; 3 new screenshots, plan `compliance-settings.json`), `store-management/product-reviews/index.md` (link to schema page), `changelog.md` (v1.7.0 entry).
+- **Created:** `store-management/product-schema.md` (sidebar entry under Store Management, featured image generated). Source: `app/Services/Schema/ProductSchema.php`, `TemplateActions::renderProductJsonLd`.
+- **Reviews:** already covered by the entry below.
+
+---
+
+## Product Reviews (core `develop` + Elementor addon 1.1.0) — Sep 29, 2026
+- **Trigger:** user asked to check the latest product-review changes, then to update the docs with fresh screenshots (NotePlus #741 on cart.local) and to cover the new Elementor widgets.
+- **Range:** core `27462f682..915dad4fe` review commits (feature squash `31ebe39e9` Sep 25; palette tokens `365cad1d0`; shortcode attrs `406334e61`; Write a Review Link mode removed `145dd26ad`; settings page rebuilt `d2ccd07ce`; loader/empty-state fixes). Elementor addon `fluent-cart-elementor-blocks` v1.1.0 (`/Users/authlab-24/Local Sites/cart/app/public/wp-content/plugins/fluent-cart-elementor-blocks`, its own git repo, NOT in the core clone). Pro repo at `/Users/authlab-24/Desktop/fluent-cart-pro` (`develop`, 1.7.0 bump).
+- **Key findings (docs were stale on all of these):**
+  - Reviews screen is under the top-nav **Products** menu (child of Products, like Attributes/Inventory), not **More**.
+  - Product edit checkbox is **Disable reviews for this product** (unticked by default), not "Enable reviews for this product".
+  - Review settings page is one card: enable switch + status line, rows revealed when on, Pro rows (Photo Reviews, Helpful Votes) visible but disabled with an inline Upgrade to Pro link in free, Save = header button / Cmd+S. No "Review Enhancements" section.
+  - Photo limit is **Max File Size (MB)** 0.1 to 10, default 1.0, not KB.
+  - **Review Actions** email group has 3 notifications (admin on submit, reviewer on approve, reviewer on store reply), not 1.
+  - Admin list: product name sits under the ID (no Product column); row actions include Pending; bulk actions are Approve, Pending, Mark as Spam, Move to Trash, Delete Permanently, Reply + Confirm button; Add Review button + dialog; single review page has More Actions menu, About the Reviews card (Verified purchase switch, Actions buttons).
+  - Review drawer default is **inline** (whole form at once). Steps layout is opt-in on the Write a Review / Review Form blocks (`Field Layout`). Container is Drawer or Modal only.
+  - Six review blocks + Product Rating; 11 layout presets (only Classic free); Grid/Masonry/Slider view modes and media_backdrop/media_flush are Pro; shortcode `[fluent_cart_product_reviews]` with ~40 attributes.
+  - Store Settings > **Product Page** has **Show Reviews In Single Page** and a **Product Rating** row (**Show Rating in Shop**, **Show Rating in Relevant Products**), route `/settings/store-settings/single_product_setup`.
+  - Elementor addon: six widgets in the `fluent-cart` category (Product Reviews, Product Review List, Review Summary, Review Form, Write a Review Button, Product Rating), layout picker only on Product Reviews, Review Row "Choose fields" only on Product Review List, `Rating` card element on the Products widget.
+- **Doc pages updated:** `store-management/product-reviews/{index,review-settings,moderating-reviews,displaying-reviews,photo-reviews-helpful-votes}.md`, `settings-configuration/product-page.md`, `customization-and-themes/{using-gutenberg-blocks,using-elementor-widgets,elementor-fluentcart-widgets}.md`.
+- **Doc pages created (sidebar entry added):** `customization-and-themes/elementor-review-widgets.md` (under Using Elementor Widgets).
+- **Screenshots:** plans `review-settings`, `review-admin`, `review-storefront`, `review-blocks`, `product-page-reviews`, `elementor-review-widgets` in `scripts/screenshots/plans/`. Runner gained `css` and `eval` steps and a `waitUntil` option on `front` (block editor and Elementor editor shots). Product #741 NotePlus was seeded with 10 sample reviews (6 approved, 2 pending, 1 spam, 1 trash) through the admin REST API. Images came from `develop` (no branch switch).
+- **Still open / blocked:** (1) drawer + Photos area + helpful-vote buttons screenshots: Pro's review storefront assets are not built on cart.local (`fluent-cart-pro/build/vite` has no review files), so the Photos upload zone renders as a giant camera icon. (2) Elementor layout picker apply behaviour could not be verified live: the addon's editor JS (`resources/elementor/review-layout-picker.js`) is not built (`assets/` holds CSS only). (3) Changelog not touched: no released version yet for these changes.
+- **Skipped (no doc impact):** review list loader overlay and empty-state CSS fixes, i18n map regeneration, palette token refactor, phpstan/test files, `dev-docs/` audits.
+- **Repo state note:** the docs repo was on branch `product-review` with a stash-pop conflict in `using-gutenberg-blocks.md` (Cart section vs Review blocks section). Both sides kept; markers removed; not staged.
+
+---
+
 ## v1.6.5 — Sep 24, 2026
 - **Trigger:** user pasted the 1.6.5 release changelog and asked for a gap check against docs, then to update the necessary pages.
 - **Range:** core `b94513421..HEAD` (`6b48c02b9`, `develop`), 31 commits / 145 files, on top of the "Unreleased (post-1.6.4)" work below (which this release absorbs — Appearance, date/time settings, wildcard search, order-bump hook were already documented and are NOT re-touched here). Local clone still reports `FLUENTCART_VERSION 1.6.4`; the public `guide/changelog.md` entry (already present, committed at `bf4e056` before this session) is the source for the 1.6.5 number.

@@ -1,0 +1,16 @@
+{
+  "outDir": "guide/public/images/store-management/product-reviews",
+  "viewport": { "width": 1600, "height": 1500 },
+  "steps": [
+    { "admin": "/settings/product-reviews" },
+    { "wait": 1500 },
+    { "shot": { "name": "review-settings", "clip": "app", "crop": { "height": 2660 },
+        "arrows": [ { "target": "a[href*=\"product-reviews\"]:visible", "from": "right", "len": 150 } ] } },
+    { "shot": { "name": "enable-product-reviews", "clip": { "element": ".fct-setting-form-row:has-text(\"Enable Product Reviews\") >> nth=0", "pad": 110 },
+        "arrows": [ { "target": ".fct-review-settings .el-switch >> nth=0", "from": "left", "len": 100 } ] } },
+    { "shot": { "name": "review-permission-modes", "clip": { "element": ".fct-setting-form-row:has-text(\"Who can leave reviews?\") >> nth=0", "pad": 24 } } },
+    { "shot": { "name": "review-photo-helpful-settings", "clip": { "element": ".fct-review-settings .setting-wrap-inner > div >> nth=0", "pad": 0 }, "crop": { "top": 1375 } } },
+    { "shot": { "name": "review-settings-save", "clip": "app", "crop": { "height": 420 },
+        "arrows": [ { "target": { "role": "button", "name": "save" }, "from": "bottom", "len": 130 } ] } }
+  ]
+}

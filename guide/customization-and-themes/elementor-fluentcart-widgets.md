@@ -60,7 +60,7 @@ The main widget for building shop pages. It renders your product catalog as a cl
 * **Content Tab:** Control which products show up and how they're arranged.
     * **General Settings:** Set **Products Per Page**, switch the **View Mode** between Grid and List, choose **Grid Columns**, and pick a **Pagination Type** (Infinite Scroll, Load More, or numbered pages). Choose the **Price Format**, sort with **Order By** and **Order**, and toggle **Use Default Style** for FluentCart's built-in styling.
     * **Shop Layout:** Adjust the spacing and layout of the product grid.
-    * **Product Card Layout:** Choose which elements (image, title, price, button) appear inside each product card.
+    * **Product Card Layout:** Choose which elements (image, title, excerpt, price, rating, button) appear inside each product card. See [ratings on shop cards](/guide/customization-and-themes/elementor-review-widgets#ratings-on-shop-cards) for the **Rating** element.
     * **Filter Settings:** Turn on a sidebar filter so customers can narrow the list by category, price, or attributes.
 * **Style Tab:** Customize typography, card colors, button colors, and grid spacing.
 * **Advanced Tab:** Standard Elementor margin, padding, and responsive controls.

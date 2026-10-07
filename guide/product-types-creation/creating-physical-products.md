@@ -265,12 +265,14 @@ To learn more about how shipping classes work, see the [Understanding Shipping C
 
 ### Tax Class
 
-The **Tax Class** allows you to apply specific tax rules to your product.
+The **Tax Class** allows you to apply specific tax rules to your product. It is set per variation and only appears when tax is enabled for your store.
 
 To assign a tax class:
 
- 1. Locate the **Tax Class** section on the right side of the screen.
- 2. Select a pre-configured tax class from the dropdown menu, or click **+ Add** to create a new one. The corresponding tax rate will then be automatically applied to this product during checkout. Learn more about [tax configuration and classes](/guide/tax-&-duties/configuration-and-classes).
+ 1. Click the **pencil icon** in the **Action** column of the variation to open the variation editor.
+ 2. In the **Tax** section, keep **Charge tax on this variation** checked, then click the **pencil icon** beside **Class** and select a tax class from the dropdown. The corresponding tax rate will then be automatically applied to this variation during checkout. To create or rename classes, see [tax configuration and classes](/guide/tax-&-duties/configuration-and-classes).
+
+For the full walkthrough, see [Per-Variation Tax Settings](/guide/product-types-creation/per-variation-tax).
 
 ## Publishing Settings
 
@@ -279,7 +281,7 @@ This section on the right side of the product edit page controls your product's 
  * **Status:** This sets whether your product is live on your store (Publish) or saved as a hidden Draft.
  * **URL Slug:** This is the unique, URL-friendly part of the web address for this product. FluentCart automatically creates one from the title, but you can click it to make edits.
  * **Default Variant:** If your product has options (like different sizes or subscription plans), this setting pre-selects one for the customer when they visit the page.
- * **Group By:** This organizes how your product variations are displayed. For example, you can group subscription plans by their billing interval (e.g., "Monthly" and "Yearly") to make them easier for customers to compare.
+ * **Group By:** If your product uses [Advanced Variations](/guide/product-types-creation/advanced-variations) with two or more attribute groups (e.g., Color and Size), a **Group by** dropdown appears in the variations editor, letting you choose which attribute group the variations are grouped by while you manage them.
  * **Limit purchases to 1 item per order:** Check this box to prevent customers from buying more than one of this specific item in a single transaction. This is useful for things like event tickets or exclusive items.
 
 Once you have configured all the necessary details, click the **"Update"** (or "Save") button on the top right to make your product live in your store. You can also click **"Preview"** to see how the product page will look before publishing.

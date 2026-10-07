@@ -126,3 +126,4 @@ Jump straight to the group you want to learn about:
 
 * [FluentCart Widgets for Elementor](/guide/customization-and-themes/elementor-fluentcart-widgets) — the 16 store-wide widgets you can use on any page.
 * [FluentCart Product Widgets for Elementor](/guide/customization-and-themes/elementor-product-widgets) — the 9 Theme Builder widgets for single-product templates.
+* [FluentCart Review Widgets for Elementor](/guide/customization-and-themes/elementor-review-widgets) — the 6 widgets for [product reviews](/guide/store-management/product-reviews/), from a full review section to a single star rating.

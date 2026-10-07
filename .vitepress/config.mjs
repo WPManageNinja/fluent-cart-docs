@@ -413,6 +413,17 @@ export default defineConfig({
                 { text: 'Customer Details Overview', link: '/guide/store-management/customers-management/customer-details-overview' }
               ]
             },
+            {
+              text: 'Product Reviews',
+              link: '/guide/store-management/product-reviews/', // Link to its index.md
+              items: [
+                { text: 'Review Settings', link: '/guide/store-management/product-reviews/review-settings' },
+                { text: 'Moderating Reviews', link: '/guide/store-management/product-reviews/moderating-reviews' },
+                { text: 'Displaying Reviews on Your Store', link: '/guide/store-management/product-reviews/displaying-reviews' },
+                { text: 'Photo Reviews & Helpful Votes', link: '/guide/store-management/product-reviews/photo-reviews-helpful-votes' }
+              ]
+            },
+            { text: 'Product Schema for Search Results', link: '/guide/store-management/product-schema' },
             { text: 'Exporting Your Store Data', link: '/guide/store-management/exporting-data' },
           ]
         },
@@ -657,6 +668,7 @@ export default defineConfig({
             { text: 'Using Elementor Widgets', link: '/guide/customization-and-themes/using-elementor-widgets', items: [
               { text: 'FluentCart Widgets', link: '/guide/customization-and-themes/elementor-fluentcart-widgets' },
               { text: 'FluentCart Product Widgets', link: '/guide/customization-and-themes/elementor-product-widgets' },
+              { text: 'FluentCart Review Widgets', link: '/guide/customization-and-themes/elementor-review-widgets' },
             ]},
             { text: 'Layout and Template Customization (Block Editor)', link: '/guide/customization-and-themes/layout-template-customization' },
             { text: 'Customize Store with Bricks', link: '/guide/customization-and-themes/customize-store-with-bricks', items: [

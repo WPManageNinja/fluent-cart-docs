@@ -1,0 +1,223 @@
+{
+ "outDir": "guide/public/images/customization-and-themes/fluentcart-elementor-widgets/review-widgets",
+ "viewport": {
+  "width": 1600,
+  "height": 1400
+ },
+ "steps": [
+  {
+   "front": "http://cart.local/wp-admin/post.php?post=826&action=elementor",
+   "hideThemeHeader": false,
+   "waitUntil": "load"
+  },
+  {
+   "wait": 15000
+  },
+  {
+   "fill": {
+    "selector": "#elementor-panel-elements-search-input",
+    "value": "review"
+   }
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "eval": "[...document.querySelectorAll('#elementor-panel-elements .elementor-element')].forEach((e, i) => { if ([0, 7, 8].includes(i)) { const w = e.closest('.elementor-element-wrapper') || e; w.style.display = 'none'; } })"
+  },
+  {
+   "wait": 500
+  },
+  {
+   "shot": {
+    "name": "elementor-review-widgets-panel",
+    "clip": {
+     "x": 0,
+     "y": 0,
+     "width": 500,
+     "height": 700
+    },
+    "arrows": [
+     {
+      "target": "#elementor-panel-elements .elementor-element:has-text(\"Product Reviews\")",
+      "from": "right",
+      "len": 100
+     }
+    ]
+   }
+  },
+  {
+   "eval": "(() => { const doc = elementor.getContainer('document'); const c = $e.run('document/elements/create', { container: doc, model: { elType: 'container' } }); const w = $e.run('document/elements/create', { container: c, model: { elType: 'widget', widgetType: 'fluentcart_product_reviews', settings: {} } }); $e.run('panel/editor/open', { model: w.model, view: w.view }); })()"
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "wait": 1000
+  },
+  {
+   "shot": {
+    "name": "elementor-product-reviews-layout-picker",
+    "clip": {
+     "x": 0,
+     "y": 0,
+     "width": 520,
+     "height": 1240
+    },
+    "arrows": [
+     {
+      "target": {
+       "text": "Card Grid"
+      },
+      "from": "right",
+      "len": 70
+     }
+    ]
+   }
+  },
+  {
+   "eval": "(() => { const doc = elementor.getContainer('document'); const c = $e.run('document/elements/create', { container: doc, model: { elType: 'container' } }); const w = $e.run('document/elements/create', { container: c, model: { elType: 'widget', widgetType: 'fluentcart_product_review_list', settings: {} } }); $e.run('panel/editor/open', { model: w.model, view: w.view }); })()"
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "click": {
+    "selector": ".elementor-panel-heading-title",
+    "hasText": "Review Row"
+   }
+  },
+  {
+   "wait": 1200
+  },
+  {
+   "eval": "(() => { const s = [...document.querySelectorAll('select')].find(x => [...x.options].some(o => /Choose fields/.test(o.text))); if (s) { s.value = [...s.options].find(o => /Choose fields/.test(o.text)).value; s.dispatchEvent(new Event('change', { bubbles: true })); s.dispatchEvent(new Event('input', { bubbles: true })); } })()"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "shot": {
+    "name": "elementor-review-list-fields",
+    "clip": {
+     "x": 0,
+     "y": 0,
+     "width": 520,
+     "height": 1000
+    },
+    "arrows": [
+     {
+      "target": "#elementor-panel-page-editor select:visible >> nth=0",
+      "from": "right",
+      "len": 70
+     }
+    ]
+   }
+  },
+  {
+   "eval": "(() => { const doc = elementor.getContainer('document'); const c = $e.run('document/elements/create', { container: doc, model: { elType: 'container' } }); const w = $e.run('document/elements/create', { container: c, model: { elType: 'widget', widgetType: 'fluentcart_write_a_review_button', settings: {} } }); $e.run('panel/editor/open', { model: w.model, view: w.view }); })()"
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "shot": {
+    "name": "elementor-write-a-review-widget",
+    "clip": {
+     "x": 0,
+     "y": 0,
+     "width": 520,
+     "height": 780
+    },
+    "arrows": [
+     {
+      "target": "#elementor-panel-page-editor select:visible >> nth=1",
+      "from": "right",
+      "len": 70
+     }
+    ]
+   }
+  },
+  {
+   "eval": "(() => { const doc = elementor.getContainer('document'); const c = $e.run('document/elements/create', { container: doc, model: { elType: 'container' } }); const w = $e.run('document/elements/create', { container: c, model: { elType: 'widget', widgetType: 'fluentcart_product_rating', settings: {} } }); $e.run('panel/editor/open', { model: w.model, view: w.view }); })()"
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "shot": {
+    "name": "elementor-product-rating-widget",
+    "clip": {
+     "x": 0,
+     "y": 0,
+     "width": 520,
+     "height": 560
+    },
+    "arrows": [
+     {
+      "target": "#elementor-panel-page-editor input[type=number]:visible >> nth=0",
+      "from": "right",
+      "len": 70
+     }
+    ]
+   }
+  },
+  {
+   "eval": "(() => { const doc = elementor.getContainer('document'); const c = $e.run('document/elements/create', { container: doc, model: { elType: 'container' } }); const w = $e.run('document/elements/create', { container: c, model: { elType: 'widget', widgetType: 'fluentcart_product_review_form', settings: {} } }); $e.run('panel/editor/open', { model: w.model, view: w.view }); })()"
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "shot": {
+    "name": "elementor-review-form-widget",
+    "clip": {
+     "x": 0,
+     "y": 0,
+     "width": 520,
+     "height": 520
+    },
+    "arrows": [
+     {
+      "target": "#elementor-panel-page-editor select:visible >> nth=1",
+      "from": "right",
+      "len": 70
+     }
+    ]
+   }
+  },
+  {
+   "eval": "(() => { const doc = elementor.getContainer('document'); const c = $e.run('document/elements/create', { container: doc, model: { elType: 'container' } }); const w = $e.run('document/elements/create', { container: c, model: { elType: 'widget', widgetType: 'fluent_cart_shop_app', settings: { card_elements: [ { _id: 'a1b2c3d', element_type: 'image' }, { _id: 'b2c3d4e', element_type: 'title' }, { _id: 'c3d4e5f', element_type: 'rating' }, { _id: 'd4e5f6a', element_type: 'price' }, { _id: 'e5f6a7b', element_type: 'button' } ] } } }); $e.run('panel/editor/open', { model: w.model, view: w.view }); })()"
+  },
+  {
+   "wait": 4500
+  },
+  {
+   "click": {
+    "selector": ".elementor-panel-heading-title",
+    "hasText": "Product Card Layout"
+   }
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "shot": {
+    "name": "elementor-shop-card-rating",
+    "clip": {
+     "x": 0,
+     "y": 0,
+     "width": 520,
+     "height": 900
+    },
+    "arrows": [
+     {
+      "target": "#elementor-panel-page-editor .elementor-repeater-add",
+      "from": "bottom",
+      "len": 70
+     }
+    ]
+   }
+  }
+ ]
+}

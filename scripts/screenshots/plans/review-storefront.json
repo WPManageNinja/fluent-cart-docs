@@ -1,0 +1,9 @@
+{
+  "outDir": "guide/public/images/store-management/product-reviews",
+  "viewport": { "width": 1600, "height": 3000 },
+  "steps": [
+    { "front": "/item/noteplus/", "hideThemeHeader": true },
+    { "wait": 2500 },
+    { "shot": { "name": "review-section-storefront", "clip": { "element": ".fct-product-reviews-block", "pad": 40 } } }
+  ]
+}

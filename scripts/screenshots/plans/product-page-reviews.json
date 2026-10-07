@@ -1,0 +1,12 @@
+{
+  "outDir": "guide/public/images/settings-configuration/product-page-settings",
+  "viewport": { "width": 1600, "height": 1500 },
+  "steps": [
+    { "admin": "/settings/store-settings/single_product_setup" },
+    { "wait": 2500 },
+    { "shot": { "name": "product-page-show-reviews", "clip": { "rows": ["Single Product Setup"], "pad": 24 },
+        "arrows": [ { "target": ".el-checkbox:has-text(\"Show Reviews In Single Page\")", "from": "right", "len": 140 } ] } },
+    { "shot": { "name": "product-page-rating-settings", "clip": { "rows": ["Product Rating"], "pad": 60 },
+        "arrows": [ { "target": ".el-checkbox:has-text(\"Show Rating in Shop\")", "from": "right", "len": 140 } ] } }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "outDir": "guide/public/images/settings-configuration/compliance-settings",
+  "viewport": { "width": 1600, "height": 1500 },
+  "steps": [
+    { "admin": "/settings/compliance" },
+    { "wait": 1200 },
+    { "shot": { "name": "compliance-settings", "clip": "app", "crop": { "height": 1400 },
+        "arrows": [ { "target": "a[href*=\"settings/compliance\"]:visible", "from": "right", "len": 150 } ] } },
+    { "shot": { "name": "compliance-email-verification", "clip": { "rows": ["Customer email verification"], "pad": 24 } } },
+    { "shot": { "name": "compliance-login-after-account", "clip": { "rows": ["Login after account creation"], "pad": 24 } } }
+  ]
+}

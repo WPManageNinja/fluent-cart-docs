@@ -8,6 +8,7 @@ This section covers the following key aspects of store management:
 
 * **[Orders Management](/guide/store-management/orders-management/):** Learn how to view, filter, create, edit, refund, and collect payments for all orders.
 * **[Customers Management](/guide/store-management/customers-management/):** Discover how to view, search, filter, and manage individual customer profiles and their associated data.
+* **[Product Reviews](/guide/store-management/product-reviews/):** Collect star ratings and customer feedback on your products, moderate what gets published, and reply to your customers in public.
 * **[Exporting Your Store Data](/guide/store-management/exporting-data):** Export orders, customers, subscriptions, and licenses to CSV or JSON straight from your browser.
 
 By mastering the tools within Store Management, you can fulfill orders efficiently, keep customer information accurate, and make sure your product availability is always up-to-date.

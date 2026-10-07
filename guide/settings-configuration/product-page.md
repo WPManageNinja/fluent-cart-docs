@@ -16,6 +16,13 @@ These settings control how additional information is presented on your individua
 
 * **Show Relevant in Single Page:** When enabled, this will display a section for related products or upsells directly on the single product page. This is a highly effective strategy for encouraging customers to discover other items they might like, potentially leading to larger purchases.
 * **Show Relevant in Product Modal:** If your theme uses a product quick-view or modal pop-up, this option will display those same relevant products within that modal view. This provides a seamless cross selling opportunity without requiring the customer to navigate to a new page.
+* **Show Reviews In Single Page:** When enabled, your single product pages show the [product review section](/guide/store-management/product-reviews/displaying-reviews) with the rating summary and the customer reviews. This option has an effect only while the **Reviews** feature is switched on in your [review settings](/guide/store-management/product-reviews/review-settings).
+
+  ![Screenshot of the Show Reviews In Single Page checkbox in the Product Page settings](/images/settings-configuration/product-page-settings/product-page-show-reviews.webp)
+
+::: info
+On a block theme, add the **Product Reviews** block to your Single Product template to display reviews on your product page. FluentCart shows a reminder of this under the checkbox.
+:::
 
   ![Screenshot of Single Product & Order Setup Tab](/images/settings-configuration/product-page-settings/single-product-order-setup.webp)
 
@@ -43,6 +50,17 @@ Alternatively, the **Masonry** option creates a dynamic layout that adjusts to f
 
 A "slug" is the user-friendly and URL-valid part of a web address that identifies a specific page. Customizing your product slug is important for both branding and Search Engine Optimization (SEO).
  * **Set Product Slug:** Here, you can define the base slug for all your products (e.g., `product`, `item`, `course`). If you set it to `product`, a product named "Stylish T-Shirt" would have a URL like `yourstore.com/product/stylish-t-shirt`. Choosing a relevant slug can help search engines and users understand what the page is about.
+
+### 5. Product Rating
+
+These settings decide where the star rating appears when [product reviews](/guide/store-management/product-reviews/) are enabled.
+
+* **Show Rating in Shop:** Displays each product's average star rating and review count on your shop page and in product grids and carousels. On by default.
+* **Show Rating in Relevant Products:** Displays the same star rating on the related products shown under a product. On by default.
+
+![Screenshot of the Product Rating settings in the Product Page settings](/images/settings-configuration/product-page-settings/product-page-rating-settings.webp)
+
+A product with no approved reviews shows no rating on its card, whichever way these are set.
 
 ## Saving Your Settings
 

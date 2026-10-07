@@ -35,6 +35,12 @@ You will see all the blocks listed below. Here is a fast look at all the FluentC
  * Product Categories List
  * Excerpt
  * Product Package Description
+ * Product Reviews
+ * Rating Summary with Review
+ * Review List
+ * Product Rating
+ * Write a Review
+ * Review Form
 
 
 ### 1. Products 
@@ -390,3 +396,42 @@ Two of the children let you override their wording, either by clicking the text 
 
 > [!Note]
 > Each FluentCart block comes with its own customization settings. After adding a block, check the settings panel on the right to adjust design, alignment, behavior, and visibility.
+
+## Product Review Blocks
+
+FluentCart adds six blocks for [product reviews](/guide/store-management/product-reviews/), so you can build your own review layout instead of relying on the default product page. They appear in the same **FluentCart** category in the block inserter, and they only render once **Enable Product Reviews** is turned on in **FluentCart > Settings > Product Reviews**.
+
+![Screenshot of the FluentCart review blocks in the WordPress block inserter](/images/store-management/product-reviews/review-blocks-inserter.webp)
+
+Every block that you place on its own shares the same **Product** setting, and it is the first thing to get right:
+
+* **Query type > Default:** The block shows whichever product is currently being viewed. Use this on a single product template, where the block should adapt to each product automatically.
+* **Query type > Custom:** The block always shows one specific product, chosen with the **Select Product** button. Use this on a landing page, your home page, or anywhere outside a product template.
+
+### 22. Product Reviews
+
+The all-in-one container, and the quickest way to add a full review section. It holds the rating summary, the review list, and the **Write a Review** button, and its **Layout** panel lets you rebuild the whole section from eleven ready-made layouts. **Classic** is free, and the rest need FluentCart Pro.
+
+### 23. Rating Summary with Review
+
+The rating summary card on its own: the average score out of 5, a bar for each star level, and a **Write a Review** button underneath. Use it when you want the summary and the call to action together, with the reviews themselves placed somewhere else on the page.
+
+### 24. Review List
+
+The customer reviews on their own, with filtering, sorting, and pagination but no summary card. Its **View Mode** offers **List**, **Grid**, **Masonry**, and **Slider**, and each part of a review card is its own block that you can reorder, remove, or restyle. **List** is free, and the other view modes need FluentCart Pro.
+
+### 25. Product Rating
+
+The star rating on its own, as a compact inline element, with the number of reviews in brackets beside it. Ideal next to a product title, inside a card, or anywhere a full review section would be too much. You can hide it until a product reaches a **Minimum Reviews** count or a **Minimum Average Rating**.
+
+### 26. Write a Review
+
+A single button that opens the review form in a drawer or a modal. Place it anywhere you want to invite feedback, and rewrite its three labels in the **Button Text** panel.
+
+### 27. Review Form
+
+The review form printed directly on the page, with no button. Use it on a dedicated page when you want the form always in view.
+
+Every setting of these blocks, including the layout presets and the field-by-field controls of the review list, is covered in [Displaying Reviews on Your Store](/guide/store-management/product-reviews/displaying-reviews#the-review-blocks). If you prefer to build with a shortcode instead, the same page explains [the reviews shortcode](/guide/store-management/product-reviews/displaying-reviews#the-reviews-shortcode).
+
+> **Note:** Each FluentCart block comes with its own customization settings. After adding a block, check the settings panel on the right to adjust design, alignment, behavior, and visibility.
