@@ -43,7 +43,7 @@ Every FluentCart block carries the FluentCart badge in its corner, so you can te
 
 The blocks are grouped below by what they do, rather than the order they appear in the panel, so you can find the right one quickly.
 
-Most of these blocks let you choose which product they display. You either let the block pick up the product from the page it sits on, which is what you want inside a product template, or point it at a specific product using the **Query Type** and **Manual Product ID** controls, which is handy for a landing page featuring one item.
+Most of these blocks let you choose which product they display. You either let the block pick up the product from the page it sits on, which is what you want inside a product template, or point it at a specific product using the **Query Type** and **Manual Product ID** controls, which is handy for a landing page featuring one item. On **Product Info**, **Product Card**, **Product SKU**, **Product Package Description**, **Related Products**, and the review elements, **Manual Product ID** also accepts Bricks dynamic data, such as `{post_id}` or a custom field.
 
 ### Product Details
 
@@ -88,8 +88,12 @@ These blocks cover the rest of the storefront:
 * **Customer Dashboard:** The full customer account area.
 * **Customer Dashboard Button:** A link into the customer dashboard, handy in a header or menu. Set the **Display Type** and **Button Text**, and optionally **Show Icon** or **Open in New Tab**.
 
+### Product Reviews
+
+Since version 1.1.0, the addon also includes six elements for showing and collecting reviews: **Product Reviews**, **Review List**, **Rating Summary**, **Review Form**, **Write a Review**, and **Product Rating**. Each one is covered in [FluentCart Review Elements for Bricks](/guide/customization-and-themes/bricks-review-elements).
+
 ::: info
-A handful of these elements, including **Products**, **Product Title**, **Product Gallery**, and **Buy Section**, are built into FluentCart and appear in Bricks even without the addon. Installing the addon adds the other fifteen and completes the set, so you can build a whole store page without leaving the builder.
+A handful of these elements, including **Products**, **Product Title**, **Product Gallery**, and **Buy Section**, are built into FluentCart and appear in Bricks even without the addon. Installing the addon adds the rest and completes the set, so you can build a whole store page without leaving the builder.
 :::
 
 ## Products Block Controls
