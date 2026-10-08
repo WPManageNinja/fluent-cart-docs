@@ -56,6 +56,7 @@ For more detailed control, use the **Advanced Filter** option:
     * **Order Property:** Filter products based on properties related to orders they are part of.
     * **Product Variation:** Filter products by their variations, including "Variation Count, Variation, and Variation Type."
     * **Taxonomies:** Filter products by their classification, including Product Categories, and Product Brands.
+    * **Reviews:** *(Appears only while [Product Reviews](/guide/store-management/product-reviews/review-settings) is enabled)* Filter by **Reviews** or **Written Reviews**, each **Has** or **Has no** reviews that are **Approved**, **Not approved**, or of **Any status**. Filter by **Average Rating** **Same or higher than** or **Same or lower than** a chosen star count.
     * **Conditional Logic:** Use the **"+ Add"** button for "AND" conditions and the **"+ OR"** button for "OR" conditions to combine multiple criteria.
 
 3.  Apply your desired filters by clicking **"Apply"** or **"Reset"** them to view the complete list. 
