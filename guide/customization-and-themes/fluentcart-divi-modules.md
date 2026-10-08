@@ -87,6 +87,10 @@ These modules cover the rest of the storefront:
 * **FluentCart Customer Dashboard:** The full customer account area, where shoppers manage their orders, subscriptions, and downloads.
 * **FluentCart Customer Dashboard Button:** A link into the customer dashboard, handy in a header or menu.
 
+### Product Reviews
+
+Since version 1.1.0, the addon also includes six modules for showing and collecting reviews: **FluentCart Product Reviews**, **FluentCart Review List**, **FluentCart Rating Summary with Review**, **FluentCart Review Form**, **FluentCart Write a Review**, and **FluentCart Product Rating**. Each one is covered in [FluentCart Review Modules for Divi](/guide/customization-and-themes/divi-review-modules), along with the new star ratings on **FluentCart Products** cards.
+
 ## Building Your Shop Page
 
 The easiest way to display your catalog is with the **FluentCart Products** module. Add it to a row, then open its **Content** tab to control exactly what it shows and how it behaves. The Divi canvas shows a live preview, and filters, sorting, and pagination all work on the published page.
