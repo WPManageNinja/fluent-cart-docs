@@ -9,7 +9,10 @@ There is nothing to switch on. The data is added to single product pages only, a
 Each product page carries one product entry with the details a shopper sees on the page:
 
 * **Basics:** The product name, page link, featured image, and description. When a product has a single variation, its SKU is included too.
+* **Brand:** The product's assigned [brands](/guide/product-types-creation/creating-managing-product-brand), when it has any.
 * **Offers:** One offer for a single-variation product, or a price range with the lowest price, highest price, and number of options for a product with several variations. Each offer carries the store currency and its stock status, and only active variations are included. Stock status reflects real stock only when Stock Management is enabled. Otherwise every offer is shown as in stock.
+* **Subscription billing:** For a subscription offer, the billing period (daily, weekly, monthly, and so on) and, for a plan with a fixed number of payments, the total length of the subscription.
+* **Tax:** When tax is on, whether an offer's price already includes VAT, following the same setting and variation overrides your storefront prices use.
 * **Aggregate rating:** The average star rating and the number of reviews. This appears once the product has approved reviews.
 * **Reviews:** The individual reviews shown on the page, including the reviewer name, date, title, text, and star rating.
 
