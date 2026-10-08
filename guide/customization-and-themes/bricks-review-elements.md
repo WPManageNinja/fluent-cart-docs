@@ -12,7 +12,7 @@ To place a review element on a page or template:
 2.  Click the plus icon (**+**) to open the elements panel, and type `review` into the search field.
 3.  Click or drag the element you want onto the canvas.
 
-<!-- TODO(screenshot): Bricks elements panel filtered to the review elements -->
+![Screenshot of the Bricks elements panel filtered to the review elements](/images/customization-and-themes/bricks-review-elements/bricks-review-elements-panel.webp)
 
 Every review element starts with the same **Product** group in its **Content** tab:
 
@@ -50,7 +50,7 @@ The **Layout** group holds the **Layout Preset** dropdown. It lists eleven ready
 
 Picking a layout previews it on the canvas straight away. To make it stick, click **Apply Layout**, which appears once a preset is chosen. Bricks saves the page, writes the layout's choices into the element's own settings, and reloads them in the panel.
 
-<!-- TODO(screenshot): Layout Preset dropdown and Apply Layout button in the Product Reviews element -->
+![Screenshot of the Layout Preset dropdown in the Product Reviews element](/images/customization-and-themes/bricks-review-elements/bricks-review-layout-picker.webp)
 
 A layout is a starting point, not a lock. After it is applied, every setting below is yours to change, and your changes win. Your own tuning also survives a switch: **Columns**, **Reviews Per Page**, **Pagination**, **Default Sort**, and the slider settings carry over to the next layout if you set them yourself.
 

@@ -67,6 +67,22 @@ Category filters also work seamlessly with pagination. For example, the followin
 
 > **Note:** If you pass a category slug that does not exist (e.g., `category="nonexistent-category-xyz"`), the filter is ignored and all products are shown.
 
+#### Filtering by Any Taxonomy
+
+For anything beyond categories, use the **taxonomies** attribute. It takes term IDs only, grouped by taxonomy: `taxonomy:id,id`, with a `|` between taxonomies when you need more than one.
+
+```text
+// Products tagged with brand term 67
+[fluent_cart_products taxonomies="product-brands:67"]
+
+// Two brand terms and one category term, all at once
+[fluent_cart_products taxonomies="product-brands:67,82|product-categories:9"]
+```
+
+This works with **product-categories**, **product-brands**, and any custom taxonomy your store has registered on products, such as a store-added product-tags taxonomy. A taxonomy that isn't registered on products, or a term that doesn't belong to the taxonomy you named, matches nothing rather than widening the list.
+
+> **Note:** This is a different setting from the `taxonomies` key inside **custom_filters** in [Advanced Usage](#advanced-usage-filters-sidebar) below, which only decides which taxonomy filters show in the shopper-facing sidebar. The **taxonomies** attribute here narrows the products the shortcode itself displays.
+
 #### Filtering by Product Type & Sale Status
 
 Use the `product_type` parameter to display only a specific type of product, or use `on_sale` to showcase discounted items.
@@ -176,6 +192,7 @@ You can also enable a sidebar filter and configure it with JSON-based settings. 
 | **exclude_ids** | Hide specific products from the list. Accepts a single ID or a comma-separated list. | — | Any valid product ID(s) (e.g., `344` or `3595,3493`) |
 | **category** | Filter products by one or more category slugs. | — | Comma-separated slugs (e.g., `cloths` or `cloths,shoes`) |
 | **category_id** | Filter products by one or more category term IDs. | — | Comma-separated IDs (e.g., `9` or `9,12`) |
+| **taxonomies** | Filter products by term IDs from any taxonomy registered on products. | — | `taxonomy:id,id`, with `\|` between taxonomies (e.g., `product-brands:67,82\|product-categories:9`) |
 | **product_type** | Show only products of a specific type. | — | `simple`, `simple_variations`, `physical`, `digital`, `subscription` |
 | **on_sale** | Show only products that are currently discounted. | — | `yes` |
 | **sort_by** | A quick preset for sorting products. | — | `price-low`, `price-high`, `name-asc`, `date-newest`, `date-oldest` |
