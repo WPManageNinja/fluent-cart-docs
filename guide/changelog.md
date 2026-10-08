@@ -1,6 +1,44 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.7.1
+*Released on Oct 8, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Airwallex Payment Gateway Addon
+• Adds Border radius controls and automatic theme-matched corner styling across storefront elements
+• Adds PayPal Brand Name setting for checkout
+• Adds Product review filters by review status, rating, photos, and verified purchases. Pro filters apply where required
+• Adds Taxonomy filtering to [fluent_cart_products] for categories, brands, and custom taxonomies
+• Adds Minimum star rating support to the reviews shortcode with persistent filtering and pagination
+```
+
+```markdown [⚡ Improvements]
+• Improves Product schema with brand, subscription billing periods, and VAT-inclusive pricing data
+• Improves Rating star styling, admin heading alignment, footer alignment, and shop list view layout
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Product Review layout, dropdown, drawer, helpful vote, and theme compatibility issues
+• Fixes Checkout field issues including missing names, Required state, and System badge
+• Fixes Stripe trial checkout with saved cards for store-managed subscriptions
+• Fixes Order notes being removed, replaced, or losing line breaks during admin actions
+• Fixes Storefront palette and focus styling across Thank You, product tabs, customer dashboard, buttons, and Payment Methods
+• Fixes Shop filters showing empty grids and variation options becoming unavailable after import rollback
+• Fixes Cart quantity controls losing styling because of theme conflicts
+• Fixes PayPal subscriptions showing incorrect completed payment counts before sync
+• Fixes Admin tooltip, navigation highlight, and sidebar layout issues
+• Fixes Dashboard heat map totals when country names are translated
+• Fixes Review settings and setup prompts showing while Product Reviews is disabled
+• Fixes FluentCart MCP switch missing when no connector plugin is installed
+• Fixes License status remaining active after site removal
+• Fixes Authorize.net, Mollie, Paddle, and review helpful vote failures caused by conflicting scripts
+```
+
+:::::
+
 ## FluentCart v1.7.0
 *Released on Sep 29, 2026*
 
