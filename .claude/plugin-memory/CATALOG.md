@@ -51,7 +51,8 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **User-facing surface:** Per-gateway settings page, webhook URL field, test/live toggles, button-text customizations, e-check toggles.
 - **Drives docs:** `guide/payments-checkout/connecting-payment-gateways/<gateway>-settings.md`. **Core changes** mean re-read every gateway page. Promo/install cards for addon gateways live under `PromoGateways/Addons/` (e.g. SSLCommerz since 1.5.2 — real gateway ships as a separate addon plugin).
 - **Stripe client SFU filter (since 1.6.1):** `Stripe.php:852-855` exposes `fluent_cart/stripe/client_setup_future_usage($value, ['data'=>…, 'has_subscription'=>bool])`; a falsy return unsets `setup_future_usage`. The browser cannot pass this per-request, and a mismatch between the mounted Elements config and the confirmation is a guaranteed Stripe failure. Documented in `code-snippets.md`.
-- **Last fully audited:** v1.6.1
+- **PayPal Brand Name (1.7.1, `7ece556d6`):** optional `brand_name` setting sent as `application_context.brand_name`/`experience_context.brand_name`, 127 char cap, overridable via `fluent_cart/paypal/brand_name`. Documented in `paypal-settings.md`.
+- **Last fully audited:** v1.7.1 (PayPal only; other gateways last at v1.6.1)
 
 ### Modules/SavedPaymentMethods *(Pro only)*
 - **Lives in:** `/Users/authlab-24/Desktop/fluent-cart-pro` → `app/Modules/SavedPaymentMethods/`. **Not in the core clone.** Decision recorded in core commit `1f54f2f9d` ("ship 100% in fluent-cart-pro").
@@ -81,7 +82,8 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Purpose:** Product reviews and ratings: star ratings, moderation, Add Review, My Reviews / order review page, three review emails, six blocks with 11 layout presets, the reviews shortcode, ratings on product list and shop card.
 - **Key files:** `ReviewModule.php` (registers the module, sidebar child under Products, settings field), `Services/ProductReviewService.php`, `Services/Renderer/ProductReviewRenderer.php` (+ `ReviewListRenderer`, `ReviewModalRenderer`, `ReviewThreadMarkup`), `Services/Reviews/LayoutPresets.php` (single source for the 11 presets), `Hooks/Handlers/ShortCodes/ProductReviewsShortCode.php`, `Hooks/Handlers/BlockEditors/ProductReview*BlockEditor.php` + `WriteAReviewButtonBlockEditor.php` + `ProductRatingBlockEditor.php`, admin Vue `resources/admin/Modules/Reviews/` and `Modules/Settings/ReviewSettings.vue`, storefront `resources/public/single-product/{Reviews,ReviewForm}.js`. Pro adds photo uploads and helpful votes (`fluent-cart-pro/resources/public/reviews/`).
 - **Drives docs:** `guide/store-management/product-reviews/*` (5 pages), `settings-configuration/product-page.md` (Show Reviews In Single Page, Product Rating), `customization-and-themes/using-gutenberg-blocks.md` (block summary), `customization-and-themes/elementor-review-widgets.md`.
-- **Last fully audited:** Sep 29 2026 (develop `915dad4fe`, unreleased)
+- **1.7.1 additions:** storefront filter chips now combine (star chips multi-select; With Photos/Verified narrow on top instead of replacing, `d59ded53f`) — docs updated in `displaying-reviews.md`. Admin Products-list Advanced Filter gained a Reviews group (Reviews/Written Reviews Has-or-no by status, Average Rating ≥/≤ N stars; whole Advanced Filter needs Pro), `48eb45fda`, shown only while this module is active — docs updated in `product-types-creation/product-list-overview.md`. `8ac8ba933` (`[fluent_cart_product_reviews scope="all"]`, lists reviews across every product) is **not merged into develop** (branch `feat/all-reviews-shortcode`) — do not document yet.
+- **Last fully audited:** v1.7.1 changelog gap-check, Oct 8 2026 (core `develop` @ `67585cedb`)
 
 ### External addon: fluent-cart-elementor-blocks (Elementor)
 - **Location:** `/Users/authlab-24/Local Sites/cart/app/public/wp-content/plugins/fluent-cart-elementor-blocks` (own git repo, v1.1.0 at time of audit).

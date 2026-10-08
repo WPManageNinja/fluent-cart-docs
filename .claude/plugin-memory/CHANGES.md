@@ -5,6 +5,27 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## 1.7.1 changelog gap-check (Oct 8, 2026)
+- **Trigger:** user pasted the 1.7.1 changelog a second time and asked whether anything else needed updating, after the first pass (below) only added the changelog entry itself.
+- **Source:** core `/Users/authlab-24/Desktop/WPManageninja-clone-from-git/fluent-cart` `develop` @ `67585cedb` (moved from the old `~/Desktop/fluent-cart` path, which no longer exists). Verified each changelog line against a specific commit, not just keyword matches.
+- **Confirmed merged + documented:**
+  - "Adds Airwallex Payment Gateway Addon" — already fully documented (`airwallex-settings.md`, sidebar, payments index) from an earlier session.
+- **Confirmed merged, docs updated this run:**
+  - Border radius (`d89f2b366`): new **Border Radius** group (Card/Button/Form input, typed length) on the Customize card, also read from the active theme on Inherit. → `settings-configuration/appearance.md`.
+  - PayPal Brand Name (`7ece556d6`): `application_context.brand_name`, optional, 127 chars. → `paypal-settings.md`.
+  - `[fluent_cart_products]` taxonomy filter (`bda12f6e1`): new **taxonomies** attribute, `taxonomy:id,id|taxonomy:id`, term IDs only, any taxonomy registered on products. Distinct from the unrelated `custom_filters` JSON `taxonomies` key (sidebar facets) already documented; added a note disambiguating them. → `fluentcart-shortcode.md`.
+  - Product schema (`edbd63708`): added brand, subscription billing period/duration, and VAT-inclusive flag to "What the Schema Contains". → `product-schema.md`.
+  - Admin Products list "Reviews" advanced-filter group (`48eb45fda`): Reviews/Written Reviews (Has/Has no, Approved/Not approved/Any status) + Average Rating (Same or higher/lower than N stars), shown only while Product Reviews is enabled. → `product-list-overview.md`.
+  - Storefront review filter chips now combine (`d59ded53f`): multiple star chips at once, With Photos/Verified narrow on top instead of replacing the rating filter (chips themselves are not new, only the combining). → `product-reviews/displaying-reviews.md`.
+- **Changelog line "Adds Product review filters by review status, rating, photos, and verified purchases. Pro filters apply where required" — resolved as a compressed summary of two separate merged changes, not one feature:** the admin Products-list Reviews filter group (status + rating, and the whole Advanced Filter needs Pro per `BaseFilter::applyAdvancedFilter()`, confirmed in `ProductReviewFilterTest.php`) and the storefront chip-combining change (photos + verified). No single commit matches all four nouns at once; extensive grepping across both core and the admin Reviews screen's own Advanced Filter (`ReviewFilter.php`, unchanged, no Photos option there) turned up nothing closer. Flagged to the user as an interpretation, not a certainty.
+- **Checked and NOT acted on:**
+  - "Adds Minimum star rating support to the reviews shortcode with persistent filtering and pagination" — `min_rating` on `[fluent_cart_product_reviews]` already existed and is already documented; this line likely covers correctness fixes (`93614a561`, `9a9fdf49a`) to behavior already described, not a new documented surface.
+  - `8ac8ba933` "list reviews from all products in the reviews shortcode" (`scope="all"`, `product_ids`, `categories` attributes) is **NOT merged into develop** (only on `origin/feat/all-reviews-shortcode`) despite being dated Oct 8 2026, the same day as the release — do not document it yet, and re-check next time 1.7.1 or later is revisited.
+  - All "Fixes" lines and the two style-only "Improves" lines (rating star styling, admin heading/footer alignment, shop list view) — no doc impact, none described the old buggy/unstyled behavior as correct.
+- **Open question for the user:** confirm whether "Adds Product review filters by review status, rating, photos, and verified purchases" is fully covered by the two changes above, or whether there's a third, not-yet-merged change (possibly on an unmerged branch, like the all-products shortcode) that should be checked once it lands.
+
+---
+
 ## Bricks Blocks 1.1.0 + Divi Modules 1.1.0 review elements; core 1.7.1 changelog (Oct 8, 2026)
 - **Trigger:** user asked for docs on the new Bricks and Divi blocks, then pasted the 1.7.1 core changelog mid-run.
 - **Source:** addon zips `~/Downloads/fluent-cart-bricks-blocks.zip` and `~/Downloads/fluent-cart-divi-modules.zip` (both v1.1.0, Oct 8 2026), extracted to the session scratchpad. cart.local still has v1.0.0 of both installed. Neither addon is a git repo.
