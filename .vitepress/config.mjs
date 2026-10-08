@@ -673,8 +673,11 @@ export default defineConfig({
             { text: 'Layout and Template Customization (Block Editor)', link: '/guide/customization-and-themes/layout-template-customization' },
             { text: 'Customize Store with Bricks', link: '/guide/customization-and-themes/customize-store-with-bricks', items: [
               { text: 'FluentCart Bricks Blocks', link: '/guide/customization-and-themes/fluentcart-bricks-blocks' },
+              { text: 'FluentCart Review Elements', link: '/guide/customization-and-themes/bricks-review-elements' },
             ]},
-            { text: 'FluentCart Divi Modules', link: '/guide/customization-and-themes/fluentcart-divi-modules' },
+            { text: 'FluentCart Divi Modules', link: '/guide/customization-and-themes/fluentcart-divi-modules', items: [
+              { text: 'FluentCart Review Modules', link: '/guide/customization-and-themes/divi-review-modules' },
+            ]},
             { text: 'Advanced Customization with CSS Variables', link: '/guide/customization-and-themes/advanced-customization-using-css' },
             { text: 'Translating FluentCart', link: '/guide/customization-and-themes/translating-fluentcart' },
             { text: 'FluentCart Shortcodes', link: '/guide/customization-and-themes/fluentcart-shortcode' },

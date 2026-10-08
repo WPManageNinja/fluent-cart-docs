@@ -281,6 +281,6 @@ These apply only when `view_mode` is `slider`.
 
 Only approved reviews ever appear on your storefront. Pending, spam, and trashed reviews stay hidden, and they are left out of the average rating and the star breakdown too. Your replies appear underneath the reviews they answer, so customers can see that you responded.
 
-If you build with Elementor instead, the same pieces are available as [review widgets for Elementor](/guide/customization-and-themes/elementor-review-widgets).
+If you build with a page builder instead, the same pieces are available as [review widgets for Elementor](/guide/customization-and-themes/elementor-review-widgets), [review elements for Bricks](/guide/customization-and-themes/bricks-review-elements), and [review modules for Divi](/guide/customization-and-themes/divi-review-modules).
 
 Your reviews are now working for you on the storefront, showing real feedback exactly where shoppers make their decision.
