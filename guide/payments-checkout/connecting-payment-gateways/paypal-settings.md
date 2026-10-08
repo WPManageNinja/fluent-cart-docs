@@ -14,8 +14,9 @@ Please note that you must have a PayPal Business or Merchant account to accept p
 3.  **Test Mode Warning:** If your store is in Test mode, a banner will remind you: "Your Store is in Test mode, Change Store's 'Order Mode' to 'Live' and update related settings to enable Live payment !!" This is crucial to switch to live mode for real transactions.
 4.  **Connect Your PayPal Account:**
     Here, you don't need any API keys. Just click on the **Connect with PayPal** button. You'll then be directed to "PayPal" to log in to your account. Once logged in, you will see that your PayPal account is successfully connected with your FluentCart store.
-5.  **Payment Activation:** In the top right corner of this page, ensure the PayPal **Payment Activation** option is "Active".
-6.  Click the **"Save Settings"** button to apply your changes. 
+5.  **Brand Name:** *(Optional)* Enter a name to show on the PayPal checkout popup instead of your PayPal business account's name, up to 127 characters. Leave it blank to show your business account's name as usual.
+6.  **Payment Activation:** In the top right corner of this page, ensure the PayPal **Payment Activation** option is "Active".
+7.  Click the **"Save Settings"** button to apply your changes. 
 
 ## Letting Customers Save Their PayPal Account
 
