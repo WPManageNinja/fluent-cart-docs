@@ -13,7 +13,7 @@ Shoppers get two halves that work together:
 * **The rating summary card** on the left shows the average score out of 5, the star row, how many reviews it is based on, and a bar for each star level so the spread is obvious at a glance. The **Write a Review** button sits at the bottom of the card.
 * **The review list** on the right shows the reviews themselves, each with the reviewer's name, their star rating, how long ago they posted, a title, and their feedback.
 
-Above the list, shoppers can narrow what they see with the filter chips: **All**, plus one chip per star level from **5** down to **1**. The dropdown on the right sorts the list, with four choices:
+Above the list, shoppers can narrow what they see with the filter chips: **All**, plus one chip per star level from **5** down to **1**. Star chips combine, so picking **5** and **4** shows both at once, and clicking an active chip turns it back off. **All** clears every chip. The dropdown on the right sorts the list, with four choices:
 
 * **Newest** (the default)
 * **Oldest**
@@ -23,7 +23,7 @@ Above the list, shoppers can narrow what they see with the filter chips: **All**
 When a product has collected more reviews than your **Reviews Per Page** setting allows, the list pages through the rest.
 
 ::: info
-FluentCart Pro adds two more filter chips: **With Photos** appears once photo reviews are enabled, and **Verified** narrows the list to purchase-verified reviews. Enabling helpful votes also adds a **Most Helpful** sort option. See [Photo Reviews & Helpful Votes](/guide/store-management/product-reviews/photo-reviews-helpful-votes).
+FluentCart Pro adds two more filter chips: **With Photos** appears once photo reviews are enabled, and **Verified** narrows the list to purchase-verified reviews. Both narrow on top of whichever star chips are active rather than replacing them. Enabling helpful votes also adds a **Most Helpful** sort option. See [Photo Reviews & Helpful Votes](/guide/store-management/product-reviews/photo-reviews-helpful-votes).
 :::
 
 ## How Customers Write a Review
