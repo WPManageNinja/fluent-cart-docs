@@ -78,9 +78,23 @@ Every review block that you place on its own starts with a **Product** panel, an
 
 Blocks placed inside a **Product Reviews** container do not show this panel. The container owns the product, and everything inside follows it.
 
+The **Product Reviews**, **Rating Summary with Review**, and **Review List** blocks go one step further. Their Product panel has a **Show reviews from** setting, so one block can draw from several products:
+
+* **Current product:** Same as **Query type > Default** above.
+* **Selected products:** Pick the products with the product picker, up to 100. With one product the block behaves like **Custom**. With two or more it shows reviews from all of them together.
+* **All products:** Approved reviews from every published product that accepts reviews.
+
+<!-- TODO(screenshot): Product panel of the Product Reviews block with "Show reviews from" set to Selected products and the product picker open -->
+
+A review always belongs to one product, so the **Write a Review** button and the review form can't sit in a section that shows several. When you switch a **Product Reviews** block to **Selected products** (with two or more) or **All products**, those two are removed, and they come back if you return to one product. The rating summary combines the chosen products into one card, with the average weighted by the number of reviews on each product.
+
+::: info
+A selection that is empty or contains only products that can't be found shows nothing. It never widens to every review in your store.
+:::
+
 ### 1. Product Reviews
 
-This is the complete package, and the quickest way to add a full review section to a custom layout. It holds the rating summary, the review list, and the **Write a Review** button, and it follows one product.
+This is the complete package, and the quickest way to add a full review section to a custom layout. It holds the rating summary, the review list, and the **Write a Review** button. By default it follows one product, and with **Show reviews from** you can point it at several products or at every product instead (see [Choosing Which Product a Block Shows](#choosing-which-product-a-block-shows)).
 
 ![Screenshot of the Product Reviews block selected in the WordPress block editor with the layout presets open](/images/store-management/product-reviews/product-reviews-block.webp)
 
@@ -112,7 +126,7 @@ The rating summary card on its own: the average score, the star breakdown, and a
 
 ![Screenshot of the Rating Summary with Review block in the WordPress block editor](/images/store-management/product-reviews/rating-summary-with-review-block.webp)
 
-* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the block to one product.
+* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the block to one product. Its **Show reviews from** setting can also combine several products into one summary card, and the **Write a Review** button is removed in that case.
 * **Star Color:** Inside the card sits a **Rating Summary** block with its own **Star Color** panel, so the stars can match your brand instead of the default amber.
 
 ### 3. Review List
@@ -120,6 +134,8 @@ The rating summary card on its own: the average score, the star breakdown, and a
 The customer reviews on their own, with filtering, sorting, and pagination but no summary card. Pair it with **Rating Summary with Review** when your design wants the two separated.
 
 ![Screenshot of the Review List block showing its View Mode settings in the editor](/images/store-management/product-reviews/review-list-block.webp)
+
+Its **Product** panel has the **Show reviews from** setting, so the list can show reviews from the current product, selected products, or all products.
 
 The **Layout** panel controls how the reviews are arranged:
 
@@ -157,7 +173,7 @@ The star rating on its own, as a compact inline element, with the number of revi
 
 ![Screenshot of the Product Rating block and its Visibility settings panel](/images/store-management/product-reviews/product-rating-block.webp)
 
-* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the block to one product.
+* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the block to one product. Its **Show reviews from** setting can also combine several products into one summary card, and the **Write a Review** button is removed in that case.
 * **Minimum Reviews:** Hides the rating until the product has at least this many reviews. Leave it at 0 to always show it, including five empty stars on a product with no reviews.
 * **Minimum Average Rating:** Hides the rating unless the product averages at least this many stars. Half stars are allowed, and 0 shows every rating.
 
@@ -188,7 +204,7 @@ The review form printed directly on the page, with no button and no drawer. Use 
 
 ![Screenshot of the Review Form block and its Form Settings panel](/images/store-management/product-reviews/review-form-block.webp)
 
-* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the block to one product.
+* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the block to one product. Its **Show reviews from** setting can also combine several products into one summary card, and the **Write a Review** button is removed in that case.
 * **Field Layout:** Choose **Inline (all fields at once)** or **Steps (one at a time)**, exactly as on the **Write a Review** block.
 
 ## The Reviews Shortcode
@@ -230,6 +246,35 @@ Like the blocks, the shortcode only works while the **Reviews** feature is on. T
 | `sort_order` | `ASC`, `DESC` | `DESC` |
 | `photos` | `only`, to list just the reviews that have photos | All reviews |
 | `star_color` | A hex color such as `#00009F` | `#f59e0b` |
+
+### Reviews From Several Products
+
+Add `scope="all"` to list approved reviews from every product in one section, for example on a testimonials page or your home page:
+
+```
+[fluent_cart_product_reviews scope="all"]
+```
+
+Narrow it to some products or categories with these attributes. You can combine them, and a review has to match both:
+
+```
+[fluent_cart_product_reviews scope="all" product_ids="10,22"]
+[fluent_cart_product_reviews scope="all" categories="shoes,8" view_mode="grid" columns="3" per_page="9"]
+```
+
+| Attribute | Values | Notes |
+|---|---|---|
+| `scope` | `all` | Turns on the several-products mode. Any other value is the normal one-product shortcode. |
+| `product_ids` | Comma-separated product IDs | Up to 100. |
+| `categories` | Comma-separated category slugs or IDs, mixed freely | Up to 100. Matches products assigned to the category itself, not to its subcategories. |
+
+What to expect in this mode:
+
+* Only approved reviews (not replies) from published products whose reviews are switched on appear. Pending reviews, drafts, private products, and products with reviews turned off never show, even if you list them in `product_ids`.
+* The rating summary combines all the listed products. There is no **Write a Review** button, and `summary_position="cta"` shows no summary. The `id` attribute is ignored.
+* `per_page` goes up to 50 instead of 100.
+* If you list products or categories but none of them exist, the shortcode shows nothing instead of every review.
+* The other attributes, such as `view_mode`, `sorting`, and `photos`, work as usual.
 
 ### What Each Review Shows
 
