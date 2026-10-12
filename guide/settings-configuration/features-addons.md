@@ -52,7 +52,15 @@ A dedicated inventory workspace for stores that need more than per-product stock
 * **When Inactive:** The Inventory admin menu is hidden and no adjustment history is recorded. Per-product stock still works through the basic [Inventory Management](/guide/product-types-creation/inventory-management) screen.
 * **When Active:** See [Advanced Inventory](/guide/product-types-creation/advanced-inventory) for the full workflow.
 
-### 6. MCP (AI Assistant Access)
+### 6. Dynamic Pricing
+
+Automatic discounts and fees based on rules you define.
+
+* **Function:** Adds a **Dynamic Pricing** entry to the **More** menu, where you create rules that discount or add fees to line items, the checkout total, or shipping when a cart meets your conditions. See [Dynamic Pricing](/guide/marketing-sales-tools/dynamic-pricing) for creating and managing rules.
+* **Requirements:** FluentCart Pro. The module ships off.
+* **When Inactive:** The menu item is hidden and no rules are applied at checkout.
+
+### 7. MCP (AI Assistant Access)
 
 This module exposes a secure endpoint that lets AI assistants like Claude, Cursor, and Codex connect to your store.
 
