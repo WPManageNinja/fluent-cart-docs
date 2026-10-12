@@ -1,6 +1,28 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.8.0
+*Released on Oct 12, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Dynamic Pricing with fixed or percentage discounts and fees on items, checkout totals, or shipping
+• Adds Pricing conditions for cart, customer, product, payment, and checkout data, with condition groups and scheduled dates
+• Adds Pricing rules for first purchases, store-managed renewals, and subscription changes, plus bulk discount and free-shipping templates
+• Adds Named discounts in checkout summaries, original price strikethroughs at checkout, on thank-you pages, and in order emails, plus pricing permissions
+• Adds Review sources for selected or all products in review blocks, combined ratings, and shortcode filtering by product or category
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Missing shipping tax when saved billing addresses fill checkout
+• Fixes Paddle resync treating payment method changes as renewals
+• Fixes Duplicate VAT in tax-inclusive ZUGFeRD e-invoices and the Seller VAT ID in PDF receipts
+• Fixes Refunded licenses reactivating after subscription updates
+```
+
+:::::
+
 ## FluentCart v1.7.1
 *Released on Oct 8, 2026*
 
