@@ -28,8 +28,8 @@ Open **More > Dynamic Pricing** to see all your rules in one table.
 ![Screenshot of the Dynamic Pricing screen listing three pricing rules](/images/marketing-sales-tools/dynamic-pricing/dynamic-pricing-rules-list.webp)
 
 * **Rule:** The rule's display name and its internal name.
-* **What it does:** A short summary, such as a "10% Discount" or a fee tag, with when the rule applies (for example, every purchase or first purchase only) and how many conditions it has.
-* **Schedule:** The start and end dates, or "No end date" when the rule runs until you stop it.
+* **What it does:** A **Discount** or **Fee** tag (with the amount) followed by the part of the cart it targets: **Line Item**, **Checkout**, or **Shipping**. After that comes a short note with the number of conditions, and a note naming the purchase type when the rule is limited to first purchases, store managed renewals, or upgrades & downgrades. A rule for every purchase gets no purchase-type note.
+* **Schedule:** **Until** followed by the end date, **Starts** followed by the start date for a rule that hasn't begun, a start and end date range for a rule scheduled in the future, **Ended** followed by the date once the window has closed, or **No end date**. The creation date appears underneath.
 * **Status:** A switch to turn the rule on or off without deleting it.
 * **Actions:** **Edit** or **Delete** a rule.
 
@@ -52,14 +52,14 @@ Now let's build a rule from the beginning.
 * **Display Name:** The friendly name customers see on the checkout summary, for example "Summer Sale". *(Required)*
 * **Start from a template:** Pick a starting point. The choice fills in the fields below, and every field stays editable. *(Required)*
     * **Start from scratch:** An empty rule you build yourself.
-    * **Bulk Purchase Discount:** A 10% line item discount when the cart quantity is at least 5.
-    * **Free-shipping minimum:** A 100% shipping discount when the cart subtotal is at least a set amount.
+    * **Bulk Purchase Discount:** A 10% line item discount when the cart quantity is at least 5, applied on every purchase.
+    * **Free-shipping minimum:** A 100% shipping discount when the cart subtotal is at least 75 in your store currency. This template sets **When to Apply** to **First purchase only**.
 * **Price Type:** **Discount** takes money off. **Fee** adds money on.
 * **Apply as:** **Percentage** or **Fixed**.
 * **Percent** or **Amount:** The size of the discount or fee. With **Percentage** you enter a number such as `10`. With **Fixed** you enter an amount in your store currency.
 
 ::: info
-Check the **Apply discount to** card after picking a template. A template fills it in for you, but you can change it to match how you want the rule to behave. See [Where and When a Rule Applies](#where-and-when-a-rule-applies).
+A template fills in the **Apply discount to** card for you. The **Free-shipping minimum** template selects **First purchase only**, so choose **Every purchase** if you want free shipping on every qualifying order. See [Where and When a Rule Applies](#where-and-when-a-rule-applies).
 :::
 
 ## Where and When a Rule Applies
@@ -81,7 +81,7 @@ You can combine any **Where** choice with any **When** choice, with the renewal 
 
 This card sits at the top right of the form. It decides which amount the rule's percentage or fixed value is worked out against.
 
-* **Line item:** The rule is calculated on each product line separately. A 10% line item rule takes 10% off every line's subtotal, so it covers every unit on the line.
+* **Line item:** The rule is calculated on each product line separately. A 10% line item rule takes 10% off every line's subtotal, so it covers every unit on the line. A **Fixed** amount is taken from each line.
 * **Checkout:** The rule is calculated once on the whole cart subtotal. A discount is spread across the products so receipts and reports stay consistent.
 * **Shipping:** The rule is calculated on the shipping cost. A 100% shipping discount makes shipping free.
 
@@ -98,10 +98,9 @@ This card sits below **Applies To** on the Add New Rule page. It limits the rule
 
 A few details for each option:
 
-* **Every purchase** is the right choice for everyday promotions such as a sale or a bulk discount.
 * **First purchase only** counts only paid orders. A signed-in customer is checked by their account. A guest is checked by the email typed at checkout, so the discount appears as soon as they enter an address nobody has used before. Until an email is entered, the rule does not apply.
 * **Store managed renewals** is the only option that can change a renewal invoice, and only a **Discount** can be set for it. See [Rules for Renewals and Plan Changes](#rules-for-renewals-and-plan-changes).
-* **Upgrades & downgrades** lets you reward or soften a plan change without touching the price of new sign-ups.
+* **Upgrades & downgrades** only runs on the checkout of a plan change. It has no effect on new sign-ups.
 
 ### Choosing the Right Combination
 
@@ -119,7 +118,7 @@ Use these examples when you aren't sure which options to pick.
 
 ## Editing a Rule
 
-Click **Edit** on any rule to open the editor. The top bar summarizes the rule in a sentence and holds the **Active** switch, and the **Save** bar appears as soon as you make a change.
+Click **Edit** on any rule to open the editor. The top bar summarizes the rule in a sentence and holds the **Active** switch. As soon as you change something, a bar with **Discard** and **Save** buttons appears.
 
 ![Screenshot of the edit page for a pricing rule with its Schedule card](/images/marketing-sales-tools/dynamic-pricing/dynamic-pricing-edit-rule.webp)
 
@@ -150,15 +149,16 @@ When a customer's cart qualifies, the rule shows up automatically on the checkou
 
 * **Discounts** appear as their own line in the checkout summary, labeled with the rule's **Display Name** and the amount taken off.
 * **Fees** appear as an extra line using the same display name.
-* **Shipping rules** leave the **Shipping** line at its full price and add a separate row for the discount, followed by what the shipping costs after the rules.
+* **Original prices** stay visible. A discounted item shows its original price struck through next to the price it now costs.
+* **Shipping rules** leave the **Shipping** line at its full price. The rule gets its own row, labeled with its **Display Name**, showing the amount taken off, followed by a **Shipping after discount** row with what shipping now costs.
 
 ![Screenshot of the checkout order summary showing an Autumn Sale discount line for NotePlus](/images/marketing-sales-tools/dynamic-pricing/dynamic-pricing-checkout-discount.webp)
 
-The discount is carried into the placed order, so the order page, the thank-you page, and the customer's email receipt all show the reduced price.
+The discount is carried into the placed order. On the thank-you page and in order emails, a discounted item keeps its original price struck through, and a shipping discount appears as its own **Shipping Discount** row.
 
 ### How Rules Combine
 
-* Every active rule that qualifies is applied. Rules do not replace each other, and they work alongside coupons.
+* Every active rule that qualifies is applied, oldest rule first. Rules do not replace each other, and they work alongside coupons.
 * A discount never takes a price below zero. A 120% rule, or a fixed discount larger than the line, stops at the amount that is there.
 * Several shipping discounts together never exceed the shipping cost.
 * A rule that would adjust by zero is skipped, so you never see a "0.00 off" line.
@@ -169,21 +169,21 @@ Subscription rules behave a little differently, because a renewal is an amount y
 
 * A renewal invoice created by your store is only changed by rules set to **Store managed renewals**. Every other rule is ignored for it.
 * A **Store managed renewals** rule can only be a **Discount** and cannot apply to **Shipping**. The editor disables those choices when this option is selected.
-* On a renewal there is no checkout cart, so conditions that read the cart (coupon, user role, product, payment method, and checkout fields) do not match. Customer conditions use the subscription's customer.
+* A renewal invoice has no checkout cart, so conditions on coupons, user role, product, payment method, and checkout fields do not match. **Quantity** and **Subtotal** use the invoice, and customer conditions use the subscription's customer.
 * **Upgrades & downgrades** rules apply to the checkout a customer completes when switching plans.
 
 Learn how subscriptions work in [Managing Subscriptions](/guide/product-types-creation/managing-subscriptions).
 
 ## Order History
 
-Every placed order remembers which rules priced it, even if you rename or delete a rule later. The record keeps the rule name as it read at the time, so your order history stays accurate. If a payment is retried and the cart no longer qualifies, the old record is replaced with the new result.
+FluentCart stores the rules that priced each placed order, with the amount each one took. The stored record keeps the rule name as it was when the order was placed, so renaming or deleting a rule later does not change it. If a payment is retried and the cart no longer qualifies for a rule, the stored record is replaced with the new result.
 
 ## Permissions
 
 Access to Dynamic Pricing is controlled by two permissions on the **Roles & Permissions** screen:
 
-* **View Dynamic Pricing:** See the rules list and open a rule. Managers and workers have this by default.
-* **Manage Dynamic Pricing:** Create, edit, switch, and delete rules. Managers have this by default.
+* **View Dynamic Pricing:** See the rules list. Managers and workers have this by default.
+* **Manage Dynamic Pricing:** Open the create and edit screens, and create, edit, switch on or off, and delete rules. Managers have this by default.
 
 Learn more in [Roles & Permissions](/guide/settings-configuration/roles-permissions/).
 
