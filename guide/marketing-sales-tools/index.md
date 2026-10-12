@@ -5,5 +5,6 @@ The **Marketing & Sales Tools** section in FluentCart provides you with the func
 This section primarily focuses on:
 
 * **[Creating & Managing Coupons](/guide/marketing-sales-tools/creating-managing-coupons/):** Learn how to design and implement various discount coupons for your products and customers.
+* **[Dynamic Pricing](/guide/marketing-sales-tools/dynamic-pricing):** Automatically discount or add fees at checkout based on cart contents, customers, payment methods, and schedules, with no coupon code needed.
 
 By leveraging these built-in marketing tools, you can run targeted promotions, attract new customers, and reward your loyal buyers.
