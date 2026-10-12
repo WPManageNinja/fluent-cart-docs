@@ -522,6 +522,13 @@ export default defineConfig({
               items: [
                 { text: 'Adding Coupons', link: '/guide/marketing-sales-tools/creating-managing-coupons/adding-coupons/' }
               ]
+            },
+            {
+              text: 'Dynamic Pricing',
+              link: '/guide/marketing-sales-tools/dynamic-pricing',
+              items: [
+                { text: 'Display Conditions', link: '/guide/marketing-sales-tools/dynamic-pricing-conditions' }
+              ]
             }
           ]
         },
