@@ -47,6 +47,9 @@ This glossary defines common terms used throughout the FluentCart documentation 
 * **Coupon:**
     A promotional code that customers can enter at checkout to receive a discount, such as a fixed amount or a percentage off their order total.
 
+* **Dynamic Pricing:**
+    A FluentCart Pro feature that automatically applies discounts or fees at checkout when a cart meets conditions you set, such as quantity, subtotal, customer, or payment method. Rules can apply to line items, the checkout total, or shipping, and can be scheduled.
+
 * **Currency Settings:**
     The global settings that define the store's primary currency, symbol, formatting, and decimal precision for all product prices and reports.
 
