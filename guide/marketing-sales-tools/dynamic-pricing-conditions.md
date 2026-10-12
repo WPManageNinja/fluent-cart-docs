@@ -2,7 +2,7 @@
 
 **Display Conditions** decide which carts a [Dynamic Pricing](/guide/marketing-sales-tools/dynamic-pricing) rule applies to. Without conditions, a rule applies to every cart. With them, you can target big orders, specific products, wholesale customers, a particular payment method, or shoppers from a certain country.
 
-Conditions are checked at checkout each time the cart changes, so the discount appears or disappears as the shopper edits their cart or fills in their details.
+FluentCart evaluates a rule's conditions each time checkout calculates the cart total.
 
 ## How Conditions Work
 
@@ -16,7 +16,7 @@ For example, two groups can express "quantity is at least 5, or the customer's r
 A condition always asks about the **whole cart**, even on a **Line item** rule. When the cart qualifies, the rule is then applied to every product line.
 
 ::: info
-A condition that can't be answered counts as not matching. For example, "Role is not Wholesale" does not match a guest, because the cart doesn't say who they are. A discount that doesn't fire is easy to fix, while one that fires by mistake costs money.
+A condition that reads data the checkout does not have does not match, whatever its operator. For example, a coupon condition never matches a renewal invoice, because a renewal has no cart. A guest checkout is different: a guest has no role and no customer record, so **Role is not Wholesale** and **Customer is not** conditions do match a guest.
 :::
 
 ## Adding Conditions to a Rule
@@ -27,7 +27,7 @@ A condition that can't be answered counts as not matching. For example, "Role is
 4.  Choose an **operator**, then enter or select a **value**.
 5.  Repeat steps 3 and 4 to add more rows (AND) to the same group.
 6.  Click the **+ or** button below the groups to start another group (OR).
-7.  Click **Save** to keep your changes.
+7.  Click **Save** in the bar that appears once you change something.
 
 ![Screenshot of the Display Conditions card with two condition groups separated by OR](/images/marketing-sales-tools/dynamic-pricing/dynamic-pricing-display-conditions.webp)
 
@@ -38,7 +38,7 @@ To remove a row, use the remove icon at the end of it. A group with no rows can 
 ### Cart
 
 * **Quantity:** The total number of items in the cart, added up across all lines. Uses number operators.
-* **Subtotal:** The cart subtotal before shipping and tax. Enter it as an amount in your store currency.
+* **Subtotal:** The subtotal of the items in the cart. Enter it as an amount in your store currency.
 
 ### Coupon
 
@@ -48,7 +48,7 @@ To remove a row, use the remove icon at the end of it. A group with no rows can 
 ### Customer
 
 * **Purchase Count:** How many paid orders the customer already has. Guests count as zero.
-* **Customer:** Pick one or more specific customers. This only matches while the customer is signed in.
+* **Customer:** Pick one or more specific customers. **is** matches only while that customer is signed in, and **is not** matches everyone else, guests included.
 
 ### Product
 
@@ -62,13 +62,15 @@ To remove a row, use the remove icon at the end of it. A group with no rows can 
 
 ### Payment
 
-* **Payment Method:** The method the shopper has selected at checkout, such as Stripe or PayPal. The price updates when the shopper switches methods, and a saved-card payment counts as the card gateway.
+* **Payment Method:** The payment method selected at checkout, such as Stripe or PayPal. When the shopper hasn't chosen one yet, it is the first method listed on the checkout page.
 
 ### Checkout Fields
 
 Every field from your [checkout field settings](/guide/settings-configuration/checkout-fields) is offered, grouped the same way the settings screen groups them: **Basic Info**, **Business Details**, **Billing Address**, and **Shipping Address**. Use these to price by email, country, company name, and so on.
 
-* Checkout fields are matched as text, so they use the text operators. Country fields hold the country code, for example `US`.
+* Checkout fields are matched as text, so they use the text operators. Country fields hold the two-letter country code, for example `BD`, and a rule on the country name does not match.
+* **Shipping Address** fields read the shipping address only when the shopper chooses to ship to a different address. Otherwise they read the billing address.
+* **Business Details** fields have a value only for a business purchase, or when your store is in B2B-only mode.
 * The rule reads the value the shopper typed into the form. A field the shopper hasn't filled in yet is unknown, so the row doesn't match until they do.
 * An email condition uses the email the order is placed under. For a signed-in shopper that is their account email, whatever is typed in the field.
 * Checkbox fields and store switches such as agreeing to terms are not offered.
