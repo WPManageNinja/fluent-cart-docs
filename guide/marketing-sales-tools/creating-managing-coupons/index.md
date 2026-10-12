@@ -2,6 +2,10 @@
 
 Coupons are an effective way to offer discounts, run promotions, and attract customers to your FluentCart store. This guide covers how to view, filter, and create various types of coupons.
 
+::: info
+A coupon is a code the customer enters. If you want a discount to apply automatically, without a code, use [Dynamic Pricing](/guide/marketing-sales-tools/dynamic-pricing) instead. Both can be used together on the same order.
+:::
+
 ## Accessing the Coupons List
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Coupons** in the left sidebar.
