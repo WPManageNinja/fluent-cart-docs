@@ -5,7 +5,7 @@
 //
 // A plan is JSON:
 // {
-//   "site": "http://cart.local",                       (optional, default)
+//   "site": "http://localhost:10013",                       (optional, default)
 //   "outDir": "guide/public/images/<section>/<sub>",    (required; created if missing)
 //   "viewport": {"width":1600,"height":1100},           (optional, default)
 //   "steps": [ ...see STEP TYPES below... ]

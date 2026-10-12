@@ -19,7 +19,7 @@ function loadPlaywright() {
 const { chromium } = loadPlaywright();
 
 const DEFAULTS = {
-  site: 'http://cart.local',
+  site: 'http://localhost:10013',
   user: 'admin',
   pass: 'admin',
   chrome: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',

@@ -1,0 +1,169 @@
+{
+  "site": "http://localhost:10013",
+  "outDir": "guide/public/images/marketing-sales-tools/dynamic-pricing",
+  "viewport": {
+    "width": 1600,
+    "height": 1500
+  },
+  "steps": [
+    {
+      "admin": "/settings/addons"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "dynamic-pricing-enable-module",
+        "clip": "app",
+        "crop": {
+          "height": 1700
+        },
+        "arrows": [
+          {
+            "target": ".fct-content-card-list-item:has-text(\"Dynamic Pricing\") .el-switch",
+            "from": "left",
+            "len": 170
+          }
+        ]
+      }
+    },
+    {
+      "admin": "/dynamic_pricing"
+    },
+    {
+      "wait": 2500
+    },
+    {
+      "shot": {
+        "name": "dynamic-pricing-rules-list",
+        "clip": "app",
+        "crop": {
+          "height": 1150
+        }
+      }
+    },
+    {
+      "admin": "/dynamic_pricing/create"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "fill": {
+        "selector": "input[placeholder=\"e.g. summer-sale-10\"]",
+        "value": "bulk-purchase-10"
+      }
+    },
+    {
+      "fill": {
+        "selector": "input[placeholder=\"e.g. Summer Sale\"]",
+        "value": "Bulk Purchase Discount"
+      }
+    },
+    {
+      "click": {
+        "text": "Bulk Purchase Discount"
+      }
+    },
+    {
+      "wait": 800
+    },
+    {
+      "scrollTop": true
+    },
+    {
+      "shot": {
+        "name": "dynamic-pricing-add-rule",
+        "clip": "app",
+        "crop": {
+          "height": 1580
+        }
+      }
+    },
+    {
+      "admin": "/dynamic_pricing/3/edit"
+    },
+    {
+      "wait": 2500
+    },
+    {
+      "shot": {
+        "name": "dynamic-pricing-edit-rule",
+        "clip": "app",
+        "crop": {
+          "height": 2250
+        }
+      }
+    },
+    {
+      "admin": "/dynamic_pricing"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "admin": "/dynamic_pricing/1/edit"
+    },
+    {
+      "wait": 6000
+    },
+    {
+      "shot": {
+        "name": "dynamic-pricing-display-conditions",
+        "clip": {
+          "element": ".fct-card:has(.fct-conditions-wrapper)",
+          "pad": 24
+        },
+        "arrows": [
+          {
+            "target": ".fct-conditions-or-wrap button.fct-conditions-or",
+            "from": "right",
+            "len": 190
+          }
+        ]
+      }
+    },
+    {
+      "front": "/item/noteplus/",
+      "hideThemeHeader": true
+    },
+    {
+      "wait": 1200
+    },
+    {
+      "click": {
+        "text": "Yearly"
+      }
+    },
+    {
+      "wait": 800
+    },
+    {
+      "click": {
+        "text": "Buy Now"
+      }
+    },
+    {
+      "wait": 5000
+    },
+    {
+      "css": "#wpadminbar{display:none!important} html{margin-top:0!important} header.wp-block-template-part,.wp-site-blocks>header{display:none!important}"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "shot": {
+        "name": "dynamic-pricing-checkout-discount",
+        "clip": {
+          "element": ".fct_summary_box",
+          "pad": 14
+        },
+        "crop": {
+          "height": 500
+        }
+      }
+    }
+  ]
+}
