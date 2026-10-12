@@ -273,7 +273,7 @@ What to expect in this mode:
 * Only approved reviews (not replies) from published products whose reviews are switched on appear. Pending reviews, drafts, private products, and products with reviews turned off never show, even if you list them in `product_ids`.
 * The rating summary combines all the listed products. There is no **Write a Review** button, and `summary_position="cta"` shows no summary. The `id` attribute is ignored.
 * `per_page` goes up to 50 instead of 100.
-* If you list products or categories but none of them exist, the shortcode shows nothing instead of every review.
+* A list that can't match anything never widens to every review. Text that isn't an ID, or a category name that doesn't exist, makes the shortcode show nothing at all. An ID that looks valid but belongs to no product shows the section with no reviews. Unknown entries listed beside valid ones are ignored.
 * The other attributes, such as `view_mode`, `sorting`, and `photos`, work as usual.
 
 ### What Each Review Shows
