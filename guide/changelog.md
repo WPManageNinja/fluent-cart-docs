@@ -7,9 +7,7 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 ::::: code-group
 
 ```markdown [✨ Newly Added]
-• Adds Dynamic Pricing with fixed or percentage discounts and fees on items, checkout totals, or shipping
-• Adds Pricing conditions for cart, customer, product, payment, and checkout data, with condition groups and scheduled dates
-• Adds Pricing rules for first purchases, store-managed renewals, and subscription changes, plus bulk discount and free-shipping templates
+• Adds Dynamic Pricing
 • Adds Named discounts in checkout summaries, original price strikethroughs at checkout, on thank-you pages, and in order emails, plus pricing permissions
 • Adds Review sources for selected or all products in review blocks, combined ratings, and shortcode filtering by product or category
 ```
