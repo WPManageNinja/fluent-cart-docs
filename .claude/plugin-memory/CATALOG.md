@@ -16,6 +16,13 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Drives docs:** `guide/marketing-sales-tools/creating-managing-coupons/*.md`
 - **Last fully audited:** v1.5.4
 
+### Modules/DynamicPricing (Pro, `fluent-cart-pro/app/Modules/DynamicPricing/`)
+- **Purpose:** Rule-based automatic discounts and fees at checkout (line item, checkout, shipping), with schedule, display conditions, when-to-apply (every, first, renewals, upgrades), and an applied-rules history on orders.
+- **Key files:** `DynamicPricingInit.php`, `Pricing/DynamicPricingService.php`, `Pricing/CartAdjustmentApplier.php`, `Conditions/ConditionRegistry.php`, `Conditions/ConditionResolver.php`, `Http/Requests/PricingRuleRequest.php`; admin UI in core `resources/admin/Modules/DynamicPricing/`.
+- **User-facing surface:** Features & Addon toggle, More > Dynamic Pricing list/create/edit, checkout summary lines, receipts/emails, permissions `dynamic_pricing/view|manage`.
+- **Drives docs:** `guide/marketing-sales-tools/dynamic-pricing.md`, `dynamic-pricing-conditions.md`
+- **Last fully audited:** v1.7.1+ (develop @ 4581e6c21, Oct 12, 2026)
+
 ### Modules/Data
 - **Purpose:** Internal data-layer helpers (seed data, default settings payloads, lookup tables).
 - **Key files:** module bootstrap + Data/* helper classes.

@@ -15,11 +15,11 @@ Read this whole file before taking a single screenshot. Then follow the workflow
 
 | Thing | Value |
 |---|---|
-| Dev site | `http://cart.local` (Local by Flywheel, this Mac). Login `admin` / `admin`. |
+| Dev site | `http://localhost:10013` (Local by Flywheel, this Mac). Login `admin` / `admin`. |
 | Plugin code the site runs | `/Users/authlab-24/Desktop/fluent-cart` — the site's `wp-content/plugins/fluent-cart` is a **symlink** to this clone. Branch = what the site shows. Default branch `develop`. |
-| Admin URL pattern | `http://cart.local/wp-admin/admin.php?page=fluent-cart#<route>` — routes like `/settings/store-settings/`, `/settings/store-settings/appearance`, `/products`, `/orders`, `/customers`, `/reports/overview`. Full list: `resources/admin/routes.js` in the plugin. |
+| Admin URL pattern | `http://localhost:10013/wp-admin/admin.php?page=fluent-cart#<route>` — routes like `/settings/store-settings/`, `/settings/store-settings/appearance`, `/products`, `/orders`, `/customers`, `/reports/overview`. Full list: `resources/admin/routes.js` in the plugin. |
 | App root element | `#fluent_cart_plugin_app`. The app is fixed-positioned **160px from the left** (WP menu) and **32px from the top** (WP admin bar). |
-| Storefront | Product slug is `item` → `http://cart.local/item/<product-slug>/` (e.g. `/item/noteplus/`, a simple $90 digital product with a buy section). The FluentCart shop archive is `/shop-2/`. **`/shop/` is WooCommerce and `/products/` is Easy Digital Downloads — never screenshot those.** The store is in "coming soon" mode, so front-end pages must be visited logged in. |
+| Storefront | Product slug is `item` → `http://localhost:10013/item/<product-slug>/` (e.g. `/item/noteplus/`, a simple $90 digital product with a buy section). The FluentCart shop archive is `/shop-2/`. **`/shop/` is WooCommerce and `/products/` is Easy Digital Downloads — never screenshot those.** The store is in "coming soon" mode, so front-end pages must be visited logged in. |
 | Runner | `npm run shots -- scripts/screenshots/plans/<plan>.json` (= `node scripts/screenshots/shoot.cjs …`). Library in `scripts/screenshots/lib/`. |
 | Browser | Headless **real Google Chrome** (`/Applications/Google Chrome.app`) via `playwright-core`. It resolves from the docs repo's `node_modules`, then falls back to the plugin's. No download, no macOS permission. |
 | Output | `guide/public/images/<section>/<sub>/<name>.webp`, referenced in markdown as `/images/<section>/<sub>/<name>.webp`. Raw PNGs land in `scripts/screenshots/raw/` (gitignored). |
