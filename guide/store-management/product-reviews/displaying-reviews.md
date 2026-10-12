@@ -89,7 +89,7 @@ The **Product Reviews**, **Rating Summary with Review**, and **Review List** blo
 A review always belongs to one product, so the **Write a Review** button and the review form can't sit in a section that shows several. When you switch a **Product Reviews** block to **Selected products** (with two or more) or **All products**, those two are removed, and they come back if you return to one product. The rating summary combines the chosen products into one card, with the average weighted by the number of reviews on each product.
 
 ::: info
-A selection that is empty or contains only products that can't be found shows nothing. It never widens to every review in your store.
+A block set to **Selected products** with no product chosen shows nothing. It never widens to every review in your store.
 :::
 
 ### 1. Product Reviews
