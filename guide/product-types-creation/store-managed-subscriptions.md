@@ -118,6 +118,10 @@ An expired subscription is not a dead end. If the customer pays the outstanding 
 
 The next billing date is worked out sensibly too. Pay on or before the due date and the original schedule is kept, so billing dates never drift earlier. Pay late and the next cycle is measured from the payment date.
 
+### Discounting a Renewal
+
+You can lower what a renewal costs without changing the subscription's price. When your store issues a renewal invoice, any active [Dynamic Pricing](/guide/marketing-sales-tools/dynamic-pricing) rule set to **Store managed renewals**, whose schedule and conditions match, takes money off it. Only discounts are allowed on a renewal, the rule can't apply to shipping, and the tax on the invoice is reduced to match the discounted amount. The invoice is priced once when it's created, so the automatic charge and the customer's pay-now checkout bill the same figure. See [Rules for Renewals and Plan Changes](/guide/marketing-sales-tools/dynamic-pricing#rules-for-renewals-and-plan-changes) for the details.
+
 ## When Auto-Charge Is On
 
 Auto-charge keeps the whole invoicing flow and simply tries to pay each renewal for the customer first. At checkout, with the customer's consent, FluentCart saves their payment method so it can be reused later. After that, on every renewal:
