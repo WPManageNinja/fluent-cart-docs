@@ -12,7 +12,7 @@ This page contains a clear summary of the order, including:
 
 * **Customer Name:** The name of the customer who completed the purchase.
 * **Order ID:** A unique identifier for the order (e.g., #INV-6).
-* **Purchased Item(s):** A list of purchased products and their respective plans (e.g., FluentCRM – Solo/Blogger).
+* **Purchased Item(s):** A list of purchased products and their respective plans (e.g., FluentCRM – Solo/Blogger). When a [Dynamic Pricing](/guide/marketing-sales-tools/dynamic-pricing) discount applied to an item, its original price appears struck through.
 * **Price & Total:** The total purchase amount and payment method (e.g., VISA ending in 4242).
 * **Subscription Details:** Information about renewal periods and next billing dates.
 * **Downloads:** Direct download links for purchased digital files (e.g., fluentcampaign-pro.zip).
