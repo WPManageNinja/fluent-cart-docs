@@ -5,7 +5,7 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
-## On-Page Checkout Form + 1.8.0 follow-ups (Oct 13, 2026)
+## On-Page Checkout Form, released as 1.9.0 (Oct 13, 2026)
 - **Trigger:** user said On-Page Checkout Form and other features ship today; asked for the needed docs, screenshots from `http://localhost:10013/`. No "release map" file was found (Drive, repo); scope came from commits.
 - **Source:** core `/Users/authlab-24/Desktop/WPManageninja-clone-from-git/fluent-cart` `develop` @ `4c9beb2968` (commit `755dab4d89`), Pro `/Users/authlab-24/Desktop/fluent-cart-pro` `develop` @ `252f3453` (commit `1f5f6c05`, `app/Modules/InlineCheckout/`). It is a Pro-only "Products" panel on the existing `fluent-cart/checkout` block (Checkout Source Default Cart/Custom Product, product picker, Selection Mode Select one/many, Maximum Selectable Items 1-20, Selector Heading). Core only adds extension hooks (`dev-docs/checkout-extension-points.md`) and a Pro upsell panel. Block only: the shortcode attribute names were not verified, so the shortcode page was not touched.
 - **Created:** `customization-and-themes/on-page-checkout-form.md` (sidebar after Using Gutenberg Blocks, featured image generated).
@@ -14,7 +14,8 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 - **Earlier "Your cart is empty" was a test-setup artifact, not a product bug:** a block inserted via `createBlock` and saved before the editor mounted has no inner blocks, so core's `render()` returns the `[fluent_cart_checkout]` shortcode, which receives no block attributes. Blocks added through the inserter get their inner blocks and work. Side note: a Checkout block saved without inner blocks silently loses its Products settings.
 - **Front-end gotchas:** `networkidle` never settles on the checkout page, use `waitUntil: load` plus a 5s wait for the payment element. Item rows are `label[data-fct-inline-item="<variation id>"]`. In a constrained theme column the list wraps text letter by letter, so the demo wraps the block in a wide Group.
 - **Build notes:** Pro had no inline-checkout assets and `tailwindcss` was not installed (`npm ci` fails, lockfile out of sync); ran `npm install --no-package-lock` then `npm run build` (output in `assets/`). Core rebuilt; `config/app.php` restored to the developer's own change. `post-new.php` fatals on this site (EDD `edds_get_elements_mode()`), so create pages through REST from an existing editor screen.
-- **Not done:** changelog (user has not pasted the final 1.8.0 wording; no On-Page Checkout Form line yet), reviews page re-check against `57980c3f23` (full all-products summary section), builder addons.
+- **Changelog:** v1.9.0 entry added (user-pasted: On-page checkout, search bar clear button fix, rating summary stacked fix). Shortcode `[fluent_cart_checkout]` documented in `on-page-checkout-form.md` and `fluentcart-shortcode.md` section 10 after a live test.
+- **Not done:**, reviews page re-check against `57980c3f23` (full all-products summary section), builder addons.
 
 ---
 

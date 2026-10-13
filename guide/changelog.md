@@ -1,7 +1,7 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
-## FluentCart v1.8.1
+## FluentCart v1.9.0
 *Released on Oct 13, 2026*
 
 ::::: code-group
@@ -12,6 +12,7 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 
 ```markdown [🐞 Bug fixes]
 • Fixes Search bar clear button border and spacing above search result headings.
+• Fixes Rating summary stacked issue
 ```
 
 :::::
