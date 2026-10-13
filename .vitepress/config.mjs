@@ -672,6 +672,7 @@ export default defineConfig({
           items: [
             { text: 'Theme Compatibility', link: '/guide/customization-and-themes/theme-compatibility' },
             { text: 'Using Gutenberg Blocks', link: '/guide/customization-and-themes/using-gutenberg-blocks' },
+            { text: 'On-Page Checkout Form', link: '/guide/customization-and-themes/on-page-checkout-form' },
             { text: 'Using Elementor Widgets', link: '/guide/customization-and-themes/using-elementor-widgets', items: [
               { text: 'FluentCart Widgets', link: '/guide/customization-and-themes/elementor-fluentcart-widgets' },
               { text: 'FluentCart Product Widgets', link: '/guide/customization-and-themes/elementor-product-widgets' },
