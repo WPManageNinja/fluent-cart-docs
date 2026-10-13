@@ -43,6 +43,7 @@ Now let's build a rule from the beginning.
 2.  Fill in the **Basic Information** card.
 3.  Choose [where and when](#where-and-when-a-rule-applies) the rule applies, using the **Applies To** and **Apply discount to** cards.
 4.  Click **Create Rule**.
+5.  Open the new rule and switch **Active** on. A new rule is created switched off, so it does nothing until you turn it on.
 
 ![Screenshot of the Add New Rule page with the Basic Information, Applies To and Apply discount to cards](/images/marketing-sales-tools/dynamic-pricing/dynamic-pricing-add-rule.webp)
 
@@ -53,14 +54,10 @@ Now let's build a rule from the beginning.
 * **Start from a template:** Pick a starting point. The choice fills in the fields below, and every field stays editable. *(Required)*
     * **Start from scratch:** An empty rule you build yourself.
     * **Bulk Purchase Discount:** A 10% line item discount when the cart quantity is at least 5, applied on every purchase.
-    * **Free-shipping minimum:** A 100% shipping discount when the cart subtotal is at least 75 in your store currency. This template sets **When to Apply** to **First purchase only**.
+    * **Free-shipping minimum:** A 100% shipping discount when the cart subtotal is at least 75 in your store currency, applied on every purchase.
 * **Price Type:** **Discount** takes money off. **Fee** adds money on.
 * **Apply as:** **Percentage** or **Fixed**.
 * **Percent** or **Amount:** The size of the discount or fee. With **Percentage** you enter a number such as `10`. With **Fixed** you enter an amount in your store currency.
-
-::: info
-A template fills in the **Apply discount to** card for you. The **Free-shipping minimum** template selects **First purchase only**, so choose **Every purchase** if you want free shipping on every qualifying order. See [Where and When a Rule Applies](#where-and-when-a-rule-applies).
-:::
 
 ## Where and When a Rule Applies
 
@@ -148,7 +145,7 @@ A rule that is switched on but outside its schedule does nothing. It starts appl
 When a customer's cart qualifies, the rule shows up automatically on the checkout page.
 
 * **Discounts** appear as their own line in the checkout summary, labeled with the rule's **Display Name** and the amount taken off.
-* **Fees** appear as an extra line using the same display name.
+* **Fees** appear as an extra line using the same display name. Tax is charged on a fee by default. Turn off **Charge tax on this fee** in the rule if the fee should not be taxed.
 * **Original prices** stay visible. A discounted item shows its original price struck through next to the price it now costs.
 * **Shipping rules** leave the **Shipping** line at its full price. The rule gets its own row, labeled with its **Display Name**, showing the amount taken off, followed by a **Shipping after discount** row with what shipping now costs.
 
@@ -162,6 +159,7 @@ The discount is carried into the placed order. On the thank-you page and in orde
 * A discount never takes a price below zero. A 120% rule, or a fixed discount larger than the line, stops at the amount that is there.
 * Several shipping discounts together never exceed the shipping cost.
 * A rule that would adjust by zero is skipped, so you never see a "0.00 off" line.
+* Tax is worked out after the rules have been applied, so customers are taxed on the discounted price.
 
 ## Rules for Renewals and Plan Changes
 

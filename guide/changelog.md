@@ -1,6 +1,22 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v1.9.0
+*Released on Oct 13, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds On-page checkout with custom product selection, single or multiple selection, live totals, selection limits, and separate carts via the Checkout Page block or [fluent_cart_checkout] shortcode.
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Search bar clear button border and spacing above search result headings.
+• Fixes Rating summary stacked issue
+```
+
+:::::
+
 ## FluentCart v1.8.0
 *Released on Oct 12, 2026*
 

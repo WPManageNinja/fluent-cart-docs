@@ -393,6 +393,27 @@ Similar to the Product Title shortcode, this lets you display the featured image
 
 ---
 
+### 10. On-Page Checkout Shortcode (`[fluent_cart_checkout]`)
+
+The checkout shortcode normally shows the shopper's main cart. Add a list of product variations and it becomes an [On-Page Checkout Form](/guide/customization-and-themes/on-page-checkout-form), where shoppers pick from the products you choose and pay on the same page. This feature requires FluentCart Pro.
+
+#### Basic Usage
+
+```text
+[fluent_cart_checkout variant_ids="185,186,187" selection_mode="single" selector_label="Choose your plan"]
+```
+
+#### Supported Attributes
+
+| Attribute | Description |
+| :--- | :--- |
+| **variant_ids** | **(Required for this mode)** A comma-separated list of the variation IDs to offer, up to 20. |
+| **selection_mode** | `single` shows radio buttons (the default). `multiple` shows checkboxes. |
+| **max_items** | With `multiple`, the most options a shopper can tick at once, from 1 to 20. |
+| **selector_label** | The heading shown above the list of options. |
+
+---
+
 ### How to Implement
 
 1. **Copy the code:** Select the shortcode configuration that fits your needs.
