@@ -94,24 +94,10 @@ The same form works with the `[fluent_cart_checkout]` shortcode, which is handy 
 
 A shortcode without `variant_ids` is a normal checkout page that shows the shopper's main cart. You can find a variation ID in the product settings, the same one you use with the other [FluentCart shortcodes](/guide/customization-and-themes/fluentcart-shortcode).
 
-## What Shoppers See
+## Preview
 
-On the live page, the shopper sees the list of options with their prices, followed by the usual checkout fields and your order summary. The first option is selected by default, so the summary always shows a price.
+Here is how the form looks on a live page. The first option is selected by default, and the order summary updates as soon as the shopper picks a different one.
 
 ![Screenshot of a landing page with the On-Page Checkout Form showing three hoodie colors, the checkout fields, and the order summary](/images/customization-and-themes/on-page-checkout-form/on-page-checkout-form-frontend.webp)
-
-When the shopper picks a different option, the form updates on the same page without a reload:
-
-* The order summary, subtotal, and total recalculate.
-* Shipping and tax recalculate for the new selection.
-* The **Have a Coupon?** box stays available below the subtotal.
-
-![Screenshot of the On-Page Checkout Form after the shopper selects the Orange option, with the subtotal and total updated to $12.00](/images/customization-and-themes/on-page-checkout-form/on-page-checkout-form-selection.webp)
-
-With **Select many**, the shopper ticks as many options as the **Maximum Selectable Items** limit allows, and the total adds them together.
-
-![Screenshot of the On-Page Checkout Form in Select many mode with the Red and Teal options ticked and a combined total of $26.40](/images/customization-and-themes/on-page-checkout-form/on-page-checkout-form-select-many.webp)
-
-The shopper then completes the purchase with any active payment method, the same way as on the regular checkout page. The form keeps its selection in a separate cart that belongs only to that page. Items the shopper already has in their main cart are not shown in the form and are not changed by it, and a visitor who just scrolls past the block never creates a cart.
 
 Your page now sells directly from the page itself, with no product page, cart, or separate checkout in between.
