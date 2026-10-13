@@ -301,6 +301,8 @@ This is the essential block that renders the secure checkout form for completing
   * **Order Summary Sidebar:** Displays a clear breakdown of the purchase, including product variations, subtotals, shipping costs, and tax estimates.
   * **Coupons & Terms:** Features a **Have a Coupon?** section for applying manual discounts and a checkbox at the bottom for customers to agree to your terms and conditions.
 
+  * **Products (FluentCart Pro):** Switch **Checkout Source** from **Default Cart** to **Custom Product** to let shoppers pick from products you choose, right on the page. See [On-Page Checkout Form](/guide/customization-and-themes/on-page-checkout-form) for the full setup.
+
   * **Additional CSS Class(es):** Enter custom code here if you want to apply unique styling to the checkout form, such as custom borders or specific background colors for the form fields.
 
    ![Screenshot of FluentCart Blocks](/images/customization-and-themes/using-fluentcart-blocks/checkout-page-11.webp)

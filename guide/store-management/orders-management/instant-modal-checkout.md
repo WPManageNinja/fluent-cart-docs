@@ -92,6 +92,8 @@ If you build your pages with Elementor, FluentCart's **Buy Now Button** widget c
 
 Using **Divi** instead? FluentCart's Buy Now module for Divi has the same **Enable Modal Checkout** option. See the [Divi modules guide](/guide/customization-and-themes/fluentcart-divi-modules) for details.
 
+Want shoppers to choose between a few products and pay without any popup at all? The [On-Page Checkout Form](/guide/customization-and-themes/on-page-checkout-form) places the full checkout directly on your landing page instead.
+
 ---
 
 Whichever method you choose, your customers can now complete their purchase in seconds, right where they clicked **Buy Now**.
