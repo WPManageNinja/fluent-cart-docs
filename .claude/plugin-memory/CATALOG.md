@@ -52,6 +52,12 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Note:** Tool `label`/`description` strings are the best source of user-facing copy. Capability changes usually mean editing the "What an assistant can look up" / "Actions an assistant can take" lists rather than adding a section.
 - **Last fully audited:** v1.5.4
 
+### Modules/MultiCurrency (core `app/Modules/MultiCurrency/` + Pro `fluent-cart-pro/app/Modules/MultiCurrency/`)
+- **Purpose:** Presentment currencies on top of one base currency. Prices convert at a per-currency rate with an adjustment %, rounding step, and charm ending; carts lock a rate for N minutes; every order and subscription keeps its rate snapshot. Admin settings screen (Pro-gated since `015abdf6e2`), `?currency=` switch and `fct_currency` cookie, `[fluent_cart_currency_switcher]` + Currency Switcher block, Create Order currency picker, report currency picker with "All currencies (in base)".
+- **Key files:** core `Services/MultiCurrencySettings.php`, `CurrencyContext.php`, `CartCurrency.php`, `StorefrontPrice.php`, `ReportCurrency.php`, `CurrencySwitcher.php`; admin UI `resources/admin/Modules/Settings/MultiCurrencySettings.vue` (+ `MultiCurrency/MultiCurrencyRoute.vue` gate), `Reports/AccountingExport.vue`. Pro: `EcbRateProvider.php`, `CurrencyDropdown.php`, `CurrencyDropdownRenderer.php`, `resources/public/multi-currency/currency-dropdown.js`, `app/Modules/AccountingExport/`. Dev reference: `dev-docs/multi-currency/` (core), `dev-docs/currency-switcher-menu.md` (Pro).
+- **Drives docs:** `settings-configuration/multi-currency-settings.md`, `customization-and-themes/currency-switcher.md`, `store-management/multi-currency-storefront.md`, `reporting-analytics/accounting-export.md`, plus the multi-currency section of `reporting-analytics/reports-dashboard-overview.md`.
+- **Last fully audited:** v1.9.0 release day, Oct 14 2026 afternoon (core `develop` @ `ea3e50c237`, Pro `develop` @ `7a673400`)
+
 ### Modules/PaymentMethods
 - **Purpose:** All payment gateway implementations (Stripe, PayPal, Square, Mollie, Paddle, Razorpay, Mercado Pago, Flutterwave, Paystack, Authorize.net, Cash on Delivery) plus shared `Core/` contracts.
 - **Key files:** `PaymentMethods/<Gateway>Gateway/*`, `PaymentMethods/Core/*` (abstracts, manager, IPN/webhook plumbing).
