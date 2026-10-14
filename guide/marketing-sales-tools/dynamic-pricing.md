@@ -57,7 +57,7 @@ Now let's build a rule from the beginning.
     * **Free-shipping minimum:** A 100% shipping discount when the cart subtotal is at least 75 in your store currency, applied on every purchase.
 * **Price Type:** **Discount** takes money off. **Fee** adds money on.
 * **Apply as:** **Percentage** or **Fixed**.
-* **Percent** or **Amount:** The size of the discount or fee. With **Percentage** you enter a number such as `10`. With **Fixed** you enter an amount in your store currency.
+* **Percent** or **Amount:** The size of the discount or fee. With **Percentage** you enter a number such as `10`. With **Fixed** you enter an amount in your store currency. If customers shop in another currency with [Multi Currency](/guide/settings-configuration/multi-currency-settings), FluentCart converts the amount to the customer's currency.
 
 ## Where and When a Rule Applies
 
