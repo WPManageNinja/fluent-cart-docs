@@ -1,6 +1,17 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v2.0.0
+*Released on Oct 14, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Multi-Currency (Beta), sell in multiple currencies with exchange rates, rounding, charm pricing, and a currency switcher
+```
+
+:::::
+
 ## FluentCart v1.9.0
 *Released on Oct 13, 2026*
 
