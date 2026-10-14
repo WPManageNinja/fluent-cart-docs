@@ -41,6 +41,7 @@ You will see all the blocks listed below. Here is a fast look at all the FluentC
  * Product Rating
  * Write a Review
  * Review Form
+ * Currency Switcher
 
 
 ### 1. Products 
@@ -435,5 +436,13 @@ A single button that opens the review form in a drawer or a modal. Place it anyw
 The review form printed directly on the page, with no button. Use it on a dedicated page when you want the form always in view.
 
 Every setting of these blocks, including the layout presets and the field-by-field controls of the review list, is covered in [Displaying Reviews on Your Store](/guide/store-management/product-reviews/displaying-reviews#the-review-blocks). If you prefer to build with a shortcode instead, the same page explains [the reviews shortcode](/guide/store-management/product-reviews/displaying-reviews#the-reviews-shortcode).
+
+## Currency Switcher Block
+
+### 28. Currency Switcher
+
+A button that lets customers choose the currency they want to see prices in. It shows the current currency with its flag, code, and sign, and opens a list of your currencies when clicked. The block appears only when [Multi Currency](/guide/settings-configuration/multi-currency-settings) is on with at least two currencies, which requires FluentCart Pro. The editor preview shows the button as it will look on your site.
+
+The **Switcher Settings** panel controls the button and the **Dropdown List** panel controls the list that opens. Each has **Display**, **Show sign**, **Show flag**, and **Flag position** settings. See [Adding a Currency Switcher](/guide/customization-and-themes/currency-switcher) for what each choice looks like, and for the menu item and shortcode versions.
 
 > **Note:** Each FluentCart block comes with its own customization settings. After adding a block, check the settings panel on the right to adjust design, alignment, behavior, and visibility.
