@@ -5,7 +5,7 @@ When multi-currency is on, your customers browse, add to cart, and pay in the cu
 You set everything up under **FluentCart > Settings > Multi Currency**. See [Multi Currency Settings](/guide/settings-configuration/multi-currency-settings) for the rates and pricing rules this page refers to.
 
 ::: info
-Multi Currency requires **FluentCart Pro**. If Pro is deactivated, the storefront and checkout go back to your base currency, and the currency switcher disappears. Orders already placed in another currency keep showing their own currency and amounts in your reports and order screens.
+Multi Currency is a **Beta** feature and requires **FluentCart Pro**. If Pro is deactivated, the storefront and checkout go back to your base currency, and the currency switcher disappears. Orders already placed in another currency keep showing their own currency and amounts in your reports and order screens.
 :::
 
 ## How Customers Choose a Currency
@@ -42,11 +42,11 @@ A cart is priced in one currency at one locked rate. Everything on the checkout 
 
 ### Prices Stay Steady While Customers Pay
 
-The **Hold a cart's rate for** setting (30 minutes by default) keeps a cart's rate steady, so the price a customer saw is the price they pay, even if you change a rate or the exchange rate moves in the meantime. Once the time passes, the next change to the cart prices it again at the current rate.
+By default, a new rate is used at once: when you change a rate or its pricing rules, the next price a customer sees uses the new rate. If you want a cart to keep the price its customer was shown, set **Keep converted prices at the previous rate for up to** under **Rate changes** to a number of minutes. A cart priced before your change then keeps the previous rate for that long, so the price a customer saw is the price they pay. Once the time passes, the next change to the cart prices it again at the current rate. See [Multi Currency Settings](/guide/settings-configuration/multi-currency-settings) for the setting.
 
 If something changes right before payment, FluentCart stops the order, reloads the checkout page with the new total, and shows a notice so the customer can review it before paying:
 
-* **Prices were updated to today's exchange rate. Please review your order total before paying.** This appears when the held rate expired or the rate or pricing rules changed, for example because the customer had the checkout open in another tab.
+* **Prices were updated to today's exchange rate. Please review your order total before paying.** This appears when the rate or pricing rules changed after the checkout page loaded, or a held rate ran out, for example because the customer had the checkout open in another tab.
 * **Your currency changed to GBP. Please review your order total before paying.** This appears when the customer switched currency in another tab after this page loaded. The notice names the currency the cart is now priced in.
 
 ### Payments
@@ -61,14 +61,6 @@ If you use **FluentCart Pro** features that show prices, they follow the custome
 
 * An [order bump](/guide/store-management/orders-management/order-bump) offer shows its price and saving in the customer's currency.
 * The fixed amounts in [Dynamic Pricing](/guide/marketing-sales-tools/dynamic-pricing) rules are converted to the cart's currency.
-
-## Creating Orders in Another Currency
-
-When you create an order from the dashboard, an **Order currency** card appears at the top of the screen whenever multi-currency has extra currencies. Pick the currency the customer is paying in.
-
-![Screenshot of the Order currency card on the Create Order screen with GBP selected](/images/store-management/multi-currency/multi-currency-create-order.webp)
-
-Enter your prices in your base currency. FluentCart shows the rate it will use, for example **Enter prices in USD; they are converted at 1 USD = 0.79 GBP when the order is created.** The conversion happens when you create the order, using the rate at that moment.
 
 ## Reports in More Than One Currency
 
