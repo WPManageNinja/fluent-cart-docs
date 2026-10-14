@@ -145,7 +145,7 @@ A rule that is switched on but outside its schedule does nothing. It starts appl
 When a customer's cart qualifies, the rule shows up automatically on the checkout page.
 
 * **Discounts** appear as their own line in the checkout summary, labeled with the rule's **Display Name** and the amount taken off.
-* **Fees** appear as an extra line using the same display name. Tax is charged on a fee by default. Turn off **Charge tax on this fee** in the rule if the fee should not be taxed.
+* **Fees** appear as an extra line using the same display name. Tax is charged on a fee by default. Turn off **Charge tax on this fee** in the rule if the fee should not be taxed. A **Percentage** fee is worked out on the price after coupons and discounts, so a 100% coupon leaves nothing to charge a percentage on. A **Fixed** fee stays the same.
 * **Original prices** stay visible. A discounted item shows its original price struck through next to the price it now costs.
 * **Shipping rules** leave the **Shipping** line at its full price. The rule gets its own row, labeled with its **Display Name**, showing the amount taken off, followed by a **Shipping after discount** row with what shipping now costs.
 
