@@ -412,6 +412,33 @@ The checkout shortcode normally shows the shopper's main cart. Add a list of pro
 | **max_items** | With `multiple`, the most options a shopper can tick at once, from 1 to 20. |
 | **selector_label** | The heading shown above the list of options. |
 
+### 11. Currency Switcher Shortcode (`[fluent_cart_currency_switcher]`)
+
+Shows a button that lets customers pick the currency they want to see prices in. It appears only when [Multi Currency](/guide/settings-configuration/multi-currency-settings) is on with at least two currencies, and renders nothing otherwise. Multi Currency requires FluentCart Pro.
+
+#### Basic Usage
+
+```text
+[fluent_cart_currency_switcher display="flag" list_display="name"]
+```
+
+#### Supported Attributes
+
+The attributes starting with `list_` control the list that opens when the button is clicked. The others control the button.
+
+| Attribute | Description |
+| :--- | :--- |
+| **display** | What the button shows: `name_code`, `name`, `code`, `symbol`, or `flag`. Leave it out to show the code with the sign, for example **USD $**. |
+| **symbol** | `yes` adds the currency sign to the button label, and `no` removes it. |
+| **flag** | `no` hides the flag on the button. The flag shows by default. |
+| **flag_position** | `left` (the default) or `right`. Where the flag sits on the button. |
+| **list_display** | What each row in the list shows: `name_code` (the default), `name`, `code`, `symbol`, or `flag`. |
+| **list_symbol** | `yes` adds the currency sign to each row. The list has no sign by default. |
+| **list_flag** | `no` hides the flag in each row. |
+| **list_flag_position** | `left` (the default) or `right`. Where the flag sits in each row. |
+
+The same switcher is also available as a block, and as a menu item. See [Adding a Currency Switcher](/guide/customization-and-themes/currency-switcher) for what each value looks like and for ready-made combinations.
+
 ---
 
 ### How to Implement
