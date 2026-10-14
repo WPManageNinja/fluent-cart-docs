@@ -56,7 +56,7 @@ Below the address fields you'll find the **Business Details** block — your leg
 
 Configure the currency settings for your store's transactions.
 
-* **Checkout Currency:** The primary currency your products are priced in and payments are processed in. Pick from the dropdown.
+* **Checkout Currency:** The primary currency your products are priced in and payments are processed in. Pick from the dropdown. If you also want customers to pay in other currencies, this becomes your base currency. See [Multi Currency Settings](/guide/settings-configuration/multi-currency-settings).
 * **Number Format:** Controls how numbers (especially prices) are displayed. Choose between **Comma & Dot (eg 10,000.00)** or **Dot & Comma (eg 10.000,00)** to match your locale.
 * **Currency Formatting:** Controls where the currency symbol or code appears relative to the amount. The dropdown includes options like **Symbol before (eg: $100)**, symbol after, and currency code formatting.
 
