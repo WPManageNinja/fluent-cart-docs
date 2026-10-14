@@ -424,6 +424,7 @@ export default defineConfig({
               ]
             },
             { text: 'Product Schema for Search Results', link: '/guide/store-management/product-schema' },
+            { text: 'Multi-Currency in Your Store', link: '/guide/store-management/multi-currency-storefront' },
             { text: 'Exporting Your Store Data', link: '/guide/store-management/exporting-data' },
           ]
         },
@@ -572,7 +573,8 @@ export default defineConfig({
             },
             { text: 'Product Report', link: '/guide/reporting-analytics/product-report' },
             { text: 'Customer Report', link: '/guide/reporting-analytics/customer-report' },
-            { text: 'Order Sources Report', link: '/guide/reporting-analytics/order-sources-report' }
+            { text: 'Order Sources Report', link: '/guide/reporting-analytics/order-sources-report' },
+            { text: 'Accounting Export', link: '/guide/reporting-analytics/accounting-export' }
           ]
         },
         {
@@ -621,7 +623,8 @@ export default defineConfig({
               ]
             },
             { text: 'Withdrawal (EU)', link: '/guide/settings-configuration/withdrawal-eu' },
-            { text: 'Compliance Settings', link: '/guide/settings-configuration/compliance-settings' }
+            { text: 'Compliance Settings', link: '/guide/settings-configuration/compliance-settings' },
+            { text: 'Multi Currency Settings', link: '/guide/settings-configuration/multi-currency-settings' }
           ]
         },
         {
@@ -673,6 +676,7 @@ export default defineConfig({
             { text: 'Theme Compatibility', link: '/guide/customization-and-themes/theme-compatibility' },
             { text: 'Using Gutenberg Blocks', link: '/guide/customization-and-themes/using-gutenberg-blocks' },
             { text: 'On-Page Checkout Form', link: '/guide/customization-and-themes/on-page-checkout-form' },
+            { text: 'Adding a Currency Switcher', link: '/guide/customization-and-themes/currency-switcher' },
             { text: 'Using Elementor Widgets', link: '/guide/customization-and-themes/using-elementor-widgets', items: [
               { text: 'FluentCart Widgets', link: '/guide/customization-and-themes/elementor-fluentcart-widgets' },
               { text: 'FluentCart Product Widgets', link: '/guide/customization-and-themes/elementor-product-widgets' },
