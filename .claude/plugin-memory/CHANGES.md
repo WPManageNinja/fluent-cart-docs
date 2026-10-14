@@ -5,6 +5,23 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## Release 2.0.0: Multi-Currency (Beta) final sync (Oct 14, 2026, evening)
+- **Trigger:** user pulled again and pasted the official changelog: `2.0.0 (Oct 14, 2026): Adds Multi-Currency (Beta), sell in multiple currencies with exchange rates, rounding, charm pricing, and a currency switcher`. Repo files still say 1.9.0.
+- **Source:** core `develop` @ `d7811d49b0` (was `ea3e50c237`, 15 commits), Pro `develop` @ `45151420` (was `7a673400`, 7 commits). Rebuilt both (core config/app.php backed up to scratchpad and restored). Also inspected the dev copy on `localhost:10053` (`~/Local Sites/fcrmv3`, core+Pro 1.9.0): its multi-currency core is OLDER than develop (rates in core table, no Pro gate, 30 min hold, old rate-history columns). The user's changelog says 2.0.0, so docs follow develop, not that copy.
+- **Changes that touched the docs:**
+  - Settings page rebuilt (core #3147, #3149, #3136): Exchange rates card hidden for manual rates, new row layout (**Needs a rate** strip, pencil edit, inverse rate, plain **Example 100.00 USD to ...**, pricing summary + panel with its own **Save**), **Set rate** also saves the currency list, rate history columns Rate/Change/Source/Effective/Set by, **Rate changes** card.
+  - Rate hold default is now 0 (range 0 to 1440): a new rate applies at once (core #3135, Pro `04b870de`).
+  - Checkout Currency is disabled with a note while the base currency is locked (core #3151).
+  - Admin Create Order currency picker removed ("not released yet", core `f6d51d68d3`); Order currency docs and screenshot deleted.
+  - Currency Switcher block shows a Pro notice without Pro (core #3145).
+  - Dynamic Pricing percentage fees are measured after discounts (Pro #477).
+- **Updated:** `settings-configuration/multi-currency-settings.md` (rewritten), `store-management/multi-currency-storefront.md` (Beta, hold text, Create Order section removed), `store-management/orders-management/creating-new-orders.md`, `settings-configuration/store-settings.md` (locked field + new image), `settings-configuration/index.md`, `customization-and-themes/currency-switcher.md` (Beta/Pro block notice), `marketing-sales-tools/dynamic-pricing.md`, `guide/changelog.md` (new v2.0.0 entry).
+- **Screenshots:** plan `multi-currency-settings.json` re-run (menu, save, enable, currencies, set-rate, new `needs-rate`, pricing, new `rate-changes`, rate-history on BDT); ECB card has its own plan `multi-currency-exchange-feed.json` and needs the provider saved as `ecb` first (the eval inside a plan did not stick); new `store-currency-locked.webp` via `store-currency-locked.json`. Deleted `multi-currency-checkout-rate-lock.webp`, `multi-currency-create-order.webp` and the create-order plan. Saving ECB on the dev site pulled real ECB rates into GBP/EUR history rows (append-only); manual demo rates were reseeded and multi-currency reset to off.
+- **Skipped (no doc impact):** #3150 refund modal keeps typed amount, #3146 exact taxable base in tax summary with fees, #3148 drawer styles, custom-checkout signup fee re-pay, fees-filter refactor, Pro inline checkout checkbox sizing, Mollie amount verification.
+- **Open:** the new UI has no control to switch from manual to the ECB feed (the card is hidden while manual), flagged to the user; report currency filter screenshot still missing (dev site has USD orders only); switcher Option 2 (block theme CSS class) still unverified.
+
+---
+
 ## Multi-Currency re-sync after the user's pull (Oct 14, 2026, afternoon)
 - **Trigger:** user pulled new commits and asked whether the Multi-Currency docs still match.
 - **Source:** core `develop` @ `ea3e50c237` (was `015abdf6e2`, 14 commits), Pro `develop` @ `7a673400` (was `a48ee045`, 8 commits). Rebuilt both (core config/app.php backed up and restored).
