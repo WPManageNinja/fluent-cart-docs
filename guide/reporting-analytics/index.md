@@ -14,5 +14,6 @@ This section covers various types of reports to give you a holistic view of your
 * **[Future Renewals Report](/guide/reporting-analytics/future-renewals):** Forecasted subscription renewal revenue and counts to help with near-term cash flow planning.
 * **[Product Report](/guide/reporting-analytics/product-report):** Detailed analytics on individual product performance, including units sold and top-selling items.
 * **[Order Sources Report](/guide/reporting-analytics/order-sources-report):** Revenue grouped by marketing campaign, source, and medium, so you can see which channels produce paying customers.
+* **[Accounting Export](/guide/reporting-analytics/accounting-export):** A CSV or JSON file of every sale and refund with its tax line, currency, and exchange rates, for your accountant or tax software.
 
 By regularly reviewing these reports, you can gain a deeper understanding of your store's health and strategize for future growth.
