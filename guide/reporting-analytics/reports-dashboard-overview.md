@@ -82,3 +82,18 @@ The **Orders**, **Revenue**, **Refunds**, **Subscription**, **Product**, and **C
 Pick a grouping explicitly when Auto is not what you want, such as reading a full year day by day to find a single spike. The label goes back to a plain **Auto** while an explicit choice is active, so it never echoes your own selection back at you.
 
 ![Screenshot of the Order Chart with the grouping dropdown open, showing Auto (Yearly), Daily, Monthly, and Yearly](/images/reporting-analytics/dashboard-overview/trend-chart-grouped.webp)
+
+## Viewing Reports in More Than One Currency
+
+If you sell in more than one currency with [Multi Currency](/guide/settings-configuration/multi-currency-settings), your orders end up in different currencies. Adding those amounts together without converting them would give you a meaningless total, so the reports let you choose how to read them.
+
+When the selected date range contains orders in two or more currencies, a **Currency** filter appears with the report filters. It lists every currency that has orders in that range, and it starts on the currency with the most orders. You can read your data in two ways:
+
+* **A single currency:** Pick a currency code, such as **USD** or **GBP**. The report shows only the orders placed in that currency, in that currency's own amounts, with no conversion.
+* **All currencies (in USD):** Pick this option to combine everything in your base currency. The label shows your own base currency code in place of USD. Each order is converted at the exchange rate it was placed at. Orders that have no exchange rate on record are left out, and the option tells you how many, for example **3 orders without an exchange rate left out**.
+
+The **All currencies** option is available on the **Sales**, **Orders**, **Revenue**, **Refunds**, **Product**, **Order Sources**, **Retention**, and **Future Renewals** reports. The **Subscription**, **Cohorts**, and **Customer** reports always read one currency at a time, so on those pages only the individual currency codes are listed.
+
+::: info
+The **Future Renewals** report has its own **Currency** picker above the report. It appears when your orders include more than one currency.
+:::
