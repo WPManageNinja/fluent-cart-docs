@@ -3,7 +3,7 @@
 Once you sell in more than one currency, your customers need an easy way to pick the one they want. The currency switcher gives them a small button, in your menu or anywhere on a page, that opens a list of your currencies and reloads the page with prices in the one they choose.
 
 ::: info
-Multi Currency, and with it the currency switcher, is part of **FluentCart Pro**. Without Pro, the switcher does not appear and your store stays in its base currency.
+Multi Currency, and with it the currency switcher, is part of **FluentCart Pro** and is currently in **Beta**. Without Pro, the switcher does not appear and your store stays in its base currency. The Currency Switcher block also shows a Pro notice in the editor until Pro is active.
 :::
 
 The switcher looks like this:
