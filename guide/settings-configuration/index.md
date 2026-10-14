@@ -17,5 +17,6 @@ This section covers the following critical areas:
 * **[Storage Settings](/guide/settings-configuration/storage-settings):** Configure where your digital product files and other assets are stored, including local and cloud (S3) options.
 * **[Licensing Settings (FluentCart Product License)](/guide/settings-configuration/licensing-settings):** Activate your FluentCart plugin license key to ensure regular updates and access to premium features.
 * **[Compliance Settings](/guide/settings-configuration/compliance-settings):** Control whether customers must confirm their email address, and whether new accounts are logged in automatically.
+* **[Multi Currency Settings](/guide/settings-configuration/multi-currency-settings):** Let customers pay in other currencies, with exchange rates, price adjustments, rounding, and a rate hold at checkout.
 
 By thoroughly configuring these settings, you can ensure your FluentCart store runs exactly as you intend.
