@@ -13,6 +13,7 @@ This section covers various types of reports to give you a holistic view of your
 * **[Cohorts Report](/guide/reporting-analytics/cohorts):** Cohort-based subscription analytics with retention views, period comparisons, and exportable grouped data.
 * **[Future Renewals Report](/guide/reporting-analytics/future-renewals):** Forecasted subscription renewal revenue and counts to help with near-term cash flow planning.
 * **[Product Report](/guide/reporting-analytics/product-report):** Detailed analytics on individual product performance, including units sold and top-selling items.
+* **[Compare Products Report](/guide/reporting-analytics/product-compare-report):** Side-by-side comparison of the products or variations you pick, with a chart and a totals table.
 * **[Order Sources Report](/guide/reporting-analytics/order-sources-report):** Revenue grouped by marketing campaign, source, and medium, so you can see which channels produce paying customers.
 * **[Accounting Export](/guide/reporting-analytics/accounting-export):** A CSV or JSON file of every sale and refund with its tax line, currency, and exchange rates, for your accountant or tax software.
 
