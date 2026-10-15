@@ -34,10 +34,13 @@ When you first enter the Reports section, you land on the **Overview** tab. This
 
 ### Reporting Overview - Gross Summary
 
-At the very top, you get a direct summary of your store's financial volume and growth:
+A small label at the top of the page tells you what the whole Overview covers, for example **Last 12 Months · Base currency (USD)**. All the figures on this page are shown in your store's base currency.
 
-* **Gross Volume:** The total sales amount before anything is taken out, charted over specific periods (e.g., quarterly or monthly).
-* **Year-over-Year Growth (YoY):** This figure shows the percentage change in your gross volume compared to the same time last year, giving you crucial context on expansion.
+At the top, two cards give you a direct summary of your store's financial volume and growth:
+
+* **Gross Summary:** The total sales amount before anything is taken out, charted month by month. The subtitle under the card title shows the total for the period with its growth figure, for example **$12.78K ▲ 10.1% YoY**.
+* **Gross Revenue Quarterly:** The same gross figure grouped into three-month quarters, with its own total and growth figure in the subtitle.
+* **Year-over-Year Growth (YoY):** This figure shows the percentage change compared to the same period last year, giving you crucial context on expansion. Hover over the info icon beside it to see how the number is calculated.
 
     ![Screenshot of Reporting Overview Page](/images/reporting-analytics/dashboard-overview/reporting-overview.webp)
 
@@ -46,25 +49,25 @@ At the very top, you get a direct summary of your store's financial volume and g
 
 The middle section presents key visual trends that inform your business strategy:
 
-* **Gross Volume Breakdown:** Charts showing the historical trend of your raw sales, helping you spot seasonal patterns and monitor the overall flow of revenue.
-* **Stock Trend Overview:** This essential graph tracks sales performance against your current inventory levels. It helps you quickly identify your fastest-moving stock and prevent potential shortages.
+* **Gross Volume Breakdown:** A line chart showing the monthly trend of your raw sales, with the year-over-year growth plotted against the right-hand axis. A sentence above the chart sums it up in plain words, for example how much you have sold so far this month, how that compares with last month, and the figure for the same month last year. When your store has no sales from the same period last year, the sentence says **no prior-year figure** instead of showing a misleading percentage.
+* **Gross Revenue Breakdown:** The same view by quarter. Its sentence tells you how far into the current quarter you are, how many days are left, and how the quarter so far compares with the previous one.
 
 ### Core Revenue and Geographic Metrics
 
 These sections move beyond raw sales to show real profitability and market performance:
 
-* **Net Revenue:** Your true total income after all costs, refunds, and discounts have been removed. This figure shows the store’s actual profitability.
+* **Net Revenue:** Your total income after refunds and taxes have been removed, with its own year-over-year growth in the subtitle.
 * **Net Revenue Quarterly:** The net income broken down by three-month periods for easier fiscal review.
-* **Top Country Gross/Net Volume:** Visual charts that categorize your sales and revenue based on the customer’s billing country. This helps you identify your most valuable geographical markets.
+* **Top Country Gross/Net Volume:** Stacked monthly charts that split your sales and revenue by the customer’s billing country. This helps you identify your most valuable geographical markets and how their share changes over time.
 
 ![Screenshot of Report Dashboard Overview Page](/images/reporting-analytics/dashboard-overview/overview-metrics.webp)
 
-### Product and Customer Value
+### Top Countries
 
-The final charts focus on catalog performance and the health of your customer base:
+The final charts rank the countries behind your sales:
 
-* **Top Product Sales Distribution:** Graphs detailing how sales volume is distributed across your entire catalog, helping you see which products are driving the most volume.
-* **Customer LifeTime Value (CLTV):** Metrics showing the expected total revenue from a customer over their entire relationship with your store, which is key for marketing decisions.
+* **Top Countries Gross Revenue:** The countries that bring in the most gross sales, so you can see where your customers are.
+* **Top Countries Net Revenue:** The same ranking after refunds and taxes.
 
 By reviewing the Overview first, you get a clean summary of the most critical numbers, allowing you to choose which detailed tab (Sales, Refunds, etc.) you need to investigate further.
 
@@ -82,6 +85,25 @@ The **Orders**, **Revenue**, **Refunds**, **Subscription**, **Product**, and **C
 Pick a grouping explicitly when Auto is not what you want, such as reading a full year day by day to find a single spike. The label goes back to a plain **Auto** while an explicit choice is active, so it never echoes your own selection back at you.
 
 ![Screenshot of the Order Chart with the grouping dropdown open, showing Auto (Yearly), Daily, Monthly, and Yearly](/images/reporting-analytics/dashboard-overview/trend-chart-grouped.webp)
+
+## Comparing With an Earlier Period
+
+The **Compare to** dropdown on the report filter bar decides which earlier period your numbers are measured against. Each option in the list shows the dates it would use, and once you pick one, the dates stay visible in grey text beside the dropdown, so you never have to work out the comparison window yourself.
+
+![Screenshot of the Compare to dropdown listing Previous Period, Previous Month, Previous Quarter, Previous Year, Custom, and No Comparison with their dates](/images/reporting-analytics/dashboard-overview/compare-to-options.webp)
+
+All comparison periods last as many days as your selected range. They differ in where they start:
+
+* **Previous Period:** Ends the day before your selected range begins.
+* **Previous Month:** Starts one month before your selected range starts.
+* **Previous Quarter:** Starts three months before your selected range starts.
+* **Previous Year:** Starts one year before your selected range starts.
+* **Custom:** You choose the start date with a separate date picker.
+* **No Comparison:** Turns the comparison off.
+
+On charts, the comparison period is drawn as a dotted line in the same color as the current period, or as a faded bar, so the two are easy to tell apart. If your date range runs past today, the report counts only up to today.
+
+If a report cannot load, an error message with a retry option appears instead of a blank chart.
 
 ## Viewing Reports in More Than One Currency
 
