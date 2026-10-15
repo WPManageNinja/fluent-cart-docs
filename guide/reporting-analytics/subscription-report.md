@@ -11,7 +11,7 @@ Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/repor
 The top of the dashboard gives you key controls to choose what data appears in the report.
 
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
-* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data.
+* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data. The dates of the selected period appear in grey text beside the dropdown, and each option in the list shows its own dates.
 * **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
 * **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
@@ -21,8 +21,8 @@ The top of the dashboard gives you key controls to choose what data appears in t
 
 The main feature of this report is the **Subscription Chart**. It shows your growth trends by visually comparing new subscriptions across two different time periods.
 
-* **Current Range:** Represented by the blue area, this shows new subscriptions for the period you selected.
-* **Compare Range:** Represented by the green area, this shows new subscriptions for the historical period you are comparing against.
+* **Current Range:** Drawn as a solid blue line, this shows new subscriptions for the period you selected.
+* **Compare Range:** Drawn as a dotted line in the same color, this shows new subscriptions for the historical period you are comparing against.
 
 You can also use the interactive controls in the top-right corner of the chart to change the view, zoom, or download the chart as an image.
 
