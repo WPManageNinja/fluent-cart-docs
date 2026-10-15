@@ -19,9 +19,11 @@ The reporting hub is divided into several focused tabs, giving you a comprehensi
 * **Orders:** Focuses on transaction count, order value, and features a **Sales Heatmap** to show peak ordering times.
 * **Revenue:** Delivers the true income earned after deductions, with trend charts and geographical (per-country) breakdowns.
 * **Refunds:** Provides detailed metrics on returns, the total refunded amount, and the time it takes to process a refund.
-* **Subscription:** Essential for recurring sales, tracking subscriber growth, and analyzing customer retention.
-* **Product:** Analyzes individual item performance, units sold, and provides side-by-side product comparisons.
-* **Customer:** Monitors your store’s customer acquisition and growth, helping you understand long-term customer value.
+* **Subscriptions:** Essential for recurring sales, tracking subscriber growth, and installments still due. Its sub-pages cover **Retention**, **Cohorts**, and **Future Renewals**.
+* **Products:** Analyzes individual item performance, units sold, discounts, and refunds. Its **Compare** sub-page puts products you pick side by side.
+* **Customers:** Monitors your store’s customer acquisition and growth, helping you understand long-term customer value.
+* **Sources:** Groups your orders by UTM campaign, source, and medium.
+* **Export:** Downloads an accounting export of your sales and refunds.
 
 ::: info
 The Reports sidebar is **extensible**. When you install a FluentCart add-on that ships its own reports, those report pages appear automatically in this same sidebar alongside the built-in tabs — there's nothing to configure. If you don't have any reporting add-ons active, the menu simply shows the core reports listed above.
@@ -34,11 +36,11 @@ When you first enter the Reports section, you land on the **Overview** tab. This
 
 ### Reporting Overview - Gross Summary
 
-A small label at the top of the page tells you what the whole Overview covers, for example **Last 12 Months · Base currency (USD)**. All the figures on this page are shown in your store's base currency.
+A small label at the top of the page tells you what the whole Overview covers, for example **Last 12 Months · Base currency (USD)**. All the figures on this page are shown in your store's base currency. The Overview does not follow the date filters used on the other report tabs. It always looks at the most recent months, and the quarterly cards always show the last four quarters, including the current quarter so far, compared with the same quarters a year earlier.
 
 At the top, two cards give you a direct summary of your store's financial volume and growth:
 
-* **Gross Summary:** The total sales amount before anything is taken out, charted month by month. The subtitle under the card title shows the total for the period with its growth figure, for example **$12.78K ▲ 10.1% YoY**.
+* **Gross Summary:** The total sales amount before anything is taken out, charted month by month. The subtitle under the card title shows the total for the period with its year-over-year growth figure.
 * **Gross Revenue Quarterly:** The same gross figure grouped into three-month quarters, with its own total and growth figure in the subtitle.
 * **Year-over-Year Growth (YoY):** This figure shows the percentage change compared to the same period last year, giving you crucial context on expansion. Hover over the info icon beside it to see how the number is calculated.
 
@@ -73,7 +75,7 @@ By reviewing the Overview first, you get a clean summary of the most critical nu
 
 ## Choosing How a Trend Chart Is Grouped
 
-The **Orders**, **Revenue**, **Refunds**, **Subscription**, **Product**, and **Customer** tabs each carry a trend chart with a small grouping dropdown above it. That dropdown decides how tightly the timeline is bucketed, and it changes the shape of what you see without changing the numbers underneath.
+The **Orders**, **Revenue**, **Refunds**, **Subscriptions**, **Products**, **Customers**, and **Compare** pages each carry a trend chart with a small grouping dropdown above it. That dropdown decides how tightly the timeline is bucketed, and it changes the shape of what you see without changing the numbers underneath.
 
 * **Auto:** Lets FluentCart pick the grouping from the date range you selected. This is the default.
 * **Daily:** One point per day. Best for spotting the exact day a campaign landed or a problem started.
@@ -105,11 +107,21 @@ On charts, the comparison period is drawn as a dotted line in the same color as 
 
 If a report cannot load, an error message with a retry option appears instead of a blank chart.
 
+## Using Advanced Filters
+
+The funnel icon at the right end of the filter bar opens **Advanced Filters**, a Pro feature. Pick a filter from the list, choose its values, and the report updates. Applied filters appear in the filter bar, and **Reset Filters** clears them.
+
+* **Order Type:** Choose **All**, **One time**, **Subscription**, or **Renewal** to limit the report to those kinds of orders. It is available on the Sales, Orders, Revenue, Refunds, Products, Compare, Retention, Cohorts, and Future Renewals reports.
+* **Subscription Type:** Choose **New**, **Renewal**, **Expired**, or **Canceled** to focus on one kind of subscription event. It is available on the subscription reports only.
+* **Products:** Pick specific products or variations to see only their numbers. On the **Compare** page, this is also how you choose what to compare.
+
+The Customers report has no Advanced Filters, and the [Order Sources](/guide/reporting-analytics/order-sources-report) report has its own UTM filter.
+
 ## Viewing Reports in More Than One Currency
 
 If you sell in more than one currency with [Multi Currency](/guide/settings-configuration/multi-currency-settings), your orders end up in different currencies. Adding those amounts together without converting them would give you a meaningless total, so the reports let you choose how to read them.
 
-When the selected date range contains orders in two or more currencies, a **Currency** filter appears with the report filters. It lists every currency that has orders in that range, and it starts on the currency with the most orders. You can read your data in two ways:
+When the selected date range contains orders in two or more currencies, a **Currency** filter appears with the report filters. It lists every currency that has orders in that range, and it starts on the currency with the most orders. If you clear the currency chip, it resets to that default instead of disappearing. You can read your data in two ways:
 
 * **A single currency:** Pick a currency code, such as **USD** or **GBP**. The report shows only the orders placed in that currency, in that currency's own amounts, with no conversion.
 * **All currencies (in USD):** Pick this option to combine everything in your base currency. The label shows your own base currency code in place of USD. Each order is converted at the exchange rate it was placed at. Orders that have no exchange rate on record are left out, and the option tells you how many, for example **3 orders without an exchange rate left out**.
