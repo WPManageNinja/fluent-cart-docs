@@ -26,12 +26,12 @@ The top of the dashboard gives you key controls to choose what data appears in t
 
 At the top of the **Sales Report**, you will find summary cards highlighting your key sales metrics for the selected period.
 
-* **Gross Sales:** This is the total amount of money made from sales before any deductions.
-* **Refunded:** The total monetary value of all refunds that have been processed.
-* **Revenue:** This is your true income after refunds have been subtracted from Gross Sales.
-* **Orders:** The total number of orders that have been placed in your store.
-* **Items:** The total quantity of all individual product units sold.
-* **Total Refunds:** The total count of individual refund transactions that were processed.
+* **Gross Sales:** The total paid on orders in the period, including tax and shipping, before refunds are deducted.
+* **Refunds:** The total monetary value of refunds made on orders in the period. It is deducted from gross sales to calculate revenue.
+* **Revenue:** Gross sales less refunds and taxes. Shipping charges and payment fees are not deducted.
+* **Orders:** The total number of orders placed in the period.
+* **Items:** The total number of items sold in the period.
+* **Total Refunds:** The number of orders that were refunded, counting partial refunds too.
 
 Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against.
 
@@ -39,13 +39,13 @@ Each metric also includes a percentage that indicates the increase or decrease c
 
 Below the key metrics, detailed breakdowns provide specific data about your best-performing products. This section is essential for understanding customer purchasing behavior.
 
-**Top Sold Products:** This table lists your best-selling products based on the number of units sold and the total revenue they have generated. This helps you quickly identify which items are the most popular with your customers.
+**Top Sold Products:** This list shows your best-selling products with the number of units sold and the sales amount for each. Click **View All** to jump to your Products screen.
 
-**Top Sold Variants:** This table shows sales by individual product variations (like size or color). It gives you detailed insight into which options are most popular, helping you make smarter decisions about inventory and marketing.
+**Top Sold Variants:** This list shows sales by individual product variations (like size or color), each with the product it belongs to. It gives you detailed insight into which options are most popular, helping you make smarter decisions about inventory and marketing.
 
-**Sources:** The Sources pie chart gives you a quick visual summary of how you're making money. It's a simple way to understand your business model at a glance. It breaks down your revenue into three main types:
+**Sources:** The Sources pie chart gives you a quick visual summary of how you're making money. It's a simple way to understand your business model at a glance. Use the **Revenue** and **Orders** buttons above the chart to switch between the revenue and the number of orders. It breaks them down into three main types:
 
- * **One-time Payments:** This represents customers making a single, straightforward purchase.
+ * **Onetime Payments:** This represents customers making a single, straightforward purchase.
  * **Subscriptions:** This slice shows the revenue from customers who have signed up for recurring payments for a product or service.
  * **Renewals:** This shows income from existing subscribers who have renewed their subscriptions.
 
