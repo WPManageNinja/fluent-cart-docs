@@ -7,6 +7,7 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 ::::: code-group
 
 ```markdown [✨ Newly Added]
+• Adds product comparison report
 • Adds Checkout Field Label styles with Docked, Floating, and Placeholder-only options
 ```
 
