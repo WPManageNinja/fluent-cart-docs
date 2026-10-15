@@ -10,7 +10,7 @@ Go to your WordPress dashboard, navigate to **FluentCart Pro → [Reports](/guid
 
 Use the controls at the top of the page to customize the data displayed in your charts and tables.
 
-* **Date Filter:** Define a specific date range to analyze retention trends over weeks, months, or years.
+* **Date Filter:** Define a specific date range to analyze retention trends over weeks, months, or years. The first and last months are measured only within the dates you pick, so a range that starts mid-month does not pull in the earlier days of that month.
 * **Reset Filters:** Instantly clear your custom date selections to return to the default report view.
 
 ![Retention Report](/images/reporting-analytics/subscription/retention/retention-report-1.webp)
@@ -21,7 +21,9 @@ This section highlights your ability to keep active subscribers and the revenue 
 
 * **Subscription Retention:** The percentage of individual subscribers who remained active compared to the previous period.
 * **MRR (Monthly Recurring Revenue) Retention:** The percentage of recurring revenue maintained. This helps you see if you are keeping your most valuable customers.
-* **Average In Period:** A helpful benchmark showing your historical average for these metrics to help you identify if current performance is above or below your norm.
+* **Average In Period:** A helpful benchmark showing your historical average for these metrics to help you identify if current performance is above or below your norm. Months in which you had no subscribers at the start are left out of the average, so an empty month does not drag it down.
+
+Under each figure, a sentence puts the numbers in plain words, for example **You retained 95.35% (41) of your Sep 2026 subscriptions (43).** Subscriptions that start and cancel within the same month count as lost, so they appear in the churn figures.
 
 ## Retention Rate Chart
 
@@ -36,7 +38,7 @@ The **Retention Rate** chart provides a visual month-over-month comparison of yo
 
 This section uses your current data to predict the long-term value of your average customer.
 
-* **Expected Subscription Lifetime:** An estimate of how many months a customer will stay subscribed based on your current retention rate.
+* **Expected Subscription Lifetime:** An estimate of how many months a customer will stay subscribed based on your current retention rate. When your retention is at or near 100%, the estimate is capped at 10 years and the card reads "over 10 years" instead of showing an unrealistic number of months.
 * **Expected Lifetime Value (LTV):** The total revenue you can expect to earn from a single subscriber before they churn. This is a critical metric for determining how much you can afford to spend on marketing.
 
 ## Subscription & MRR Churn
