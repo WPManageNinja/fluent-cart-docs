@@ -138,6 +138,8 @@ If a customer's subscription has been **cancelled**, **paused**, **expired**, **
 
 Subscriptions that were cancelled because of a refund are **also reactivatable** in v1.3.27 and later. Previously a refund-driven cancellation locked the subscription out of reactivation; now the action is available, and FluentCart correctly recalculates the next billing date based on the most recent successful (non-refunded) charge. If every previous charge has already been fully refunded, the next renewal starts a fresh billing cycle.
 
+If the subscription is paid through **Stripe**, reactivating is also how a customer corrects a wrong billing address for future invoices. When the reactivation order is paid, FluentCart sends its billing address to the customer's Stripe record, so upcoming Stripe invoices use the new address. Address lines the customer left blank clear the old values. If Stripe cannot update the address, the reactivation still goes through, and ordinary purchases do not change the stored address.
+
 When a subscription is reactivated, FluentCart fires the **`SubscriptionReactivated`** event. Integrations like FluentCRM, FluentCommunity, and email automations all listen for this event so the customer's tags, course access, and notifications resume in lockstep.
 
 ### Cancellation Notification to the Customer
