@@ -16,7 +16,7 @@ Want to look at a specific time frame? Or maybe you want to see how your sales t
 The top of the dashboard gives you key controls to choose what data appears in the report.
 
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
-* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data.
+* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data. The dates of the selected period appear in grey text beside the dropdown, and each option in the list shows its own dates.
 * **Advanced Filters:** Click the **filter** icon to break down the report by options like **Order Type** or specific **Products**. This helps you focus on detailed sales data for a closer view.
 * **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
