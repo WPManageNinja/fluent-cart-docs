@@ -11,6 +11,7 @@ Go to your WordPress dashboard, navigate to **FluentCart Pro → [Reports](/guid
 Use the controls at the top of the page to customize the data displayed in your charts and tables.
 
 * **Date Filter:** Define a specific date range to analyze retention trends over weeks, months, or years. The first and last months are measured only within the dates you pick, so a range that starts mid-month does not pull in the earlier days of that month.
+* **Advanced Filters (Funnel Icon):** Narrow the report to specific **Products** or a **Subscription Type**. See [Using Advanced Filters](/guide/reporting-analytics/reports-dashboard-overview#using-advanced-filters).
 * **Reset Filters:** Instantly clear your custom date selections to return to the default report view.
 
 ![Retention Report](/images/reporting-analytics/subscription/retention/retention-report-1.webp)
