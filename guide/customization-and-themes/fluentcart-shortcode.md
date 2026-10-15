@@ -411,6 +411,7 @@ The checkout shortcode normally shows the shopper's main cart. Add a list of pro
 | **selection_mode** | `single` shows radio buttons (the default). `multiple` shows checkboxes. |
 | **max_items** | With `multiple`, the most options a shopper can tick at once, from 1 to 20. |
 | **selector_label** | The heading shown above the list of options. |
+| **field_label_style** | Sets how checkout fields show their name once the customer has typed in them: `docked` (the default), `floating`, or `placeholder`. It works with or without `variant_ids`. |
 
 ### 11. Currency Switcher Shortcode (`[fluent_cart_currency_switcher]`)
 
