@@ -4,7 +4,7 @@ The **Subscription Report** provides a clear overview of your subscription growt
 
 #### Accessing the Subscription Report
 
-Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview)** in the side menu, and click on the **Subscription** tab.
+Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview)** in the side menu, and click on the **Subscriptions** tab.
 
 ### Report Filters and Controls
 
@@ -13,9 +13,14 @@ The top of the dashboard gives you key controls to choose what data appears in t
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
 * **Compare To:** This dropdown allows you to choose a past time period to compare with your current data. The dates of the selected period appear in grey text beside the dropdown, and each option in the list shows its own dates.
 * **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
+* **Advanced Filters:** Click the filter icon to narrow the report by **Subscription Type** (**New**, **Renewal**, **Expired**, or **Canceled**) or by specific **Products**. See [Using Advanced Filters](/guide/reporting-analytics/reports-dashboard-overview#using-advanced-filters).
 * **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
-  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-report.webp)
+### Installments Still Due
+
+The card at the top of the page, **Installments Still Due**, shows the remaining balance on installment plans that started in the selected period. Hover over the info icon beside it to read the definition. It helps you see how much of your payment-plan income is still to come.
+
+  ![Screenshot of the Subscription Report page](/images/reporting-analytics/subscription/subscription-report.webp)
 
 ### Subscription Chart
 
@@ -41,7 +46,7 @@ The **Comparison** table provides the exact numbers from the visualization. This
 
 Below the main comparison, you’ll find detailed charts that show customer loyalty and new customer trends. This section helps you clearly see how healthy your subscription business is.
 
-* **Retention Chart:** This chart shows you how long your customers stay subscribed after their initial purchase. The horizontal axis is divided into time periods like 7 Days, 30 Days, and 180 Days, making it easy to see at which point customers are most likely to drop off. This is a key tool for measuring customer loyalty.
+* **Retention Chart:** This chart shows you how long your customers stay subscribed after their initial purchase. The horizontal axis is divided into time periods like 7 Days, 30 Days, 180 Days, and More than Year, making it easy to see at which point customers are most likely to drop off. Type your own number of days into the **Enter custom days** box above the chart to add a bucket of your choice. This is a key tool for measuring customer loyalty. Only subscriptions that actually started are counted, so abandoned checkouts do not inflate the numbers.
 
 * **Daily Signups:** This chart tracks the number of new subscriptions you get each day. It helps you visualize your daily growth and identify trends in customer acquisition, which can be useful for seeing the impact of marketing campaigns.
 
