@@ -11,7 +11,7 @@ Go to your WordPress dashboard, then go to **FluentCart Pro** > **Reports** in t
 The top of the dashboard provides crucial controls that determine the data displayed in the chart and table.
 
 * **Date Range Selector:** This field allows you to define the **Current Range** for your report. You can select a custom start and end date to focus on specific periods, such as a major sale or a specific fiscal quarter.
-* **Compare To:** This dropdown determines the historical period used for comparison. Options allow you to benchmark your **Current Range** data against prevous time periods. 
+* **Compare To:** This dropdown determines the historical period used for comparison. Options allow you to benchmark your **Current Range** data against previous time periods. The dates of the selected period appear in grey text beside the dropdown, and each option in the list shows its own dates.
 * **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
 * **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
 
@@ -25,7 +25,7 @@ At the top of the Customer Report, you will find a summary card highlighting you
 
 The main visualization on this dashboard is the **New Customers**. This is a powerful area chart that allows for easy trend analysis and comparison.
 
-* **Visual Comparison:** The chart overlays two distinct areas—the **Current Range** (representing the period currently selected in the date filter) and the **Compare Range** (representing the historical period you are measuring against).
+* **Visual Comparison:** The chart overlays two distinct series: the **Current Range** (the period currently selected in the date filter, drawn as a solid line with a light fill) and the **Compare Range** (the historical period you are measuring against, drawn as a dotted line in the same color).
 * **Trend Analysis:** By showing the current period's customer acquisition alongside the past, you can quickly identify seasonal impacts, measure the success of specific marketing campaigns, and see if your acquisition rate is accelerating or slowing down.
 
 ![Customer Reports](/images/reporting-analytics/customer/customer-report-1.webp)
