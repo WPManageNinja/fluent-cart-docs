@@ -35,16 +35,16 @@ Use the **Columns** control above the table to show or hide any of these:
 
 * **Orders:** how many orders came from this source.
 * **Gross Sales:** total paid across those orders.
-* **Net Sales:** gross sales minus refunds, tax, and shipping tax. This is the figure to judge a campaign on.
+* **Revenue:** gross sales minus refunds, tax, and shipping tax. This is the figure to judge a campaign on.
 * **Average Order:** gross sales divided by order count.
-* **Average Order Net:** net sales divided by order count.
+* **Average Order Net:** revenue divided by order count.
 
-The **Gross / Net** switch above the table toggles which pair of these the table displays: **Gross** shows Gross Sales and Average Order, **Net** shows Net Sales and Average Order Net.
+The **Gross / Net** switch above the table toggles which pair of these the table displays: **Gross** shows Gross Sales and Average Order, **Net** shows Revenue and Average Order Net.
 
 Rows are sorted by gross sales, highest first, so your best-performing sources are always at the top.
 
-::: tip Judge campaigns on Net Sales, not Gross
-Gross Sales includes tax, shipping tax, and orders that were later refunded. A campaign that drives high-refund purchases can look strong on gross and poor on net. Net Sales is the honest number.
+::: tip Judge campaigns on Revenue, not Gross
+Gross Sales includes tax, shipping tax, and orders that were later refunded. A campaign that drives high-refund purchases can look strong on gross and poor on net. Revenue is the honest number.
 :::
 
 ## Filtering the Report
@@ -121,9 +121,9 @@ The report shows aggregates. To see the attribution recorded against one specifi
 
 ## Using the Report
 
-**Find your most profitable channel.** Sort by Net Sales and compare Average Order Net across sources. A channel with fewer orders but a much higher average order value is often worth more than a high-volume one.
+**Find your most profitable channel.** Sort by Revenue and compare Average Order Net across sources. A channel with fewer orders but a much higher average order value is often worth more than a high-volume one.
 
-**Check whether a campaign paid for itself.** Filter to the campaign's run dates, read Net Sales, and compare against what you spent.
+**Check whether a campaign paid for itself.** Filter to the campaign's run dates, read Revenue, and compare against what you spent.
 
 **Spot untagged traffic.** If your report totals are far below your actual order count, most of your orders are arriving without UTM tags. Tag your outbound links (email campaigns, ads, affiliate links, social posts) and the report fills in.
 
