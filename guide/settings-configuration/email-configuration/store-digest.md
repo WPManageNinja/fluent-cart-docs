@@ -53,7 +53,7 @@ All send times use your **store timezone**, not the server time. Test emails are
 
 Every digest opens with your store name, the digest type, and the date range it covers. The body reports the same figures as your Reports dashboard for that period:
 
-* **Headline metrics:** Gross Sales, Net Revenue, Orders, Items Sold, and Refunds, each with the change compared to the previous period.
+* **Headline metrics:** Gross Sales, Revenue, Orders, Items Sold, and Refunds, each with the change compared to the previous period.
 * **Order breakdown:** One-time orders, new subscriptions, and renewals, with their counts and revenue.
 * **Top products:** Your best-selling products for the period by units sold.
 * **View full reports:** A button that opens the full [Reports dashboard](/guide/reporting-analytics/reports-dashboard-overview) inside your store.
