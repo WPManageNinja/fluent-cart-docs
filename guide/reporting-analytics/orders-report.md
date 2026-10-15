@@ -15,7 +15,7 @@ Want to look at a specific time frame? Or maybe you want to see how this month's
 The top of the dashboard gives you key controls to choose what data appears in the report.
 
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
-* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data.
+* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data. The dates of the selected period appear in grey text beside the dropdown, and each option in the list shows its own dates.
 * **Advanced Filters:** Click the **filter** icon to break down the report by options like **Order Type** or specific **Products**. This helps you focus on detailed order data for a closer view.
 * **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
 * **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
@@ -49,9 +49,14 @@ Just below the KPIs, the Order Report Chart gives you a clear visual of your sto
 
 **New vs. Returning Customers**
 
-This powerful table breaks down your order data based on customer type, helping you measure customer loyalty and the effectiveness of your acquisition strategies.
+This powerful table breaks down your order data by customer type, helping you measure customer loyalty and the effectiveness of your acquisition strategies.
 
-* **Columns:** The table displays Customer Count, Order Count, Net Sales, Average Net Sales, Gross Sales, and Average Gross Sales for both **New** (first-time) and **Returning** customers.
+* **Customer types:** Each paid order is placed in one of four groups, so the table always adds up to your total orders.
+    * **New:** The customer's first paid order.
+    * **Returning:** A repeat order from a customer who already had an earlier paid order. A customer can be counted as New for one order and Returning for the next.
+    * **Renewal:** An automatic subscription renewal. Renewals are kept apart so they do not inflate your Returning numbers.
+    * **Guest:** An order placed without a customer account.
+* **Columns:** The table displays Customer Count, Order Count, Net Sales, Average Net Sales, Gross Sales, and Average Gross Sales for each customer type.
 * **Show Percentages:** Enable this toggle to view the data as percentages, making it easy to see the proportion of sales from new versus returning customers.
 * **Export:** Click the **Export** button to download this data as a **CSV** file for further analysis.
 
