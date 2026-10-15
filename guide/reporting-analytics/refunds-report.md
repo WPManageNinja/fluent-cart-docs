@@ -11,7 +11,7 @@ Go to your WordPress dashboard, then go to **FluentCart** > [Reports](/guide/rep
 The top of the dashboard gives you key controls to choose what data appears in your charts and tables.
 
 * **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
-* **Compare To:** This dropdown lets you pick a past period (for example, the previous week, last month, or the same time last year). Your current data is then compared with that past period. This helps you see if your store is doing better, worse, or staying the same over time.
+* **Compare To:** This dropdown lets you pick a past period (for example, the previous week, last month, or the same time last year). Your current data is then compared with that past period. This helps you see if your store is doing better, worse, or staying the same over time. The dates of the selected period appear in grey text beside the dropdown, and each option in the list shows its own dates.
 * **Advanced Filters:** Click the **filter** icon to segment the report by criteria such as **Order Type** or specific **Products**, allowing you to isolate refunds associated with certain items.
 * **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
 * **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
@@ -24,7 +24,7 @@ At the top of the **Refunds Report**, you will find summary cards highlighting y
 
 * **Refunds:** This figure displays the total number of individual refund transactions processed.
 * **Refunded:** This shows the total amount of money refunded to customers. For example, if you refunded $200 and $150, the total refunded amount is $350.
-* **Avgerage Amount:** This calculates the average value of a single refund transaction.
+* **Average Amount:** This calculates the average refund amount across the orders that were refunded. Orders without a refund are not counted.
 * **Refund Rate:** This key metric shows the percentage of orders that resulted in a refund.
 
 Each metric also shows a percentage, telling you whether the value went up or down compared to the period you selected for comparison.
