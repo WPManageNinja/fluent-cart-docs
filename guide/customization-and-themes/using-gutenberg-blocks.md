@@ -305,9 +305,11 @@ This is the essential block that renders the secure checkout form for completing
   * **Products (FluentCart Pro):** Switch **Checkout Source** from **Default Cart** to **Custom Product** to let shoppers pick from products you choose, right on the page. See [On-Page Checkout Form](/guide/customization-and-themes/on-page-checkout-form) for the full setup.
 
   * **Field Labels:** Choose how each checkout field shows its name once the customer has typed in it. The same setting also applies to the add new address popup.
-      * **Docked (name on the right):** The name moves to the right side of the field. This is the default.
+      * **Docked (name on the right):** The name sits inside the field at the right edge, and a long value runs underneath it. The name steps aside while the customer is typing in the field or has a dropdown open. This is the default.
       * **Floating (name above the value):** The name floats above what the customer typed.
       * **Placeholder only:** The name appears only as placeholder text inside the empty field.
+
+      The style also applies to the Company, Legal Registration ID, and EU VAT fields, where the docked name sits beside the **Apply** button.
 
   * **Additional CSS Class(es):** Enter custom code here if you want to apply unique styling to the checkout form, such as custom borders or specific background colors for the form fields.
 
