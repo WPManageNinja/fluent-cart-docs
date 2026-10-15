@@ -126,8 +126,10 @@ When the selected date range contains orders in two or more currencies, a **Curr
 * **A single currency:** Pick a currency code, such as **USD** or **GBP**. The report shows only the orders placed in that currency, in that currency's own amounts, with no conversion.
 * **All currencies (in USD):** Pick this option to combine everything in your base currency. The label shows your own base currency code in place of USD. Each order is converted at the exchange rate it was placed at. Orders that have no exchange rate on record are left out, and the option tells you how many, for example **3 orders without an exchange rate left out**.
 
-The **All currencies** option is available on the **Sales**, **Orders**, **Revenue**, **Refunds**, **Product**, **Order Sources**, **Retention**, and **Future Renewals** reports. The **Subscription**, **Cohorts**, and **Customer** reports always read one currency at a time, so on those pages only the individual currency codes are listed.
+The **All currencies** option is available on the **Sales**, **Orders**, **Revenue**, **Refunds**, **Products**, **Compare**, **Sources**, **Retention**, and **Future Renewals** reports. The **Subscriptions**, **Cohorts**, and **Customers** reports always read one currency at a time, so on those pages only the individual currency codes are listed.
+
+All amounts on a report, including the figures for the comparison period, are shown in the currency you selected, with that currency's symbol. The **Overview** always shows your base currency.
 
 ::: info
-The **Future Renewals** report has its own **Currency** picker above the report. It appears when your orders include more than one currency.
+The **Future Renewals** report has no date or comparison filters, so its filter bar shows only the **Currency** chip when your orders include more than one currency.
 :::
