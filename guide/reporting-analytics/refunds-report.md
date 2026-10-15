@@ -22,27 +22,27 @@ The top of the dashboard gives you key controls to choose what data appears in y
 
 At the top of the **Refunds Report**, you will find summary cards highlighting your key refund metrics for the selected period.
 
-* **Refunds:** This figure displays the total number of individual refund transactions processed.
-* **Refunded:** This shows the total amount of money refunded to customers. For example, if you refunded $200 and $150, the total refunded amount is $350.
-* **Average Amount:** This calculates the average refund amount across the orders that were refunded. Orders without a refund are not counted.
-* **Refund Rate:** This key metric shows the percentage of orders that resulted in a refund.
+* **Refunds:** The number of orders that have been refunded, fully or partially, in the selected period.
+* **Refunded:** The total amount of money refunded to customers. For example, if you refunded $200 and $150, the total refunded amount is $350.
+* **Average Amount:** The total refunded amount divided by the number of refunded orders. Orders without a refund are not counted.
+* **Refund Rate:** The share of your money that was returned, calculated as the total refunded amount divided by the total amount customers paid. A rate of 1% means that for every $100 paid, $1 was refunded.
 
 Each metric also shows a percentage, telling you whether the value went up or down compared to the period you selected for comparison.
 
 #### Refunds Chart
 
-The main chart on this dashboard is the **Refund Report Chart**. It’s an area chart that helps you easily spot refund trends.
+The main chart on this dashboard is the **Refunds Chart**. It helps you easily spot refund trends.
 
-It compares the current period with past periods, so you can quickly see if refunds are going up or down. The chart shows both the **Total Refunded Amount** and the number of **Total Refunds**.
+It compares the current period with the comparison period, so you can quickly see if refunds are going up or down. The chart plots the **Refunded Amount** as a line and the number of **Total Refunds** as bars, with the **Previous** versions of each shown in a lighter style. Use the dropdown above the chart to change the grouping.
 
 ### Detailed Refund Analysis
 
 Below the main chart, you’ll find more detailed breakdowns that show the data behind the charts. This helps you understand refunds in more detail.
 
-* **Weeks between an order created date and refund date:** This bar chart shows how long it takes for customers to request refunds. It helps you see if problems happen right away or later.
+* **Weeks between an order's created date and refund date:** This bar chart shows how long it takes for refunds to happen after the original order. It helps you see if problems appear right away or later.
 
-* **Refunds Grouped By:** This table breaks down refunds by things like **Billing Country**. It shows the number of **Refunds**, the total **Refunded Amount**, and the **Average Refund**, helping you find patterns in specific regions or customer groups.
+* **Refunds Grouped By:** This table breaks down refunds by the option you pick in the dropdown: **Billing Country** (the default), **Shipping Country**, or **Payment Method**. It shows the number of **Refunds**, the total **Refunded Amount**, and the **Average Refund**, helping you find patterns in specific regions or payment methods. Click **Export** to download it as a CSV file.
 
 ![Refund Report Charts](/images/reporting-analytics/refunds/refunds-report-1.webp)
 
-The Refunds Report goes deeper than sales data, showing you the reasons behind customer returns so you can improve your products and services.
+The Refunds Report goes deeper than sales data, showing you how often money goes back to customers and where it happens, so you can improve your products and services.
