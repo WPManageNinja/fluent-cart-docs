@@ -1,6 +1,25 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v2.1.0
+*Released on Oct 15, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Checkout Field Label styles with Docked, Floating, and Placeholder-only options
+```
+
+```markdown [🚀 Improvements]
+• Enhances Full Report system with multi-currency support
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Stripe billing Address updates on subscription reactivation
+```
+
+:::::
+
 ## FluentCart v2.0.0
 *Released on Oct 14, 2026*
 
