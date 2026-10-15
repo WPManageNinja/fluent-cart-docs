@@ -4,7 +4,7 @@ The **Customer** Report tab is your dedicated tool for measuring the success of 
 
 ## Accessing the Customer Report
 
-Go to your WordPress dashboard, then go to **FluentCart Pro** > **Reports** in the top menu bar, and click on the **Customer** tab.
+Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview)** in the side menu, and click on the **Customers** tab.
 
 ### Report Filters and Controls
 
@@ -23,7 +23,7 @@ At the top of the Customer Report, you will find a summary card highlighting you
 
 ### New Customers
 
-The main visualization on this dashboard is the **New Customers**. This is a powerful area chart that allows for easy trend analysis and comparison.
+The main visualization on this dashboard is the **New Customers** chart. Each customer is counted on the date of their first order, so the chart shows how many people bought from you for the first time on each day. Hover over the info icon beside the title to read this definition in the app. The chart allows for easy trend analysis and comparison.
 
 * **Visual Comparison:** The chart overlays two distinct series: the **Current Range** (the period currently selected in the date filter, drawn as a solid line with a light fill) and the **Compare Range** (the historical period you are measuring against, drawn as a dotted line in the same color).
 * **Trend Analysis:** By showing the current period's customer acquisition alongside the past, you can quickly identify seasonal impacts, measure the success of specific marketing campaigns, and see if your acquisition rate is accelerating or slowing down.
