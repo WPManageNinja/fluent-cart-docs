@@ -43,6 +43,9 @@ The dropdown menu allows you to change how the percentages in the table are calc
 * **% of Total:** Shows how many customers/revenue remains compared to the original start date.
 * **% of Previous:** Shows the retention rate compared to the immediately preceding month.
 * **Total Value:** Displays the actual currency or subscriber numbers instead of percentages.
+* **% of Total Ended:** Shows how much of the original group has churned so far, instead of how much remains. A cohort counts as churned when its subscription goes on hold or officially ends, taking the end date into account. Hover over the info icon beside the report title to read this definition in the app.
+
+A subscriber stops counting toward a cohort from the moment their subscription is canceled or expires, so the later columns reflect only the people who are still subscribed.
 
 ## Understanding the Cohort Table
 
@@ -52,11 +55,18 @@ Each row represents a **Cohort** (a group of subscribers who started in the same
 * **Month 1, Month 2, etc.:** These columns track that specific group as they move through their lifecycle.
 * **Weighted Avg. Retained:** The bottom row provides an aggregate average of how all cohorts perform at each stage, giving you a baseline for your business's overall retention health.
 
+Hover over any cell to see the exact numbers behind it.
+
+### Partial Years
+
+In the **Year** view, a cohort that started this year, or one that is still maturing, has not yet had every month of its later years. FluentCart sizes each yearly cohort from all of its monthly cohorts and marks the figures that are not complete. The hover text on a marked cell reads **Partial** followed by how many of the monthly cohorts have reached that point, for example **Partial: 7 of 12 monthly cohorts have reached this point**. Treat these figures as a preview, because they will change as the remaining months pass.
+
 ## Managing Cohort Data
 
 FluentCart allows you to manage and export this data for external reporting or deeper analysis.
 
-* **Generate Snapshots:** Click this button to refresh and capture the latest data for your cohorts.
+* **Last generated:** The text beside the buttons shows when the cohort data was last refreshed, for example **Last generated October 15, 2026 4:46 pm**. The table is built from snapshots, so new signups and cancellations appear only after the next refresh.
+* **Generate Snapshots:** Click this button to refresh and capture the latest data for your cohorts. FluentCart asks you to confirm because it rebuilds every snapshot, which can take 30 to 60 seconds. It runs in the background, and a message tells you when it finishes. If you have never generated snapshots, the table asks you to click **Generate Snapshots** first.
 * **Export:** Use the Export button to download your cohort data as a CSV file for use in spreadsheet software like Excel or Google Sheets.
 
 ![Cohort Table](/images/reporting-analytics/subscription/cohorts/cohorts-2.webp)
