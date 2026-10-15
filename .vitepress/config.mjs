@@ -572,6 +572,7 @@ export default defineConfig({
               ]
             },
             { text: 'Product Report', link: '/guide/reporting-analytics/product-report' },
+            { text: 'Compare Products Report', link: '/guide/reporting-analytics/product-compare-report' },
             { text: 'Customer Report', link: '/guide/reporting-analytics/customer-report' },
             { text: 'Order Sources Report', link: '/guide/reporting-analytics/order-sources-report' },
             { text: 'Accounting Export', link: '/guide/reporting-analytics/accounting-export' }
