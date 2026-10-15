@@ -88,8 +88,8 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Purpose:** Sales/orders/customer/product reports + chart data endpoints.
 - **Key files:** `ReportingModule.php`, controllers under `Http/Controllers/Reports/*`.
 - **User-facing surface:** Every report screen under FluentCart Pro → Reports.
-- **Drives docs:** `guide/reporting-analytics/*.md`
-- **Last fully audited:** v1.6.2
+- **Drives docs:** `guide/reporting-analytics/*.md` (incl. `product-compare-report.md`, Pro)
+- **Last fully audited:** 2.0.0+ (develop @ 80f5d7c837, Oct 15, 2026)
 
 ### Modules/Reviews
 - **Purpose:** Product reviews and ratings: star ratings, moderation, Add Review, My Reviews / order review page, three review emails, six blocks with 11 layout presets, the reviews shortcode, ratings on product list and shop card.
