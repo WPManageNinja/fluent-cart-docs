@@ -10,7 +10,7 @@ Go to your WordPress dashboard, navigate to **FluentCart Pro → [Reports](/guid
 
 This report is calculated by looking at all active subscriptions and extrapolating their scheduled renewals over a specific time period (typically a 90-day window). A note at the top of the page spells out the exact dates the estimate covers, for example **between October 15, 2026 and January 15, 2027**.
 
-When your orders are in more than one currency, a **Currency** filter appears above the report. Pick a currency, or read everything combined in your base currency. See [Viewing Reports in More Than One Currency](/guide/reporting-analytics/reports-dashboard-overview#viewing-reports-in-more-than-one-currency).
+When your orders are in more than one currency, a **Currency** chip appears in the filter bar at the top of the page, the same one the other reports use. Pick a currency, or read everything combined in your base currency. See [Viewing Reports in More Than One Currency](/guide/reporting-analytics/reports-dashboard-overview#viewing-reports-in-more-than-one-currency).
 
 * **Renewal Revenue:** The total estimated dollar amount expected from successful subscription renewals in the upcoming period.
 * **Renewals:** The total count of individual subscription transactions scheduled to occur.
