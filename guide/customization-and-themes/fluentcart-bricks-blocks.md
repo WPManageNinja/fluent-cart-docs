@@ -68,7 +68,13 @@ These blocks are the ones that actually take the money:
 * **Buy Now:** Sends the customer straight to checkout, skipping the cart. Turn on **Enable Modal Checkout** to keep them on the page and open checkout in a popup instead.
 * **Buy Section:** The complete purchase area, combining pricing and the buy controls.
 * **Mini Cart:** A compact cart summary, well suited to a header. Pick a **Cart Icon** or supply your own icon URL, and use **Display total price** and **Show cart item count** to decide how much detail it shows.
-* **Checkout:** The full checkout form. **Layout** plus **Form Column Width**, **Summary Column Width**, and **Column Gap** control the arrangement, **Form Elements** decides which fields appear, and **Ship to Different Address** controls the separate shipping address option.
+* **Checkout:** The full checkout form. **Layout** plus **Form Column Width**, **Summary Column Width**, and **Column Gap** control the arrangement, **Form Elements** decides which fields appear, and **Ship to Different Address** controls the separate shipping address option. 
+
+**Field Labels** sets how fields show their name once the customer has typed in them: **Docked (name on the right)**, **Floating (name above the value)**, or **Placeholder only**, as in the Gutenberg checkout block.
+
+With FluentCart Pro, set **Checkout Source** to **Custom Product** to let shoppers pick from products you choose, right on the checkout. Add them under **Products** (or type comma-separated IDs in **Manual Variation IDs**), then choose **Select one** or **Select many** in **Selection Mode**. 
+
+For **Select many**, **Maximum Selectable Items** limits how many a shopper can tick at once, and **Selector Heading** sets the title above the list. If FluentCart Pro is deactivated, a Custom Product checkout shows nothing on the live page until you reactivate it. Your settings are kept.
 
 ### Browsing and Discovery
 
