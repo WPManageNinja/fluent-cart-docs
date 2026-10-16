@@ -93,6 +93,7 @@ These blocks cover the rest of the storefront:
 * **Store Logo:** Your store's logo, with **Max Width** and **Max Height** controls. Turn on **Link to Home** to make it clickable.
 * **Customer Dashboard:** The full customer account area.
 * **Customer Dashboard Button:** A link into the customer dashboard, handy in a header or menu. Set the **Display Type** and **Button Text**, and optionally **Show Icon** or **Open in New Tab**.
+* **Currency Switcher:** A button that lets shoppers change the store currency. It needs FluentCart Pro with multi-currency turned on. Its **Switcher Settings** and **Dropdown List** options are covered in [Adding a Currency Switcher](/guide/customization-and-themes/currency-switcher#option-3-elementor-bricks-and-divi).
 
 ### Product Reviews
 

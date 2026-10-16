@@ -1,6 +1,6 @@
 # FluentCart Widgets for Elementor
 
-The **FluentCart** category in the Elementor editor groups 16 store-wide widgets you can drop on any page — your home page, shop page, header, footer, or a custom landing page. They cover product display, cart, checkout, the post-purchase receipt, the customer account area, navigation, branding, and the all-in-one Product Info summary.
+The **FluentCart** category in the Elementor editor groups 17 store-wide widgets you can drop on any page — your home page, shop page, header, footer, or a custom landing page. They cover product display, cart, checkout, the post-purchase receipt, the customer account area, navigation, branding, and the all-in-one Product Info summary.
 
 ::: info
 Before you can use these widgets, make sure the Elementor Blocks addon is turned on. See [Using Elementor Widgets](/guide/customization-and-themes/using-elementor-widgets) for the activation steps.
@@ -249,6 +249,15 @@ Renders a row of products related to the current product. FluentCart picks the r
 ::: info Works on any page, not just product templates
 Related Products lives in the store-wide **FluentCart** category even though it reads product data. Set **Source** to **Current Product** inside a single-product Theme Builder template, or to **Custom** to show a specific product's related items anywhere else on your site.
 :::
+
+## 17. Currency Switcher
+
+A button that shows the shopper's current currency and opens a list of your currencies, so they can see every price in the one they choose. It needs FluentCart Pro with multi-currency turned on, and it hides itself while only one currency is offered.
+
+* **Content Tab:** **Switcher Settings** controls the button and **Dropdown List** controls the list. Each group has **Display**, **Show sign**, **Show flag**, and **Flag position**.
+* **Style and Advanced Tabs:** Standard Elementor controls.
+
+Every option is covered in [Adding a Currency Switcher](/guide/customization-and-themes/currency-switcher#option-3-elementor-bricks-and-divi).
 
 ---
 

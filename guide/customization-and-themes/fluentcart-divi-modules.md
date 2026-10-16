@@ -92,6 +92,7 @@ These modules cover the rest of the storefront:
 * **FluentCart Store Logo:** Your store's logo, with the option to link it back to the home page.
 * **FluentCart Customer Dashboard:** The full customer account area, where shoppers manage their orders, subscriptions, and downloads.
 * **FluentCart Customer Dashboard Button:** A link into the customer dashboard, handy in a header or menu.
+* **FluentCart Currency Switcher:** A button that lets shoppers change the store currency. It needs FluentCart Pro with multi-currency turned on. Its **Switcher Settings** and **Dropdown List** options are covered in [Adding a Currency Switcher](/guide/customization-and-themes/currency-switcher#option-3-elementor-bricks-and-divi).
 
 ### Product Reviews
 

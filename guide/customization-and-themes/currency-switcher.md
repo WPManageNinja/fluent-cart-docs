@@ -85,12 +85,46 @@ Use this if your theme uses **Appearance > Editor** instead of **Appearance > Me
 6. Click **Save**.
 
 ::: info
-Some WordPress versions don't show **Additional CSS class(es)** for a menu link. If you don't see it, use the Button approach in Option 3 instead.
+Some WordPress versions don't show **Additional CSS class(es)** for a menu link. If you don't see it, use the Button approach in Option 4 instead.
 :::
 
-## Option 3: Page Builders and Buttons
+## Option 3: Elementor, Bricks, and Divi
 
-Any button or link can become a currency switcher. This works in Elementor, Bricks, Divi, and the WordPress **Buttons** block.
+The FluentCart addons for Elementor, Bricks, and Divi each include a ready-made **Currency Switcher** that you drag onto the page. It is the same switcher as the block in Option 5: a small button with the current currency that opens your list of currencies.
+
+Before you start, make sure the addon for your builder is installed and active: **FluentCart Elementor Blocks**, **FluentCart Bricks Blocks**, or **FluentCart Divi Modules**. Then pick the steps for your builder.
+
+### Elementor
+
+1. Open the page or template with **Edit with Elementor**.
+2. In the **Elements** panel, type `currency` into **Search Widget...**. You can also find it in the **FluentCart** category.
+3. Drag the **Currency Switcher** widget onto the canvas.
+
+### Bricks
+
+1. Open the page or template with the **Bricks** editor.
+2. Click the plus icon (**+**) to open the elements panel and type `currency` into the search field. You can also find it in the **FluentCart** category.
+3. Click or drag the **Currency Switcher** element onto the canvas.
+
+### Divi
+
+1. Open the page or Theme Builder template with the **Divi** builder.
+2. Click the plus icon (**+**) to open the **Insert Module Or Row** dialog and type `currency` into the search box.
+3. Click the **FluentCart Currency Switcher** module to add it to your layout.
+
+### Builder Settings
+
+In the **Content** settings, **Switcher Settings** controls the button and **Dropdown List** controls the list that opens. Each group has the same four settings as the block: **Display**, **Show sign**, **Show flag**, and **Flag position**. They work exactly as described under [Display Choices](#display-choices), and the defaults are the same.
+
+If your store's switcher doesn't offer these options, the settings panel is empty. The switcher still works and appears on the page.
+
+The switcher has no style controls of its own. Its colors follow your store's appearance settings. To position it, use your builder's layout tools, such as the column, container, or row that holds it. A common spot is inside a header next to your menu and mini cart.
+
+In the builder, a note appears in place of the switcher while FluentCart Pro is inactive, or while **Settings > Multi Currency** offers only one currency. Visitors never see that note.
+
+## Option 4: Buttons and Links
+
+Any button or link can become a currency switcher. This works in Elementor, Bricks, Divi, and the WordPress **Buttons** block, and it is useful when you want your own button design.
 
 1. Add a **Button** (or a menu item in your builder's own menu widget).
 2. Set its link to `#`.
@@ -102,7 +136,7 @@ Any button or link can become a currency switcher. This works in Elementor, Bric
 
 4. Save and view the page.
 
-## Option 4: Shortcode or Block
+## Option 5: Shortcode or Block
 
 Use this when you want a ready-made switcher button instead of a menu item, for example in a page, a sidebar, or a header area that accepts shortcodes, such as Astra's **Header Builder > HTML** element.
 
