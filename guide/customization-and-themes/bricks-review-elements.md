@@ -2,7 +2,7 @@
 
 The FluentCart Bricks Blocks addon includes six elements for [product reviews](/guide/store-management/product-reviews/), so you can build the rating summary, the review list, and the **Write a Review** button right inside the Bricks builder. They mirror the [review blocks](/guide/store-management/product-reviews/displaying-reviews#the-review-blocks) in the WordPress block editor, and they sit in the **FluentCart** category of the Bricks elements panel with the rest of the [FluentCart Bricks Blocks](/guide/customization-and-themes/fluentcart-bricks-blocks).
 
-The review elements arrived in version 1.1.0 of the addon. **Enable Product Reviews** also needs to be switched on in your [review settings](/guide/store-management/product-reviews/review-settings). While it is off, the elements stay in the panel, but the canvas shows a note that the Product Reviews module is switched off, and visitors see nothing. A product with reviews turned off shows a similar note in the builder.
+**Enable Product Reviews** needs to be switched on in your [review settings](/guide/store-management/product-reviews/review-settings). While it is off, the elements stay in the panel, but the canvas shows a note that the Product Reviews module is switched off, and visitors see nothing. A product with reviews turned off shows a similar note in the builder.
 
 ## Adding a Review Element
 
@@ -20,7 +20,19 @@ Every review element starts with the same **Product** group in its **Content** t
 * **Product:** Appears when **Product Source** is **A specific product**. Pick the product from the searchable list.
 * **Manual Product ID:** Appears when **Product Source** is **A specific product** and no product is picked above. Type a product ID, or use Bricks dynamic data such as `{post_id}` or a custom field.
 
-When no product can be worked out, for example a **Current product** element on an ordinary page, the builder previews a product that already has approved reviews. If no product can be found at all, the canvas asks you to select a product or use the element on a product page or in a query loop. Visitors never see those notes.
+The **Product Reviews**, **Review List**, and **Rating Summary** elements can also pull reviews from more than one product. On those elements, **Product Source** is named **Show reviews from**, and the other two settings change to match:
+
+* **Show reviews from:** Choose **Current product**, **Selected products**, or **All products**. **All products** shows reviews from every product in your store.
+* **Products:** Appears when **Show reviews from** is **Selected products**. Pick one or more products from the searchable list.
+* **Manual Product IDs:** Type comma-separated product IDs for products that aren't in the list.
+
+When an element shows several products, whether you picked two or more or chose **All products**, it combines their reviews into one list. The summary shows one overall rating and one star breakdown across all of those products. 
+
+A review belongs to a single product, so the **Write a Review** button isn't shown for several products, and the builder says so beside its settings. The **Review Form**, **Write a Review**, and **Product Rating** elements always work with one product and keep **Product Source**.
+
+When no product can be worked out, for example a **Current product** element on an ordinary page, the builder previews a product that already has approved reviews. 
+
+If no product can be found at all, the canvas asks you to select a product or use the element on a product page or in a query loop. Visitors never see those notes.
 
 ::: info
 Some options need FluentCart Pro. Without it they stay in the list with a **(Pro)** label, and the element falls back to the free behavior. Every element is free to use.
@@ -76,7 +88,9 @@ Grid, Masonry, and Slider need FluentCart Pro. Without it, the reviews show as a
 
 ### Style Settings
 
-The **Style** tab restyles each part in its own group: **Rating Summary** (card, average, bars, and bar labels), **Write a Review Button**, **Review Card**, **Reviewer & Date**, **Review Title & Text**, **Stars** (including **Filled Star Color** and **Empty Star Color**), **Photos** (with **Photo Width (px)** and **Photo Height (px)**), **Store Reply Button**, **Count, Chips & Sort**, **Pagination**, and **Slider Arrows**. The **Slider Arrows** group, shown for the Slider view, also sets the **Arrow Size** (**Small**, **Medium**, or **Large**) and the **Arrow Position** (**Over the slides**, **Outside the slides**, or **Below the slides**).
+The **Style** tab restyles each part in its own group: **Rating Summary** (card, average, bars, and bar labels), **Write a Review Button**, **Review Card**, **Reviewer & Date**, **Review Title & Text**, **Stars** (including **Filled Star Color** and **Empty Star Color**), **Photos** (with **Photo Width (px)** and **Photo Height (px)**), **Store Reply Button**, **Count, Chips & Sort**, **Pagination**, and **Slider Arrows**. 
+
+The **Slider Arrows** group, shown for the Slider view, also sets the **Arrow Size** (**Small**, **Medium**, or **Large**) and the **Arrow Position** (**Over the slides**, **Outside the slides**, or **Below the slides**).
 
 ## 2. Review List
 
@@ -85,6 +99,7 @@ Only the list of reviews, with no summary and no button. Use it together with **
 Its extra strength is the **Review Row** group, which controls the review's fields one by one:
 
 * **Review Row:** **Standard** draws the row as FluentCart draws it everywhere else, shaped by the **Review Card** switches. **Custom (pick and order the fields)** builds each review from the **Fields** list instead.
+
 * **Fields:** Appears when **Review Row** is **Custom**. Each item is one part of the review, shown in the order you set. Drag an item to reorder it, delete an item to hide that part, and add an item to bring one back. The parts are **Avatar**, **Reviewer Name**, **Verified Purchase Badge**, **Variation Reviewed**, **Star Rating**, **Date**, **Review Title**, **Review Text**, **Photos**, **Helpful Votes**, and **Store Reply**.
 
 <!-- TODO(screenshot): Review Row group of the Review List element with the Custom row and Fields list -->
