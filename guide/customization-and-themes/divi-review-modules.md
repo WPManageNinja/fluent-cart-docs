@@ -2,7 +2,7 @@
 
 The FluentCart Divi Modules addon includes six modules for [product reviews](/guide/store-management/product-reviews/), so you can build the rating summary, the review list, and the **Write a Review** button visually in the Divi 5 builder. They mirror the [review blocks](/guide/store-management/product-reviews/displaying-reviews#the-review-blocks) in the WordPress block editor, and like the rest of the [FluentCart Divi Modules](/guide/customization-and-themes/fluentcart-divi-modules), every one of them is prefixed with **FluentCart** in the builder.
 
-The review modules arrived in version 1.1.0 of the addon. **Enable Product Reviews** also needs to be switched on in your [review settings](/guide/store-management/product-reviews/review-settings). While it is off, the modules stay available, but the builder shows a note that the Product Reviews module is switched off, and visitors see nothing. A product with reviews turned off shows a similar note.
+**Enable Product Reviews** needs to be switched on in your [review settings](/guide/store-management/product-reviews/review-settings). While it is off, the modules stay available, but the builder shows a note that the Product Reviews module is switched off, and visitors see nothing. A product with reviews turned off shows a similar note.
 
 ## Adding a Review Module
 
@@ -18,6 +18,13 @@ Every review module starts with the same **Product** section in its **Content** 
 
 * **Product Source:** Choose **Current product** to show whichever product the page or Theme Builder template is displaying. This is the right choice inside a Single Product template. Choose **A specific product** to pin the module to one product.
 * **Select Product:** Appears when **Product Source** is **A specific product**. Click it to search for the product, and the panel shows the **Selected product** above the button, which then reads **Change Product**.
+
+The **FluentCart Product Reviews**, **FluentCart Review List**, and **FluentCart Rating Summary with Review** modules can also pull reviews from more than one product. On those modules, the source setting is named **Show Reviews From**:
+
+* **Show Reviews From:** Choose **Current product**, **Selected products**, or **All products**. **All products** shows reviews from every product in your store.
+* **Product IDs:** Appears when **Show Reviews From** is **Selected products**. Enter the IDs of the products to include, separated by commas.
+
+When a module shows several products, whether you picked two or more or chose **All products**, it combines their reviews into one list. The summary shows one overall rating and one star breakdown across all of those products. A review belongs to a single product, so the **Write a Review** button isn't shown for several products. The **FluentCart Review Form**, **FluentCart Write a Review**, and **FluentCart Product Rating** modules always work with one product and keep **Product Source**.
 
 The Divi canvas draws a live preview of each module. Until a product can be worked out, it asks you to pick one in the module settings, and when the store has no reviews yet, it previews sample reviews so you can still style the module. Visitors never see those notes or the sample data.
 

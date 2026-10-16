@@ -19,6 +19,13 @@ Every widget here starts with the same **Source** setting in its **Content** tab
 * **Source:** Choose **Current Product** to show whichever product the page or template is displaying. This is the right choice inside a single product template. Choose **Custom** to pin the widget to one product.
 * **Select Product:** Appears when **Source** is **Custom**. Pick the product to show.
 
+The **Product Reviews**, **Product Review List**, and **Review Summary** widgets can also pull reviews from more than one product. Their setting is named **Show reviews from** instead:
+
+* **Show reviews from:** Choose **Current Product**, **Selected Products**, or **All Products**. **All Products** shows reviews from every product in your store.
+* **Select Products:** Appears when **Show reviews from** is **Selected Products**. Pick one or more products.
+
+When a widget shows several products, whether you picked two or more or chose **All Products**, it combines their reviews into one list. The **Review Summary** and the summary inside **Product Reviews** show one overall rating and one star breakdown across all of those products. A review belongs to a single product, so the **Write a Review** button isn't shown for several products. The **Review Form**, **Write a Review Button**, and **Product Rating** widgets always work with one product and keep the **Source** setting above.
+
 When no product can be worked out, for example a **Current Product** widget on an ordinary page, the editor previews your newest published product. If no product can be found at all, the canvas shows a note asking you to select one. Visitors never see those notes.
 
 ::: info

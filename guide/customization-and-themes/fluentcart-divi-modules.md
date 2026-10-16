@@ -76,7 +76,7 @@ These modules are the ones that actually take the money:
 * **FluentCart Buy Now:** Sends the customer straight to checkout, skipping the cart.
 * **FluentCart Mini Cart:** A compact cart summary, well suited to a header or a sticky bar.
 * **FluentCart Cart:** The full cart page, with item rows, quantity steppers, totals, and the checkout button, so you can design the cart experience inside Divi.
-* **FluentCart Checkout Page:** The full checkout form, so you can design the checkout experience inside Divi.
+* **FluentCart Checkout Page:** The full checkout form, so you can design the checkout experience inside Divi. Use **Field Labels** to choose how fields show their name once the customer has typed in them: **Docked (name on the right)**, **Floating (name above the value)**, or **Placeholder only**, as in the Gutenberg checkout block. With FluentCart Pro, set **Checkout Source** to **Custom Product** to let shoppers pick from products you choose, right on the checkout. Add the products to offer, then choose **Select one** (radio buttons) or **Select many** (checkboxes) in **Selection Mode**. For **Select many**, **Maximum Selectable Items** limits how many a shopper can tick at once, and **Selector Heading** sets the title above the list. If FluentCart Pro is deactivated, a Custom Product checkout shows nothing on your site until you reactivate it. Your settings are kept.
 * **FluentCart Receipt:** The post-purchase thank-you page a customer lands on after paying, showing their order details.
 
 ### Store and Account
