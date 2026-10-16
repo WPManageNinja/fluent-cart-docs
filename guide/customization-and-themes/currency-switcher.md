@@ -100,17 +100,23 @@ Before you start, make sure the addon for your builder is installed and active: 
 2. In the **Elements** panel, type `currency` into **Search Widget...**. You can also find it in the **FluentCart** category.
 3. Drag the **Currency Switcher** widget onto the canvas.
 
+![Elementor currency switcher](/images/customization-and-themes/currency-switcher/elementor-currency-switcher-3.webp)
+
 ### Bricks
 
 1. Open the page or template with the **Bricks** editor.
 2. Click the plus icon (**+**) to open the elements panel and type `currency` into the search field. You can also find it in the **FluentCart** category.
 3. Click or drag the **Currency Switcher** element onto the canvas.
 
+![Bricks currency switcher](/images/customization-and-themes/currency-switcher/currency-switcher-5.webp)
+
 ### Divi
 
 1. Open the page or Theme Builder template with the **Divi** builder.
 2. Click the plus icon (**+**) to open the **Insert Module Or Row** dialog and type `currency` into the search box.
 3. Click the **FluentCart Currency Switcher** module to add it to your layout.
+
+![Divi currency switcher](/images/customization-and-themes/currency-switcher/divi-currency-switcher-5.webp)
 
 ### Builder Settings
 
