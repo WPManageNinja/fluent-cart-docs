@@ -12,7 +12,7 @@ To place a review module on a page or Theme Builder template:
 2.  Click the plus icon (**+**) to open the **Insert Module Or Row** dialog, and type **review** into the search box.
 3.  Click the module you want to add it to your layout.
 
-<!-- TODO(screenshot): Divi Insert Module dialog filtered to the FluentCart review modules -->
+![Screenshot of the Insert Module Or Row dialog in Divi, searching for review and showing the five FluentCart review modules](/images/customization-and-themes/divi-review/divi-review-1.webp)
 
 Every review module starts with the same **Product** section in its **Content** tab:
 
@@ -22,9 +22,11 @@ Every review module starts with the same **Product** section in its **Content** 
 The **FluentCart Product Reviews**, **FluentCart Review List**, and **FluentCart Rating Summary with Review** modules can also pull reviews from more than one product. On those modules, the source setting is named **Show Reviews From**:
 
 * **Show Reviews From:** Choose **Current product**, **Selected products**, or **All products**. **All products** shows reviews from every product in your store.
-* **Product IDs:** Appears when **Show Reviews From** is **Selected products**. Enter the IDs of the products to include, separated by commas.
+* **Products:** Appears when **Show Reviews From** is **Selected products**. The products you picked show as tags, and **Edit Products** opens the search to add or remove products.
 
-When a module shows several products, whether you picked two or more or chose **All products**, it combines their reviews into one list. The summary shows one overall rating and one star breakdown across all of those products. A review belongs to a single product, so the **Write a Review** button isn't shown for several products. The **FluentCart Review Form**, **FluentCart Write a Review**, and **FluentCart Product Rating** modules always work with one product and keep **Product Source**.
+When a module shows several products, whether you picked two or more or chose **All products**, it combines their reviews into one list. The summary shows one overall rating and one star breakdown across all of those products. 
+
+A review belongs to a single product, so the **Write a Review** button isn't shown for several products. The **FluentCart Review Form**, **FluentCart Write a Review**, and **FluentCart Product Rating** modules always work with one product and keep **Product Source**.
 
 The Divi canvas draws a live preview of each module. Until a product can be worked out, it asks you to pick one in the module settings, and when the store has no reviews yet, it previews sample reviews so you can still style the module. Visitors never see those notes or the sample data.
 
@@ -40,7 +42,7 @@ The whole review section in one module: the rating summary, the **Write a Review
 
 The **Layout** section holds the layout picker, a grid of cards with a small drawing of each layout. Use the tabs **All**, **Lists**, **Grids**, **Photos**, and **Carousels** to narrow the choices, then click a card to apply it.
 
-<!-- TODO(screenshot): Layout picker in the FluentCart Product Reviews module -->
+![Screenshot of the FluentCart Product Reviews module settings in Divi, with Show Reviews From set to Selected products and a product chosen under Products](/images/customization-and-themes/divi-review/product-review-2.webp)
 
 The eleven layouts are the same ones the block editor offers:
 
@@ -58,31 +60,49 @@ The eleven layouts are the same ones the block editor offers:
 | Carousel | Two reviews at a time, with arrows over the cards and dots below. |
 | Testimonials | Each review as a quote with the reviewer's face, name, and stars beneath. Three at a time, changing automatically. |
 
-A layout applies the moment you click it. It writes its choices onto the module's own settings, and from then on the module only remembers those settings, not the layout's name, so any change you make afterwards sticks. When the current settings match none of the eleven layouts, the picker says so above the grid. Your own tuning survives a switch: the columns, page length, pagination, sort, and slider settings carry over to the next layout if you set them yourself.
+A layout applies the moment you click it. It writes its choices onto the module's own settings, and from then on the module only remembers those settings, not the layout's name, so any change you make afterwards sticks. When the current settings match none of the eleven layouts, the picker says so above the grid. 
+
+Your own tuning survives a switch: the columns, page length, pagination, sort, and slider settings carry over to the next layout if you set them yourself.
 
 ::: info
 **Classic** is free. The other ten cards are disabled and carry a **Pro** badge until FluentCart Pro is active.
 :::
+
+![Screenshot of the Layout picker in the FluentCart Product Reviews module, showing the layout cards and the All, Lists, Grids, Photos, and Carousels tabs](/images/customization-and-themes/divi-review/layout-3.webp)
 
 ### Content Settings
 
 Below the picker, the **Content** tab is split into sections:
 
 * **Rating Summary & Header:** **Show Rating Summary** turns the summary card on or off. When it is on, **Summary Position** places it **Beside the reviews**, **Above the reviews**, or **Beside the write-a-review button**. **Show Rating Breakdown** shows or hides the per-star bars, leaving the average, the star row, and the count. **Show Review Count**, **Show Filter Chips**, and **Show Sorting** control the header above the list.
+
 * **Review List:** **View Mode** offers **List**, **Grid**, **Masonry**, and **Slider**, and the last three need Pro. **Reviews Per Row** sets how many reviews sit side by side, from 2 to 6, in the Grid, Masonry, and Slider views (it reads **Reviews Per Slide** for the slider). **Reviews Per Page** sets the page length, and 0 follows your store-wide setting. **Pagination Type** chooses **Numbers**, **Fraction**, **Bullets**, or **None**. **Default Sort** starts the list on **Newest**, **Oldest**, **Highest Rating**, or **Lowest Rating**. **Minimum rating** hides lower-rated reviews, from **All ratings** up to **5 stars only**. **Only Reviews With Photos** lists just the reviews that have photos, and **Words shown** cuts longer reviews down, with 0 showing them in full.
+
+![Screenshot of the Rating Summary & Header and Review List sections in the FluentCart Product Reviews module](/images/customization-and-themes/divi-review/rating-and-review-4.webp)
+
 * **Review Card:** Switch each part of a review on or off: **Show Avatar**, **Show Review Title**, **Show Review Text**, **Show Photos**, **Show Footer**, **Show Helpful Votes** (Pro), **Show Variation**, **Show Meta Row**, **Show Date**, **Show Reviewer Name**, **Show Store Reply**, and **Verified Purchase Badge** (shown only while the store's verified owner badge setting is on). Three more switches rearrange the card: **Photos Above The Text**, **Stars Above The Name**, and **Badge After The Name**.
+
+![Screenshot of the Review Card section with switches for the avatar, title, text, photos, footer, helpful votes, and other review parts](/images/customization-and-themes/divi-review/review-card-5.webp)
+
 * **Attachments:** Appears while **Show Photos** is on. **Attachments Shown** sets how many photos a review displays, with 0 showing them all. **Attachment Width (px)** and **Attachment Height (px)** size each photo. **The + Counter** puts the "+ more" count **On the last attachment**, **Beside the attachments**, or makes it **Hidden**. **Full Width Attachments** gives each photo its own line, and once it is on, the Pro options **Attachment As Card Background** and **Flush To Card Edges** let a photo take over the card.
+
 * **Behavior:** Appears only when **View Mode** is **Slider**. **Autoplay** can be **Disabled**, **Always**, or **On Hover**, with an **Autoplay Delay (ms)** when it is on. **Show arrows** adds the previous and next arrows, with an **Arrow Size** of **Small**, **Medium**, or **Large** and an **Arrow Placement** of **On the reviews**, **Beside the reviews**, or **Below the reviews**. **Show pagination** adds indicators, in a **Pagination Type** of **Dots**, **Fraction**, **Progress Bar**, or **Segmented**. **Infinite loop** lets the slider wrap around.
+
 * **Button Settings:** **Open In** chooses **Drawer (slides in from the side)** or **Modal (centered on the screen)**. **Field Layout** chooses **Inline (all fields at once)** or **Steps (one at a time)**.
+
 * **Button Text:** Rewrite the three labels, **New Review** (default "Write a Review"), **Edit Review** (default "Edit your review"), and **Logged Out** (default "Log in to Review").
 
 ::: info
 Grid, Masonry, and Slider need FluentCart Pro. Without it, the reviews show as a single list on the live page whichever view you pick.
 :::
 
+![Screenshot of the Attachments and Button Settings sections in the FluentCart Product Reviews module](/images/customization-and-themes/divi-review/attacthment-button-settings-6.webp)
+
 ### Design Settings
 
 The **Design** tab restyles each part in its own group, including **Grid / Slider Spacing**, **Stars** (the **Star Color**), **Empty Review Stars**, **Review Card**, **Write a Review Button**, **Avatar**, **Reviewer Name**, **Verified Badge**, **Review Title**, **Review Text**, **Review Date**, **Review Photo**, **Reply Button**, **Filter Chips**, **Sort Dropdown**, and **Pagination**, plus the summary groups for the **Average**, **Out of Five**, **Review Count**, and the breakdown bars.
+
+![Screenshot of the Design tab of the FluentCart Product Reviews module, listing the Stars, Review Card, and other style groups](/images/customization-and-themes/divi-review/design-7.webp)
 
 ## 2. FluentCart Review List
 
@@ -99,6 +119,8 @@ The average rating, the total review count, and the bars that break reviews down
 
 When the product has no approved reviews yet, the summary is empty.
 
+![Screenshot of the FluentCart Rating Summary with Review module settings, with the Product, Rating Summary, and Button Settings sections](/images/customization-and-themes/divi-review/rating-summary-8.webp)
+
 ## 4. FluentCart Review Form
 
 The review form printed directly on the page, with no button and no drawer. Use it on a dedicated page for feedback, or under a product's description.
@@ -108,12 +130,16 @@ The review form printed directly on the page, with no button and no drawer. Use 
 
 Which fields customers see, such as the guest details or the photo upload, follows your review settings.
 
+![Screenshot of the FluentCart Review Form module settings, with the Product Source and Field Layout options](/images/customization-and-themes/divi-review/review-form-9.webp)
+
 ## 5. FluentCart Write a Review
 
 A button that opens the review form in a drawer or a modal. Its text changes for a new reviewer, a returning reviewer, and a visitor who has to log in first.
 
 * **Content Tab:** The **Product** section, **Button Settings** with **Open In** and **Field Layout**, and the three **Button Text** labels, **New Review**, **Edit Review**, and **Logged Out**.
 * **Design Tab:** One **Button** group for the background, border, text, and spacing.
+
+![Screenshot of the FluentCart Write a Review module settings, with the Product Source, Open In, and Field Layout options](/images/customization-and-themes/divi-review/write-a-review-10.webp)
 
 ## 6. FluentCart Product Rating
 
