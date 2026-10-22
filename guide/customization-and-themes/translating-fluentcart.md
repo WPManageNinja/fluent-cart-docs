@@ -4,6 +4,10 @@ Making your store available in different languages helps you connect with a wide
 
 FluentCart is fully translatable, so you can change the button, label, and message to fit your needs. In this guide, we'll use the popular Loco Translate plugin to get this done.
 
+::: info Right-to-Left (RTL) Languages
+If your site language is a right-to-left language such as Arabic, Hebrew, or Persian, FluentCart switches its layout automatically. The admin dashboard and settings, the storefront (shop, product, cart, checkout, and customer account), receipts, and notification emails all mirror to read right to left. Notification emails follow your site language, so they stay right to left even when you send from an admin profile set to another language. You only need to set the language under **Settings → General → Site Language**.
+:::
+
 ### Step 1. Install the Loco Translate Plugin
 
 First, you'll need to install the tool that will help you translate the plugin text.
