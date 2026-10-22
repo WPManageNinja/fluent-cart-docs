@@ -41,6 +41,7 @@ FluentCart automatically generates an invoice receipt for every order. This invo
 * Renewal information (if it’s a subscription-based order)
 * Subscription **setup fee** as a separate line item (when a one-time setup or activation fee was charged at signup)
 * Customer VAT number (rendered automatically inside the billing address block when the customer provides one at checkout)
+* Your store's business IDs (Legal Registration ID, Seller Tax ID, and Seller VAT ID), shown on the receipt, the order confirmation email, and PDF receipts when you have filled them in under [Store Settings](/guide/settings-configuration/store-settings)
 
 >[!Note]
 > If the purchased subscription includes a **Setup Fee**, it now appears as a clearly labeled line item on both the invoice receipt and the order confirmation email — so customers always know exactly what the one-time charge was for, on top of the recurring subscription price.
