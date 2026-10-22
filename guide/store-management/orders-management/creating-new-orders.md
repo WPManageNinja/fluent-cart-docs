@@ -13,6 +13,7 @@ FluentCart allows you to manually create new orders directly from your WordPress
 
 3.  This will open a new order creation interface. You will need to:
     * **Customer Information:** Choose an existing customer from your store or you may create new.
+    * **Order currency:** When [multi-currency](/guide/settings-configuration/multi-currency-settings) is enabled, an **Order currency** card appears above the products. Pick any enabled currency to create the order in it. For a currency other than your base currency, enter prices in that currency; the card shows the rate, for example *1 USD = 0.79 GBP*. FluentCart calculates and validates the final prices when you save, using the same rate and rounding rules as the storefront checkout.
     * **Products:** Search for and add the products the customer is purchasing.
         * You can select product variants if applicable.
         * Specify the quantity for each product.
