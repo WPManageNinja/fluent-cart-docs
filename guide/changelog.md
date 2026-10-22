@@ -1,6 +1,26 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v2.2.0
+*Released on Oct 16, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds RTL (Right-to-Left) language support
+• Adds Multi-currency support for admin orders
+```
+
+```markdown [🚀 Improvements]
+• Enhances Tax information on PDF receipts
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Regular security audits
+```
+
+:::::
+
 ## FluentCart v2.1.0
 *Released on Oct 15, 2026*
 
