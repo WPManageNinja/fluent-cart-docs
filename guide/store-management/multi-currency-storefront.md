@@ -57,6 +57,8 @@ The payment gateway charges the customer in the currency of their cart. Make sur
 
 Every order keeps the currency and exchange rate it was placed at, so changing a rate later never rewrites past orders. Order items, the tax summary, subscription details, and the discount and refund dialogs on an order all show amounts in that order's own currency, even when it differs from your base currency. A subscription's renewals keep the same rate as the original order. When a customer upgrades a subscription through an [upgrade path](/guide/product-types-creation/defining-upgrade-paths), the new plan is priced in the subscription's own currency.
 
+Orders you create yourself follow the same rule. When you [create an order manually](/guide/store-management/orders-management/creating-new-orders), you can choose any enabled currency, and the order keeps that currency and the rate at the time you save it.
+
 If you use **FluentCart Pro** features that show prices, they follow the customer's currency too:
 
 * An [order bump](/guide/store-management/orders-management/order-bump) offer shows its price and saving in the customer's currency.
