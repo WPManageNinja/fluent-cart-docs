@@ -5,6 +5,13 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## Multi-Currency live verification on 2.2.0 (Oct 23, 2026)
+- **Trigger:** user asked to test Multi Currency on the Local site `localhost:10053` (core + Pro 2.2.0, the released build) and update the docs to what is actually released.
+- **Verified live:** settings screen (enable, add currencies, set/edit rate, pricing rules, rate history, Rate changes), storefront conversion and `?currency=` + 30-day `fct_currency` cookie, fallback to base for an unrated/unknown currency, switcher shortcode, Create Order **Order currency** card.
+- **Not in the released UI:** the Exchange rates card (ECB feed + "Add a margin of"). The code ships in Pro/core (`EcbRateProvider`, `rate_margin`) but the card is hidden while the provider is manual and there is no control to switch it. Removed the section, its screenshot and feed/stale/Automatic mentions from `multi-currency-settings.md`. Kept the Accounting Export ECB reference-rate columns (released).
+- **Updated:** `settings-configuration/multi-currency-settings.md` (Quick Setup, manual-rates wording, Beta banner note, rate history dash). Deleted `multi-currency-exchange-rates.webp`.
+- **Open:** checkout notices, Reports currency filter and Pro-deactivated behavior not re-tested. The 10053 site still holds test data (GBP/EUR/BDT, rates 0.85/0.92).
+
 ## Post-2.0.0 develop: Reports overhaul sync (Oct 15, 2026)
 - **Trigger:** user asked what ships today. No version bump or changelog existed yet, so this is `2.0.0..develop` (62 core commits, 4 Pro), not an official release. The changelog entry is still pending the official wording.
 - **Source:** core `develop` @ `80f5d7c837` (tag 2.0.0 = Oct 14), Pro `develop` @ `a5f94395`. UI inspected live on cart.local (core symlink now `~/Desktop/WPManageninja-clone-from-git/fluent-cart`).

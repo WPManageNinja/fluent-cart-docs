@@ -1,9 +1,9 @@
 # Multi Currency Settings
 
-Multi Currency lets customers see prices and pay in the currency they prefer, while you keep managing every product in one base currency. You set the exchange rate for each currency, decide how the converted prices should look, and FluentCart handles the conversion at checkout.
+Multi Currency lets customers see prices and pay in the currency they prefer, while you keep managing every product in one base currency. You enter the exchange rate for each currency, decide how the converted prices should look, and FluentCart handles the conversion at checkout.
 
 ::: info
-Multi Currency is a **FluentCart Pro** feature, and it is currently in **Beta**. Without Pro, the **Multi Currency** screen shows a Pro feature notice instead of the settings, and your store stays in its base currency. Only administrators can open and change these settings.
+Multi Currency is a **FluentCart Pro** feature, and it is currently in **Beta**. Without Pro, the **Multi Currency** screen shows a Pro feature notice instead of the settings, and your store stays in its base currency. Only administrators can open and change these settings. While the feature is in Beta, the screen also reminds you to test it on a staging site before relying on it in your live store.
 :::
 
 ## Accessing Multi Currency Settings
@@ -15,6 +15,16 @@ To open the multi currency settings:
 
 ![Screenshot of the Multi Currency tab in FluentCart settings](/images/settings-configuration/multi-currency/multi-currency-menu.webp)
 
+## Quick Setup
+
+1. Turn on **Enable multi-currency** in the **Sell in more than one currency** card.
+2. Use **Add currencies** to pick the currencies you want to offer.
+3. Type the exchange rate for each currency and click **Set rate**.
+4. Optionally, set pricing rules such as rounding or charm pricing.
+5. Add a [currency switcher](/guide/customization-and-themes/currency-switcher) so customers can choose a currency.
+
+The sections below explain each card in detail.
+
 ## Configuring Multi Currency
 
 ### 1. Sell in More Than One Currency
@@ -23,7 +33,7 @@ This card turns the feature on and shows the currency your prices are stored in.
 
 ![Screenshot of the Sell in more than one currency card with the enable switch, switcher shortcode, and base currency](/images/settings-configuration/multi-currency/multi-currency-enable.webp)
 
-* **Enable multi-currency:** Turn this on to let customers choose a currency. Prices are kept in the base currency and converted at the rate you set. Each order keeps the rate it was placed at, and renewals keep it too.
+* **Enable multi-currency:** Turn this on to let customers choose a currency. Prices are kept in the base currency and converted at the rate you enter. Each order keeps the rate it was placed at, and renewals keep it too.
     * While the switch is off, the card tells you that shoppers only see your base currency, and the rest of the screen stays hidden. Turn it on to add currencies and set their rates.
     * Once it is on, a line under the switch shows how customers pick a currency: the `[fluent_cart_currency_switcher]` shortcode, the Currency Switcher block, or the `fct-currency-switcher-toggle` class for a navigation menu. Click the copy icon beside the shortcode or the class to copy it, or click **See documentation** to open this guide.
 * **Base currency:** The currency your products are priced in. It is shown here for reference, and you change it in the **Checkout Currency** field under **FluentCart > Settings > Store Settings**. Beside the currency code, a **Change in Store Settings** link takes you there.
@@ -33,18 +43,7 @@ This card turns the feature on and shows the currency your prices are stored in.
 Turning the switch on does not show anything to customers by itself. You also need at least one extra currency with a rate (see **Currencies** below), and a way for customers to pick it. See [Adding a Currency Switcher](/guide/customization-and-themes/currency-switcher) for the options.
 :::
 
-### 2. Exchange Rates
-
-By default, you enter every rate yourself in the **Currencies** card, and the **Exchange rates** card stays hidden. The card appears when your store uses an automatic rate feed, such as the European Central Bank feed from FluentCart Pro.
-
-![Screenshot of the Exchange rates card with the European Central Bank source selected](/images/settings-configuration/multi-currency/multi-currency-exchange-rates.webp)
-
-* **Exchange rates from:** Shows where each rate comes from. With **Enter rates manually**, a rate only changes when you edit it. With **European Central Bank (updated daily)**, FluentCart Pro fetches the euro foreign exchange reference rates from the European Central Bank and refreshes them once a day. The ECB publishes rates once per working day (not at weekends or on holidays), for about 30 currencies, at mid-market rates with no spread. A currency the ECB does not publish keeps its manual rate.
-* **Add a margin of:** *(Shown only for an automatic feed)* Enter a percentage from **0** to **10** that FluentCart adds to the fetched rates. Use it to cover the spread your payment gateway charges when it converts currencies.
-
-If a feed fails to update, prices keep using the last rate. When some rates have not updated for more than 3 days, a warning appears on this card. If an automatic rate suddenly jumps far from the previous one, FluentCart holds it back and records a warning in the activity log instead of using it.
-
-### 3. Currencies
+### 2. Currencies
 
 This card lists every extra currency you sell in, with its rate and pricing rules. A badge beside the title counts the currencies.
 
@@ -75,10 +74,10 @@ To change a rate that already exists:
 
 ![Screenshot of a currency row with the new rate field open](/images/settings-configuration/multi-currency/multi-currency-set-rate.webp)
 
-A rate must be greater than zero. Clicking **Set rate** saves the rate and your currency list together, so a currency you just added is not lost. If the rate saves but the currency list does not, a warning asks you to click **Save Settings** to keep the new currency.
+FluentCart does not update rates for you, so check your rates from time to time and change them when the market moves. A rate must be greater than zero. Clicking **Set rate** saves the rate and your currency list together, so a currency you just added is not lost. If the rate saves but the currency list does not, a warning asks you to click **Save Settings** to keep the new currency.
 
 ::: info
-A currency without a rate is not offered, and customers cannot choose it until you set one. A **Stale** tag marks a rate from a feed that has not updated for more than 3 days. Rates you enter manually are never marked stale.
+A currency without a rate is not offered, and customers cannot choose it until you set one.
 :::
 
 #### Pricing Rules
@@ -93,7 +92,7 @@ Under **Pricing**, each row shows an **Example** that turns 100.00 in your base 
 * **Rounding:** Rounds the price up to a neat step. The default, **No rounding**, leaves the amount as it is. The other options are **Round up to** 0.05, 0.10, 0.25, 0.50, 1, 5, 10, 50, or 100.
 * **Charm pricing:** Adjusts the ending of the price after rounding. Choose **No charm pricing**, **End in .99 (take off 0.01)**, or **End in .95 (take off 0.05)**. Pair it with a whole-number rounding step, because it takes 0.01 or 0.05 off the rounded price.
 
-The **Example** updates as you change the rules, so you can check them before saving, and it uses the rate your customers get, including any margin. Click **Save** in the panel to store your changes.
+The **Example** updates as you change the rules, so you can check them before saving, and it uses the rate your customers get. Click **Save** in the panel to store your changes.
 
 For example, take a 100.00 USD product with a Euro rate of 0.92, a **2.00** price adjustment, **Round up to 0.50**, and **End in .99 (take off 0.01)**. The price converts to 92.00 EUR, becomes 93.84 EUR after the adjustment, rounds up to 94.00 EUR, and the charm ending makes the customer price **93.99 EUR**.
 
@@ -104,16 +103,16 @@ Click the clock icon on a currency row to see every rate that currency has had, 
 ![Screenshot of the Rate history dialog for BDT](/images/settings-configuration/multi-currency/multi-currency-rate-history.webp)
 
 * **Rate:** The rate that was set. The one in use now carries a **Current** badge.
-* **Change:** How far the rate moved from the one before it, in green for a rise and red for a fall. It reads **No change** when the rate stayed the same.
-* **Source:** Where the rate came from, such as **Manual** or the name of the rate feed.
+* **Change:** How far the rate moved from the one before it, in green for a rise and red for a fall. It reads **No change** when the rate stayed the same, and a dash (**—**) for the first rate a currency was given.
+* **Source:** Where the rate came from. Rates you enter yourself read **Manual**.
 * **Effective:** The date and time the rate took effect.
-* **Set by:** The user who set it. A rate from a feed reads **Automatic**.
+* **Set by:** The user who set the rate.
 
 #### Removing a Currency
 
 Click the trash icon on a currency row and confirm with **Remove**, then click **Save Settings**. Shoppers can no longer pick the currency, and orders already placed in it keep their own currency and rate.
 
-### 4. Rate Changes
+### 3. Rate Changes
 
 The **Rate changes** card controls how long converted prices stay at the previous rate after you change a rate.
 
