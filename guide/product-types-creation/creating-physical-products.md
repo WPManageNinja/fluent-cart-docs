@@ -18,8 +18,9 @@ By the end of this guide, you will be able to confidently list and manage any ph
 
     ![Screenshot of Add Product Button](/images/product-types-creation/Creating-Physical-Products/physical-product-1.webp)
     
-3. This action will open a new **Add New Product** modal, where you’ll enter the product name and select the product type, either **Physical Product** or **Digital Product**. After making your selection, click on the **Add Product** button and you’ll be redirected to the **Edit Product** page to configure all product details.
+3. This action will open a new **Add New Product** modal. Enter the **Product Title**, choose a **Variation Type** (**Simple**, **Simple Variations**, or **Advanced Variations**), and select **Physical Product** (the modal starts on **Digital Product**). Check **Add as a Bundle** only if you're creating a bundle. Then click the **Add Product** button and you’ll be redirected to the **Edit Product** page to configure all product details.
 
+    <!-- TODO(screenshots): add-new-product.webp is outdated: retake the Add New Product modal showing the Product Title, Variation Type dropdown, Physical/Digital selector, and Add as a Bundle checkbox. Update later. -->
     ![Screenshot of Add New Product Modal)](/images/product-types-creation/Creating-Physical-Products/add-new-product.webp)
 
 ### 1. Basic Product Information
@@ -90,7 +91,7 @@ Open the **Pricing** panel and look at the dropdown in the top right corner — 
 
 - **Simple** — One version, one price. The right choice for any product with no variations.
 - **Simple Variations** — Multiple versions of the same product, each with its own price, image, SKU, and shipping details.
-- **Advanced Variations** — Versions built from reusable attributes like Color and Size, where FluentCart generates every combination automatically. See the [Advanced Variations](/guide/product-types-creation/advanced-variations) guide.
+- **Advanced Variations** — Versions built from reusable attributes like Color and Size, where FluentCart generates every combination automatically. See the [Advanced Variations](/guide/product-types-creation/advanced-variations) guide. With two or more attributes, a **Group by** dropdown above the variants table lets you choose which attribute groups the variants while you manage them.
 
 Pick the method that matches your product structure, and the fields below will adapt accordingly.
 
@@ -157,10 +158,11 @@ You'll see a clean table where each row represents one version of your product:
 Click **+ Add more** at the bottom to create a new variation. A blank row appears — fill in the title and price inline, then use the pencil icon to configure the rest.
 
 The **three-dot icon** gives you these quick actions:
-- **Duplicate** — Copy this variation to use as a starting point for a new one
-- **Direct Checkout** — Generate a buy-now link for this specific version
-- **Delete** — Remove this variation permanently
-- **Skip inventory** — Exclude this variation from stock tracking if needed
+- **Skip inventory:** Stop tracking stock for this variation (shown only when the product's **Inventory Management** is on)
+- **Duplicate:** Copy this variation to use as a starting point for a new one
+- **Copy Variation ID:** Copy the variation's ID for shortcodes, custom code, or integrations
+- **Direct Checkout:** Copy a buy-now link for this specific version. It's unavailable while the product is a draft.
+- **Delete:** Remove this variation permanently (not shown when only one variation is left)
 
 > **📝 Note:** You can make quick edits to **Title**, **Price**, and **Compare at price** directly in the table rows. For everything else — images, inventory, per-variation shipping — click the pencil icon to open the full editor.
 
@@ -195,6 +197,8 @@ Toggle **Inventory** on to manage stock directly inside the variation editor —
 - **On Hold** — Units reserved in pending or processing orders (read-only)
 - **Delivered** — Units fulfilled and shipped (read-only)
 
+The switch works only when the product's **Inventory Management** is on. If it's off, the box shows a notice with a switch you can use to turn on inventory for the whole product. The **Inventory** box is available for **Simple Variations** and **Advanced Variations**, and only while **Stock Management** is enabled in settings.
+
 > **💡 Pro Tip:** Per-variation inventory means you'll never oversell the Red hoodie just because you still have plenty of Teal ones. Every version stays tracked independently.
 
 **SKU**
@@ -205,7 +209,7 @@ Because different sizes and colorways often have different weights and dimension
 
 - **Physical Product** *(Toggle)* — On by default for physical products.
 - **Package** — Select the box or mailer for this specific variation. Different sizes can ship in different packages, so a small item and a large item don't have to share the same box.
-- **Product weight** — Enter the weight for this variation with your preferred unit (**kg** or **lb**). Per-variation weights keep your carrier rates accurate when sizes genuinely differ.
+- **Product weight** — Enter the weight for this variation with your preferred unit (**kg**, **g**, **lbs**, or **oz**). Per-variation weights keep your carrier rates accurate when sizes genuinely differ.
 
 When you're done, click **Update** to save all your changes.
 
@@ -217,9 +221,11 @@ For the complete field-by-field reference — including the full subscription se
 
 ### 5. Inventory Management
 
-To track the stock for your product, first, make sure the [**Stock Management**](/guide/product-types-creation/inventory-management) feature is enabled from the settings section.
+To track the stock for your product, first make sure the [**Stock Management**](/guide/product-types-creation/inventory-management) feature is enabled in settings. Then turn on the **Inventory Management** switch in the inventory card below **Pricing**.
 
-An inventory table will then be displayed, with a separate row for each product variation. This table helps you monitor your stock levels at a glance.
+Once the switch is on, an inventory table appears with a separate row for each product variation. This table helps you monitor your stock levels at a glance.
+
+<!-- TODO(screenshots): new image needed: capture the product inventory card below Pricing with the Inventory Management switch turned on and the per-variation stock table visible. Update later. -->
 
 #### Understanding the Inventory Table
 
@@ -229,14 +235,6 @@ An inventory table will then be displayed, with a separate row for each product 
 * **On hold:** Units that are part of a pending order but have not yet been shipped.
 * **Delivered:** The total number of units that have been successfully sold and fulfilled.
 
-### Downloadable Asset(s)
-
-FluentCart allows you to attach digital files to your physical products, which is perfect for selling hybrid items (like a textbook that comes with a PDF guide, or a piece of hardware with its software drivers).
-
-At the very bottom of the product editing page, you will see a checkbox for Downloadable Asset(s).
-
-Check this box to enable the feature. Once enabled, a new section will appear where you can upload and manage the files that customers will be able to download after purchasing the product.
-
 #### How to Adjust Stock Levels
 
 To manually update your stock count for any variation:
@@ -244,21 +242,29 @@ To manually update your stock count for any variation:
 1.  Click the **adjustment icon** located inside the **Total Stock** field.
 2.  A small window will pop up.
     * **Adjust by:** Enter a number to change the current stock. Use a positive number (like `50`) to add inventory or a negative number (like `-10`) to remove it.
-    * **New Stock:** This field automatically previews the final stock total after your adjustment.
-3.  Click the **Apply** button to save the new stock level.
+    * **New Stock:** Shows the resulting total. You can also type the final count here directly; **Adjust by** updates to match.
+3.  Click **Apply**. The new stock level is saved right away.
 
 ::: info
 Managing stock for many products? With [Advanced Inventory](/guide/product-types-creation/advanced-inventory), you can update stock across your whole catalog from one screen and keep a history of every change.
 :::
 
+### Downloadable Asset(s)
+
+FluentCart allows you to attach digital files to your physical products, which is perfect for selling hybrid items (like a textbook that comes with a PDF guide, or a piece of hardware with its software drivers).
+
+Near the bottom of the product edit page, turn on the **Downloadable Asset(s)** switch, then click **Add** to attach files. Customers can download these files after purchasing the product.
+
+<!-- TODO(screenshots): new image needed: capture the Downloadable Asset(s) card near the bottom of the product edit page with the switch on and an arrow on the Add button. Update later. -->
+
 ### Shipping Class
 
-You can assign a **Shipping Class** to any product to apply location-based shipping costs.
+You can assign a **Shipping Class** to any product to apply location-based shipping costs. The **Shipping Class** card appears only when at least one of the product's variations is a physical product.
 
 To add a shipping class:
 
 1. Scroll to the **Shipping Class** section (right side of the product edit screen).
-2. Select or create a shipping class (e.g., *NYC Zone*).
+2. Select an existing shipping class (e.g., *NYC Zone*), or click **Add Shipping Class** to create one.
 3. The defined shipping cost will automatically apply at checkout for that region.
 
 Shipping classes work with **Shipping Zones** and **Shipping Methods** to control how and where you deliver products.
@@ -271,7 +277,7 @@ To learn more about how shipping classes work, see the [Understanding Shipping C
 
 The **Tax Class** allows you to apply specific tax rules to your product. It is set per variation and only appears when tax is enabled for your store.
 
-To assign a tax class:
+For a **Simple** product, the **Tax** controls are directly in the **Pricing** panel. For products with variations, follow these steps to assign a tax class:
 
  1. Click the **pencil icon** in the **Action** column of the variation to open the variation editor.
  2. In the **Tax** section, keep **Charge tax on this variation** checked, then click the **pencil icon** beside **Class** and select a tax class from the dropdown. The corresponding tax rate will then be automatically applied to this variation during checkout. To create or rename classes, see [tax configuration and classes](/guide/tax-&-duties/configuration-and-classes).
@@ -282,10 +288,11 @@ For the full walkthrough, see [Per-Variation Tax Settings](/guide/product-types-
 
 This section on the right side of the product edit page controls your product's visibility and key purchasing rules.
 
- * **Status:** This sets whether your product is live on your store (Publish) or saved as a hidden Draft.
+ * **Status:** Choose **Draft** (hidden while you edit), **Scheduled** (goes live on the date you pick), **Private (Invisible except Admin)** (hidden from the store but still purchasable through a direct checkout link), or **Publish** (live). You can change the status once pricing is set.
  * **URL Slug:** This is the unique, URL-friendly part of the web address for this product. FluentCart automatically creates one from the title, but you can click it to make edits.
  * **Default Variant:** If your product has options (like different sizes or subscription plans), this setting pre-selects one for the customer when they visit the page.
- * **Group By:** If your product uses [Advanced Variations](/guide/product-types-creation/advanced-variations) with two or more attribute groups (e.g., Color and Size), a **Group by** dropdown appears in the variations editor, letting you choose which attribute group the variations are grouped by while you manage them.
+ * **Pricing Table Layout:** *(Simple Variations only)* Choose how variations are organised on the product page: **Payment Term** (one-time vs. subscription), **Repeat Interval** (Monthly, Yearly, and so on), or **None**.
  * **Limit purchases to 1 item per order:** Check this box to prevent customers from buying more than one of this specific item in a single transaction. This is useful for things like event tickets or exclusive items.
+ * **Disable reviews for this product:** *(Shown only while Product Reviews is enabled)* Check this to turn off reviews for this product.
 
-Once you have configured all the necessary details, click the **"Update"** (or "Save") button on the top right to make your product live in your store. You can also click **"Preview"** to see how the product page will look before publishing.
+Once you have configured all the necessary details, click **Update** in the save bar to save your changes. To see the product page, open the **more actions** menu (three dots) at the top and choose **Preview**.
