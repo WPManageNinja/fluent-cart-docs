@@ -31,11 +31,11 @@ The add-on is available from the **Features & addon** screen in FluentCart.
 1. Go to **FluentCart Pro > Settings** in your WordPress dashboard.
 2. Click **Features & addon** in the left-hand menu.
 3. Scroll to the **Plugin Addons** list and find **Shipping For FluentCart**.
-4. Click **Install & Activate**.
+4. Click **Install & Activate**. If FluentCart Pro is not active on your site, this button reads **Download** instead.
 
 ![Screenshot of the Shipping For FluentCart add-on in the Features & addon screen](/images/shipping/shipping-carriers/shipping-addon-install.webp)
 
-Once the add-on is active, a **Carriers** page appears under **Settings > Shipping**.
+Once the add-on is active, a **Shippo** row appears on the **Carriers** page under **Settings > Shipping**, and the card gets a settings icon that opens it.
 
 ## Understanding the Carriers Page
 
@@ -43,10 +43,12 @@ Go to **FluentCart Pro > Settings > Shipping > Carriers** to see every carrier a
 
 ![Screenshot of the Carriers page listing Manual / Other and Shippo](/images/shipping/shipping-carriers/carriers-list.webp)
 
-Two carriers are listed:
+The Carriers page is part of FluentCart's shipping settings, so it is always there. Without the add-on it lists only **Manual / Other**. With the add-on installed, two carriers are listed:
 
 * **Manual / Other:** The zone-based shipping rates you define yourself. This is the shipping system FluentCart has always had.
 * **Shippo:** Live rates, label generation, and tracking through the Shippo API. It stays **Disabled** until you connect it.
+
+Carrier settings contain API tokens, so only users who can manage sensitive store settings can open the Carriers page.
 
 The **Shipping** menu also contains **Shipping Zones**, **Shipping Classes**, and **Packages**. These keep working as before and are covered in their own guides.
 
