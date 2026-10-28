@@ -12,6 +12,10 @@ When **Show Shippo Rates at Checkout** is turned on, Shippo's live rates appear 
 
 FluentCart builds the parcels for the quote from the products in the cart, using each product's weight and its assigned [package](/guide/shipping/packages). Rates are quoted from your store address in [Store Settings](/guide/settings-configuration/store-settings). To get accurate rates, set a weight on every physical product and assign it a package. See [Creating Physical Products](/guide/product-types-creation/creating-physical-products) for where to set these.
 
+A package's empty weight is added to the parcel, and if the items are heavier than the package's maximum weight, FluentCart splits them across more boxes. If none of the products in the order has a weight, FluentCart quotes a default parcel of 10 × 10 × 10 weighing 1 unit, so the rates can come back wrong instead of missing.
+
+Shippo bills your account in its own currency. At checkout, rates are shown in the currency the customer is paying in, and any rate Shippo cannot convert is left out.
+
 ## Creating a Shipment and Buying a Label
 
 You buy labels from the order screen. Make sure **Enable Label Generation** is turned on in the Shippo settings first.
@@ -35,12 +39,12 @@ Use the **Ship with** dropdown to choose a carrier.
 
 ![Screenshot of the Ship with dropdown listing Manual / Other and Shippo](/images/shipping/shippo/shipment-ship-with-dropdown.webp)
 
-* **Manual / Other:** Pick one of your zone-based methods, or choose **Custom price** to enter the cost yourself (use `0` for free shipping). You can also enter a **Tracking Number** and **Tracking URL**.
+* **Manual / Other:** Pick one of your zone-based methods, or choose **Custom price** to enter the cost yourself (use `0` for free shipping). With a custom price you can also enter an optional **Carrier Name**. You can enter a **Tracking Number** and **Tracking URL** either way.
 * **Shippo:** FluentCart asks Shippo for the services available for this order's address and parcels, and lists them under a heading such as "11 rates for this address".
 
 ![Screenshot of the Method step listing live Shippo rates with the Cheapest and Fastest tags](/images/shipping/shippo/shipment-step-method-shippo.webp)
 
-Each Shippo service shows its name, estimated delivery time, and price. FluentCart tags the cheapest option with **Cheapest** and the fastest with **Fastest**. By default, the cheapest rate is preselected. If you set a **Preferred Carrier** in the Shippo settings, that carrier's rate is preselected instead. Select the service you want to purchase.
+Each Shippo service shows its name, estimated delivery time, and price. FluentCart tags the cheapest option with **Cheapest** and the fastest with **Fastest**. FluentCart preselects a rate for you, using the first of these that applies: the same service the customer chose at checkout, the cheapest rate from your **Preferred Carrier** (if you set one in the Shippo settings), and then the cheapest rate overall. Select the service you want to purchase.
 
 Click **Refresh** to request the rates again. Shippo can return a different set of services each time, so refresh if a service you expect is missing.
 
@@ -66,13 +70,19 @@ Click **Buy label**. The button shows the price. A confirmation then asks you to
 
 When the purchase succeeds, the order's items show as **Shipped** and fulfilled, and the new shipment appears in the **Shipments** card with its tracking number. You can download the label as a PDF from there.
 
+The label cost is what Shippo bills you, in the currency of your Shippo account. If that differs from the order currency, the form adds a note such as "Billed by Shippo in USD." with an approximate amount in the order currency.
+
+If an order needs more than one parcel, Shippo buys one label for each parcel. FluentCart keeps the first label's PDF, so **Download label** gives you that one. Download the others from your Shippo dashboard.
+
 ### International Shipments
 
-For shipments that cross borders, FluentCart builds the customs details from the items you ship, so you buy the label the same way as a domestic one.
+For shipments that cross borders, FluentCart builds the customs declaration for you, so you buy the label the same way as a domestic one. The declaration lists the contents as merchandise, with the package returned to you if it cannot be delivered. Each item is declared with its name, quantity, weight, and unit price, and an item without a weight is declared at 0.1 kg. Shipments between countries in the European Union customs union do not need a declaration.
 
 ## Managing Shipments
 
 Shipments appear in the **Shipments** card on the order, with columns for **Status**, **Shipment**, **Tracking**, and **Cost**. Each row shows the service, the items shipped, and the date. The **Tracking** column has the tracking number with buttons to copy it and to open the carrier's tracking page.
+
+The **Status** badge is a dropdown. If you can manage order statuses, you can change a shipment to Dispatched, In Transit, Delivered, Returned, or Failed by hand. Carrier tracking never moves a shipment out of Delivered or Returned, but you can still correct those by hand.
 
 ![Screenshot of the Shipments card showing a Shippo shipment](/images/shipping/shippo/order-shipments-card.webp)
 
@@ -85,9 +95,9 @@ Click the three-dot button on a shipment to open its actions:
 ![Screenshot of the shipment actions menu](/images/shipping/shippo/shipment-actions-menu.webp)
 
 * **Download label:** Opens the label PDF so you can print it.
-* **Refresh tracking:** Asks Shippo for the latest tracking status. If nothing has changed, FluentCart shows "Tracking is already up to date."
+* **Refresh tracking:** Asks Shippo for the latest tracking status. If nothing has changed, FluentCart shows "Tracking is already up to date." You can refresh a shipment once every 15 seconds, and the action is not offered once the shipment is Delivered or Returned.
 * **Copy tracking number:** Copies the number to your clipboard.
-* **Delete shipment:** Removes the shipment. For a Shippo shipment, its label is voided, and the carrier refunds it if it is eligible.
+* **Delete shipment:** Removes the shipment. For a Shippo shipment, its label is voided, and the carrier refunds it if it is eligible. If the void fails, the shipment is still deleted, and FluentCart tells you to void the label in the carrier portal.
 
 ![Screenshot of the Delete shipment confirmation](/images/shipping/shippo/shipment-delete-confirm.webp)
 
@@ -102,7 +112,7 @@ In Test mode, labels are free and never shipped. Shippo only tracks its own test
 FluentCart reads tracking from Shippo in two ways:
 
 * **Automatically:** Shippo calls your webhook whenever a tracking status changes. This requires the webhook from [Connecting Shippo](/guide/shipping/connecting-shippo#step-3-adding-the-webhook-in-shippo).
-* **Manually:** Click **Refresh tracking** on a shipment at any time.
+* **Manually:** Click **Refresh tracking** on a shipment. There is a short wait of 15 seconds between refreshes, and the action is not offered once the shipment is Delivered or Returned.
 
 Shippo's tracking statuses are mapped to the shipment status like this:
 
@@ -116,19 +126,25 @@ Shippo's tracking statuses are mapped to the shipment status like this:
 
 A status Shippo marks as unknown is ignored, so your shipment keeps its current status.
 
-The webhook only acts on tracking updates for shipments in your store. FluentCart ignores events from the other connection mode, events for tracking numbers it does not know, and other event types, and it rejects any call that carries an invalid token.
+The webhook only acts on tracking updates for shipments in your store. FluentCart ignores events that do not match the mode a label was bought in, events for tracking numbers it does not know, and other event types, and it rejects any call that carries an invalid token.
 
 ## If Something Goes Wrong
 
 * **A carrier refused the label:** FluentCart shows which carrier refused it and what Shippo said, and confirms that no label was bought and nothing was charged. For example, if you pick a UPS service before activating UPS in your Shippo account, Shippo answers that the UPS account is not yet registered. Activate the carrier in your Shippo dashboard, or pick a different service, and try again.
-* **No rates:** See the note under [Step 2: Method](#step-2-method).
+* **Shippo rates do not show at checkout:** FluentCart never shows an error to the customer. When a quote fails, the Shippo rates are simply left out of the list. Check these in order:
+    * Shippo is enabled, the selected mode has a token, and **Show Shippo Rates at Checkout** is on.
+    * Your store address is complete. See the [setup notices](/guide/shipping/connecting-shippo#setup-notices).
+    * Shippo answered in time. A quote that takes longer than 5 seconds is skipped.
+    * Quoting is not paused. After Shippo fails to respond or returns an account-level error, FluentCart stops asking for 1 minute for every visitor. A single visitor can also trigger up to 20 live quotes in 10 minutes.
+    * The answer may be cached. FluentCart keeps Shippo's answer for about 10 minutes for the same address and cart, so changes such as a new store address or token can take that long to show at checkout.
+* **No rates in the Create shipment panel:** See the note under [Step 2: Method](#step-2-method).
 
 ## Data Shared with Shippo
 
 FluentCart only contacts Shippo after you enable it and save an API token. It sends:
 
 * **At checkout:** Your store address, the customer's city, state, postal code and country, and the parcel weights and dimensions.
-* **When you buy a label:** Your store address, Seller Phone and Seller Email, the customer's name, company, shipping address, phone and email, and the parcels. For international shipments, it also sends the item names, quantities, weights, and values for customs.
+* **When you buy a label:** Your store name and company name, your store address, Seller Phone and Seller Email, the order number as label metadata (for example "Order #123"), the customer's name, company, shipping address, phone and email, and the parcels. For international shipments, it also sends the item names, quantities, weights, and values for customs.
 * **When tracking is refreshed or a webhook arrives:** The label's transaction ID, or the tracking number and carrier.
 
 Your shipping setup is now ready to quote, label, and track orders through Shippo.
