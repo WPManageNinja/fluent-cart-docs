@@ -138,7 +138,7 @@ The card appears in the **Plugin Addons** section like any other addon:
 2.  Scroll to the **Plugin Addons** section and find the **Shipping For FluentCart** card.
 3.  Click the **Install & Activate** button on the card.
 
-If FluentCart Pro is not active on your site, the button reads **Download** instead. Once the addon is active, a settings icon on its card opens the **Carriers** page.
+If FluentCart Pro is not active on your site, the button reads **Download** instead. It does not install anything: it opens the FluentCart add-ons page in a new tab, and you install the plugin yourself. Once the addon is active, a settings icon on its card opens the **Carriers** page.
 
 ::: info
 See [Shipping Carriers](/guide/shipping/shipping-carriers) for installing the addon, connecting your Shippo account, and managing shipments.
