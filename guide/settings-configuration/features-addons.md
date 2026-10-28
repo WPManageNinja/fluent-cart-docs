@@ -47,8 +47,8 @@ A powerful tool for increasing your Average Order Value (AOV).
 
 A dedicated inventory workspace for stores that need more than per-product stock fields.
 
-* **Function:** Adds a central **Inventory** admin menu (injected next to Products) with cross-catalog stock views, bulk stock updates, an auditable adjustment history, and export. Every stock change is recorded with the user, timestamp, old and new values, and an adjustment reason.
-* **Requirements:** **Stock Management** (above) must be enabled first. Advanced Inventory activates only when both toggles are on.
+* **Function:** Adds a central **Inventory** admin menu (injected next to Products) with cross-catalog stock views, bulk stock updates, and an auditable adjustment history. Every stock change is recorded with the user, timestamp, old and new values, and an adjustment reason.
+* **Requirements:** **Stock Management** (above) must be enabled first. Advanced Inventory activates only when **Stock Management** is on and the **Enable Advanced Inventory** checkbox beneath it is ticked.
 * **When Inactive:** The Inventory admin menu is hidden and no adjustment history is recorded. Per-product stock still works through the basic [Inventory Management](/guide/product-types-creation/inventory-management) screen.
 * **When Active:** See [Advanced Inventory](/guide/product-types-creation/advanced-inventory) for the full workflow.
 
