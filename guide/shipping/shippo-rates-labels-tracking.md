@@ -6,23 +6,11 @@ If you have not connected your account yet, start with [Connecting Shippo](/guid
 
 ## Live Rates at Checkout
 
-When **Show Shippo Rates at Checkout** is turned on, FluentCart asks Shippo for rates once a customer enters their shipping address. The Shippo services appear next to your zone-based shipping methods, so customers can pick the one they prefer.
+When **Show Shippo Rates at Checkout** is turned on, Shippo's live rates appear on the checkout page under **Shipping Options**, in the same list as your zone-based shipping methods. Each Shippo rate is listed as the carrier and service name with its price, so customers can pick the one they prefer.
 
-Here is how the rates are worked out:
+![Screenshot of the Shipping Options list at checkout showing a zone method and live Shippo rates](/images/shipping/shippo/checkout-shipping-options.webp)
 
-* **Origin:** Rates are quoted from your store address in [Store Settings](/guide/settings-configuration/store-settings).
-* **Destination:** The customer's country, state, city, and postal code.
-* **Parcels:** Built from the products in the cart. FluentCart uses each product's weight plus the empty weight of its assigned [package](/guide/shipping/packages), and works out how many boxes the order needs.
-* **Currency:** Rates are shown in the checkout currency.
-* **Services:** Each rate is a carrier service with its own name and price.
-
-To get accurate rates, set a weight on every physical product and assign it a package. See [Creating Physical Products](/guide/product-types-creation/creating-physical-products) for where to set these.
-
-::: info
-FluentCart keeps Shippo's answer for about 10 minutes for the same destination and cart, so customers get fast results while they review their order. If a customer changes their postal code or cart contents, FluentCart asks Shippo again.
-:::
-
-If Shippo cannot return rates for an address, for example because the postal code is incomplete, no Shippo rates are shown for that address. Your zone-based methods are handled separately by the **Manual / Other** carrier.
+FluentCart builds the parcels for the quote from the products in the cart, using each product's weight and its assigned [package](/guide/shipping/packages). Rates are quoted from your store address in [Store Settings](/guide/settings-configuration/store-settings). To get accurate rates, set a weight on every physical product and assign it a package. See [Creating Physical Products](/guide/product-types-creation/creating-physical-products) for where to set these.
 
 ## Creating a Shipment and Buying a Label
 
@@ -37,70 +25,76 @@ You buy labels from the order screen. Make sure **Enable Label Generation** is t
 
 ### Step 1: Items
 
-Choose which items go in this shipment and how many of each. Click **Ship all remaining** to fill in every remaining quantity, or **Clear all** to reset them. Items that were already shipped show a **Fully Shipped** badge. This lets you split one order into several shipments.
+Choose which items go in this shipment and how many of each. Use **Clear all** to reset the quantities, or **Ship all remaining** to fill them back in. This lets you split one order into several shipments.
 
 ![Screenshot of the Items step in the Create shipment panel](/images/shipping/shippo/shipment-step-items.webp)
 
 ### Step 2: Method
 
-Use the **Ship with** dropdown to choose a carrier:
-
-* **Manual / Other:** Pick one of your zone-based methods, or choose **Custom price** to type a cost yourself (use `0` for free shipping). You can enter a **Carrier Name**, **Shipping Cost**, **Tracking Number**, and **Tracking URL** by hand.
-* **Shippo:** FluentCart asks Shippo for the services available for this order's address and parcels. They are listed as "rates for this address".
+Use the **Ship with** dropdown to choose a carrier.
 
 ![Screenshot of the Ship with dropdown listing Manual / Other and Shippo](/images/shipping/shippo/shipment-ship-with-dropdown.webp)
 
-<!-- TODO(screenshot): Method step with Shippo rates (Cheapest/Fastest tags, Label cost bar). Needs a store origin address in a country the Shippo test account can quote from; the current cart.local origin (Sylhet, BD) returns "No rates available from Shippo for this shipment". -->
+* **Manual / Other:** Pick one of your zone-based methods, or choose **Custom price** to enter the cost yourself (use `0` for free shipping). You can also enter a **Tracking Number** and **Tracking URL**.
+* **Shippo:** FluentCart asks Shippo for the services available for this order's address and parcels, and lists them under a heading such as "11 rates for this address".
 
-Each Shippo service shows its name, estimated delivery, and price. FluentCart tags the cheapest option with **Cheapest** and the fastest with **Fastest** when it can tell them apart. Click **Refresh** to request the rates again.
+![Screenshot of the Method step listing live Shippo rates with the Cheapest and Fastest tags](/images/shipping/shippo/shipment-step-method-shippo.webp)
 
-Select the service you want to purchase. FluentCart preselects a rate for you in this order:
+Each Shippo service shows its name, estimated delivery time, and price. FluentCart tags the cheapest option with **Cheapest** and the fastest with **Fastest**. By default, the cheapest rate is preselected. If you set a **Preferred Carrier** in the Shippo settings, that carrier's rate is preselected instead. Select the service you want to purchase.
 
-1. The same service the customer chose at checkout.
-2. A service from your **Preferred Carrier**, if you set one.
-3. The cheapest rate.
-
-After you select a service, a summary shows the **Label cost**. Shippo bills you in your Shippo account's currency. If that differs from the order currency, the summary shows a note such as "Billed by Shippo in USD" with an approximate amount in the order currency. The saved cost is always the amount Shippo bills.
+Click **Refresh** to request the rates again. Shippo can return a different set of services each time, so refresh if a service you expect is missing.
 
 ::: info
-When you open **Create shipment**, FluentCart starts on the carrier the customer used at checkout, if that carrier can still quote rates or buy labels. Otherwise it starts on **Manual / Other**.
+If Shippo has no services for the address, the panel shows "No rates available from Shippo for this shipment." Make sure your store address and the order's shipping address are complete, then click **Refresh**.
 :::
 
 ### Step 3: Review
 
-Check the summary of items, carrier, tracking, and cost. For Shippo, the tracking number reads **Assigned when the label is bought**.
+Check the summary of items, carrier, tracking, and cost. For a Shippo label, the carrier line shows the service and estimated delivery, and the tracking number reads **Assigned when the label is bought**.
 
-![Screenshot of the Review step in the Create shipment panel](/images/shipping/shippo/shipment-step-review.webp)
+![Screenshot of the Review step for a Shippo label](/images/shipping/shippo/shipment-step-review-shippo.webp)
 
 You can also:
 
 * **Shipped now / Change:** Keep the current time or set a different **Shipped At** date and time.
-* **Add a note for the customer:** Write an optional **Note to customer** that is shown with this shipment.
-* **Notify Customer:** Check this box to notify the customer about the shipment.
+* **Add a note for the customer:** Write an optional note that is shown with this shipment.
+* **Notify Customer:** Selected by default. Clear it if you do not want the customer notified.
 
-Click **Buy label** (the button shows the price). A confirmation asks you to confirm the service and its price. Click **Buy Label** to confirm. Buying a label spends money in Live mode, so the extra confirmation is intentional.
+Click **Buy label**. The button shows the price. A confirmation then asks you to confirm the service and its price, for example "Buy USPS — Ground Advantage for $6.42?". Click **Buy Label** to confirm. Buying a label spends money in Live mode, so this extra confirmation is intentional.
 
-When the purchase succeeds, FluentCart creates the shipment, adds the tracking number, and stores a copy of the label PDF with it.
+![Screenshot of the Buy label confirmation showing the service and price](/images/shipping/shippo/shipment-buy-label-confirm.webp)
+
+When the purchase succeeds, the order's items show as **Shipped** and fulfilled, and the new shipment appears in the **Shipments** card with its tracking number. You can download the label as a PDF from there.
 
 ### International Shipments
 
-For shipments that cross borders, FluentCart builds the customs declaration automatically from the items you ship, including each item's name, quantity, weight, and value. Shipments between countries in the European Union customs union do not need one. Add a weight to your products so the declaration is accurate.
+For shipments that cross borders, FluentCart builds the customs details from the items you ship, so you buy the label the same way as a domestic one.
 
 ## Managing Shipments
 
-Shipments appear in the **Shipments** card on the order, with columns for **Status**, **Shipment**, **Tracking**, and **Cost**. Click the three-dot button on a shipment to open its actions:
+Shipments appear in the **Shipments** card on the order, with columns for **Status**, **Shipment**, **Tracking**, and **Cost**. Each row shows the service, the items shipped, and the date. The **Tracking** column has the tracking number with buttons to copy it and to open the carrier's tracking page.
 
-* **Download label:** Opens the label PDF in a new tab so you can print it.
-* **Refresh tracking:** Asks Shippo for the latest tracking status.
+![Screenshot of the Shipments card showing a Shippo shipment](/images/shipping/shippo/order-shipments-card.webp)
+
+Click the arrow at the end of a row to expand the details: **Latest tracking**, **Shipped via**, and **Note to customer**. The expanded row also has **Download label** and **Refresh tracking** buttons.
+
+![Screenshot of the expanded shipment details](/images/shipping/shippo/order-shipments-card-details.webp)
+
+Click the three-dot button on a shipment to open its actions:
+
+![Screenshot of the shipment actions menu](/images/shipping/shippo/shipment-actions-menu.webp)
+
+* **Download label:** Opens the label PDF so you can print it.
+* **Refresh tracking:** Asks Shippo for the latest tracking status. If nothing has changed, FluentCart shows "Tracking is already up to date."
 * **Copy tracking number:** Copies the number to your clipboard.
 * **Delete shipment:** Removes the shipment. For a Shippo shipment, its label is voided, and the carrier refunds it if it is eligible.
 
-Click the arrow at the end of a row to expand the details: **Latest tracking**, **Shipped via**, and **Note to customer**.
+![Screenshot of the Delete shipment confirmation](/images/shipping/shippo/shipment-delete-confirm.webp)
 
-<!-- TODO(screenshot): Shipments card with a Shippo shipment, the three-dot menu open, and the expanded details. Needs a purchased test label. -->
+When you delete a shipment, the order's items go back to unshipped, so you can create a new shipment for them.
 
 ::: info
-In Test mode, labels are free and never shipped. Shippo only tracks its own test tracking numbers (those beginning with `SHIPPO_`), so real carrier tracking is not available for test labels.
+In Test mode, labels are free and never shipped. Shippo only tracks its own test tracking numbers (those beginning with `SHIPPO_`), so a test label's tracking shows no carrier updates.
 :::
 
 ## Tracking Updates
@@ -122,13 +116,12 @@ Shippo's tracking statuses are mapped to the shipment status like this:
 
 A status Shippo marks as unknown is ignored, so your shipment keeps its current status.
 
+The webhook only acts on tracking updates for shipments in your store. FluentCart ignores events from the other connection mode, events for tracking numbers it does not know, and other event types, and it rejects any call that carries an invalid token.
+
 ## If Something Goes Wrong
 
-* **The rate expired:** Rates are only valid for a short time. Click **Refresh**, select the service again, and retry.
-* **A carrier refused the label:** FluentCart shows which carrier refused it and what Shippo said. Nothing is charged when a label is refused, so you can fix the issue and try again, or pick a different service.
-* **Carrier login problem:** If the carrier account connected in your Shippo dashboard cannot log in, check that carrier's login details under **Carriers** in Shippo, or choose another service.
-* **Address problems:** If Shippo rejects the store address, the customer's address, or a phone number, FluentCart tells you which field to correct. Fix your store address in Store Settings, or edit the order's shipping address.
-* **Label purchase not confirmed:** If Shippo does not confirm a purchase in time, check your Shippo dashboard before you try again so the label is not bought twice.
+* **A carrier refused the label:** FluentCart shows which carrier refused it and what Shippo said, and confirms that no label was bought and nothing was charged. For example, if you pick a UPS service before activating UPS in your Shippo account, Shippo answers that the UPS account is not yet registered. Activate the carrier in your Shippo dashboard, or pick a different service, and try again.
+* **No rates:** See the note under [Step 2: Method](#step-2-method).
 
 ## Data Shared with Shippo
 
