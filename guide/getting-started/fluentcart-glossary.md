@@ -16,6 +16,9 @@ This glossary defines common terms used throughout the FluentCart documentation 
 * **Advanced Filters:**
     A set of powerful tools in the admin dashboard for searching and segmenting records like orders or customers based on specific, detailed criteria.
 
+* **Advanced Inventory:**
+    A Pro module that adds a central **Inventory** screen for viewing low and out-of-stock items, updating stock in bulk, and reviewing a history of every stock change.
+
 * **Advanced Variations:**
     A pricing method for products built from reusable **Attributes** such as Color, Size, or Material. You pick the option dimensions and their values, and FluentCart automatically generates every possible combination as a **Variation**. To learn more, read the [Advanced Variations](/guide/product-types-creation/advanced-variations) documentation.
 
