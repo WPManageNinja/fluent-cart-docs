@@ -5,6 +5,14 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## Shipping For FluentCart add-on (Shippo) v1.0.0 on core 2.3.0 develop (Oct 28, 2026)
+- **Trigger:** user supplied 13 screenshots (add-on install, Carriers page, Shippo settings, Shippo dashboard token and webhook steps) and asked for the Shippo docs, verified against the plugin and add-on code.
+- **Source:** core `develop` (2.3.0, `~/Desktop/WPManageninja-clone-from-git/fluent-cart`) and the add-on at `cart.local` `plugins/shipping-for-fluent-cart-develop` (v1.0.0, not a git repo there; read `dev-docs/shippo.md`, `ShippoCarrier.php`, `ShippoPackaging.php`). Core pieces: `Modules/Shipping/Carriers/*`, `resources/admin/Modules/Orders/Components/ShipmentForm.vue`, `ShipmentRecord.vue`, add-on card in `ModuleSettingsController.php`.
+- **Created:** `shipping/shipping-carriers.md`, `shipping/connecting-shippo.md`, `shipping/shippo-rates-labels-tracking.md` (sidebar entries in `config.mjs`, bullets in `shipping/index.md`, 3 featured images). 12 user screenshots converted to webp under `images/shipping/shipping-carriers/` and `images/shipping/connecting-shippo/`.
+- **Not documented on purpose:** checkout storefront look of Shippo rates (not verified), multi-parcel label handling in the UI, the `fluent_cart/shipping/carrier_providers` filter and rate-cache filter (dev docs), known gaps in the add-on dev doc.
+- **Screenshots (pipeline):** plans `shippo-settings.json` and `shippo-create-shipment.json` write 14 images to `images/shipping/shippo/` (settings sections, carriers list, Create shipment items/method/review). Webhook URL value is replaced with a sample before shooting (the real one embeds the secret). Order 5's shipping address was changed temporarily to test a Shippo quote and restored.
+- **Open:** cart.local now has a saved Shippo test token (ends 5857, Test mode, rates and labels on), but a quote for order 5 returned "No rates available from Shippo" (store origin is Sylhet, BD). Missing shots: Shippo rates list, Buy label confirmation, Shipments card with a label (marked `TODO(screenshot)` in `shippo-rates-labels-tracking.md`). Label purchase and webhook not exercised. Add-on is a zip from `addons-cdn.fluentcart.com`; the changelog entry waits on the official release wording. Existing pages still describe Shipping Zones as its own tab; the same zones list now also sits under Carriers > Manual / Other.
+
 ## Multi-Currency live verification on 2.2.0 (Oct 23, 2026)
 - **Trigger:** user asked to test Multi Currency on the Local site `localhost:10053` (core + Pro 2.2.0, the released build) and update the docs to what is actually released.
 - **Verified live:** settings screen (enable, add currencies, set/edit rate, pricing rules, rate history, Rate changes), storefront conversion and `?currency=` + 30-day `fct_currency` cookie, fallback to base for an unrated/unknown currency, switcher shortcode, Create Order **Order currency** card.

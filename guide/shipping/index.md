@@ -11,3 +11,6 @@ With FluentCart Shipping, you can:
 * **[Utilize Shipping Classes](/guide/shipping/understanding-shipping-classes)**: Group products with similar shipping characteristics (e.g., "Heavy Items," "Fragile Goods") to apply specific cost adjustments.
 * **[Control Advanced Calculations](/guide/shipping/advanced-shipping-calculations)**: Configure how shipping costs are aggregated when customers purchase multiple products from different shipping classes.
 * **[Manage Packages](/guide/shipping/packages)**: Define the boxes, envelopes, and soft packages you ship with so FluentCart can accurately calculate rates at checkout and pre-select the right packaging when fulfilling orders.
+* **[Use Shipping Carriers](/guide/shipping/shipping-carriers)**: See how the Carriers page works and install the Shipping For FluentCart add-on.
+* **[Connect Shippo](/guide/shipping/connecting-shippo)**: Add your Shippo API token and webhook to offer live rates, labels, and tracking.
+* **[Buy Labels and Track Shipments](/guide/shipping/shippo-rates-labels-tracking)**: Show live Shippo rates at checkout, buy labels from the order screen, and keep tracking up to date.
