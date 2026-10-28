@@ -5,6 +5,13 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## Refund flow rewrite on core 2.3.0 develop (Oct 28, 2026)
+- **Trigger:** user asked to compare the refund doc with the plugin's refund logic.
+- **Source:** core `develop` `878cb00c3d`: `Services/Payments/Refund.php`, `RefundPlanner.php`, `OrderController::refundOrder`, `Events/Order/OrderRefund.php`, `Listeners/Order/OrderRefunded.php`, `resources/admin/Modules/Orders/Modals/Refund.vue`; Pro `LicenseGenerationHandler::maybeRevokeLicensesOnFullRefund`. Commits: #3021 remote-first + force-local, #3327 editable item refund amount, #3330 zero-decimal shipping step, #3150, #0033255 shipped units, #3332 restock double count.
+- **Rewritten:** `store-management/orders-management/processing-refunds.md` (modal renamed Refund Transaction; Items list with steppers, Already shipped, Include shipping, Restock items to inventory, editable amount, Cancel Subscription only for active subscriptions; gateway-failure prompt with Record locally only; payment status Refunded/Partially Refunded). Removed: Select Item/s dropdown, Restock Quantity table, Revoke License checkbox (licenses are disabled automatically on a FULL refund by Pro), and the wrong claim that "Total Refund Owed" shows after a refund (it shows only when the customer paid more than the order total).
+- **Screenshots (pipeline, plans `refund-modal.json`, `refund-force-local.json`):** `refund-button-on-order`, `refund-payment-modal` (order 5, not submitted), `refund-record-locally-prompt` (order 433, fake Stripe charge id, Cancel clicked; one "Refund failed on Stripe" activity row was created and deleted).
+- **Not exercised live:** a successful refund (order 5 has a real-looking Stripe test charge id, so not submitted), success/gateway result messages, subscription cancel, license disable, stock restore, the Already shipped stepper (no shipped demo order). Code-verified only.
+
 ## Shipping For FluentCart add-on (Shippo) v1.0.0 on core 2.3.0 develop (Oct 28, 2026)
 - **Trigger:** user supplied 13 screenshots (add-on install, Carriers page, Shippo settings, Shippo dashboard token and webhook steps) and asked for the Shippo docs, verified against the plugin and add-on code.
 - **Source:** core `develop` (2.3.0, `~/Desktop/WPManageninja-clone-from-git/fluent-cart`) and the add-on at `cart.local` `plugins/shipping-for-fluent-cart-develop` (v1.0.0, not a git repo there; read `dev-docs/shippo.md`, `ShippoCarrier.php`, `ShippoPackaging.php`). Core pieces: `Modules/Shipping/Carriers/*`, `resources/admin/Modules/Orders/Components/ShipmentForm.vue`, `ShipmentRecord.vue`, add-on card in `ModuleSettingsController.php`.
