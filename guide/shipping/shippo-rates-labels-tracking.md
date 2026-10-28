@@ -76,7 +76,7 @@ If an order needs more than one parcel, Shippo buys one label for each parcel. F
 
 ### International Shipments
 
-For shipments that cross borders, FluentCart builds the customs declaration for you, so you buy the label the same way as a domestic one. The declaration lists the contents as merchandise, with the package returned to you if it cannot be delivered. Each item is declared with its name, quantity, weight, and unit price, and an item without a weight is declared at 0.1 kg. Shipments between countries in the European Union customs union do not need a declaration.
+For shipments that cross borders, FluentCart builds the customs declaration for you, so you buy the label the same way as a domestic one. The declaration lists the contents as merchandise, with the package returned to you if it cannot be delivered. Each item is declared with its name, quantity, total weight, and total value for the quantity shipped, and an item without a weight is declared at 0.1 kg per unit. Shipments between countries in the European Union customs union do not need a declaration.
 
 ## Managing Shipments
 
