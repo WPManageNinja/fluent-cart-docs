@@ -473,6 +473,9 @@ export default defineConfig({
                 { text: 'Understanding Shipping Classes', link: '/guide/shipping/understanding-shipping-classes' },
                 { text: 'Advanced Shipping Calculations', link: '/guide/shipping/advanced-shipping-calculations' },
                 { text: 'Managing Packages', link: '/guide/shipping/packages' },
+                { text: 'Shipping Carriers', link: '/guide/shipping/shipping-carriers' },
+                { text: 'Connecting Shippo', link: '/guide/shipping/connecting-shippo' },
+                { text: 'Shippo Rates, Labels and Tracking', link: '/guide/shipping/shippo-rates-labels-tracking' },
               ]
             }
           ]
