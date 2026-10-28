@@ -127,3 +127,19 @@ The card appears in the **Plugin Addons** section like any other addon, and inst
 ::: info
 This addon requires **Divi 5.0+** and **FluentCart 1.3.4+**. See [FluentCart Divi Modules](/guide/customization-and-themes/fluentcart-divi-modules) for the full module list and workflow.
 :::
+
+### Shipping For FluentCart
+
+The **Shipping For FluentCart** addon connects your store to Shippo, so you can show live carrier rates at checkout, buy shipping labels from the order screen, and track shipments.
+
+The card appears in the **Plugin Addons** section like any other addon:
+
+1.  Navigate to **FluentCart Pro > Settings > Features & addon**.
+2.  Scroll to the **Plugin Addons** section and find the **Shipping For FluentCart** card.
+3.  Click the **Install & Activate** button on the card.
+
+If FluentCart Pro is not active on your site, the button reads **Download** instead. Once the addon is active, a settings icon on its card opens the **Carriers** page.
+
+::: info
+See [Shipping Carriers](/guide/shipping/shipping-carriers) for installing the addon, connecting your Shippo account, and managing shipments.
+:::
