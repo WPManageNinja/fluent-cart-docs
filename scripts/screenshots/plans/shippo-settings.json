@@ -1,0 +1,25 @@
+{
+  "outDir": "guide/public/images/shipping/shippo",
+  "viewport": { "width": 1600, "height": 2300 },
+  "steps": [
+    { "admin": "/settings/shipping/carriers" },
+    { "wait": 800 },
+    { "shot": { "name": "carriers-shippo-manage", "clip": "app", "crop": { "height": 1100 },
+        "arrows": [ { "target": "button:has-text(\"Manage\") >> nth=1", "from": "bottom", "len": 120 } ] } },
+
+    { "eval": "(()=>{const t=[...document.querySelectorAll('*')].find(e=>e.children.length===0&&e.textContent.trim()==='Shippo');let c=t;for(let i=0;i<6&&c;i++){const b=c.querySelector('button');if(b){b.click();return;}c=c.parentElement;}})()" },
+    { "wait": 1500 },
+
+    { "fill": { "selector": "input[placeholder*='Sender phone']", "value": "+1 415 555 0134" } },
+    { "fill": { "selector": "input[placeholder*='Sender email']", "value": "shipping@example-store.com" } },
+    { "eval": "(()=>{const l=[...document.querySelectorAll('*')].find(e=>e.children.length===0&&e.textContent.trim()==='Webhook URL');if(!l)return;let c=l;for(let i=0;i<6&&c;i++){const inp=c.querySelector('input');if(inp){const s=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;s.call(inp,'https://your-store.com/?fluent-cart=fct_shipping_listener_webhook&carrier=shippo&fcs_token=your-secret-token');inp.dispatchEvent(new Event('input',{bubbles:true}));c.id='shippo-webhook-shot';return;}c=c.parentElement;}})()" },
+
+    { "shot": { "name": "shippo-settings-overview", "clip": "app", "crop": { "height": 3350 } } },
+    { "shot": { "name": "shippo-settings-connection", "clip": { "element": ".el-form-item:has(> .el-form-item__label:text-is(\"Connection Mode\"))", "pad": 24 } } },
+    { "shot": { "name": "shippo-settings-toggles", "clip": { "element": ".el-form-item:has(label:text-is(\"Show Shippo Rates at Checkout\"))", "pad": 24 } } },
+    { "shot": { "name": "shippo-settings-labels", "clip": { "element": ".el-form-item:has(label:text-is(\"Enable Label Generation\"))", "pad": 24 } } },
+    { "shot": { "name": "shippo-settings-preferred-carrier", "clip": { "element": ".el-form-item:has(label:text-is(\"Preferred Carrier\"))", "pad": 24 } } },
+    { "shot": { "name": "shippo-settings-seller", "clip": { "element": ".el-form-item:has(label:text-is(\"Seller Phone\"))", "pad": 24 } } },
+    { "shot": { "name": "shippo-settings-webhook", "clip": { "element": "#shippo-webhook-shot", "pad": 24 } } }
+  ]
+}
