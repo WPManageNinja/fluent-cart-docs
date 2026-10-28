@@ -247,6 +247,10 @@ To manually update your stock count for any variation:
     * **New Stock:** This field automatically previews the final stock total after your adjustment.
 3.  Click the **Apply** button to save the new stock level.
 
+::: info
+Managing stock for many products? With [Advanced Inventory](/guide/product-types-creation/advanced-inventory), you can update stock across your whole catalog from one screen and keep a history of every change.
+:::
+
 ### Shipping Class
 
 You can assign a **Shipping Class** to any product to apply location-based shipping costs.
