@@ -61,7 +61,8 @@ When you save, FluentCart checks the token with Shippo before storing it. After 
 
 If something is wrong, FluentCart shows an error and saves nothing. These are the messages you may see:
 
-* **That is a live token. Paste it into Live Token.** You pasted a live token into the **Test Token** field. Each mode has its own token field.
+* **That is a live token. Paste it into Live Token.** You pasted a live token into the **Test Token** field. Pasting a test token into **Live Token** gives the matching message, **That is a test token. Paste it into Test Token.** Each mode has its own token field.
+* **Enter your Shippo test token to enable Shippo in Test mode.** You turned on **Enable Shippo** without a token for the selected mode. In Live mode, the message asks for your live token instead.
 * **Shippo rejected the API token. Check your test or live token.** Shippo did not accept the token, so double-check that you copied the whole token.
 * **The Seller Phone in Shippo settings must contain 8 to 15 digits.** Correct the phone number or leave the field empty.
 * **The Seller Email in Shippo settings must be a valid email address.** Correct the email address or leave the field empty.
@@ -104,14 +105,14 @@ Here is what each field on the Shippo settings screen does. The screen is one fo
 
 ### Webhook
 
-* **Rotate Webhook Secret:** Turn this on and save to issue a new webhook URL. The old URL stops working, so paste the new one into Shippo.
+* **Rotate Webhook Secret:** Turn this on and save to issue a new webhook URL. The old URL stops working, so paste the new one into Shippo. The toggle switches itself back off after each save.
 * **Webhook URL:** Appears after your first save. Copy it with the **Copy** button.
 
 ![Screenshot of the Webhook URL field with the Copy button](/images/shipping/shippo/shippo-settings-webhook.webp)
 
 ### Setup Notices
 
-When something needs attention, the **Carriers** list shows a **Needs Attention** badge next to Shippo, and the Shippo settings screen shows the details at the top:
+When something needs attention, the **Carriers** list shows a **Needs attention** badge next to Shippo, and the Shippo settings screen shows the details at the top:
 
 * **Missing token:** "Shippo is enabled in Test mode but has no test token, so rates, labels and tracking are off. Add the test token or switch to Live." In Live mode, the notice asks for the live token instead.
 * **Incomplete store address:** "Shippo ships from your store address, which is incomplete. Rates and labels will fail until you add:" followed by the missing fields, such as the street address or postal code. Click **Open Store Settings** to complete it.
@@ -142,7 +143,7 @@ The webhook now appears in the list with an **Active** status.
 ![Screenshot of the Shippo Webhooks list showing an active webhook](/images/shipping/connecting-shippo/shippo-webhook-active.webp)
 
 ::: warning
-Shippo marks every webhook event as Test or Live. FluentCart ignores events from the mode that does not match your **Connection Mode**, so a Test webhook will not update labels bought in Live mode, and the other way around. If you use both modes, create one webhook for each.
+Shippo marks every webhook event as Test or Live. FluentCart compares that with the mode each label was bought in, so a Test event only updates labels bought in Test mode, and a Live event only updates Live labels. Switching your **Connection Mode** later does not affect tracking for labels you already bought. If you use both modes, create one webhook for each.
 :::
 
 ::: info
