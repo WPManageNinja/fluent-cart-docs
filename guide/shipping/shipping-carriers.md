@@ -8,13 +8,13 @@ This guide shows you where carriers live in your settings and how to install the
 
 Shipping For FluentCart adds the Shippo carrier to FluentCart. Once it is connected, you can:
 
-* **Show live rates at checkout:** Customers see real Shippo rates alongside your zone-based shipping methods, priced in the checkout currency.
+* **Show live rates at checkout:** Customers see real Shippo rates alongside your zone-based shipping methods.
 * **Buy labels from the order screen:** Quote the available services for an order, buy a label, and download it without leaving FluentCart.
 * **Void labels:** Deleting a shipment voids its Shippo label, and the carrier refunds it if it is eligible.
 * **Track shipments:** Refresh tracking from the order, and let Shippo push tracking updates to your store through a webhook.
 
 ::: info
-Shippo works in two modes. **Test** mode uses a free test token, so you can try the full flow without buying real labels. **Live** mode uses your live token, and labels are real and billed.
+Shippo works in two modes. **Test** mode uses your Shippo test token, so you can try the full flow with free labels that are never shipped. **Live** mode uses your live token, and labels are real and billed.
 :::
 
 ## Requirements
