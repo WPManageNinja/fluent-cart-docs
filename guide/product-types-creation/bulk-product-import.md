@@ -30,7 +30,7 @@ You will now be looking at a blank Bulk Insert page. This is where you will hand
 2. A popup window will appear asking for your file.
 3. Here upload your CSV file that is saved to your computer, simply drag and drop the file into the upload area, or click the **Browse/Upload Files** text to select it.
 
-> **Note:** FluentCart can handle massive catalogs! The maximum file size allowed is a generous 300 MB.
+> **Note:** The largest file you can upload is your server's upload limit, shown in the upload area (**Any Format upto …**). Ask your host to raise it if your CSV is bigger.
 
 > **Need a template?** If you are unsure how to format your spreadsheet, look at the bottom left of this popup and click **Download a Sample CSV File**. This gives you a perfectly formatted template you can fill out in Excel or Google Sheets!
 
@@ -47,12 +47,13 @@ Once your file uploads, the Map Columns screen will automatically appear.
 
 Carefully match them up. For example:
 * Map **Post Title** to your spreadsheet's **Name** or **Product Name** column.
-* Map **Post Name** to your spreadsheet's **SKU** column.
+* **Post Name** is the product's URL slug. FluentCart pre-selects a column named **SKU** for it; if you leave it unmapped, the slug is built from the title.
+* Map **SKU** to your spreadsheet's **SKU** column so each variation gets its SKU.
 * Map **Post Content** to your spreadsheet's **Description** column.
 
 > **Helpful Tip:** FluentCart is smart! If your spreadsheet headers have common names (like "Price" or "Name"), the system will automatically try to match them for you. Just double-check its work.
 
-When everything looks correctly matched, click the **Add Products** button at the bottom of the window.
+When everything looks correctly matched, click **Add Products** at the bottom of the window to add the rows to the table, or **Clear and Add Products** to empty the table first.
 
 ![Bulk Product Import](/images/product-types-creation/bulk-product-import/product-import-4.webp)
 
@@ -67,6 +68,8 @@ Think of this as a final rehearsal. You can use this table to quickly review and
 * **Manage Variations Easily:** If you imported products with different sizes or colors (variable products), you will see them neatly nested under the main product. Forgot a size? Just click the **+ Add Variant** text directly in the table to create a new row for it instantly.
 * **Clean Up Mistakes (Row Actions):** If a product got imported by mistake, simply check the box next to its name on the far left, and click the red **Delete** button at the top. You can also use the **Duplicate** button to quickly copy a product setup.
 * **Pin Actions:** If you have many columns and need to scroll horizontally, check the **Pin Actions** box at the top right. This freezes your action buttons so they are always visible, no matter how far you scroll.
+* **Link rows:** Select two or more products and click **Link** to edit them together. Click **Unlink** to stop.
+* **Add Product:** Adds an empty row you can fill in by hand.
 
 
 ![Bulk Product Import](/images/product-types-creation/bulk-product-import/product-import-5.webp)
@@ -81,7 +84,7 @@ Once you are 100% satisfied that your data is perfect:
 1. Click the dark **Save All Products** button located at the top right of the screen.
 2. A progress bar will appear as FluentCart processes the data.
 
-Congratulations! FluentCart has now officially added all of those products and variations to your live store catalog. Your customers can now find and purchase them!
+Congratulations! FluentCart has now added all of those products and variations to your store catalog. Each product's **Status** column decides whether it goes live: products set to published appear in your store; drafts stay hidden.
 
 ---
 
