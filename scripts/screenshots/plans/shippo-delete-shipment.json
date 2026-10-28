@@ -1,0 +1,16 @@
+{
+  "outDir": "guide/public/images/shipping/shippo",
+  "viewport": { "width": 1600, "height": 1100 },
+  "steps": [
+    { "admin": "/orders/5/view" },
+    { "wait": 2500 },
+    { "click": "button[aria-label=\"More actions\"]" },
+    { "wait": 600 },
+    { "click": ".fct-shipment-menu button:has-text(\"Delete shipment\")" },
+    { "wait": 600 },
+    { "shot": { "name": "shipment-delete-confirm", "clip": { "element": ".fct-shipment-menu", "pad": 24 } } },
+    { "click": ".fct-shipment-menu button:has-text(\"Yes, Delete\")" },
+    { "wait": 12000 },
+    { "shot": { "name": "verify-after-delete", "clip": "viewport" } }
+  ]
+}
