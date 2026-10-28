@@ -1,4 +1,4 @@
- # Creating Digital Products
+# Creating Digital Products
 
 This guide provides step-by-step instructions for adding a digital product to your FluentCart store.
 
@@ -21,7 +21,9 @@ By the end, you will be able to confidently sell and manage any downloadable ite
 
     ![Screenshot of Add Product Button](/images/product-types-creation/creating-digital-product/Digital-product-1.webp)
 
-3.  This will open the **Add New Product** popup from where you have to give the product name and select the product type **Digital Product** then the **Edit Product** page will come.
+3.  In the **Add New Product** popup, enter the **Product Title**, choose a **Variation Type** (**Simple**, **Simple Variations**, or **Advanced Variations**), and keep **Digital Product** selected (it's the default). Click **Add Product** to open the **Edit Product** page.
+
+    <!-- TODO(screenshots): new image needed: capture the Add New Product popup showing Product Title, the Variation Type dropdown, and Digital Product selected, with an arrow on Add Product. Update later. -->
 
     ![Screenshot of Product Edit Screen (Digital Product Example)](/images/product-types-creation/creating-digital-product/Digital-product-3.webp) 
 
@@ -51,9 +53,9 @@ Once you've picked your files or linked your URLs, just click the **Save** butto
 Categorize and type your digital product for better structured organization.
 
 * **[Product Categories:](/guide/product-types-creation/creating-managing-product-categories/index)**
-    Assign the product to relevant categories (e.g., "E-Books", "Software"). Click **"+ Add More Category"** to assign additional categories.
+    Assign the product to relevant categories (e.g., "E-Books", "Software"). Click **+ Add Category** to assign additional categories.
 * **[Product Brand:](/guide/product-types-creation/creating-managing-product-brand)** 
-    Assign the product to relevant brands. Click to **"+Add Brand”** to assign additional brands.
+    Assign the product to relevant brands. Click **+ Add Brand** to assign additional brands.
 
 ### 4. Pricing & Variations
 
@@ -104,8 +106,8 @@ Expand the **SKU** section and enter a unique tracking code (e.g., `EBOOK-MKT-01
 
 Toggle the **Subscription** switch on and the pricing fields transform into everything you need for recurring billing — ideal for software tools, membership content, course access, or any digital product your customers return to over time.
 
-**Installment Price** *(Required)*
-The amount charged on each billing cycle. The `x1` indicator next to the field reflects how many times this price is charged per interval — it updates automatically when you configure installments.
+**Price** *(Required)*
+The amount charged on each billing cycle. When you turn on **Enable installment payment**, this field is relabelled **Installment Price** and shows `x` followed by the installment count.
 
 **Additional display prices** *(Collapsible section)*
 
@@ -116,19 +118,19 @@ The amount charged on each billing cycle. The `x1` indicator next to the field r
   - **Weekly**
   - **Monthly**
   - **Quarterly**
-  - **Half Yearly (Six Month)**
+  - **Half Yearly**
   - **Yearly**
 
-- **Trial Days** *(Optional)* — The number of free days before the first charge. Set to `0` for no trial. Even a 7-day trial on a higher-priced plan can meaningfully improve sign-up rates — it lowers the barrier to committing.
+- **Trial Days** *(Optional)*: The number of free days before the first charge. Leave it empty or set it to `0` for no trial; the maximum is 365 days. Even a 7-day trial on a higher-priced plan can meaningfully improve sign-up rates — it lowers the barrier to committing.
 
-**Enable installment payment** *(Checkbox — Optional)*
+**Enable installment payment** *(Checkbox, optional, FluentCart Pro)*
 Check this box to limit the subscription to a fixed number of payments instead of running indefinitely. Two fields appear:
 - **Installment Count** — The total number of payments (e.g., `12` for a year-long payment plan)
 - **Total Price** — Auto-calculated (Installment Price × Count)
 
 > **💡 Pro Tip:** Installment plans work brilliantly for online courses or coaching programs — customers pay over time with a clear end date, eliminating cancellation anxiety while guaranteeing your revenue.
 
-**Setup fee** *(Toggle — Optional)*
+**Setup fee** *(Toggle, optional, FluentCart Pro)*
 Enable this to charge a one-time fee at the very start of the subscription, in addition to the recurring price. Two sub-fields appear:
 - **Setup fee label** — The name customers see for this charge at checkout (e.g., `Activation Fee`, `Enrollment Fee`)
 - **Setup fee amount** — The one-time amount charged at signup
@@ -136,7 +138,7 @@ Enable this to charge a one-time fee at the very start of the subscription, in a
 **Calculate profit/cost** *(Toggle — Optional)*
 Toggle on to track **Cost per item**, **Profit**, and **Margin** for this subscription for internal reporting.
 
-> **📝 Note:** The **SKU** section works exactly the same in subscription mode as it does for one-time payments. Digital products don't need a shipping package or physical weight — so those fields don't appear here.
+> **📝 Note:** The **SKU** section works exactly the same in subscription mode as it does for one-time payments. The **Shipping** box still shows a **Physical Product** switch. Leave it off for digital products; the package and weight fields appear only when it's on.
 
 ![Gif of Digital Product Edit Screen (Simple Pricing)](/images/product-types-creation/product-pricing/product-variation-2.webp)
 
@@ -164,9 +166,9 @@ Click **+ Add more** at the bottom to add a new variation. A blank row appears �
 The **three-dot icon** gives you:
 - **Duplicate** — Copy this variation as a starting point for a new one
 - **Copy Variation ID** — Get the unique ID for developers or shortcode use
-- **Direct Checkout** — Generate a buy-now link for this specific version
+- **Direct Checkout** — Copy a buy-now link for this specific version. Unavailable while the product is a draft.
 - **Delete** — Remove this variation permanently
-- **Skip inventory** — Exclude this variation from stock tracking
+- **Skip inventory** — Exclude this variation from stock tracking (shown only when the product's **Inventory Management** is on)
 
 > **📝 Note:** Quick edits to **Title**, **Price**, and **Compare at price** can be made directly in the table rows. For images, subscription configuration, and everything else — click the pencil icon.
 
@@ -211,14 +213,14 @@ A higher price shown with a strikethrough to communicate value.
 The billing frequency for this specific variation — choose from **Daily**, **Weekly**, **Monthly**, **Quarterly**, **Half Yearly**, or **Yearly**. Different variations can have different intervals, so you can offer a "Monthly" and a "Yearly" tier side by side on the same product page.
 
 **Trial Days** *(Optional)*
-Free days before the first charge. Set to `0` for no trial. Offering even a short trial on a higher-priced tier can meaningfully improve sign-up rates.
+Free days before the first charge. Leave it empty or set it to `0` for no trial; the maximum is 365 days. Offering even a short trial on a higher-priced tier can meaningfully improve sign-up rates.
 
-**Enable installment payment** *(Checkbox — Optional)*
+**Enable installment payment** *(Checkbox, optional, FluentCart Pro)*
 Limit this variation to a fixed number of billing cycles:
 - **Installment Count** — Total payments before the subscription ends automatically
 - **Total Price** — Auto-calculated total (Installment Price × Count)
 
-**Setup fee** *(Toggle — Optional)*
+**Setup fee** *(Toggle, optional, FluentCart Pro)*
 Charge a one-time fee at signup for this variation:
 - **Setup fee label** — The customer-facing name (e.g., `Activation Fee`)
 - **Setup fee amount** — The one-time amount
@@ -247,7 +249,7 @@ The **Add Downloadable Asset(s)** modal opens with the following options:
 
 **Storage Providers modal**
 
-The **Storage Providers** modal is where you manage and select the file to attach. The left panel lists your configured providers — **Local** (your WordPress server) and **Cloudflare R2** if you have it connected. Select a provider to load its contents on the right.
+The **Storage Providers** modal is where you manage and select the file to attach. The left panel lists your configured providers: **Local** (your WordPress server), [Amazon S3](/guide/storage/aws-s3) once you've connected it, and [Cloudflare R2](/guide/storage/cloudflare-r2) (FluentCart Pro). Select a provider to load its contents on the right.
 
 Each provider offers two tabs:
 
@@ -255,7 +257,7 @@ Each provider offers two tabs:
 
     ![Screenshot of the Storage Providers modal showing the Select Files tab](/images/product-types-creation/creating-digital-product/storage-providers-select-files.png)
 
-* **Upload** — Drag and drop a new file directly onto the upload area, or click **Browse/Upload Files** to pick one from your computer. Any file format is accepted, up to **300 MB** per file.
+* **Upload** — Drag and drop a new file directly onto the upload area, or click **Browse/Upload Files** to pick one from your computer. Any file format is accepted, up to your server's maximum upload size (shown in the upload area as **Any Format upto …**). File names can be at most 160 characters.
 
     ![Screenshot of the Storage Providers modal showing the Upload tab](/images/product-types-creation/creating-digital-product/storage-providers-upload.png)
 
@@ -269,7 +271,7 @@ To learn more, read this documentation of the [Digital Product License](/guide/p
 
 ### Shipping Class
 
-You can assign a **Shipping Class** to any product to apply location-based shipping costs.
+You can assign a **Shipping Class** to a product with physical variations to apply location-based shipping costs.
 
 To add a shipping class:
 
@@ -279,7 +281,7 @@ To add a shipping class:
 
 Shipping classes work with **Shipping Zones** and **Shipping Methods** to control how and where you deliver products.
 
-> **Note:** Digital products typically don’t require shipping, but you can still assign a class if needed for special handling or hybrid products.
+> **Note:** The **Shipping Class** card appears only when at least one variation has **Physical Product** turned on. A purely digital product doesn't show it.
 
 ::: info
 To learn more about how shipping classes work, see the [Understanding Shipping Classes](/guide/shipping/understanding-shipping-classes) guide.
@@ -289,7 +291,7 @@ To learn more about how shipping classes work, see the [Understanding Shipping C
 
 Once you have configured all the necessary details:
 
-1.  Set the **Status** to **"Published"** in the "Publishing" section.
+1.  Set the **Status** to **Publish** in the "Publishing" section.
 2.  Click the **"Update"** (or "Save") button on the top right to make your digital product live in your store.
 
 
