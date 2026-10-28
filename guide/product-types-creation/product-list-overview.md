@@ -1,4 +1,4 @@
- # Product List Overview
+# Product List Overview
 
 The **Products** screen in FluentCart is your central management hub for all items available in your store. Here, you can view your entire product catalog, check their status, type, pricing, and stock, and quickly access options to edit or add new products.
 
@@ -7,6 +7,7 @@ The **Products** screen in FluentCart is your central management hub for all ite
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Products** in the left sidebar.
 2.  This will open the main **Products** screen, displaying a comprehensive table of all your products. 
 
+    <!-- TODO(screenshots): Products-list-1.webp is outdated: it shows a standalone Create Dummy Product button and only six tabs. Retake showing the More actions dropdown, Add Product, and the full tab row including Bundle and Non Bundle. Update later. -->
     ![Screenshot of Products List Page](/images/product-types-creation/product-list/Products-list-1.webp)
 
 ## Understanding the Products List Table
@@ -20,15 +21,15 @@ The Products list table provides key information for each product at a glance:
 * **Stock:** Shows the current stock level for the product or its variants. 
 * **Status:** Indicates the product's publishing status. 
 * **Date:** The date and time the product was created or last updated. 
-* **Actions:** (Implied) Typically includes icons or links for editing, viewing, or deleting the product.
+* **Actions:** **Edit**, **Duplicate**, or **Delete** the product.
 
 ## Managing Products from the List
 
 From the Products list screen, you have several quick actions:
 
-* **Create Dummy Product:** A button to quickly populate your store with placeholder products for testing or setup. 
+* **More actions:** A dropdown with **Add Dummy Product** (creates sample products for testing), **Bulk Product Insert** (see [Bulk Product Import](/guide/product-types-creation/bulk-product-import)), and **Bulk Product Edit**.
 * **Add Product:** Click this button to [create a new product](/guide/product-types-creation/creating-physical-products) listing from scratch. 
-* **View Product:** A general link, likely to see a live preview of the product on your storefront. 
+* **Bulk actions:** Select products with the checkboxes, then choose **Duplicate** or **Delete** from **Select Bulk Action** and click **Confirm**.
 
 ## Filtering Products
 
@@ -46,6 +47,8 @@ At the top of the Products list, you'll find tabs that allow you to quickly filt
     * **Physical:** Filters to show only physical products.
     * **Digital:** Filters to show only digital products.
     * **Subscribable:** Filters to show only subscription-based products.
+    * **Bundle:** Shows only bundle products.
+    * **Non Bundle:** Shows only products that are not bundles.
 
 ### 2. Using the Advanced Filter
 
@@ -53,14 +56,17 @@ For more detailed control, use the **Advanced Filter** option:
 
 1.  Click the **"Advanced Filter"** button located at the top right of the Products screen. 
 2.  The Advanced Filter section will expand, allowing you to define your filtering criteria, such as: 
-    * **Order Property:** Filter products based on properties related to orders they are part of.
-    * **Product Variation:** Filter products by their variations, including "Variation Count, Variation, and Variation Type."
+    * **Pricing:** **Min Price** and **Max Price**.
+    * **Stock:** **Stock Status** (In Stock / Out of Stock) and **Available Quantity**.
+    * **Order Property:** **Order Count**, the number of orders that include the product.
+    * **Variations:** **Variation Count**, **Variation**, and **Variation Type** (Simple, Simple Variations, Advanced Variations).
     * **Taxonomies:** Filter products by their classification, including Product Categories, and Product Brands.
     * **Reviews:** *(Appears only while [Product Reviews](/guide/store-management/product-reviews/review-settings) is enabled)* Filter by **Reviews** or **Written Reviews**, each **Has** or **Has no** reviews that are **Approved**, **Not approved**, or of **Any status**. Filter by **Average Rating** **Same or higher than** or **Same or lower than** a chosen star count.
     * **Conditional Logic:** Use the **"+ Add"** button for "AND" conditions and the **"+ OR"** button for "OR" conditions to combine multiple criteria.
 
 3.  Apply your desired filters by clicking **"Apply"** or **"Reset"** them to view the complete list. 
 
+    <!-- TODO(screenshots): Products-list-2.webp is outdated: the filter menu shows only Order Property, Variations, and Taxonomies, and the header shows a standalone Add Dummy Product button. Retake with the + Add menu listing Pricing, Stock, Order Property, Variations, and Taxonomies, and the More actions dropdown in the header. Update later. -->
     ![Screenshot of Product Advanced Filter Button](/images/product-types-creation/product-list/Products-list-2.webp) 
 
 ### 3. Searching with Operators and Wildcards
