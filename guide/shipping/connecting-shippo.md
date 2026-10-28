@@ -59,9 +59,12 @@ When you save, FluentCart checks the token with Shippo before storing it. After 
 
 ![Screenshot of the Shippo settings after saving a test token](/images/shipping/connecting-shippo/shippo-token-saved.webp)
 
-::: info
-Each mode has its own token field. A live token pasted into **Test Token** (or a test token pasted into **Live Token**) is rejected with a message telling you which field to use.
-:::
+If something is wrong, FluentCart shows an error and saves nothing. These are the messages you may see:
+
+* **That is a live token. Paste it into Live Token.** You pasted a live token into the **Test Token** field. Each mode has its own token field.
+* **Shippo rejected the API token. Check your test or live token.** Shippo did not accept the token, so double-check that you copied the whole token.
+* **The Seller Phone in Shippo settings must contain 8 to 15 digits.** Correct the phone number or leave the field empty.
+* **The Seller Email in Shippo settings must be a valid email address.** Correct the email address or leave the field empty.
 
 ## Shippo Settings Reference
 
@@ -108,11 +111,11 @@ Here is what each field on the Shippo settings screen does. The screen is one fo
 
 ### Setup Notices
 
-FluentCart shows a notice on the Carriers page when something needs attention:
+When something needs attention, the **Carriers** list shows a **Needs Attention** badge next to Shippo, and the Shippo settings screen shows the details at the top:
 
-* **Missing token:** Shippo is enabled, but the selected mode has no token, so rates, labels, and tracking are off. Add the token or switch modes.
-* **Incomplete store address:** Rates or labels are turned on, but your store address is missing a street address, city, postal code, or country. Click **Open Store Settings** to complete it.
-* **Unsupported currency:** Shippo cannot quote rates in your store currency, so Shippo rates are not shown at checkout. Labels and tracking still work.
+* **Missing token:** "Shippo is enabled in Test mode but has no test token, so rates, labels and tracking are off. Add the test token or switch to Live." In Live mode, the notice asks for the live token instead.
+* **Incomplete store address:** "Shippo ships from your store address, which is incomplete. Rates and labels will fail until you add:" followed by the missing fields, such as the street address or postal code. Click **Open Store Settings** to complete it.
+* **Unsupported currency:** "Shippo cannot quote rates in" your store currency, "so Shippo rates are not shown at checkout. Labels and tracking still work."
 
 ## Step 3: Adding the Webhook in Shippo
 
