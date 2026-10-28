@@ -44,6 +44,8 @@ To manage your brands:
 Once your brands are created, you can assign them to your products.
 
 1. Navigate to the product you want to assign a brand to by going to **FluentCart Pro → Products** and clicking on a product to open its editor.
-2. On the product edit page, look for the Brands section on the right-hand side of the screen.
-3. In the **Brands** box, you can assign one or more brands to the product by checking the box next to any existing brand in the list.
-4. After assigning the brand(s), click the **Update** or **Publish** button at the top right of the page to save your changes. The brand will now be associated with that product.
+2. In the **Product Taxonomies** card on the right, find **Brands**.
+3. Open the **Brands** dropdown and check one or more brands. To create a new one without leaving the page, click **+ Add Brand**, type the name, and click **Add**.
+4. After assigning the brand(s), click **Update** in the save bar to save your changes. The brand will now be associated with that product.
+
+<!-- TODO(screenshots): new image needed: capture the Product Taxonomies card on the product edit page with the Brands dropdown open (checkboxes visible) and the + Add Brand link. Update later. -->
