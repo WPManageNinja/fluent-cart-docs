@@ -18,7 +18,7 @@ Shippo bills your account in its own currency. At checkout, rates are shown in t
 
 ## Creating a Shipment and Buying a Label
 
-You buy labels from the order screen. Make sure **Enable Label Generation** is turned on in the Shippo settings first.
+You buy labels from the order screen. Make sure **Buy labels from the order page** is turned on in the Shippo settings first.
 
 1. Go to **FluentCart Pro > Orders** and open an order that contains physical items.
 2. In the **Order items** card, click **Create shipment**. The button appears while the order still has items left to ship.
@@ -44,7 +44,7 @@ Use the **Ship with** dropdown to choose a carrier.
 
 ![Screenshot of the Method step listing live Shippo rates with the Cheapest and Fastest tags](/images/shipping/shippo/shipment-step-method-shippo.webp)
 
-Each Shippo service shows its name, estimated delivery time, and price. FluentCart tags the cheapest option with **Cheapest** and the fastest with **Fastest**. FluentCart preselects a rate for you, using the first of these that applies: the same service the customer chose at checkout, the cheapest rate from your **Preferred Carrier** (if you set one in the Shippo settings), and then the cheapest rate overall. Select the service you want to purchase.
+Each Shippo service shows its name, estimated delivery time, and price. FluentCart tags the cheapest option with **Cheapest** and the fastest with **Fastest**. FluentCart preselects a rate for you, using the first of these that applies: the same service the customer chose at checkout, the cheapest rate from your **Preferred carrier** (if you set one in the Shippo settings), and then the cheapest rate overall. Select the service you want to purchase.
 
 Click **Refresh** to request the rates again. Shippo can return a different set of services each time, so refresh if a service you expect is missing.
 
@@ -111,7 +111,7 @@ In Test mode, labels are free and never shipped. Shippo only tracks its own test
 
 FluentCart reads tracking from Shippo in two ways:
 
-* **Automatically:** Shippo calls your webhook whenever a tracking status changes. This requires the webhook from [Connecting Shippo](/guide/shipping/connecting-shippo#step-3-adding-the-webhook-in-shippo).
+* **Automatically:** Shippo calls your webhook whenever a tracking status changes. This requires the webhook from [Connecting Shippo](/guide/shipping/connecting-shippo#step-3-turning-on-tracking-updates).
 * **Manually:** Click **Refresh tracking** on a shipment. There is a short wait of 15 seconds between refreshes, and the action is not offered once the shipment is Delivered or Returned.
 
 Shippo's tracking statuses are mapped to the shipment status like this:
@@ -144,7 +144,7 @@ The webhook only acts on tracking updates for shipments in your store. FluentCar
 FluentCart only contacts Shippo after you enable it and save an API token. It sends:
 
 * **At checkout:** Your store address, the customer's city, state, postal code and country, and the parcel weights and dimensions.
-* **When you buy a label:** Your store name and company name, your store address, Seller Phone and Seller Email, the order number as label metadata (for example "Order #123"), the customer's name, company, shipping address, phone and email, and the parcels. For international shipments, it also sends the item names, quantities, weights, and values for customs.
+* **When you buy a label:** Your store name and company name, your store address, sender Phone and Email from the **Sender** card, the order number as label metadata (for example "Order #123"), the customer's name, company, shipping address, phone and email, and the parcels. For international shipments, it also sends the item names, quantities, weights, and values for customs.
 * **When tracking is refreshed or a webhook arrives:** The label's transaction ID, or the tracking number and carrier.
 
 Your shipping setup is now ready to quote, label, and track orders through Shippo.
