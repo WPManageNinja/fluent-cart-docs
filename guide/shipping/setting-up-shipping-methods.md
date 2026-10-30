@@ -8,8 +8,8 @@ This guide will show you how to add and configure shipping methods for your ship
 
 Before you can add a method, you must have already created a shipping zone.
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro** > **Settings** > **Shipping Zones**.
-2.  Click on the **Shipping Zones** sub-menu.
+1.  From your WordPress dashboard, navigate to **FluentCart Pro** > **Settings** > **Shipping**. The **Carriers** page opens.
+2.  Click **Manage** next to **Manual / Other** to see your **Shipping Zones** list.
 3.  Find the shipping zone you want to add a method to and click on its name to edit it.
 4.  Inside the zone's settings, scroll down to the **Shipping Methods** section and click the **Add Shipping Method** button. You can also manage your existing shipping methods from this screen. To update a method's settings, click the Edit button located on the same row as its title.
 5.  This will open a pop-up window where you can configure the details of your new shipping method.
