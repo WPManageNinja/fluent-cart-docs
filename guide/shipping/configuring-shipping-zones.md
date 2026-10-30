@@ -5,14 +5,16 @@ Shipping zones are geographical regions that allow you to define specific shippi
 ## How to Add and Manage Shipping Zones
 
 ### 1. Navigate to Shipping Settings
-To begin, you must navigate to the shipping configuration area within FluentCart.
+Shipping zones belong to the **Manual / Other** carrier, so you open them from the Carriers page.
 
 1. From the main WordPress dashboard, locate the **FluentCart** section in the left-hand navigation menu and click on **Settings**.
-2. On the Settings page, select the **Shipping** tab from the left menu.
-3. Ensure the **Shipping Zones** sub-tab is selected. This screen will display a list of all your existing shipping zones.
+2. On the Settings page, click **Shipping** in the left menu. The **Carriers** page opens.
+3. Click **Manage** next to **Manual / Other**. The **Shipping Zones** list on this page shows all your existing shipping zones.
+
+![Screenshot of the Manual / Other carrier page with the Shipping Zones list](/images/shipping/shipping-carriers/manual-other-carrier.webp)
 
 ### 2. Add a New Shipping Zone
-1. Click the dark **Add Shipping Zone** button located at the top right of the screen.
+1. Click the **Add Shipping Zone** button above the zones list.
 2. You will be taken to the "Add Shipping Zone" setup page.
 
 ![Screenshot of Configuring Shipping Zones](/images/shipping/Configuring-Shipping-Zones/FluentCart-Shipping-Category-1.webp)
