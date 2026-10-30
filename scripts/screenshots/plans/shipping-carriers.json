@@ -1,0 +1,18 @@
+{
+  "outDir": "guide/public/images/shipping/shipping-carriers",
+  "viewport": { "width": 1600, "height": 1400 },
+  "steps": [
+    { "admin": "/settings/shipping/carriers" },
+    { "wait": 2500 },
+    { "shot": { "name": "carriers-list", "clip": "app", "crop": { "height": 1300 } } },
+
+    { "admin": "/settings/shipping/carriers/manual" },
+    { "wait": 9000 },
+    { "shot": { "name": "manual-other-carrier", "clip": "app", "crop": { "height": 1500 } } },
+
+    { "admin": "/settings/shipping" },
+    { "wait": 2000 },
+    { "shot": { "name": "shipping-zones-moved", "clip": "app", "crop": { "height": 1000 },
+        "arrows": [ { "target": { "selector": "a,button", "hasText": "Go to Manual carrier" }, "from": "right", "len": 140 } ] } }
+  ]
+}
