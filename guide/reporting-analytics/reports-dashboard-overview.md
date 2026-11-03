@@ -110,8 +110,7 @@ On the **Orders**, **Revenue**, **Refunds**, and **Subscriptions** charts, **Aut
 
 Pick a grouping explicitly when Auto is not what you want, such as reading a full year day by day to find a single spike.
 
-<!-- TODO(screenshot): Verify against the rebuilt Orders page and reshoot if it changed. A trend chart with the grouping dropdown open, showing Auto (Daily, Monthly, or Yearly), Daily, Monthly, and Yearly. -->
-![Screenshot of the Order Chart with the grouping dropdown open, showing Auto (Yearly), Daily, Monthly, and Yearly](/images/reporting-analytics/dashboard-overview/trend-chart-grouped.webp)
+![Screenshot of the Order Chart with the grouping dropdown open, showing Auto (Daily), Daily, Monthly, and Yearly](/images/reporting-analytics/dashboard-overview/trend-chart-grouped.webp)
 
 ## Choosing the Date Range
 
