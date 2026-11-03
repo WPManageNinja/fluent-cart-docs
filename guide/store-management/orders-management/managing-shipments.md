@@ -36,7 +36,7 @@ To ship an order in parts, ship only some of the items or units now and leave th
 
 Make sure **Ship with** is set to **Manual / Other**. FluentCart lists the shipping methods from your shipping zones that match this order's address, with their prices. Pick one of these methods, or choose **Custom price**.
 
-<!-- TODO(screenshot): Method step of the Create shipment panel with Manual / Other selected, showing the zone methods list, Custom price, and the Carrier Name, Shipping Cost, Tracking Number and Tracking URL fields. -->
+![Screenshot of the Method step of the Create shipment panel with Manual / Other selected, Custom price chosen, and the carrier, cost, and tracking fields filled in](/images/store-management/orders-management/shipment-manual-method.webp)
 
 * **A zone method:** The shipment uses the method's name and price, so the **Carrier Name** and **Shipping Cost** fields are hidden.
 * **Custom price:** Enter the cost yourself in **Shipping Cost**. Use `0` for free shipping. You can also type an optional **Carrier Name**, such as the courier you used.
@@ -59,7 +59,7 @@ Check the summary of items, carrier, tracking, and cost. A tracking number you l
 * **Add a note for the customer:** An optional **Note to customer** that is shown with this shipment, in the shipment email and on the customer's order page.
 * **Notify Customer:** Selected by default. When it is selected, the customer gets the shipment email for this shipment. Clear it to create the shipment silently.
 
-<!-- TODO(screenshot): Review step of the Create shipment panel for a Manual / Other shipment, showing the summary, Shipped now / Change, Add a note for the customer, and the Notify Customer checkbox. -->
+![Screenshot of the Review step of the Create shipment panel showing the summary, a note for the customer, and the Notify Customer checkbox](/images/store-management/orders-management/shipment-manual-review.webp)
 
 Click **Create Shipment**. The new shipment appears in the **Shipments** card on the order.
 
@@ -82,7 +82,7 @@ FluentCart updates the order's shipping status for you as you add shipments:
 
 The **Shipments** card appears on the order once it has at least one shipment. It has columns for **Status**, **Shipment**, **Tracking**, and **Cost**. Each row shows the method or carrier, the items shipped, and the date. A manual shipment without a tracking number reads **No tracking number**.
 
-<!-- TODO(screenshot): Shipments card on an order with two Manual / Other shipments (one with a tracking number, one showing No tracking number) after splitting the order. -->
+![Screenshot of the Shipments card on an order that was split into two shipments](/images/store-management/orders-management/shipments-card-split.webp)
 
 Click a row to expand its details, such as **Shipped via** and **Note to customer**.
 
