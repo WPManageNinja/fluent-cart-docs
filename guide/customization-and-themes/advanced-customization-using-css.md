@@ -407,7 +407,6 @@ If you need help with CSS variables or encounter issues:
 
 1. Check the [Troubleshooting & Support](/guide/troubleshooting-support/common-issues-faqs) section
 2. Use browser DevTools to inspect elements and identify variables
-3. Visit our [support forums](https://fluentcart.com/support) for community help
-4. Contact our support team for advanced customization assistance
+3. Contact our [support team](https://wpmanageninja.com/support-tickets/) for advanced customization assistance
 
 > **Note**: CSS customizations are theme-independent and will persist even if you switch themes, as long as FluentCart remains active.
