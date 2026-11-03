@@ -1,0 +1,13 @@
+{
+  "outDir": "guide/public/images/shipping/shippo",
+  "viewport": { "width": 1400, "height": 1500 },
+  "steps": [
+    { "front": "/item/casual-classic-hoodie-15-04-2026-09-01-24/", "waitUntil": "load" },
+    { "wait": 2500 },
+    { "click": { "text": "Buy Now" } },
+    { "wait": 12000 },
+    { "hideCss": "header, nav, .wp-block-navigation, footer" },
+    { "eval": "(()=>{const t=[...document.querySelectorAll('*')].find(e=>e.children.length===0&&e.textContent.trim()==='Shipping Options');let c=t;for(let i=0;i<6&&c;i++){if(c.querySelectorAll('input[name=fc_shipping_method]').length>=3){c.id='shot-shipping-options';return;}c=c.parentElement;}})()" },
+    { "shot": { "name": "checkout-shipping-options", "clip": { "element": "#shot-shipping-options", "pad": 24 }, "crop": { "top": 44, "height": 376 } } }
+  ]
+}

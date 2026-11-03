@@ -1,6 +1,29 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v2.3.0
+*Released on Nov 3, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Shippo live rates, labels, and tracking through the free Shipping For FluentCart add-on
+• Adds split shipments, a shipment email, and shipment tracking in the customer portal
+• Adds rebuilt reports with new Overview, Coupons, Payment Methods, Locations, and Installments pages
+```
+
+```markdown [🚀 Improvements]
+• Improves refunds with item quantities, partial shipping refunds, and a check that the gateway accepted the refund
+• Improves the default email layout, with separate Order # and Receipt # numbers
+• Improves security through routine audits and hardening
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes shipping class, weight-based, and percentage shipping rates
+```
+
+:::::
+
 ## FluentCart v2.2.0
 *Released on Oct 16, 2026*
 

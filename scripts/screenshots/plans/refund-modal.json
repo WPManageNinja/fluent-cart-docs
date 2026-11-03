@@ -1,0 +1,13 @@
+{
+  "outDir": "guide/public/images/store-management/processing-refunds",
+  "viewport": { "width": 1600, "height": 1000 },
+  "steps": [
+    { "admin": "/orders/5/view" },
+    { "wait": 2500 },
+    { "shot": { "name": "refund-button-on-order", "clip": "app", "crop": { "height": 760 },
+        "arrows": [ { "target": "button:has-text(\"Refund\") >> nth=0", "from": "left", "len": 170 } ] } },
+    { "click": "button:has-text(\"Refund\") >> nth=0" },
+    { "wait": 2500 },
+    { "shot": { "name": "refund-payment-modal", "clip": { "element": ".el-dialog", "pad": 24 } } }
+  ]
+}

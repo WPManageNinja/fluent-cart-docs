@@ -2,7 +2,7 @@
 
 With **Store Billing**, your store owns the renewal schedule instead of the payment gateway. FluentCart creates each renewal invoice itself, then either emails the customer a **Pay Now** link or charges their saved card for them.
 
-That makes recurring products work with any gateway you have enabled, including offline methods like bank transfer and cash on delivery, and it lets you change a subscriber's price, dates, or status whenever you need to.
+That makes recurring products work with almost any gateway you have enabled, including offline methods like bank transfer and cash on delivery, and it lets you change a subscriber's price, dates, or status whenever you need to.
 
 ## Ways to Bill a Subscription
 
@@ -31,9 +31,10 @@ Go to **FluentCart Pro → Settings → Store Settings → Subscriptions**. The 
 
 1.  Click **Change** and pick a mode:
 
-    * **Gateway Billing** *(Recommended)*: Stripe, PayPal, and other subscription-ready gateways charge customers automatically each cycle.
+    * **Gateway Billing** *(Recommended)*: Stripe, PayPal, and other subscription-ready gateways charge customers automatically each cycle. Selecting **Gateway Billing** reveals **Allow all payment methods**. Turn it on to let gateways without built-in recurring billing (bank transfer, Authorize.Net, SSLCommerz, and similar) sell subscriptions too. Their renewals are invoiced by email before each due date. With it on, the badge reads **Gateway Billing · All methods**.
     * **Store Billing:** Your store creates a renewal invoice before each due date, and customers pay through a link in the email.
 
+    <!-- TODO(screenshots): store-managed-subscription-2.webp is outdated: it shows only Store Billing selected. Retake (or add a second shot) with Gateway Billing selected so the Allow all payment methods checkbox is visible. Update later. -->
     ![Screenshot of the Renewal Billing dialog with Gateway Billing and Store Billing options](/images/product-types-creation/store-managed-subscription/store-managed-subscription-2.webp)
 
 2.  Selecting **Store Billing** reveals **Auto-charge saved payment methods**. Leave it off if you want customers to pay each invoice themselves. Turn it on to charge their saved payment method automatically on every due date, which **Stripe** and **PayPal** support. Expand **When are renewal orders created?** to see the schedule.
@@ -42,8 +43,9 @@ Go to **FluentCart Pro → Settings → Store Settings → Subscriptions**. The 
 
     ![Screenshot of the setting showing Store Billing as the current mode after applying](/images/product-types-creation/store-managed-subscription/store-managed-subscription-3.webp)
 
-    With auto-charge on, the badge reads **Store Billing · Auto-Charge** instead.
+    With auto-charge on, the badge reads **Store Billing · Auto-charge** instead.
 
+    <!-- TODO(screenshots): store-managed-subscription-4.webp is outdated: the badge shows "Store Billing · Auto-Charge" (capital C), the current UI reads "Store Billing · Auto-charge". Retake the Renewal Billing panel with auto-charge on. Update later. -->
     ![Screenshot of the setting showing Store Billing Auto-Charge as the current mode](/images/product-types-creation/store-managed-subscription/store-managed-subscription-4.webp)
 
 ::: info
@@ -55,9 +57,12 @@ Your mode and the gateway the customer checks out with together decide how renew
 | Renewal Billing mode | Gateway at checkout | How the renewal gets paid |
 |---|---|---|
 | Gateway Billing | Stripe, PayPal, Paddle, Mollie, Square, and other subscription-ready gateways | The gateway charges the customer |
-| Store Billing, auto-charge off | Any enabled gateway, offline methods included | The customer pays each invoice |
+| Gateway Billing, all payment methods allowed | A gateway without built-in recurring billing | The customer pays each invoice from the email |
+| Store Billing, auto-charge off | Offline methods, one-time gateways, and Stripe, PayPal, Mollie, or Authorize.Net | The customer pays each invoice |
 | Store Billing, auto-charge on | Stripe or PayPal | Your store charges the saved payment method |
 | Store Billing, auto-charge on | Any other gateway | The customer pays each invoice |
+
+In Store Billing mode, gateways that can only bill through their own subscription engine, such as **Paddle**, aren't offered at checkout for new subscriptions. When nothing is due at checkout (for example, a free trial), only offline methods are offered. With auto-charge on, Stripe and PayPal are offered too, because they can save the card without charging it.
 
 ## Keeping Staging Sites from Billing Customers
 
@@ -170,7 +175,9 @@ The fields worth knowing:
 * **Billing Cycle:** The recurring terms, such as *$103.50 per year until cancel*.
 * **Active Payment Gateway:** The gateway currently tied to the subscription.
 * **Initial Purchase ID:** The order that started it.
-* **Auto-cancellation:** The payment count after which it stops on its own, or `---` when it renews indefinitely.
+* **Installment Progress:** Shown on subscriptions with a fixed number of payments, as payments made / total payments (for example, *2 / 6*).
+* **Auto-cancellation:** The date the subscription ends on its own, or `---` when it has no end date.
+* **Started:** The date the subscription began.
 * **Next renewal:** The amount due and the date it falls due.
 * **Vendor Customer ID:** The customer's ID at the gateway, shown when the gateway stores one. Handy when you need to look them up in Stripe or PayPal.
 
@@ -183,9 +190,9 @@ Pick **Edit Subscription** to change the recurring terms. You can do this on sto
 ![Screenshot of the Edit Subscription dialog with renewal amount, billing times, interval, status, and next billing date](/images/product-types-creation/store-managed-subscription/store-managed-subscription-7.webp)
 
 * **Next Renewal Amount:** What the customer pays from the next renewal onward. Use it to apply a price change or a negotiated rate.
-* **Billing Times:** How many payments the subscription runs for. `0` means unlimited; `1` or more stops it after that many payments.
+* **Billing Times:** How many payments the subscription runs for. `0` means unlimited; `1` or more stops it after that many payments. You can't set it lower than the number of payments already made.
 * **Billing Interval:** How often it renews. Changing it also changes how early invoices are created and how long the grace period lasts.
-* **Status:** Choose **Active**, **Paused**, **Trialing**, **Past Due**, **Expired**, or **Completed**.
+* **Status:** Choose **Active**, **Paused**, **Trialing**, **Past Due**, **Expired**, or **Completed**. Choosing **Paused** when pausing isn't allowed is refused with *This subscription cannot be paused.*
 * **Next Billing Date:** The exact date and time the next renewal falls due. Push it out to give someone extra time, or pull it in to bill sooner.
 
 ![Screenshot of the Status dropdown showing Active, Paused, Trialing, Past Due, Expired, and Completed](/images/product-types-creation/store-managed-subscription/store-managed-subscription-8.webp)
@@ -224,11 +231,11 @@ If the attempt is declined, nothing is lost. The invoice stays open and the norm
 
 ### Other Actions in the Menu
 
-* **Pause Subscription:** Halt billing temporarily. The menu then offers **Resume Subscription**.
+* **Pause Subscription:** Halt billing temporarily. It's available only while the subscription is **Active** or **Trialing** and its next billing date is still ahead. A **Past Due** subscription can't be paused, so the open invoice stays payable. The menu then offers **Resume Subscription**, which returns the subscription to **Active**, or to **Past Due** if the billing date has passed while it was paused.
 * **Cancel Subscription:** Stop the subscription and its schedule.
-* **Reactivate Subscription:** Bring a cancelled, paused, or expired subscription back. It replaces the pause and cancel actions once a subscription is no longer running.
+* **Reactivate Subscription:** Bring a cancelled, expired, or past due subscription back. This action requires FluentCart Pro. A paused subscription uses **Resume Subscription** instead.
 * **Skip Next Period:** Move the next billing date forward one cycle without charging, giving the customer a free period.
-* **Send Renewal Reminder:** Email a reminder about the open renewal by hand. On a subscription still in its trial it reads **Send Trial End Reminder**.
+* **Send Renewal Reminder:** Email a reminder about the open renewal by hand. On a subscription still in its trial it reads **Send Trial End Reminder**. The item appears only when reminders are turned on under **Reminders** and the matching email is enabled.
 * **Charge Now:** On an auto-charge subscription with an invoice already open, run one more attempt straight away. The confirmation names the card it will use.
 
 ## What Your Customers See

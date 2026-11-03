@@ -1,13 +1,8 @@
----
-title: "Creating Product Bundles"
-description: "A comprehensive guide on how to add and configure product bundles in FluentCart to sell multiple items as a single package."
----
-
 # Creating Product Bundles
 
 The **Bundles** feature in **FluentCart** allows you to group multiple products into a single bundle and sell them together as one offer. You can create bundles using digital products or physical products, making it easy to build starter packs, special deals, or upgrade offers.
 
-Each product in a bundle still works independently, licenses, and fulfillment rules. This means you get the benefits of bundling without losing control over individual products.
+Each item in a bundle keeps its own downloads, licenses, and fulfillment rules. This means you get the benefits of bundling without losing control over individual products.
 
 In this guide, you’ll learn how to create, configure, and manage bundle products in FluentCart step by step.
 
@@ -36,10 +31,13 @@ In this guide, you’ll learn how to create, configure, and manage bundle produc
 
 ### 2. Map Bundle Items
 
-This section is unique to bundles and allows you to link the individual products that make up the package.
+This section is unique to bundles and allows you to link the individual products that make up the package. Mapping bundle items requires FluentCart Pro; without Pro this card shows **This feature is only available for pro version.**
 
-1.  Scroll down to the **Map bundle items** section.
-2.  Under **Bundle Items**, use the dropdown to select the existing products you wish to include in this bundle.
+To choose what goes into the bundle:
+
+1.  Scroll down to the **Map bundle items** card.
+2.  Each row is one of the bundle's variations (for a Simple bundle there is one row). In the **Bundle Items** column, open the dropdown and select the product variations to include. You can pick several. Other bundles can't be added.
+3.  Close the dropdown. FluentCart saves the selection immediately and confirms with **Bundle info saved successfully**.
 
 > [!NOTE]
 > Each bundled product retains its own identity under the hood, ensuring that reporting, downloads, and licenses continue to work correctly for each item in the bundle.
@@ -56,6 +54,7 @@ This section helps you organize and tag your bundle for better storefront filter
 * **[Product Categories:](/guide/product-types-creation/creating-managing-product-categories/index)** Assign the bundle to relevant categories (e.g., "Gift Sets"). You can select existing categories or click **+ Add Category** to create one instantly.
 * **[Product Brand:](/guide/product-types-creation/creating-managing-product-brand):** Associate the bundle with a specific brand using the dropdown or the **+ Add Brand** button.
 
+   <!-- TODO(screenshots): map-bundle-items-3.webp is outdated: it shows a standalone Tax Class sidebar card and a Fulfillment Type dropdown that no longer exist. Retake the bundle edit screen with the Map bundle items card (per-variation rows, Bundle Items dropdown open with several variations selected). Update later. -->
    ![Screenshot of Product Edit Screen (Physical Product Example)](/images/product-types-creation/product-bundles/map-bundle-items-3.webp)
 
 ### 5. Pricing & Variations
@@ -93,7 +92,7 @@ Click the chevron to expand:
 Assign a unique tracking code to this bundle (e.g., `BUNDLE-STARTER-01`). Click **Generate SKU** to auto-generate one. Accepts up to 30 characters.
 
 **Direct Checkout** *(Link)*
-Generates a unique URL that takes customers straight to checkout with this bundle pre-loaded. Great for promotional landing pages, email campaigns, or limited-time offers where you want to reduce every step between interest and purchase.
+Copies a URL that takes customers straight to checkout with this bundle pre-loaded. Great for promotional landing pages, email campaigns, or limited-time offers where you want to reduce every step between interest and purchase. The link is only available once the bundle is published (or private); it doesn't appear while the bundle is a draft.
 
 ![Screenshot of Simple Price for Bundle](/images/product-types-creation/product-bundles/simple-price.gif)
 
@@ -119,10 +118,11 @@ Each row in the table represents one bundle tier:
 Click **+ Add more** at the bottom to add a new bundle tier. Fill in the title and price inline, then use the pencil icon for the rest.
 
 The **three-dot icon** gives you:
-- **Duplicate** — Copy this bundle tier as a starting point for a new one
-- **Direct Checkout** — Generate a buy-now link that bypasses the product page entirely, sending customers straight to checkout for this specific tier
-- **Delete** — Remove this bundle tier permanently
-- **Skip inventory** — Exclude this tier from stock tracking if you don't need to limit how many bundles you sell
+- **Skip inventory:** Stop tracking stock for this tier if you don't need to limit how many bundles you sell (shown only when the product's **Inventory Management** is on)
+- **Duplicate:** Copy this bundle tier as a starting point for a new one
+- **Copy Variation ID:** Copy the tier's variation ID for shortcodes, custom code, or integrations
+- **Direct Checkout:** Copy a buy-now link that sends customers straight to checkout for this specific tier. It's unavailable while the product is a draft.
+- **Delete:** Remove this bundle tier permanently (not shown when only one tier is left)
 
 > **📝 Note:** Quick edits to **Title**, **Price**, and **Compare at price** can be made directly in the table rows. To set up images, inventory tracking, and SKUs per tier — click the pencil icon to open the full editor.
 
@@ -152,6 +152,8 @@ Toggle **Inventory** on if you want to limit how many of this bundle tier can be
 - **On Hold** — Units reserved in pending orders (read-only)
 - **Delivered** — Units fulfilled (read-only)
 
+The switch works only when the product's **Inventory Management** is on. If it's off, the box shows a notice with a switch you can use to turn on inventory for the whole product. The **Inventory** box is available for **Simple Variations** and **Advanced Variations**, and only while **Stock Management** is enabled in settings.
+
 **SKU**
 Expand the collapsible **SKU** section to assign a unique tracking code to this bundle tier (e.g., `BUNDLE-PRO-01`). Click **Generate SKU** to auto-generate one.
 
@@ -168,24 +170,32 @@ For the complete field-by-field reference on every pricing option — including 
 
 ### 6. Inventory Management
 
-To track stock, ensure **Stock Management** is enabled in your settings.
+To track bundle stock, make sure **Stock Management** is enabled in settings and turn on the **Inventory Management** switch in the product's inventory card. Once it's on, you can work with these tools:
 
 * **Inventory Table:** Displays **Total Stock**, **Available** units, and units **On hold** or **Delivered**.
 * **Adjusting Stock:** Click the adjustment icon in the **Total Stock** field to add or remove inventory.
 
+::: info
+If a bundled item tracks stock, the bundle can't be bought in a quantity larger than that item's available stock. Customers see an out-of-stock message instead.
+:::
+
 ### 7. Shipping and Tax Classes
 
-* **Shipping Class:** Assign a class to apply location-based shipping costs at checkout. This works with your defined Shipping Zones and Methods.
-* **Tax Class:** Select a pre-configured tax class to automatically apply the correct tax rate to the bundle during checkout.
+* **Shipping Class:** Assign a class to apply location-based shipping costs at checkout. This works with your defined Shipping Zones and Methods. The **Shipping Class** card is shown only when the bundle has a physical variation.
+* **Tax Class:** Set per variation in the **Tax** section of the pricing form (for **Simple** bundles in the **Pricing** panel, for variations in the variation editor). It appears only when tax is enabled for your store.
 
 
 
 ### 8. Publishing Settings
 
-* **Status:** Set the product to **'Publish'** to make it live or **'Draft'** to keep it hidden while editing.
+* **Status:** Choose **Draft** (hidden while you edit), **Scheduled** (goes live on the date you pick), **Private (Invisible except Admin)** (hidden from the store but still purchasable through a direct checkout link), or **Publish** (live). You can change the status once pricing is set.
 * **URL Slug:** This is the unique web address for the bundle. FluentCart creates this automatically, but you can edit it manually.
 * **Limit purchases to 1 item per order:** Check this box if the bundle is an exclusive item or limited offer.
 
 Once all details are configured, click the **"Update"** or **"Save"** button at the top right to make your bundle live.
+
+::: info
+Bundles don't have their own **Downloadable Asset(s)** section or license settings. Downloads and licenses come from the bundled items. Upgrade paths aren't available for bundle products.
+:::
 
 ---

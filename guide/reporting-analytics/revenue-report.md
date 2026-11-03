@@ -1,60 +1,70 @@
 # Revenue Report
 
-The **Revenue Report** shows how your sales turn into money, line by line: product sales, discounts, refunds, net sales, and the shipping, fees, and taxes collected on top. Use it to see what your store really earned, how it changes over time, and how much comes from one-time orders, new subscriptions, and renewals.
+The **Revenue Report** in FluentCart shows a clear breakdown of your store’s earnings. You can use it to track sales over time, see where your income comes from, and check how refunds, taxes, and discounts affect your total revenue.
 
-## Accessing the Revenue Report
+#### Accessing the Revenue Report
 
-Go to your WordPress dashboard, then go to **FluentCart > Reports** in the side menu, and click on the **Revenue** tab.
+Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview)** in the side menu, and click on the **Revenue** tab.
 
-The date range, comparison period, currency, and **Filters** menu work as described in [How Reports Count](/guide/reporting-analytics/how-reports-count). The whole Revenue report is free. FluentCart Pro adds the choice of comparison period and the **Filters** menu.
+### Report Filters and Controls
 
-## The Sales Breakdown
+The top of the dashboard gives you key controls to choose what data appears in the report.
 
-The cards read from left to right like a statement. Each line leads to the next. Hover over the info icon beside a card to read its definition.
+* **Date Filter:** Pick a preset such as **Last 30 days** or **This month**, or choose **Custom…** to set your own dates.
+* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data. Each option in the list shows its own dates.
+* **Currency:** Appears when your orders are in more than one currency. See [Viewing Reports in More Than One Currency](/guide/reporting-analytics/reports-dashboard-overview#viewing-reports-in-more-than-one-currency).
+* **Filters:** Click **Filters** to break down the report by options like **Order Type** or specific **Products**. Applied filters appear as chips below the filter bar, and **Clear all** removes them.
+* **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
 
-* **Gross Sales:** Product sales before discounts, refunds, shipping, and tax, on paid, partially paid, and refunded orders created in the range.
-* **− Discounts:** Coupon and manual discounts on these orders.
-* **− Refunds:** Refunds on orders placed in the range, whenever they were refunded, without the tax, shipping, and fees refunded with them. The Refunds report counts all money refunded during the range instead.
-* **= Net Sales:** Gross sales less discounts and refunds. Shipping, fees, and tax are not part of it.
-* **+ Shipping:** Shipping charged on these orders, less refunded shipping, before shipping tax.
-* **+ Fees:** Payment and other fees charged on these orders, less refunded fees.
-* **+ Taxes:** Tax collected on these orders, including tax on shipping, less the tax share of refunds.
-* **= Total Sales:** Net sales plus shipping, fees, and taxes. This is what customers paid, less refunds.
+<!-- TODO(screenshot): Revenue report with the one-row filter bar (date button, compare dropdown, Filters button) and the new summary cards (Gross Sales, Discounts, Refunds, Net Sales, and so on). The current image shows the old filter bar. -->
+	![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/advanced-filter.webp)
 
-**Shipping**, **Fees**, and **Taxes** appear only when your orders have them. Without any of the three, **Total Sales** equals net sales and is hidden.
+### Key Revenue Metrics
 
-The [net sales](/guide/reporting-analytics/how-reports-count#net-sales) figure here is the same one every other report uses.
+At the top of the report, you’ll see a quick summary of your store’s sales activity. Each number shows the total for the selected date range, along with the change against the comparison period.
 
-![Screenshot of the Revenue report cards from Gross Sales to Total Sales](/images/reporting-analytics/revenue/revenue-summary-cards.webp)
+* **Gross Sales:** Product sales before discounts, refunds, shipping, and tax, on paid, partially paid, and refunded orders created in the period.
+* **Discounts:** Coupon and manual discounts on these orders.
+* **Refunds:** Refunds on orders placed in the period, whenever they were refunded. Tax, shipping, and fees refunded with them are left out here, because they come off their own lines. The **Refunds** report counts all money refunded during the period instead, so the two figures can differ.
+* **Net Sales:** Gross sales less discounts and refunds. Shipping, fees, and tax are not part of it.
+* **Shipping:** Shipping charged on these orders, less refunded shipping, before shipping tax.
+* **Fees:** Payment and other fees charged on these orders, less refunded fees.
+* **Taxes:** Tax collected on these orders, including tax on shipping, less the tax share of refunds.
+* **Total Sales:** Net sales plus shipping, fees, and taxes: what customers paid, less refunds.
 
-## Revenue Chart
+The **Shipping**, **Fees**, and **Taxes** cards appear only when your orders have them. Without any of the three, **Total Sales** equals **Net Sales** and its card is hidden too. Hover over the info icon beside any metric to read its definition.
 
-The **Revenue Chart** draws **Net Sales** over the range. With a comparison period, **Compare Net Sales** appears as a dotted line.
+### Detailed Revenue Analysis
 
-* **Discounts** and **Refunds:** Click them in the legend to add them to the chart. They are off by default.
-* **Grouping:** The dropdown sets the [chart grouping](/guide/reporting-analytics/how-reports-count#chart-grouping).
-* **Chart type:** Switch between a line chart and a bar chart, or zoom in.
+Below the key metrics, you’ll find detailed breakdowns of your store’s income. This section helps you see how well your store is performing.
 
-![Screenshot of the Revenue Chart with the compared Net Sales line and the grouping dropdown](/images/reporting-analytics/revenue/revenue-chart.webp)
+* **Revenue Chart:** This chart shows your **Net Sales** over time, with **Compare Net Sales** for the comparison range drawn beside it. **Discounts** and **Refunds** are off by default: click them in the legend to add them to the chart.
+* **Revenue Breakdown:** This table gives a summary of your store by year, with the net sales of the comparison period and the change beside it.
+    * **Year:** Click the arrow at the start of a row to expand it into a row for each date in your range, each with the same columns.
+    * **Order Count, Gross Sales, Discounts, Refunds, Net Sales:** The totals for that row.
+    * **Taxes, Shipping, Total Sales:** Shown when your orders have tax, shipping, or other extras.
+    * **Compare Net Sales:** The net sales of the matching comparison period.
+    * **Change (%):** The percentage of change between the two, color-coded green or red.
 
-## Revenue Breakdown
+Click a column heading to sort the table. Numeric columns sort by their value. Click the download icon above the table to export it as a CSV file.
 
-The **Revenue Breakdown** table lists the same lines by year. Click the arrow at the start of a year to expand it into one row per day, month, or year, following the chart grouping.
+<!-- TODO(screenshot): Revenue Chart with the Net Sales line and the Revenue Breakdown table with the Discounts, Net Sales and Compare Net Sales columns. The current image shows the old Revenue columns. -->
+   ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/revenue-analysis.webp)
 
-* **Year** or **Date**, **Order Count**, **Gross Sales**, **Discounts**, **Refunds**, and **Net Sales**.
-* **Taxes**, **Shipping**, and **Total Sales:** Shown when your orders have tax or shipping.
-* **Compare Net Sales** and **Change (%):** Shown when a comparison period is set. Hover over a compared amount to see the date it is compared with.
+#### Net Sales by Order Type
 
-Click a column heading to sort by it. The download icon exports the table as a CSV file.
+The **Net sales by order type** table shows where your net sales come from: one-time orders, new subscriptions, renewals, installment sign-ups, and installment payments. The rows add up to your net sales.
 
-![Screenshot of the Revenue Breakdown table with one year expanded into months](/images/reporting-analytics/revenue/revenue-breakdown.webp)
+* **Order type:** The kind of sale.
+* **Orders:** The number of orders of that type.
+* **Net Sales:** The net sales from those orders.
+* **Share:** That type's share of your total net sales.
+* **Net Sales per Order:** Net sales divided by orders.
+* **Change (%):** The change against the comparison period. This column is hidden when you choose **No comparison**.
 
-## Net Sales by Order Type
+<!-- TODO(screenshot): Net sales by order type table. It replaces the Grouped By table shown in the current net-revenue image. -->
+    ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/net-revenue.webp)
 
-The last card splits net sales by order type: **One-time**, **New subscription**, **Renewal**, **Installment sign-up**, and **Installment payment**. The rows add up to net sales.
+To see revenue by country or by payment method, open the [Locations](/guide/reporting-analytics/locations-report) or [Payment Methods](/guide/reporting-analytics/payment-methods-report) report.
 
-The table shows **Orders**, **Net Sales**, **Share**, and **Net Sales per Order** for each type, with **Change (%)** when a comparison period is set. For a subscription store, this shows at a glance how much of your income is recurring and how much is new.
-
-![Screenshot of the Net sales by order type card](/images/reporting-analytics/revenue/revenue-by-order-type.webp)
-
-The Revenue Report now shows you exactly how your sales become the money you keep.
+The Revenue Report shows how your store is earning over time. You can easily see what’s working, understand your store’s earnings, and plan to make it grow.

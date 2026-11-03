@@ -22,13 +22,22 @@ This section displays a list of all existing automation feeds created for this p
 
 * **Status:** A simple toggle switch allows you to instantly turn any integration feed **On** or **Off** without deleting the setup.
 * **Integration:** You will see the name and icon of the connected module (e.g., **FluentCRM** or **FluentCommunity**).
-* **Triggers:** Triggers are specific events in FluentCart that start an automation for this product. You can choose the exact point in the customer journey, like when an order is paid, refunded, shipped, or when a subscription changes status, to run your integration feed.
+* **Title:** The feed name you gave it, so you can tell several feeds for the same service apart.
+* **Triggers:** Triggers are specific events in FluentCart that start an automation for this product. Pick one or more events under **Event Trigger**: **Order Paid (Payment / Subscription)**, **Order Canceled**, **Order Refunded (Full)**, **Subscription Activated**, **Subscription Reactivated**, **Subscription Canceled**, **Subscription Renewed**, **Subscription End of Term (Completed)**, **Subscription Expired / End of Access Validity**, **Order Shipped**, or **Order Delivered**.
+
+Use the edit and delete buttons at the end of each row to change or remove a feed.
 
 #### Creating a New Integration Feed
 
-Click the **Add Integration** button to set up a new automation rule. You will be given options to connect to installed Fluent products:
+Click **Add Integration** and pick a service from the dropdown. The list only includes integrations that are ready to use. For example, **FluentCRM**, **FluentCommunity**, **LearnDash**, and **LifterLMS** appear only when that plugin is active.
 
-* [**FluentCRM Integration:**](/guide/integrations/fluentcrm-integration) This allows you to automatically manage the customer who buys this product in FluentCRM. You can configure actions such as **Adding a user to a specific list**, **Removing a user from a list**, **Applying a Tag**, or **Removing a Tag**, based on the purchase.
-* [**FluentCommunity Integration:**](/guide/integrations/fluentcommunity-integration) This allows you to automatically manage user access to your community or courses. You can set actions such as **Adding a user to a specific Space** or **Course**, or **Removing a user from a Space** or **Course**.
+* [**FluentCRM**](/guide/integrations/fluentcrm-integration): **Add to Lists**, **Add to Tags**, **Remove From Lists**, **Remove From Tags**, plus an optional contact note and double opt-in.
+* [**FluentCommunity**](/guide/integrations/fluentcommunity-integration): **Add to Spaces**, **Add to Courses**, **Remove From Spaces**, **Remove From Courses**.
+* [**LearnDash**](/guide/integrations/learndash-integration) *(Pro)*: Enrol buyers in LearnDash courses.
+* [**LifterLMS**](/guide/integrations/lifterlms-integration) *(Pro)*: Enrol buyers in LifterLMS courses.
+* **WP User Create/Update** *(Pro)*: Create or update the buyer's WordPress user account and assign roles.
+* [**Webhook**](/guide/integrations/webhook-integration) *(Pro)*: Send the order data to any URL.
+
+If no integration is ready, the tab shows a message with a **Configure Modules** button instead of **Add Integration**. Activate the plugin you want to connect, or set it up under **FluentCart Pro > Integrations**, first.
 
 

@@ -1,0 +1,28 @@
+{
+  "outDir": "guide/public/images/shipping/shippo",
+  "viewport": { "width": 1600, "height": 1000 },
+  "steps": [
+    { "admin": "/orders/5/view" },
+    { "wait": 1500 },
+    { "click": "button:has-text(\"Create shipment\")" },
+    { "wait": 1800 },
+    { "click": { "role": "button", "name": "^Continue$" } },
+    { "wait": 3000 },
+    { "click": ".fct-shipment-ship-with .el-select" },
+    { "wait": 600 },
+    { "click": { "selector": ".el-select-dropdown__item", "hasText": "Shippo" } },
+    { "wait": 12000 },
+    { "click": ".fct-shipment-rate:has-text(\"Ground Advantage\")" },
+    { "wait": 800 },
+    { "shot": { "name": "shipment-step-method-shippo", "clip": { "element": ".fct-shipment-drawer", "pad": 0 } } },
+
+    { "viewport": { "width": 1600, "height": 640 } },
+    { "click": { "role": "button", "name": "^Continue$" } },
+    { "wait": 1500 },
+    { "shot": { "name": "shipment-step-review-shippo", "clip": { "element": ".fct-shipment-drawer", "pad": 0 } } },
+
+    { "click": ".fct-shipment-drawer .el-button--primary:has-text(\"Buy label\")" },
+    { "wait": 900 },
+    { "shot": { "name": "shipment-buy-label-confirm", "clip": { "x": 1040, "y": 360, "width": 560, "height": 280 } } }
+  ]
+}

@@ -1,61 +1,90 @@
 # Payment Methods Report
 
-The **Payment Methods** report compares the gateways your customers pay with. It shows how much each one takes, how often its payments succeed, how many orders fail, and how much recurring revenue is at risk from failing renewals. Use it to catch a gateway problem early and to keep your dispute rate low.
+The **Payment Methods Report** shows how each of your payment gateways performs. It answers questions like which gateway brings in the most money, where refunds pile up, which gateway declines the most charges, and how much recurring revenue is at risk from subscriptions whose renewal payment is failing.
 
 ## Accessing the Payment Methods Report
 
-Go to your WordPress dashboard, then go to **FluentCart > Reports** in the side menu, and click on the **Payment Methods** tab.
+Go to your WordPress dashboard, then go to **FluentCart** > [Reports](/guide/reporting-analytics/reports-dashboard-overview) and click on the **Payment Methods** tab in the reports menu.
 
-The date range, comparison period, currency, and **Filters** menu work as described in [How Reports Count](/guide/reporting-analytics/how-reports-count).
+You need permission to view reports to open this page.
 
-## Key Payment Metrics
+## Report Filters and Controls
 
-Four cards sum up the range. Hover over the info icon beside a card to read its definition.
+The filter bar at the top of the page decides which orders the report covers.
 
-* **Net sales:** What customers paid in the range, less refunds and tax.
-* **Payment success rate:** Paid orders out of paid orders and the declined charges the gateway recorded. Some gateways, such as PayPal, retry on their side and record no declines.
-* **Refund rate:** Orders in the range refunded in part or in full.
-* **MRR at risk (now):** Monthly recurring revenue of the subscriptions whose renewal payment is failing today. The date range does not apply.
+* **Date range:** Choose a preset such as **Last 30 days** or **This month**, or pick **Custom…** to set your own dates.
+* **Compare:** Pick the earlier period your figures are measured against, such as **vs Previous period**, or choose **No comparison**. Changing it is a FluentCart Pro feature.
+* **Currency:** Appears when your orders are in more than one currency. You can read one currency at a time, or pick **All currencies** to combine everything in your base currency.
+* **Filters:** Narrow the report by **Order Type** or specific **Products**. This is a FluentCart Pro feature.
+
+The [shared report controls](/guide/reporting-analytics/reports-dashboard-overview#comparing-with-an-earlier-period) work the same way on every report.
+
+<!-- TODO(screenshot): Payment Methods report from the top, showing the filter bar and the four summary cards (Net sales, Payment success rate, Refund rate, MRR at risk (now)) with change badges. -->
+
+## Key Metrics
+
+Four summary cards at the top give you the store-wide picture for the selected period. Hover over the info icon beside each title to see how it is counted.
+
+* **Net sales:** What customers paid in this period, less refunds and tax.
+* **Payment success rate:** Paid orders out of paid orders plus the declined charges your gateways recorded. Some gateways, such as PayPal, retry failed payments on their side and record no declines, so their success rate can read higher.
+* **Refund rate:** The share of this period's orders that were refunded in part or in full.
+* **MRR at risk (now):** The monthly recurring revenue of subscriptions whose renewal payment is failing today. The date range does not apply, so this card shows no change badge.
+
+The other cards show a badge with the change against the compared period. Hover over the badge to see the previous value. Rates change in percentage points, shown as **pts**, and a rising refund rate shows in red.
 
 ## Net Sales by Payment Method
 
-This chart shows the net sales of the orders each gateway took, period by period.
+The **Net Sales by Payment Method** chart shows the net sales of the orders each gateway took, period by period. Each gateway is a colored segment in a stacked bar, so the full bar is your total net sales and each segment is one gateway's share. The timeline groups by day, month, or year automatically from your date range. Only gateways with orders in the period are drawn.
 
-![Screenshot of the Payment Methods cards and the Net Sales by Payment Method chart](/images/reporting-analytics/payment-methods/payment-methods-overview.webp)
+<!-- TODO(screenshot): The Net Sales by Payment Method stacked bar chart with two or more gateways in the legend. -->
 
-## The Payment Methods Table
+## Payment Methods Table
 
-The table has one row per payment method and a **Total** row. Its columns fall into two groups.
+The table below the chart gives you one row per payment gateway, with a **Total** row at the bottom. Columns are grouped under two headings, and you can click any column header to sort by it.
 
-**Sales:**
+### Sales
 
-* **Orders**, **Net**, and **Share of Net**.
+* **Orders:** The number of paid orders the gateway took in this period.
+* **Net:** Net sales from those orders, after refunds and tax.
+* **Share of Net:** The gateway's net sales as a share of all net sales.
 * **From Renewals:** Net sales from subscription renewals and installment payments.
-* **Refunds**, **Refund Rate**, and **Average Order**.
+* **Refunds:** The amount refunded on the gateway's orders.
+* **Refund Rate:** The share of the gateway's orders that were refunded in part or in full.
+* **Average Order:** The gateway's net sales divided by its orders.
 
-**Risk:**
+### Risk
 
 * **Payment Success:** Paid orders out of paid orders and recorded declined charges.
-* **Declined Charges:** Declined charges the gateway recorded in the range. Some gateways, such as PayPal, record none.
-* **Failed Orders:** Orders created in the range whose payment failed.
-* **Failing Subscriptions (Now):** Subscriptions whose renewal payment is failing today, by the payment method they renew with.
-* **MRR at Risk (Now):** Monthly recurring revenue of those failing subscriptions.
+* **Declined Charges:** Declined charges the gateway recorded in this period. Some gateways, such as PayPal, record none.
+* **Failed Orders:** Orders created in this period whose payment failed.
+* **Failing Subscriptions (Now):** Subscriptions whose renewal payment is failing today, grouped by the payment method they renew with. The date range does not apply.
+* **MRR at Risk (Now):** The monthly recurring revenue of those failing subscriptions, as on the Subscriptions report.
 
-Click a heading to sort, and use the download icon to export the table as a CSV file.
+A few rows are worth knowing about. A payment made with a saved card is counted under the gateway that charged it. A gateway you have since removed still appears under a readable version of its name, and orders with no recorded gateway appear as **Unknown**.
 
-![Screenshot of the payment methods table with Sales and Risk columns](/images/reporting-analytics/payment-methods/payment-methods-table.webp)
+<!-- TODO(screenshot): The Payment Methods table showing the Payment Method column, the Sales and Risk column groups, and the Total row. -->
 
-## Disputes and Card Brands (Pro)
+## Disputes and Card Brands *(FluentCart Pro)*
 
-FluentCart Pro adds two sections:
+With FluentCart Pro, two more sections appear below the table:
 
-* **Disputes:** The **Dispute rate** card, and a table of **Disputed Orders** and **Disputes Lost** for each payment method. A dispute is an order whose payment the customer disputed. Card networks start to monitor a store at about 0.75%. Disputes can come months later, so a recent period can still rise.
-* **Card Brands and Methods:** How customers paid, such as card brands and wallets, where the gateway records it, with **Orders**, **Net**, and **Share of Net**.
+* **Disputes:** Your store's overall **Dispute rate**, its change in points against the previous period, and a table of **Disputed Orders** and **Disputes Lost** (with the amount lost) for each payment method. Card networks start to monitor a store at a dispute rate of about 0.75%. Disputes can arrive months after the order, so the rate for a recent period can still rise.
+* **Card Brands and Methods:** How customers paid, such as each card brand or a bank debit, with **Orders**, **Net**, and **Share of Net** for each. The subtitle tells you what share of orders had this detail recorded by the gateway. The section is hidden when none of your gateways record it.
 
-::: info Disputes and card brands require FluentCart Pro
-Without Pro, this part of the page shows a locked preview with sample data.
+Without Pro, this area shows a preview with sample data. If Pro is active but too old to include these sections, the preview asks you to update FluentCart Pro.
+
+<!-- TODO(screenshot): With FluentCart Pro active, the Disputes card with its dispute rate and per-gateway table, and the Card Brands and Methods table below it. -->
+
+::: info
+Even without Pro, the [Overview](/guide/reporting-analytics/reports-dashboard-overview) warns you in its **Needs Attention** card when your store's dispute rate rises above 0.75%.
 :::
 
-![Screenshot of the Disputes table and the Card Brands and Methods table](/images/reporting-analytics/payment-methods/payment-methods-disputes.webp)
+## Exporting the Report
 
-The Payment Methods report now shows you how well each gateway turns checkouts into paid orders.
+Click the download icon (**Export CSV**) above the table to save it as `payment-methods.csv`. The file has one row per gateway plus the total, and it includes gross sales and the amount of declined charges, which the table on screen does not show.
+
+## Empty and Error States
+
+When no orders match the selected period and filters, the chart shows **No orders in this period**. The table shows the same message, and the export button is disabled, when no gateway has anything to report. If the report cannot load, the message **Failed to load the payment methods report** appears.
+
+With the Payment Methods Report, you can see which gateways earn their place at checkout and catch payment problems before they cost you recurring revenue.

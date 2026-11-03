@@ -31,7 +31,8 @@ The notifications are grouped below by what they cover.
 
 **Shipping**
 
-* **Send mail to customer when shipping status changed to shipped:** Informs the customer that their physical order has been shipped.
+* **Send mail to customer when a shipment is created:** Sends the customer the tracking details of one shipment when you create it with **Notify Customer** selected. It has no toggle in the list. Instead it reads "Sent when "Notify customer" is ticked", because the checkbox on each shipment decides whether it goes out. See [The Shipment Email](#shipment-email) below.
+* **Send mail to customer when shipping status changed to shipped:** Informs the customer that their physical order has been shipped. It is not sent while a shipment is being created, because the shipment email already covers that news.
 * **Send mail to customer when shipping status changed to delivered:** Confirms to the customer that their order has been marked as delivered.
 
 **Subscription renewals**
@@ -99,6 +100,30 @@ You have two options for the email's main content:
 * **Default Body:** This is the standard, pre-written email content provided by FluentCart. It contains all the essential information for that specific notification and is ready to use out of the box.
 * **Customized Body:** Select this option to take full control over the email's content. This is perfect for matching the email's design and tone to your brand's voice.
 
+#### The Default Email Layout
+
+Emails that use the **Default Body** share one layout. The email sits in a white card with rounded corners on a light grey background, and it adapts to phone screens.
+
+<!-- TODO(screenshot): The refreshed default layout of an order email (e.g. Purchase receipt to customer): header with Order Date, Order # and Receipt #, the Item / Qty / Total summary, the totals box with the payment badge, and the addresses. The existing email-notification-body.webp and package-info-email.webp may show the old layout. -->
+
+* **Header:** Your store name, with the **Order Date**, **Order #**, and **Receipt #** stacked on the right.
+* **Greeting:** When the email opens with a greeting and a message, the greeting is styled as a heading.
+* **Order summary:** A table with an **Item**, **Qty**, and **Total** header bar. Variants and billing details (such as a subscription's billing interval) appear as small labels under each item.
+* **Totals:** A light box spanning the full width, with a larger **Total** and the payment method shown as a badge.
+* **Addresses:** Billing and shipping addresses line by line, with the name in bold.
+* **Subscriptions:** The order paid email adds a subscription summary box, and the call-to-action button is larger with an arrow.
+
+The wording of the emails is unchanged.
+
+#### Order Number and Receipt Number
+
+The email header shows two different numbers, and so do the receipt page and the PDF documents:
+
+* **Order #:** The order's unique 12-character code, for example `A7K2P9X4M1Q8`. Every order has one from the moment it is created, and it is the same number customers see on their order pages in the customer portal.
+* **Receipt #:** The receipt number, made of your **Receipt Prefix** and a running number, for example `INV-1001`. It is assigned when the order is paid, so the row is left out of emails for unpaid orders, such as an offline payment that has not been confirmed yet. You set the prefix and starting number in the [checkout settings](/guide/settings-configuration/cart-checkout-settings).
+
+In the shortcode list, <code v-pre>{{order.uuid}}</code> (**Order UUID**) gives the order number and <code v-pre>{{order.invoice_no}}</code> gives the receipt number. When an order has no receipt number yet, <code v-pre>{{order.invoice_no}}</code> shows the order number instead, so a subject line such as "Order #<code v-pre>{{order.invoice_no}}</code>" is never left blank. Add your own fallback text after a pipe, as in <code v-pre>{{order.invoice_no|Pending}}</code>, to show that text instead, or end it with a bare pipe, <code v-pre>{{order.invoice_no|}}</code>, to leave it blank until the order is paid.
+
 #### Customizing the Email Body
 
 If you select **Customized Body**, a full rich text editor will appear.
@@ -136,5 +161,47 @@ If the notification uses the **Default Body**, package name, dimensions, product
 **Values are captured at checkout**
 
 When the order is placed, FluentCart snapshots the package data onto the order item itself. The email renderer reads from that snapshot — never re-querying the live product — so even if you rename a package, change dimensions, or adjust weights months later, every historical email (resends, reprints, subscription renewals) still displays the values that were correct when the customer placed the order.
+
+### The Shipment Email {#shipment-email}
+
+The **Send mail to customer when a shipment is created** notification sends one email per shipment, so a customer whose order ships in three parcels gets three emails, each about its own parcel. It goes out when you create a shipment on an order with **Notify Customer** selected, and only then. There is no on/off switch for it in the notifications list or the editor, so you decide per shipment. See [Managing Shipments](/guide/store-management/orders-management/managing-shipments) for where that checkbox is.
+
+The default subject is "Your shipment is on the way #<code v-pre>{{order.invoice_no}}</code> 📦". The default body contains:
+
+* A greeting and the line "Great news! A shipment from your order is on its way to you 📦."
+* **Tracking Details:** The **Carrier**, the **Service**, and the **Tracking Number**, plus a **Track Shipment** button when the shipment has a tracking URL. Each row only appears when the shipment has that value, so a manual shipment without a carrier name has no **Carrier** row. If the shipment has no carrier, service, or tracking at all, the whole box is left out.
+* **Items in this Shipment:** Only the items and quantities in this shipment, not the whole order.
+* **Shipment Notes:** The note you added for the customer, when there is one.
+* The customer's addresses and a **View Order** button that opens the order in their account.
+
+<!-- TODO(screenshot): A Shipment Update email as received by the customer, showing Tracking Details (Carrier, Service, Tracking Number, Track Shipment), Items in this Shipment, and Shipment Notes. -->
+
+#### Shipment Shortcodes
+
+With **Customized Body**, you can place details of the shipment anywhere in the email. Click the **shortcode icon `{;}`** and pick from the **Shipment** group:
+
+<div v-pre>
+
+| Shortcode | Renders |
+|-----------|---------|
+| `\{\{shipment.carrier_name\}\}` | The carrier name |
+| `\{\{shipment.service_name\}\}` | The carrier service, such as a Shippo service level |
+| `\{\{shipment.tracking_number\}\}` | The tracking number |
+| `\{\{shipment.tracking_url\}\}` | The tracking URL |
+| `\{\{shipment.tracking_link\}\}` | The tracking number as a clickable link |
+| `\{\{shipment.status\}\}` | The shipment status |
+| `\{\{shipment.shipped_at\}\}` | The date the shipment was sent |
+| `\{\{shipment.notes\}\}` | The note to the customer |
+| `\{\{shipment.item_count\}\}` | The number of items in the shipment |
+| `\{\{shipment.items\}\}` | A table of the items in this shipment |
+| `\{\{shipment.id\}\}` | The shipment ID |
+
+</div>
+
+These only have values in the shipment email. In other notifications, use <code v-pre>{{order.shipments}}</code> to list all of an order's shipments.
+
+#### Shipment Update Starter Template
+
+If you build this email in the block email editor that comes with FluentCart Pro, open **Starter Templates** and click **Browse Templates** to pick **Shipment Update**. It is a ready-made layout built on the shipment shortcodes, with the carrier, a linked tracking number, the tracking URL, the items in this shipment, and the notes when there are any. Like the default body, it hides the **Carrier** row when the shipment has no carrier name, and hides the tracking box when the shipment has neither a carrier name nor tracking.
 
 Once you are finished editing, click the **Update** button to save your changes. Your customized email will now be sent whenever its corresponding event is triggered.

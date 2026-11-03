@@ -89,7 +89,7 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Key files:** `ReportingModule.php`, controllers under `Http/Controllers/Reports/*`.
 - **User-facing surface:** Every report screen under FluentCart Pro → Reports.
 - **Drives docs:** `guide/reporting-analytics/*.md` (incl. `product-compare-report.md`, Pro)
-- **Last fully audited:** 2.0.0+ (develop @ 80f5d7c837, Oct 15, 2026)
+- **Last fully audited:** v2.3.0 (develop @ 33c18eb897, Pro @ a08e4da4, Nov 3 2026; rebuilt reports, new Coupons/Payment Methods/Locations/Installments pages, Sales page removed; labels checked against rendered cart.local)
 
 ### Modules/Reviews
 - **Purpose:** Product reviews and ratings: star ratings, moderation, Add Review, My Reviews / order review page, three review emails, six blocks with 11 layout presets, the reviews shortcode, ratings on product list and shop card.
@@ -108,8 +108,9 @@ For every module below: what it does, the highest-signal files in it, the user-v
 - **Purpose:** Shipping zones, methods, rates, packages, carrier-rate calculation.
 - **Key files:** `ShippingModule.php`, `ShippingService.php`, `Models/ShippingZone.php`.
 - **User-facing surface:** Shipping settings UI, zone editor, package picker on product/variation, checkout shipping selector. Since 1.5.4 the chosen method's title (`config.shipping_method_title`) also surfaces on the admin order detail, the customer's order view, and order emails.
-- **Drives docs:** `guide/shipping/*.md`
-- **Last fully audited:** v1.5.4
+- **Carriers (2.3.0):** `Carriers/` holds the carrier framework (`CarrierManager`, `ManualCarrier`, `Concerns/ProvidesLiveRates`). The Shippo carrier lives in the separate add-on `shipping-for-fluent-cart` (`ShippoCarrier.php`; on cart.local at `plugins/shipping-for-fluent-cart` since Nov 3 2026, installed from a zip); UI is Settings > Shipping > Carriers (`SingleCarrier.vue` draws section cards from the carrier's fields; Shippo's card layout is `ShippoSettingsPage.php` in the add-on) and the order **Create shipment** drawer (`ShipmentForm.vue`). Since Oct 30 2026 shipping zones live on the Manual / Other carrier page; `/settings/shipping` shows a "zones have moved" notice.
+- **Drives docs:** `guide/shipping/*.md` (Shippo: `shipping-carriers.md`, `connecting-shippo.md`, `shippo-rates-labels-tracking.md`)
+- **Last fully audited:** v2.3.0 (develop @ 33c18eb897, Nov 3 2026; Shippo add-on Nov 3 build, on-demand labels, portal tracking; shipping-calc fixes documented)
 
 ### Modules/StockManagement
 - **Purpose:** Inventory tracking, stock holds on pending orders, low-stock thresholds.

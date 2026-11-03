@@ -16,6 +16,10 @@ To get started, open any product in edit mode and scroll down to the **Pricing**
 
 ![Screenshot of the Pricing section showing the Simple/Simple Variations dropdown](/images/product-types-creation/product-pricing/product-variation-1.webp)
 
+::: warning
+Switching a product from **Simple Variations** to **Simple** keeps only the first variation and removes any image attached to it. Switching to **Advanced Variations** deletes the current variations and can't be undone, so you can't switch back afterwards. In both cases, FluentCart asks you to type `proceed` to confirm.
+:::
+
 ## Option 1: Simple Pricing
 
 Choose **Simple** when your product has one version and one price. A single ebook, a standard service, a fixed-rate subscription plan — this is the right mode for all of them.
@@ -76,13 +80,13 @@ Turn this on if this is a tangible item that needs to be physically shipped to t
 Select a pre-configured package from the dropdown. This is the box, envelope, or mailer your product ships in, and it helps FluentCart (and your connected shipping carriers) calculate accurate delivery rates based on real dimensions and weight. If no packages have been created yet, you can add one directly from here — see [Adding a New Package](#adding-a-new-package) below.
 
 **Product weight**
-Enter the weight of this product and choose the unit (**kg** or **lb**) from the dropdown next to the field. Accurate weights are essential for carrier-calculated shipping rates to work correctly.
+Enter the weight of this product and choose the unit (**kg**, **g**, **lbs**, or **oz**) from the dropdown next to the field. Accurate weights are essential for carrier-calculated shipping rates to work correctly.
 
 **Copy Variation ID** *(Action)*
 Click **Copy Variation ID** to copy the simple product's underlying variant ID to your clipboard. This is the value you'll need when wiring the product into custom code, REST endpoints, automations, or shortcodes that expect a specific variant reference.
 
 **Direct Checkout** *(Link)*
-This generates a unique URL that takes customers straight to the checkout page with this product pre-loaded — bypassing the product page and cart entirely. It's perfect for email campaigns, social media promotions, or any landing page where you want to reduce the number of steps to purchase.
+Copies a URL that takes customers straight to the checkout page with this product pre-loaded, bypassing the product page and cart entirely. It's perfect for email campaigns, social media promotions, or any landing page where you want to reduce the number of steps to purchase. The link is only available once the product is published (or private); it doesn't appear while the product is a draft.
 
 ---
 
@@ -101,10 +105,10 @@ Choose the shape that best matches how you ship this product:
 - **Soft package** — A poly mailer, bubble wrap, or any flexible pouch
 
 **Dimensions**
-Enter the **Length**, **Width**, and **Height** of the package, then select the measurement unit — **in** (inches) or **cm** (centimetres) — from the dropdown next to the fields.
+Enter the **Length**, **Width**, and **Height** of the package, then select the measurement unit (**cm**, **mm**, **in**, or **m**) from the dropdown next to the fields.
 
 **Weight (empty)**
-The weight of the empty packaging itself. Enter the value and choose the unit (**kg** or **lb**). This gets added to your product's weight to give carriers an accurate total shipment weight.
+The weight of the empty packaging itself. Enter the value and choose the unit (**kg**, **g**, **lbs**, or **oz**). This gets added to your product's weight to give carriers an accurate total shipment weight.
 
 **Package name**
 Give your package a name you'll recognise later (e.g., `Medium Box`, `Small Mailer`). This is what appears in the **Package** dropdown across all your product pages.
@@ -120,35 +124,40 @@ Once everything looks correct, click **Add package** to save it. Your new packag
 
 Toggle the **Subscription** switch to the on position and the pricing fields transform to everything you need for a recurring billing setup.
 
+<!-- TODO(screenshots): product-variation-2.webp is outdated: it shows Installment Count set to 1 (minimum is now 2) and no Copy Variation ID action above Direct Checkout. Retake the Simple subscription panel with installments on (count 2 or more) and the Copy Variation ID and Direct Checkout actions visible. Update later. -->
 ![Screenshot of Simple pricing — one-time payment showing Price, Compare at price, Calculate profit/cost, SKU, and Shipping sections](/images/product-types-creation/product-pricing/product-variation-2.webp)
 
-**Installment Price** *(Required)*
-The amount charged to the customer on each billing cycle. The `x1` indicator next to the field reflects how many times this price is charged per interval — this updates automatically when you configure installments.
+**Price** *(Required)*
+The amount charged to the customer on each billing cycle. When you turn on **Enable installment payment**, this field is relabelled **Installment Price** and shows `x` followed by the installment count.
 
 **Additional display prices** *(Collapsible section)*
 Expand this section to access the subscription-specific display and billing options:
 
 - **Compare at price** *(Optional)* — A higher price displayed with a strikethrough, showing customers the value of the subscription rate.
 
-- **Interval** *(Required)* — How frequently the customer is billed. Choose from:
+- **Interval** *(Required)*: How frequently the customer is billed. When you turn on **Subscription**, Interval starts at **Yearly**. Choose from:
   - **Daily**
   - **Weekly**
   - **Monthly**
   - **Quarterly**
-  - **Half Yearly (Six Month)**
+  - **Half Yearly**
   - **Yearly**
 
-- **Trial Days** *(Optional)* — Enter the number of free days before the first billing cycle begins. Set to `0` if you don't want a trial period. For example, `14` gives customers a two-week free trial — a powerful conversion tool for subscription products.
+- **Trial Days** *(Optional)*: Enter the number of free days before the first billing cycle begins. Leave it empty (or `0`) for no trial. The trial can't be longer than 365 days. For example, `14` gives customers a two-week free trial — a powerful conversion tool for subscription products.
 
-**Enable installment payment** *(Checkbox — Optional)*
-Check this box if you want to offer the subscription for a fixed number of payments instead of recurring indefinitely. Once checked, two fields appear:
+**Enable installment payment** *(Checkbox, optional, FluentCart Pro)*
+Check this box if you want to offer the subscription for a fixed number of payments instead of recurring indefinitely. Without Pro, this option and **Setup fee** are disabled and marked with a crown icon. Once checked, two fields appear:
 
 - **Installment Count** — The total number of payments the customer will make (e.g., `3` for a three-month payment plan). This must be **2 or more**. A single installment is just a one-time payment, so if that's what you want, set the payment type to one-time instead
 - **Total Price** — Auto-calculated by multiplying **Installment Price** by **Installment Count**
 
 > **💡 Pro Tip:** Installment plans are ideal for online courses, coaching programs, or any product where you want customers to pay over time with a clear end date — no cancellation anxiety for them, guaranteed revenue for you.
 
-**Setup fee** *(Toggle — Optional)*
+::: info Early payment
+Customers can pay their remaining installments ahead of schedule from their subscription screen. This is controlled by **Enable early payment for installment** (the **Early Payment** row) under **FluentCart Pro > Settings > Store Settings > Subscriptions**. It's on by default and requires FluentCart Pro.
+:::
+
+**Setup fee** *(Toggle, optional, FluentCart Pro)*
 Enable this to charge a one-time fee at the very start of the subscription, in addition to the recurring price. When toggled on, two sub-fields appear:
 
 - **Setup fee label** — The name customers see for this charge at checkout (e.g., `Activation Fee`, `Enrollment Fee`, `One-Time Setup`)
@@ -189,10 +198,11 @@ Here's what each column means:
 **To add a new variation**, click the **+ Add more** button at the bottom of the table. A new blank row will appear — fill in the title and price inline, then click the pencil icon to configure the rest.
 
 **The three-dot icon** gives you these quick options:
-- **Duplicate** — Instantly copy this variation to use as a starting point for a new one
-- **Direct Checkout** — Generate a unique buy-now link for this specific variation
-- **Delete** — Permanently remove this variation from the product
-- **Skip inventory** — Exclude this variation from stock tracking if needed
+- **Skip inventory:** Stop tracking stock for this variation. Shown only when the product's **Inventory Management** is on.
+- **Duplicate:** Copy this variation to use as a starting point for a new one.
+- **Copy Variation ID:** Copy the variation's ID for shortcodes, custom code, or integrations.
+- **Direct Checkout:** Copy a buy-now link for this specific variation. Unavailable while the product is a draft.
+- **Delete:** Permanently remove this variation from the product. Not shown when only one variation is left.
 
 > **📝 Note:** You can make quick edits to **Title**, **Price**, and **Compare at price** directly in the table rows. For everything else — images, inventory, subscriptions, SKU, and shipping — click the pencil icon to open the full editor.
 
@@ -237,6 +247,8 @@ The **Inventory** toggle lets you manage stock levels right here inside the vari
 - **On Hold** — Units reserved in pending or processing orders (read-only)
 - **Delivered** — Units that have been fulfilled and shipped (read-only)
 
+The switch works only when the product's **Inventory Management** is on. If it's off, the box shows a notice with a switch you can use to turn on inventory for the whole product. The Inventory box is available for Simple Variations and Advanced Variations, and only while Stock Management is enabled in your store settings.
+
 > **💡 Pro Tip:** Managing inventory at the variation level means you'll never accidentally oversell the Red hoodie just because you still have plenty of Teal ones. Each color stays tracked independently.
 
 **SKU**
@@ -247,7 +259,7 @@ Configure the physical shipping details for this specific variation:
 
 - **Physical Product** — Toggle on if this variation requires physical shipment
 - **Package** — Select the package type for this variation (different variations can use different package sizes)
-- **Product weight** — Enter the weight for this specific variation, with your preferred unit (**kg** or **lb**). Since different sizes or configurations often weigh differently, per-variation weight ensures your carrier rates stay accurate
+- **Product weight** — Enter the weight for this specific variation, with your preferred unit (**kg**, **g**, **lbs**, or **oz**). Since different sizes or configurations often weigh differently, per-variation weight ensures your carrier rates stay accurate
 
 **Tax** *(visible only when store-level tax is enabled)*
 Each variation also has its own tax controls — a Tax Inclusion override in the Pricing section, a Charge-tax checkbox, and a per-variation Tax Class. See [Per-Variation Tax Settings](/guide/product-types-creation/per-variation-tax) for the full walkthrough.
@@ -274,14 +286,14 @@ A higher price shown with a strikethrough to communicate the subscription's valu
 The billing frequency for this specific variation — choose from **Daily**, **Weekly**, **Monthly**, **Quarterly**, **Half Yearly**, or **Yearly**. Different variations can have different intervals, so you could offer a "Monthly" and a "Yearly" tier side by side.
 
 **Trial Days** *(Optional)*
-The number of free days before the first charge is made. Set to `0` for no trial. Offering even a 7-day trial on higher-priced tiers can meaningfully improve sign-up rates.
+The number of free days before the first charge is made. Leave it empty (or `0`) for no trial. The trial can't be longer than 365 days. Offering even a 7-day trial on higher-priced tiers can meaningfully improve sign-up rates.
 
-**Enable installment payment** *(Checkbox — Optional)*
-Limit this variation's subscription to a fixed number of payments. When checked:
+**Enable installment payment** *(Checkbox, optional, FluentCart Pro)*
+Limit this variation's subscription to a fixed number of payments. Without Pro, this option and **Setup fee** are disabled and marked with a crown icon. When checked:
 - **Installment Count** — Total number of billing cycles before the subscription ends automatically. Must be **2 or more**
 - **Total Price** — Auto-calculated total (Installment Price × Count)
 
-**Setup fee** *(Toggle — Optional)*
+**Setup fee** *(Toggle, optional, FluentCart Pro)*
 Charge a one-time fee at signup for this variation. When toggled on:
 - **Setup fee label** — The customer-facing name for this charge (e.g., `Activation Fee`)
 - **Setup fee amount** — The one-time charge in dollars

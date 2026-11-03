@@ -8,8 +8,8 @@ This guide will show you how to add and configure shipping methods for your ship
 
 Before you can add a method, you must have already created a shipping zone.
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro** > **Settings** > **Shipping Zones**.
-2.  Click on the **Shipping Zones** sub-menu.
+1.  From your WordPress dashboard, navigate to **FluentCart Pro** > **Settings** > **Shipping**. The **Carriers** page opens.
+2.  Click **Manage** next to **Manual / Other** to see your **Shipping Zones** list.
 3.  Find the shipping zone you want to add a method to and click on its name to edit it.
 4.  Inside the zone's settings, scroll down to the **Shipping Methods** section and click the **Add Shipping Method** button. You can also manage your existing shipping methods from this screen. To update a method's settings, click the Edit button located on the same row as its title.
 5.  This will open a pop-up window where you can configure the details of your new shipping method.
@@ -53,6 +53,12 @@ Click **Add Tier** to append a new row. A new tier defaults to `previous max + 0
 **Flexible, non-contiguous ranges**
 
 Tiers do not have to be continuous. You can leave gaps between ranges — for example, `0–10 kg`, then `15–20 kg` — when your carrier simply does not offer rates in the gap, or when weights in that gap should fall back to a different shipping method.
+
+If the cart weight falls in a gap, above your last tier, or the method has no tiers at all, the method is hidden at checkout instead of being offered for free. If a customer had already picked it before the cart changed, placing the order fails with "The selected shipping method is not available." so they can choose another method.
+
+**How the cart weight is counted**
+
+The cart weight is the weight of the products plus the empty weight of each box they are packed in. FluentCart packs the items into their assigned [packages](/guide/shipping/packages), counting each box's own weight once per box, not once per unit. For example, three 0.9 kg items that fit in one 0.25 kg box weigh 2.95 kg. When items are heavier than a box's maximum weight, they are split across more boxes, and each extra box adds its own weight.
 
 **Validation**
 

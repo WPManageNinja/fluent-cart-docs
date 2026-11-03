@@ -397,6 +397,7 @@ export default defineConfig({
                 { text: 'Order Details Overview', link: '/guide/store-management/orders-management/order-details-overview' },
                 { text: 'Editing Existing Orders', link: '/guide/store-management/orders-management/editing-existing-orders' },
                 { text: 'Processing Refunds', link: '/guide/store-management/orders-management/processing-refunds' },
+                { text: 'Managing Shipments', link: '/guide/store-management/orders-management/managing-shipments' },
                 { text: 'Collecting Payments for Modified Orders', link: '/guide/store-management/orders-management/collecting-payments-modified-orders' },
                 { text: 'Order Bump', link: '/guide/store-management/orders-management/order-bump' },
                 { text: 'Changing Order Statuses', link: '/guide/store-management/orders-management/changing-order-statuses' },
@@ -473,6 +474,9 @@ export default defineConfig({
                 { text: 'Understanding Shipping Classes', link: '/guide/shipping/understanding-shipping-classes' },
                 { text: 'Advanced Shipping Calculations', link: '/guide/shipping/advanced-shipping-calculations' },
                 { text: 'Managing Packages', link: '/guide/shipping/packages' },
+                { text: 'Shipping Carriers', link: '/guide/shipping/shipping-carriers' },
+                { text: 'Connecting Shippo', link: '/guide/shipping/connecting-shippo' },
+                { text: 'Shippo Rates, Labels and Tracking', link: '/guide/shipping/shippo-rates-labels-tracking' },
               ]
             }
           ]
@@ -556,13 +560,13 @@ export default defineConfig({
           link: '/guide/reporting-analytics/',
           collapsed: true,
           items: [
-            { text: 'Reports Overview', link: '/guide/reporting-analytics/reports-dashboard-overview' },
-            { text: 'How Reports Count', link: '/guide/reporting-analytics/how-reports-count' },
+            { text: 'Reports Dashboard Overview', link: '/guide/reporting-analytics/reports-dashboard-overview' },
             { text: 'Orders Report', link: '/guide/reporting-analytics/orders-report' },
             { text: 'Revenue Report', link: '/guide/reporting-analytics/revenue-report' },
             { text: 'Refunds Report', link: '/guide/reporting-analytics/refunds-report' },
+            { text: 'Subscription Report', link: '/guide/reporting-analytics/subscription-report' },
             {
-              text: 'Subscription Report',
+              text: 'Subscription Reports',
               link: '/guide/reporting-analytics/subscription-report',
               items: [
                 { text: 'Retention Report', link: '/guide/reporting-analytics/retention' },
@@ -571,13 +575,8 @@ export default defineConfig({
                 { text: 'Installments Report', link: '/guide/reporting-analytics/installments-report' },
               ]
             },
-            {
-              text: 'Product Report',
-              link: '/guide/reporting-analytics/product-report',
-              items: [
-                { text: 'Compare Products Report', link: '/guide/reporting-analytics/product-compare-report' },
-              ]
-            },
+            { text: 'Product Report', link: '/guide/reporting-analytics/product-report' },
+            { text: 'Compare Products Report', link: '/guide/reporting-analytics/product-compare-report' },
             { text: 'Customer Report', link: '/guide/reporting-analytics/customer-report' },
             { text: 'Order Sources Report', link: '/guide/reporting-analytics/order-sources-report' },
             { text: 'Coupons Report', link: '/guide/reporting-analytics/coupons-report' },

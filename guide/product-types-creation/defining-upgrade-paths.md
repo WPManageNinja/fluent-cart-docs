@@ -8,6 +8,10 @@ This streamlines the customer experience and encourages upsells, maximizing your
 
 Upgrade path settings are found within the **Edit Product** screen for individual products that support tiered offerings (typically digital products with licenses or subscriptions).
 
+::: info
+Upgrade paths are a FluentCart Pro feature. They aren't available for bundle products yet, and the product needs at least two variations so there's something to upgrade to.
+:::
+
 1.  Navigate to **FluentCart Pro > Products** in your WordPress dashboard.
 2.  [Edit an existing product](/guide/product-types-creation/product-list-overview) that has multiple license tiers (e.g., "Fluent Forms").
 3.  On the **Edit Product** screen, click on the **"Upgrade Paths"** tab.
@@ -20,18 +24,20 @@ The "Upgrade Paths" tab displays a table where you define the upgrade logic.
 
 ### 1. Adding a New Upgrade Path
 
-1.  Click the **"+ Add Path"** button at the bottom of the table.
-2.  A new row will appear, allowing you to configure the upgrade details:
-    * **From Plan:** Select the specific product plan or license variation that a customer currently owns and wishes to upgrade *from* (e.g., "Single Site Yearly License").
-    * **To Plan:** Select the higher-tier product plan or license variation that the customer can upgrade *to* (e.g., "5 Sites Yearly License" or "50 Sites Lifetime License").
-    * **Discount Amount:** This field specifies the discount applied to the "To Plan" price during the upgrade. This is typically the value of the "From Plan" or a specific monetary discount.
-    * **Is Prorate:** Select "Yes" or "No".
-        * **Yes (Prorated):** This means the customer will receive credit for the unused portion of their existing "From Plan" license/subscription. This credit is then applied towards the cost of the "To Plan," ensuring they only pay the difference. This is commonly used for subscriptions.
-        * **No:** The upgrade will simply apply the "Discount Amount" without considering any remaining value from the old plan.
+To create a path from one variation to another, follow these steps:
 
-3.  After configuring the path, ensure you save your product settings by clicking the **"Save"** button on the bottom of the Edit screen.
+1.  Click **Add Path** below the table. The **Add Upgrade Path** panel opens.
+2.  Configure the path:
+    * **From Plan:** The variation the customer owns now (e.g., "Single Site Yearly License").
+    * **To Plan(s):** One or more variations of the same product they can upgrade to (e.g., "5 Sites Yearly License" or "50 Sites Lifetime License"). Variations already targeted from this plan aren't listed.
+    * **Prorate:** Tick this to credit the customer for what they already paid. For a subscription, the credit covers the unused days left in the current billing period. For a one-time purchase, it's the full amount they paid. No credit is given during a real free trial.
+    * **Discount Amount:** A fixed amount in your store currency taken off the upgrade price. It's added on top of any prorate credit. The combined credit never exceeds the price of the new plan.
+
+3.  Click **Save**. The path is saved straight away, so you don't need to update the product.
 
     ![Screenshot of Product Upgrade Paths Tab](/images/product-types-creation/define-upgrade-path/add-Upgrade-Paths.webp)
+
+Each row in the table has an edit button and a delete button. The **Is Prorate** column shows **Yes** or **No**.
 
 ## The Customer Upgrade Experience
 
@@ -66,13 +72,18 @@ When you publish a path for a product sold as a one-time purchase, the customer 
 
 ### Conditions for One-Time Upgrades
 
-The button only appears on items that qualify based on three specific conditions:
+The button only appears on items that meet four conditions:
 
  - The item was bought as a one-time purchase, not as part of a subscription.
  - The order is paid, partially paid, or partially refunded (unpaid orders show no button).
  - The store has published an upgrade path for that exact product variation.
+ - The item isn't part of a bundle.
 
 ![Upgrade Path](/images/product-types-creation/define-upgrade-path/popup-upgrade-4.webp)
+
+### Each Purchase Can Be Upgraded Once
+
+An order's value can be carried into an upgrade only once. If the customer tries to upgrade the same original order again, FluentCart stops them with *This order has already been upgraded.* They can upgrade further from their new plan.
 
 
 

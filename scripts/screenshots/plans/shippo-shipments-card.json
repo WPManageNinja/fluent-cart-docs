@@ -1,0 +1,21 @@
+{
+  "outDir": "guide/public/images/shipping/shippo",
+  "viewport": { "width": 1600, "height": 1100 },
+  "steps": [
+    { "admin": "/orders/5/view" },
+    { "wait": 2500 },
+    { "shot": { "name": "order-shipments-card", "clip": { "element": ".fct-card:has(th:text-is(\"Shipment\"))", "pad": 24 } } },
+
+    { "click": ".fct-shipments-table__expand" },
+    { "wait": 600 },
+    { "shot": { "name": "order-shipments-card-details", "clip": { "element": ".fct-card:has(th:text-is(\"Shipment\"))", "pad": 24 } } },
+
+    { "click": "button[aria-label=\"More actions\"]" },
+    { "wait": 700 },
+    { "shot": { "name": "shipment-actions-menu", "clip": { "element": ".fct-shipment-menu", "pad": 24 } } },
+
+    { "click": ".fct-shipment-menu button:has-text(\"Refresh tracking\")" },
+    { "wait": 4000 },
+    { "shot": { "name": "verify-refresh-tracking", "clip": "viewport" } }
+  ]
+}

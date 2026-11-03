@@ -1,0 +1,136 @@
+{
+  "outDir": "guide/public/images/shipping/shippo",
+  "viewport": {
+    "width": 1600,
+    "height": 3200
+  },
+  "steps": [
+    {
+      "admin": "/settings/shipping/carriers"
+    },
+    {
+      "wait": 2500
+    },
+    {
+      "shot": {
+        "name": "carriers-shippo-manage",
+        "clip": "app",
+        "crop": {
+          "height": 1100
+        },
+        "arrows": [
+          {
+            "target": "button:has-text(\"Manage\") >> nth=1",
+            "from": "bottom",
+            "len": 120
+          }
+        ]
+      }
+    },
+    {
+      "admin": "/settings/shipping/carriers/shippo"
+    },
+    {
+      "wait": 12000
+    },
+    {
+      "click": {
+        "selector": "button",
+        "hasText": "Test connection"
+      }
+    },
+    {
+      "wait": 8000
+    },
+    {
+      "click": {
+        "text": "Set it up in Shippo yourself"
+      }
+    },
+    {
+      "wait": 800
+    },
+    {
+      "eval": "(()=>{const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){if(/@gmail\\.com/.test(n.nodeValue))n.nodeValue=n.nodeValue.replace(/[\\w.+-]+@gmail\\.com/,'you@example.com');}document.querySelectorAll('input[readonly]').forEach(inp=>{if(inp.value.includes('fct_shipping_listener_webhook'))inp.value=inp.value.replace(/^https?:\\/\\/[^/]+/,'https://your-store.com');});})()"
+    },
+    {
+      "shot": {
+        "name": "shippo-settings-overview",
+        "clip": "app",
+        "crop": {
+          "height": 4600
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "shippo-settings-connection",
+        "clip": {
+          "element": ".fct-carrier-card:has(h3:text-is(\"Connection\"))",
+          "pad": 24
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "shippo-settings-checkout",
+        "clip": {
+          "element": ".fct-carrier-card:has(h3:text-is(\"Checkout rates\"))",
+          "pad": 24
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "shippo-settings-labels",
+        "clip": {
+          "element": ".fct-carrier-card:has(h3:text-is(\"Labels\"))",
+          "pad": 24
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "shippo-settings-sender",
+        "clip": {
+          "element": ".fct-carrier-card:has(h3:text-is(\"Sender\"))",
+          "pad": 24
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "shippo-settings-tracking",
+        "clip": {
+          "element": ".fct-carrier-card:has(h3:text-is(\"Tracking updates\"))",
+          "pad": 24
+        },
+        "arrows": [
+          {
+            "target": {
+              "selector": "button",
+              "hasText": "Register webhook in Shippo"
+            },
+            "from": "left",
+            "len": 140
+          }
+        ]
+      }
+    },
+    {
+      "click": ".fct-carrier-card:has(h3:text-is(\"Labels\")) .fct-carrier-dd__btn"
+    },
+    {
+      "wait": 1200
+    },
+    {
+      "shot": {
+        "name": "shippo-settings-preferred-carrier",
+        "clip": {
+          "element": ".fct-carrier-dd__pop",
+          "pad": 40
+        }
+      }
+    }
+  ]
+}

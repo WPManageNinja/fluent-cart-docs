@@ -1,0 +1,31 @@
+{
+  "outDir": "guide/public/images/shipping/shippo",
+  "viewport": { "width": 1600, "height": 900 },
+  "steps": [
+    { "admin": "/orders/5/view" },
+    { "wait": 1500 },
+    { "shot": { "name": "order-create-shipment-button", "clip": { "element": ".fct-card:has(button:has-text(\"Create shipment\"))", "pad": 24 },
+        "arrows": [ { "target": "button:has-text(\"Create shipment\")", "from": "bottom", "len": 130 } ] } },
+
+    { "viewport": { "width": 1600, "height": 560 } },
+    { "click": "button:has-text(\"Create shipment\")" },
+    { "wait": 1800 },
+    { "hideCss": ".fct-shipment-drawer__head .text-xs" },
+    { "shot": { "name": "shipment-step-items", "clip": { "element": ".fct-shipment-drawer", "pad": 0 } } },
+
+    { "viewport": { "width": 1600, "height": 700 } },
+    { "click": { "role": "button", "name": "^Continue$" } },
+    { "wait": 3000 },
+    { "shot": { "name": "shipment-step-method-manual", "clip": { "element": ".fct-shipment-drawer", "pad": 0 } } },
+
+    { "click": ".fct-shipment-ship-with .el-select" },
+    { "wait": 700 },
+    { "shot": { "name": "shipment-ship-with-dropdown", "clip": { "x": 1040, "y": 0, "width": 560, "height": 700 } } },
+    { "click": { "selector": ".el-select-dropdown__item", "hasText": "Manual" } },
+    { "wait": 2500 },
+
+    { "click": { "role": "button", "name": "^Continue$" } },
+    { "wait": 1200 },
+    { "shot": { "name": "shipment-step-review", "clip": { "element": ".fct-shipment-drawer", "pad": 0 } } }
+  ]
+}

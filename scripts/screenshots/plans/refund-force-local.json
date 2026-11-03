@@ -1,0 +1,15 @@
+{
+  "outDir": "guide/public/images/store-management/processing-refunds",
+  "viewport": { "width": 1600, "height": 1000 },
+  "steps": [
+    { "admin": "/orders/433/view" },
+    { "wait": 2500 },
+    { "click": "button:has-text(\"Refund\") >> nth=0" },
+    { "wait": 2500 },
+    { "click": ".el-dialog .dialog-footer button:has-text(\"Refund\")" },
+    { "wait": 9000 },
+    { "shot": { "name": "refund-record-locally-prompt", "clip": { "element": ".el-dialog", "pad": 24 } } },
+    { "click": ".el-dialog .dialog-footer button:has-text(\"Cancel\")" },
+    { "wait": 800 }
+  ]
+}

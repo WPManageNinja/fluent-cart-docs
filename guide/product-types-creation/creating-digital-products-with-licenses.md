@@ -1,4 +1,4 @@
- # Creating Digital Products with Licenses
+# Creating Digital Products with Licenses
 
 This guide provides a complete walkthrough for selling digital products that require a license key, such as software, plugins, or premium content.
 
@@ -12,6 +12,10 @@ In this guide, you will learn how to:
 * Create customer-friendly upgrade paths to allow moving between different license tiers.
 
 Follow these steps to confidently configure all the necessary settings for your licensed digital products.
+
+::: info
+Licensing is a FluentCart Pro feature. Bundle products don't have their own license settings. Each item inside the bundle issues licenses from its own settings, and only the billing interval follows the bundle.
+:::
 
 ## Steps to Create a New Licensed Digital Product
 
@@ -54,10 +58,10 @@ Once you've picked your files or linked your URLs, just click the **Save** butto
 Categorize and type your product for better organization.
 
 * **Product Categories:**
-    Assign the product to relevant categories (e.g., "Software"). Click **"+ Add More Category"** to assign additional categories.
+    Assign the product to relevant categories (e.g., "Software"). Click **+ Add Category** to assign additional categories.
 
 * **Product Brand:** 
-    Assign the product to relevant brands. Click to **"+Add Brand”** to assign additional brands.
+    Assign the product to relevant brands. Click **+ Add Brand** to assign additional brands.
 
 ### 5. Pricing & Variations
 
@@ -74,11 +78,11 @@ Once in Simple Variations mode, you'll see a clean table where each row is one l
 - **Title** — The name of this license tier (e.g., `Single Site Yearly`, `5 Sites Lifetime`). Editable directly in the table.
 - **Price** — The selling price for this tier. Editable inline.
 - **Compare at price** — The "was" price shown with a strikethrough for this tier. Also editable inline.
-- **Action** — A **pencil icon** to open the full tier editor, and a **three-dot icon** for quick actions (Duplicate, Direct Checkout, Delete).
+- **Action** — A **pencil icon** to open the full tier editor, and a **three-dot icon** for quick actions (Duplicate, Copy Variation ID, Direct Checkout, Delete).
 
 Click **+ Add more** at the bottom to add a new tier. Fill in the title and price inline, then click the pencil icon to configure the billing details.
 
-> **📝 Note:** You can make quick edits to **Title**, **Price**, and **Compare at price** directly in the table. For payment term, subscription settings, setup fee, and SKU — you'll need to open the full editor with the pencil icon.
+> **📝 Note:** You can make quick edits to **Title**, **Price**, and **Compare at price** directly in the table. For the **Subscription** switch, interval, trial, setup fee, and SKU, open the full editor with the pencil icon.
 
 **Editing a License Tier (Pencil Icon)**
 
@@ -96,18 +100,18 @@ The selling price for this specific tier.
 **Compare at price** *(Optional)*
 A higher original price shown with a strikethrough — great for communicating annual savings when customers compare your monthly and yearly plans.
 
-**Payment Term — the heart of license pricing**
-This is where you tell FluentCart *how* this tier is paid for. Your options are:
+**Subscription switch: the heart of license pricing**
+Use the **Subscription** switch in the **Pricing** box to choose how this tier is paid for:
 
-- **One Time** — For lifetime licenses. The customer pays once and owns access permanently. No recurring billing, no renewal reminders.
-- **Subscription** *(toggle ON)* — For renewable licenses. When you switch to subscription mode, the full recurring billing setup becomes available:
+- **Off (one-time):** For lifetime licenses. The customer pays once and owns access permanently. No recurring billing, no renewal reminders.
+- **On (subscription):** For renewable licenses. **Interval** starts at **Yearly**; change it if needed. When you turn the switch on, the full recurring billing setup becomes available:
 
   - **Interval** *(Required)* — How frequently the license renews: **Daily**, **Weekly**, **Monthly**, **Quarterly**, **Half Yearly**, or **Yearly**. A "Yearly" license renews once per year; a "Monthly" license renews each month.
   - **Trial Days** *(Optional)* — Free days before the first charge begins. Set to `0` for no trial. Even a 7-day trial can meaningfully lift conversion rates for higher-priced tiers.
-  - **Enable installment payment** *(Optional)* — Limit the subscription to a fixed number of payments instead of renewing indefinitely:
+  - **Enable installment payment** *(Pro, optional)* — Limit the subscription to a fixed number of payments instead of renewing indefinitely. When installments are on, the price field is labelled **Installment Price**:
     - **Installment Count** — Total billing cycles before the license ends automatically
-    - **Total Price** — Auto-calculated (Price × Count)
-  - **Setup fee** *(Toggle — Optional)* — A one-time charge at the very start of the subscription, in addition to the recurring price:
+    - **Total Price** — Auto-calculated (Installment Price × Installment Count)
+  - **Setup fee** *(Pro, optional)* — A one-time charge at the very start of the subscription, in addition to the recurring price:
     - **Setup fee label** — What customers see at checkout (e.g., `Activation Fee`, `Onboarding Fee`)
     - **Setup fee amount** — The one-time amount
 
@@ -125,7 +129,7 @@ For the complete, field-by-field reference on every pricing option — including
 
 This section is where you manage the digital files associated with your licensed product.
 
-* Click **"+ Add Asset"** to upload or link your software package, documentation, or other digital content.
+* Turn on the **Downloadable Asset(s)** switch, then click **Add** to upload or link your software package, documentation, or other digital content.
 * You can choose to link assets to **specific variants** (e.g., a "pro" version download for a higher-tier license) or leave it empty for all variants.
 * See [Adding & Managing Downloadable Assets](/guide/product-types-creation/creating-digital-products#_5-downloadable-asset-s) for detailed steps.
 
@@ -138,7 +142,7 @@ Before you can set up licenses for a specific product, you need to make sure the
 
 1. Navigate to **FluentCart Pro** > **Settings** from the left WordPress sidebar.
 
-2. Click on the **Features & Add-ons** tab.
+2. Click on the **Features & addon** tab.
 
 3. Locate the **Product Licensing** option and click the **toggle** button to enable it.
 
@@ -154,15 +158,15 @@ Once the add-on is enabled, you can configure the license settings for each prod
 
     ![Screenshot of Product License Settings Tab](/images/product-types-creation/creating-digital-product-license/License-Settings-1.webp)
 
-2.  **Enable Licensing for this product:** Ensure this checkbox is enabled to activate licensing for this product.
+2.  **Enable Licensing for this product:** Turn on the **Enable Licensing for this product** switch at the top of the **License Settings** card.
 
 3.  **License Configuration Table (Per Variant):**
-    * **Activation Limit:** For each license variant (e.g., "Single Site Annual License"), set the number of times the license key can be activated (e.g., 50, 100).
+    * **Activation Limit:** For each license variant (e.g., "Single Site Annual License"), set how many sites or devices can use the license key (e.g., 50). Use `0` or leave it empty for unlimited activations. The license stays valid for the same period as the variation's billing interval (a yearly subscription gives a one-year license; a one-time price gives a lifetime license).
 
 4.  **Software/Plugin Specific Information:**
     * **Version Number:** Enter the current version of your digital product (e.g., "1.0.1").
-    * **License Key Prefix:** This adds a short prefix to every license key generated for this product. It's a great way to quickly identify keys from different products. For example, you could use ff- for Fluent Forms.
-    * **Update File:** This field shows the main downloadable file that will be used for software updates.
+    * **License Key Prefix (Optional):** This adds a short prefix to every license key generated for this product. It's a great way to quickly identify keys from different products. For example, you could use ff- for Fluent Forms.
+    * **Update File:** Choose which of the product's downloadable files is delivered as the automatic update. If the product has no downloadable files yet, add one under **Downloadable Asset(s)** first.
     * **Changelog Description:** Here, you can write down what's new or what has changed in the latest version of your product. This information will be visible to your users.
     
 5.  **Is WP Plugin?:** If the digital product you're selling is a WordPress plugin, check this box. This will reveal a few more fields specific to WordPress plugins.
@@ -173,7 +177,7 @@ Once the add-on is enabled, you can configure the license settings for each prod
      * **Required PHP Version (optional):** If your plugin needs a minimum version of PHP to work, you can specify it here.
      * **Required WP Version (optional):** Similarly, if your plugin requires a minimum WordPress version, enter it here.
 
-6.  **Signed Releases (optional):** If you sign your releases, you can publish a signature alongside each version so customer sites can verify a package before installing it.
+6.  **Signed Releases (optional):** These fields are hidden by default and appear only after a developer turns on signed releases for your store with a code snippet. There's no switch for it in the admin. Once enabled, you can publish a signature alongside each version so customer sites can verify a package before installing it.
 
      * **Release Manifest:** The signed manifest for the current release, as a base64 value.
      * **Release Signature:** The detached signature for that manifest, also base64.
@@ -181,7 +185,7 @@ Once the add-on is enabled, you can configure the license settings for each prod
     Both values are stored and served exactly as you enter them. Paste each one as a single unbroken line — a value that gets line-wrapped, re-encoded, or URL-decoded on the way in is still a valid-looking string that will no longer verify, and FluentCart rejects a malformed value rather than silently repairing it.
 
     ::: info Off unless you sign your releases
-    Signed releases are optional and disabled by default. Most vendors don't sign, and nothing about licensing or updates depends on this — leave the fields empty if signing isn't part of your release process.
+    Signed releases are optional and disabled by default. Most vendors don't sign, and nothing about licensing or updates depends on this. If signing isn't part of your release process, you won't see these fields and don't need to do anything.
 
     FluentCart never generates, verifies, or parses these values. The signing key belongs to your release pipeline and should never be stored on your store's server.
     :::
@@ -193,7 +197,7 @@ After you've configured these settings, just click the **Update Settings** butto
 On the Product Edit screen, click the **"Integrations"** tab.
 
 * Here you can connect this specific product to other FluentCart modules or third-party services that have a direct impact on its functionality, sales, or fulfillment.
-* For example, you might integrate a specific product with **FluentCRM** to add customers who purchase this product to a particular list, or with **FluentForms** if product purchase triggers a form submission.
+* For example, you might connect a product to **FluentCRM** to add buyers to a list, or to **LearnDash** to enrol them in a course.
 
 >To learn more about managing product integrations, see the [Managing Product Integrations](/guide/product-types-creation/managing-product-integrations) guide.
 
@@ -202,8 +206,8 @@ On the Product Edit screen, click the **"Integrations"** tab.
 On the Product Edit screen, click the **"Upgrade Paths"** tab.
 
 * This powerful feature allows you to create seamless upgrade options for customers holding a license for this product.
-* You can define paths from a **"From Plan"** (e.g., "Single Site Yearly License") to a **"To Plan"** (e.g., "5 Sites Yearly License" or "Single Site Lifetime License").
-* Specify a **"Discount Amount"** and whether the upgrade is **"Prorated"** (meaning the customer gets credit for unused time on their old plan).
+* Upgrade paths require FluentCart Pro and aren't available for bundle products.
+* Click **Add Path**, pick a **From Plan** (e.g., "Single Site Yearly License") and one or more **To Plan(s)** (e.g., "5 Sites Yearly License" or "Single Site Lifetime License"), then set an optional **Discount Amount** and the **Prorate** checkbox (which credits the customer for what they already paid on their old plan).
 
 >To learn more about upgrade paths, see the [Defining Upgrade Paths](/guide/product-types-creation/defining-upgrade-paths) guide.
 
@@ -212,5 +216,5 @@ On the Product Edit screen, click the **"Upgrade Paths"** tab.
 
 Once you have configured all the necessary details:
 
-1.  Set the **Status** to **"Published"** in the "Publishing" section.
-2.  Click the **"Update"** (or "Save") button on the top right to make your product live in your store.
+1.  In the **Publishing** card, set **Status** to **Publish**.
+2.  Click **Update** at the top right to make your product live in your store.

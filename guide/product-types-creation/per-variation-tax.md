@@ -10,9 +10,7 @@ These controls are visible **only when store-level tax is enabled** on the [Tax 
 
 ## Opening the Variation Editor
 
-1. Open the product you want to edit.
-2. In the **Pricing** section, make sure the pricing method is set to **Simple Variations**.
-3. Click the **pencil icon** in the **Action** column of the variation you want to configure.
+The tax controls are available for every pricing method. For **Simple** products, they appear directly in the **Pricing** panel. For **Simple Variations** and **Advanced Variations**, open the product, then click the **pencil icon** on the variation (or click the variant) to open the variation editor.
 
 The variation editor opens as a side panel. The three tax controls are split across two sections: a **Tax** dropdown in **Pricing** (next to the **Price** field) and a **Tax** block further down (below **Shipping**).
 
@@ -43,7 +41,7 @@ A checkbox in the dedicated **Tax** section near the bottom of the variation edi
 
 ### 3. Tax Class (Tax section)
 
-When **Charge tax on this variation** is checked, a **Class:** row appears below the checkbox showing the active class (for example, **Standard**). Click the **pencil icon** beside the class name to open a dropdown and pick a different class.
+When **Charge tax on this variation** is checked, a **Class:** row appears below the checkbox showing the active class (for example, **Standard**). Click the **pencil icon** beside the class name to open a dropdown and pick a different class. The pencil icon appears only when your store has more than one tax class.
 
 ![Screenshot of the Tax class dropdown open with Standard, Reduced, and Zero options](/images/product-types-creation/per-variation-tax/per-variation-tax-class.webp)
 
