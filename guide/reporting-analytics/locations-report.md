@@ -38,7 +38,7 @@ The two **International** cards only appear when your store address has a **Coun
 
 At the country level, a world map shades each country by its net sales, from light to dark blue, with a scale at the bottom left. Hover over a country to see its name and net sales, and drag or scroll to pan and zoom. With FluentCart Pro, clicking a country on the map opens its states.
 
-<!-- TODO(screenshot): The Locations world map at country level, with countries shaded by net sales and the color scale visible, and the Address dropdown and export icon above it. -->
+![Screenshot of the Locations cards and the world map with the Address dropdown and color scale](/images/reporting-analytics/locations/locations-overview.webp)
 
 ## Locations Table
 
@@ -81,7 +81,7 @@ When one state holds most of a country's orders, a warning above the table point
 
 Without Pro, the report shows countries only, and a preview with sample data describes these extras.
 
-<!-- TODO(screenshot): With FluentCart Pro active, a country drilled down to its states, showing the breadcrumb, the Biggest Movers card with Growing and Declining lists, and the Lifetime Value and Bought Again columns. -->
+![Screenshot of a country drilled down to its states with the breadcrumb and the Biggest Movers card](/images/reporting-analytics/locations/locations-drilldown.webp)
 
 ## Exporting the Report
 

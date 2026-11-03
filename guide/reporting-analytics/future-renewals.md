@@ -47,14 +47,14 @@ The main feature of this report is an interactive chart that visualizes your pro
 
 When nothing is scheduled, the chart reads **No renewal is scheduled in this horizon**.
 
-<!-- TODO(screenshot): Future Renewals page with the Horizon dropdown, the five summary cards, the Renewal rate assumptions sliders, and the Renewals by month chart. The current image shows the old Renewal Revenue chart. -->
-![Future Renewals](/images/reporting-analytics/subscription/future-renewals/future-renewals-1.webp)
+![Screenshot of the Future Renewals cards, the horizon dropdown and the Renewal rate assumptions sliders](/images/reporting-analytics/subscription/future-renewals/future-renewals-cards.webp)
+
+![Screenshot of the Renewals by month chart](/images/reporting-analytics/subscription/future-renewals/future-renewals-chart.webp)
 
 ## Renewals by Variant
 
 With **FluentCart Pro**, the **Renewals by Variant** table splits the forecast by product and variant, to see which plans carry your recurring revenue. For each variant, it shows the renewals due and the ideal and projected amounts. Without Pro, a sample preview takes its place.
 
-<!-- TODO(screenshot): Pro Renewals by Variant table with its ideal and projected columns. -->
 ![Screenshot of the Renewals by Variant table](/images/reporting-analytics/subscription/future-renewals/future-renewals-variants.webp)
 
 ## Tips for Forecasting

@@ -36,7 +36,7 @@ The other cards show a badge with the change against the compared period. Hover 
 
 The **Net Sales by Payment Method** chart shows the net sales of the orders each gateway took, period by period. Each gateway is a colored segment in a stacked bar, so the full bar is your total net sales and each segment is one gateway's share. The timeline groups by day, month, or year automatically from your date range. Only gateways with orders in the period are drawn.
 
-<!-- TODO(screenshot): The Net Sales by Payment Method stacked bar chart with two or more gateways in the legend. -->
+![Screenshot of the Payment Methods cards and the Net Sales by Payment Method chart](/images/reporting-analytics/payment-methods/payment-methods-overview.webp)
 
 ## Payment Methods Table
 
@@ -62,7 +62,7 @@ The table below the chart gives you one row per payment gateway, with a **Total*
 
 A few rows are worth knowing about. A payment made with a saved card is counted under the gateway that charged it. A gateway you have since removed still appears under a readable version of its name, and orders with no recorded gateway appear as **Unknown**.
 
-<!-- TODO(screenshot): The Payment Methods table showing the Payment Method column, the Sales and Risk column groups, and the Total row. -->
+![Screenshot of the Payment Methods table with the Sales and Risk column groups and the Total row](/images/reporting-analytics/payment-methods/payment-methods-table.webp)
 
 ## Disputes and Card Brands *(FluentCart Pro)*
 
@@ -73,7 +73,7 @@ With FluentCart Pro, two more sections appear below the table:
 
 Without Pro, this area shows a preview with sample data. If Pro is active but too old to include these sections, the preview asks you to update FluentCart Pro.
 
-<!-- TODO(screenshot): With FluentCart Pro active, the Disputes card with its dispute rate and per-gateway table, and the Card Brands and Methods table below it. -->
+![Screenshot of the Disputes card and the Card Brands and Methods table](/images/reporting-analytics/payment-methods/payment-methods-disputes.webp)
 
 ::: info
 Even without Pro, the [Overview](/guide/reporting-analytics/reports-dashboard-overview) warns you in its **Needs Attention** card when your store's dispute rate rises above 0.75%.

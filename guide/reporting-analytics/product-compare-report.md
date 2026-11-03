@@ -20,8 +20,7 @@ You pick the products on the page itself, not in the **Filters** menu. The page 
 
 Each item gets its own color, which it keeps on the chart and in the table. Your picks are saved in the page address, so you can bookmark or share a comparison.
 
-<!-- TODO(screenshot): Compare page with three "Pick a product or variation" dropdowns joined by "vs" and the + Add button. The current image shows the old Products filter picker. -->
-![Screenshot of the Products filter with three products ticked](/images/reporting-analytics/product/product-compare-picker.webp)
+![Screenshot of three product pickers joined by vs and the + Add button](/images/reporting-analytics/product/compare-pickers.webp)
 
 ## Report Filters and Controls
 
@@ -74,8 +73,9 @@ This group appears when at least one item sells subscriptions.
 
 The **Customer overlap** table shows, for each item's customers in the period, how many have ever bought each of the other items, and how many bought that other item first. Use it to see whether two products compete for the same buyers or lead customers from one to the other.
 
-<!-- TODO(screenshot): Compare page with the Trend chart, the Head to head table with Leader marks, and the Customer overlap table. The current image shows the old chart and Totals table. -->
-![Screenshot of the Compare Products chart and Totals table](/images/reporting-analytics/product/product-compare-report.webp)
+![Screenshot of the Head to head table with Leader marks](/images/reporting-analytics/product/compare-head-to-head.webp)
+
+![Screenshot of the Trend chart and the Customer overlap table](/images/reporting-analytics/product/compare-trend-overlap.webp)
 
 If the report cannot load, the page shows **This report could not be loaded.** with a **Retry** button.
 

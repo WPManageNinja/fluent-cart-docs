@@ -17,8 +17,7 @@ The Cohorts page has no date filter, because every cohort is followed from its f
 
 Each row counts the customers who first paid in that month or year, and each column shows how many of them still had a running subscription after that many months or years. A customer who leaves and comes back counts again. Installment plans are not included. Hover over the info icon beside the **Subscription Cohorts** title to read this definition in the app.
 
-<!-- TODO(screenshot): Cohorts page title bar with "Last generated", the Generate Snapshots button, and the table settings row (Yearly / Monthly, % of start / Values). The current image shows the old filter bar. -->
-![Accessing the Cohorts Report](/images/reporting-analytics/subscription/cohorts/accessing-the-cohorts-report-1.webp)
+![Screenshot of the Subscription Cohorts page with Last generated, Generate Snapshots and the table settings](/images/reporting-analytics/subscription/cohorts/cohorts-table.webp)
 
 ## Cohort Visualization & Table
 
@@ -89,7 +88,6 @@ FluentCart allows you to manage and export this data for external reporting or d
 Snapshots no longer run as a background job, so they don't depend on WP-Cron or Action Scheduler. They work on any host, as long as the Cohorts page stays open while they build.
 :::
 
-<!-- TODO(screenshot): Cohort table with the First paid and Start columns, the Weighted average row, and the Generate Snapshots button showing build progress. -->
-![Cohort Table](/images/reporting-analytics/subscription/cohorts/cohorts-2.webp)
+![Screenshot of the cohort table with the First paid and Start columns and the Weighted average row](/images/reporting-analytics/subscription/cohorts/cohorts-table.webp)
 
 With the **Subscription Cohorts** report, you can identify exactly when customers are most likely to leave and which products attract the most loyal subscribers. By understanding these patterns, you can make data-driven decisions to improve your long-term recurring revenue.
