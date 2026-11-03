@@ -35,7 +35,6 @@ The **Overview** follows the date range and compare period you pick in the filte
 
 The Overview is store-wide. It has no **Filters** menu, so an **Order Type** or **Products** filter you set on another report does not apply here. It also reads one currency at a time, so its **Currency** chip lists your individual currencies only, without an **All currencies** option.
 
-<!-- TODO(screenshot): The rebuilt Overview page from the top, showing the filter bar, the six sales cards with change badges, the subscription cards row, and the Needs Attention card. The current image shows the retired Gross Summary and quarterly cards. -->
 ![Screenshot of Reporting Overview Page](/images/reporting-analytics/dashboard-overview/reporting-overview.webp)
 
 ### Sales Cards
@@ -76,7 +75,6 @@ Each item has a **View report** link to the page where you can investigate it.
 
 The **Net Sales** chart plots your net sales across the selected period, with the compared period drawn as a dotted line, so you can see at a glance whether you are ahead or behind. The chart groups the timeline automatically from your date range: by day for short ranges, by month for ranges up to a year, and by year beyond that. If there were no sales in either period, it shows **No sales in this period**.
 
-<!-- TODO(screenshot): The Net Sales chart on the Overview with the compared period as a dotted line, followed by the Top Products, Top Channels, and Top Countries lists side by side. The current image shows the retired Net Revenue and Top Country Gross/Net Volume charts. -->
 ![Screenshot of Report Dashboard Overview Page](/images/reporting-analytics/dashboard-overview/overview-metrics.webp)
 
 ### Top Lists
@@ -110,7 +108,6 @@ On the **Orders**, **Revenue**, **Refunds**, and **Subscriptions** charts, **Aut
 
 Pick a grouping explicitly when Auto is not what you want, such as reading a full year day by day to find a single spike.
 
-<!-- TODO(screenshot): Verify against the rebuilt Orders page and reshoot if it changed. A trend chart with the grouping dropdown open, showing Auto (Daily, Monthly, or Yearly), Daily, Monthly, and Yearly. -->
 ![Screenshot of the Order Chart with the grouping dropdown open, showing Auto (Yearly), Daily, Monthly, and Yearly](/images/reporting-analytics/dashboard-overview/trend-chart-grouped.webp)
 
 ## Choosing the Date Range
@@ -123,7 +120,6 @@ Presets always count from today, so **Last 7 days** still means the last seven d
 
 The compare dropdown beside the date button decides which earlier period your numbers are measured against. Its label reads, for example, **vs Previous period**. Each option in the list shows the dates it would use, so you never have to work out the comparison window yourself.
 
-<!-- TODO(screenshot): The compare dropdown open on a report, showing Previous period, Previous month, Previous quarter, Previous year, Custom, and No comparison with their dates. The current image shows the old "Compare to" control with title-case labels. -->
 ![Screenshot of the Compare to dropdown listing Previous Period, Previous Month, Previous Quarter, Previous Year, Custom, and No Comparison with their dates](/images/reporting-analytics/dashboard-overview/compare-to-options.webp)
 
 All comparison periods last as many days as your selected range. They differ in where they start:
