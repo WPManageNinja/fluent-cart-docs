@@ -29,7 +29,7 @@ This guide explains how to use Shipping Classes to group products with similar s
     * **Cost Type**: This defines how the "Cost Adjustment" is applied:
         * **Percentage**: The "**Cost Adjustment**" will be applied by percentage.
         * **Fixed Amount**: The "**Cost Adjustment**" will be applied by a fix amount.
-     * **Apply to Qunatity**: Select this checkbox if you want the class to add per item charge if the buyer has multiple item of this product in the cart.
+     * **Apply to quantity**: Select this checkbox if you want the cost multiplied by the number of units in the cart that belong to this class. For example, a $5 class with 3 units adds $15. Leave it unchecked to charge the class once per order, however many products or units use it.
 
 4.  **Save the Shipping Class**:
     * Click the **"Save"** or **"Add Class"** button.
@@ -55,3 +55,6 @@ Once you have created your shipping classes, you need to assign them to your pro
 
 **Important Notes**:
 * The actual final shipping cost will combine the shipping method's base rate with these shipping class adjustments, and then apply the "Class Aggregation" rule defined in the shipping method.
+* Class charges are grouped by class, not by cart line. If two different products share a **Fixed Amount** class and **Apply to quantity** is off, the class is charged once, not once for each product.
+* A **Percentage** class with **Apply to quantity** off is charged once, as a percentage of the highest unit price among the products in that class.
+* With **Highest Class** aggregation, FluentCart compares the total of each class and charges the largest one, instead of the most expensive single cart line.
