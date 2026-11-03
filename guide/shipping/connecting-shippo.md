@@ -45,7 +45,6 @@ Now, let's link your Shippo account to your store.
 1. Go to **FluentCart Pro > Settings > Shipping**. The **Carriers** page opens.
 2. Click **Manage** next to **Shippo (Beta)**.
 
-    <!-- TODO(screenshot): re-run scripts/screenshots/plans/shippo-settings.json. The Carriers row now reads "Shippo (Beta)" (add-on build of Nov 3, 2026). -->
     ![Screenshot of the Carriers page with the Manage button for Shippo highlighted](/images/shipping/shippo/carriers-shippo-manage.webp)
 
 3. In the **Connection** card, turn on **Enable Shippo**.
@@ -57,7 +56,6 @@ Each card has its own token field, so you can save both tokens at once. You can 
 
 When you save, FluentCart checks the token with Shippo before storing it, and loads the list of carriers on your Shippo account. After a successful save, the token is hidden. The field shows **Leave blank to keep the saved token (ending 5857)**, and the mode card shows a tag such as **Token ending 5857 · verified**. The **Connection** card header shows **Connected · Test mode** or **Connected · Live mode**.
 
-<!-- TODO(screenshot): re-run scripts/screenshots/plans/shippo-settings.json (shot "shippo-settings-connection"). The token field now sits inside each mode card instead of below the cards. -->
 ![Screenshot of the Shippo Connection card after saving a test token](/images/shipping/shippo/shippo-settings-connection.webp)
 
 If something is wrong, FluentCart shows an error and saves nothing. These are the messages you may see:
@@ -73,7 +71,6 @@ If something is wrong, FluentCart shows an error and saves nothing. These are th
 
 The Shippo settings page is split into five cards: **Connection**, **Checkout rates**, **Labels**, **Sender**, and **Tracking updates**. Fields are saved together with **Save settings**. The buttons inside the status boxes, such as **Test connection** and **Register webhook in Shippo**, work differently: they run right away and do not need a save.
 
-<!-- TODO(screenshot): re-run scripts/screenshots/plans/shippo-settings.json (shot "shippo-settings-overview"). Page title is now "Shippo (Beta)" and both mode cards hold a token field. -->
 ![Screenshot of the full Shippo settings page](/images/shipping/shippo/shippo-settings-overview.webp)
 
 When **Enable Shippo** is off, a note says that checkout rates, labels and tracking updates stop until you turn it back on, and the other cards are dimmed.
@@ -116,7 +113,6 @@ The **Sender** card holds the details printed on every label. Its fields appear 
 * **Phone** *(required for USPS)*: The number carriers call if a parcel has a problem. Include the country code, such as `+1` for the US. When filled in, it must contain 8 to 15 digits. While it is empty, a warning reminds you that USPS refuses labels without a sender phone.
 * **Email:** The sender email on labels. It is filled from your store's admin email; change it if labels need another address.
 
-<!-- TODO(screenshot): re-run scripts/screenshots/plans/shippo-settings.json (shot "shippo-settings-sender"). The Phone hint now adds "Include the country code, like +1 for the US." -->
 ![Screenshot of the Sender card with Ships from, Phone and Email](/images/shipping/shippo/shippo-settings-sender.webp)
 
 ### Tracking Updates
