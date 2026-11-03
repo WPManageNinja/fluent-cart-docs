@@ -1,58 +1,57 @@
 # Subscription Future Renewals Report
 
-The **Future Renewals** report provides a predictive look into your store's upcoming income. By analyzing your currently active subscriptions and their next billing dates, FluentCart estimates the expected revenue you will receive over the next few months. This report is a vital tool for cash flow forecasting and business planning.
+The **Future Renewals** report forecasts the renewal income your subscriptions will bring in over the next months. It shows the ideal amount if every customer renews, a projection at your own renewal rates, and the renewals you are likely to lose. Use it to plan cash flow and to see how much a win-back or dunning effort could recover.
 
 ## Accessing Future Renewals
 
-Go to your WordPress dashboard, navigate to **FluentCart Pro → [Reports](/guide/reporting-analytics/reports-dashboard-overview)**, and select the **Future Renewals** sub-tab under the **Subscriptions** category.
+Go to your WordPress dashboard, then go to **FluentCart > Reports** in the side menu. Under **Subscriptions**, click on **Future Renewals**.
 
-## Understanding Future Revenue Estimates
+This report looks forward, so it has no date range or comparison. The product picker and currency work as described in [How Reports Count](/guide/reporting-analytics/how-reports-count). Pick the forecast length in the dropdown at the top: **Next 3 months**, **Next 6 months**, or **Next 12 months**.
 
-This report is calculated by looking at all active subscriptions and extrapolating their scheduled renewals over a specific time period (typically a 90-day window). A note at the top of the page spells out the exact dates the estimate covers, for example **between October 15, 2026 and January 15, 2027**.
+The forecast covers renewals scheduled by your live recurring subscriptions, at their renewal price, by the month they fall due. Installment plans are not included; see the [Installments report](/guide/reporting-analytics/installments-report) for those.
 
-When your orders are in more than one currency, a **Currency** chip appears in the filter bar at the top of the page, the same one the other reports use. Pick a currency, or read everything combined in your base currency. See [Viewing Reports in More Than One Currency](/guide/reporting-analytics/reports-dashboard-overview#viewing-reports-in-more-than-one-currency).
+## Forecast Cards
 
-* **Renewal Revenue:** The total estimated dollar amount expected from successful subscription renewals in the upcoming period.
-* **Renewals:** The total count of individual subscription transactions scheduled to occur.
+Five cards sum up the forecast. Hover over the info icon beside a card to read its definition.
 
-## Upcoming Renewal Revenue Chart
+* **Ideal Renewals (100%):** Every renewal due in the period, if every customer renews. Canceled subscriptions are not included. The line under it shows how many renewals are due.
+* **Projected Renewals:** The ideal amount at the renewal rates set below. The line under it shows the projection as a share of the ideal.
+* **Projected Shortfall:** The ideal amount less the projected one: what you are not expected to collect at these rates.
+* **Won't Renew:** Canceled subscriptions still in their paid term that end inside the period: the renewals they would have paid, unless the customer comes back.
+* **At Risk Now:** Renewals already due and not paid, either retrying payment or overdue. They are not in the forecast, but they may still come in.
 
-The main feature of this report is an interactive chart that visualizes your projected income and transaction volume over the coming months.
+<!-- TODO(screenshot): future-renewals-cards.webp | /reports/subscriptions/future-renewals, Next 3 months: the five forecast cards and the Renewal rate assumptions sliders | arrow on the horizon dropdown -->
 
-* **Revenue (Blue Line):** Tracks the total monetary value of renewals. Use this to identify "peak months" where high-value subscriptions are set to renew.
-* **Count (Light Grey Bars):** Represents the number of individual renewals happening each month.
-* **Combined View:** By seeing both the line and the bars together, you can determine if your revenue is coming from a high volume of small transactions or a few high-value renewals.
+## Renewal Rate Assumptions
 
-![Future Renewals](/images/reporting-analytics/subscription/future-renewals/future-renewals-1.webp)
+The **Renewal rate assumptions** card holds one slider per billing interval, for example **Monthly plans** and **Yearly plans**. Each slider starts at your store's own rate: the renewals paid out of those due in the last 12 closed months, as on the Retention report. When an interval has no history, it starts at your store's overall rate.
 
-## Renewals by Variant
+When subscriptions in a free trial are due to convert, a **Free trials converting** slider appears too. It starts at your share of ended trials that paid, or at 50% without history.
 
-Below the chart, the **Renewals by Variant** table shows where the projected income comes from, one row for each product variation.
+Move a slider to try another rate, and the cards and chart update at once. A subscription's second renewal in the period counts only if it paid the first, so the rate compounds. Click **Reset to your history** to return to your own rates.
 
-* **Product:** The product the variation belongs to.
-* **Variant:** The subscription plan or variation, for example a monthly or yearly plan.
-* **Renewals:** The number of renewals expected for that variation in the period.
-* **Projected revenue:** The estimated income from those renewals.
+## Renewals by Month
 
-Click the **Renewals** or **Projected revenue** heading to sort the table by that column. The rows add up to the **Renewal Revenue** and **Renewals** totals at the top of the page, so you can see which plan carries your forecast.
+The chart shows each month in the period:
 
-![Screenshot of the Renewals by Variant table](/images/reporting-analytics/subscription/future-renewals/future-renewals-variants.webp)
+* **Ideal (100%):** The bars for every renewal due.
+* **Projected:** The line at your renewal rates.
+* **Won't renew:** Bars for canceled subscriptions that end that month, shown when there are any.
 
-## Feature Breakdown & Controls
+<!-- TODO(screenshot): future-renewals-chart.webp | /reports/subscriptions/future-renewals, Next 6 months: Renewals by month chart with Ideal (100%) bars, Projected line and Won't renew bars | no arrow -->
 
-The Future Renewals interface is designed to be clean and easy to interpret at a glance.
+## Renewals by Variant (Pro)
 
-* **Timeline Axis:** The horizontal axis shows the upcoming months (for example, October 2026 through January 2027), giving you a clear window into your immediate financial future.
-* **Data Toggle:** Use the interactive legend to toggle between viewing just the **Revenue** line or just the renewal **Count** bars.
-* **Zoom & Focus:** Use the icons in the top-right corner of the chart to zoom into specific dates or expand the view for a more detailed analysis.
+This table splits the forecast by product and variation, so you can see which plans carry your recurring revenue. It shows the **Product**, **Variant**, **Renewals**, **Ideal (100%)**, and **Projected** amount for each, and you can sort by any number column.
 
+::: info Renewals by Variant requires FluentCart Pro
+Without Pro, this table shows a locked preview with sample data.
+:::
 
-## Tips for Forecasting
+<!-- TODO(screenshot): future-renewals-variants.webp | /reports/subscriptions/future-renewals with Pro active: Renewals by Variant table sorted by Projected | no arrow -->
 
-> **Note:** These figures are estimates based on *active* subscriptions. Actual revenue may vary slightly depending on factors like payment failures, mid-month cancellations, or manual plan changes.
+::: info
+These figures are a forecast. Actual income can differ because of failed payments, cancellations, and plan changes.
+:::
 
-* **Plan for Growth:** Use the peak months on the chart to plan your marketing budget or inventory purchases, knowing when your cash reserves will be strongest.
-* **Identify Gaps:** If you notice a significant drop in future renewals in a specific month, consider launching a promotional campaign to attract new subscribers or encourage annual upgrades.
-
-
-With the **Future Renewals** report feature, you no longer have to guess what next month's income will look like. By providing a clear projection of upcoming subscription billing, FluentCart helps you manage your business with confidence and financial clarity.
+The Future Renewals report now gives you a forecast of your recurring income that you can test against your own assumptions.

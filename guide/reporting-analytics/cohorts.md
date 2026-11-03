@@ -1,74 +1,55 @@
 # Subscription Cohorts Report
 
-The **Cohorts** report provides a detailed look at customer behavior over time by grouping subscribers based on when they started their journey. This report is essential for identifying patterns in customer retention and revenue stability, allowing you to see exactly how long specific "groups" of customers stay with your business.
+The **Cohorts** report groups subscribers by when they first paid and follows each group over time. Use it to see how long customers stay subscribed, whether newer customers stay longer than older ones, and, with Pro, how much revenue each group keeps.
 
 ## Accessing the Cohorts Report
 
-Go to your WordPress dashboard, navigate to **FluentCart Pro → [Reports](/guide/reporting-analytics/reports-dashboard-overview)**, and select the **Cohorts** sub-tab under the **Subscriptions** category.
+Go to your WordPress dashboard, then go to **FluentCart > Reports** in the side menu. Under **Subscriptions**, click on **Cohorts**.
 
----
+This report covers all your subscriptions, so it has no date range. The product picker and currency work as described in [How Reports Count](/guide/reporting-analytics/how-reports-count).
 
-## Report Filters and Controls
+## Generating Cohort Data
 
-The Cohorts dashboard offers powerful filtering options to help you drill down into specific datasets.
+The table is built from snapshots, so new subscriptions and cancellations appear only after the next rebuild.
 
-* **Date Filter:** Select a specific timeframe to view the cohorts that started during that period.
-* **Reset Filters:** Instantly clear your custom selections to return to the default overview.
-* **Advanced Filters (Funnel Icon):** Filter your cohort data by **Order Type**, **Subscription Type**, or specific **Products** to see how different offerings perform over time.
+* **Last generated:** The text at the top shows when the data was last built.
+* **Generate Snapshots:** Rebuilds the cohort data from all subscriptions. FluentCart asks you to confirm, because it can take a minute on a large store. Large stores build in the background, and a message tells you when it starts.
 
-![Accessing the Cohorts Report](/images/reporting-analytics/subscription/cohorts/accessing-the-cohorts-report-1.webp)
+If the data is older than seven days, or was never built, a warning appears with a **Generate now** link. Until the first build, the table asks you to click **Generate Snapshots**.
 
-## Cohort Visualization & Table
+## Reading the Cohort Table
 
-The **Subscription Cohorts** table breaks down your data into a "heat map" format, making it easy to spot trends at a glance.
+Each row is the customers who first paid in that month or year. Each column shows how many of them still had a running subscription after that many months or years. A customer who leaves and comes back counts again. Installment plans are not included.
 
-### 1. Time Granularity
+* **First paid:** The month or year the group first paid.
+* **Start:** The size of the group when it started.
+* **Month 1**, **Month 2**, and so on (or **Year 1**, **Year 2**): The group after that many periods. Darker cells mean higher retention.
+* **Weighted average:** The bottom row averages all groups at each step, weighted by group size.
 
-You can toggle the view between **Year** and **Month**.
+Hover over a cell to see the exact numbers. A cell marked with `*` is not complete yet. In the monthly view, it is the current month, still running. In the yearly view, only some of the group's monthly cohorts have reached that point, and the hover text says how many.
 
-* **Yearly View:** Best for long-term business health analysis.
-* **Monthly View:** Best for tracking the immediate impact of seasonal promotions or product updates.
+Use the controls above the table to change the view:
 
-### 2. Metric Selection
+* **Yearly** or **Monthly:** The size of each group and each step.
+* **% of start** or **Values:** Show each cell as a share of the start, or as the number itself.
+* **Export:** Downloads the table as a CSV file.
 
-Choose whether to analyze retention based on customer count or financial value:
+<!-- TODO(screenshot): cohorts-table.webp | /reports/subscriptions/subscriptions-cohorts, Monthly, % of start: cohort heat map with the Weighted average row and the Last generated text | arrow on Generate Snapshots -->
 
-* **Subscriptions:** Tracks the number of active subscribers remaining from the original group.
-* **MRR (Monthly Recurring Revenue):** Tracks how much revenue the specific group continues to generate over time.
+## More Cohort Views (Pro)
 
-### 3. Data Representation Styles
+FluentCart Pro adds these controls and charts:
 
-The dropdown menu allows you to change how the percentages in the table are calculated:
+* **Customers** or **MRR:** Follow the revenue each group keeps instead of the number of customers. MRR retention can pass 100% when customers upgrade.
+* **Billing interval:** Appears when your subscriptions use more than one interval. Read monthly and yearly plans apart.
+* **Count rebuys as retained:** A customer whose subscription ended and who bought the same product again within 30 days of its paid term end counts as kept the whole time. Use it when customers cancel and rebuy to get a new-customer price.
+* **Retention curve:** A chart of the average cohort: the share still subscribed after each period, weighted by cohort size.
+* **Cancel and rebuy:** Turn the switch on to see subscriptions whose paid term ended without renewing, and how many of their customers bought the same product again. Cohorts has no date control of its own, so this card uses the date range last set on the other reports. Pick a window of **Within 7 days**, **Within 30 days**, or **Within 90 days**. The cards show the **Rebuy rate**, **When they bought again**, and the **Discount on rebuys**.
 
-* **% of Total:** Shows how many customers/revenue remains compared to the original start date.
-* **% of Previous:** Shows the retention rate compared to the immediately preceding month.
-* **Total Value:** Displays the actual currency or subscriber numbers instead of percentages.
-* **% of Total Ended:** Shows how much of the original group has churned so far, instead of how much remains. A cohort counts as churned when its subscription goes on hold or officially ends, taking the end date into account. Hover over the info icon beside the report title to read this definition in the app.
+::: info These views require FluentCart Pro
+Without Pro, the table shows customer cohorts only, and the other sections show a locked preview with sample data.
+:::
 
-A subscriber stops counting toward a cohort from the moment their subscription is canceled or expires, so the later columns reflect only the people who are still subscribed.
+<!-- TODO(screenshot): cohorts-pro-sections.webp | /reports/subscriptions/subscriptions-cohorts with Pro active: MRR view selected, Retention curve chart and the Cancel and rebuy card switched on | arrow on the Count rebuys as retained switch -->
 
-## Understanding the Cohort Table
-
-Each row represents a **Cohort** (a group of subscribers who started in the same month/year).
-
-* **Subscribed/Start:** This column shows the date the group joined and the initial value (Total subscribers or MRR) they brought in.
-* **Month 1, Month 2, etc.:** These columns track that specific group as they move through their lifecycle.
-* **Weighted Avg. Retained:** The bottom row provides an aggregate average of how all cohorts perform at each stage, giving you a baseline for your business's overall retention health.
-
-Hover over any cell to see the exact numbers behind it.
-
-### Partial Years
-
-In the **Year** view, a cohort that started this year, or one that is still maturing, has not yet had every month of its later years. FluentCart sizes each yearly cohort from all of its monthly cohorts and marks the figures that are not complete. The hover text on a marked cell reads **Partial** followed by how many of the monthly cohorts have reached that point, for example **Partial: 7 of 12 monthly cohorts have reached this point**. Treat these figures as a preview, because they will change as the remaining months pass.
-
-## Managing Cohort Data
-
-FluentCart allows you to manage and export this data for external reporting or deeper analysis.
-
-* **Last generated:** The text beside the buttons shows when the cohort data was last refreshed, for example **Last generated October 15, 2026 4:46 pm**. The table is built from snapshots, so new signups and cancellations appear only after the next refresh.
-* **Generate Snapshots:** Click this button to refresh and capture the latest data for your cohorts. FluentCart asks you to confirm because it rebuilds every snapshot, which can take 30 to 60 seconds. It runs in the background, and a message tells you when it finishes. If you have never generated snapshots, the table asks you to click **Generate Snapshots** first.
-* **Export:** Use the Export button to download your cohort data as a CSV file for use in spreadsheet software like Excel or Google Sheets.
-
-![Cohort Table](/images/reporting-analytics/subscription/cohorts/cohorts-2.webp)
-
-With the **Subscription Cohorts** report, you can identify exactly when customers are most likely to leave and which products attract the most loyal subscribers. By understanding these patterns, you can make data-driven decisions to improve your long-term recurring revenue
+The Cohorts report now shows you how long each group of customers stays with you.

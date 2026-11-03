@@ -1,59 +1,54 @@
-# Subscription Retention & Churn Report
+# Subscription Retention Report
 
-The **Retention** report in FluentCart provides a deep dive into your subscription health, helping you track how many customers you keep versus how many you lose (churn) over time. This dashboard is essential for measuring long-term stability and customer loyalty.
+The **Retention** report shows how many of your subscribers stay and how much of their recurring revenue you keep from one period to the next. Use it to measure loyalty, spot months where churn jumps, and, with Pro, estimate what a subscriber is worth over their lifetime.
 
 ## Accessing the Retention Report
 
-Go to your WordPress dashboard, navigate to **FluentCart Pro → [Reports](/guide/reporting-analytics/reports-dashboard-overview)**, and select the **Retention** sub-tab under the **Subscriptions** category.
+Go to your WordPress dashboard, then go to **FluentCart > Reports** in the side menu. Under **Subscriptions**, click on **Retention**.
 
-## Report Filters and Controls
+The date range, product picker, and currency work as described in [How Reports Count](/guide/reporting-analytics/how-reports-count). Two more controls sit at the top of the page:
 
-Use the controls at the top of the page to customize the data displayed in your charts and tables.
+* **Monthly** or **Yearly:** Measure retention month by month or year by year.
+* **Billing interval:** Appears when your subscriptions use more than one billing interval. Pick **All intervals**, or read one interval apart, because a monthly plan churns monthly and a yearly plan churns at renewal.
 
-* **Date Filter:** Define a specific date range to analyze retention trends over weeks, months, or years. The first and last months are measured only within the dates you pick, so a range that starts mid-month does not pull in the earlier days of that month.
-* **Advanced Filters (Funnel Icon):** Narrow the report to specific **Products** or a **Subscription Type**. See [Using Advanced Filters](/guide/reporting-analytics/reports-dashboard-overview#using-advanced-filters).
-* **Reset Filters:** Instantly clear your custom date selections to return to the default report view.
+Retention compares the subscriptions active when a period began with those still active at its end. New subscriptions are not counted, and installment plans are not included.
 
-![Retention Report](/images/reporting-analytics/subscription/retention/retention-report-1.webp)
+## Retention Summary
 
-## Subscription & MRR Retention
+Three cards describe the last closed month or year. A period still running has had no time to churn, so it is left out. Each card shows the figure for that period next to the **Average of closed periods** in your range.
 
-This section highlights your ability to keep active subscribers and the revenue they generate.
+* **Subscription Retention:** Of the subscriptions active when the period began, the share still active at its end. A sentence under it gives the counts, and a note shows the churned share.
+* **MRR Retention:** Of the MRR at the start of the period, the share kept at its end.
+* **Renewal Rate:** Of the renewals that fell due in the period, the share that was paid. A plan canceled early counts as a lost renewal when its paid term ends. Renewals still retrying payment count once they settle.
 
-* **Subscription Retention:** The percentage of individual subscribers who remained active compared to the previous period.
-* **MRR (Monthly Recurring Revenue) Retention:** The percentage of recurring revenue maintained. This helps you see if you are keeping your most valuable customers.
-* **Average In Period:** A helpful benchmark showing your historical average for these metrics to help you identify if current performance is above or below your norm. Months in which you had no subscribers at the start are left out of the average, so an empty month does not drag it down.
+When your range does not cover a full month (or year), the cards ask you to pick a longer range.
 
-Under each figure, a sentence puts the numbers in plain words, for example **You retained 95.35% (41) of your Sep 2026 subscriptions (43).** Subscriptions that start and cancel within the same month count as lost, so they appear in the churn figures.
+<!-- TODO(screenshot): retention-summary.webp | /reports/subscriptions/subscriptions-retention, Last 12 months, Monthly: the three summary cards and the Retention Rate chart | arrow on the Monthly / Yearly switch -->
 
 ## Retention Rate Chart
 
-The **Retention Rate** chart provides a visual month-over-month comparison of your subscriber stability.
+The **Retention Rate** chart plots **Subscription Retention** and **MRR Retention** for each period, so you can see whether losing subscribers also costs you revenue in the same proportion.
 
-* **Subscription Retention vs. MRR Retention:** The chart plots both metrics side-by-side, allowing you to see if customer loss is impacting your revenue proportionally.
-* **Interactive Controls:** Use the icons in the top-right corner to zoom into specific dates, toggle between chart types, or download the graph for your internal business reviews.
+## Renewals and Why Subscriptions Left (Pro)
 
-![Retention Chart](/images/reporting-analytics/subscription/retention/retention-rate-2.webp)
+FluentCart Pro adds a chart with two views:
 
-## Lifetime Analysis
+* **Renewals:** Renewals that fell due in each period: **Renewed**, **Lost**, or still **Retrying payment**, with the renewal rate.
+* **Why they left:** Subscriptions that ended in each period, by reason: **Canceled**, **Payment failed**, **Retrying payment**, **Paused**, or **Completed**.
 
-This section uses your current data to predict the long-term value of your average customer.
+## Lifetime Estimate (Pro)
 
-* **Expected Subscription Lifetime:** An estimate of how many months a customer will stay subscribed based on your current retention rate. When your retention is at or near 100%, the estimate is capped at 10 years and the card reads "over 10 years" instead of showing an unrealistic number of months.
-* **Expected Lifetime Value (LTV):** The total revenue you can expect to earn from a single subscriber before they churn. This is a critical metric for determining how much you can afford to spend on marketing.
+The **Lifetime (estimate)** card turns your retention into two sentences:
 
-## Subscription & MRR Churn
+* **Expected subscription lifetime:** 1 divided by the average churn rate of the closed periods, in months. When retention is close to 100%, it reads **over 10 years**.
+* **Expected lifetime value:** The average monthly revenue per subscriber in the last closed period, times that lifetime.
 
-Churn is the measure of lost customers. Monitoring this helps you identify "leaks" in your subscription model.
+Both assume churn stays as it was.
 
-* **Subscription Churn:** The percentage of customers who cancelled their subscriptions during the selected period.
-* **MRR Churn:** The total amount of recurring revenue lost due to cancellations or downgrades.
-* **Churn Rate Trend:** This line graph visualizes whether your churn is increasing or decreasing over time, helping you spot negative trends before they impact your bottom line.
+::: info These sections require FluentCart Pro
+Without Pro, they show a locked preview with sample data.
+:::
 
-![Lifetime Analysis](/images/reporting-analytics/subscription/retention/lifetime-analysis-3.webp)
+<!-- TODO(screenshot): retention-pro-sections.webp | /reports/subscriptions/subscriptions-retention with Pro active: Renewals chart and the Lifetime (estimate) card | arrow on the "Why they left" switch -->
 
-
-
-> **Note:** High churn in a specific month often correlates with the end of a promotional period or a technical issue. Use these dates to investigate and improve your customer experience.
-
-With the **Retention Report**, you can move beyond simple signup numbers and focus on building a sustainable, recurring business by keeping the customers you've already won.
+The Retention report now shows you how well you keep the subscribers you have already won.
