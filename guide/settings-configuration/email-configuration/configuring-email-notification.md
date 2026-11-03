@@ -104,7 +104,7 @@ You have two options for the email's main content:
 
 Emails that use the **Default Body** share one layout. The email sits in a white card with rounded corners on a light grey background, and it adapts to phone screens.
 
-<!-- TODO(screenshot): The refreshed default layout of an order email (e.g. Purchase receipt to customer): header with Order Date, Order # and Receipt #, the Item / Qty / Total summary, the totals box with the payment badge, and the addresses. The existing email-notification-body.webp and package-info-email.webp may show the old layout. -->
+![Screenshot of an order email in the default layout with Order Date, Order #, and Receipt # in the header, the item summary, totals box with payment badge, and addresses](/images/settings-configuration/email-notifications/default-email-layout.webp)
 
 * **Header:** Your store name, with the **Order Date**, **Order #**, and **Receipt #** stacked on the right.
 * **Greeting:** When the email opens with a greeting and a message, the greeting is styled as a heading.
@@ -174,7 +174,7 @@ The default subject is "Your shipment is on the way #<code v-pre>{{order.invoice
 * **Shipment Notes:** The note you added for the customer, when there is one.
 * The customer's addresses and a **View Order** button that opens the order in their account.
 
-<!-- TODO(screenshot): A Shipment Update email as received by the customer, showing Tracking Details (Carrier, Service, Tracking Number, Track Shipment), Items in this Shipment, and Shipment Notes. -->
+![Screenshot of a Shipment Update email showing Tracking Details and Items in this Shipment](/images/settings-configuration/email-notifications/shipment-update-email.webp)
 
 #### Shipment Shortcodes
 
