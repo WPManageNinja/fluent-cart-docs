@@ -10,7 +10,6 @@ It groups your orders by the UTM parameters attached to them, so you can see whi
 
 Go to your WordPress dashboard, then **FluentCart → Reports**, and open the **Sources** tab. The page itself is titled **Order Sources**.
 
-<!-- TODO(screenshot): Order Sources page with the Sources item selected in the reports sidebar, the three new-customer cards, and the New Customers by Channel chart. The current image shows the old layout. -->
 ![Screenshot of the Order Sources report with the Sources tab selected in the Reports sidebar](/images/reporting-analytics/orders-source/order-source-1.webp)
 
 ## New Customers by Channel
@@ -49,8 +48,7 @@ With **FluentCart Pro**, you can also group by **Product**, **Variation**, **Day
 
 By default, only orders that carry the field you group by appear. Turn on **Include (none)** to add a **(none)** row for orders without that source data, so the table adds up to your revenue for the same filters. A row whose value is missing reads **(not set)**.
 
-<!-- TODO(screenshot): Sources table header with the Group by dropdown, the Include (none) switch, and the Gross / Net switch. It replaces the removed Columns panel shown in the current image. -->
-![Screenshot of the Columns panel listing UTM Campaign, UTM Source, UTM Medium, UTM Term, UTM Content, and UTM ID checkboxes](/images/reporting-analytics/orders-source/column.webp)
+![Screenshot of the Sources table header with the Group by dropdown, the Include (none) switch, the Advanced Filter switch and the Gross / Net switch](/images/reporting-analytics/orders-source/order-source-table-controls.webp)
 
 ### Revenue Metrics
 
