@@ -54,6 +54,8 @@ Without Pro, each section shows a locked preview with sample data.
 
 The **Top Customers** table lists the customers who paid in the range, ranked by what they have spent with you over all time.
 
+Only users with permission to view customers see this table. See [Customer Names and Emails](/guide/reporting-analytics/how-reports-count#customer-names-and-emails).
+
 * **Customer:** Name and email. Click a name to open the customer's profile.
 * **Orders** and **Renewals** in the range.
 * **Net in Period:** What the customer spent in the range.

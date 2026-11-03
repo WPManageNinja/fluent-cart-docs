@@ -13,7 +13,9 @@ This report covers all your subscriptions, so it has no date range. The product 
 The table is built from snapshots, so new subscriptions and cancellations appear only after the next rebuild.
 
 * **Last generated:** The text at the top shows when the data was last built.
-* **Generate Snapshots:** Rebuilds the cohort data from all subscriptions. FluentCart asks you to confirm, because it can take a minute on a large store. Large stores build in the background, and a message tells you when it starts.
+* **Generate Snapshots:** Rebuilds the cohort data from all subscriptions. FluentCart asks you to confirm, because it can take a minute on a large store. The button shows the progress, for example **Building snapshots 3/10**. Keep the page open until the build finishes. The old data stays in the table until the new data is complete.
+
+After a FluentCart update that changes how cohorts count, the page rebuilds the data once by itself when you open it.
 
 If the data is older than seven days, or was never built, a warning appears with a **Generate now** link. Until the first build, the table asks you to click **Generate Snapshots**.
 

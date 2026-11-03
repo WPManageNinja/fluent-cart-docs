@@ -65,7 +65,7 @@ Without Pro, these options are marked **(Pro)** and cannot be selected.
 * **Average Order** or **Average Order Net:** Follows the **Gross** / **Net** switch.
 * **Refund Rate** and **Refunds.**
 
-The **Total** row at the bottom covers every row that matches your filters. Click a column heading to sort, and use the download icon to export every row as a CSV file.
+The **Total** row at the bottom covers every row that matches your filters. A search does not change it: while you search, the row reads **Total (all sources)**. Click a column heading to sort, and use the download icon to export the rows as a CSV file. The export holds only the rows your search shows.
 
 * **Include (none):** Adds a **(none)** row for orders without this source data, so the table adds up to the Revenue report for the same filters.
 * **Search:** Filters the rows by name. Click a value in the table to search for it.

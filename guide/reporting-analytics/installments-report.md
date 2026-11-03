@@ -50,6 +50,8 @@ The table at the bottom has three tabs. Only the open tab loads.
 
 The **Overdue** and **Lapsed** lists show the **Customer**, **Product**, **Status**, payments **Paid**, amount **Collected**, and amount **Left**. When a plan can be reactivated, click **Copy link** in the **Reactivation** column to copy a link you can send to the customer. Use the search box to find a customer by name or email.
 
+Only users with permission to view customers see the **Overdue** and **Lapsed** tabs. See [Customer Names and Emails](/guide/reporting-analytics/how-reports-count#customer-names-and-emails).
+
 ![Screenshot of the Overdue tab with Copy link buttons](/images/reporting-analytics/subscription/installments/installments-overdue.webp)
 
 The Installments report now shows you what your payment plans have brought in and which customers need a reminder.

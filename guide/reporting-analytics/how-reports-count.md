@@ -109,6 +109,14 @@ Reports read every day and hour in the WordPress site timezone, which you set in
 
 Recent dates in admin tables show the time instead of the date. An order from earlier today shows as **2:50 PM**, and one from late yesterday shows as **Yesterday, 11:30 PM**.
 
+## Customer Names and Emails
+
+A user needs permission to view customers to see customer names and emails in reports. A user who can only view reports sees all the figures, but not the lists that name customers: **Top Customers** on the Customers report, and the **Overdue** and **Lapsed** plans on the Installments report. The same user does not see the recent orders on the FluentCart dashboard.
+
+## When a Report Does Not Load
+
+If a report cannot load, for example because the connection dropped, the section shows **This report could not be loaded** and a **Retry** button. It never shows zeros or the figures of your previous filters in its place.
+
 ## Currencies
 
 Every report reads one currency at a time, so amounts in different currencies never add up into a meaningless total. When your orders in the range use two or more currencies, a **Currency** chip appears in the filter bar. It starts on the currency with the most orders in the range.
