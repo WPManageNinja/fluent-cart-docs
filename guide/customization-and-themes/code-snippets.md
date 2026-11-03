@@ -298,7 +298,7 @@ add_filter('fluent_cart/utm/internal_domains', function ($domains) {
 Add every domain in your network, including the checkout site. Matching covers the bare domain, its `www.` form, and any subdomain, so listing `example.com` also covers `shop.example.com`.
 
 ::: info
-FluentCart applies no internal domains by default, so attribution behaves exactly as before until you add this snippet. Campaign values are stored in the visitor's browser for 30 days. The captured data then appears in your reports under marketing source, which you can read about in [Sales Report](/guide/reporting-analytics/sales-report).
+FluentCart applies no internal domains by default, so attribution behaves exactly as before until you add this snippet. Campaign values are stored in the visitor's browser for 30 days. The captured data then appears in your reports under marketing source, which you can read about in [Order Sources Report](/guide/reporting-analytics/order-sources-report).
 :::
 
 ### Gating Attribution Storage on Cookie Consent

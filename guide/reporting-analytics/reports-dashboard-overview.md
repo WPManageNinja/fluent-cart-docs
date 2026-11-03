@@ -1,77 +1,101 @@
- # Reports Dashboard Overview
+# Reports Dashboard Overview
 
-FluentCart Pro’s Reports section is your **built-in Business Analytics command center**. It provides detailed, real-time data visualizations designed to help you understand your store's financial performance, customer behavior, and product success without the need for complex external tools.
+FluentCart's **Reports** section is your built-in business analytics hub. It turns your orders, refunds, subscriptions, and customers into clear charts and tables, so you can understand how your store is doing without exporting data to an external tool.
 
-This powerful reporting suite allows you to:
-* **Track Profitability:** Get instant comparisons of **Gross Sales** versus **Net Revenue** and monitor your **Refund Rate**.
-* **Analyze Growth:** Track changes in your **Customer Base**, identify **Subscription** trends, and calculate **Customer Lifetime Value (CLTV)**.
-* **Optimize Operations:** Use the **Order Heatmap** to identify peak sales hours and analyze the speed of your refund process.
-* **Pinpoint Performance:** See detailed breakdowns by **Product**, **Variant**, and **Country** to know exactly what is selling best and where.
+The **Overview** page is the first stop. It gathers the headline figure from each detailed report onto one screen, flags anything that needs your attention, and links you straight to the report that explains each number.
 
-You can access the full reporting suite by navigating to **FluentCart Pro** > **Reports** in your top menu bar.
+## Accessing the Reports
 
-## 360-Degree View: The Full Report Section
+Go to your WordPress dashboard, then go to **FluentCart** > **Reports**. The section always opens on the **Overview** page, and the menu on the left lets you switch to any other report.
 
-The reporting hub is divided into several focused tabs, giving you a comprehensive view of every key area of your e-commerce operation:
+## The Full Report Section
 
-* **Overview:** Your instant dashboard summary for high-level financial health and growth comparisons.
-* **Sales:** Tracks volume, revenue, and identifies your top-performing products and product variants.
-* **Orders:** Focuses on transaction count, order value, and features a **Sales Heatmap** to show peak ordering times.
-* **Revenue:** Delivers the true income earned after deductions, with trend charts and geographical (per-country) breakdowns.
-* **Refunds:** Provides detailed metrics on returns, the total refunded amount, and the time it takes to process a refund.
-* **Subscriptions:** Essential for recurring sales, tracking subscriber growth, and installments still due. Its sub-pages cover **Retention**, **Cohorts**, and **Future Renewals**.
-* **Products:** Analyzes individual item performance, units sold, discounts, and refunds. Its **Compare** sub-page puts products you pick side by side.
-* **Customers:** Monitors your store’s customer acquisition and growth, helping you understand long-term customer value.
-* **Sources:** Groups your orders by UTM campaign, source, and medium.
-* **Export:** Downloads an accounting export of your sales and refunds.
+The Reports menu is divided into focused pages, each covering one area of your store:
+
+* **Overview:** A one-screen summary of sales, customers, refunds, subscriptions, and your top products, channels, and countries.
+* **Orders:** Order counts, order value, and how your orders are spread over time.
+* **Revenue:** What you actually earned after refunds and tax, with trend charts and breakdowns.
+* **Refunds:** How often and how much money goes back to customers.
+* **Subscriptions:** Recurring revenue and subscriber movement. Its sub-pages cover **Retention**, **Cohorts**, **Future Renewals**, and [Installments](/guide/reporting-analytics/installments-report).
+* **Products:** How each product sells. Its **Compare** sub-page puts the products you pick side by side.
+* **Customers:** New and returning customers and what they are worth.
+* **Sources:** Orders grouped by marketing channel, campaign, source, and medium.
+* **Coupons:** How much discount you give and how each coupon code performs. See the [Coupons Report](/guide/reporting-analytics/coupons-report).
+* **Payment Methods:** Sales, refunds, and payment failures for each payment gateway. See the [Payment Methods Report](/guide/reporting-analytics/payment-methods-report).
+* **Locations:** Sales and customers by country, with a world map. See the [Locations Report](/guide/reporting-analytics/locations-report).
+* **Export:** An accounting export of your sales and refunds. This page is added by FluentCart Pro.
 
 ::: info
-The Reports sidebar is **extensible**. When you install a FluentCart add-on that ships its own reports, those report pages appear automatically in this same sidebar alongside the built-in tabs — there's nothing to configure. If you don't have any reporting add-ons active, the menu simply shows the core reports listed above.
+The Reports menu is **extensible**. When you install a FluentCart add-on that ships its own reports, those pages appear automatically in the same menu, after the built-in ones. There's nothing to configure.
 :::
 
+## The Overview Page
 
-## Reports Dashboard Overview (The Summary Page)
+The **Overview** follows the date range and compare period you pick in the filter bar at the top of the page, so every card and list covers the same period. Two parts are exceptions because they describe your store right now or a fixed window: the subscription cards marked **(now)** and the **Last 12 Months** chart ignore the date range.
 
-When you first enter the Reports section, you land on the **Overview** tab. This tab is your main summary page, built to give you the most important information about your store's status and momentum instantly.
+The Overview is store-wide. It has no **Filters** menu, so an **Order Type** or **Products** filter you set on another report does not apply here. It also reads one currency at a time, so its **Currency** chip lists your individual currencies only, without an **All currencies** option.
 
-### Reporting Overview - Gross Summary
+<!-- TODO(screenshot): The rebuilt Overview page from the top, showing the filter bar, the six sales cards with change badges, the subscription cards row, and the Needs Attention card. The current image shows the retired Gross Summary and quarterly cards. -->
+![Screenshot of Reporting Overview Page](/images/reporting-analytics/dashboard-overview/reporting-overview.webp)
 
-A small label at the top of the page tells you what the whole Overview covers, for example **Last 12 Months · Base currency (USD)**. All the figures on this page are shown in your store's base currency. The Overview does not follow the date filters used on the other report tabs. It always looks at the most recent months, and the quarterly cards always show the last four quarters, including the current quarter so far, compared with the same quarters a year earlier.
+### Sales Cards
 
-At the top, two cards give you a direct summary of your store's financial volume and growth:
+The first row of cards sums up your sales for the selected period. Each card title is a link to the report it comes from, and the info icon beside it explains how the figure is counted.
 
-* **Gross Summary:** The total sales amount before anything is taken out, charted month by month. The subtitle under the card title shows the total for the period with its year-over-year growth figure.
-* **Gross Revenue Quarterly:** The same gross figure grouped into three-month quarters, with its own total and growth figure in the subtitle.
-* **Year-over-Year Growth (YoY):** This figure shows the percentage change compared to the same period last year, giving you crucial context on expansion. Hover over the info icon beside it to see how the number is calculated.
+* **Net sales:** What customers paid in this period, less refunds and tax, counted the same way as on the Revenue report. The title opens the **Revenue** report.
+* **Orders:** The number of paid orders placed in this period, renewals included. It links to the **Orders** report.
+* **Average order value:** Net sales divided by the number of orders. It links to the **Orders** report.
+* **New customers:** Customers whose first purchase was in this period. A renewal never counts as a first purchase. It links to the **Customers** report.
+* **Repeat purchase rate:** Of the customers who paid in this period, the share who have made two or more purchases. Renewals are not counted as purchases. This card shows no change badge, because the Customers report has no figure for the compared period.
+* **Refund rate:** The share of this period's orders that were refunded in part or in full, matching the headline figure on the **Refunds** report.
 
-    ![Screenshot of Reporting Overview Page](/images/reporting-analytics/dashboard-overview/reporting-overview.webp)
+Below each figure, a badge shows how it changed against the compared period. Hover over the badge to see the previous value. Amounts change as a percentage of themselves, while rates such as **Refund rate** change in percentage points, shown as **pts**. A green badge is good news and a red one is not, so a rising refund rate shows in red. When you choose **No comparison**, the badges disappear.
 
+### Subscription Cards
 
-### Key Performance Trends
+If your store has subscriptions, a second row of cards appears:
 
-The middle section presents key visual trends that inform your business strategy:
+* **MRR (now):** Your monthly recurring revenue today, as on the Subscriptions report. The date range does not apply.
+* **Paying subscriptions (now):** Active subscriptions, discounted first years, and canceled subscriptions that are still in their paid term. The date range does not apply.
+* **Churn rate:** Subscriptions that ended in this period, as a share of those active at its start. It changes in percentage points against the compared period.
 
-* **Gross Volume Breakdown:** A line chart showing the monthly trend of your raw sales, with the year-over-year growth plotted against the right-hand axis. A sentence above the chart sums it up in plain words, for example how much you have sold so far this month, how that compares with last month, and the figure for the same month last year. When your store has no sales from the same period last year, the sentence says **no prior-year figure** instead of showing a misleading percentage.
-* **Gross Revenue Breakdown:** The same view by quarter. Its sentence tells you how far into the current quarter you are, how many days are left, and how the quarter so far compares with the previous one.
+All three cards link to the **Subscriptions** report. Stores without any subscriptions don't see this row.
 
-### Core Revenue and Geographic Metrics
+### Needs Attention
 
-These sections move beyond raw sales to show real profitability and market performance:
+The **Needs Attention** card lists problems worth acting on. It only appears when at least one of these checks applies:
 
-* **Net Revenue:** Your total income after refunds and taxes have been removed, with its own year-over-year growth in the subtitle.
-* **Net Revenue Quarterly:** The net income broken down by three-month periods for easier fiscal review.
-* **Top Country Gross/Net Volume:** Stacked monthly charts that split your sales and revenue by the customer’s billing country. This helps you identify your most valuable geographical markets and how their share changes over time.
+* **Failed renewals:** Subscriptions with a failed renewal payment, and how much monthly recurring revenue is at risk.
+* **High dispute rate:** Your dispute rate is above 0.75%, the level at which card networks start to monitor a store.
+* **Failed installment payments:** Installment plans with a failed payment, and how much is still owed.
+* **Rising refund rate:** The refund rate rose clearly against the compared period, by at least 2 percentage points and to at least one and a half times the earlier rate. Small swings are ignored.
 
+Each item has a **View report** link to the page where you can investigate it.
+
+### Net Sales Chart
+
+The **Net Sales** chart plots your net sales across the selected period, with the compared period drawn as a dotted line, so you can see at a glance whether you are ahead or behind. The chart groups the timeline automatically from your date range: by day for short ranges, by month for ranges up to a year, and by year beyond that. If there were no sales in either period, it shows **No sales in this period**.
+
+<!-- TODO(screenshot): The Net Sales chart on the Overview with the compared period as a dotted line, followed by the Top Products, Top Channels, and Top Countries lists side by side. The current image shows the retired Net Revenue and Top Country Gross/Net Volume charts. -->
 ![Screenshot of Report Dashboard Overview Page](/images/reporting-analytics/dashboard-overview/overview-metrics.webp)
 
-### Top Countries
+### Top Lists
 
-The final charts rank the countries behind your sales:
+Three short lists rank what drove your sales in the period. Each shows up to five rows, with a bar for each row's share of the total and a **View report** link to the full report.
 
-* **Top Countries Gross Revenue:** The countries that bring in the most gross sales, so you can see where your customers are.
-* **Top Countries Net Revenue:** The same ranking after refunds and taxes.
+* **Top Products:** Your best products by net sales. It links to the **Products** report.
+* **Top Channels:** The marketing channels that brought in the most new customers. It links to the **Sources** report.
+* **Top Countries:** The countries with the most net sales, by billing address. Orders without a known country are left out. It links to the **Locations** report.
 
-By reviewing the Overview first, you get a clean summary of the most critical numbers, allowing you to choose which detailed tab (Sales, Refunds, etc.) you need to investigate further.
+When a list has nothing to show, it says so, for example **No product sales in this period** or **No new customers in this period**.
+
+### Last 12 Months
+
+The final chart shows your net sales for each of the last 12 months as bars, with the same month a year earlier drawn as a dotted line. It is counted the same way as the Revenue report. The date range does not apply here, and the current month is still in progress, so its bar is not final.
+
+### Loading and Errors
+
+The Overview loads in stages: the cards at the top appear first, and the lists further down the page load as you scroll to them. If one section cannot load, only that section shows an error with a **Retry** button, and the rest of the page keeps working. A card whose figure failed to load shows **Unavailable** instead of a misleading zero, and the message **Some figures could not be loaded.** offers a retry. If a Needs Attention check fails, the card warns that the list may be incomplete.
 
 ## Choosing How a Trend Chart Is Grouped
 
@@ -82,54 +106,63 @@ The **Orders**, **Revenue**, **Refunds**, **Subscriptions**, **Products**, **Cus
 * **Monthly:** One point per month, which smooths daily noise into a readable trend.
 * **Yearly:** One point per year, for long-range comparisons.
 
-**Auto** tells you what it decided rather than leaving you guessing. While it is the active choice, the option reads **Auto (Daily)**, **Auto (Monthly)**, or **Auto (Yearly)** to show which grouping your current date range resolves to. Ranges up to about three months group daily, up to a year group monthly, and anything longer groups yearly.
+On the **Orders**, **Revenue**, **Refunds**, and **Subscriptions** charts, **Auto** tells you what it decided. While it is the active choice, the option reads **Auto (Daily)**, **Auto (Monthly)**, or **Auto (Yearly)** to show which grouping your current date range resolves to. Ranges up to about three months group daily, up to a year group monthly, and anything longer groups yearly. The label goes back to a plain **Auto** while you have picked a grouping yourself.
 
-Pick a grouping explicitly when Auto is not what you want, such as reading a full year day by day to find a single spike. The label goes back to a plain **Auto** while an explicit choice is active, so it never echoes your own selection back at you.
+Pick a grouping explicitly when Auto is not what you want, such as reading a full year day by day to find a single spike.
 
+<!-- TODO(screenshot): Verify against the rebuilt Orders page and reshoot if it changed. A trend chart with the grouping dropdown open, showing Auto (Daily, Monthly, or Yearly), Daily, Monthly, and Yearly. -->
 ![Screenshot of the Order Chart with the grouping dropdown open, showing Auto (Yearly), Daily, Monthly, and Yearly](/images/reporting-analytics/dashboard-overview/trend-chart-grouped.webp)
+
+## Choosing the Date Range
+
+The date button at the left of the filter bar sets the period a report covers. Pick one of the presets (**Today**, **Last 7 days**, **Last 30 days**, **This month**, **Last month**, **Last 12 months**, **Year to date**, or **All time**), or choose **Custom…** to pick a start and end date yourself and click **Apply**.
+
+Presets always count from today, so **Last 7 days** still means the last seven days when you come back tomorrow. Dates follow your WordPress site timezone, which the menu shows at the bottom, for example **In store time: UTC+06:00**. Without FluentCart Pro, the reports start on **This month**.
 
 ## Comparing With an Earlier Period
 
-The **Compare to** dropdown on the report filter bar decides which earlier period your numbers are measured against. Each option in the list shows the dates it would use, and once you pick one, the dates stay visible in grey text beside the dropdown, so you never have to work out the comparison window yourself.
+The compare dropdown beside the date button decides which earlier period your numbers are measured against. Its label reads, for example, **vs Previous period**. Each option in the list shows the dates it would use, so you never have to work out the comparison window yourself.
 
+<!-- TODO(screenshot): The compare dropdown open on a report, showing Previous period, Previous month, Previous quarter, Previous year, Custom, and No comparison with their dates. The current image shows the old "Compare to" control with title-case labels. -->
 ![Screenshot of the Compare to dropdown listing Previous Period, Previous Month, Previous Quarter, Previous Year, Custom, and No Comparison with their dates](/images/reporting-analytics/dashboard-overview/compare-to-options.webp)
 
 All comparison periods last as many days as your selected range. They differ in where they start:
 
-* **Previous Period:** Ends the day before your selected range begins.
-* **Previous Month:** Starts one month before your selected range starts.
-* **Previous Quarter:** Starts three months before your selected range starts.
-* **Previous Year:** Starts one year before your selected range starts.
-* **Custom:** You choose the start date with a separate date picker.
-* **No Comparison:** Turns the comparison off.
+* **Previous period:** Ends the day before your selected range begins.
+* **Previous month:** Starts one month before your selected range starts.
+* **Previous quarter:** Starts three months before your selected range starts.
+* **Previous year:** Starts one year before your selected range starts.
+* **Custom:** You choose the start date in the **Compare from** date picker that appears beside the dropdown.
+* **No comparison:** Turns the comparison off.
 
-On charts, the comparison period is drawn as a dotted line in the same color as the current period, or as a faded bar, so the two are easy to tell apart. If your date range runs past today, the report counts only up to today.
+Changing the comparison period is a FluentCart Pro feature. Without Pro, the dropdown is locked on **Previous period**.
 
-If a report cannot load, an error message with a retry option appears instead of a blank chart.
+On charts, the comparison period is drawn as a dotted line or a lighter series, so the two periods are easy to tell apart. If a report cannot load, an error message with a **Retry** button appears instead of a blank chart or zeros.
 
 ## Using Advanced Filters
 
-The funnel icon at the right end of the filter bar opens **Advanced Filters**, a Pro feature. Pick a filter from the list, choose its values, and the report updates. Applied filters appear in the filter bar, and **Reset Filters** clears them.
+The **Filters** button at the right end of the filter bar opens the advanced filters, a FluentCart Pro feature. Pick a filter from the list, choose its values, and the report updates. The button shows how many filters are active, the applied filters appear as chips below the filter bar, and **Clear all** removes them.
 
-* **Order Type:** Choose **All**, **One time**, **Subscription**, or **Renewal** to limit the report to those kinds of orders. It is available on the Sales, Orders, Revenue, Refunds, Products, Compare, Retention, Cohorts, and Future Renewals reports.
-* **Subscription Type:** Choose **New**, **Renewal**, **Expired**, or **Canceled** to focus on one kind of subscription event. It is available on the subscription reports only.
-* **Products:** Pick specific products or variations to see only their numbers. On the **Compare** page, this is also how you choose what to compare.
+* **Order Type:** Choose **All**, **One time**, **Subscription**, **Renewal**, **Installment sign-up**, or **Installment payment** to limit the report to those kinds of orders.
+* **Products:** Pick specific products or variations to see only their numbers.
 
-The Customers report has no Advanced Filters, and the [Order Sources](/guide/reporting-analytics/order-sources-report) report has its own UTM filter.
+The **Filters** button appears on the **Orders**, **Revenue**, **Refunds**, **Products**, **Sources**, **Coupons**, **Payment Methods**, and **Locations** reports. The subscription reports (**Subscriptions**, **Retention**, **Cohorts**, and **Future Renewals**) replace it with their own product picker, which lists subscription products only. The **Overview**, **Customers**, **Compare**, and **Installments** pages have no Filters menu.
 
 ## Viewing Reports in More Than One Currency
 
 If you sell in more than one currency with [Multi Currency](/guide/settings-configuration/multi-currency-settings), your orders end up in different currencies. Adding those amounts together without converting them would give you a meaningless total, so the reports let you choose how to read them.
 
-When the selected date range contains orders in two or more currencies, a **Currency** filter appears with the report filters. It lists every currency that has orders in that range, and it starts on the currency with the most orders. If you clear the currency chip, it resets to that default instead of disappearing. You can read your data in two ways:
+When the selected date range contains orders in two or more currencies, a **Currency** chip appears in the filter bar. It lists every currency that has orders in that range, and it starts on the currency with the most orders. You can read your data in two ways:
 
 * **A single currency:** Pick a currency code, such as **USD** or **GBP**. The report shows only the orders placed in that currency, in that currency's own amounts, with no conversion.
-* **All currencies (in USD):** Pick this option to combine everything in your base currency. The label shows your own base currency code in place of USD. Each order is converted at the exchange rate it was placed at. Orders that have no exchange rate on record are left out, and the option tells you how many, for example **3 orders without an exchange rate left out**.
+* **All currencies (in USD):** Pick this option to combine everything in your base currency. The label shows your own base currency code in place of USD. Each order is converted at the exchange rate it was placed at. Orders that have no exchange rate on record are left out, and the option tells you how many.
 
-The **All currencies** option is available on the **Sales**, **Orders**, **Revenue**, **Refunds**, **Products**, **Compare**, **Sources**, **Retention**, and **Future Renewals** reports. The **Subscriptions**, **Cohorts**, and **Customers** reports always read one currency at a time, so on those pages only the individual currency codes are listed.
+The **All currencies** option is available on the **Orders**, **Revenue**, **Refunds**, **Products**, **Compare**, **Customers**, **Sources**, **Coupons**, **Payment Methods**, **Locations**, **Retention**, **Future Renewals**, and **Installments** reports. The **Overview**, **Subscriptions**, and **Cohorts** pages always read one currency at a time, so only the individual currency codes are listed there.
 
-All amounts on a report, including the figures for the comparison period, are shown in the currency you selected, with that currency's symbol. The **Overview** always shows your base currency.
+All amounts on a report, including the figures for the comparison period, are shown in the currency you selected, with that currency's symbol.
 
 ::: info
-The **Future Renewals** report has no date or comparison filters, so its filter bar shows only the **Currency** chip when your orders include more than one currency.
+On the **Future Renewals**, **Cohorts**, and **Installments** reports, the **Currency** chip lists every currency that has ever had orders, not only those in a date range.
 :::
+
+By starting on the Overview, you see the most important numbers first and know exactly which detailed report to open next.

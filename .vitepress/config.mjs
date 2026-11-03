@@ -397,6 +397,7 @@ export default defineConfig({
                 { text: 'Order Details Overview', link: '/guide/store-management/orders-management/order-details-overview' },
                 { text: 'Editing Existing Orders', link: '/guide/store-management/orders-management/editing-existing-orders' },
                 { text: 'Processing Refunds', link: '/guide/store-management/orders-management/processing-refunds' },
+                { text: 'Managing Shipments', link: '/guide/store-management/orders-management/managing-shipments' },
                 { text: 'Collecting Payments for Modified Orders', link: '/guide/store-management/orders-management/collecting-payments-modified-orders' },
                 { text: 'Order Bump', link: '/guide/store-management/orders-management/order-bump' },
                 { text: 'Changing Order Statuses', link: '/guide/store-management/orders-management/changing-order-statuses' },
@@ -560,7 +561,6 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'Reports Dashboard Overview', link: '/guide/reporting-analytics/reports-dashboard-overview' },
-            { text: 'Sales Report', link: '/guide/reporting-analytics/sales-report' },
             { text: 'Orders Report', link: '/guide/reporting-analytics/orders-report' },
             { text: 'Revenue Report', link: '/guide/reporting-analytics/revenue-report' },
             { text: 'Refunds Report', link: '/guide/reporting-analytics/refunds-report' },
@@ -572,12 +572,16 @@ export default defineConfig({
                 { text: 'Retention Report', link: '/guide/reporting-analytics/retention' },
                 { text: 'Cohorts Report', link: '/guide/reporting-analytics/cohorts' },
                 { text: 'Future Renewals Report', link: '/guide/reporting-analytics/future-renewals' },
+                { text: 'Installments Report', link: '/guide/reporting-analytics/installments-report' },
               ]
             },
             { text: 'Product Report', link: '/guide/reporting-analytics/product-report' },
             { text: 'Compare Products Report', link: '/guide/reporting-analytics/product-compare-report' },
             { text: 'Customer Report', link: '/guide/reporting-analytics/customer-report' },
             { text: 'Order Sources Report', link: '/guide/reporting-analytics/order-sources-report' },
+            { text: 'Coupons Report', link: '/guide/reporting-analytics/coupons-report' },
+            { text: 'Payment Methods Report', link: '/guide/reporting-analytics/payment-methods-report' },
+            { text: 'Locations Report', link: '/guide/reporting-analytics/locations-report' },
             { text: 'Accounting Export', link: '/guide/reporting-analytics/accounting-export' }
           ]
         },

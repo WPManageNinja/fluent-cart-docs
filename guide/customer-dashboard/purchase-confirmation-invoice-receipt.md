@@ -11,7 +11,8 @@ Once the order is placed, customers will see a confirmation message with a green
 This page contains a clear summary of the order, including:
 
 * **Customer Name:** The name of the customer who completed the purchase.
-* **Order ID:** A unique identifier for the order (e.g., #INV-6).
+* **Order #:** The order's unique 12-character code (e.g., A7K2P9X4M1Q8). It is the same number the customer sees in **Purchase History** in their account.
+* **Invoice number #:** The receipt number (e.g., INV-6), made of your receipt prefix and a running number. It only appears once the order is paid, so an unpaid order, such as an offline payment that has not been confirmed yet, shows only the **Order #**.
 * **Purchased Item(s):** A list of purchased products and their respective plans (e.g., FluentCRM – Solo/Blogger). When a [Dynamic Pricing](/guide/marketing-sales-tools/dynamic-pricing) discount applied to an item, its original price appears struck through.
 * **Price & Total:** The total purchase amount and payment method (e.g., VISA ending in 4242).
 * **Subscription Details:** Information about renewal periods and next billing dates.
@@ -34,7 +35,7 @@ FluentCart automatically generates an invoice receipt for every order. This invo
 **What the Invoice Includes:**
 
 * Customer name 
-* Order ID and purchase date
+* Order number, receipt number (once the order is paid), and purchase date
 * Product name and price breakdown
 * Payment method used
 * Total paid amount
@@ -48,6 +49,7 @@ FluentCart automatically generates an invoice receipt for every order. This invo
 
 This detailed invoice ensures that customers have all the necessary purchase information in one place. For B2B customers selling into the EU, UK, and other VAT jurisdictions, the VAT number on the receipt makes the document compliance-ready for the buyer's own bookkeeping — no manual workaround needed.
 
+<!-- TODO(screenshot): Receipt / Purchase Successful page header now shows Order # (12-character order code) and, once paid, Invoice number # side by side with the order date; re-take if this image shows only the invoice number. -->
 ![Purchase Confirmation](/images/customer-dashboard/purchase-confirmation/purchase-confirmation.webp)
 
 ### Downloading the Invoice Receipt
@@ -55,7 +57,7 @@ This detailed invoice ensures that customers have all the necessary purchase inf
 At the bottom of the **Purchase Successful** page, customers will find two key buttons:
 
 * **View Order:** Opens the full order details inside their account dashboard.
-* **Download Receipt:** Generates a PDF version of the official invoice that customers can save or print for their records.
+* **Download Receipt:** Generates a PDF version of the official invoice that customers can save or print for their records. The file is named after the receipt number, such as `receipt-INV-6.pdf`, or after the order number if the order is not paid yet.
 
 This allows users to quickly access their payment confirmation and keep a digital copy for bookkeeping or support purposes.
 

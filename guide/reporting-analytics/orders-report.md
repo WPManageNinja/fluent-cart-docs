@@ -14,83 +14,88 @@ Want to look at a specific time frame? Or maybe you want to see how this month's
 
 The top of the dashboard gives you key controls to choose what data appears in the report.
 
-* **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
-* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data. The dates of the selected period appear in grey text beside the dropdown, and each option in the list shows its own dates.
-* **Advanced Filters:** Click the **filter** icon to break down the report by options like **Order Type** or specific **Products**. This helps you focus on detailed order data for a closer view.
+* **Date Filter:** Pick a preset such as **Last 30 days** or **This month**, or choose **Custom…** to set your own dates. See [Choosing the Date Range](/guide/reporting-analytics/reports-dashboard-overview#choosing-the-date-range).
+* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data. Each option in the list shows its own dates.
+* **Filters:** Click **Filters** to break down the report by options like **Order Type** or specific **Products**. Applied filters appear as chips below the filter bar, and **Clear all** removes them.
 * **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
-* **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
 
+<!-- TODO(screenshot): Orders report filter bar in its new one-row form (date button, "vs Previous period" dropdown, Filters button) above the six summary cards. The current image shows the old filter bar and cards. -->
    ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/order-report-filter.webp)
 
 ### Key Order Metrics
 
 At the top of the Orders Report, you will find summary cards highlighting your key order metrics for the selected period.
 
-* **Gross Sales:** The total paid on paid, partially paid, and refunded orders created in the period, including tax and shipping. Discounts are already applied, and refunds are not deducted.
-* **Refunds:** The total amount of money refunded on orders created in the period.
-* **Revenue:** Gross sales less refunds and taxes. Shipping charges and payment fees are not deducted.
 * **Orders:** The number of paid, partially paid, and refunded orders created in the period. Renewal orders are included, and unpaid orders are not.
-* **Items:** The total quantity of product units on those orders. With a product filter applied, only the matching items are counted.
-* **Average Gross:** Gross sales divided by the number of orders.
-* **Average Revenue:** Revenue divided by the number of orders.
-* **Average Order Items:** Items divided by the number of orders.
+* **Average Order Value (Net):** Revenue divided by the number of orders counted in the period.
+* **Items per Order:** The number of items divided by the number of orders counted in the period.
+* **Refunded Orders:** The orders in the period with a full or partial refund. The line under the value shows them as a share of all orders.
+* **Failed Orders:** Orders created in the period whose payment failed. They are not counted in the other cards. The line under the value shows the failure rate.
+* **Orders per Day:** The number of orders divided by the days of the period that have passed. For ranges longer than 90 days, this card becomes **Orders per Month**.
 
-Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against. Hover over the info icon beside a metric to read its definition.
+Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against (except **Failed Orders**). Hover over the info icon beside a metric to read its definition.
 
 #### Order Chart
 
-Just below the metric cards, the **Order Chart** gives you a clear visual of your store's performance over time. Orders appear as light bars, and **Gross Sales** and **Revenue** appear as lines.
+Just below the metric cards, the **Order Chart** gives you a clear visual of your store's performance over time. Orders appear as light bars and **Net sales** appears as a line, with the comparison period drawn beside them.
 
-* **Metric checkboxes:** The checkboxes on the **Gross Sales**, **Revenue**, and **Orders** cards turn each series on or off in the chart.
 * **Chart View Dropdown:** You can adjust the chart's timeline using the dropdown menu in the top-right corner of the chart. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or change it to **Daily**, **Monthly**, or **Yearly**.
+* **Export CSV:** Click the download icon to save the chart data as a CSV file.
 
+<!-- TODO(screenshot): Order Chart with Orders bars and the Net sales line. The current image shows the old Gross Sales and Revenue lines. -->
    ![Screenshot of the Order Chart](/images/reporting-analytics/orders/orders-report-chart.webp)
 
-#### Monthly Averages and Tax & Shipping
+#### Order Mix
 
-Under the chart, a row of four small cards shows your **Average Monthly Gross**, **Average Monthly Revenue**, **Average Monthly Orders**, and **Average Monthly Items** for the selected range, each with its change against the comparison period.
+The **Order mix** card splits the orders from the **Orders** card in several ways. Each split is drawn as one bar, and every split adds up to the same total.
 
-When your orders in the period include tax or shipping, two more cards appear: **Taxes** (the total amount of taxes) and **Shipping** (the total amount of shipping costs). They stay hidden when there is neither.
+* **Order type:** The kind of sale, such as one-time orders, new subscriptions, renewals, installment sign-ups, and installment payments.
+* **Order status:** How the orders stand, for example completed or processing.
+* **Discount:** Orders with a coupon or manual discount (**Discounted**) against orders at **Full price**. The **Coupons report** link beside it opens the [Coupons report](/guide/reporting-analytics/coupons-report).
+* **Shipping:** The shipping status of your physical orders. This split appears only when the period has physical orders.
+
+<!-- TODO(screenshot): Order mix card with the Order type, Order status, Discount and Shipping bars. -->
 
 #### New vs. Returning Customers
 
 This table breaks down your order data by customer type, helping you measure customer loyalty and the effectiveness of your acquisition strategies. Hover over the info icon beside the title to read the definitions in the app.
 
-* **Customer types:** Each paid order is placed in one of four groups, so the table always adds up to your total orders.
-    * **New:** The customer's first paid order.
-    * **Returning:** A repeat order from a customer who already had an earlier paid order. A customer can be counted as New for one order and Returning for the next.
+* **Customer types:** Each paid order is placed in one group, so the table always adds up to your total orders.
+    * **New:** The customer's first paid purchase, counted the same way as on the Customers report.
+    * **Returning:** A repeat order from a customer who had paid before.
     * **Renewal:** An automatic subscription renewal. Renewals are kept apart so they do not inflate your Returning numbers.
+    * **Installment payment:** A later payment of an installment plan.
+    * **Free order:** An order where nothing was paid.
     * **Guest:** An order placed without a customer account.
-* **Columns:** The table displays Customer Count, Order Count, Gross Sales, Average Gross Sales, Revenue, and Average Revenue for each customer type.
+* **Columns:** The table displays **Type**, **Customers**, **Orders**, **Net Sales**, and **Average Order (Net)** for each customer type.
 * **Show Percentages:** Enable this checkbox to view the data as percentages, making it easy to see the proportion of sales from each customer type.
-* **Export:** Click the **Export** button to download this data as a **CSV** file for further analysis.
+* **Export CSV:** Click the download icon to save this table as a **CSV** file for further analysis.
 
-#### Orders Grouped By
+<!-- TODO(screenshot): New vs. Returning Customers table with the new columns (Type, Customers, Orders, Net Sales, Average Order (Net)). The current image also shows the removed Orders Grouped By table. -->
+   ![Screenshot of the New vs. Returning Customers table](/images/reporting-analytics/orders/customer-insights.webp)
 
-This table breaks down your orders by a criterion you choose with the dropdown beside the title.
+To see orders by country or by payment method, open the [Locations](/guide/reporting-analytics/locations-report) or [Payment Methods](/guide/reporting-analytics/payment-methods-report) report.
 
-* **Billing Country:** The default. Orders grouped by the customer's billing country, helping you identify your key international markets.
-* **Shipping Country:** Orders grouped by the shipping destination.
-* **Payment Method:** Orders grouped by the way customers paid, such as Stripe or PayPal.
+#### Average Order Charts
 
-The table shows Orders, Gross Sales, Average Gross Sales, Revenue, and Average Revenue for each group. Click a column heading to sort by it. The **Export** button downloads the table as a CSV file.
+Two charts sit side by side under the table.
 
-   ![Screenshot of the New vs. Returning Customers and Orders Grouped By tables](/images/reporting-analytics/orders/customer-insights.webp)
+* **Average Order Value (Net):** Net sales divided by orders, for each period on the timeline.
+* **Average Order Items:** The average number of items per order, for each period on the timeline.
 
-#### Orders by Day and Hour
+#### Order Patterns
 
-This heatmap visualizes your store's busiest times, showing which days of the week and which hours of the day generate the most orders. Darker squares mean more orders.
+At the bottom of the report, you'll find detailed charts that help you understand when and how customers order. Use the zoom icon in the top-right corner of a chart to enlarge it.
 
-#### Additional Order Analytics
-
-At the bottom of the report, you'll find detailed charts that help you understand customer behavior and order trends. Use the zoom icon in the top-right corner of a chart to enlarge it.
-
+* **Orders by Day and Hour:** A heatmap of your busiest times. Darker squares mean more orders.
 * **Spend by day:** Gross sales grouped by the days of the week, shown as a line over the number of orders, so you can see which days earn the most.
 * **Spend by hour:** Gross sales grouped by the hours of the day, allowing you to pinpoint your peak sales times.
 * **Item count distribution:** How many orders have 1 item, 2 items, 3 items, and so on, helping you understand how many items customers usually buy.
 * **Order value distribution:** How many orders fall into different price ranges (like 0-100 or 100-200), so you can see which order amounts happen most often.
-* **Average Order Gross:** A chart that tracks the average gross value of your orders over the selected period.
-* **Average Order Items:** A chart that tracks the average number of items per order over the selected period.
 * **Time between an order's created & completed date:** Orders grouped by how many hours it took to complete them, helping you see how quickly orders are fulfilled.
+
+::: info
+The order pattern charts are part of **FluentCart Pro**. Without Pro, a sample preview takes their place.
+:::
 
    ![Screenshot of the Orders by day and hour heatmap and the additional order charts](/images/reporting-analytics/orders/orders-report-by.webp)

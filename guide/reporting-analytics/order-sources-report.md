@@ -8,43 +8,69 @@ It groups your orders by the UTM parameters attached to them, so you can see whi
 
 ## Accessing the Order Sources Report
 
-Go to your WordPress dashboard, then **FluentCart → Reports**, and open the **Sources** tab.
+Go to your WordPress dashboard, then **FluentCart → Reports**, and open the **Sources** tab. The page itself is titled **Order Sources**.
 
-Only orders that carry a UTM source appear here. Orders placed by someone who came to your store directly, through an untagged link, or over a channel you never tagged are excluded. The report would otherwise be dominated by a single meaningless "unknown" row.
-
+<!-- TODO(screenshot): Order Sources page with the Sources item selected in the reports sidebar, the three new-customer cards, and the New Customers by Channel chart. The current image shows the old layout. -->
 ![Screenshot of the Order Sources report with the Sources tab selected in the Reports sidebar](/images/reporting-analytics/orders-source/order-source-1.webp)
+
+## New Customers by Channel
+
+The top of the page looks at the new customers you won in the period and where their first purchase came from.
+
+* **New customers:** The number of new customers in the period.
+* **With a known source:** The share of those customers whose first purchase has a known source, with the share of their revenue in brackets.
+* **Top channel:** The channel that brought in the most new customers.
+
+The **New Customers by Channel** chart sorts each new customer's first purchase into a channel: **Email**, **Paid ads**, **Social**, **AI assistants**, **Search**, **Other websites**, **Other campaigns**, or **Direct or unknown**. Your channel rules are applied first, then the purchase's UTM tags, then the website that sent it.
+
+The **Channels** table below the chart shows, for each channel, the **New customers**, what they spent on their **First orders**, their **Average lifetime value**, the share who **Bought again**, and their **Refund rate**.
+
+::: info
+With **FluentCart Pro**, the **Channel rules** button lets you name your own channels from UTM source, medium, campaign, or referring site (for example a partner or newsletter channel), and mark your other sites as direct.
+:::
 
 ## Report Columns and Metrics
 
-Each row is a unique combination of **campaign, source, and medium**. Every order matching that combination is rolled up into it.
+Below the channels, the sources table groups your orders by their UTM values. Every order matching a row is rolled up into it.
 
-### UTM Columns
+### Group By
 
-Use the **Columns** control above the table to show or hide any of these:
+Use the **Group by** dropdown above the table to choose what each row stands for:
 
-* **UTM Campaign:** the campaign the link belonged to (`utm_campaign`).
-* **UTM Source:** where the traffic came from, such as `google` or `newsletter` (`utm_source`).
-* **UTM Medium:** the kind of channel, such as `cpc` or `email` (`utm_medium`).
-* **UTM Term:** the keyword, for paid search (`utm_term`).
-* **UTM Content:** which variant of an ad or link was clicked (`utm_content`).
-* **UTM ID:** your own campaign identifier (`utm_id`).
+* **Campaign:** the campaign the link belonged to (`utm_campaign`). This is the default.
+* **Source:** where the traffic came from, such as `google` or `newsletter` (`utm_source`).
+* **Medium:** the kind of channel, such as `cpc` or `email` (`utm_medium`).
+* **Source / Medium:** source and medium together.
+* **Term:** the keyword, for paid search (`utm_term`).
+* **Content:** which variant of an ad or link was clicked (`utm_content`).
+* **Campaign / Source / Medium:** all three together.
 
+With **FluentCart Pro**, you can also group by **Product**, **Variation**, **Day**, **Week**, **Month**, or **Referrer domain**. Without Pro, these options are marked **(Pro)**. A **Day**, **Week**, or **Month** grouping also draws a chart above the table.
+
+By default, only orders that carry the field you group by appear. Turn on **Include (none)** to add a **(none)** row for orders without that source data, so the table adds up to your revenue for the same filters. A row whose value is missing reads **(not set)**.
+
+<!-- TODO(screenshot): Sources table header with the Group by dropdown, the Include (none) switch, and the Gross / Net switch. It replaces the removed Columns panel shown in the current image. -->
 ![Screenshot of the Columns panel listing UTM Campaign, UTM Source, UTM Medium, UTM Term, UTM Content, and UTM ID checkboxes](/images/reporting-analytics/orders-source/column.webp)
 
 ### Revenue Metrics
 
 * **Orders:** how many orders came from this source.
-* **Gross Sales:** total paid across those orders.
-* **Revenue:** gross sales minus refunds, tax, and shipping tax. This is the figure to judge a campaign on.
+* **Gross:** total paid across those orders.
+* **Net:** gross sales minus refunds and tax. This is the figure to judge a campaign on.
+* **Lifetime Value:** the first-order net plus later payments, such as renewals of those first orders, whatever their date.
 * **Average Order:** gross sales divided by order count.
-* **Average Order Net:** revenue divided by order count.
+* **Average Order Net:** net sales divided by order count.
+* **Refund Rate:** the share of these orders refunded.
+* **Refunds:** the amount refunded on these orders.
 
-The **Gross / Net** switch above the table toggles which pair of these the table displays: **Gross** shows Gross Sales and Average Order, **Net** shows Revenue and Average Order Net.
+The **Gross / Net** switch above the table toggles which pair of these the table displays: **Gross** shows Gross and Average Order, **Net** shows Net and Average Order Net. A change badge beside the sales figure compares it with the comparison period.
 
-Rows are sorted by gross sales, highest first, so your best-performing sources are always at the top.
+Click a column heading to sort the table. The **Total** row adds up every row. Spellings that differ only in case, `_`, `-`, or spaces count as one source.
 
-::: tip Judge campaigns on Revenue, not Gross
-Gross Sales includes tax, shipping tax, and orders that were later refunded. A campaign that drives high-refund purchases can look strong on gross and poor on net. Revenue is the honest number.
+Click the download icon to export the table as a CSV file.
+
+::: tip Judge campaigns on Net, not Gross
+Gross includes tax and orders that were later refunded. A campaign that drives high-refund purchases can look strong on gross and poor on net. Net is the honest number.
 :::
 
 ## Filtering the Report
@@ -55,7 +81,7 @@ The date selector at the top scopes the report to a period. Every metric recalcu
 
 ### Search
 
-The **Search** field above the table filters results by UTM values as you type, matching against UTM Campaign, UTM Source, and UTM Medium. It's the quickest way to jump to a specific campaign.
+The **Search** field above the table filters the rows by name as you type. Click a value in the table to search for it. While you search, the total row reads **Total (all sources)**, because it still covers every source, and the CSV export holds only the rows the search shows.
 
 ### Advanced Filters
 

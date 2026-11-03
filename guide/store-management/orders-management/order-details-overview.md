@@ -18,7 +18,8 @@ The Order Details screen is organized into several panels, each providing specif
 
 At the top of the screen, you’ll see the main order information and quick action buttons.
 
-* **Receipt Number:** A unique number that identifies the order.
+* **Order Number:** The order's unique 12-character code, shown as **Order #** after the breadcrumb (for example `#A7K2P9X4M1Q8`). Older orders keep their longer code, which is shortened here; hover over it to see the full value. This is the number your customers see on their order pages and emails.
+* **Receipt Number:** The receipt number, such as `INV-1001`, shown below the title next to the order date. It is assigned when the order is paid, so an unpaid order does not have one yet. You set its prefix and starting number in the [checkout settings](/guide/settings-configuration/cart-checkout-settings).
 * **Order Status:** Shows the current state of the order (like pending or completed).
 * **Refund Button:** Initiates the [refund process](/guide/store-management/orders-management/processing-refunds) for the order.
 * **Edit Button:** Allows you to enter [edit mode for the order](/guide/store-management/orders-management/editing-existing-orders).
@@ -31,7 +32,7 @@ This section lists all the products included in the order.
 * **Product Name:** The name of the purchased product.
 * **Quantity:** The number of units purchased.
 * **Individual Item Price:** The price of a single unit of the product.
-* For physical products, you might see an "Order Items Delivered" button to mark fulfillment for specific items.
+* For orders with physical products, a **Create shipment** button appears in the card header while items are left to ship. Shipments you create are listed in a **Shipments** card below. See [Managing Shipments](/guide/store-management/orders-management/managing-shipments) for splitting an order into shipments and adding tracking.
 
 ### 3. Payment & Financial Summary
 
