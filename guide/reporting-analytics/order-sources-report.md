@@ -1,75 +1,86 @@
 # Order Sources Report
 
-The **Order Sources** report answers the question every store owner eventually asks: *where are my paying customers actually coming from?*
-
-It groups your orders by the UTM parameters attached to them, so you can see which campaign, which channel, and which specific ad produced real revenue, not just traffic. A campaign that sends thousands of visitors but produces four orders looks very different here than it does in your analytics tool.
-
-
+The **Sources** report answers the question every store owner eventually asks: *where do my paying customers come from?* It groups new customers into channels such as email, search, and paid ads, and it lists your orders by the UTM tags on the links that brought them in. A campaign that sends thousands of visitors but few orders looks very different here than in your analytics tool.
 
 ## Accessing the Order Sources Report
 
-Go to your WordPress dashboard, then **FluentCart → Reports**, and open the **Sources** tab.
+Go to your WordPress dashboard, then go to **FluentCart > Reports** in the side menu, and click on the **Sources** tab.
 
-Only orders that carry a UTM source appear here. Orders placed by someone who came to your store directly, through an untagged link, or over a channel you never tagged are excluded. The report would otherwise be dominated by a single meaningless "unknown" row.
+The date range, comparison period, currency, and **Filters** menu work as described in [How Reports Count](/guide/reporting-analytics/how-reports-count). Money figures on this page use the same [net sales](/guide/reporting-analytics/how-reports-count#net-sales) as every other report.
 
-![Screenshot of the Order Sources report with the Sources tab selected in the Reports sidebar](/images/reporting-analytics/orders-source/order-source-1.webp)
+## New Customers by Channel
 
-## Report Columns and Metrics
+The top of the page looks at each new customer's first purchase and the channel it came from. FluentCart decides the channel in this order: your own channel rules first, then the order's UTM tags, then the website that sent the visitor.
 
-Each row is a unique combination of **campaign, source, and medium**. Every order matching that combination is rolled up into it.
+Three cards sum up the range:
 
-### UTM Columns
+* **New customers:** Customers whose first purchase was in the range.
+* **With a known source:** The share of those customers whose channel is known, with their share of first-order revenue.
+* **Top channel:** The channel that brought the most new customers, not counting **Direct or unknown**.
 
-Use the **Columns** control above the table to show or hide any of these:
+The built-in channels are **Email**, **Paid ads**, **Social**, **AI assistants**, **Search**, **Other websites**, **Other campaigns**, and **Direct or unknown**. The **New Customers by Channel** chart stacks them for each period. Only the channels your store has appear.
 
-* **UTM Campaign:** the campaign the link belonged to (`utm_campaign`).
-* **UTM Source:** where the traffic came from, such as `google` or `newsletter` (`utm_source`).
-* **UTM Medium:** the kind of channel, such as `cpc` or `email` (`utm_medium`).
-* **UTM Term:** the keyword, for paid search (`utm_term`).
-* **UTM Content:** which variant of an ad or link was clicked (`utm_content`).
-* **UTM ID:** your own campaign identifier (`utm_id`).
+<!-- TODO(screenshot): sources-channels.webp | /reports/sources, Last 30 days: the three channel cards and the New Customers by Channel stacked chart | arrow on the Channel rules button -->
 
-![Screenshot of the Columns panel listing UTM Campaign, UTM Source, UTM Medium, UTM Term, UTM Content, and UTM ID checkboxes](/images/reporting-analytics/orders-source/column.webp)
+### Channels Table
 
-### Revenue Metrics
+The **Channels** table shows what each channel's new customers spent first, what they have spent since, and how many came back.
 
-* **Orders:** how many orders came from this source.
-* **Gross Sales:** total paid across those orders.
-* **Revenue:** gross sales minus refunds, tax, and shipping tax. This is the figure to judge a campaign on.
-* **Average Order:** gross sales divided by order count.
-* **Average Order Net:** revenue divided by order count.
+* **Channel**, **New customers** (with their share), **First orders**, **Average lifetime value**, **Bought again**, and **Refund rate**.
 
-The **Gross / Net** switch above the table toggles which pair of these the table displays: **Gross** shows Gross Sales and Average Order, **Net** shows Revenue and Average Order Net.
+### Channel Rules (Pro)
 
-Rows are sorted by gross sales, highest first, so your best-performing sources are always at the top.
+Click **Channel rules** to name your own channels. Each rule matches orders by **UTM source**, **UTM medium**, **UTM campaign**, or **Referrer domain**, with **is**, **contains**, or **starts with**. Combine conditions with **and**, or add an **OR** group. Your rules run first, from top to bottom, and the first match decides the channel. Orders that no rule matches use the built-in channels. Rules apply to past orders too.
 
-::: tip Judge campaigns on Revenue, not Gross
-Gross Sales includes tax, shipping tax, and orders that were later refunded. A campaign that drives high-refund purchases can look strong on gross and poor on net. Revenue is the honest number.
+Under **Your own domains**, list your other sites, one per line. Visits from these domains and their subdomains count as direct, like visits from this store. Only users who can manage store settings can change the rules.
+
+::: info Channel rules require FluentCart Pro
+Without Pro, the **Channel Rules** dialog shows a locked preview with sample data.
 :::
 
-## Filtering the Report
+<!-- TODO(screenshot): sources-channel-rules.webp | /reports/sources with Pro active: Channel Rules dialog with one sample channel (e.g. "Partner newsletter", UTM source is partner) and Your own domains box | arrow on Save rules -->
 
-### Date Range
+## Order Sources Table
 
-The date selector at the top scopes the report to a period. Every metric recalculates, and comparison figures update alongside it so you can see whether a source is growing or fading.
+The **Order Sources** table lists the orders in the range by their UTM tags. Only orders with source data appear, unless you turn on **Include (none)**.
 
-### Search
+### Grouping
 
-The **Search** field above the table filters results by UTM values as you type, matching against UTM Campaign, UTM Source, and UTM Medium. It's the quickest way to jump to a specific campaign.
+Use the **Group by** dropdown to choose what each row stands for:
 
-### Advanced Filters
+* **Campaign**, **Source**, **Medium**, **Source / Medium**, **Term**, **Content**, or **Campaign / Source / Medium:** Group by the matching UTM tags, shown as **UTM Campaign**, **UTM Source**, **UTM Medium**, **UTM Term**, and **UTM Content** columns.
+* **Product**, **Variation**, **Day**, **Week**, **Month**, or **Referrer domain** (Pro): Group by what was bought, by period, or by the website that sent the visitor. The period groupings also draw a chart above the table.
 
-Beyond the date range, you can narrow the report using the same advanced filter engine that powers the Orders screen. That means you can answer much more specific questions: *which campaigns produced orders over $100?*, *which sources brought in subscription customers?*, *how did this campaign perform for customers in Germany?*
+A row with no value for a tag shows **(not set)**. Spellings that differ only in case, `_`, `-`, or spaces count as one.
 
-Turn on the **Advanced Filter** switch above the table, click **+ Add**, and pick a property group (**Order Property**, **Customer Property**, **Transactions Property**, **Utm Property**, or **Tax Property**), then choose a field within it, an operator, and a value. Conditions can be combined into groups joined with **AND** / **OR**, so complex questions are expressible without exporting anything.
+::: info Product, variation, period, and referrer groupings require FluentCart Pro
+Without Pro, these options are marked **(Pro)** and cannot be selected.
+:::
 
-Available operators depend on the field, and include **Equals** for exact matches (including matching an order by its order hash or a payer's email address) and **Includes** for partial text matches on fields such as customer email.
+### Columns
+
+* **Orders:** How many orders came from the row, with its change against the comparison period.
+* **Gross** or **Net:** Use the **Gross** / **Net** switch to choose. **Net** is net sales, the figure to judge a campaign on.
+* **Lifetime Value:** The first-order net plus later payments, such as renewals of these first orders, at any date.
+* **Average Order** or **Average Order Net:** Follows the **Gross** / **Net** switch.
+* **Refund Rate** and **Refunds.**
+
+The **Total** row at the bottom covers every row that matches your filters. Click a column heading to sort, and use the download icon to export every row as a CSV file.
+
+* **Include (none):** Adds a **(none)** row for orders without this source data, so the table adds up to the Revenue report for the same filters.
+* **Search:** Filters the rows by name. Click a value in the table to search for it.
+
+<!-- TODO(screenshot): sources-table.webp | /reports/sources: Order Sources table grouped by Campaign / Source / Medium with the Total row, Net switch on | arrow on the Group by dropdown -->
+
+### Advanced Filter (Pro)
+
+Turn on the **Advanced Filter** switch above the table, click **+ Add**, and pick a property group (**Order Property**, **Customer Property**, **Transactions Property**, **Utm Property**, or **Tax Property**). Then choose a field, an operator, and a value. Combine conditions into groups joined with **AND** or **OR**. This answers questions such as *which campaigns brought orders over $100?* The search box hides while the advanced filter is on.
 
 ::: info Advanced filtering requires FluentCart Pro
-The Order Sources report itself is available to every FluentCart store. Advanced filters on it are a Pro feature.
+The Order Sources report itself is available to every FluentCart store. Without Pro, the **Filters** menu in the title bar is the way to narrow it by product.
 :::
 
-![Screenshot of the Advanced Filter panel open with Order Property, Customer Property, Transactions Property, Utm Property, and Tax Property groups, an OR condition, and Apply and Reset buttons](/images/reporting-analytics/orders-source/filter-2.webp)
+<!-- TODO(screenshot): sources-advanced-filter.webp | /reports/sources with Pro active: Advanced Filter panel open with the property groups and one OR condition | arrow on + Add -->
 
 ## How FluentCart Attributes an Order
 
@@ -121,12 +132,12 @@ The report shows aggregates. To see the attribution recorded against one specifi
 
 ## Using the Report
 
-**Find your most profitable channel.** Sort by Revenue and compare Average Order Net across sources. A channel with fewer orders but a much higher average order value is often worth more than a high-volume one.
+**Find your most profitable channel.** Sort the Channels table by **Average lifetime value**. A channel with fewer new customers but a higher lifetime value is often worth more than a high-volume one.
 
-**Check whether a campaign paid for itself.** Filter to the campaign's run dates, read Revenue, and compare against what you spent.
+**Check whether a campaign paid for itself.** Set the range to the campaign's run dates, switch to **Net**, and compare the campaign's net sales with what you spent.
 
-**Spot untagged traffic.** If your report totals are far below your actual order count, most of your orders are arriving without UTM tags. Tag your outbound links (email campaigns, ads, affiliate links, social posts) and the report fills in.
+**Spot untagged traffic.** Turn on **Include (none)**. A large **(none)** row means most orders arrive without UTM tags. Tag your outbound links (emails, ads, affiliate links, social posts) and the report fills in.
 
-**Compare ad variants.** With `utm_content` set per creative, the UTM Content column tells you which variant actually converted.
+**Compare ad variants.** With `utm_content` set per creative, group by **Content** to see which variant converted.
 
-
+The Sources report now shows you which channels and campaigns bring in paying customers.

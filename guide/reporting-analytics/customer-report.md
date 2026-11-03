@@ -1,44 +1,65 @@
-# Customer Report Dashboard
+# Customer Report
 
-The **Customer** Report tab is your dedicated tool for measuring the success of your customer acquisition and growth efforts. It provides a clear, comparative view of how your customer base is expanding over time, allowing you to assess the long-term health and loyalty of your business.
+The **Customers** report shows who buys from you: how many customers paid, how many were new, how many came back, and what they are worth over time. Use it to measure customer acquisition and loyalty, and to find your top customers.
 
 ## Accessing the Customer Report
 
-Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/reporting-analytics/reports-dashboard-overview)** in the side menu, and click on the **Customers** tab.
+Go to your WordPress dashboard, then go to **FluentCart > Reports** in the side menu, and click on the **Customers** tab.
 
-### Report Filters and Controls
+The date range, comparison period, and currency work as described in [How Reports Count](/guide/reporting-analytics/how-reports-count). This report always looks at all customers, so it has no **Filters** menu. Customer counts use paid orders only, and a customer is [new](/guide/reporting-analytics/how-reports-count#new-and-returning-customers) at their first paid purchase.
 
-The top of the dashboard provides crucial controls that determine the data displayed in the chart and table.
+## Key Customer Metrics
 
-* **Date Range Selector:** This field allows you to define the **Current Range** for your report. You can select a custom start and end date to focus on specific periods, such as a major sale or a specific fiscal quarter.
-* **Compare To:** This dropdown determines the historical period used for comparison. Options allow you to benchmark your **Current Range** data against previous time periods. The dates of the selected period appear in grey text beside the dropdown, and each option in the list shows its own dates.
-* **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
-* **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
+Six cards sum up the range. Hover over the info icon beside a card to read its definition.
 
-### Key Customer Growth Metrics
+* **Customers:** Customers who paid in the range, renewals included.
+* **New customers:** Customers whose first purchase was in the range. A renewal is never a first purchase.
+* **Returning customers:** Customers who had bought before and made a new purchase in the range. Renewals alone do not count.
+* **Repeat purchase rate:** Of the customers who paid in the range, the share who have made two or more purchases. Renewals are not purchases.
+* **Average lifetime value:** What the customers who paid in the range have spent with you over all time, less refunds and tax, on average.
+* **Revenue from existing customers:** The share of the range's revenue from customers who had bought before: their new purchases and renewals.
 
-At the top of the Customer Report, you will find a summary card highlighting your key customer growth metric for the selected period:
+The first three cards compare with the comparison period.
 
-* **Customer Growth:** This figure displays the net number of new customers acquired during the specified date range. The percentage indicates the growth or decline compared to the previous, equivalent time period you are comparing against.
+<!-- TODO(screenshot): customers-cards.webp | /reports/customer, Last 30 days: the six customer cards and the Customers Over Time chart | arrow on the Customers / Revenue switch -->
 
-### New Customers
+## Customers Over Time
 
-The main visualization on this dashboard is the **New Customers** chart. Each customer is counted on the date of their first order, so the chart shows how many people bought from you for the first time on each day. Hover over the info icon beside the title to read this definition in the app. The chart allows for easy trend analysis and comparison.
+The **Customers Over Time** chart shows who paid in each period: **New customers**, **Returning customers**, and customers who only renewed (**Renewing only**). Switch to **Revenue** to see the money each group brought in, with renewals as their own part. The grouping dropdown sets the [chart grouping](/guide/reporting-analytics/how-reports-count#chart-grouping).
 
-* **Visual Comparison:** The chart overlays two distinct series: the **Current Range** (the period currently selected in the date filter, drawn as a solid line with a light fill) and the **Compare Range** (the historical period you are measuring against, drawn as a dotted line in the same color).
-* **Trend Analysis:** By showing the current period's customer acquisition alongside the past, you can quickly identify seasonal impacts, measure the success of specific marketing campaigns, and see if your acquisition rate is accelerating or slowing down.
+## Customer Value (Pro)
 
-![Customer Reports](/images/reporting-analytics/customer/customer-report-1.webp)
+FluentCart Pro adds sections on what customers are worth:
 
-### Comparison Breakdown
+* **Lifetime Value by First Purchase Month:** For the customers gained in each month, what they have spent on average since, month by month.
+* **Revenue Concentration:** How much of your revenue comes from your top customers.
+* **Value by First Product:** Customers whose first purchase was in the range, by the product they first bought, with what they have spent since and how many bought again.
 
-Below the chart, a detailed **Comparison** table breaks down the growth trend month-by-month, providing the specific data behind the visualization. This section is essential for granular analysis.
+## Repeat Purchases (Pro)
 
-* **Date:** Shows the specific month and year being compared (e.g., "January 2025 vs January 2024").
-* **Current Range:** The total number of new customers acquired during the current month.
-* **Compare Range:** The total number of new customers acquired during the equivalent comparison month.
-* **Change [%]:** The exact percentage of change (growth or decline) between the two months, allowing you to pinpoint exactly when and how much your customer acquisition shifted.
+* **Purchases per Customer:** Customers who paid in the range, by how many times they have bought from you.
+* **Time to Second Purchase:** For customers gained in the 12 months up to the range, how many made another purchase and how soon, with the **Median time to come back**. Renewals do not count.
 
-![Customer Reports](/images/reporting-analytics/customer/customer-report-2.webp)
+## Customer Segments (Pro)
 
-By using the Customer Report, you can move beyond simple sales numbers to understand the most valuable asset of your store: your customer base.
+**Customer Segments** groups every customer, as of today, by how recently, how often, and how much they have bought, compared with your other customers. The date range does not apply. The segments are **Champions**, **Loyal**, **Promising**, **New**, **At risk**, **Can't lose them**, and **Hibernating**, each with a short suggestion on what to do. Click **Export** on a segment to download its customers as a CSV file.
+
+::: info Customer value, repeat purchases, and segments require FluentCart Pro
+Without Pro, each section shows a locked preview with sample data.
+:::
+
+<!-- TODO(screenshot): customers-segments.webp | /reports/customer with Pro active: Customer Segments section showing the segment tiles with customer shares | arrow on a segment's Export button -->
+
+## Top Customers
+
+The **Top Customers** table lists the customers who paid in the range, ranked by what they have spent with you over all time.
+
+* **Customer:** Name and email. Click a name to open the customer's profile.
+* **Orders** and **Renewals** in the range.
+* **Net in Period:** What the customer spent in the range.
+* **Lifetime Value:** What the customer has spent over all time.
+* **First Order** and **Last Order:** The dates of their first and latest orders.
+
+<!-- TODO(screenshot): customers-top-customers.webp | /reports/customer: Top Customers table with sample (non-real) customers | no arrow -->
+
+The Customers report now shows you how your customer base grows and who your most valuable customers are.
