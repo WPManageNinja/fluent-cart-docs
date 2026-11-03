@@ -1,48 +1,63 @@
 # Refunds Report
 
-The **Refunds Report** provides a focused analysis of all refund activity in your store. This dashboard is essential for understanding your refund rate, tracking the total amount of money being returned to customers, and identifying trends that might indicate issues with products or customer satisfaction.
+The **Refunds Report** shows how much money goes back to customers, how often, and why. Use it to track your refund rate, spot the products and payment methods behind refunds, and see how soon after a purchase customers ask for their money back.
 
-#### Accessing the Refunds Report
+## Accessing the Refunds Report
 
-Go to your WordPress dashboard, then go to **FluentCart** > [Reports](/guide/reporting-analytics/reports-dashboard-overview) in the side menu, and click on the **Refunds** tab.
+Go to your WordPress dashboard, then go to **FluentCart > Reports** in the side menu, and click on the **Refunds** tab.
 
-### Report Filters and Controls
+The date range, comparison period, currency, and **Filters** menu work as described in [How Reports Count](/guide/reporting-analytics/how-reports-count).
 
-The top of the dashboard gives you key controls to choose what data appears in your charts and tables.
+::: info
+This report counts money refunded during the date range, whenever the order was placed. The Revenue report counts refunds on orders placed in the range instead, so the two refund figures can differ.
+:::
 
-* **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
-* **Compare To:** This dropdown lets you pick a past period (for example, the previous week, last month, or the same time last year). Your current data is then compared with that past period. This helps you see if your store is doing better, worse, or staying the same over time. The dates of the selected period appear in grey text beside the dropdown, and each option in the list shows its own dates.
-* **Advanced Filters:** Click the **filter** icon to segment the report by criteria such as **Order Type** or specific **Products**, allowing you to isolate refunds associated with certain items.
-* **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
-* **Reset Filters:** Click the **Reset Filter** button to quickly remove all selections and return the report to its original view.
+## Key Refund Metrics
 
-   ![Screenshot of Refunds Report Page](/images/reporting-analytics/refunds/refunds-report.webp)
+Five cards sum up the range. For every card except **Days to Refund**, a rise is shown in red, because more refunds is bad news.
 
-### Key Refund Metrics
+* **Refunded:** Money refunded during the range, tax included, whenever the order was placed.
+* **Refunds:** Refunds made in the range. An order can be refunded more than once. The line under it shows how many orders they were on, split into full and partial refunds.
+* **Average Refund:** The refunded amount divided by the number of refunds.
+* **Refund Rate:** The share of the range's orders refunded in part or in full so far, as on the Orders, Payment Methods, and Locations reports. The line under it, **Refunds per order placed**, counts refunds made in the range per order placed in it. That figure can pass 100% when older orders are refunded.
+* **Days to Refund:** The median number of days from an order to its first refund, for orders first refunded in the range.
 
-At the top of the **Refunds Report**, you will find summary cards highlighting your key refund metrics for the selected period.
+<!-- TODO(screenshot): refunds-cards.webp | /reports/refunds, Last 30 days: the five refund cards with their second lines | no arrow -->
 
-* **Refunds:** The number of orders that have been refunded, fully or partially, in the selected period.
-* **Refunded:** The total amount of money refunded to customers. For example, if you refunded $200 and $150, the total refunded amount is $350.
-* **Average Amount:** The total refunded amount divided by the number of refunded orders. Orders without a refund are not counted.
-* **Refund Rate:** The share of your money that was returned, calculated as the total refunded amount divided by the total amount customers paid. A rate of 1% means that for every $100 paid, $1 was refunded.
+## Refunds Chart
 
-Each metric also shows a percentage, telling you whether the value went up or down compared to the period you selected for comparison.
+The **Refunds Chart** shows the **Refunded Amount** and **Refunds per order placed** by the day the refunds were made. The comparison period appears in a lighter style. Use the dropdown to change the [chart grouping](/guide/reporting-analytics/how-reports-count#chart-grouping).
 
-#### Refunds Chart
+## Refund Breakdown
 
-The main chart on this dashboard is the **Refunds Chart**. It helps you easily spot refund trends.
+The **Refund breakdown** card splits the refunded amount three ways. Each split adds up to the **Refunded** card.
 
-It compares the current period with the comparison period, so you can quickly see if refunds are going up or down. The chart plots the **Refunded Amount** as a line and the number of **Total Refunds** as bars, with the **Previous** versions of each shown in a lighter style. Use the dropdown above the chart to change the grouping.
+* **Full or partial:** **Full refunds** against **Partial refunds**.
+* **Sale type:** One-time orders, new subscriptions, renewals, and installment orders.
+* **Payment method:** The gateway that took the original payment.
 
-### Detailed Refund Analysis
+<!-- TODO(screenshot): refunds-breakdown.webp | /reports/refunds: Refunds Chart and the Refund breakdown card with its three bars | no arrow -->
 
-Below the main chart, you’ll find more detailed breakdowns that show the data behind the charts. This helps you understand refunds in more detail.
+## Most Refunded Products (Pro)
 
-* **Weeks between an order's created date and refund date:** This bar chart shows how long it takes for refunds to happen after the original order. It helps you see if problems appear right away or later.
+This table lists products sold in the range by refunded amount. **Refunded Share** is the part of what the product sold for that was refunded.
 
-* **Refunds Grouped By:** This table breaks down refunds by the option you pick in the dropdown: **Billing Country** (the default), **Shipping Country**, or **Payment Method**. It shows the number of **Refunds**, the total **Refunded Amount**, and the **Average Refund**, helping you find patterns in specific regions or payment methods. Click **Export** to download it as a CSV file.
+* **Product**, **Refunded**, **Sold**, **Refunded Share**, and **Refunded Orders**.
 
-![Refund Report Charts](/images/reporting-analytics/refunds/refunds-report-1.webp)
+The download icon exports the table as a CSV file.
 
-The Refunds Report goes deeper than sales data, showing you how often money goes back to customers and where it happens, so you can improve your products and services.
+## Weeks Between Order and Refund (Pro)
+
+This chart shows how many weeks after the order each refund came. Use it to set a fair refund window and to spot products that disappoint early.
+
+::: info These two sections require FluentCart Pro
+Without Pro, each shows a locked preview with sample data.
+:::
+
+<!-- TODO(screenshot): refunds-pro-sections.webp | /reports/refunds with Pro active: Most refunded products table and the Weeks between an order's created date and refund date chart | no arrow -->
+
+## Refund Reasons
+
+The last card shows the share of refunds that have a reason, and lists the most common reasons your team entered when refunding.
+
+The Refunds Report now shows you where money goes back to customers, so you can fix the cause.
