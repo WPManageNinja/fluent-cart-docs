@@ -8,7 +8,7 @@ Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/repor
 
 A line under the page title tells you what the figures cover. By default it reads **Installment plans as of today, over all time.** When you pick a start range, it changes to name those dates, for example **Plans started from Jan 1 to Mar 31, as they stand today.**
 
-<!-- TODO(screenshot): Installments report with the Installments item selected under Subscriptions in the reports sidebar, the Started from / Started to picker and All products dropdown in the title bar, and the summary cards. -->
+![Screenshot of the Installments report with the summary cards](/images/reporting-analytics/installments/installments-overview.webp)
 
 ## Report Filters and Controls
 
@@ -63,7 +63,7 @@ When there are no payments left, the chart reads **No payments left on active or
 **Plans Started by Month**, **Monthly Schedule**, and the **Projected to collect** card are part of **FluentCart Pro**. Without Pro, a sample preview of the schedule takes their place.
 :::
 
-<!-- TODO(screenshot): Plans Started by Month chart and the Monthly Schedule chart with the Collection rate slider and Reset button (Pro). -->
+![Screenshot of the Plans Started by Month and Monthly Schedule charts](/images/reporting-analytics/installments/installments-charts.webp)
 
 ## Plans by Variation, Overdue, and Lapsed
 
