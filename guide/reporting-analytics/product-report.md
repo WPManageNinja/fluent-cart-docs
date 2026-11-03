@@ -29,8 +29,7 @@ At the top of the **Product Report**, you will find summary cards highlighting y
 
 Each metric also includes a percentage that indicates the increase or decrease compared to the period you are comparing against. Hover over the info icon beside a metric to see exactly what it counts.
 
-<!-- TODO(screenshot): Products report summary cards (Net sales, Units sold, Orders, New customers, Refund rate, Average order value) under the new filter bar. The current image shows the old cards. -->
-![Screenshot of the Product Report summary cards and filters](/images/reporting-analytics/product/product-report.webp)
+![Screenshot of the Product Report summary cards under the filter bar](/images/reporting-analytics/product/product-report.webp)
 
 ## Sales Over Time
 
@@ -57,8 +56,7 @@ Below the chart, the **Products** table lists every product sold in the period. 
 
 Use the **Search products** box to find a product, and click a column heading to sort the table. Click the **Export** button above the table to download it as a CSV file.
 
-<!-- TODO(screenshot): Products table with an expanded row showing its variants, the Search products box and the Export button. It replaces the removed Units Sold by Period table, Top Sold lists, and Product Performance Comparison table. -->
-![Screenshot of the Units Sold by Period table](/images/reporting-analytics/product/product-units-by-period.webp)
+![Screenshot of the Products table with the NotePlus row expanded to show its variants, the Search products box and the Export button](/images/reporting-analytics/product/product-units-by-period.webp)
 
 ## Product Details
 
@@ -66,6 +64,6 @@ With **FluentCart Pro**, clicking a product name opens a details panel with the 
 
 To put specific products side by side, open the [Compare Products](/guide/reporting-analytics/product-compare-report) report.
 
-<!-- TODO(screenshot): Pro product details panel with Variant mix, Subscriptions and Bought together. -->
+<!-- TODO(screenshot): Pro product details panel with Variant mix, Subscriptions and Bought together. Not captured: the local Pro build shows the "Update FluentCart Pro" upsell instead of this panel. -->
 
 With the Product Report, you can see clear patterns in product demand, giving you the insights you need to make smarter decisions about your inventory and marketing.
