@@ -24,6 +24,7 @@
 //   {"scrollTop": true}                                 reset every scroll container (pickers scroll the panel)
 //   {"css": "#adminmenumain{display:none}"}            inject arbitrary CSS (e.g. to hide chrome around the WordPress block editor)
 //   {"eval": "wp.data.dispatch('core/block-editor').selectBlock(...)"}   run JS in the page (block/Elementor editors expose no stable selectors)
+//   {"press": "Enter"}                                keyboard key press
 //   {"wait": 800}                                       ms
 //   {"shot": {                                          take + annotate + export
 //       "name": "appearance-tab",                        -> <outDir>/<name>.webp
@@ -85,6 +86,7 @@ async function main() {
         case 'scrollTop': console.log(tag); await h.scrollTop(); break;
         case 'css': console.log(tag, v.slice(0, 60)); await h.page.addStyleTag({ content: v }); await h.page.waitForTimeout(300); break;
         case 'eval': console.log(tag, v.slice(0, 60)); await h.page.evaluate(v); await h.page.waitForTimeout(600); break;
+        case 'press': console.log(tag, v); await h.page.keyboard.press(v); await h.page.waitForTimeout(400); break;
         case 'wait': console.log(tag, v); await h.page.waitForTimeout(v); break;
         case 'shot': {
           if (only.length && !only.includes(v.name)) { console.log(tag, v.name, '(skipped)'); break; }
