@@ -13,7 +13,7 @@ The calculation follows these general steps:
 3.  **Base Method Cost**: For each applicable method, its base cost is calculated based on its "Rate Type" (e.g., a fixed amount, total items, or total order value).
 4.  **Shipping Class Contributions**: This is where the complexity comes in. For each product in the cart, its assigned [shipping class](/guide/shipping/understanding-shipping-classes) (if any) and its quantity are considered.
     * The "Cost Adjustment" for that shipping class is applied based on its "Cost Type" (`Per Item` or `Fixed Amount`).
-    * These individual class contributions are then gathered.
+    * These individual class contributions are then gathered per class, not per cart line. Products that share a class are charged together: a class without **Apply to quantity** is charged once, however many products in the cart use it.
 
 5.  **Class Aggregation (Crucial Step)**: If the cart contains products from *multiple distinct shipping classes*, the `Class Aggregation` setting of the *chosen shipping method* dictates how these class contributions are combined into a single subtotal for shipping class adjustments.
 
