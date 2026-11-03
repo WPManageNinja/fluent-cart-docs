@@ -1,9 +1,9 @@
 # Compare Products Report
 
-The **Compare Products** report puts the products you choose side by side. Each product gets its own line on a chart and its own row in a totals table, so you can see which one sells the most, earns the most, or gets refunded the most over the same dates. Use it to judge a new launch against an established bestseller, or to check how the variations of one product perform against each other.
+The **Compare Products** report puts the products you choose side by side. Each product or variation gets its own line on a trend chart and its own column in a head-to-head table, so you can see which one sells, keeps, and refunds best over the same dates. Use it to judge a new launch against an established bestseller, or to check how the variations of one product perform against each other.
 
 ::: info
-This report is part of **FluentCart Pro**.
+This report is part of **FluentCart Pro**. Without Pro, the page shows a sample preview.
 :::
 
 ## Accessing the Compare Products Report
@@ -12,65 +12,71 @@ Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/repor
 
 ## Choosing Products to Compare
 
-The page stays on a preview until you pick at least two products. The preview shows an example chart, so you know what to expect.
+You pick the products on the page itself, not in the **Filters** menu. The page reads **Pick two or more products or variations to compare.** until you do.
 
-1. Click the **filter** icon at the right end of the filter bar.
-2. Select **Products** from the list.
-3. Open the **Select Products** dropdown, then tick the checkbox beside each product you want to compare. Click the arrow beside a product to see its variations and tick only the ones you need.
-4. Click anywhere outside the dropdown to close it.
+1. Open the first **Pick a product or variation** dropdown and choose a product. Choose **All variants** to compare the whole product, or pick a single variation.
+2. Do the same in the second dropdown, beside **vs**.
+3. Click **+ Add** to add more, up to six items in total. Click the **✕** beside a dropdown to remove it.
 
-You can also click **Open the Product filter** inside the preview to jump straight to the picker.
+Each item gets its own color, which it keeps on the chart and in the table. Your picks are saved in the page address, so you can bookmark or share a comparison.
 
+<!-- TODO(screenshot): Compare page with three "Pick a product or variation" dropdowns joined by "vs" and the + Add button. The current image shows the old Products filter picker. -->
 ![Screenshot of the Products filter with three products ticked](/images/reporting-analytics/product/product-compare-picker.webp)
-
-Once you pick two or more products, they appear in the filter bar as chips, and the report loads. Hover over a chip to see which variations it covers.
-
-::: info
-The report compares up to 50 picked variations. If you pick more, FluentCart tells you it is comparing the first ones you picked, so narrow the selection for an exact comparison.
-:::
 
 ## Report Filters and Controls
 
 * **Date:** The date range the report covers.
-* **Compare to:** The earlier period used for the change figures in the totals table. The dates of that period appear beside the dropdown, and again above the table as **Change compared with** followed by the dates.
+* **Compare to:** The earlier period used for the change figures in the table.
 * **Currency:** Appears when your orders are in more than one currency.
-* **Reset Filters:** Clears your picks and returns the report to its preview.
 
-## The Comparison Chart
+## The Trend Chart
 
-The chart draws one colored line for each product you picked, and a legend underneath tells you which color is which product.
+The **Trend** chart draws one colored line for each item you picked.
 
-* **Metric:** Use the buttons in the top-right corner to switch between **Orders**, **Revenue**, and **Units**. The chart title follows your choice, for example **Revenue by product**.
-* **Grouping:** The dropdown beside the metric buttons sets how the timeline is bucketed (**Auto**, **Daily**, **Monthly**, or **Yearly**).
+* **Metric:** Use the buttons in the chart header to switch between **Net sales**, **Units**, **Orders**, and **New customers**.
+* **Cumulative:** Tick this box to add each period to the ones before it, so you can see the running total.
+* **Align by launch:** Tick this box to line items up from their own launch instead of by calendar date. A launch is the first of three months in a row with sales, and the chart follows each item over its first five years, so the date range does not apply. In this view, only **Net sales** and **Units** are available.
+* **Grouping:** The dropdown sets how the timeline is bucketed (**Auto**, **Daily**, **Monthly**, or **Yearly**). It is hidden while **Align by launch** is on.
 
-Hover over a point to see the exact value for each product on that date.
+Hover over a point to see the exact value for each item on that date.
 
-## The Totals Table
+## Head to Head
 
-Under the chart, the **Totals** table has one row for each product, with the color that matches its line on the chart.
+Under the chart, the **Head to head** table has one column for each item and one row for each figure. The leader on each row is marked **Leader**, and changes are measured against the comparison period.
 
-* **Entity:** The product name, with the number of its variations underneath.
-* **Orders:** The number of orders that include the product. An order that holds two variations of the same product is counted twice in the product row.
-* **Revenue:** What the product earned after discounts and refunds, excluding tax.
-* **Units:** The quantity sold.
-* **Customers:** The number of customers who bought it. A customer who bought two variations of one product counts twice in the product row.
-* **Discounts:** The discounts applied to the product.
-* **Refunds:** Refunds on orders placed in your date range, counted by the order date and not by the date the refund was issued.
-* **Share:** The percentage of the selected total this product accounts for. It follows the chart metric you chose: the share of total orders, revenue, or units.
+### Sales
 
-Next to each figure, a small green or red arrow with a percentage shows the change compared with your comparison period. The final **Selected total** row adds up all the products you picked.
+* **Net sales:** What the item earned, less refunds and tax.
+* **Share of compared sales:** The item's share of the net sales of all the items you picked.
+* **Units sold:** The quantity sold.
+* **Orders:** The number of orders that included the item.
+* **Customers:** The number of customers who bought it.
+* **New customers:** Customers whose first purchase included the item.
+* **Average order value:** Net sales divided by orders.
+* **Average price per unit:** The average price customers paid for one unit.
+* **Refund rate:** Refunds as a share of what customers paid. A lower rate wins here, and its change is shown in points.
 
-Click a column heading to sort the table by that column. Numeric columns sort by their value, so $1,000 correctly ranks above $900.
+### Revenue Mix
 
-### Product or Variation
+* **New sales, Renewals, Installment payments:** The item's net sales split by type. The **Installment payments** row appears only when one of the items has any.
 
-Use the **Product** and **Variation** buttons at the top-right of the table to change what each row stands for.
+### Subscriptions
 
-* **Product:** One row per product, with all of its variations added together.
-* **Variation:** One row per variation, for example each size or color of a hoodie. The chart switches to variation lines too.
+This group appears when at least one item sells subscriptions.
 
-When you have more than five rows, the table shows the top 5 for the column you sorted by, and the chart draws only those same five. Click **Show all** to see every row, or **Show top 5** to collapse it again.
+* **Live subscriptions:** The item's subscriptions that are running now.
+* **MRR:** Their monthly recurring revenue.
+* **Renewal rate:** The share of due renewals that were paid.
+* **Canceled, ends soon:** Canceled subscriptions still in their paid term.
+* **Failing payments:** Subscriptions whose renewal payment is failing.
 
+## Customer Overlap
+
+The **Customer overlap** table shows, for each item's customers in the period, how many have ever bought each of the other items, and how many bought that other item first. Use it to see whether two products compete for the same buyers or lead customers from one to the other.
+
+<!-- TODO(screenshot): Compare page with the Trend chart, the Head to head table with Leader marks, and the Customer overlap table. The current image shows the old chart and Totals table. -->
 ![Screenshot of the Compare Products chart and Totals table](/images/reporting-analytics/product/product-compare-report.webp)
+
+If the report cannot load, the page shows **This report could not be loaded.** with a **Retry** button.
 
 Your product comparison now shows you which products are pulling their weight, and which variations deserve more attention.
