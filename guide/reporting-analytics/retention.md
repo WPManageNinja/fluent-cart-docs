@@ -17,8 +17,7 @@ Use the controls at the top of the page to customize the data displayed in your 
 
 Retention compares the subscriptions active when a period began with those still active at its end. New subscriptions are not counted, and installment plans are not included. Hover over the info icon beside the **Subscription Retention** title to read this definition in the app.
 
-<!-- TODO(screenshot): Retention page title bar with the Monthly / Yearly buttons and the three summary cards (Subscription Retention, MRR Retention, Renewal Rate). The current image shows the old layout. -->
-![Retention Report](/images/reporting-analytics/subscription/retention/retention-report-1.webp)
+![Screenshot of the Retention page with the Monthly and Yearly buttons and the three summary cards](/images/reporting-analytics/subscription/retention/retention-report-1.webp)
 
 ## Retention Summary
 
@@ -39,8 +38,7 @@ The **Retention Rate** chart provides a visual period-over-period comparison of 
 * **Subscription Retention vs. MRR Retention:** The chart plots both metrics side-by-side, allowing you to see if customer loss is impacting your revenue proportionally.
 * **Zoom:** Use the zoom icon in the top-right corner to enlarge the chart.
 
-<!-- TODO(screenshot): Retention Rate chart with the Subscription Retention and MRR Retention series. -->
-![Retention Chart](/images/reporting-analytics/subscription/retention/retention-rate-2.webp)
+![Screenshot of the Retention Rate chart with the Subscription Retention and MRR Retention series](/images/reporting-analytics/subscription/retention/retention-rate-2.webp)
 
 ## Renewals and Lifetime Value
 
