@@ -1,0 +1,68 @@
+{
+  "outDir": "guide/public/images/reporting-analytics/subscription",
+  "viewport": {
+    "width": 1600,
+    "height": 1800
+  },
+  "steps": [
+    {
+      "admin": "/reports/subscriptions"
+    },
+    {
+      "wait": 3000
+    },
+    {
+      "click": ".fct-report-filter-bar-button"
+    },
+    {
+      "click": {
+        "text": "Custom…"
+      }
+    },
+    {
+      "fill": {
+        "selector": ".fct-report-filter-custom input >> nth=0",
+        "value": "2026-08-01"
+      }
+    },
+    {
+      "fill": {
+        "selector": ".fct-report-filter-custom input >> nth=1",
+        "value": "2026-10-31"
+      }
+    },
+    {
+      "eval": "(()=>{const e=document.querySelectorAll('.fct-report-filter-custom input')[1];e.focus();e.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',code:'Enter',keyCode:13,which:13,bubbles:true}));})()"
+    },
+    {
+      "click": {
+        "role": "button",
+        "name": "^apply$"
+      }
+    },
+    {
+      "wait": 3500
+    },
+    {
+      "shot": {
+        "name": "subscription-report",
+        "clip": "app",
+        "crop": {
+          "height": 1330
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "subscription-chart",
+        "clip": {
+          "element": {
+            "selector": ".fct-card",
+            "hasText": "Subscription movement"
+          },
+          "pad": 24
+        }
+      }
+    }
+  ]
+}

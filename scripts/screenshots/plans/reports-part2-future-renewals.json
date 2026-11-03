@@ -1,0 +1,24 @@
+{
+  "outDir": "guide/public/images/reporting-analytics/subscription/future-renewals",
+  "viewport": {
+    "width": 1600,
+    "height": 1800
+  },
+  "steps": [
+    {
+      "admin": "/reports/subscriptions/future-renewals"
+    },
+    {
+      "wait": 3500
+    },
+    {
+      "shot": {
+        "name": "future-renewals-1",
+        "clip": "app",
+        "crop": {
+          "height": 2230
+        }
+      }
+    }
+  ]
+}

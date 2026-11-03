@@ -1,0 +1,108 @@
+{
+ "outDir": "scripts/screenshots/raw/dbg",
+ "viewport": {
+  "width": 1600,
+  "height": 1100
+ },
+ "steps": [
+  {
+   "admin": "/order_bump"
+  },
+  {
+   "wait": 3500
+  },
+  {
+   "click": {
+    "role": "button",
+    "name": "Add New"
+   }
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "fill": {
+    "selector": "input[placeholder=\"Enter bump name\"]",
+    "value": "Add the Priority Support Pack"
+   }
+  },
+  {
+   "click": ".el-dialog .el-select"
+  },
+  {
+   "wait": 1200
+  },
+  {
+   "click": ".el-tree-node__content:has-text(\"Classic Cap\") >> nth=0 >> .el-tree-node__expand-icon"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "click": ".el-tree-node__content:has-text(\"Orange\") .el-checkbox"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "click": ".el-dialog__title, .el-dialog__header"
+  },
+  {
+   "wait": 500
+  },
+  {
+   "shot": {
+    "name": "ob3",
+    "clip": "viewport"
+   }
+  },
+  {
+   "click": {
+    "role": "button",
+    "name": "^Create$"
+   }
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "shot": {
+    "name": "ob4",
+    "clip": "app"
+   }
+  },
+  {
+   "click": "label:has-text(\"Enable this Order Bump\")"
+  },
+  {
+   "fill": {
+    "selector": "textarea[placeholder=\"Enter bump description\"]",
+    "value": "Keep your head covered on sunny days. Add this cap to your order at a special price."
+   }
+  },
+  {
+   "fill": {
+    "selector": "input[placeholder=\"0\"]",
+    "value": "25"
+   }
+  },
+  {
+   "wait": 500
+  },
+  {
+   "click": {
+    "role": "button",
+    "name": "^Save"
+   }
+  },
+  {
+   "wait": 2500
+  },
+  {
+   "shot": {
+    "name": "ob5",
+    "clip": "app"
+   }
+  }
+ ]
+}

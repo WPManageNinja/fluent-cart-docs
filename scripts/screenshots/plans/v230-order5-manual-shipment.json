@@ -1,0 +1,16 @@
+{
+ "outDir": "scripts/screenshots/raw/dbg",
+ "viewport": {"width":1600,"height":1000},
+ "steps": [
+  {"admin":"/orders/5/view"},{"wait":2500},
+  {"click":"button:has-text(\"Create shipment\")"},{"wait":1800},
+  {"click":{"role":"button","name":"^Continue$"}},{"wait":3500},
+  {"click":".fct-shipment-rate:has-text(\"Custom price\")"},{"wait":500},
+  {"fill":{"selector":"input[placeholder=\"Optional carrier name\"]","value":"Local Courier"}},
+  {"fill":{"selector":"input[placeholder=\"0.00\"]","value":"2"}},
+  {"fill":{"selector":"input[placeholder=\"Enter tracking number\"]","value":"LC-482910"}},
+  {"fill":{"selector":"input[placeholder=\"https://example.com/track/...\"]","value":"https://example.com/track/LC-482910"}},
+  {"click":{"role":"button","name":"^Continue$"}},{"wait":1200},
+  {"click":".fct-shipment-drawer .el-checkbox:has-text(\"Notify Customer\")"},
+  {"click":".fct-shipment-drawer .el-button--primary:has-text(\"Create Shipment\")"},{"wait":3500}
+ ]}
