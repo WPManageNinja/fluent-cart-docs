@@ -21,7 +21,7 @@ Four cards sum up the range. A rise in any of them is shown in red, because each
 
 The **Discounts Over Time** chart shows the discount given in each period as bars, and the share of orders that used a coupon as a line.
 
-<!-- TODO(screenshot): coupons-overview.webp | /reports/coupons, Last 30 days: the four coupon cards, Discounts Over Time chart and Coupon vs Full Price table (Pro) | no arrow -->
+![Screenshot of the Coupons cards, Discounts Over Time chart and Coupon vs Full Price table](/images/reporting-analytics/coupons/coupons-overview.webp)
 
 ## Coupon vs Full Price (Pro)
 
@@ -49,6 +49,6 @@ The **Total** row adds up every coupon. Use the search box to find a coupon by c
 
 **Discount with no code** under the table counts orders that have a coupon discount but no coupon code recorded, for example renewal discounts imported from another platform. They are not in the rows or totals above.
 
-<!-- TODO(screenshot): coupons-table.webp | /reports/coupons: coupons table with sample codes, the Total row and the "Discount with no code" line | no arrow -->
+![Screenshot of the coupons table with the Total row](/images/reporting-analytics/coupons/coupons-table.webp)
 
 The Coupons report now shows you which discounts pay for themselves.

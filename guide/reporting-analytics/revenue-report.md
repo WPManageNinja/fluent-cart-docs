@@ -25,7 +25,7 @@ The cards read from left to right like a statement. Each line leads to the next.
 
 The [net sales](/guide/reporting-analytics/how-reports-count#net-sales) figure here is the same one every other report uses.
 
-<!-- TODO(screenshot): revenue-summary-cards.webp | /reports/revenue, Last 30 days, store with tax and shipping: the full card row Gross Sales through Total Sales with change arrows | no arrow -->
+![Screenshot of the Revenue report cards from Gross Sales to Total Sales](/images/reporting-analytics/revenue/revenue-summary-cards.webp)
 
 ## Revenue Chart
 
@@ -35,7 +35,7 @@ The **Revenue Chart** draws **Net Sales** over the range. With a comparison peri
 * **Grouping:** The dropdown sets the [chart grouping](/guide/reporting-analytics/how-reports-count#chart-grouping).
 * **Chart type:** Switch between a line chart and a bar chart, or zoom in.
 
-<!-- TODO(screenshot): revenue-chart.webp | /reports/revenue: Revenue Chart with Net Sales and the dotted Compare Net Sales line, grouping dropdown on Auto (Daily) | arrow on the grouping dropdown -->
+![Screenshot of the Revenue Chart with the compared Net Sales line and the grouping dropdown](/images/reporting-analytics/revenue/revenue-chart.webp)
 
 ## Revenue Breakdown
 
@@ -47,7 +47,7 @@ The **Revenue Breakdown** table lists the same lines by year. Click the arrow at
 
 Click a column heading to sort by it. The download icon exports the table as a CSV file.
 
-<!-- TODO(screenshot): revenue-breakdown.webp | /reports/revenue: Revenue Breakdown table with one year expanded into monthly rows | arrow on the expand arrow of the first year -->
+![Screenshot of the Revenue Breakdown table with one year expanded into months](/images/reporting-analytics/revenue/revenue-breakdown.webp)
 
 ## Net Sales by Order Type
 
@@ -55,6 +55,6 @@ The last card splits net sales by order type: **One-time**, **New subscription**
 
 The table shows **Orders**, **Net Sales**, **Share**, and **Net Sales per Order** for each type, with **Change (%)** when a comparison period is set. For a subscription store, this shows at a glance how much of your income is recurring and how much is new.
 
-<!-- TODO(screenshot): revenue-by-order-type.webp | /reports/revenue: Net sales by order type card with the stacked bar and the table | no arrow -->
+![Screenshot of the Net sales by order type card](/images/reporting-analytics/revenue/revenue-by-order-type.webp)
 
 The Revenue Report now shows you exactly how your sales become the money you keep.

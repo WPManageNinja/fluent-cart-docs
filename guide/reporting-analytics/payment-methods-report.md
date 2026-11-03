@@ -21,7 +21,7 @@ Four cards sum up the range. Hover over the info icon beside a card to read its 
 
 This chart shows the net sales of the orders each gateway took, period by period.
 
-<!-- TODO(screenshot): payment-methods-overview.webp | /reports/payment-methods, Last 30 days: the four cards and the Net Sales by Payment Method chart | no arrow -->
+![Screenshot of the Payment Methods cards and the Net Sales by Payment Method chart](/images/reporting-analytics/payment-methods/payment-methods-overview.webp)
 
 ## The Payment Methods Table
 
@@ -43,7 +43,7 @@ The table has one row per payment method and a **Total** row. Its columns fall i
 
 Click a heading to sort, and use the download icon to export the table as a CSV file.
 
-<!-- TODO(screenshot): payment-methods-table.webp | /reports/payment-methods: table with Sales and Risk column groups for two or three gateways and the Total row | no arrow -->
+![Screenshot of the payment methods table with Sales and Risk columns](/images/reporting-analytics/payment-methods/payment-methods-table.webp)
 
 ## Disputes and Card Brands (Pro)
 
@@ -56,6 +56,6 @@ FluentCart Pro adds two sections:
 Without Pro, this part of the page shows a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): payment-methods-disputes.webp | /reports/payment-methods with Pro active: Dispute rate card, Disputes table and Card Brands and Methods table | no arrow -->
+![Screenshot of the Disputes table and the Card Brands and Methods table](/images/reporting-analytics/payment-methods/payment-methods-disputes.webp)
 
 The Payment Methods report now shows you how well each gateway turns checkouts into paid orders.

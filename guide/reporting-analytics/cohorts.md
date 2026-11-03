@@ -34,7 +34,7 @@ Use the controls above the table to change the view:
 * **% of start** or **Values:** Show each cell as a share of the start, or as the number itself.
 * **Export:** Downloads the table as a CSV file.
 
-<!-- TODO(screenshot): cohorts-table.webp | /reports/subscriptions/subscriptions-cohorts, Monthly, % of start: cohort heat map with the Weighted average row and the Last generated text | arrow on Generate Snapshots -->
+![Screenshot of the monthly cohort table with the Weighted average row](/images/reporting-analytics/subscription/cohorts/cohorts-table.webp)
 
 ## More Cohort Views (Pro)
 
@@ -50,6 +50,6 @@ FluentCart Pro adds these controls and charts:
 Without Pro, the table shows customer cohorts only, and the other sections show a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): cohorts-pro-sections.webp | /reports/subscriptions/subscriptions-cohorts with Pro active: MRR view selected, Retention curve chart and the Cancel and rebuy card switched on | arrow on the Count rebuys as retained switch -->
+![Screenshot of the cohort controls with MRR selected, the Retention curve and the Cancel and rebuy card](/images/reporting-analytics/subscription/cohorts/cohorts-pro-sections.webp)
 
 The Cohorts report now shows you how long each group of customers stays with you.

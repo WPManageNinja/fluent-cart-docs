@@ -8,13 +8,13 @@ Go to your WordPress dashboard, then go to **FluentCart > Reports** in the side 
 
 The left sidebar lists every report: **Overview**, **Orders**, **Revenue**, **Refunds**, **Subscriptions** (with **Retention**, **Cohorts**, **Future Renewals**, and **Installments**), **Products** (with **Compare**), **Customers**, **Sources**, **Coupons**, **Payment Methods**, and **Locations**. FluentCart Pro adds **Export** for the [accounting export](/guide/reporting-analytics/accounting-export). Add-ons that ship their own reports add them to the same sidebar. Click **Reports** at the top of the sidebar to collapse it.
 
-<!-- TODO(screenshot): reports-sidebar.webp | Reports sidebar with every item visible (Overview through Locations, plus Export with Pro), Overview open | arrow on the Reports collapse button -->
+![Screenshot of the Reports sidebar with every report listed and the Reports collapse button](/images/reporting-analytics/common/reports-sidebar.webp)
 
 ## The Filter Bar
 
 The top-right corner of each report holds the controls that decide what the report reads.
 
-<!-- TODO(screenshot): report-filter-bar.webp | Filter bar on /reports/orders: date button showing "Last 30 days", "vs Previous period" button, Currency chip, Filters button | no arrow -->
+![Screenshot of the report filter bar with the date range, comparison, currency and Filters buttons](/images/reporting-analytics/common/report-filter-bar.webp)
 
 * **Date range:** Opens a list of presets: **Today**, **Last 7 days**, **Last 30 days**, **This month**, **Last month**, **Last 12 months**, **Year to date**, and **All time**. **Custom…** opens a calendar where you pick a start and end date, then click **Apply**. The note under the list, for example **In store time: America/New_York**, names the timezone the report uses. A preset always counts from today, so **Last 7 days** opened tomorrow shows the seven days up to tomorrow.
 * **Compare:** The button that reads **vs Previous period** picks the earlier period the report compares with. See [Comparing With an Earlier Period](#comparing-with-an-earlier-period).
@@ -25,7 +25,7 @@ When a filter is set, it appears as a chip under the title bar. Click **Clear al
 
 Some reports have their own controls instead. The subscription reports have a product picker that lists only subscription products. The **Installments** report has its own plan start dates and product picker. **Cohorts** and **Future Renewals** have no date range, because they look at all your subscriptions.
 
-<!-- TODO(screenshot): report-date-presets.webp | Date range menu open on /reports/revenue showing all presets, Custom…, and the "In store time" note | arrow on "Custom…" -->
+![Screenshot of the date range menu with its presets, Custom and the store time note](/images/reporting-analytics/common/report-date-presets.webp)
 
 ### Comparing With an Earlier Period
 
@@ -44,7 +44,7 @@ Each option in the list shows the dates it would use. When your range runs past 
 Without Pro, every report compares with the previous period, and the compare button is locked.
 :::
 
-<!-- TODO(screenshot): report-compare-options.webp | Compare menu open on /reports/revenue (Pro active) listing Previous period, Previous month, Previous quarter, Previous year, Custom, No comparison with their dates | no arrow -->
+![Screenshot of the comparison menu with each option and its dates](/images/reporting-analytics/common/report-compare-options.webp)
 
 ### Filters (Pro)
 
@@ -128,7 +128,7 @@ Reports read the orders of the mode your store is in. In **Live** mode, they sho
 
 Every report is available on every FluentCart store, and every free store can pick any date range. FluentCart Pro adds deeper sections, the comparison period choice, and the **Filters** menu. Without Pro, a Pro section shows a locked preview with **Sample data** and an **Upgrade to Pro** button. If Pro is active but too old for a section, the preview asks you to update FluentCart Pro.
 
-<!-- TODO(screenshot): report-pro-preview.webp | A locked Pro preview on /reports/orders without Pro: "See when and how customers order" card over sample data with the Sample data label and Upgrade to Pro button | no arrow -->
+![Screenshot of a locked Pro preview over sample data with the Upgrade to Pro button](/images/reporting-analytics/common/report-pro-preview.webp)
 
 | Report | Free | Pro adds |
 |---|---|---|

@@ -23,7 +23,7 @@ Three cards describe the last closed month or year. A period still running has h
 
 When your range does not cover a full month (or year), the cards ask you to pick a longer range.
 
-<!-- TODO(screenshot): retention-summary.webp | /reports/subscriptions/subscriptions-retention, Last 12 months, Monthly: the three summary cards and the Retention Rate chart | arrow on the Monthly / Yearly switch -->
+![Screenshot of the Retention summary cards and the Retention Rate chart](/images/reporting-analytics/subscription/retention/retention-summary.webp)
 
 ## Retention Rate Chart
 
@@ -49,6 +49,6 @@ Both assume churn stays as it was.
 Without Pro, they show a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): retention-pro-sections.webp | /reports/subscriptions/subscriptions-retention with Pro active: Renewals chart and the Lifetime (estimate) card | arrow on the "Why they left" switch -->
+![Screenshot of the Renewals chart and the Lifetime (estimate) card](/images/reporting-analytics/subscription/retention/retention-pro-sections.webp)
 
 The Retention report now shows you how well you keep the subscribers you have already won.

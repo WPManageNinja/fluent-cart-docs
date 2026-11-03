@@ -21,7 +21,7 @@ The first row of cards sums up the date range. Hover over the info icon beside a
 
 The small arrow and percentage beside a figure compare it with the comparison period.
 
-<!-- TODO(screenshot): overview-cards.webp | /reports/overview, Last 30 days, top of the page: the six sales cards and the three subscription cards with change arrows | no arrow -->
+![Screenshot of the Overview sales cards and subscription cards](/images/reporting-analytics/dashboard-overview/overview-cards.webp)
 
 ## Subscription Cards
 
@@ -40,7 +40,7 @@ This card lists problems worth a look, each with a **View report** link. It appe
 * Installment plans with a failed payment, and the amount still owed.
 * A refund rate that rose sharply against the comparison period.
 
-<!-- TODO(screenshot): overview-needs-attention.webp | /reports/overview on a store with a failing subscription and an overdue installment plan: the Needs Attention card with two items and View report links | arrow on the first View report link -->
+![Screenshot of the Needs Attention card with View report links](/images/reporting-analytics/dashboard-overview/overview-needs-attention.webp)
 
 ## Net Sales Chart
 
@@ -54,12 +54,12 @@ Three short lists rank what drives your sales in the range. Each shows the top f
 * **Top Channels:** By new customers. Opens the Sources report.
 * **Top Countries:** By net sales, using the billing address. Opens the Locations report.
 
-<!-- TODO(screenshot): overview-top-lists.webp | /reports/overview scrolled to Top Products, Top Channels, Top Countries lists with share bars | no arrow -->
+![Screenshot of the Top Products, Top Channels and Top Countries lists](/images/reporting-analytics/dashboard-overview/overview-top-lists.webp)
 
 ## Last 12 Months
 
 The last chart shows net sales for each of the last 12 months as bars, against the same month a year earlier. The date range does not apply here, and the current month is still in progress.
 
-<!-- TODO(screenshot): overview-last-12-months.webp | /reports/overview scrolled to the bottom: Last 12 Months bar chart with the "A year earlier" series | no arrow -->
+![Screenshot of the Last 12 Months chart with the A year earlier line](/images/reporting-analytics/dashboard-overview/overview-last-12-months.webp)
 
 The Overview now gives you a daily snapshot of your store, with a link to the report behind every number.

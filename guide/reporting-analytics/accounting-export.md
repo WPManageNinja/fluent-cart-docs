@@ -13,7 +13,7 @@ To open the accounting export:
 1. From your WordPress dashboard, navigate to **FluentCart > Reports**.
 2. Select **Export** at the bottom of the Reports sidebar.
 
-<!-- TODO(screenshot): accounting-export-menu.webp | /reports/export with Pro active: Reports sidebar with Export selected (below Locations) and the Accounting export card open | arrow on Export in the sidebar -->
+![Screenshot of the Export item in the Reports sidebar and the Accounting export card](/images/reporting-analytics/accounting-export/accounting-export-menu.webp)
 
 The note at the top of the form reminds you that the export covers this store only. It is not a complete EU OSS return, because a business that runs several stores files one OSS return for all of them.
 

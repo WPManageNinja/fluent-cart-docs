@@ -20,7 +20,7 @@ Hover over the info icon beside a card to read its definition.
 
 The two international cards appear when your store settings have a store country.
 
-<!-- TODO(screenshot): locations-overview.webp | /reports/locations, Last 30 days: the location cards, the world map and the Address dropdown | arrow on the Address dropdown -->
+![Screenshot of the Locations cards, the world map and the Address dropdown](/images/reporting-analytics/locations/locations-overview.webp)
 
 ## Map and Table
 
@@ -46,6 +46,6 @@ With FluentCart Pro, the report goes deeper than countries:
 Without Pro, the report shows countries only, and a locked preview with sample data shows the rest.
 :::
 
-<!-- TODO(screenshot): locations-drilldown.webp | /reports/locations with Pro active: one country opened to its states, breadcrumb "All countries / <country>", Biggest Movers card visible | arrow on the breadcrumb -->
+![Screenshot of one country opened to its states with the Biggest Movers card](/images/reporting-analytics/locations/locations-drilldown.webp)
 
 The Locations report now shows you where your customers are and which places are growing.

@@ -22,7 +22,7 @@ Five cards sum up the range. For every card except **Days to Refund**, a rise is
 * **Refund Rate:** The share of the range's orders refunded in part or in full so far, as on the Orders, Payment Methods, and Locations reports. The line under it, **Refunds per order placed**, counts refunds made in the range per order placed in it. That figure can pass 100% when older orders are refunded.
 * **Days to Refund:** The median number of days from an order to its first refund, for orders first refunded in the range.
 
-<!-- TODO(screenshot): refunds-cards.webp | /reports/refunds, Last 30 days: the five refund cards with their second lines | no arrow -->
+![Screenshot of the Refunds report cards](/images/reporting-analytics/refunds/refunds-cards.webp)
 
 ## Refunds Chart
 
@@ -36,7 +36,7 @@ The **Refund breakdown** card splits the refunded amount three ways. Each split 
 * **Sale type:** One-time orders, new subscriptions, renewals, and installment orders.
 * **Payment method:** The gateway that took the original payment.
 
-<!-- TODO(screenshot): refunds-breakdown.webp | /reports/refunds: Refunds Chart and the Refund breakdown card with its three bars | no arrow -->
+![Screenshot of the Refunds Chart and the Refund breakdown card](/images/reporting-analytics/refunds/refunds-breakdown.webp)
 
 ## Most Refunded Products (Pro)
 
@@ -54,7 +54,7 @@ This chart shows how many weeks after the order each refund came. Use it to set 
 Without Pro, each shows a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): refunds-pro-sections.webp | /reports/refunds with Pro active: Most refunded products table and the Weeks between an order's created date and refund date chart | no arrow -->
+![Screenshot of the Most refunded products table and the weeks-to-refund chart](/images/reporting-analytics/refunds/refunds-pro-sections.webp)
 
 ## Refund Reasons
 

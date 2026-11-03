@@ -25,7 +25,7 @@ Hover over the info icon beside a card to read its definition.
 * **Plans started:** Plans with at least one paid order.
 * **Completion rate:** Completed plans out of plans that have ended (completed, lapsed, or refunded). Running and overdue plans are left out.
 
-<!-- TODO(screenshot): installments-cards.webp | /reports/subscriptions/installments, no start range: the summary cards and the title-bar controls (Started from / Started to, All products) | arrow on the Plans started between date picker -->
+![Screenshot of the Installments cards and the title bar filters](/images/reporting-analytics/subscription/installments/installments-cards.webp)
 
 ## Plans Started by Month and Monthly Schedule (Pro)
 
@@ -38,7 +38,7 @@ FluentCart Pro adds two charts:
 Without Pro, this part of the page shows a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): installments-schedule.webp | /reports/subscriptions/installments with Pro active: Plans Started by Month and Monthly Schedule charts | arrow on the Collection rate slider -->
+![Screenshot of the Plans Started by Month and Monthly Schedule charts](/images/reporting-analytics/subscription/installments/installments-schedule.webp)
 
 ## Plans by Variation, Overdue, and Lapsed
 
@@ -50,6 +50,6 @@ The table at the bottom has three tabs. Only the open tab loads.
 
 The **Overdue** and **Lapsed** lists show the **Customer**, **Product**, **Status**, payments **Paid**, amount **Collected**, and amount **Left**. When a plan can be reactivated, click **Copy link** in the **Reactivation** column to copy a link you can send to the customer. Use the search box to find a customer by name or email.
 
-<!-- TODO(screenshot): installments-overdue.webp | /reports/subscriptions/installments: Overdue tab open with sample customer rows and the Copy link button | arrow on Copy link -->
+![Screenshot of the Overdue tab with Copy link buttons](/images/reporting-analytics/subscription/installments/installments-overdue.webp)
 
 The Installments report now shows you what your payment plans have brought in and which customers need a reminder.

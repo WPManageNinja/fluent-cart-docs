@@ -20,7 +20,7 @@ Five cards sum up the forecast. Hover over the info icon beside a card to read i
 * **Won't Renew:** Canceled subscriptions still in their paid term that end inside the period: the renewals they would have paid, unless the customer comes back.
 * **At Risk Now:** Renewals already due and not paid, either retrying payment or overdue. They are not in the forecast, but they may still come in.
 
-<!-- TODO(screenshot): future-renewals-cards.webp | /reports/subscriptions/future-renewals, Next 3 months: the five forecast cards and the Renewal rate assumptions sliders | arrow on the horizon dropdown -->
+![Screenshot of the Future Renewals cards and the Renewal rate assumptions sliders](/images/reporting-analytics/subscription/future-renewals/future-renewals-cards.webp)
 
 ## Renewal Rate Assumptions
 
@@ -38,7 +38,7 @@ The chart shows each month in the period:
 * **Projected:** The line at your renewal rates.
 * **Won't renew:** Bars for canceled subscriptions that end that month, shown when there are any.
 
-<!-- TODO(screenshot): future-renewals-chart.webp | /reports/subscriptions/future-renewals, Next 6 months: Renewals by month chart with Ideal (100%) bars, Projected line and Won't renew bars | no arrow -->
+![Screenshot of the Renewals by month chart for the next 6 months](/images/reporting-analytics/subscription/future-renewals/future-renewals-chart.webp)
 
 ## Renewals by Variant (Pro)
 
@@ -48,7 +48,7 @@ This table splits the forecast by product and variation, so you can see which pl
 Without Pro, this table shows a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): future-renewals-variants.webp | /reports/subscriptions/future-renewals with Pro active: Renewals by Variant table sorted by Projected | no arrow -->
+![Screenshot of the Renewals by Variant table sorted by Projected](/images/reporting-analytics/subscription/future-renewals/future-renewals-variants.webp)
 
 ::: info
 These figures are a forecast. Actual income can differ because of failed payments, cancellations, and plan changes.

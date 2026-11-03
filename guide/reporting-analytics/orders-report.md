@@ -21,7 +21,7 @@ Six cards sum up the date range. Hover over the info icon beside a card to read 
 
 The arrow and percentage beside a figure compare it with the comparison period.
 
-<!-- TODO(screenshot): orders-summary-cards.webp | /reports/orders, Last 30 days: the six summary cards and the Order Chart below them | arrow on the checkbox of the Orders card -->
+![Screenshot of the Orders report summary cards and the Order Chart](/images/reporting-analytics/orders/orders-summary-cards.webp)
 
 ## Order Chart
 
@@ -40,7 +40,7 @@ The **Order mix** card splits the orders in the **Orders** card in several ways.
 * **Discount:** **Discounted** against **Full price** orders. The **Coupons report** link opens the [Coupons report](/guide/reporting-analytics/coupons-report).
 * **Shipping:** The shipping status of physical orders. This part appears only when the range has physical orders.
 
-<!-- TODO(screenshot): orders-order-mix.webp | /reports/orders: the Order mix card with Order type, Order status, Discount and Shipping bars | no arrow -->
+![Screenshot of the Order mix card](/images/reporting-analytics/orders/orders-order-mix.webp)
 
 ## New vs. Returning Customers
 
@@ -55,7 +55,7 @@ This table splits the orders by who placed them. Hover over the info icon beside
 
 The columns are **Customers**, **Orders**, **Net Sales**, and **Average Order (Net)**. Tick **Show Percentages** to see each row's share of the column total instead of the number. The download icon exports the table as a CSV file.
 
-<!-- TODO(screenshot): orders-new-vs-returning.webp | /reports/orders: New vs. Returning Customers table with New, Returning, Renewal and Guest rows | arrow on the Show Percentages checkbox -->
+![Screenshot of the New vs. Returning Customers table](/images/reporting-analytics/orders/orders-new-vs-returning.webp)
 
 ## Average Order Charts
 
@@ -81,6 +81,6 @@ Days and hours follow your [store timezone](/guide/reporting-analytics/how-repor
 Without Pro, this part of the page shows a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): orders-patterns.webp | /reports/orders with Pro active, scrolled to the bottom: Orders by day and hour heat map and the Spend by day / Spend by hour charts | no arrow -->
+![Screenshot of the Orders by day and hour heat map and the Spend by day and Spend by hour charts](/images/reporting-analytics/orders/orders-patterns.webp)
 
 The Orders Report now shows you how many orders you take, who places them, and where payments fail.

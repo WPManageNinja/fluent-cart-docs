@@ -22,7 +22,7 @@ The first group of cards is a snapshot of today. The date range does not apply t
 * **Canceled, Ends Soon:** MRR of canceled subscriptions still in their paid term. It stays in MRR until the term ends.
 * **Paused MRR:** MRR of paused subscriptions. It is not in MRR.
 
-<!-- TODO(screenshot): subscriptions-right-now.webp | /reports/subscriptions: "Right now" heading with "Not affected by the date range" and the nine health cards | no arrow -->
+![Screenshot of the Right now subscription health cards](/images/reporting-analytics/subscription/subscriptions-right-now.webp)
 
 ## In This Period
 
@@ -35,7 +35,7 @@ The second group of cards covers the date range and compares it with the compari
 * **Renewals:** Paid subscription renewals in the range. The amount under it is the renewals' [net sales](/guide/reporting-analytics/how-reports-count#net-sales). Installment payments are not counted.
 * **Failed Renewals:** Renewal payments that failed in the range, with their amount.
 
-<!-- TODO(screenshot): subscriptions-period.webp | /reports/subscriptions: "In this period" cards and the Subscription movement chart below them | arrow on the Subscriptions / MRR switch -->
+![Screenshot of the In this period cards and the Subscription movement chart](/images/reporting-analytics/subscription/subscriptions-period.webp)
 
 ## Subscription Movement
 
@@ -53,6 +53,6 @@ FluentCart Pro adds a card that splits today's MRR so you can see what carries i
 Without Pro, this card shows a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): subscriptions-mrr-breakdown.webp | /reports/subscriptions with Pro active: Where MRR comes from card with MRR by plan, MRR by billing interval and Free trial conversion | no arrow -->
+![Screenshot of the Where MRR comes from card](/images/reporting-analytics/subscription/subscriptions-mrr-breakdown.webp)
 
 The Subscriptions report now shows you how healthy your recurring revenue is today and how it changed.

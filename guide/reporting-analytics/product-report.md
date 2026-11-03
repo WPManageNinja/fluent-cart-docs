@@ -19,7 +19,7 @@ Six cards sum up product sales in the range. Hover over the info icon beside a c
 * **Refund rate:** Refunds as a share of what customers paid, for orders placed in the range. Its change is shown in percentage points.
 * **Average order value:** Net sales divided by orders.
 
-<!-- TODO(screenshot): products-cards.webp | /reports/products, Last 30 days: the six product cards and the Sales Over Time chart | no arrow -->
+![Screenshot of the Products report cards and the Sales Over Time chart](/images/reporting-analytics/product/products-cards.webp)
 
 ## Sales Over Time
 
@@ -37,7 +37,7 @@ The **Products** table lists every product sold in the range.
 
 Click the arrow at the start of a row to see the same figures for each variant. Use **Search products** to find a product, and click a column heading to sort by it.
 
-<!-- TODO(screenshot): products-table.webp | /reports/products: Products table with one product expanded into its variants | arrow on the expand arrow of the first row -->
+![Screenshot of the Products table with one product expanded into its variants](/images/reporting-analytics/product/products-table.webp)
 
 ## Product Details (Pro)
 
@@ -52,6 +52,6 @@ Click a product name to open a drawer with its details:
 Without Pro, the drawer shows a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): products-detail-drawer.webp | /reports/products with Pro active: product details drawer open for a subscription product showing Subscriptions, Variant mix and Bought together | no arrow -->
+![Screenshot of the product details drawer for a subscription product](/images/reporting-analytics/product/products-detail-drawer.webp)
 
 To put products side by side, open the [Compare Products](/guide/reporting-analytics/product-compare-report) report.

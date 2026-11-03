@@ -20,7 +20,7 @@ Three cards sum up the range:
 
 The built-in channels are **Email**, **Paid ads**, **Social**, **AI assistants**, **Search**, **Other websites**, **Other campaigns**, and **Direct or unknown**. The **New Customers by Channel** chart stacks them for each period. Only the channels your store has appear.
 
-<!-- TODO(screenshot): sources-channels.webp | /reports/sources, Last 30 days: the three channel cards and the New Customers by Channel stacked chart | arrow on the Channel rules button -->
+![Screenshot of the channel cards and the New Customers by Channel chart](/images/reporting-analytics/orders-source/sources-channels.webp)
 
 ### Channels Table
 
@@ -38,7 +38,7 @@ Under **Your own domains**, list your other sites, one per line. Visits from the
 Without Pro, the **Channel Rules** dialog shows a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): sources-channel-rules.webp | /reports/sources with Pro active: Channel Rules dialog with one sample channel (e.g. "Partner newsletter", UTM source is partner) and Your own domains box | arrow on Save rules -->
+![Screenshot of the Channel Rules dialog with a sample channel](/images/reporting-analytics/orders-source/sources-channel-rules.webp)
 
 ## Order Sources Table
 
@@ -70,7 +70,7 @@ The **Total** row at the bottom covers every row that matches your filters. Clic
 * **Include (none):** Adds a **(none)** row for orders without this source data, so the table adds up to the Revenue report for the same filters.
 * **Search:** Filters the rows by name. Click a value in the table to search for it.
 
-<!-- TODO(screenshot): sources-table.webp | /reports/sources: Order Sources table grouped by Campaign / Source / Medium with the Total row, Net switch on | arrow on the Group by dropdown -->
+![Screenshot of the Order Sources table grouped by Campaign / Source / Medium](/images/reporting-analytics/orders-source/sources-table.webp)
 
 ### Advanced Filter (Pro)
 
@@ -80,7 +80,7 @@ Turn on the **Advanced Filter** switch above the table, click **+ Add**, and pic
 The Order Sources report itself is available to every FluentCart store. Without Pro, the **Filters** menu in the title bar is the way to narrow it by product.
 :::
 
-<!-- TODO(screenshot): sources-advanced-filter.webp | /reports/sources with Pro active: Advanced Filter panel open with the property groups and one OR condition | arrow on + Add -->
+![Screenshot of the Advanced Filter panel with two conditions joined by OR](/images/reporting-analytics/orders-source/sources-advanced-filter.webp)
 
 ## How FluentCart Attributes an Order
 

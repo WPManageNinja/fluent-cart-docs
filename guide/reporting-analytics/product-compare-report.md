@@ -22,7 +22,7 @@ The page opens with two empty pickers joined by **vs**.
 
 The report loads once two or more pickers are filled. Each item gets a color that it keeps in the table and the chart. The page address keeps your picks, so you can bookmark a comparison or share it with your team.
 
-<!-- TODO(screenshot): compare-pickers.webp | /reports/products/compare with Pro active: three pickers filled with sample products, joined by "vs", and the + Add button | arrow on + Add -->
+![Screenshot of three product pickers and the + Add button](/images/reporting-analytics/product/compare-pickers.webp)
 
 ## Head to Head
 
@@ -34,7 +34,7 @@ The **Head to head** table puts each item in its own column. The leader on each 
 
 The **Export** button downloads the comparison as a CSV file.
 
-<!-- TODO(screenshot): compare-head-to-head.webp | /reports/products/compare with three sample products: Head to head table with Leader marks and change figures | no arrow -->
+![Screenshot of the Head to head table with Leader marks](/images/reporting-analytics/product/compare-head-to-head.webp)
 
 ## Trend
 
@@ -47,6 +47,6 @@ The **Trend** chart draws one line per item. Switch the metric between **Net sal
 
 The **Customer overlap** table shows, for each item's customers in the range, how many have ever bought each of the other items, and how many bought that other item first. Use it to see which products customers combine and which one usually comes first.
 
-<!-- TODO(screenshot): compare-trend-overlap.webp | /reports/products/compare: Trend chart with Align by launch ticked, and the Customer overlap table below | arrow on the Align by launch checkbox -->
+![Screenshot of the Trend chart aligned by launch and the Customer overlap table](/images/reporting-analytics/product/compare-trend-overlap.webp)
 
 Your product comparison now shows you which products pull their weight and which deserve more attention.

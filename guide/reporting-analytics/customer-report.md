@@ -21,7 +21,7 @@ Six cards sum up the range. Hover over the info icon beside a card to read its d
 
 The first three cards compare with the comparison period.
 
-<!-- TODO(screenshot): customers-cards.webp | /reports/customer, Last 30 days: the six customer cards and the Customers Over Time chart | arrow on the Customers / Revenue switch -->
+![Screenshot of the Customers report cards and the Customers Over Time chart](/images/reporting-analytics/customer/customers-cards.webp)
 
 ## Customers Over Time
 
@@ -48,7 +48,7 @@ FluentCart Pro adds sections on what customers are worth:
 Without Pro, each section shows a locked preview with sample data.
 :::
 
-<!-- TODO(screenshot): customers-segments.webp | /reports/customer with Pro active: Customer Segments section showing the segment tiles with customer shares | arrow on a segment's Export button -->
+![Screenshot of the Customer Segments tiles with their Export buttons](/images/reporting-analytics/customer/customers-segments.webp)
 
 ## Top Customers
 
@@ -60,6 +60,6 @@ The **Top Customers** table lists the customers who paid in the range, ranked by
 * **Lifetime Value:** What the customer has spent over all time.
 * **First Order** and **Last Order:** The dates of their first and latest orders.
 
-<!-- TODO(screenshot): customers-top-customers.webp | /reports/customer: Top Customers table with sample (non-real) customers | no arrow -->
+![Screenshot of the Top Customers table](/images/reporting-analytics/customer/customers-top-customers.webp)
 
 The Customers report now shows you how your customer base grows and who your most valuable customers are.
