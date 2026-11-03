@@ -1,0 +1,88 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/subscription/installments",
+  "viewport": {
+    "width": 1600,
+    "height": 2000
+  },
+  "steps": [
+    {
+      "admin": "/reports/subscriptions/installments"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "installments-cards",
+        "clip": {
+          "x": 420,
+          "y": 96,
+          "width": 1180,
+          "height": 438
+        },
+        "arrows": [
+          {
+            "target": "#fct-report-header-actions .el-date-editor",
+            "from": "bottom",
+            "len": 120
+          }
+        ]
+      }
+    },
+    {
+      "shot": {
+        "name": "installments-schedule",
+        "clip": {
+          "x": 430,
+          "y": 524,
+          "width": 1160,
+          "height": 968
+        },
+        "arrows": [
+          {
+            "target": ".fct-installments-report-page .el-slider",
+            "from": "bottom",
+            "len": 120
+          }
+        ]
+      }
+    },
+    {
+      "click": ".fct-fluid-tab-item:has-text(\"Overdue (\")"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1000
+    },
+    {
+      "shot": {
+        "name": "installments-overdue",
+        "clip": {
+          "element": {
+            "selector": ".fct-card",
+            "hasText": "Overdue ("
+          },
+          "pad": 20
+        },
+        "arrows": [
+          {
+            "target": ".el-button:has-text(\"Copy link\")",
+            "from": "left",
+            "len": 150
+          }
+        ]
+      }
+    }
+  ]
+}

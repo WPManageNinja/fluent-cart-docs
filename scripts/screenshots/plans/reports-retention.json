@@ -1,0 +1,76 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/subscription/retention",
+  "viewport": {
+    "width": 1600,
+    "height": 2600
+  },
+  "steps": [
+    {
+      "admin": "/reports/subscriptions/subscriptions-retention"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "click": ".fct-report-filter-bar-button"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "click": {
+        "text": "Last 12 months"
+      }
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "retention-pro-sections",
+        "clip": {
+          "element": ".fct-retention-report-page > .flex-col",
+          "pad": 20
+        },
+        "arrows": [
+          {
+            "target": ".el-radio-button:has-text(\"Why they left\")",
+            "from": "bottom",
+            "len": 120
+          }
+        ]
+      }
+    },
+    {
+      "css": ".fct-retention-report-page > .flex-col { display: none !important; } .fct-retention-report-page { padding-top: 50px; }"
+    },
+    {
+      "shot": {
+        "name": "retention-summary",
+        "clip": {
+          "element": ".fct-retention-report-page",
+          "pad": 20
+        },
+        "arrows": [
+          {
+            "target": ".page-heading-wrap .el-radio-group",
+            "from": "top",
+            "len": 100
+          }
+        ]
+      }
+    }
+  ]
+}

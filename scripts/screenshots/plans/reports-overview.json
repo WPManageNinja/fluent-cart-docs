@@ -1,0 +1,82 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/dashboard-overview",
+  "viewport": {
+    "width": 1600,
+    "height": 2200
+  },
+  "steps": [
+    {
+      "admin": "/reports/overview"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "overview-cards",
+        "clip": {
+          "element": ".report-overview-page",
+          "pad": 20
+        },
+        "crop": {
+          "height": 524
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "overview-needs-attention",
+        "clip": {
+          "element": {
+            "selector": ".fct-card",
+            "hasText": "Needs Attention"
+          },
+          "pad": 20
+        },
+        "arrows": [
+          {
+            "target": {
+              "selector": ".fct-card a",
+              "hasText": "View report"
+            },
+            "from": "left",
+            "len": 140
+          }
+        ]
+      }
+    },
+    {
+      "shot": {
+        "name": "overview-top-lists",
+        "clip": {
+          "element": {
+            "selector": ".report-overview-page > div",
+            "hasText": "Top Products"
+          },
+          "pad": 20
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "overview-last-12-months",
+        "clip": {
+          "element": {
+            "selector": ".fct-card",
+            "hasText": "Last 12 Months"
+          },
+          "pad": 20
+        }
+      }
+    }
+  ]
+}

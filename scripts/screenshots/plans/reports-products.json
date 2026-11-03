@@ -1,0 +1,87 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/product",
+  "viewport": {
+    "width": 1600,
+    "height": 2000
+  },
+  "steps": [
+    {
+      "admin": "/reports/products"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "products-cards",
+        "clip": {
+          "x": 430,
+          "y": 215,
+          "width": 1160,
+          "height": 625
+        }
+      }
+    },
+    {
+      "click": ".fct-product-report-page .fct-card.overflow-hidden .el-table__expand-icon"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "products-table",
+        "clip": {
+          "element": ".fct-product-report-page .fct-card.overflow-hidden",
+          "pad": 20
+        },
+        "arrows": [
+          {
+            "target": ".fct-product-report-page .el-table__expand-icon",
+            "from": "top",
+            "len": 100
+          }
+        ]
+      }
+    },
+    {
+      "click": ".fct-link-button:has-text(\"Creator Circle Membership\")"
+    },
+    {
+      "wait": 1000
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "css": ".fct_admin_menu_wrap { visibility: hidden !important; }"
+    },
+    {
+      "eval": "document.activeElement && document.activeElement.blur()"
+    },
+    {
+      "shot": {
+        "name": "products-detail-drawer",
+        "clip": {
+          "element": ".fct-product-detail-drawer",
+          "pad": 0
+        },
+        "crop": {
+          "height": 2000
+        }
+      }
+    }
+  ]
+}

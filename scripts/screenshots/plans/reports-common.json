@@ -1,0 +1,120 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/common",
+  "viewport": {
+    "width": 1600,
+    "height": 1100
+  },
+  "steps": [
+    {
+      "admin": "/reports/overview"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "reports-sidebar",
+        "clip": "app",
+        "crop": {
+          "height": 1720
+        },
+        "arrows": [
+          {
+            "target": ".fct-settings-nav-collapse-button-wrapper .el-button",
+            "from": "right",
+            "len": 120
+          }
+        ]
+      }
+    },
+    {
+      "admin": "/reports/orders"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "report-filter-bar",
+        "clip": {
+          "element": ".fct-report-filter-bar",
+          "pad": 14
+        }
+      }
+    },
+    {
+      "admin": "/reports/revenue"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "click": ".fct-report-filter-bar-button"
+    },
+    {
+      "wait": 800
+    },
+    {
+      "shot": {
+        "name": "report-date-presets",
+        "clip": {
+          "x": 960,
+          "y": 96,
+          "width": 640,
+          "height": 490
+        },
+        "arrows": [
+          {
+            "target": ".fct-report-filter-menu button:has-text(\"Custom\")",
+            "from": "right",
+            "len": 140
+          }
+        ]
+      }
+    },
+    {
+      "click": ".fct-report-filter-bar-button"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "click": ".fct-report-filter-bar-button >> nth=1"
+    },
+    {
+      "wait": 800
+    },
+    {
+      "shot": {
+        "name": "report-compare-options",
+        "clip": {
+          "x": 960,
+          "y": 96,
+          "width": 640,
+          "height": 380
+        }
+      }
+    }
+  ]
+}
