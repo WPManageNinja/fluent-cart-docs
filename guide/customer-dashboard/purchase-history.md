@@ -11,6 +11,10 @@ When you go to the Purchase History page, you'll see a list of all your orders. 
 * **Status**: A simple badge shows the current status, like **Completed**, **On-Hold**, or **Canceled**.
 * **Amount**: This is the total price you paid for the order.
 
+Once the store ships a physical order, a delivery badge and a short line appear under its items. For a single shipment, the badge shows its status, such as **Shipped**, **On the way**, **Out for delivery**, or **Delivered**, and the line shows the carrier and the expected delivery date when the carrier provides one. An order sent in several parts shows **Partly shipped** (or **Shipped in parts** once every item has gone out), with a count of units per status, for example "4 on the way · 1 shipped · 1 not shipped yet".
+
+<!-- TODO(screenshot): Purchase History list on the customer portal with a delivery badge and line under a shipped order. Needs an order with a shipment on cart.local; take it from the customer account of that order. -->
+
 ## Searching Your Orders
 
 Have a lot of past orders? No problem. Use the **Search bar** (look for the magnifying glass icon) at the top-right of your order list to quickly find the purchase you're looking for.
@@ -32,6 +36,23 @@ Here’s what you might see on the details page:
 
 
 ![Screenshot of Purchase History](/images/customer-dashboard/purchase-history/purchase-history-2.webp)
+
+## Tracking Your Delivery
+
+When part or all of an order has shipped, the order details page shows a **Delivery** card above the **Summary**. Each shipment is listed as **Shipment 1**, **Shipment 2**, and so on, with its status, the time of its last update, the expected delivery date (when the carrier provides one), and a **Track** button when the carrier has a tracking page. Items that have not shipped yet are listed under **Not shipped yet**, with a note that you'll get an email when they ship.
+
+The shipment with the newest update opens on its own, along with any shipment that has a delivery problem. Click another shipment to see its details:
+
+* **Delivery progress:** Three steps, **Shipped**, **On the way**, and **Delivered**, with the current step highlighted. When the carrier reports the parcel is out for delivery, the status reads **Out for delivery** and **Expected today**.
+* **Latest carrier update:** The carrier's most recent tracking message and when it arrived.
+* **Carrier and Tracking Number:** The carrier and service, and the tracking number. Click **Copy tracking number** to copy it, or **Track on** the carrier's site to follow the parcel. If the store didn't add a tracking number, you see **No tracking number available**.
+* **Parcels in this shipment:** For a shipment sent in more than one parcel, each parcel with its own tracking link.
+* **In this shipment:** The items and quantities in that shipment.
+* **Note from the store:** Any note the store added for you when it shipped the order.
+
+If the carrier could not deliver a parcel or it went back to the store, the shipment opens with a red notice, such as **The carrier could not deliver this parcel**, and asks you to check the carrier page or contact the store.
+
+<!-- TODO(screenshot): Delivery card on a customer-portal order page with one shipment expanded (progress steps, carrier, tracking number, items). Needs an order with a shipment on cart.local; a Shippo test label gives the "Expected" date. -->
 
 ## Upgrading a One time Purchases
 
