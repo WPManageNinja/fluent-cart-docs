@@ -50,6 +50,15 @@ You will now see four built-in templates ready for your personal touch:
 * **Refund Notice:** Sent as proof of a refund if an order is returned or canceled.
 * **Invoice:** A standardized, formal invoice document for business transactions.
 
+All four default templates show the same two numbers at the top:
+
+* **Order Number:** The order's unique 12-character code (for example `A7K2P9X4M1Q8`), the same number customers see in their account.
+* **Receipt Number** (or **Invoice Number** on the Invoice): Your receipt prefix plus a running number, for example `INV-1001`. It is assigned when the order is paid, so this row stays blank on a document generated before payment.
+
+When a customer downloads a receipt, the PDF file is named after the receipt number, such as `receipt-INV-1001.pdf`. For an order that is not paid yet, it uses the order number instead.
+
+<!-- TODO(screenshot): The default Order Receipt PDF header showing the Order Number and Receipt Number rows. -->
+
 Hover your mouse over the template you want to customize (for example, "Order Receipt") and click the blue **Edit Template** button that appears.
 
 ![PDF Invoice](/images/store-management/pdf-invoice/pdf-5.webp)
@@ -74,8 +83,12 @@ Here are a few examples of how they work in action:
 * **The Logo Tag:** * **What you type:** <code v-pre>{{settings.store_logo}}</code>
     * **What the customer sees:** Your actual uploaded store image logo.
 * **The Order Number Tag:**
-    * **What you type:** Invoice Number: <code v-pre>{{order.invoice_no}}</code>
-    * **What the customer sees:** Invoice Number: #INV-0042
+    * **What you type:** Order Number: <code v-pre>{{order.uuid}}</code>
+    * **What the customer sees:** Order Number: A7K2P9X4M1Q8
+* **The Receipt Number Tag:**
+    * **What you type:** Receipt Number: <code v-pre>{{order.invoice_no|}}</code>
+    * **What the customer sees:** Receipt Number: INV-0042
+    * The bare pipe at the end keeps the value blank until the order is paid. Without it, <code v-pre>{{order.invoice_no}}</code> shows the order number for an unpaid order.
 * **The Total Amount Tag:**
     * **What you type:** You paid a total of <code v-pre>{{order.total_amount_formatted}}</code> today.
     * **What the customer sees:** You paid a total of $45.00 today.
