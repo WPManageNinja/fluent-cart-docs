@@ -47,8 +47,7 @@ The main feature of this report is an interactive chart that visualizes your pro
 
 When nothing is scheduled, the chart reads **No renewal is scheduled in this horizon**.
 
-<!-- TODO(screenshot): Future Renewals page with the Horizon dropdown, the five summary cards, the Renewal rate assumptions sliders, and the Renewals by month chart. The current image shows the old Renewal Revenue chart. -->
-![Future Renewals](/images/reporting-analytics/subscription/future-renewals/future-renewals-1.webp)
+![Screenshot of the Future Renewals page with the summary cards, renewal rate sliders and Renewals by month chart](/images/reporting-analytics/subscription/future-renewals/future-renewals-1.webp)
 
 ## Renewals by Variant
 
