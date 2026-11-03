@@ -1,6 +1,6 @@
 # Subscription Report
 
-The **Subscription Report** provides a clear overview of your subscription growth, helping you track new signups and compare trends over time. This dashboard is designed to give you a simple, at-a-glance look at how your subscription offerings are performing.
+The **Subscription Report** provides a clear overview of your recurring business: how much monthly recurring revenue (MRR) you have right now, and how many subscriptions you won and lost in the period you pick. This dashboard is designed to give you a simple, at-a-glance look at how your subscription offerings are performing.
 
 #### Accessing the Subscription Report
 
@@ -10,46 +10,56 @@ Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/repor
 
 The top of the dashboard gives you key controls to choose what data appears in the report.
 
-* **Date Filter:** This field allows you to define the date range for your report, enabling you to focus on specific periods.
-* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data. The dates of the selected period appear in grey text beside the dropdown, and each option in the list shows its own dates.
-* **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
-* **Advanced Filters:** Click the filter icon to narrow the report by **Subscription Type** (**New**, **Renewal**, **Expired**, or **Canceled**) or by specific **Products**. See [Using Advanced Filters](/guide/reporting-analytics/reports-dashboard-overview#using-advanced-filters).
-* **Reset Filters:** Click this button to instantly clear all applied date and comparison selections and revert the report to its default view.
+* **Date Filter:** Pick a preset such as **Last 30 days** or **This month**, or choose **Custom…** to set your own dates. It applies to the **In this period** section only.
+* **Compare To:** This dropdown allows you to choose a past time period to compare with your current data. Each option in the list shows its own dates.
+* **Products:** Open the **All products** dropdown to limit the report to specific subscription products. It lists subscription products only and replaces the **Filters** menu of the other reports.
 
-### Installments Still Due
+Installment plans are not part of this report. Track them on the [Installments](/guide/reporting-analytics/installments-report) report.
 
-The card at the top of the page, **Installments Still Due**, shows the remaining balance on installment plans that started in the selected period. Hover over the info icon beside it to read the definition. It helps you see how much of your payment-plan income is still to come.
+### Right Now
 
+The **Right now** cards describe your subscriptions as they stand today. They are not affected by the date range. Hover over the info icon beside a card to read its definition.
+
+* **MRR:** Monthly recurring revenue now: active subscriptions at their renewal price, plus discounted first years at the price paid now, plus canceled subscriptions until their paid term ends. Installment plans, trials, failing, and paused subscriptions are not included.
+* **Paying Subscriptions:** Active subscriptions, discounted first years, and canceled subscriptions still in their paid term.
+* **ARPU:** Average revenue per paying subscription: MRR divided by the subscriptions that pay more than 0.
+* **Discounted First Years:** The MRR from subscriptions in a discounted first cycle, at the price paid now.
+* **Uplift When Discounts Renew:** What MRR gains when those discounted first cycles renew at their full price.
+* **Free Trials:** The number of subscriptions in a free trial. They are not in MRR, and the tooltip shows their MRR after the trial.
+* **MRR at Risk:** The MRR of subscriptions whose renewal payment failed. It is not in MRR.
+* **Canceled, Ends Soon:** The MRR of canceled subscriptions still in their paid term. It stays in MRR until the term ends, then leaves unless the customer comes back.
+* **Paused MRR:** The MRR of paused subscriptions. It is not in MRR.
+
+<!-- TODO(screenshot): Subscriptions report showing the "Right now" health cards and the "In this period" cards. The current image shows the old Installments Still Due card. -->
   ![Screenshot of the Subscription Report page](/images/reporting-analytics/subscription/subscription-report.webp)
 
-### Subscription Chart
+### In This Period
 
-The main feature of this report is the **Subscription Chart**. It shows your growth trends by visually comparing new subscriptions across two different time periods.
+The **In this period** cards follow your date range and compare against the period you chose.
 
-* **Current Range:** Drawn as a solid blue line, this shows new subscriptions for the period you selected.
-* **Compare Range:** Drawn as a dotted line in the same color, this shows new subscriptions for the historical period you are comparing against.
+* **New Subscriptions:** Recurring subscriptions started in the period. A free trial counts when it first pays.
+* **Churned:** Recurring subscriptions that ended in the period: canceled, expired, failing, past due, or paused. The line under the value shows the churn rate against the subscriptions active at the start.
+* **Net Change:** New subscriptions less churned ones.
+* **Net MRR Change:** The MRR of new subscriptions less the MRR of churned ones, plus plan upgrades less downgrades. A plan upgrade is neither churn nor a new subscription. The line under the value splits it into its parts.
+* **Renewals:** Paid subscription renewals in the period. Installment payments are not counted.
+* **Failed Renewals:** Subscription renewal payments that failed in the period.
 
-You can also use the interactive controls in the top-right corner of the chart to change the view, zoom, or download the chart as an image.
+### Subscription Movement
 
+The **Subscription movement** chart shows new and churned subscriptions for each period, with a **Net** line for the change.
+
+* **Subscriptions / MRR:** Use the buttons in the chart header to count subscriptions or show the MRR they carry. In **MRR** view, plan **Upgrades** and **Downgrades** are drawn too, whenever the period has any.
+* **Grouping:** Use the dropdown beside the buttons to change how the timeline is bucketed.
+
+When nothing moved in the date range, the chart reads **No new or churned subscriptions in this period**.
+
+<!-- TODO(screenshot): Subscription movement chart with New, Churned and Net series and the Subscriptions / MRR toggle. The current image shows the removed Subscription Chart. -->
   ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-chart.webp)
 
-### Subscription Comparison 
+### Where MRR Comes From
 
-The **Comparison** table provides the exact numbers from the visualization. This section is essential for seeing the precise data behind your growth trends.
+With **FluentCart Pro**, the **Where MRR comes from** card splits your current MRR **by plan** and **by billing interval**, and shows the **Free trial conversion** of trials started in the period: **Converted to paid**, **Ended without paying**, and **Still in trial**. Without Pro, a sample preview takes its place.
 
-* **Date:** This column shows the specific months being compared (e.g., "May 2025 vs April 2025").
-* **Current Range:** This shows the total number of new subscriptions from the current month.
-* **Compare Range:** This shows the total number of new subscriptions from the comparison month.
-* **Change (%):** This column displays the percentage of change between the two months, color-coded for a quick view of your growth.
+If the report cannot load, an error message with a **Retry** button takes the place of the figures.
 
-### Detailed Subscription Analysis
-
-Below the main comparison, you’ll find detailed charts that show customer loyalty and new customer trends. This section helps you clearly see how healthy your subscription business is.
-
-* **Retention Chart:** This chart shows you how long your customers stay subscribed after their initial purchase. The horizontal axis is divided into time periods like 7 Days, 30 Days, 180 Days, and More than Year, making it easy to see at which point customers are most likely to drop off. Type your own number of days into the **Enter custom days** box above the chart to add a bucket of your choice. This is a key tool for measuring customer loyalty. Only subscriptions that actually started are counted, so abandoned checkouts do not inflate the numbers.
-
-* **Daily Signups:** This chart tracks the number of new subscriptions you get each day. It helps you visualize your daily growth and identify trends in customer acquisition, which can be useful for seeing the impact of marketing campaigns.
-
-With the Subscription Report, you can easily see patterns in your subscription signups, giving you the insights you need to measure your growth.
-
-  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-comparion-table.webp)
+With the Subscription Report, you can easily see where your recurring revenue stands today and how it moved over time, giving you the insights you need to measure your growth.
