@@ -16,7 +16,6 @@ The top of the dashboard gives you key controls to choose what data appears in t
 * **Filters:** Click **Filters** to break down the report by options like **Order Type** or specific **Products**. Applied filters appear as chips below the filter bar, and **Clear all** removes them.
 * **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
 
-<!-- TODO(screenshot): Revenue report with the one-row filter bar (date button, compare dropdown, Filters button) and the new summary cards (Gross Sales, Discounts, Refunds, Net Sales, and so on). The current image shows the old filter bar. -->
 	![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/advanced-filter.webp)
 
 ### Key Revenue Metrics
@@ -48,7 +47,6 @@ Below the key metrics, you’ll find detailed breakdowns of your store’s incom
 
 Click a column heading to sort the table. Numeric columns sort by their value. Click the download icon above the table to export it as a CSV file.
 
-<!-- TODO(screenshot): Revenue Chart with the Net Sales line and the Revenue Breakdown table with the Discounts, Net Sales and Compare Net Sales columns. The current image shows the old Revenue columns. -->
    ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/revenue-analysis.webp)
 
 #### Net Sales by Order Type
@@ -62,7 +60,6 @@ The **Net sales by order type** table shows where your net sales come from: one-
 * **Net Sales per Order:** Net sales divided by orders.
 * **Change (%):** The change against the comparison period. This column is hidden when you choose **No comparison**.
 
-<!-- TODO(screenshot): Net sales by order type table. It replaces the Grouped By table shown in the current net-revenue image. -->
     ![Screenshot of Revenue Report Page](/images/reporting-analytics/revenue/net-revenue.webp)
 
 To see revenue by country or by payment method, open the [Locations](/guide/reporting-analytics/locations-report) or [Payment Methods](/guide/reporting-analytics/payment-methods-report) report.
