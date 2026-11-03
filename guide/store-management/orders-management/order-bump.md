@@ -85,8 +85,14 @@ On the main **Order Bumps** screen, you can manage all your existing offers:
 
 ![Order Bump](/images/store-management/order-bump/order-bump-4.webp)
 
-* **Checkout View:** Once active, the offers appear on your store's checkout page, clearly labeled (e.g., **Recommended**) with the title, description, and discount, ready for the customer to accept with a single click.
+* **Checkout View:** Once active, the offers appear on your store's checkout page under a section heading (**Recommended** by default). Each offer shows as its own card with:
+    * The product image (the variation's image, then the product's featured image, then your store's placeholder).
+    * Your **Bump Name** as a badge, followed by the product name and, when it differs, the variation name.
+    * The price. When the offer has a discount, the original price is struck through beside the discounted price, with the amount saved (for example **(Save 5.00)**).
+    * Your description, when you added one.
+    * A **Yes, add this to my order** checkbox. Ticking it adds the item to the cart, and unticking it removes the item again.
 
+<!-- TODO(screenshot): Checkout page showing the new order bump card (image, title badge, product/variation name, struck-through price with Save amount, "Yes, add this to my order" checkbox). The current order-bump-5.webp shows the old layout. -->
 ![Order Bump](/images/store-management/order-bump/order-bump-5.webp)
 
 ::: info
