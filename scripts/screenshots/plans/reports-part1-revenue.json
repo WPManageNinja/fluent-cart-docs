@@ -1,0 +1,84 @@
+{
+ "outDir": "guide/public/images/reporting-analytics/revenue",
+ "viewport": {
+  "width": 1600,
+  "height": 1700
+ },
+ "steps": [
+  {
+   "admin": "/reports/overview"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "click": ".fct-report-filter-bar-button >> nth=0"
+  },
+  {
+   "click": ".fct-report-filter-menu button:has-text(\"Custom\")"
+  },
+  {
+   "fill": {
+    "selector": ".fct-report-filter-custom input >> nth=0",
+    "value": "2026-08-01"
+   }
+  },
+  {
+   "click": ".fct-report-filter-custom input >> nth=1"
+  },
+  {
+   "fill": {
+    "selector": ".fct-report-filter-custom input >> nth=1",
+    "value": "2026-10-31"
+   }
+  },
+  {
+   "press": "Enter"
+  },
+  {
+   "click": ".fct-report-filter-custom button:has-text(\"Apply\")"
+  },
+  {
+   "wait": 2000
+  },
+  {
+   "admin": "/reports/revenue"
+  },
+  {
+   "wait": 7000
+  },
+  {
+   "shot": {
+    "name": "advanced-filter",
+    "clip": "app",
+    "crop": {
+     "left": 540,
+     "top": 110,
+     "width": 2340,
+     "height": 434
+    }
+   }
+  },
+  {
+   "shot": {
+    "name": "revenue-analysis",
+    "clip": "app",
+    "crop": {
+     "left": 540,
+     "top": 540,
+     "width": 2340,
+     "height": 1530
+    }
+   }
+  },
+  {
+   "shot": {
+    "name": "net-revenue",
+    "clip": {
+     "element": ".fct-card:has(.fct-card-header-title:has-text(\"Net sales by order type\"))",
+     "pad": 24
+    }
+   }
+  }
+ ]
+}

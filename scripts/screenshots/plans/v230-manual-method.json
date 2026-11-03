@@ -1,0 +1,72 @@
+{
+ "outDir": "guide/public/images/store-management/orders-management",
+ "viewport": {
+  "width": 1600,
+  "height": 1000
+ },
+ "steps": [
+  {
+   "admin": "/orders/5/view"
+  },
+  {
+   "wait": 2500
+  },
+  {
+   "click": "button:has-text(\"Create shipment\")"
+  },
+  {
+   "wait": 1800
+  },
+  {
+   "click": {
+    "role": "button",
+    "name": "^Continue$"
+   }
+  },
+  {
+   "wait": 3500
+  },
+  {
+   "click": ".fct-shipment-rate:has-text(\"Custom price\")"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "fill": {
+    "selector": "input[placeholder=\"Optional carrier name\"]",
+    "value": "Local Courier"
+   }
+  },
+  {
+   "fill": {
+    "selector": "input[placeholder=\"0.00\"]",
+    "value": "5"
+   }
+  },
+  {
+   "fill": {
+    "selector": "input[placeholder=\"Enter tracking number\"]",
+    "value": "LC-100245"
+   }
+  },
+  {
+   "wait": 400
+  },
+  {
+   "viewport": {
+    "width": 1600,
+    "height": 640
+   }
+  },
+  {
+   "shot": {
+    "name": "shipment-manual-method",
+    "clip": {
+     "element": ".fct-shipment-drawer",
+     "pad": 0
+    }
+   }
+  }
+ ]
+}

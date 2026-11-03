@@ -1,0 +1,42 @@
+{
+  "outDir": "guide/public/images/reporting-analytics/subscription/cohorts",
+  "viewport": {
+    "width": 1600,
+    "height": 1800
+  },
+  "steps": [
+    {
+      "admin": "/reports/subscriptions/subscriptions-cohorts"
+    },
+    {
+      "wait": 3500
+    },
+    {
+      "click": {
+        "selector": ".fct-cohort-settings .el-radio-button",
+        "hasText": "Monthly"
+      }
+    },
+    {
+      "wait": 2500
+    },
+    {
+      "shot": {
+        "name": "accessing-the-cohorts-report-1",
+        "clip": "app",
+        "crop": {
+          "height": 1000
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "cohorts-2",
+        "clip": {
+          "element": ".fct-cohort-report-page .fct-card",
+          "pad": 24
+        }
+      }
+    }
+  ]
+}

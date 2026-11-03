@@ -1,0 +1,9 @@
+{
+  "outDir": "guide/public/images/customer-dashboard/purchase-confirmation",
+  "viewport": { "width": 1600, "height": 1000 },
+  "steps": [
+    { "front": "/?fluent-cart=receipt&order_hash=S0DBNOMPOHF4" },
+    { "wait": 2500 },
+    { "shot": { "name": "receipt-order-and-invoice-number", "clip": { "x": 470, "y": 40, "width": 660, "height": 720 } } }
+  ]
+}

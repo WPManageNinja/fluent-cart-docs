@@ -1,0 +1,168 @@
+{
+ "outDir": "guide/public/images/store-management/orders-management",
+ "viewport": {
+  "width": 1600,
+  "height": 1000
+ },
+ "steps": [
+  {
+   "admin": "/orders/14/view"
+  },
+  {
+   "wait": 2500
+  },
+  {
+   "click": "button:has-text(\"Create shipment\")"
+  },
+  {
+   "wait": 1800
+  },
+  {
+   "click": ".fct-quantity-stepper button[aria-label=\"Decrease quantity\"]"
+  },
+  {
+   "click": {
+    "role": "button",
+    "name": "^Continue$"
+   }
+  },
+  {
+   "wait": 3000
+  },
+  {
+   "wait": 600
+  },
+  {
+   "fill": {
+    "selector": "input[placeholder=\"Optional carrier name\"]",
+    "value": "Local Courier"
+   }
+  },
+  {
+   "fill": {
+    "selector": "input[placeholder=\"0.00\"]",
+    "value": "5"
+   }
+  },
+  {
+   "fill": {
+    "selector": "input[placeholder=\"Enter tracking number\"]",
+    "value": "LC-100245"
+   }
+  },
+  {
+   "wait": 400
+  },
+  {
+   "click": {
+    "role": "button",
+    "name": "^Continue$"
+   }
+  },
+  {
+   "wait": 1200
+  },
+  {
+   "click": "button:has-text(\"Add a note for the customer\")"
+  },
+  {
+   "wait": 400
+  },
+  {
+   "fill": {
+    "selector": "textarea",
+    "value": "Part one of your order. The second parcel follows tomorrow."
+   }
+  },
+  {
+   "wait": 400
+  },
+  {
+   "viewport": {
+    "width": 1600,
+    "height": 720
+   }
+  },
+  {
+   "shot": {
+    "name": "shipment-manual-review",
+    "clip": {
+     "element": ".fct-shipment-drawer",
+     "pad": 0
+    }
+   }
+  },
+  {
+   "click": ".fct-shipment-drawer .el-checkbox:has-text(\"Notify Customer\")"
+  },
+  {
+   "click": ".fct-shipment-drawer .el-button--primary:has-text(\"Create Shipment\")"
+  },
+  {
+   "wait": 3000
+  },
+  {
+   "click": "button:has-text(\"Create shipment\")"
+  },
+  {
+   "wait": 1800
+  },
+  {
+   "click": {
+    "role": "button",
+    "name": "^Continue$"
+   }
+  },
+  {
+   "wait": 3000
+  },
+  {
+   "wait": 600
+  },
+  {
+   "fill": {
+    "selector": "input[placeholder=\"Optional carrier name\"]",
+    "value": "Local Courier"
+   }
+  },
+  {
+   "fill": {
+    "selector": "input[placeholder=\"0.00\"]",
+    "value": "0"
+   }
+  },
+  {
+   "click": {
+    "role": "button",
+    "name": "^Continue$"
+   }
+  },
+  {
+   "wait": 1200
+  },
+  {
+   "click": ".fct-shipment-drawer .el-checkbox:has-text(\"Notify Customer\")"
+  },
+  {
+   "click": ".fct-shipment-drawer .el-button--primary:has-text(\"Create Shipment\")"
+  },
+  {
+   "wait": 3500
+  },
+  {
+   "viewport": {
+    "width": 1600,
+    "height": 1100
+   }
+  },
+  {
+   "shot": {
+    "name": "shipments-card-split",
+    "clip": {
+     "element": ".fct-card:has(th:text-is(\"Shipment\"))",
+     "pad": 24
+    }
+   }
+  }
+ ]
+}

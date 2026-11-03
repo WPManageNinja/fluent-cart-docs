@@ -1,0 +1,59 @@
+{
+ "outDir": "scripts/screenshots/raw/dbg",
+ "viewport": {
+  "width": 1600,
+  "height": 1100
+ },
+ "steps": [
+  {
+   "admin": "/order_bump"
+  },
+  {
+   "wait": 3500
+  },
+  {
+   "click": {
+    "text": "Add the Priority Support Pack"
+   }
+  },
+  {
+   "wait": 4000
+  },
+  {
+   "click": "label:has-text(\"Enable this Order Bump\")"
+  },
+  {
+   "fill": {
+    "selector": "textarea[placeholder=\"Enter bump description\"]",
+    "value": "Keep your head covered on sunny days. Add this cap to your order at a special price."
+   }
+  },
+  {
+   "eval": "(()=>{const l=[...document.querySelectorAll('*')].find(e=>e.children.length<=1&&/^Discount Amount/.test(e.textContent.trim()));let el=l,ins=[];for(let i=0;i<6&&!ins.length;i++){ins=[...el.querySelectorAll('input')].filter(x=>x.type!=='checkbox');if(!ins.length)el=el.parentElement;}const inp=ins[ins.length-1];const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;set.call(inp,'25');inp.dispatchEvent(new Event('input',{bubbles:true}));inp.dispatchEvent(new Event('change',{bubbles:true}));})()"
+  },
+  {
+   "wait": 500
+  },
+  {
+   "shot": {
+    "name": "ob5",
+    "clip": "app"
+   }
+  },
+  {
+   "click": {
+    "role": "button",
+    "name": "Update"
+   }
+  },
+  {
+   "wait": 2500
+  },
+  {
+   "shot": {
+    "name": "ob6",
+    "clip": "app"
+   }
+  }
+ ]
+}

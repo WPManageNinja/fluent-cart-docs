@@ -1,0 +1,9 @@
+{
+  "outDir": "guide/public/images/shipping/shipping-carriers",
+  "viewport": { "width": 1600, "height": 2600 },
+  "steps": [
+    { "admin": "/settings/addons" },
+    { "wait": 3000 },
+    { "shot": { "name": "shipping-addon-install", "clip": { "element": { "selector": ".fct-content-card-list-item", "hasText": "Shipping For FluentCart" }, "pad": 4 } } }
+  ]
+}

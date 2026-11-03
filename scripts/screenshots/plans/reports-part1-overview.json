@@ -1,0 +1,120 @@
+{
+ "outDir": "guide/public/images/reporting-analytics/dashboard-overview",
+ "viewport": {
+  "width": 1600,
+  "height": 1700
+ },
+ "steps": [
+  {
+   "admin": "/reports/overview"
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "click": ".fct-report-filter-bar-button >> nth=0"
+  },
+  {
+   "click": ".fct-report-filter-menu button:has-text(\"Custom\")"
+  },
+  {
+   "fill": {
+    "selector": ".fct-report-filter-custom input >> nth=0",
+    "value": "2026-08-01"
+   }
+  },
+  {
+   "click": ".fct-report-filter-custom input >> nth=1"
+  },
+  {
+   "fill": {
+    "selector": ".fct-report-filter-custom input >> nth=1",
+    "value": "2026-10-31"
+   }
+  },
+  {
+   "press": "Enter"
+  },
+  {
+   "click": ".fct-report-filter-custom button:has-text(\"Apply\")"
+  },
+  {
+   "wait": 2000
+  },
+  {
+   "admin": "/reports/overview"
+  },
+  {
+   "wait": 7000
+  },
+  {
+   "shot": {
+    "name": "reporting-overview",
+    "clip": "app",
+    "crop": {
+     "height": 1130
+    }
+   }
+  },
+  {
+   "shot": {
+    "name": "overview-metrics",
+    "clip": "app",
+    "crop": {
+     "left": 540,
+     "top": 1120,
+     "width": 2340,
+     "height": 1760
+    }
+   }
+  },
+  {
+   "admin": "/reports/orders"
+  },
+  {
+   "wait": 7000
+  },
+  {
+   "click": ".fct-card:has(.fct-card-header-title:has-text(\"Order Chart\")) .el-select"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "shot": {
+    "name": "trend-chart-grouped",
+    "clip": "app",
+    "crop": {
+     "left": 540,
+     "top": 560,
+     "width": 2340,
+     "height": 1120
+    }
+   }
+  },
+  {
+   "press": "Escape"
+  },
+  {
+   "wait": 500
+  },
+  {
+   "click": ".fct-report-filter-bar-button >> nth=1"
+  },
+  {
+   "wait": 900
+  },
+  {
+   "shot": {
+    "name": "compare-to-options",
+    "clip": "app",
+    "crop": {
+     "left": 540,
+     "top": 0,
+     "width": 2340,
+     "height": 920
+    }
+   }
+  }
+ ]
+}

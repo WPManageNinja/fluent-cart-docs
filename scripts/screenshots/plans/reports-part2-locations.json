@@ -1,0 +1,117 @@
+{
+  "outDir": "guide/public/images/reporting-analytics/locations",
+  "viewport": {
+    "width": 1600,
+    "height": 1800
+  },
+  "steps": [
+    {
+      "admin": "/reports/locations"
+    },
+    {
+      "wait": 3000
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 1800
+      }
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "click": ".fct-report-filter-bar-button"
+    },
+    {
+      "click": {
+        "text": "Custom…"
+      }
+    },
+    {
+      "fill": {
+        "selector": ".fct-report-filter-custom input >> nth=0",
+        "value": "2026-08-01"
+      }
+    },
+    {
+      "fill": {
+        "selector": ".fct-report-filter-custom input >> nth=1",
+        "value": "2026-10-31"
+      }
+    },
+    {
+      "eval": "(()=>{const e=document.querySelectorAll('.fct-report-filter-custom input')[1];e.focus();e.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',code:'Enter',keyCode:13,which:13,bubbles:true}));})()"
+    },
+    {
+      "click": {
+        "role": "button",
+        "name": "^apply$"
+      }
+    },
+    {
+      "wait": 3500
+    },
+    {
+      "shot": {
+        "name": "locations-overview",
+        "clip": "app",
+        "crop": {
+          "height": 690
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "locations-map",
+        "clip": {
+          "element": ".fct-revenue-comparison",
+          "pad": 0
+        },
+        "crop": {
+          "height": 930
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 2400,
+        "height": 1800
+      }
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "locations-table",
+        "clip": {
+          "element": ".fct-revenue-comparison",
+          "pad": 0
+        },
+        "crop": {
+          "top": 913,
+          "height": 1120
+        }
+      }
+    },
+    {
+      "click": {
+        "selector": ".el-table__body td",
+        "hasText": "United States"
+      }
+    },
+    {
+      "wait": 3000
+    },
+    {
+      "shot": {
+        "name": "locations-drilldown",
+        "clip": "app",
+        "crop": {
+          "height": 2000
+        }
+      }
+    }
+  ]
+}
