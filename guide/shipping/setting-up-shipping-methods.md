@@ -54,6 +54,12 @@ Click **Add Tier** to append a new row. A new tier defaults to `previous max + 0
 
 Tiers do not have to be continuous. You can leave gaps between ranges — for example, `0–10 kg`, then `15–20 kg` — when your carrier simply does not offer rates in the gap, or when weights in that gap should fall back to a different shipping method.
 
+If the cart weight falls in a gap, above your last tier, or the method has no tiers at all, the method is hidden at checkout instead of being offered for free. If a customer had already picked it before the cart changed, placing the order fails with "The selected shipping method is not available." so they can choose another method.
+
+**How the cart weight is counted**
+
+The cart weight is the weight of the products plus the empty weight of each box they are packed in. FluentCart packs the items into their assigned [packages](/guide/shipping/packages), counting each box's own weight once per box, not once per unit. For example, three 0.9 kg items that fit in one 0.25 kg box weigh 2.95 kg. When items are heavier than a box's maximum weight, they are split across more boxes, and each extra box adds its own weight.
+
 **Validation**
 
 The editor validates tiers inline before you can save:
