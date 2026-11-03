@@ -37,7 +37,6 @@ Choose which items go in this shipment and how many of each. Use **Clear all** t
 
 Use the **Ship with** dropdown to choose a carrier.
 
-<!-- TODO(screenshot): re-run scripts/screenshots/plans/shippo-create-shipment.json (shot "shipment-ship-with-dropdown"). The dropdown now lists "Shippo (Beta)". -->
 ![Screenshot of the Ship with dropdown listing Manual / Other and Shippo](/images/shipping/shippo/shipment-ship-with-dropdown.webp)
 
 * **Manual / Other:** Pick one of your zone-based methods, or choose **Custom price** to enter the cost yourself (use `0` for free shipping). With a custom price you can also enter an optional **Carrier Name**. You can enter a **Tracking Number** and **Tracking URL** either way.
