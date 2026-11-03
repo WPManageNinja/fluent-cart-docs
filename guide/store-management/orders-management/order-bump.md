@@ -92,8 +92,7 @@ On the main **Order Bumps** screen, you can manage all your existing offers:
     * Your description, when you added one.
     * A **Yes, add this to my order** checkbox. Ticking it adds the item to the cart, and unticking it removes the item again.
 
-<!-- TODO(screenshot): Checkout page showing the new order bump card (image, title badge, product/variation name, struck-through price with Save amount, "Yes, add this to my order" checkbox). The current order-bump-5.webp shows the old layout. -->
-![Order Bump](/images/store-management/order-bump/order-bump-5.webp)
+![Screenshot of an order bump card on the checkout page with the image, bump name badge, product and variation, struck-through price with the amount saved, and the Yes, add this to my order checkbox](/images/store-management/order-bump/order-bump-checkout-card.webp)
 
 ::: info
 Some integrations lock the checkout to a single item, for example a booking that must not be swapped or removed. Bumps stay hidden on those locked checkouts unless the integration explicitly opts in to them, in which case the customer can still accept a matching offer alongside the locked item. Developers can find the `fluent_cart/cart/accepts_additional_items` hook that controls this at [dev.fluentcart.com](https://dev.fluentcart.com/).
