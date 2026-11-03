@@ -20,7 +20,7 @@ The filter bar at the top of the page decides which orders the report covers.
 
 The [shared report controls](/guide/reporting-analytics/reports-dashboard-overview#comparing-with-an-earlier-period) work the same way on every report.
 
-<!-- TODO(screenshot): Locations report from the top, showing the filter bar and the summary cards (Net sales, International sales, International new customers, Countries with sales, Top country). -->
+![Screenshot of the Locations report filter bar and summary cards](/images/reporting-analytics/locations/locations-overview.webp)
 
 ## Key Metrics
 
@@ -38,7 +38,7 @@ The two **International** cards only appear when your store address has a **Coun
 
 At the country level, a world map shades each country by its net sales, from light to dark blue, with a scale at the bottom left. Hover over a country to see its name and net sales, and drag or scroll to pan and zoom. With FluentCart Pro, clicking a country on the map opens its states.
 
-<!-- TODO(screenshot): The Locations world map at country level, with countries shaded by net sales and the color scale visible, and the Address dropdown and export icon above it. -->
+![Screenshot of the Locations world map shaded by net sales](/images/reporting-analytics/locations/locations-map.webp)
 
 ## Locations Table
 
@@ -58,7 +58,7 @@ Below the map, the table lists one row per country, with a **Total** row at the 
 * **Lifetime Value:** What the new customers won here have spent with you to date, each. *(FluentCart Pro)*
 * **Bought Again:** The share of new customers won here who made a second purchase. Renewals do not count. *(FluentCart Pro)*
 
-<!-- TODO(screenshot): The Locations table at country level showing the columns from Country to Average Order (Net), the Total row, and the note about how orders are placed below it. -->
+![Screenshot of the Locations table at country level](/images/reporting-analytics/locations/locations-table.webp)
 
 ### How an Order Is Placed
 
@@ -81,7 +81,7 @@ When one state holds most of a country's orders, a warning above the table point
 
 Without Pro, the report shows countries only, and a preview with sample data describes these extras.
 
-<!-- TODO(screenshot): With FluentCart Pro active, a country drilled down to its states, showing the breadcrumb, the Biggest Movers card with Growing and Declining lists, and the Lifetime Value and Bought Again columns. -->
+![Screenshot of a country drilled down to its states with the Biggest Movers card](/images/reporting-analytics/locations/locations-drilldown.webp)
 
 ## Exporting the Report
 
