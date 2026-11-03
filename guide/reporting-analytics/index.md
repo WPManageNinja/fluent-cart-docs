@@ -5,6 +5,7 @@ The **Reporting & Analytics** section in FluentCart provides you with powerful i
 This section covers various types of reports to give you a holistic view of your business:
 
 * **[Reports Dashboard Overview](/guide/reporting-analytics/reports-dashboard-overview):** A one-screen summary of sales, customers, refunds, and subscriptions, with a Needs Attention list and your top products, channels, and countries.
+* **[How Reports Count](/guide/reporting-analytics/how-reports-count):** The rules every report shares: net sales, which orders count, new and returning customers, store days, currencies, and who sees customer names.
 * **[Orders Report](/guide/reporting-analytics/orders-report):** Detailed analytics focused on order performance, including sales by customer, day, and hour.
 * **[Revenue Report](/guide/reporting-analytics/revenue-report):** In-depth financial insights into your store's gross sales, net revenue, refunds, taxes, shipping, and discounts.
 * **[Refunds Report](/guide/reporting-analytics/refunds-report):** Specific analytics focused on refund activity, helping you understand refund trends and their impact.
