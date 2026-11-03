@@ -17,7 +17,7 @@ layout: home
 </div>
 
 <div class="home-features">
-  <a href="/guide/getting-started/installation-activation.html" class="feature-card">
+  <a href="/guide/getting-started/installation-activation" class="feature-card">
     <div class="feature-icon">🚀</div>
     <h3>Getting Started</h3>
     <p>Learn the basics of FluentCart and set up your first store</p>
