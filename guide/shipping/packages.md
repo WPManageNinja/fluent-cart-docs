@@ -39,7 +39,7 @@ Enter the physical measurements of your empty package:
 * **Length** — The longest dimension of the package.
 * **Width** — The width of the package.
 * **Height** — The height (or depth) of the package.
-* **Weight (empty)** — The weight of the packaging itself when empty.
+* **Weight (empty)** — The weight of the packaging itself when empty. It is added once for each box an order needs, both in weight-based shipping rates and in carrier quotes. A product with no weight of its own is still quoted in its box, at this empty weight.
 
 You can set the unit for dimensions (e.g., **in**, **cm**) and the unit for weight (e.g., **kg**, **lb**) using the dropdowns next to each field. Make sure these match the units configured in your store settings.
 
