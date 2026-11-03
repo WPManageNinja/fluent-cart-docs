@@ -19,7 +19,7 @@ The filter bar at the top of the page decides which orders the report covers.
 
 The [shared report controls](/guide/reporting-analytics/reports-dashboard-overview#comparing-with-an-earlier-period) work the same way on every report.
 
-<!-- TODO(screenshot): Payment Methods report from the top, showing the filter bar and the four summary cards (Net sales, Payment success rate, Refund rate, MRR at risk (now)) with change badges. -->
+![Screenshot of the Payment Methods report filter bar and summary cards](/images/reporting-analytics/payment-methods/payment-methods-overview.webp)
 
 ## Key Metrics
 
@@ -36,7 +36,7 @@ The other cards show a badge with the change against the compared period. Hover 
 
 The **Net Sales by Payment Method** chart shows the net sales of the orders each gateway took, period by period. Each gateway is a colored segment in a stacked bar, so the full bar is your total net sales and each segment is one gateway's share. The timeline groups by day, month, or year automatically from your date range. Only gateways with orders in the period are drawn.
 
-<!-- TODO(screenshot): The Net Sales by Payment Method stacked bar chart with two or more gateways in the legend. -->
+![Screenshot of the Net Sales by Payment Method chart](/images/reporting-analytics/payment-methods/payment-methods-chart.webp)
 
 ## Payment Methods Table
 
@@ -62,7 +62,7 @@ The table below the chart gives you one row per payment gateway, with a **Total*
 
 A few rows are worth knowing about. A payment made with a saved card is counted under the gateway that charged it. A gateway you have since removed still appears under a readable version of its name, and orders with no recorded gateway appear as **Unknown**.
 
-<!-- TODO(screenshot): The Payment Methods table showing the Payment Method column, the Sales and Risk column groups, and the Total row. -->
+![Screenshot of the Payment Methods table with the Sales and Risk column groups](/images/reporting-analytics/payment-methods/payment-methods-table.webp)
 
 ## Disputes and Card Brands *(FluentCart Pro)*
 
