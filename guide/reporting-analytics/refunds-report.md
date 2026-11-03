@@ -15,8 +15,7 @@ The top of the dashboard gives you key controls to choose what data appears in y
 * **Filters:** Click **Filters** to segment the report by criteria such as **Order Type** or specific **Products**, allowing you to isolate refunds associated with certain items. Applied filters appear as chips below the filter bar, and **Clear all** removes them.
 * **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
 
-<!-- TODO(screenshot): Refunds report with the one-row filter bar and the five summary cards (Refunded, Refunds, Average Refund, Refund Rate, Days to Refund). The current image shows the old filter bar and cards. -->
-   ![Screenshot of Refunds Report Page](/images/reporting-analytics/refunds/refunds-report.webp)
+   ![Screenshot of the five Refunds report summary cards](/images/reporting-analytics/refunds/refunds-cards.webp)
 
 ### Key Refund Metrics
 
@@ -52,8 +51,9 @@ Below the main chart, you’ll find more detailed breakdowns that show the data 
 **Most refunded products** and **Weeks Between Order and Refund** are part of **FluentCart Pro**. Without Pro, a sample preview takes their place.
 :::
 
-<!-- TODO(screenshot): Refund breakdown card, the Pro sections, and the Refund reasons card. The current image shows the removed Refunds Grouped By table. -->
-![Refund Report Charts](/images/reporting-analytics/refunds/refunds-report-1.webp)
+![Screenshot of the Refunds Chart and the Refund breakdown card](/images/reporting-analytics/refunds/refunds-breakdown.webp)
+
+![Screenshot of the Most refunded products table and the Weeks between order and refund chart](/images/reporting-analytics/refunds/refunds-pro-sections.webp)
 
 If the report cannot load, an error message with a **Retry** button takes the place of the figures, so a failed request never reads as zero refunds.
 

@@ -1,0 +1,175 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/orders-source",
+  "viewport": {
+    "width": 1600,
+    "height": 2400
+  },
+  "steps": [
+    {
+      "admin": "/reports/sources"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "sources-channels",
+        "clip": {
+          "x": 430,
+          "y": 215,
+          "width": 1160,
+          "height": 585
+        },
+        "arrows": [
+          {
+            "target": ".el-button:has-text(\"Channel rules\")",
+            "from": "bottom",
+            "len": 120
+          }
+        ]
+      }
+    },
+    {
+      "click": ".fct-revenue-comparison .el-switch:has-text(\"Gross\") .el-switch__core"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 800
+    },
+    {
+      "click": ".fct-revenue-comparison .el-select"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "click": ".el-select-dropdown__item:has-text(\"Campaign / Source / Medium\")"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1200
+    },
+    {
+      "shot": {
+        "name": "sources-table",
+        "clip": {
+          "element": ".fct-revenue-comparison",
+          "pad": 20
+        },
+        "arrows": [
+          {
+            "target": ".fct-revenue-comparison .el-select",
+            "from": "bottom",
+            "len": 120
+          }
+        ]
+      }
+    },
+    {
+      "click": ".fct-advanced-filter-toggle"
+    },
+    {
+      "wait": 1200
+    },
+    {
+      "click": ".fct-advanced-filter-container > .fct-condition-or-wrap .fct-condition-or"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "click": ".fct-advanced-filter-intro .el-button >> nth=0"
+    },
+    {
+      "wait": 800
+    },
+    {
+      "click": ".fct-advanced-filter-popover:visible >> text=\"Utm Property\" >> visible=true"
+    },
+    {
+      "wait": 500
+    },
+    {
+      "click": ".fct-advanced-filter-popover:visible >> text=\"Utm Source\" >> visible=true"
+    },
+    {
+      "wait": 800
+    },
+    {
+      "fill": {
+        "selector": ".fct-advanced-filter >> nth=0 >> .fct-filter-value input",
+        "value": "newsletter"
+      }
+    },
+    {
+      "click": ".fct-report-body .page-title"
+    },
+    {
+      "wait": 500
+    },
+    {
+      "click": ".fct-advanced-filter-intro .el-button >> nth=1"
+    },
+    {
+      "wait": 800
+    },
+    {
+      "click": ".fct-advanced-filter-popover:visible >> text=\"Utm Property\" >> visible=true"
+    },
+    {
+      "wait": 500
+    },
+    {
+      "click": ".fct-advanced-filter-popover:visible >> text=\"Utm Medium\" >> visible=true"
+    },
+    {
+      "wait": 800
+    },
+    {
+      "fill": {
+        "selector": ".fct-advanced-filter >> nth=1 >> .fct-filter-value input",
+        "value": "cpc"
+      }
+    },
+    {
+      "click": ".fct-report-body .page-title"
+    },
+    {
+      "wait": 500
+    },
+    {
+      "shot": {
+        "name": "sources-advanced-filter",
+        "clip": {
+          "x": 430,
+          "y": 1152,
+          "width": 1160,
+          "height": 568
+        },
+        "crop": {
+          "height": 870
+        },
+        "arrows": [
+          {
+            "target": ".fct-advanced-filter-intro .el-button",
+            "from": "bottom",
+            "len": 100
+          }
+        ]
+      }
+    }
+  ]
+}

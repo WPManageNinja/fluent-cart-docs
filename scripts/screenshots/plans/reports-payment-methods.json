@@ -1,0 +1,73 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/payment-methods",
+  "viewport": {
+    "width": 1600,
+    "height": 2100
+  },
+  "steps": [
+    {
+      "admin": "/reports/payment-methods"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "payment-methods-overview",
+        "clip": {
+          "x": 430,
+          "y": 215,
+          "width": 1160,
+          "height": 585
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "payment-methods-disputes",
+        "clip": {
+          "x": 430,
+          "y": 1186,
+          "width": 1160,
+          "height": 742
+        }
+      }
+    },
+    {
+      "click": ".fct-settings-nav-collapse-button-wrapper .el-button"
+    },
+    {
+      "wait": 800
+    },
+    {
+      "viewport": {
+        "width": 2240,
+        "height": 1400
+      }
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "payment-methods-table",
+        "clip": {
+          "element": ".fct-revenue-comparison",
+          "pad": 20
+        }
+      }
+    }
+  ]
+}

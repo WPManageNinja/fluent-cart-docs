@@ -1,0 +1,44 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/coupons",
+  "viewport": {
+    "width": 1600,
+    "height": 1500
+  },
+  "steps": [
+    {
+      "admin": "/reports/coupons"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "coupons-overview",
+        "clip": {
+          "x": 430,
+          "y": 215,
+          "width": 1160,
+          "height": 565
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "coupons-table",
+        "clip": {
+          "element": ".fct-revenue-comparison",
+          "pad": 20
+        }
+      }
+    }
+  ]
+}

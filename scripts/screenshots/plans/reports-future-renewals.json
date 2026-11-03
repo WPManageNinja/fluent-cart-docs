@@ -1,0 +1,87 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/subscription/future-renewals",
+  "viewport": {
+    "width": 1600,
+    "height": 2000
+  },
+  "steps": [
+    {
+      "admin": "/reports/subscriptions/future-renewals"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "future-renewals-cards",
+        "clip": {
+          "x": 430,
+          "y": 159,
+          "width": 1160,
+          "height": 521
+        },
+        "arrows": [
+          {
+            "target": ".page-heading-wrap .el-select",
+            "from": "left",
+            "len": 150
+          }
+        ]
+      }
+    },
+    {
+      "click": ".fct-card:has-text(\"Renewals by Variant\") th:has-text(\"Projected\") .sort-caret.descending"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "shot": {
+        "name": "future-renewals-variants",
+        "clip": {
+          "element": {
+            "selector": ".fct-card",
+            "hasText": "Renewals by Variant"
+          },
+          "pad": 20
+        }
+      }
+    },
+    {
+      "click": ".page-heading-wrap .el-select"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "click": ".el-select-dropdown__item:has-text(\"Next 6 months\")"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "future-renewals-chart",
+        "clip": {
+          "element": {
+            "selector": ".fct-card",
+            "hasText": "Renewals by month"
+          },
+          "pad": 20
+        }
+      }
+    }
+  ]
+}

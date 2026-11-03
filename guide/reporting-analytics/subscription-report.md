@@ -30,8 +30,7 @@ The **Right now** cards describe your subscriptions as they stand today. They ar
 * **Canceled, Ends Soon:** The MRR of canceled subscriptions still in their paid term. It stays in MRR until the term ends, then leaves unless the customer comes back.
 * **Paused MRR:** The MRR of paused subscriptions. It is not in MRR.
 
-<!-- TODO(screenshot): Subscriptions report showing the "Right now" health cards and the "In this period" cards. The current image shows the old Installments Still Due card. -->
-  ![Screenshot of the Subscription Report page](/images/reporting-analytics/subscription/subscription-report.webp)
+  ![Screenshot of the Right now subscription health cards](/images/reporting-analytics/subscription/subscriptions-right-now.webp)
 
 ### In This Period
 
@@ -53,8 +52,7 @@ The **Subscription movement** chart shows new and churned subscriptions for each
 
 When nothing moved in the date range, the chart reads **No new or churned subscriptions in this period**.
 
-<!-- TODO(screenshot): Subscription movement chart with New, Churned and Net series and the Subscriptions / MRR toggle. The current image shows the removed Subscription Chart. -->
-  ![Screenshot of Report Subscriprtion Page](/images/reporting-analytics/subscription/subscription-chart.webp)
+  ![Screenshot of the In this period cards and the Subscription movement chart](/images/reporting-analytics/subscription/subscriptions-period.webp)
 
 ### Where MRR Comes From
 

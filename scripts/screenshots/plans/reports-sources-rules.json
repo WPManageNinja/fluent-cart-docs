@@ -1,0 +1,67 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/orders-source",
+  "viewport": {
+    "width": 1600,
+    "height": 1100
+  },
+  "steps": [
+    {
+      "admin": "/reports/sources"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "click": ".el-button:has-text(\"Channel rules\")"
+    },
+    {
+      "wait": 1200
+    },
+    {
+      "click": ".fct-channel-rules-dialog .el-button:has-text(\"Add channel\")"
+    },
+    {
+      "wait": 500
+    },
+    {
+      "fill": {
+        "selector": ".fct-channel-rules-dialog input[placeholder^=\"Channel name\"] >> nth=-1",
+        "value": "Partner newsletter"
+      }
+    },
+    {
+      "fill": {
+        "selector": ".fct-channel-rules-dialog .fct-channel-rule-condition input.el-input__inner >> nth=-1",
+        "value": "partner"
+      }
+    },
+    {
+      "wait": 400
+    },
+    {
+      "shot": {
+        "name": "sources-channel-rules",
+        "clip": {
+          "element": ".fct-channel-rules-dialog",
+          "pad": 0
+        },
+        "arrows": [
+          {
+            "target": ".fct-channel-rules-dialog .el-button:has-text(\"Save rules\")",
+            "from": "top",
+            "len": 110
+          }
+        ]
+      }
+    }
+  ]
+}

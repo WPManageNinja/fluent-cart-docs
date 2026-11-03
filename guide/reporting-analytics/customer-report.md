@@ -29,8 +29,7 @@ At the top of the Customer Report, six summary cards describe your customers in 
 
 The first three cards also show the change against the comparison period.
 
-<!-- TODO(screenshot): Customers report with the six summary cards and the Customers Over Time chart. The current image shows the old Customer Growth card and New Customers chart. -->
-![Customer Reports](/images/reporting-analytics/customer/customer-report-1.webp)
+![Screenshot of the six Customers report cards and the Customers Over Time chart](/images/reporting-analytics/customer/customers-cards.webp)
 
 ### Customers Over Time
 
@@ -69,7 +68,6 @@ The **Top Customers** table lists the customers who paid in the period, highest 
 **Top Customers** lists names and emails, so it appears only for users who also have permission to view customers. A user with report access only still sees the cards and charts.
 :::
 
-<!-- TODO(screenshot): Top Customers table. The current image shows the removed Comparison table. -->
-![Customer Reports](/images/reporting-analytics/customer/customer-report-2.webp)
+![Screenshot of the Top Customers table](/images/reporting-analytics/customer/customers-top-customers.webp)
 
 By using the Customer Report, you can move beyond simple sales numbers to understand the most valuable asset of your store: your customer base.

@@ -561,6 +561,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'Reports Dashboard Overview', link: '/guide/reporting-analytics/reports-dashboard-overview' },
+            { text: 'How Reports Count', link: '/guide/reporting-analytics/how-reports-count' },
             { text: 'Orders Report', link: '/guide/reporting-analytics/orders-report' },
             { text: 'Revenue Report', link: '/guide/reporting-analytics/revenue-report' },
             { text: 'Refunds Report', link: '/guide/reporting-analytics/refunds-report' },

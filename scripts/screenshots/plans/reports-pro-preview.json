@@ -1,0 +1,33 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/common",
+  "viewport": {
+    "width": 1600,
+    "height": 3400
+  },
+  "steps": [
+    {
+      "admin": "/reports/orders"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "report-pro-preview",
+        "clip": {
+          "element": ".fct-pro-preview:has-text(\"See when and how customers order\")",
+          "pad": 20
+        }
+      }
+    }
+  ]
+}

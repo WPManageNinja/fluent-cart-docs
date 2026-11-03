@@ -1,0 +1,84 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/locations",
+  "viewport": {
+    "width": 1600,
+    "height": 2000
+  },
+  "steps": [
+    {
+      "admin": "/reports/locations"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "click": ".fct-revenue-comparison .el-table__row:has-text(\"United States\")"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "locations-drilldown",
+        "clip": {
+          "x": 430,
+          "y": 351,
+          "width": 1160,
+          "height": 731
+        },
+        "arrows": [
+          {
+            "target": ".fct-revenue-comparison .el-breadcrumb__item >> nth=-1",
+            "from": "right",
+            "len": 140
+          }
+        ]
+      }
+    },
+    {
+      "click": ".fct-revenue-comparison .el-breadcrumb a:has-text(\"All countries\")"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "css": ".fct-revenue-report-page > .fct-card { display: none !important; }"
+    },
+    {
+      "eval": "document.activeElement && document.activeElement.blur()"
+    },
+    {
+      "shot": {
+        "name": "locations-overview",
+        "clip": {
+          "x": 430,
+          "y": 215,
+          "width": 1160,
+          "height": 608
+        },
+        "arrows": [
+          {
+            "target": ".fct-revenue-comparison .el-select",
+            "from": "left",
+            "len": 150
+          }
+        ]
+      }
+    }
+  ]
+}

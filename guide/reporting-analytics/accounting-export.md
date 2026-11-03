@@ -2,8 +2,8 @@
 
 The **Accounting Export** gives you a file of every sale and refund in your store, with its tax line, currency, and exchange rates, ready to hand to your accountant or import into your accounting or tax software. It is especially useful when you sell in more than one currency, because each row records the rate the sale was made at.
 
-::: info
-The accounting export is part of **FluentCart Pro**. Without Pro, the screen shows a warning instead of the export form.
+::: info The accounting export requires FluentCart Pro
+FluentCart Pro adds the **Export** item to the Reports sidebar. It appears for users who have permission to export reports.
 :::
 
 ## Accessing the Accounting Export
@@ -11,13 +11,11 @@ The accounting export is part of **FluentCart Pro**. Without Pro, the screen sho
 To open the accounting export:
 
 1. From your WordPress dashboard, navigate to **FluentCart > Reports**.
-2. Select **Export** from the left-hand sidebar.
+2. Select **Export** at the bottom of the Reports sidebar.
 
-![Screenshot of the Export item in the Reports sidebar with the Accounting export screen open](/images/reporting-analytics/accounting-export/accounting-export-menu.webp)
+![Screenshot of the Export item in the Reports sidebar and the Accounting export card](/images/reporting-analytics/accounting-export/accounting-export-menu.webp)
 
-::: info
-The export covers this store only. It is not a complete EU OSS return, because a business that runs several stores files one OSS return for all of them.
-:::
+The note at the top of the form reminds you that the export covers this store only. It is not a complete EU OSS return, because a business that runs several stores files one OSS return for all of them.
 
 ## Setting Up Your Export
 

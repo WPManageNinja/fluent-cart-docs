@@ -1,0 +1,55 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/refunds",
+  "viewport": {
+    "width": 1600,
+    "height": 2300
+  },
+  "steps": [
+    {
+      "admin": "/reports/refunds"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "refunds-cards",
+        "clip": {
+          "element": ".fct-report-order-summary",
+          "pad": 20
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "refunds-breakdown",
+        "clip": {
+          "x": 430,
+          "y": 325,
+          "width": 1160,
+          "height": 821
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "refunds-pro-sections",
+        "clip": {
+          "x": 430,
+          "y": 1136,
+          "width": 1160,
+          "height": 824
+        }
+      }
+    }
+  ]
+}

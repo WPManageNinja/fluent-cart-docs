@@ -1,0 +1,95 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/subscription/cohorts",
+  "viewport": {
+    "width": 1600,
+    "height": 3200
+  },
+  "steps": [
+    {
+      "admin": "/reports/subscriptions/subscriptions-cohorts"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "click": ".fct-cohort-settings .el-radio-button:has-text(\"Monthly\")"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1000
+    },
+    {
+      "click": ".fct-cohort-settings .el-radio-button:has-text(\"MRR\")"
+    },
+    {
+      "wait": 800
+    },
+    {
+      "click": ".fct-card:has-text(\"Cancel and rebuy\") .el-switch"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "css": ".fct-cohort-report-page > .fct-card.overflow-hidden:not(.mt-6) > .fct-card-body { display: none !important; }"
+    },
+    {
+      "shot": {
+        "name": "cohorts-pro-sections",
+        "clip": {
+          "element": ".fct-cohort-report-page",
+          "pad": 20
+        },
+        "arrows": [
+          {
+            "target": ".fct-cohort-settings .el-switch",
+            "from": "top",
+            "len": 100
+          }
+        ]
+      }
+    },
+    {
+      "css": ".fct-cohort-report-page > .fct-card.overflow-hidden:not(.mt-6) > .fct-card-body { display: block !important; }"
+    },
+    {
+      "click": ".fct-cohort-settings .el-radio-button:has-text(\"Customers\")"
+    },
+    {
+      "wait": 800
+    },
+    {
+      "css": ".fct-cohort-report-page > .fct-card.overflow-hidden ~ * { display: none !important; }"
+    },
+    {
+      "shot": {
+        "name": "cohorts-table",
+        "clip": {
+          "element": ".fct-cohort-report-page",
+          "pad": 20
+        },
+        "arrows": [
+          {
+            "target": ".page-heading-wrap .el-button:has-text(\"Generate Snapshots\")",
+            "from": "bottom",
+            "len": 110
+          }
+        ]
+      }
+    }
+  ]
+}

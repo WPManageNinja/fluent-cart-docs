@@ -8,7 +8,7 @@ Go to your WordPress dashboard, then go to **FluentCart > [Reports](/guide/repor
 
 A line under the page title tells you what the figures cover. By default it reads **Installment plans as of today, over all time.** When you pick a start range, it changes to name those dates, for example **Plans started from Jan 1 to Mar 31, as they stand today.**
 
-<!-- TODO(screenshot): Installments report with the Installments item selected under Subscriptions in the reports sidebar, the Started from / Started to picker and All products dropdown in the title bar, and the summary cards. -->
+![Screenshot of the Installments report with the Started from / Started to picker, the All products dropdown and the summary cards](/images/reporting-analytics/subscription/installments/installments-cards.webp)
 
 ## Report Filters and Controls
 
@@ -63,7 +63,7 @@ When there are no payments left, the chart reads **No payments left on active or
 **Plans Started by Month**, **Monthly Schedule**, and the **Projected to collect** card are part of **FluentCart Pro**. Without Pro, a sample preview of the schedule takes their place.
 :::
 
-<!-- TODO(screenshot): Plans Started by Month chart and the Monthly Schedule chart with the Collection rate slider and Reset button (Pro). -->
+![Screenshot of the Plans Started by Month chart and the Monthly Schedule chart with the Collection rate slider](/images/reporting-analytics/subscription/installments/installments-schedule.webp)
 
 ## Plans by Variation, Overdue, and Lapsed
 
@@ -105,7 +105,7 @@ Use the **Search name or email** box to find a customer. The table pages through
 The **Overdue** and **Lapsed** tabs list customers by name and email, so they appear only for users who also have permission to view customers. A user with report access only sees the summary cards, the charts, and the **Plans by Variation** tab.
 :::
 
-<!-- TODO(screenshot): Overdue tab of the Installments report with the search box, the Paid and Left columns, and the Copy link button. -->
+![Screenshot of the Overdue tab with the Paid and Left columns and the Copy link buttons](/images/reporting-analytics/subscription/installments/installments-overdue.webp)
 
 ## Empty and Error States
 

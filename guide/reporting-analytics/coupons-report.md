@@ -55,7 +55,7 @@ The table has a **With a coupon** column and an **At full price** column, with t
 **Coupon vs Full Price** is part of **FluentCart Pro**. Without Pro, a sample preview takes its place.
 :::
 
-<!-- TODO(screenshot): Discounts Over Time chart beside the Coupon vs Full Price card (Pro). -->
+![Screenshot of the Discounts Over Time chart beside the Coupon vs Full Price card](/images/reporting-analytics/coupons/coupons-overview.webp)
 
 ## Coupons Table
 
@@ -81,7 +81,7 @@ The **Total** row at the bottom is calculated per order, so an order that used t
 
 Some orders carry a coupon discount without a recorded coupon code, for example renewal discounts imported from another platform. When there are any, a **Discount with no code** line under the table shows their total discount and order count. These orders are not part of the rows or the totals above.
 
-<!-- TODO(screenshot): Coupons table with the Search box, Export CSV icon, a "Used as" code under a coupon, the Total row, and the Discount with no code line. -->
+![Screenshot of the Coupons table with the Search box, the export icon and the Total row](/images/reporting-analytics/coupons/coupons-table.webp)
 
 ## Empty and Error States
 

@@ -1,0 +1,106 @@
+{
+  "site": "https://fcdemo.lab",
+  "user": "admin",
+  "pass": "admin",
+  "outDir": "guide/public/images/reporting-analytics/revenue",
+  "viewport": {
+    "width": 1600,
+    "height": 2600
+  },
+  "steps": [
+    {
+      "admin": "/reports/revenue"
+    },
+    {
+      "css": ".fct-notices-wrap, .notice.fluent-cart-notice, #wpbody-content > .notice {display:none !important}"
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "shot": {
+        "name": "revenue-summary-cards",
+        "clip": {
+          "element": ".fct-report-order-summary",
+          "pad": 20
+        }
+      }
+    },
+    {
+      "shot": {
+        "name": "revenue-chart",
+        "clip": {
+          "element": {
+            "selector": ".fct-card",
+            "hasText": "Revenue Chart"
+          },
+          "pad": 20
+        },
+        "arrows": [
+          {
+            "target": ".fct-revenue-line-chart-wrap .el-select",
+            "from": "left",
+            "len": 150
+          }
+        ]
+      }
+    },
+    {
+      "shot": {
+        "name": "revenue-by-order-type",
+        "clip": {
+          "element": {
+            "selector": ".fct-card",
+            "hasText": "Net sales by order type"
+          },
+          "pad": 20
+        }
+      }
+    },
+    {
+      "click": ".fct-report-filter-bar-button"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "click": {
+        "text": "Year to date"
+      }
+    },
+    {
+      "eval": "new Promise(res => { const t0 = Date.now(); const tick = () => { const busy = [...document.querySelectorAll('.el-skeleton__item, .el-loading-mask, .fct-summary-loader')].filter(e => e.offsetParent !== null); if (!busy.length || Date.now() - t0 > 25000) return res(busy.length); setTimeout(tick, 300); }; setTimeout(tick, 800); })"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "click": ".el-table__expand-icon"
+    },
+    {
+      "wait": 1200
+    },
+    {
+      "shot": {
+        "name": "revenue-breakdown",
+        "clip": {
+          "element": {
+            "selector": ".fct-card",
+            "hasText": "Revenue Breakdown"
+          },
+          "pad": 20
+        },
+        "arrows": [
+          {
+            "target": ".el-table__expand-icon",
+            "from": "bottom",
+            "len": 140
+          }
+        ]
+      }
+    }
+  ]
+}

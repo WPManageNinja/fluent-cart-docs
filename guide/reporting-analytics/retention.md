@@ -17,8 +17,7 @@ Use the controls at the top of the page to customize the data displayed in your 
 
 Retention compares the subscriptions active when a period began with those still active at its end. New subscriptions are not counted, and installment plans are not included. Hover over the info icon beside the **Subscription Retention** title to read this definition in the app.
 
-<!-- TODO(screenshot): Retention page title bar with the Monthly / Yearly buttons and the three summary cards (Subscription Retention, MRR Retention, Renewal Rate). The current image shows the old layout. -->
-![Retention Report](/images/reporting-analytics/subscription/retention/retention-report-1.webp)
+![Screenshot of the Retention page with the Monthly / Yearly buttons, the three summary cards and the Retention Rate chart](/images/reporting-analytics/subscription/retention/retention-summary.webp)
 
 ## Retention Summary
 
@@ -39,8 +38,7 @@ The **Retention Rate** chart provides a visual period-over-period comparison of 
 * **Subscription Retention vs. MRR Retention:** The chart plots both metrics side-by-side, allowing you to see if customer loss is impacting your revenue proportionally.
 * **Zoom:** Use the zoom icon in the top-right corner to enlarge the chart.
 
-<!-- TODO(screenshot): Retention Rate chart with the Subscription Retention and MRR Retention series. -->
-![Retention Chart](/images/reporting-analytics/subscription/retention/retention-rate-2.webp)
+![Screenshot of the Retention Rate chart with the Subscription Retention and MRR Retention series](/images/reporting-analytics/subscription/retention/retention-summary.webp)
 
 ## Renewals and Lifetime Value
 
@@ -52,8 +50,7 @@ With **FluentCart Pro**, a further section shows what happened to your renewals 
 
 Without Pro, a sample preview takes the place of this section.
 
-<!-- TODO(screenshot): Pro renewals and lifetime value section. The current image shows the old Lifetime Analysis and churn charts. -->
-![Lifetime Analysis](/images/reporting-analytics/subscription/retention/lifetime-analysis-3.webp)
+![Screenshot of the Renewals chart and the Lifetime (estimate) card](/images/reporting-analytics/subscription/retention/retention-pro-sections.webp)
 
 If the report cannot load, the page shows **This report could not be loaded.** with a **Retry** button.
 

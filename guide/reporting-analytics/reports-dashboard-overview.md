@@ -35,8 +35,9 @@ The **Overview** follows the date range and compare period you pick in the filte
 
 The Overview is store-wide. It has no **Filters** menu, so an **Order Type** or **Products** filter you set on another report does not apply here. It also reads one currency at a time, so its **Currency** chip lists your individual currencies only, without an **All currencies** option.
 
-<!-- TODO(screenshot): The rebuilt Overview page from the top, showing the filter bar, the six sales cards with change badges, the subscription cards row, and the Needs Attention card. The current image shows the retired Gross Summary and quarterly cards. -->
-![Screenshot of Reporting Overview Page](/images/reporting-analytics/dashboard-overview/reporting-overview.webp)
+![Screenshot of the Overview sales cards and subscription cards with change badges](/images/reporting-analytics/dashboard-overview/overview-cards.webp)
+
+![Screenshot of the Needs Attention card with View report links](/images/reporting-analytics/dashboard-overview/overview-needs-attention.webp)
 
 ### Sales Cards
 
@@ -76,8 +77,7 @@ Each item has a **View report** link to the page where you can investigate it.
 
 The **Net Sales** chart plots your net sales across the selected period, with the compared period drawn as a dotted line, so you can see at a glance whether you are ahead or behind. The chart groups the timeline automatically from your date range: by day for short ranges, by month for ranges up to a year, and by year beyond that. If there were no sales in either period, it shows **No sales in this period**.
 
-<!-- TODO(screenshot): The Net Sales chart on the Overview with the compared period as a dotted line, followed by the Top Products, Top Channels, and Top Countries lists side by side. The current image shows the retired Net Revenue and Top Country Gross/Net Volume charts. -->
-![Screenshot of Report Dashboard Overview Page](/images/reporting-analytics/dashboard-overview/overview-metrics.webp)
+![Screenshot of the Top Products, Top Channels, and Top Countries lists](/images/reporting-analytics/dashboard-overview/overview-top-lists.webp)
 
 ### Top Lists
 
@@ -123,8 +123,7 @@ Presets always count from today, so **Last 7 days** still means the last seven d
 
 The compare dropdown beside the date button decides which earlier period your numbers are measured against. Its label reads, for example, **vs Previous period**. Each option in the list shows the dates it would use, so you never have to work out the comparison window yourself.
 
-<!-- TODO(screenshot): The compare dropdown open on a report, showing Previous period, Previous month, Previous quarter, Previous year, Custom, and No comparison with their dates. The current image shows the old "Compare to" control with title-case labels. -->
-![Screenshot of the Compare to dropdown listing Previous Period, Previous Month, Previous Quarter, Previous Year, Custom, and No Comparison with their dates](/images/reporting-analytics/dashboard-overview/compare-to-options.webp)
+![Screenshot of the compare dropdown with each option and its dates](/images/reporting-analytics/common/report-compare-options.webp)
 
 All comparison periods last as many days as your selected range. They differ in where they start:
 
