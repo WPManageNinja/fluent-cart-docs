@@ -19,7 +19,6 @@ The top of the dashboard gives you key controls to choose what data appears in t
 * **Filters:** Click **Filters** to break down the report by options like **Order Type** or specific **Products**. Applied filters appear as chips below the filter bar, and **Clear all** removes them.
 * **Chart grouping:** The dropdown above the trend chart sets how the timeline is bucketed. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or pick **Daily**, **Monthly**, or **Yearly** yourself.
 
-<!-- TODO(screenshot): Orders report filter bar in its new one-row form (date button, "vs Previous period" dropdown, Filters button) above the six summary cards. The current image shows the old filter bar and cards. -->
    ![Screenshot of Orders Report Page](/images/reporting-analytics/orders/order-report-filter.webp)
 
 ### Key Order Metrics
@@ -42,7 +41,6 @@ Just below the metric cards, the **Order Chart** gives you a clear visual of you
 * **Chart View Dropdown:** You can adjust the chart's timeline using the dropdown menu in the top-right corner of the chart. Leave it on [Auto](/guide/reporting-analytics/reports-dashboard-overview#choosing-how-a-trend-chart-is-grouped) to follow your date range, or change it to **Daily**, **Monthly**, or **Yearly**.
 * **Export CSV:** Click the download icon to save the chart data as a CSV file.
 
-<!-- TODO(screenshot): Order Chart with Orders bars and the Net sales line. The current image shows the old Gross Sales and Revenue lines. -->
    ![Screenshot of the Order Chart](/images/reporting-analytics/orders/orders-report-chart.webp)
 
 #### Order Mix
@@ -54,7 +52,7 @@ The **Order mix** card splits the orders from the **Orders** card in several way
 * **Discount:** Orders with a coupon or manual discount (**Discounted**) against orders at **Full price**. The **Coupons report** link beside it opens the [Coupons report](/guide/reporting-analytics/coupons-report).
 * **Shipping:** The shipping status of your physical orders. This split appears only when the period has physical orders.
 
-<!-- TODO(screenshot): Order mix card with the Order type, Order status, Discount and Shipping bars. -->
+![Screenshot of the Order mix card with the Order type, Order status, Discount and Shipping bars](/images/reporting-analytics/orders/orders-report-mix.webp)
 
 #### New vs. Returning Customers
 
@@ -71,7 +69,6 @@ This table breaks down your order data by customer type, helping you measure cus
 * **Show Percentages:** Enable this checkbox to view the data as percentages, making it easy to see the proportion of sales from each customer type.
 * **Export CSV:** Click the download icon to save this table as a **CSV** file for further analysis.
 
-<!-- TODO(screenshot): New vs. Returning Customers table with the new columns (Type, Customers, Orders, Net Sales, Average Order (Net)). The current image also shows the removed Orders Grouped By table. -->
    ![Screenshot of the New vs. Returning Customers table](/images/reporting-analytics/orders/customer-insights.webp)
 
 To see orders by country or by payment method, open the [Locations](/guide/reporting-analytics/locations-report) or [Payment Methods](/guide/reporting-analytics/payment-methods-report) report.
