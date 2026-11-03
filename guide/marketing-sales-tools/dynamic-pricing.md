@@ -80,7 +80,7 @@ This card sits at the top right of the form. It decides which amount the rule's 
 
 * **Line item:** The rule is calculated on each product line separately. A 10% line item rule takes 10% off every line's subtotal, so it covers every unit on the line. A **Fixed** amount is taken from each line.
 * **Checkout:** The rule is calculated once on the whole cart subtotal. A discount is spread across the products so receipts and reports stay consistent.
-* **Shipping:** The rule is calculated on the shipping cost. A 100% shipping discount makes shipping free.
+* **Shipping:** The rule is calculated on the shipping cost. A 100% shipping discount makes shipping free. When a shipping discount and a percentage shipping **Fee** both apply, the fee is calculated on the shipping cost after the discount, so the total in the checkout summary matches what the customer is charged.
 
 ### When: Apply Discount To (When to Apply)
 
