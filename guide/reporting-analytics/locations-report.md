@@ -20,7 +20,7 @@ The filter bar at the top of the page decides which orders the report covers.
 
 The [shared report controls](/guide/reporting-analytics/reports-dashboard-overview#comparing-with-an-earlier-period) work the same way on every report.
 
-<!-- TODO(screenshot): Locations report from the top, showing the filter bar and the summary cards (Net sales, International sales, International new customers, Countries with sales, Top country). -->
+![Screenshot of the Locations report filter bar and summary cards](/images/reporting-analytics/locations/locations-filter-cards.webp)
 
 ## Key Metrics
 
@@ -58,7 +58,7 @@ Below the map, the table lists one row per country, with a **Total** row at the 
 * **Lifetime Value:** What the new customers won here have spent with you to date, each. *(FluentCart Pro)*
 * **Bought Again:** The share of new customers won here who made a second purchase. Renewals do not count. *(FluentCart Pro)*
 
-<!-- TODO(screenshot): The Locations table at country level showing the columns from Country to Average Order (Net), the Total row, and the note about how orders are placed below it. -->
+![Screenshot of the Locations table at country level with the Total row](/images/reporting-analytics/locations/locations-table.webp)
 
 ### How an Order Is Placed
 
