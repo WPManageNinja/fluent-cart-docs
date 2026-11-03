@@ -33,7 +33,6 @@ The add-on is available from the **Features & addon** screen in FluentCart.
 3. Scroll to the **Plugin Addons** list and find **Shipping For FluentCart**.
 4. Click **Install & Activate**. If FluentCart Pro is not active on your site, this button reads **Download** instead. It does not install anything: it opens the FluentCart add-ons page in a new tab, and you install the plugin yourself.
 
-<!-- TODO(screenshot): Features & addon screen, Shipping For FluentCart card. The card now has its own truck icon instead of the FluentCart logo (core #3438). -->
 ![Screenshot of the Shipping For FluentCart add-on in the Features & addon screen](/images/shipping/shipping-carriers/shipping-addon-install.webp)
 
 Once the add-on is active, a **Shippo (Beta)** row appears on the **Carriers** page under **Settings > Shipping**, and the card gets a settings icon that opens it.
@@ -42,7 +41,6 @@ Once the add-on is active, a **Shippo (Beta)** row appears on the **Carriers** p
 
 Go to **FluentCart Pro > Settings > Shipping** to open the **Carriers** page. Clicking **Shipping** in the settings menu opens it directly, and **Carriers** is the first item under it. Each carrier has a status badge (**Enabled** or **Disabled**) and a **Manage** button.
 
-<!-- TODO(screenshot): re-run scripts/screenshots/plans/shipping-carriers.json (shot "carriers-list"). The Shippo row now reads "Shippo (Beta)". -->
 ![Screenshot of the Carriers page listing Manual / Other and Shippo](/images/shipping/shipping-carriers/carriers-list.webp)
 
 The Carriers page is part of FluentCart's shipping settings, so it is always there. Without the add-on it lists only **Manual / Other**. With the add-on installed, two carriers are listed:
