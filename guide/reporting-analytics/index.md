@@ -1,20 +1,26 @@
- # Reporting & Analytics
+# Reporting & Analytics
 
-The **Reporting & Analytics** section in FluentCart provides you with powerful insights into your store's performance. By leveraging comprehensive reports, you can monitor key metrics, identify trends, and make data-driven decisions to optimize your sales, products, and customer engagement.
+The **Reporting & Analytics** section shows you how your store is doing, from today's sales to the long-term value of your customers. Every report uses the same rules for net sales, orders, customers, currencies, and store days, so the numbers agree from one report to the next. Every FluentCart store gets the everyday figures, and FluentCart Pro adds deeper analysis.
 
-This section covers various types of reports to give you a holistic view of your business:
+This section covers the following key aspects of reporting:
 
-* **[Reports Dashboard Overview](/guide/reporting-analytics/reports-dashboard-overview):** A summary dashboard presenting key performance indicators (KPIs) at a glance.
-* **[Orders Report](/guide/reporting-analytics/orders-report):** Detailed analytics focused on order performance, including sales by customer, day, and hour.
-* **[Revenue Report](/guide/reporting-analytics/revenue-report):** In-depth financial insights into your store's gross sales, net revenue, refunds, taxes, shipping, and discounts.
-* **[Refunds Report](/guide/reporting-analytics/refunds-report):** Specific analytics focused on refund activity, helping you understand refund trends and their impact.
-* **[Subscription Report](/guide/reporting-analytics/subscription-report):** Key insights into your recurring revenue, including active subscribers, total revenue, and retention rates.
-* **[Retention Report](/guide/reporting-analytics/retention):** Subscription retention and churn analytics, filters, charts, lifetime value, and monthly summary data.
-* **[Cohorts Report](/guide/reporting-analytics/cohorts):** Cohort-based subscription analytics with retention views, period comparisons, and exportable grouped data.
-* **[Future Renewals Report](/guide/reporting-analytics/future-renewals):** Forecasted subscription renewal revenue and counts to help with near-term cash flow planning.
-* **[Product Report](/guide/reporting-analytics/product-report):** Detailed analytics on individual product performance, including units sold and top-selling items.
-* **[Compare Products Report](/guide/reporting-analytics/product-compare-report):** Side-by-side comparison of the products or variations you pick, with a chart and a totals table.
-* **[Order Sources Report](/guide/reporting-analytics/order-sources-report):** Revenue grouped by marketing campaign, source, and medium, so you can see which channels produce paying customers.
-* **[Accounting Export](/guide/reporting-analytics/accounting-export):** A CSV or JSON file of every sale and refund with its tax line, currency, and exchange rates, for your accountant or tax software.
+* **[How Reports Count](/guide/reporting-analytics/how-reports-count):** The shared rules behind every report: net sales, which orders count, new and returning customers, store timezone, date ranges, comparisons, currencies, and what is free or Pro.
+* **[Reports Overview](/guide/reporting-analytics/reports-dashboard-overview):** A one-screen summary of sales, customers, refunds, and subscriptions, with the items that need your attention.
+* **[Orders Report](/guide/reporting-analytics/orders-report):** Order volume, average order value, failed and refunded orders, order mix, and new against returning customers.
+* **[Revenue Report](/guide/reporting-analytics/revenue-report):** The sales breakdown from gross sales to net sales and total sales, over time and by order type.
+* **[Refunds Report](/guide/reporting-analytics/refunds-report):** Money refunded, refund rate, days to refund, and where refunds come from.
+* **[Subscription Report](/guide/reporting-analytics/subscription-report):** MRR and subscription health right now, and new, churned, and renewed subscriptions in the period.
+* **[Retention Report](/guide/reporting-analytics/retention):** Subscription retention, MRR retention, and renewal rate, with lifetime estimates in Pro.
+* **[Cohorts Report](/guide/reporting-analytics/cohorts):** How long each group of subscribers stays, by the month or year they first paid.
+* **[Future Renewals Report](/guide/reporting-analytics/future-renewals):** A forecast of upcoming renewal income at your own renewal rates.
+* **[Installments Report](/guide/reporting-analytics/installments-report):** Money collected and still scheduled on installment plans, and the plans that fall behind.
+* **[Product Report](/guide/reporting-analytics/product-report):** Net sales, units, orders, and refund rate for every product and variant.
+* **[Compare Products Report](/guide/reporting-analytics/product-compare-report):** Up to six products or variations side by side (Pro).
+* **[Customer Report](/guide/reporting-analytics/customer-report):** New and returning customers, repeat purchases, lifetime value, and top customers.
+* **[Order Sources Report](/guide/reporting-analytics/order-sources-report):** New customers by channel and orders by UTM campaign, source, and medium.
+* **[Coupons Report](/guide/reporting-analytics/coupons-report):** Discount given, coupon use, and how coupon customers compare with full-price ones.
+* **[Payment Methods Report](/guide/reporting-analytics/payment-methods-report):** Sales, payment success, failed orders, and revenue at risk for each gateway.
+* **[Locations Report](/guide/reporting-analytics/locations-report):** Net sales and customers by country, and by state and city in Pro.
+* **[Accounting Export](/guide/reporting-analytics/accounting-export):** A CSV or JSON file of every sale and refund with its tax line, currency, and exchange rates (Pro).
 
-By regularly reviewing these reports, you can gain a deeper understanding of your store's health and strategize for future growth.
+By using these reports regularly, you can see what drives your sales, keep the customers you win, and plan your store's growth with confidence.
