@@ -67,7 +67,7 @@ Leave either field blank to skip its suffix.
 
 Controls how tax is presented to shoppers and on your documents — the checkout and cart summary, receipts, PDF invoices, order emails, and the order views in both the admin area and the customer dashboard. Pick a style from the **Tax Display Style** dropdown:
 
-![Screenshot of the Tax Display Style dropdown showing the Simplified and Itemized options with the Tax Label field](/images/tax/configuration-and-classes/tax-display-style.webp)
+![Screenshot of the Tax Display Style dropdown showing the Simplified and Itemized options](/images/tax/configuration-and-classes/tax-display-style.webp)
 
 * **Simplified (single line + details):** tax is shown as a single, tidy line (one label and one amount) with a **See details** link that expands the full per-rate breakdown on demand. Per-item tax badges are hidden to keep the summary clean. This is the Amazon-style presentation most storefronts expect.
 * **Itemized (per-item tax + breakdown):** the detailed presentation. Every taxable line item carries its own tax badge, and the full tax-breakdown-by-rate table is always visible. Choose this when you want tax spelled out on each line.
@@ -125,7 +125,9 @@ When an order qualifies for reverse charge, FluentCart prints the required legal
 
 > Reverse charge — Article 196, Council Directive 2006/112/EC. Customer is liable for VAT.
 
+<!-- TODO(screenshot): add guide/public/images/tax/configuration-and-classes/reverse-charge-notice.webp (needs a reverse-charged EU B2B order on cart.local), then restore:
 ![Screenshot of a PDF invoice showing the automatic reverse-charge legal notice beneath the tax breakdown](/images/tax/configuration-and-classes/reverse-charge-notice.webp)
+-->
 
 This mention appears at checkout and on every generated document — order and renewal receipts, refund notices, PDF invoices, and order emails — satisfying the EU VAT Directive's Article 226(11a) requirement. Orders placed before the upgrade keep whatever declaration was stored with them at the time.
 

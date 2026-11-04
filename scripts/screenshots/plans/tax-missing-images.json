@@ -1,0 +1,72 @@
+{
+  "outDir": "guide/public/images/tax",
+  "viewport": {
+    "width": 1600,
+    "height": 1100
+  },
+  "steps": [
+    {
+      "admin": "/settings/tax_settings"
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 1900
+      }
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "click": ".fct-setting-form-row:has-text(\"Tax Display Style\") .el-select"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "shot": {
+        "name": "configuration-and-classes/tax-display-style",
+        "clip": "app",
+        "crop": {
+          "height": 2150
+        }
+      }
+    },
+    {
+      "press": "Escape"
+    },
+    {
+      "admin": "/settings/tax_settings/tax_rates_country_single/US/US"
+    },
+    {
+      "wait": 1500
+    },
+    {
+      "click": ".fct-tax-class-tabs__add"
+    },
+    {
+      "wait": 500
+    },
+    {
+      "wait": 400
+    },
+    {
+      "fill": {
+        "selector": ".fct-tax-class-tabs__inline-create input",
+        "value": "Books"
+      }
+    },
+    {
+      "wait": 300
+    },
+    {
+      "shot": {
+        "name": "tax-rates/inline-tax-class",
+        "clip": {
+          "element": ".fct-tax-class-tabs__list",
+          "pad": 14
+        }
+      }
+    }
+  ]
+}
