@@ -1,4 +1,4 @@
- # Viewing & Searching Customers
+# Viewing & Searching Customers
 
 The customers list in FluentCart provides an organized overview of all individuals who have interacted with your store. This guide will show you how to navigate this list and effectively use search and filtering options to find specific customer profiles.
 
@@ -16,6 +16,11 @@ The Customers list table presents key information for each customer at a glance:
 * **LTV (Lifetime Value):** This shows the total amount of money a customer has spent in your store over their entire history. It helps you quickly identify your most valuable customers. 
 * **Last Purchase Date:** Shows the date and time of their most recent purchase. 
 * **Customer Since:** Displays the date and time when the customer's record was first created in your system. 
+
+Above the table, two more controls help you manage the list:
+
+* **Add Customer:** Creates a customer record by hand.
+* **More actions > Export Customers:** Downloads the list as a file. See [Exporting Your Store Data](/guide/store-management/exporting-data) for the export options.
 
     ![Screenshot of Customers List Page](/images/store-management/viewing-searching-customers/customers-list.webp)
 

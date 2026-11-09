@@ -1,4 +1,4 @@
- # Using Advanced Customer Filters
+# Using Advanced Customer Filters
 
 FluentCart's **Advanced Filter** tool on the Customers screen allows you sort your customers into groups and quickly find exact groups of customers by using very specific rules. This is super useful for sending special ads to certain groups, understanding your customers, or doing certain office jobs.
 
@@ -12,11 +12,11 @@ The Advanced Filter enables you to combine various properties to create precise 
 
 * **Order Property:** This allows you to filter customers based on aspects of their orders.
     * **By Order Items:** Find customers based on the specific items they bought.
-    * **Purchase:** Filter customers by the number of purchases they have made (e.g., customers with more than 5 purchases, or exactly 1 purchase).
+    * **Purchases:** Filter customers by the number of purchases they have made (e.g., customers with more than 5 purchases, or exactly 1 purchase).
     * **First Purchase Date:** Filter customers based on the date of their very first order. This is useful for identifying new customer cohorts or specific periods of acquisition.
     * **Last Purchase Date:** Filter customers based on the date of their most recent order. This is helpful for identifying recent buyers or customers who haven't purchased in a while.
 
-* **Customer Property:** This new feature lets you filter based on customer-specific details.
+* **Customer Property:** This lets you filter based on customer-specific details.
 
      * **Customer Name:** Find customers by their first or last name.
 
@@ -28,8 +28,8 @@ The Advanced Filter enables you to combine various properties to create precise 
     * **Label Name:** Select one or more labels to find all customers who have been tagged. This is a great way to view specific customer segments you have created.
 
 * **Adding Multiple Conditions:**
-    * Click **"+ Add"** to add another rule for filtering. This typically functions as an "AND" condition, meaning all criteria must be met.
-    * Click the **"+ OR"** button to add an alternative filter condition. This allows you to find customers who meet *either* the previous set of criteria *or* the new one.
+    * Click **Add** next to **Add new properties** to add another rule to the same group. Rules in one group work as an "AND" condition, meaning all criteria must be met.
+    * Click **+ OR** below the groups to add an alternative group. This "OR" condition finds customers who meet *either* the previous set of criteria *or* the new one.
 
         ![Screenshot of Advanced Filter Button](/images/store-management/using-advanced-filter/customer-advanced-filter-button.webp) 
 
@@ -39,20 +39,24 @@ The Advanced Filter enables you to combine various properties to create precise 
 1.  After setting your desired filter conditions, click the **"Apply"** button to view the filtered list of customers.
 2.  To clear all applied filters and view the complete customer list again, click the **"Reset"** button.
 
-## Saving Custom Filter Views (New Feature!)
+## Saving Custom Filter Views
 
 If you frequently use the same advanced filters, you can save them as quick-access tabs.
+
+::: info
+Saving views requires **FluentCart Pro**. Without Pro, **Save as view** shows an upgrade notice. The Advanced Filter itself is free.
+:::
 
 1. **Save your filter:** After setting your desired conditions, click **"+ Save as view"** next to the **Apply** and **Reset** buttons.
 
 ![Screenshot of Advanced Filter Button](/images/store-management/using-advanced-filter/filter-1.webp)
 
-2. **Name your view:** Give it a descriptive name (e.g., **"High LTV Customers"** or **"Recent Hoodie Buyers"**) and, optionally, a short description.
+2. **Name your view:** Give it a descriptive name (e.g., **"High LTV Customers"** or **"Recent Hoodie Buyers"**) and, optionally, a short description. Turn on **Make public (visible to all users)** if other admins should see the view too, then click **Save View**.
 3. **Access anytime:** Open the **More views** dropdown beside your default tabs to quickly reuse your saved filters.
 
 ![Screenshot of Advanced Filter Button](/images/store-management/using-advanced-filter/filter-2.webp)
 
-4. **Delete a view:** In the **More views** dropdown, click the trash icon next to a view name you no longer need.
+4. **Delete a view:** In the **More views** dropdown, click the trash icon next to a view name you no longer need. Only the person who created a view can delete it.
 
 Using the Advanced Filter effectively, and saving your most-used views, helps you gain deeper customer insights and manage customers faster.
 
