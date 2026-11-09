@@ -21,7 +21,7 @@ The Coupons list table provides key information for each coupon at a glance:
 * **Amount:** The value of the discount.
 * **Usage:** Shows how many times the coupon has been used versus its total limit.
 * **Stackable:** Indicates if the coupon can be combined with other discounts.
-* **Status:** : Here shows if the Coupon is active or inactive.
+* **Status:** The coupon's status. A coupon whose end date has passed shows **Expired**. For a coupon scheduled to start later, hover the info icon to see its start date (**Available On**).
 * **Expiry Date:** The date when the coupon expires.
 * **Actions:** Click the three vertical dots for action options. From here, you can delete or edit coupons.
 
@@ -32,8 +32,10 @@ The Coupons list table provides key information for each coupon at a glance:
 You can quickly filter your coupons based on their status:
 
 * **All:** Displays all coupons, regardless of their status.
-* **Active:** Shows only coupons that are currently enabled and usable.
-* **Inactive:** Displays coupons that are expired, disabled, or not yet active.
+* **Active:** Shows coupons whose status is **Active**. A coupon whose end date has passed keeps that status, so it still appears here (the list marks it **Expired**).
+* **Inactive:** Shows coupons whose end date has passed, plus every coupon whose status isn't **Active**, such as disabled, expired, or scheduled coupons.
+
+To find a specific coupon, use the search box. You can search by ID, title, amount, or code.
 
 ## Creating New Coupons
 
