@@ -4,13 +4,15 @@ Cloudflare Turnstile is a powerful, privacy-first security solution that provide
 
 Turnstile works invisibly in the background, ensuring your shoppers enjoy a smooth, puzzle-free checkout while your store remains protected from automated "carding" attacks and fake order submissions.
 
+Turnstile is included in the free FluentCart plugin. It protects your checkout page, any page that uses the `[fluent_cart_checkout]` shortcode, and the modal checkout. If the Turnstile check fails, the order is not placed and the customer is asked to try again.
+
 ## Step 1: Enabling Turnstile in FluentCart
 
 Before heading to Cloudflare, you need to prepare the integration within your WordPress site.
 
 1.  Log in to your **WordPress Dashboard**.
 2.  Navigate to **FluentCart > Settings** in the side menu.
-3.  Click on the **Features & Addon** section in the left-hand sidebar.
+3.  Click **Features & addon** in the left-hand sidebar.
 4.  Find the **Cloudflare Turnstile** card and toggle the switch to **Active**.
 
 ![Cloudflare Turnstile Integration](/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-1.webp)
@@ -54,10 +56,12 @@ Now, let's link the two platforms to finalize the security layer.
 2.  **Copy and Paste:**
     * Copy the **Site Key** from Cloudflare and paste it into the **Turnstile Site Key** field in FluentCart.
     * Copy the **Secret Key** from Cloudflare and paste it into the **Turnstile Secret Key** field.
-3.  **Save Changes:** Click the **Save Settings** button at the bottom right.
+3.  **Verify the keys (optional):** Click **Verify Keys**. FluentCart runs a test challenge with Cloudflare and shows **Turnstile keys are valid and working.** If it shows an error, check that your domain is listed under the widget's hostnames in Cloudflare.
+4.  **Save Changes:** Click the **Save Settings** button at the bottom right. Verifying the keys does not save them.
 
-You should see a "Settings Saved" confirmation. Your checkout page is now officially protected by Cloudflare Turnstile.
+You should see a **Settings saved successfully** confirmation. Your checkout page is now officially protected by Cloudflare Turnstile.
 
+<!-- TODO(screenshots): trunstile-integration-fluentcart-7.webp is outdated: it has no Verify Keys button. Retake the Cloudflare Turnstile card with the Verify Keys button and the Save Settings button visible. Update later. -->
 ![Cloudflare Turnstile Integration](/images/integrations/cloudflare-turnstile/trunstile-integration-fluentcart-7.webp)
 
 ## How to Verify the Integration

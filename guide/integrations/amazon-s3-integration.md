@@ -1,7 +1,7 @@
 # FluentCart with Amazon S3
 
 ::: tip This page has moved
-Amazon S3 now has its own dedicated section under the **Storage** menu in FluentCart, alongside Cloudflare R2. The setup experience has been rebuilt into a guided wizard with live bucket browsing, in-UI bucket creation, and a dedicated security step.
+Amazon S3 is now set up from **FluentCart > Settings > Storage Settings**, alongside Local storage and Cloudflare R2 (Cloudflare R2 needs FluentCart Pro). The setup experience has been rebuilt into a guided wizard with live bucket browsing, in-UI bucket creation, and a dedicated security step.
 
 Head to the new guide for the current setup:
 

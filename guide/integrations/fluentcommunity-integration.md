@@ -1,4 +1,4 @@
-# FluentCommunity Integrating
+# FluentCommunity Integration
 
 Connecting FluentCart with FluentCommunity lets you automatically manage your customers' access to community spaces and courses. When a customer buys a product, you can instantly enroll them in a specific course or add them to an exclusive space.
 
@@ -15,8 +15,8 @@ Before you begin, it's helpful to decide which type of integration best suits yo
 * **Use a Product-Specific Integration when:** You want a targeted action to apply *only to customers who buy a specific product or one of its variations*.
     * *Example:* Enrolling customers who bought your "Beginner's Yoga Course" into the corresponding "Yoga Students" space and course within FluentCommunity.
 
-> **Important Note on Priority**
-> If a customer purchases a product that has a specific integration rule, the **product-specific rule will always take priority** over any global rules.
+> **How global and product feeds combine**
+> When a customer buys a product that has its own feed, both the product feed and any matching global feeds run. Product feeds run first, then global feeds.
 
 ### Part 1: Global Integration (For All Products)
 
@@ -31,7 +31,7 @@ First, you'll need to go to the correct screen in your WordPress dashboard.
 
 #### Creating a New FluentCommunity Feed
 
-1.  On the **Integrations & Addons** dashboard, click the **Add Integration** button at the top right.
+1.  On the **Integrations** screen, click the **Add Integration** button at the top right.
 2.  Select **FluentCommunity** from the dropdown menu. This will take you to the configuration screen for your new automation feed.
 
 ![Global Integration FluentCommunity](/images/integrations/fluentcommunity/integrateing-fluentcommunity-1.webp)
@@ -48,7 +48,7 @@ A product-specific integration is ideal for highly targeted automations, like gr
 #### Accessing Product Integrations
 
 1.  Inside the product editor, you will see a series of tabs at the top. Click on the **Integrations** tab.
-2.  On the Product Integrations screen, click the **Add Integration** button and select **FluentCommunity Feed**. This will open the feed configuration screen.
+2.  On the Product Integrations screen, click the **Add Integration** button and select **FluentCommunity**. This will open the feed configuration screen.
 
 ![Product Specific Integration FluentCommunity](/images/integrations/fluentcommunity/integrateing-fluentcommunity-2.webp)
 
@@ -59,24 +59,16 @@ Whether you are creating a global or a product-specific feed, the configuration 
 * **Feed Title:** Give your feed a descriptive name for your own internal reference (e.g., "Enroll in Beginner's Course" or "Add All Customers to Welcome Space").
 * **Add to Spaces:** Select one or more FluentCommunity Spaces you would like to automatically add the customer to upon purchase.
 * **Add to Courses:** Select one or more FluentCommunity Courses you would like to automatically enroll the customer in.
-* **Remove from Spaces:** (Optional) Select any Spaces you would like to automatically remove the customer from. This is useful if a new purchase moves them to a more advanced group.
-* **Remove from Courses:** (Optional) Select any Courses you would like to automatically unenroll the customer from.
+* **Remove From Spaces:** (Optional) Select any Spaces you would like to automatically remove the customer from. This is useful if a new purchase moves them to a more advanced group.
+* **Remove From Courses:** (Optional) Select any Courses you would like to automatically unenroll the customer from.
 * **Mark the community profile as verified:** Enable this option to automatically grant the customer a "verified" status within FluentCommunity, which can be used to signify them as a paying member.
-* **Remove from selected Courses/Spaces on Refund or Subscription Access Expiration:** This is a crucial automation feature. If enabled, FluentCart will automatically revoke the user's access to the selected spaces and courses if their order is refunded or their subscription expires.
+* **Remove from selected Courses/Spaces on Refund or Subscription Access Expiration:** This is a crucial automation feature. This box is checked by default. With it checked, FluentCart removes the customer from the selected spaces and courses when the order is fully refunded or canceled, or when the subscription's paid access expires. Canceling a subscription does not remove access until the paid period ends.
 * **Event Trigger:** Select the specific store event that will trigger this automation. 
  The available Event Triggers are:
 
-  * Order Paid (Payment / Subscription)
-  * Order Canceled
-  * Order Refunded (Full)
-  * Subscription Activated
-  * Subscription Canceled
-  * Subscription Renewed
-  * Subscription End of Term (Completed)
-  * Subscription Expired / End of Access Validity
-  *  Shipping
-  * Order Shipped
-  * Order Delivered
+  * **Orders:** Order Paid (Payment / Subscription), Order Canceled, Order Refunded (Full)
+  * **Subscriptions:** Subscription Activated, Subscription Reactivated, Subscription Canceled, Subscription Renewed, Subscription End of Term (Completed), Subscription Expired / End of Access Validity
+  * **Shipping:** Order Shipped, Order Delivered
 
 * **Run on Selected Variations Only (Product-Specific Only):** This powerful option appears only on product-specific integrations. It allows you to run the automation only when a customer purchases a specific variation of the product (e.g., a "Lifetime Access" tier). Leave this empty to have the feed run for all variations of this product.
 * **Enable this Integration:** Ensure the toggle at the top right is switched on to make the automation active. If it is disabled, the feed will be saved but will not run.

@@ -13,7 +13,7 @@ First, you need to activate the connection between the two plugins.
 
 1.  From your WordPress dashboard, navigate to **FluentAffiliate > Settings**.
 2.  Click on the **Integration Settings** tab.
-3.  You will see a list of available integrations. Find **Fluent Cart** and make sure the toggle next to it is enabled.
+3.  You will see a list of available integrations. Find **FluentCart** and make sure the toggle next to it is enabled.
 
 ![Enable FluentCart integration with FluentAffiliate](/images/integrations/fluentaffiliate/enable-the-fluentcart-settings.webp)
 
@@ -30,6 +30,7 @@ In the management panel, you can fine-tune how commissions work for your FluentC
 
 * **Disable Referrals on Upgrades:** Check this box to ensure that no referrals will be added on purchased upgrades. This gives you more control over commission payouts for existing customers who upgrade their plan.
 * **Enable custom rate for specific products or categories:** This is a powerful feature that lets you override your default commission rate. Check this box if you want to set special commission rates for specific products or entire product categories.
+* **Enable Referrals on Subscription Renewals:** *(FluentAffiliate Pro, shown when renewal referrals are turned on in FluentAffiliate's referral settings)* Creates a referral for each subscription renewal order. A second **Enable custom rate for specific products or categories on renewals** option lets you set different renewal rates.
 
 > [!NOTE]
 > This feature gives you the flexibility to offer different commission rates for different products. For example, you could offer a higher commission on a new product as an incentive for affiliates to promote it more heavily.
@@ -50,7 +51,7 @@ You give this coupon code directly to one of your affiliates. This way, whenever
 
 1.  In your WordPress dashboard, navigate to **FluentCart Pro > Coupons**.
 2.  Create a new coupon or edit an existing one.
-3.  On the coupon edit screen, find the **FluentAffiliate** section on the right-hand side.
+3.  On the coupon edit screen, find the **Fluent Affiliate** section on the right-hand side.
 4.  Click on the **Select Affiliate** field and begin typing the affiliate's name. Select their affiliate from the list when it appears.
 5.  **Save** the coupon. Now, when this coupon is used, the selected affiliate will be credited with the referral.
 

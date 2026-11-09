@@ -1,8 +1,3 @@
----
-title: "FluentBooking Integration"
-description: "A comprehensive guide on connecting FluentCart with FluentBooking to sell appointments and services directly through your booking forms."
----
-
 # FluentBooking Integration
 
 **FluentCart** is designed to be fast, flexible, and scalable, making it easy to manage your eCommerce business. With this integration, you can sell consultations, classes, services, or products directly from your booking forms-no third-party plugins required.
