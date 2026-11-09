@@ -1,10 +1,10 @@
- # Pages Setup
+# Pages Setup
 
 The **Pages Setup** screen in FluentCart lets you connect key store features to specific pages on your WordPress site. This ensures that customers can access the Shop, Cart, Checkout, Customer Profile, and other essential pages correctly.
 
 ## Accessing Pages Setup
 
-Go to your WordPress dashboard, then go to **FluentCart Pro** > **Settings** in the side menu, and click the **Pages Setup** tab.
+Go to **FluentCart Pro > Settings > Store Settings > Pages Setup**.
 
 ## Assigning Core Pages
 
@@ -18,15 +18,19 @@ For each core FluentCart functionality, you need to select an existing WordPress
     * **Required Shortcode:** `[fluent_cart_cart]`
 * **Select Receipt Page:** Assigns the page that displays the order summary immediately after a successful purchase.
     * **Required Shortcode:** `[fluent_cart_receipt]`
+* **Select Order Review Page:** The page where customers review the products they bought, opened from the link in their order email. This option appears only while Product Reviews are switched on.
+    * **Required Shortcode:** `[fluent_cart_order_review]`
 * **Select Checkout Page:** Assigns the page where customers enter their billing, shipping, and payment information to finalize their purchase.
     * **Required Shortcode:** `[fluent_cart_checkout]`
 
+Don't have the page yet? Click the **+** button next to a dropdown, enter a **Page Name**, and click **Create Page**. FluentCart creates the page with the right shortcode and selects it. When a page is selected, **Edit** and **Preview** links appear below the dropdown.
 
-    ![Screenshot of Pages Setup Tab](/images/settings-configuration/pages-setup/pages-setup.webp)
+<!-- TODO(screenshots): pages-setup.webp is outdated: retake with Product Reviews switched on so the Select Order Review Page row shows (sidebar labels have also changed). Update later. -->
+![Screenshot of Pages Setup Tab](/images/settings-configuration/pages-setup/pages-setup.webp)
 
 ## Saving Your Settings
 
-After assigning all the necessary pages, remember to click the **"Save Settings"** button at the bottom right of the screen to apply your configurations.
+After assigning all the necessary pages, click **Save** (at the bottom of the form or top right) to apply your configurations.
 
 :::warning Important: Use Shortcodes!
 Always ensure that the specified shortcode is correctly embedded within the content editor of the WordPress page you select. Without the shortcode, the FluentCart functionality will not display on that page.

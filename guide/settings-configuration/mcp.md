@@ -22,10 +22,10 @@ Before you start, make sure you have the following in place:
 The MCP setup lives alongside FluentCart's other optional features.
 
 1. From your WordPress dashboard, go to **FluentCart Pro > Settings**.
-2. Open the **Features & Addon** tab.
+2. Open the **Features & addon** tab.
 3. Find the **MCP for AI Agents** card and click **Configure**.
 
-When MCP hasn't been set up yet, the card shows a **Setup Required** badge.
+When MCP hasn't been set up yet, the card shows a **Setup required** badge.
 
 ![Screenshot of the FluentCart Features & Addon page with the MCP for AI Agents card showing the Setup Required badge and the Configure button](/images/settings-configuration/mcp/fluentcart-mcp-1.webp)
 
@@ -33,15 +33,11 @@ When MCP hasn't been set up yet, the card shows a **Setup Required** badge.
 
 If no adapter is active yet, the **MCP Connection** panel asks you to install one before the endpoint can respond.
 
-* Click **Download FluentHub** to install the recommended adapter, then activate it and reload the page.
-* Prefer to do it yourself? Download the ZIP from [https://static.wpmanageninja.com/fluent-toolkit.zip](https://static.wpmanageninja.com/fluent-toolkit.zip) and upload it via **Plugins → Add New → Upload Plugin**, then activate it.
+* With FluentCart Pro (or another Fluent Pro plugin) active, the panel shows **Install FluentHub** (or **Activate FluentHub** if it is already installed), which installs and activates it for you.
+* Without Pro, click **Download FluentHub** to get the ZIP, upload it via **Plugins → Add New → Upload Plugin**, activate it, and reload the page. You can also download the ZIP directly from [https://static.wpmanageninja.com/fluent-toolkit.zip](https://static.wpmanageninja.com/fluent-toolkit.zip).
 * If you already have FluentHub or the standalone MCP Adapter active, FluentCart skips this step and you can move straight to enabling MCP.
 
 ![Screenshot of the MCP Connection panel showing the FluentHub is required notice with the Download FluentHub button](/images/settings-configuration/mcp/fluentcart-mcp-2.webp)
-
-::: tip
-FluentCart Pro can install FluentHub for you in one click. The tip inside the panel will point this out when it's available.
-:::
 
 ## Step 3: Turn On MCP
 
@@ -136,6 +132,8 @@ claude mcp add \
 
 Paste the generated `mcpServers` block into your Claude Desktop config (**Settings > Developer > Edit Config**), then restart Claude Desktop.
 
+If your store runs locally or uses a self-signed certificate, tick **Local/self-signed site (disable TLS verification)** on the Claude Desktop tab before copying the snippet. Leave it off for live sites.
+
 ### Codex
 
 Add a custom MCP server using **Streamable HTTP** transport, your endpoint URL, and the `Authorization` header from the snippet.
@@ -176,15 +174,15 @@ These change your data, so they always respect what the connected account is per
 
 * **Orders:** change the order or shipping status, add an internal staff note, or refund an order.
 * **Customers:** create a new customer or update an existing one.
-* **Subscriptions:** cancel a subscription.
+* **Subscriptions:** cancel a subscription immediately through its gateway. Pausing, resuming, and end-of-period cancellation aren't available to assistants.
 * **Coupons:** create, update, or deactivate a coupon.
 * **Labels:** add or remove labels on an order, customer, or subscription.
 
 ::: tip Built-in safety for refunds and cancellations
-Refunding an order and canceling a subscription are **two-step actions**. The assistant must first run a preview, then confirm before anything actually happens, which makes accidental refunds or cancellations effectively impossible. Live (real-money) refunds also require your explicit approval, while test-mode refunds run freely.
+Refunding an order and canceling a subscription are **two-step actions**. The assistant must first run a preview, then confirm before anything actually happens, which makes accidental refunds or cancellations effectively impossible. Live (real-money) refunds and subscription cancellations are **blocked by default**. A developer must enable them with the `mcp_allow_live_gateway` option or the `fluent_cart/mcp_allow_live_gateway` filter (there is no setting in the UI). In test mode they always work.
 :::
 
-FluentCart Pro can add further tools on top of this set.
+With FluentCart Pro, assistants can also list and look up licenses (**List Licenses**, **Get License**).
 
 ## Security & Permissions
 
