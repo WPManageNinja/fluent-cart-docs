@@ -2,6 +2,10 @@
 
 The **Order Bump** feature in FluentCart allows you to present a last-minute, complementary product offer directly on the checkout page. This simple, high-converting technique encourages customers to add an extra item to their cart before completing their purchase, significantly increasing your average order value (AOV).
 
+::: info
+Order Bump is a **FluentCart Pro** feature. The **Order Bump** menu item appears only while Pro is active and the module is switched on.
+:::
+
 ## 1. Enabling the Order Bump Feature
 
 Before you can create any order bumps, you must first activate the feature in your store settings.
@@ -14,7 +18,7 @@ Before you can create any order bumps, you must first activate the feature in yo
 
 ![Order Bump](/images/store-management/order-bump/order-bump-1.webp)
 
-### 2. Creating a New Order Bump Offer
+## 2. Creating a New Order Bump Offer
 
 Once the feature is active, you can create and manage your offers.
 
@@ -29,7 +33,7 @@ Once the feature is active, you can create and manage your offers.
 5.  To start creating your new offer, you must first define its core identity:
 
     * **Bump Name:** Enter the main title for your offer. This is the compelling headline that customers will see, so make it attractive.
-    * **Order Bump Product:** From the dropdown menu, select the product that you want to offer as the order bump.
+    * **Order Bump Price:** Select the product variation you want to offer as the bump. (The field is labeled **Order Bump Price** even though you pick a product here.)
 
 Click the **Create** button.
 
@@ -37,46 +41,47 @@ Click the **Create** button.
 
 After clicking "Create," you will be taken to the main configuration screen to set up the rest of your order bump's rules and design.
 
-### 3. Configuring the Order Bump Details
+## 3. Configuring the Order Bump Details
 
 The Order Bump configuration screen is broken down into simple, manageable steps:
 
-#### **A. Basic Info**
+#### A. Basic Info
 
-* **Enable this Order Bump:** Toggle this switch to instantly turn the offer on or off without deleting the configuration.
+* **Enable this Order Bump:** Tick this checkbox to make the offer active. Untick it to keep the bump as a **Draft** without deleting it.
 * **Bump Title:** This is the headline that captures the customer’s attention at checkout (e.g., "Get this magic offer in 50% discount").
 * **Bump Description:** Add a short, exciting description or a compelling reason why the customer should take the offer.
 
-#### **B. Promotional Product**
+#### B. Promotional Product
 
-* **Select Product:** Choose the specific product you want to offer as the bump. This item will be added to the customer's cart if they accept the offer. Both **Published** and **Private** products are now available in this dropdown — so you can offer hidden, customer-specific, or invite-only items as a bump without having to make them publicly visible in your store.
+* **Promotional Product:** Shows the product you picked when creating the bump. Click **Change** to offer a different product. This item is added to the customer's cart if they accept the offer. Both **Published** and **Private** products are available, so you can offer hidden, customer-specific, or invite-only items as a bump without having to make them publicly visible in your store.
 
-#### **C. Discount**
+#### C. Discount
 
 * **Discount Amount:** Define the savings for this bump product. You can set the discount as a fixed amount or a **Percentage**.
 * **Enable Coupon Discount on top of offer discount:** This option determines if other global coupons applied to the main cart can also be stacked on top of the Order Bump discount.
 * **Free shipping for this offer item:** If desired, you can enable free shipping specifically for the bump product.
 
-#### **D. Display Conditions (Detailed)**
+#### D. Display Conditions (Detailed)
 
 This is the crucial step where you define exactly when and for whom this offer appears at checkout using conditional logic.
 
 * **Enable Conditions for this Order Bump:** Check this box to activate the conditional logic.
 * **Adding Conditions:** You can stack multiple conditions using dropdown menus to create precise rules based on cart content and value:
     * **Cart Items:** Check if a specific product (**Fleece Jacket**) **Exists** or doesn't exist in the customer's cart.
-    * **Items Subtotal:** Set a threshold for the cart value (e.g., **Items Subtotal** is **Greater Than $30**).
+    * **Items Subtotal:** Set a threshold for the cart value (e.g., **Items Subtotal** is **Greater Than $30**). The operators are **Greater Than**, **Less Than**, **Equals**, and **Not Equals**. **Greater Than** and **Less Than** also match an exactly equal subtotal.
+* **Add Condition:** Adds another row to the same group. Every row in a group must match (AND logic).
 * **Adding Condition Groups:** The **Add New Condition Group** button allows you to set up separate, alternative sets of rules (OR logic). The bump will display if *any* of the defined groups' conditions are met.
 
-#### **E. Priority**
+#### E. Priority
 
-* **Set Priority:** If you have multiple Order Bumps active with overlapping display conditions, the priority number (e.g., 1, 2, 3) determines which offer will be displayed first. **Lower numbers mean higher priority.**
+* **Priority:** When several order bumps qualify, the bump with the **higher** priority number is shown first. Checkout shows at most **five** bumps at a time.
 
 ![Order Bump](/images/store-management/order-bump/order-bump-3.webp)
 
-After configuring all the details, click **Save** (standard practice) to activate your bump offer.
+After configuring all the details, click **Update** in the **Unsaved Changes** bar at the top of the page (or press Cmd+S / Ctrl+S). The offer goes live only if **Enable this Order Bump** is ticked.
 
 
-### 4. Managing and Viewing Order Bumps
+## 4. Managing and Viewing Order Bumps
 
 On the main **Order Bumps** screen, you can manage all your existing offers:
 
@@ -91,6 +96,8 @@ On the main **Order Bumps** screen, you can manage all your existing offers:
     * The price. When the offer has a discount, the original price is struck through beside the discounted price, with the amount saved (for example **(Save 5.00)**).
     * Your description, when you added one.
     * A **Yes, add this to my order** checkbox. Ticking it adds the item to the cart, and unticking it removes the item again.
+
+    A bump is hidden when its product is already in the customer's cart, and a subscription bump is hidden when the cart already contains a subscription. Bumps also don't show on checkouts that can't take extra items, such as a custom payment link or a renewal payment.
 
 ![Screenshot of an order bump card on the checkout page with the image, bump name badge, product and variation, struck-through price with the amount saved, and the Yes, add this to my order checkbox](/images/store-management/order-bump/order-bump-checkout-card.webp)
 
