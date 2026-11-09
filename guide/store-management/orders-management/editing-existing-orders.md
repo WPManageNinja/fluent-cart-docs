@@ -1,4 +1,4 @@
- # Editing Existing Orders
+# Editing Existing Orders
 
 FluentCart provides robust functionality to edit an order even after it has been placed. This allows you to make necessary adjustments such as adding or removing products, changing quantities, applying coupons, or modifying shipping costs.
 
@@ -12,7 +12,7 @@ The **Edit** button is disabled, with an explanatory tooltip, whenever any of th
 :::
 
 :::info Returning to Processing Status
-If a Completed order needs editing, you can use the "Back to processing" option from the "More Actions" dropdown on the Order Details page to revert its status to Processing. This only reverts the order **status** — it does not change the order's payment status. If the order is already paid, editing stays disabled afterward; this action only restores editability for a completed order that isn't marked as paid.
+If a Completed order needs editing, you can use the "Back to processing" option from the **More Action** dropdown on the Order Details page to revert its status to Processing. This only reverts the order **status** — it does not change the order's payment status. If the order is already paid, editing stays disabled afterward; this action only restores editability for a completed order that isn't marked as paid.
 :::
 
 ## Entering Edit Mode
@@ -40,7 +40,7 @@ You can add new products to the existing order:
     ![Screenshot of Add Product Search Field in Edit Mode](/images/store-management/editing-existing-orders/add-product-search-edit-mode.webp)
 
 3.  A modal window will appear, listing your products. Select the desired products and their variations (if applicable) by checking the box next to them.
-5.  Click **"Add Items"** to add them to the order.
+4.  Click **"Add Items"** to add them to the order.
 
  ![Screenshot of Add Items Modal](/images/store-management/editing-existing-orders/add-items-modal.webp)
 
@@ -74,7 +74,7 @@ You can apply an order-level discount instead of a coupon. This option is only a
 
 1.  Locate the **"Add Discount"** option in the financial summary area.
 2.  In the dialog, enter a **Discount value** and, optionally, a **Reason for discount** — customers can see this reason.
-3.  Click **"Apply"**. The discount is staged on the order and saved along with your other changes when you click **"Disable Editing"**.
+3.  Click **"Apply"**. The discount is staged on the order and saved along with your other changes when you click **Update** in the **Unsaved Changes** bar.
 
 :::info Manual Discounts and Tax
 A coupon and a manual discount can't be on the same order at the same time: the **Add Discount** option is hidden whenever a coupon is applied, and applying a coupon while a manual discount is set removes that discount. They also affect tax differently: coupons are applied at the product/line-item level and can reduce that item's taxable amount, while a manual discount is a single order-level amount subtracted from the subtotal — it does not reduce the product taxable base or recalculate product tax. For example, a €100 taxable product with €20 tax and a €10 manual discount still totals €110, with tax unchanged at €20. See [Manual Discounts and Tax](/guide/store-management/orders-management/creating-new-orders#manual-discounts-and-tax) for more detail.
@@ -84,7 +84,11 @@ A coupon and a manual discount can't be on the same order at the same time: the 
 
 After making all necessary modifications:
 
-1.  Click the **"Disable Editing"** button in the top right corner.
-    * This action will save all your changes to the order.
-    * If the order total has increased, you may be prompted to [collect additional payment](/guide/store-management/orders-management/collecting-payments-modified-orders).
+<!-- TODO(screenshots): new image needed: capture the Unsaved Changes bar with the Discard and Update buttons at the top of an order in edit mode. Update later. -->
+
+1.  Click **Update** in the **Unsaved Changes** bar that appears at the top of the screen as soon as you change something (or press Cmd+S / Ctrl+S). Click **Discard** to throw the changes away.
+2.  Click **Disable Editing** to leave edit mode. This button only closes the editing tools; it doesn't save.
+3.  If the new total is higher than what the customer paid, the **Payment** card shows a **Total Due**. [Collect the additional payment](/guide/store-management/orders-management/collecting-payments-modified-orders) from the **Collect Payments** menu.
+
+Your changes are now saved to the order.
 

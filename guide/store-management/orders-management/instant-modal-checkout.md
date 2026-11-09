@@ -88,11 +88,11 @@ Replace `113` with the variation ID of your product. The `variation_id` attribut
 
 ## Implementation Method 4: The Elementor Widget
 
-If you build your pages with Elementor, FluentCart's **Buy Now Button** widget can trigger the instant checkout popup as well, no code needed. In the widget's **Content Tab**, set **Enable Modal Checkout** to **Yes**. See the [Elementor widgets guide](/guide/customization-and-themes/using-elementor-widgets) for setup details.
+If you build your pages with Elementor, the **Buy Now Button** widget from the **FluentCart Elementor Blocks** add-on can trigger the instant checkout popup as well, no code needed. In the widget's **Content Tab**, set **Enable Modal Checkout** to **Yes**. See the [Elementor widgets guide](/guide/customization-and-themes/using-elementor-widgets) for setup details.
 
-Using **Divi** instead? FluentCart's Buy Now module for Divi has the same **Enable Modal Checkout** option. See the [Divi modules guide](/guide/customization-and-themes/fluentcart-divi-modules) for details.
+Using **Divi** instead? The Buy Now module from the **FluentCart Divi Modules** add-on has the same **Enable Modal Checkout** option. See the [Divi modules guide](/guide/customization-and-themes/fluentcart-divi-modules) for details.
 
-Want shoppers to choose between a few products and pay without any popup at all? The [On-Page Checkout Form](/guide/customization-and-themes/on-page-checkout-form) places the full checkout directly on your landing page instead.
+Want shoppers to choose between a few products and pay without any popup at all? The [On-Page Checkout Form](/guide/customization-and-themes/on-page-checkout-form) (FluentCart Pro) places the full checkout directly on your landing page instead.
 
 ---
 

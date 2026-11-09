@@ -1,4 +1,4 @@
- # Creating New Orders (Manually)
+# Creating New Orders (Manually)
 
 FluentCart allows you to manually create new orders directly from your WordPress admin dashboard. This feature is particularly useful for taking phone orders, creating custom invoices for clients, or managing specific sales scenarios outside of the standard checkout process.
 
@@ -13,10 +13,8 @@ FluentCart allows you to manually create new orders directly from your WordPress
 
 3.  This will open a new order creation interface. You will need to:
     * **Customer Information:** Choose an existing customer from your store or you may create new.
-    * **Order currency:** When [multi-currency](/guide/settings-configuration/multi-currency-settings) is enabled, an **Order currency** card appears above the products. Pick any enabled currency to create the order in it. For a currency other than your base currency, enter prices in that currency; the card shows the rate, for example *1 USD = 0.79 GBP*. FluentCart calculates and validates the final prices when you save, using the same rate and rounding rules as the storefront checkout.
-    * **Products:** Search for and add the products the customer is purchasing.
-        * You can select product variants if applicable.
-        * Specify the quantity for each product.
+    * **Order currency:** When [multi-currency](/guide/settings-configuration/multi-currency-settings) is enabled, an **Order currency** card appears above the products. Pick any enabled currency to create the order in it. For a currency other than your base currency, enter prices in that currency; the card shows the rate, for example *1 USD = 0.79 GBP*. FluentCart calculates and validates the final prices when you save, using the same rate and rounding rules as the storefront checkout. Coupons, shipping, and manual discounts are calculated in the order currency too. If the rate changed since you loaded the page, FluentCart recalculates the total and asks you to review it and save again.
+    * **Products:** Use **Search products...** or **Browse** to add products, choose the variation, and set the quantity. You can also enter a **Custom Price** for a line.
     * **Have a Coupon:** If a discount coupon applies to this manual order, you can enter and apply it here. Applying a coupon removes any manual discount already added to the order.
     * **Add Discount:** If you want to add a discount for the order instead of a coupon, click the **Add Discount** option to enter a discount value and an optional reason. This option is only available when no coupon is applied — see [Manual Discounts and Tax](#manual-discounts-and-tax) below.
     * **Add Shipping Cost:** Manually you can add shipping charges for physical products.
@@ -24,13 +22,11 @@ FluentCart allows you to manually create new orders directly from your WordPress
     * **Notes:** Click the **Notes** icon to add any private notes or comments relevant to the order.
     * **Labels:**  A section for assigning custom labels.
 
-4.  **Choose Payment Method:** Select the payment method for this order. This might include:
-    * Marking the order as "Paid" if payment was received offline (e.g., cash, bank transfer).
-    * Generating a custom payment link to send to the customer for online payment.
-    * Processing payment directly if you have integrated payment gateways.
+4.  **Save the order:** Click **Save** in the **Unsaved Changes** bar at the top of the screen. FluentCart creates the order as unpaid and opens its Order Details screen.
 
-5.  **Finalize Order:** Once all details are correct and the payment method is selected, click the **Save** button finalize the order.
-![Screenshot of Create Order Button](/images/store-management/creating-new-orders/create-order-button2.webp) 
+    ![Screenshot of Create Order Button](/images/store-management/creating-new-orders/create-order-button2.webp) 
+
+5.  **Collect the payment:** On the Order Details screen, open **Collect Payments** in the **Transaction Details** card and choose **Mark order as paid** (for cash, bank transfer, or any payment taken outside FluentCart), **Custom Payment Link** (to let the customer pay online), or **Send Payment Reminder**. See [Collecting Payments](/guide/store-management/orders-management/collecting-payments-modified-orders).
 
 ## Manual Discounts and Tax
 
