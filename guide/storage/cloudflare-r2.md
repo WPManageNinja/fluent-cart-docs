@@ -294,7 +294,7 @@ Once saved, reload the Cloudflare R2 page in FluentCart and the credential field
 ## FAQs
 
 **Can I run Cloudflare R2 and Amazon S3 at the same time?**
-Yes — you can configure both and switch which one is active.
+Yes. You can configure both and keep both active. When you add a downloadable file, the **Storage Providers** dialog shows a tab for each active provider, so you choose where each file goes.
 
 **Can I change a bucket's jurisdiction after creation?**
 No. Jurisdiction is fixed at bucket creation. To change it, create a new bucket with the new jurisdiction and migrate your files across.

@@ -296,7 +296,7 @@ Once saved, reload the Amazon S3 page in FluentCart and the credential fields wi
 ## FAQs
 
 **Can I run S3 and Cloudflare R2 at the same time?**
-Yes — you can configure both and switch which one is active.
+Yes. You can configure both and keep both active. When you add a downloadable file, the **Storage Providers** dialog shows a tab for each active provider, so you choose where each file goes.
 
 **Is my secret key visible from the WordPress admin after I save it?**
 No. With Method A, keys live only in `wp-config.php`. With Method B, the secret is masked in the UI after save.

@@ -15,6 +15,7 @@ In this guide, you’ll learn how to create, configure, and manage bundle produc
 
 3.  This action will open a new **Add New Product** modal. 
     * Enter the **Bundle Title**. 
+    * Choose a **Variation Type** from the dropdown.
     * Select the product type, either **Physical Product** or **Digital Product**. 
     * Check the box labeled **Add as a Bundle** to combine multiple items into one package. 
 4.  Click the **"Add Product"** button, and you will be redirected to the **"Edit Product"** page to configure all details.
@@ -192,7 +193,7 @@ If a bundled item tracks stock, the bundle can't be bought in a quantity larger 
 * **URL Slug:** This is the unique web address for the bundle. FluentCart creates this automatically, but you can edit it manually.
 * **Limit purchases to 1 item per order:** Check this box if the bundle is an exclusive item or limited offer.
 
-Once all details are configured, click the **"Update"** or **"Save"** button at the top right to make your bundle live.
+Once all details are configured, click **Update** in the **Unsaved Changes** bar to save your bundle. Set the **Status** to **Publish** to make it live.
 
 ::: info
 Bundles don't have their own **Downloadable Asset(s)** section or license settings. Downloads and licenses come from the bundled items. Upgrade paths aren't available for bundle products.
