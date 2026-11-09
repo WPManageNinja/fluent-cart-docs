@@ -32,7 +32,7 @@ The modal fills itself in with the full refundable amount, so you only change wh
 * **Restock items to inventory:** Shown when a selected item has stock management turned on. It is ticked by default, and it puts the refunded units back into your inventory. It is not shown for a canceled order, because cancelling already restocked the items. Only units that never left your store go back into stock. If some of the refunded units had already shipped, the modal notes "Shipped units will not be restocked."
 * **Refund amount:** With items or shipping selected, FluentCart works out the amount for you, and that amount is also the most you can refund. You can lower it, for example to refund part of an item's price. Any amount you enter must be at least the shipping you are refunding plus the smallest unit of your currency. With nothing selected, you can type any amount up to the **Max refund amount for this transaction** shown below the field.
 * **Reason of refund:** An optional note. Your customers can see this reason. Hover over the information icon for the values Stripe accepts here.
-* **Subscription:** If the order includes a subscription that is still active, you will see **Cancel Subscription (if any)**. It is ticked by default, and it cancels the subscription at your payment provider immediately.
+* **Subscription:** If the order includes a subscription that is still active, you will see **Cancel Subscription (if any)**. It is ticked by default, and it cancels the subscription at your payment provider immediately. Untick it if the subscription should keep running.
 
 ::: info
 There is no license checkbox in the modal. With FluentCart Pro, the licenses issued for an order are disabled automatically when the order is refunded in full.
@@ -62,7 +62,7 @@ If the failure was a timeout, check your gateway's dashboard first, because the 
 ## After the Refund
 
 * **Payment status:** The order becomes **Refunded** once the total refunded reaches the net amount paid. Until then, it is **Partially Refunded**.
-* **Order summary:** The refund appears in the order's payment and financial summary, and the refunded items show their refunded quantities.
+* **Order summary:** The **Payment** card on the Order Details screen shows a **Total Refund** line and the updated **Net Payment**, and the refunded items show their refunded quantities.
 * **Stock:** Items you chose to restock are added back to your inventory.
 * **Activity log:** The order's Activity log records the refund event.
 * **Customer email:** FluentCart can email the customer after a refund. You control this with the **Send mail to customer after a refund** option in your [email notification settings](/guide/settings-configuration/email-configuration/configuring-email-notification).

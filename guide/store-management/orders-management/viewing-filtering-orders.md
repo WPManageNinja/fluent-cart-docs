@@ -1,4 +1,4 @@
- # Viewing & Filtering Orders
+# Viewing & Filtering Orders
 
 The Orders list is your central hub for tracking all transactions and customer purchases in your FluentCart store. This guide will show you how to view your orders and use filters to quickly find the specific orders.
 
@@ -15,9 +15,11 @@ Your orders are neatly organized in a table. Each row is a single order, and eac
 * **Items:** The number of distinct product items included in the order.
 * **Total:** The total monetary value of the order.
 * **Payment Status:** Indicates the current status of the payment.
-* **Status:** The current fulfillment or processing status of the order.
+* **Status:** The order status (Processing, Completed, On Hold, Canceled, Failed).
 * **Order Type:** Differentiates between various types of transactions.
-* **Action Icons:** On the far right of each row, you'll see icons that let you quickly print things like order details.
+* **View Invoice:** An icon on the far right opens the order's invoice/receipt.
+
+You can hide the **Customer**, **Items**, **Status**, **Order Type**, and action columns from the column settings.
 
     ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/orders-list.webp)
 
@@ -38,12 +40,13 @@ Just click the **More actions** button and select **Show Order Stats**. A summar
 *(If you want to hide this summary to get more space on your screen, just click the dropdown again and choose the **Hide Order Stats** option).*
 
 ### Show Bulk Actions
-Selecting this option from the dropdown will reveal checkboxes and bulk management tools on your orders list. This allows you to select multiple orders at once to change their statuses or perform other actions simultaneously, saving you a lot of time.
-
-Sometimes you need to apply the same action to many orders at once, such as removing old records. That's where bulk actions come in handy: simply select multiple orders and click **Delete Selected** button to remove them all at once.
+Selecting this option adds checkboxes to the list. Tick the orders you want, then click **Delete Selected** to remove them. Completed orders can't be deleted and are reported as skipped.
 
 ### Delete Test Orders
 When you are first setting up your store, you will likely create a few fake orders to test your payment gateways. Instead of deleting them one by one, simply click **Delete Test Orders** from the dropdown to instantly clean up your dashboard and reset your data before going live.
+
+### Export Orders
+Exports your orders to a CSV or JSON file. See [Exporting Your Store Data](/guide/store-management/exporting-data).
 
 ![Screenshot of Orders List Page](/images/store-management/viewing-and-filtering-orders/order-stats-overview.webp)
 
@@ -75,16 +78,22 @@ For times when you need to get super specific, the **Advanced Filter** is your b
 
 Click the toggle button next to the search bar to turn on the **Advanced Filter**. This opens up a new panel where you can set very detailed rules. Clicking the **+ Add** button reveals several categories to build your filter:
 
-* **Order Property**: Filters related to the order itself, like which product was ordered or the payment method used. For example, you can filter By Order Items, Order Status, Payment Status, Order Type, Payment Method, Order Amount, Order Date.
-* **Customer Property**: Filters based on details about the customer, like their name or email address. For example, you can filter by Customer Name, Customer Email.
-* **Transactions Property**: Lets you search by specific payment details, such as the Transaction ID, Transaction Status, Card Brand, or the last 4 digits of their card.
-* **License Property**: Filters for orders that contain software licenses, based on the license key or status.
-* **Labels**: Filters orders based on any custom labels you have assigned.
+* **Order Property:** By Order Items, Order Status, Payment Status, Order Type, Currency, Payment Method, Order Amount, Order Hash (UUID), and Order Date.
+* **Customer Property:** Customer Name and Customer Email.
+* **Transactions Property:** Transaction Id, Transaction Status, Transaction Type, Card last 4, Card Brand, and Payer email.
+* **License Property:** License key and License Status. Shown only with FluentCart Pro and the licensing module active.
+* **Utm Property:** Utm Campaign, Utm Term, Utm Source, Utm Medium, Utm Content, Utm Id, and Refer Url.
+* **Tax Property:** B2B Purchase and Reverse Charge (Yes/No).
+* **Labels:** Label Name.
 
 You can add multiple rules by clicking the **+OR** button to create very powerful and specific searches. When you're done, click **Apply**. To go back to the full list, just click **Reset**.
+
+To reuse a filter, click **Save as view**, give it a name, and it appears under **More views**. Saving views requires FluentCart Pro. The Advanced Filter itself is free.
 
 ![Screenshot of Advanced Filter Button](/images/store-management/viewing-and-filtering-orders/advanced-filter-button.webp) 
 
 ### 3. Using the Search Bar
 
-If you just need to find something fast, the search bar at the top of the page is perfect. You can type in an Order ID, customer name, email, or product name to instantly find what you're looking for.
+If you just need to find something fast, the search bar at the top of the page is perfect. Type an invoice number, customer name, customer email, or product name to find matching orders. To look up an order by its ID, type `id = 1234` (you can also use `id > 100` or a range such as `id :: 1-10`).
+
+You now have every tool you need to find any order in your store in seconds.

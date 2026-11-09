@@ -30,7 +30,7 @@ FluentCart Pro adds two more filter chips: **With Photos** appears once photo re
 
 Clicking **Write a Review** opens a drawer that slides in from the side of the page. By default it shows the whole form at once, so the customer can fill it in from top to bottom:
 
-* **How would you rate this product?:** A star selector *(Required)*. This field is left out entirely if you turned **Enable Star Ratings** off.
+* **How would you rate this product?:** A star selector, required while **Star Ratings Required** is on. This field is left out entirely if you turned **Enable Star Ratings** off.
 * **Review title:** A short summary, up to 80 characters *(Optional)*.
 * **Your review:** The feedback itself, up to 1,500 characters *(Required)*.
 * **Name and email:** Guests are also asked for their name and email address, and the email is marked private.
@@ -126,7 +126,7 @@ The rating summary card on its own: the average score, the star breakdown, and a
 
 ![Screenshot of the Rating Summary with Review block in the WordPress block editor](/images/store-management/product-reviews/rating-summary-with-review-block.webp)
 
-* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the block to one product. Its **Show reviews from** setting can also combine several products into one summary card, and the **Write a Review** button is removed in that case.
+* **Product:** Use **Show reviews from** to follow the **Current product**, pin it to **Selected products**, or combine **All products** into one summary card. With more than one product, the **Write a Review** button is removed.
 * **Star Color:** Inside the card sits a **Rating Summary** block with its own **Star Color** panel, so the stars can match your brand instead of the default amber.
 
 ### 3. Review List
@@ -173,7 +173,7 @@ The star rating on its own, as a compact inline element, with the number of revi
 
 ![Screenshot of the Product Rating block and its Visibility settings panel](/images/store-management/product-reviews/product-rating-block.webp)
 
-* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the block to one product. Its **Show reviews from** setting can also combine several products into one summary card, and the **Write a Review** button is removed in that case.
+* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the block to one product.
 * **Minimum Reviews:** Hides the rating until the product has at least this many reviews. Leave it at 0 to always show it, including five empty stars on a product with no reviews.
 * **Minimum Average Rating:** Hides the rating unless the product averages at least this many stars. Half stars are allowed, and 0 shows every rating.
 
@@ -204,7 +204,7 @@ The review form printed directly on the page, with no button and no drawer. Use 
 
 ![Screenshot of the Review Form block and its Form Settings panel](/images/store-management/product-reviews/review-form-block.webp)
 
-* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the block to one product. Its **Show reviews from** setting can also combine several products into one summary card, and the **Write a Review** button is removed in that case.
+* **Product:** Choose **Default** to follow the current product, or **Custom** to pin the form to one product.
 * **Field Layout:** Choose **Inline (all fields at once)** or **Steps (one at a time)**, exactly as on the **Write a Review** block.
 
 ## The Reviews Shortcode

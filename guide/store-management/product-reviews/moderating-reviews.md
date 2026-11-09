@@ -88,7 +88,7 @@ The form asks for the following:
 * **Reviewer name:** The name shown on the review *(Required)*.
 * **Reviewer email:** The reviewer's email address *(Optional)*.
 * **Status:** Whether the review goes live right away as **Approved**, or waits as **Pending**.
-* **Verified purchase:** Marks the review with the verified badge.
+* **Mark as verified purchase:** Tick to show the verified badge on the review.
 * **Attachments:** Photos to show with the review. This row appears only while **Photo Reviews** is switched on in your [review settings](/guide/store-management/product-reviews/review-settings#photo-reviews-and-helpful-votes), it needs FluentCart Pro, and the form shows the photo limits you set there.
 
 ## Acting on a Single Review
@@ -135,7 +135,9 @@ A short reply to a critical review often does more for your store than the revie
 
 To reply, type your response into the message box at the bottom of the **Review Information** card and click **Reply**.
 
-You can also reply to several reviews at once by selecting them in the list and choosing **Reply** from the bulk actions, which is useful when you want to send the same thank-you note to a group of happy customers. Each review holds one store reply. To reword or withdraw it, delete the existing reply first, then write a new one.
+You can also reply to several reviews at once by selecting them in the list and choosing **Reply** from the bulk actions, which is useful when you want to send the same thank-you note to a group of happy customers. Write the message in the **Bulk reply to reviews** window and click **Send Reply**. Reviews that already have a store reply are skipped.
+
+Each review holds one store reply. To reword or withdraw it, delete the existing reply first, then write a new one.
 
 ::: info
 By default customers cannot reply to your answer, so each review stays a single review with one store reply from you.
