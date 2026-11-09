@@ -4,8 +4,8 @@ FluentCart’s **Tax & Duties** section is a powerful tool designed to help you 
 
 Setting up your taxes is a straightforward, two-part process:
 
-1.  **First, you set the global rules.** On the **Configuration** page, you will decide how taxes work across your entire store. This includes setting your main calculation rules and creating different tax classes for your products (e.g., standard rate, reduced rate, or tax-exempt).
-2.  **Next, you set the specific rates.** On the **Rates** page, you will define the actual tax percentages for each country, state, or province you sell to.
+1.  **First, you set the global rules.** On the **Configuration** page, you decide how taxes work across your store: whether tax is on, whether prices include tax, which address is used, and how tax is displayed.
+2.  **Next, you set the specific rates.** On the **Rates** page, you define the tax percentages for each country, state, or province you sell to, and add tax classes (for example Reduced or Zero) with the **+** button next to the class tabs.
 
 There are two ways to set up tax in FluentCart:
 
@@ -14,8 +14,8 @@ There are two ways to set up tax in FluentCart:
 
 This section contains the full set of guides for working from Tax Settings:
 
-* [**Configuring Tax:**](/guide/tax-&-duties/configuration-and-classes) Set your store’s main tax rules, configure VAT reverse-charge behaviour, and manage tax classes.
-* [**Setting Up Tax Rates:**](/guide/tax-&-duties/tax-rates) Enable the regions you collect in, set per-class rates, and add product or shipping overrides at the country, state, city, or postcode level.
+* [**Configuring Tax:**](/guide/tax-&-duties/configuration-and-classes) Set your store’s main tax rules, and configure VAT reverse-charge behaviour.
+* [**Setting Up Tax Rates:**](/guide/tax-&-duties/tax-rates) Enable the regions you collect in, manage tax classes, set per-class rates, and add product or shipping overrides at the country, state, city, or postcode level.
 * [**Tax Filing Feature:**](/guide/tax-&-duties/tax-filing) Review the taxes you've collected and mark filings as complete.
 
 ::: info Selling to EU Customers?
