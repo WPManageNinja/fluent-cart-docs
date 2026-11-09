@@ -1,10 +1,10 @@
- # Understanding Logs
+# Understanding Logs
 
 Think of the **Logs** screen as the diary for your store. It keeps a detailed record of every important event and action that happens, like when an order is paid or a setting is updated. This is an essential tool for keeping an eye on your store's operations and for figuring out what happened if something ever goes wrong.
 
 ## Accessing the Logs
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Logs** in the left sidebar.
+1.  From your WordPress dashboard, navigate to **FluentCart > Logs** in the left sidebar. Only administrators see the **Logs** menu item.
 2.  This will open the **Logs** screen, displaying a detailed table of all recorded events.
 
 ## Understanding the Logs List Table
@@ -13,12 +13,14 @@ Think of the **Logs** screen as the diary for your store. It keeps a detailed re
 The Logs list table presents key information for each event entry:
 
 * **ID:** A unique identification number for each log entry.
-* **Date & Title:** The date and time when the event occurred, along along with a brief title describing the action.
+* **Date:** When the event happened.
+* **Title:** A short description of the action.
 * **Content:** A detailed description of the event that took place.
 * **Status:** The outcome or severity of the action.
 * **Module:** The FluentCart module or area from which the action originated.
-* **Actions:** For many log entries, particularly those related to orders, a **"View Order"** link is provided. Clicking this link will navigate you directly to the [Order Details screen](/guide/store-management/orders-management/order-details-overview) for that specific transaction.
+* **Actions:** For entries about an order or a subscription, a **View** button opens that [order](/guide/store-management/orders-management/order-details-overview) or subscription.
 
+    <!-- TODO(screenshots): Logs.webp is outdated: it shows a "View Order" button on every row (including Product entries) and the "FluentCart Pro" menu; in 2.2.0 the Actions column shows a "View" button only for order and subscription entries. Retake the Logs list. Update later. -->
     ![Screenshot of Logs List Page](/images/troubleshooting-support/understanding-logs/Logs.webp)
 
 ## Filtering Logs

@@ -1,4 +1,4 @@
- # How to Get Support
+# How to Get Support
 
 If you've reviewed the [Docs & FAQs](/guide/troubleshooting-support/common-issues-faqs) guides and still encountering a problem with FluentCart, our dedicated support team is here to help.
 
@@ -11,7 +11,7 @@ To ensure you receive the quickest and most effective assistance, please follow 
     * [FluentCart Account](https://fluentcart.com/account/) 
 
 2.  **Submit a Support Ticket:**
-    * Log in to your FlunetCart account.
+    * Log in to your FluentCart account.
     * Navigate to the "Support Tickets" section.
     * Click on "Create Ticket."
 

@@ -1,4 +1,4 @@
- # Troubleshooting & Support
+# Troubleshooting & Support
 
 The **Troubleshooting & Support** section in FluentCart is designed to help you resolve common issues, understand system logs, and find assistance when you encounter challenges. Our goal is to ensure you have a smooth and efficient experience running your online store.
 
