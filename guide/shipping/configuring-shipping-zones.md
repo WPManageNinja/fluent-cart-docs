@@ -30,7 +30,7 @@ Now you are on the setup page for your new zone. Here, you will name your zone a
 
 ![Screenshot of Configuring Shipping Zones](/images/shipping/Configuring-Shipping-Zones/FluentCart-Shipping-Category-2.webp)
 
-* **Selected countries only:** Select this to ship exclusively to specific countries. A *Countries* dropdown box will appear below. You can search and check the boxes next to the specific countries you want to include (e.g., just the United States and Canada).
+* **Selected countries only:** Select this to ship exclusively to specific countries. A *Countries* dropdown box will appear below. You can search and check the boxes next to the specific countries you want to include (e.g., just the United States and Canada). If you pick exactly one country, each shipping method in this zone can also be limited to specific states or provinces. Zones that cover several countries, or the whole world, can't be split by state.
 
 ![Screenshot of Configuring Shipping Zones](/images/shipping/Configuring-Shipping-Zones/FluentCart-Shipping-Category-3.webp)
 
@@ -41,9 +41,9 @@ Now you are on the setup page for your new zone. Here, you will name your zone a
 ### 4. Save Your Zone
 Once you are happy with the name and the coverage regions you have configured, simply click the **Save** button at the top right of the screen.
 
-Your new shipping zone will now appear in your list of zones, and you can proceed to add specific [shipping methods](/guide/shipping/setting-up-shipping-methods) and rates to it!
+After you click **Save**, FluentCart opens the zone in edit mode and a **Shipping Methods** card appears below **Zone Details**. Add your [shipping methods](/guide/shipping/setting-up-shipping-methods) and rates there. The **Shipping Methods** card only shows after the zone has been saved.
 
-> **INFO:** Customers will only see the shipping methods that are applicable to the zone their shipping address falls into during checkout.
-
-
+::: info
+Customers will only see the shipping methods that are applicable to the zone their shipping address falls into during checkout.
+:::
 
