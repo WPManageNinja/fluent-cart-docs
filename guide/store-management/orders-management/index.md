@@ -11,6 +11,6 @@ This section covers the following aspects of order management:
 * **[Processing Refunds](/guide/store-management/orders-management/processing-refunds):** Detailed steps on how to issue full or partial refunds, choose item quantities and shipping, restock items, and cancel associated subscriptions.
 * **[Managing Shipments](/guide/store-management/orders-management/managing-shipments):** Create one or more shipments for an order, add tracking, notify the customer, and follow each shipment's status.
 * **[Collecting Payments for Modified Orders](/guide/store-management/orders-management/collecting-payments-modified-orders):** How to collect outstanding balances after an order has been modified, including generating custom payment links and marking payments as received.
-* **[Changing Order Statuses](/guide/store-management/orders-management/changing-order-statuses):** Learn how to update the status of an order (e.g., Processing, Completed, On Hold, Canceled) and manage shipping statuses.
+* **[Changing Order Statuses](/guide/store-management/orders-management/changing-order-statuses):** Learn how to update the status of an order (for example, mark it complete, cancel it, or move it back to Processing) and manage shipping statuses.
 
 By using these order management tools well, you can ensure smooth order processing, accurate record-keeping, and excellent customer service. 
