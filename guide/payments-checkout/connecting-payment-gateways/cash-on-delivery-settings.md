@@ -1,12 +1,26 @@
 # Cash on Delivery (COD) & Offline Payments
 
-Cash on Delivery allows customers to pay with cash directly upon receiving their order. This section also covers settings for other manual, offline payment processes like bank transfers.
+Cash on Delivery allows customers to pay with cash directly upon receiving their order. You can also use this method for bank transfers or other manual payments. Orders paid this way stay pending until you mark them paid. This method is included in the free version of FluentCart.
 
-1.  On the **Payment Settings** screen, locate **"Cash on Delivery"** and click the **"Manage"** button next to it.
-2.  This will open the **Offline Payment Settings** screen.
+1.  On the **Payment Settings** screen, find the **Cash** gateway (described as **Pay with cash upon delivery**) and click **Manage**.
+2.  This opens the **Cash** settings screen.
 
+    <!-- TODO(screenshots): cash-on-delivery-settings.webp is outdated: it shows the old "Offline Payment Settings" header and an older settings menu; retake the Cash gateway settings screen. Update later. -->
     ![Screenshot of Cash on Delivery Settings Page](/images/payments-checkout/cash-on-delivery-settings.webp)
 
-3.  **Enable Cash on Delivery:** Check the box next to "Customers can pay for their orders by cash upon delivery." to activate this method.
-5.  **Payment Activation:** In the top right corner of this page, ensure the **Payment Activation** option is "**Enabled**".
-5.  Click the **"Save Settings"** button to apply your changes. 
+3.  **Review the note:** The settings screen only shows a short note: customers pay in cash on delivery, and you can also collect payment by bank transfer or another manual process. There is nothing to fill in.
+4.  **Payment Activation:** Switch on the **Payment Activation** toggle at the top right.
+5.  Click the **Save Settings** button to apply your changes.
+
+## Renaming the Method at Checkout
+
+Customers see this method as **Cash** at checkout. To rename it (for example to "Cash on Delivery" or "Bank Transfer"), click the pencil icon next to the gateway title to open **Checkout Customization**. There you can set these options:
+
+* **Checkout Label:** The name customers see for this method.
+* **Checkout Logo:** An image shown next to the method.
+* **Checkout Instructions:** Text shown in the payment section at checkout.
+* **Thank you page Instruction:** Text shown on the receipt after the order is placed.
+
+Click **Update** to save. Your customers now see the method under the name and instructions you chose.
+
+<!-- TODO(screenshots): new shot needed: the Checkout Customization page for the Cash gateway (opened via the pencil icon), showing Checkout Label, Checkout Logo, Checkout Instructions and Thank you page Instruction. Update later. -->
