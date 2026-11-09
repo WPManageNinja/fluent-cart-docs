@@ -6,7 +6,7 @@ This area is divided into the following sections, each handling a different aspe
 
 ---
 
-#### Mailing Settings
+## Mailing Settings
 
 This is where you set the global identity for all outgoing emails. Before customizing individual notifications, it's important to configure these settings to ensure your emails are professional and trustworthy.
 
@@ -18,18 +18,31 @@ In this section, you will learn how to:
 
 ---
 
-#### Notifications
+## Reminders
+
+This section controls the automatic reminder emails for subscriptions and unpaid invoices.
+
+In this section, you will learn how to:
+* Turn on reminder emails and set when trial-ending, upcoming-renewal, and overdue-invoice reminders go out.
+
+---
+
+## Notifications
 
 This section allows you to manage the content and status of every automated, event-triggered email your store sends. These are the transactional emails that confirm actions for both customers and admins.
 
 In this section, you will learn how to:
 * Enable or disable individual email notifications (e.g., "Order Created," "Payment Paid").
 * Edit the subject line for any notification.
-* Customize the email body with your own text and branding using a rich text editor and shortcodes.
+* Use the default body, or (FluentCart Pro) design a custom body in the drag-and-drop email editor, and attach a PDF template.
+
+::: info
+The [PDF templates](/guide/settings-configuration/email-configuration/pdf-invoice) you attach to emails live under **Settings > Invoice & Packing > PDF Templates**, not in Email Configuration.
+:::
 
 ---
 
-#### Store Digest
+## Store Digest
 
 This section sends you a scheduled summary of your store's performance, so you can track sales without opening the dashboard. The figures match your Reports dashboard.
 

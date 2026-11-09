@@ -17,7 +17,7 @@ The first thing you will see on this page is the **Reminder Emails** toggle. By 
 Click the toggle to enable it. Once turned on, the full reminder configuration options will appear on the page.
 
 > [!IMPORTANT]
-> Enabling this toggle alone is not enough. For reminder emails to actually be delivered, the individual reminder notifications must also be enabled in **Email Notification Settings** under the **Scheduler / Reminder Actions** section.
+> Enabling this toggle alone is not enough. For reminder emails to actually be delivered, the individual reminder notifications must also be enabled in **Settings > Email Configuration > Notifications** under the **Scheduler / Reminder Actions** section.
 
 ### Configuring Subscription Reminders
 
@@ -29,7 +29,7 @@ Once Reminder Emails are enabled, you will see the **Subscription Reminders** se
 
 This reminder notifies customers before their trial period ends and billing begins.
 
-* **Enable:** Check this box to activate the trial-ending reminder.
+* **Enable:** Check this box to activate the trial-ending reminder. It is enabled by default.
 * **Days before trial ends:** Set how many days in advance the reminder is sent. The accepted range is **Min: 1, Max: 14**. The default is **3 days**.
 
 #### Renewal Reminders
@@ -37,9 +37,11 @@ This reminder notifies customers before their trial period ends and billing begi
 This reminder notifies customers before an upcoming subscription renewal charge.
 
 * **Yearly *(Recommended)*:** Check to send a renewal reminder for yearly subscriptions. You can set the number of days before the billing date. The accepted range is **Min: 7, Max: 90**. The default is **30 days**.
-* **Half Yearly:** Check to send a renewal reminder for half-yearly subscriptions.
-* **Quarterly:** Check to send a renewal reminder for quarterly subscriptions.
-* **Monthly:** Check to send a renewal reminder for monthly subscriptions.
+* **Half Yearly:** Check to send a renewal reminder for half-yearly subscriptions. The accepted range is **Min: 7, Max: 60**. The default is **21 days**.
+* **Quarterly:** Check to send a renewal reminder for quarterly subscriptions. The accepted range is **Min: 7, Max: 60**. The default is **14 days**.
+* **Monthly:** Check to send a renewal reminder for monthly subscriptions. The accepted range is **Min: 3, Max: 28**. The default is **7 days**.
+
+Yearly is checked by default. Half Yearly, Quarterly, and Monthly are off until you check them.
 
 You can enable reminders for one or more billing frequencies at the same time, each with its own lead time.
 
@@ -47,9 +49,9 @@ Reminders are especially useful for store-billed subscriptions, where the custom
 
 ### Configuring Invoice Reminders
 
-The reminders above all fire *before* a renewal. The **Invoice Reminders** section handles what happens after one comes due and the customer still has not paid. It applies to **manual subscriptions**, where renewals are billed by invoice rather than charged automatically.
+The reminders above all fire *before* a renewal. The **Invoice Reminders** section handles what happens after one comes due and the customer still has not paid. It applies to **manual subscriptions**, where renewals are billed by invoice rather than charged automatically. Its settings sit in the **Overdue Invoice Reminders** row.
 
-* **Enable:** Check this box to chase unpaid renewal invoices. It is on by default.
+* **Enable:** Check this box to chase unpaid renewal invoices.
 * **Days after due date:** A comma-separated list of days to send on, counted from the due date. The default is **1,3,7**, which sends one reminder the day after the invoice was due, another two days later, and a last one a week after the due date.
 
 You can shorten, lengthen, or thin out that schedule freely. `1,3,5,10` gives you four nudges, and a single `3` gives you exactly one.
@@ -69,7 +71,7 @@ Because the mapping follows your list rather than fixed dates, a schedule of `2,
 Each stage sends once per billing cycle, so a customer never receives the same reminder twice for the same invoice. Payment at any point stops the rest of the sequence.
 
 > [!IMPORTANT]
-> All three emails live in **Email Notification Settings** under **Scheduler / Reminder Actions**, where you can edit their subject lines and bodies or switch any stage off. Turning off the middle stage, for example, leaves you with a first reminder and a final notice and nothing in between.
+> All three emails live in **Settings > Email Configuration > Notifications** under **Scheduler / Reminder Actions**, where you can edit their subject lines and bodies or switch any stage off. Turning off the middle stage, for example, leaves you with a first reminder and a final notice and nothing in between.
 
 ### Saving Your Changes
 

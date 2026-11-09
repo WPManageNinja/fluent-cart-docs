@@ -1,15 +1,18 @@
 # Features & Addons
 
-The **Features & Addon** section in FluentCart is the central hub for managing the plugin's modular functionality. This area allows you to activate or deactivate high-level modules, ensuring that your store's backend remains clean and optimized by only running the features you actually need.
+The **Features & addon** section in FluentCart is the central hub for managing the plugin's modular functionality. This area allows you to activate or deactivate high-level modules, ensuring that your store's backend remains clean and optimized by only running the features you actually need.
 
-## Accessing Features & Addon
+## Accessing Features & addon
 
 To manage your store's modules:
 
 1.  Log in to your **WordPress Dashboard**.
 2.  Navigate to **FluentCart > Settings** in the side menu.
-3.  Select the **Features & Addon** tab from the left-hand sidebar.
+3.  Select the **Features & addon** tab from the left-hand sidebar.
 
+Only WordPress administrators (super admins) see the **Features & addon** tab.
+
+<!-- TODO(screenshots): features-addons-1.webp is outdated: retake the full Features & addon screen with FluentCart Pro active, showing the Stock Management card with its Enable Advanced Inventory checkbox, plus the Dynamic Pricing and MCP for AI Agents cards. Update later. -->
 ![Features & Addons](/images/settings-configuration/feature-addon/features-addons-1.webp)
 
 ## Managing Available Modules
@@ -30,29 +33,24 @@ This is the cornerstone for digital product sellers and software developers.
 * **Function:** Enables the entire software licensing system.
 * **When Active:** You can generate, manage, and sell license keys for products like software, plugins, or digital assets. See [Creating Licensed Product](/guide/product-types-creation/creating-digital-products-with-licenses) and [Managing Licenses](/guide/customer-dashboard/licenses) (customer-facing).
 * **When Inactive:** All licensing-related fields and settings will be hidden from the product management screens.
+* **Requirements:** FluentCart Pro. Without Pro, this card is not listed.
 
 ### 3. Stock Management
 
 Allows you to maintain a clear overview of your physical or limited digital inventory.
 
 * **Function:** Enables inventory tracking tools, allowing you to set stock levels and display "In Stock" or "Out of Stock" messages to customers. For details, see [Inventory Management](/guide/product-types-creation/inventory-management).
+* **Advanced Inventory:** When Stock Management is active, the card shows an **Enable Advanced Inventory** checkbox (FluentCart Pro, off by default). Without Pro, the checkbox is disabled with an **Upgrade to Pro** link. Tick it and save to add **Inventory** under the **Products** menu, a dedicated workspace with cross-catalog stock views, bulk stock updates, and an auditable adjustment history. Every stock change is recorded with the user, timestamp, old and new values, and an adjustment reason. See [Advanced Inventory](/guide/product-types-creation/advanced-inventory) for the full workflow.
+* **When Advanced Inventory Is Off:** The Inventory menu is hidden and no adjustment history is recorded. Per-product stock still works as usual.
 
 ### 4. Order Bump
 
 A powerful tool for increasing your Average Order Value (AOV).
 
 * **Function:** Allows you to offer relevant add-on products directly on the [checkout](/guide/settings-configuration/cart-checkout-settings) page, encouraging customers to add one more item to their purchase just before they pay. See [Order Bump](/guide/store-management/orders-management/order-bump) for creating and managing order bumps.
+* **Requirements:** FluentCart Pro. Without Pro, this card is not listed.
 
-### 5. Advanced Inventory
-
-A dedicated inventory workspace for stores that need more than per-product stock fields.
-
-* **Function:** Adds a central **Inventory** admin menu (injected next to Products) with cross-catalog stock views, bulk stock updates, and an auditable adjustment history. Every stock change is recorded with the user, timestamp, old and new values, and an adjustment reason.
-* **Requirements:** **Stock Management** (above) must be enabled first. Advanced Inventory activates only when **Stock Management** is on and the **Enable Advanced Inventory** checkbox beneath it is ticked.
-* **When Inactive:** The Inventory admin menu is hidden and no adjustment history is recorded. Per-product stock still works through the basic [Inventory Management](/guide/product-types-creation/inventory-management) screen.
-* **When Active:** See [Advanced Inventory](/guide/product-types-creation/advanced-inventory) for the full workflow.
-
-### 6. Dynamic Pricing
+### 5. Dynamic Pricing
 
 Automatic discounts and fees based on rules you define.
 
@@ -60,7 +58,7 @@ Automatic discounts and fees based on rules you define.
 * **Requirements:** FluentCart Pro. The module ships off.
 * **When Inactive:** The menu item is hidden and no rules are applied at checkout.
 
-### 7. MCP (AI Assistant Access)
+### 6. MCP for AI Agents
 
 This module exposes a secure endpoint that lets AI assistants like Claude, Cursor, and Codex connect to your store.
 
@@ -76,29 +74,27 @@ After toggling any feature on or off:
 
 > **Note:** Some features, like [Cloudflare Turnstile](/guide/integrations/cloudflare-turnstile-integration), may require additional configuration (such as API keys) immediately after activation to function correctly.
 
-## Installing Licensed Addons (One-Click Installer)
+## Installing Plugin Addons (One-Click Installer)
 
-Below the core feature toggles, the **Features & Addon** page also lists every licensed addon that ships with your FluentCart Pro license — for example, Fluent PDF and other premium extensions. You no longer need to download a ZIP file from your account, upload it through the WordPress plugin uploader, and then activate it. The whole flow has been collapsed into a single click.
+Below the core feature toggles, the **Features & addon** page also has a **Plugin Addons** section. It lists addons such as **Elementor Blocks**, **FluentCart Bricks Blocks**, **FluentCart Divi Modules**, **Fluent PDF**, **FluentCart Migrator**, and **FluentCart Customer Rights**. You don't need to download a ZIP file, upload it through the WordPress plugin uploader, and then activate it. The whole flow takes a single click.
 
 ### Prerequisites
 
-Before the one-click installer becomes available, make sure:
+Before you use the one-click installer, make sure:
 
-1.  You have a valid FluentCart Pro license verified on the site. See [Licensing Settings](/guide/settings-configuration/licensing-settings) for how to verify your license.
-2.  Your server can make outbound HTTPS requests to the FluentCart update servers (this is the case on virtually every standard WordPress host).
+1.  **FluentCart Pro** is active. Without Pro, each card shows a **Download** button that opens the FluentCart add-ons page so you can download the plugin and install it yourself.
+2.  Your server can make outbound HTTPS requests (this is the case on virtually every standard WordPress host).
 
 ### How to Install an Addon in One Click
 
-1.  Navigate to **FluentCart Pro > Settings > Features & Addon**.
+1.  Navigate to **FluentCart Pro > Settings > Features & addon**.
 2.  Scroll to the **Plugin Addons** section at the bottom of the page.
 3.  Find the addon card for the addon you want to install (e.g., Fluent PDF).
 4.  Click the **Install & Activate** button on the card.
 
-FluentCart will fetch the addon directly from the licensed update server, install it, and activate it automatically. The card's status badge will switch to **Active** as soon as the process finishes — you can use the addon immediately, no page reload or upload needed.
+FluentCart fetches the addon from the FluentCart CDN (Fluent PDF comes from WordPress.org), installs it, and activates it automatically. The card's status badge switches to **Active** as soon as the process finishes, so you can use the addon immediately, with no page reload or upload needed.
 
-> **Note:** If the **Install & Activate** button is greyed out or replaced with a license prompt, your FluentCart Pro license either hasn't been verified or has lapsed. Verify your license from **Settings > Licensing** and the installer will become available again.
-
-This makes the addon ecosystem feel like a first-class part of FluentCart — installing a premium addon now takes the same amount of effort as flipping a feature toggle.
+When an addon is installed but inactive, the card shows **Activate** instead.
 
 ### FluentCart Bricks Blocks
 

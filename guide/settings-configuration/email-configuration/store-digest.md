@@ -58,7 +58,7 @@ Every digest opens with your store name, the digest type, and the date range it 
 * **Top products:** Your best-selling products for the period by units sold.
 * **View full reports:** A button that opens the full [Reports dashboard](/guide/reporting-analytics/reports-dashboard-overview) inside your store.
 
-If a period had no paid orders and you have **Empty periods** turned on, the digest shows a quiet-period message ("A quiet period, no orders to report.") in place of the metrics.
+If a period had no paid orders and you have **Empty periods** turned on, the digest shows a quiet-period message ("A quiet period — no orders to report.") in place of the metrics.
 
 ![Screenshot of an example weekly Store Digest email showing the date range, a quiet-period notice, and the View full reports button](/images/settings-configuration/email-notifications/store-digest/store-digest-2.webp)
 

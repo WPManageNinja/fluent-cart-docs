@@ -6,19 +6,24 @@ With the Fluent PDF feature, you can automatically generate and attach custom-de
 
 > **Important Note:** Please keep in mind that these PDF documents (Order Receipt, Renewal Receipt, Refund Notice, and Invoice) are only delivered to your customers via email.
 
+::: info
+PDF Templates need FluentCart Pro. Without Pro, the PDF Templates screen shows an upgrade notice.
+:::
+
 Here is your comprehensive guide to setting up and designing your first custom PDF template.
 
 ## Step 1: Install and Activate the Fluent PDF Addon
 
-Before you can start designing, you need to turn the feature on. Fluent PDF is a licensed addon, so it ships with the FluentCart Pro one-click installer — there is no ZIP to download or upload.
+Before you can start designing, you need to turn the feature on. Fluent PDF is installed from WordPress.org with one click, so there is no ZIP to download or upload.
 
-1. Make sure your FluentCart Pro license is verified on the site. See [Licensing Settings](/guide/settings-configuration/licensing-settings) if you haven't done this yet.
-2. Navigate to **FluentCart > Settings** in your WordPress dashboard.
-3. In the left-hand menu, click on the **Features & addon** tab.
-4. Scroll down to the bottom of the page to find the **Plugin Addons** section.
-5. Locate the **Fluent PDF** card and click the dark **Install & Activate** button.
+1. With FluentCart Pro active, navigate to **FluentCart Pro > Settings** in your WordPress dashboard.
+2. In the left-hand menu, click on the **Features & addon** tab.
+3. Scroll down to the bottom of the page to find the **Plugin Addons** section.
+4. Locate the **Fluent PDF** card and click the dark **Install & Activate** button.
 
-FluentCart will fetch the addon from the licensed update server, install it, and activate it in a single step. The card switches to **Active** as soon as it's ready.
+FluentCart installs and activates the plugin in a single step. The card switches to **Active** as soon as it's ready.
+
+You can also install it from the PDF Templates screen: when Fluent PDF is missing, that screen shows **Fluent PDF Required** with an **Install & Activate** button.
 
 ![PDF Invoice](/images/store-management/pdf-invoice/pdf-1.webp)
 
@@ -41,7 +46,7 @@ To make sure your PDFs generate perfectly and look great on any device (whether 
 
 ## Step 3: Choose a Template to Edit
 
-Once your fonts are ready, navigate back to **Settings > Email Configuration > PDF Templates**.
+Once your fonts are ready, navigate back to **Settings > Invoice & Packing > PDF Templates**. The gear icon on the active **Fluent PDF** card under **Features & addon** opens the same screen.
 
 You will now see four built-in templates ready for your personal touch:
 
@@ -49,6 +54,8 @@ You will now see four built-in templates ready for your personal touch:
 * **Renewal Receipt:** Sent automatically when a customer's subscription successfully renews.
 * **Refund Notice:** Sent as proof of a refund if an order is returned or canceled.
 * **Invoice:** A standardized, formal invoice document for business transactions.
+
+The four built-in templates carry a **Built-in** badge. To make your own, click **Add Template**, enter a **Template Name** (for example "Custom Invoice"), and click **Create**. You can delete custom templates, and in the editor, **Revert to Default** restores a built-in template to its original design.
 
 All four default templates show the same two numbers at the top:
 
@@ -61,6 +68,7 @@ When a customer downloads a receipt, the PDF file is named after the receipt num
 
 Hover your mouse over the template you want to customize (for example, "Order Receipt") and click the blue **Edit Template** button that appears.
 
+<!-- TODO(screenshots): pdf-5.webp is outdated: the sidebar shows PDF Templates and E-Invoice Settings under Email Configuration; they now sit under Invoice & Packing. Retake the PDF Templates screen with the Invoice & Packing group open, ideally showing the Add Template button. Update later. -->
 ![PDF Invoice](/images/store-management/pdf-invoice/pdf-5.webp)
 
 ## Step 4: Designing Your PDF (The Fun Part!)
@@ -80,7 +88,8 @@ These are Smart Tags (or shortcodes). Click the <span class="fc-toolbar-btn" v-p
 
 Here are a few examples of how they work in action:
 
-* **The Logo Tag:** * **What you type:** <code v-pre>{{settings.store_logo}}</code>
+* **The Logo Tag:**
+    * **What you type:** <code v-pre>{{settings.store_logo}}</code>
     * **What the customer sees:** Your actual uploaded store image logo.
 * **The Order Number Tag:**
     * **What you type:** Order Number: <code v-pre>{{order.uuid}}</code>
@@ -92,7 +101,8 @@ Here are a few examples of how they work in action:
 * **The Total Amount Tag:**
     * **What you type:** You paid a total of <code v-pre>{{order.total_amount_formatted}}</code> today.
     * **What the customer sees:** You paid a total of $45.00 today.
-* **The Items Table Tag:** * **What you type:** <code v-pre>{{order.items_table}}</code>
+* **The Items Table Tag:**
+    * **What you type:** <code v-pre>{{order.items_table}}</code>
     * **What the customer sees:** A perfectly formatted, multi-row table showing every single product they bought, the quantity, and the individual prices.
 
 You can freely move these tags around, change their font size, or make them bold just like normal text!
@@ -102,13 +112,24 @@ You can freely move these tags around, change their font size, or make them bold
 If your store collects tax — especially EU VAT or any other reverse-charge regime — these dedicated tags drop the right values into the right place on every PDF receipt:
 
 * <code v-pre>{{order.tax_breakdown}}</code> — Renders a tidy table of every tax line on the order (e.g. "VAT 19%", "Shipping Tax"). For reverse-charge orders, the amount column shows **Charge reversed** and an automatic footnote, *"\* Tax to be paid on reverse charge basis"*, is appended below the table.
-* <code v-pre>{{order.store_vat_display}}</code> — Your store's VAT number, ready to drop into the header or footer of the receipt.
+* <code v-pre>{{order.store_vat_display}}</code> — The VAT number registered for the order's tax country (from your tax settings). It is empty when the order has no tax rate.
 * <code v-pre>{{order.buyer_vat_display}}</code> — The buyer's VAT number, captured at checkout. Use this in B2B receipts that need both parties' tax IDs.
 * <code v-pre>{{order.buyer_company_name}}</code> — The buyer's company name from the checkout form.
 * <code v-pre>{{order.buyer_legal_registration_id}}</code> — The buyer's legal registration ID (e.g. company registration number).
 * <code v-pre>{{order.buyer_reverse_charge_declaration}}</code> — A pre-formatted reverse-charge declaration sentence that appears only on B2B EU orders where reverse charge applies. Drop this anywhere in the template; it stays empty for orders that don't qualify.
 
-These tags work alongside the automatic VAT-in-billing-address behavior covered below — they don't conflict, so a complete B2B-ready PDF can include the buyer's VAT in the address, the store's VAT in the header, and a tax breakdown table in the totals section.
+Your seller details come from **Store Settings > Business Details**, and these tags place them on the PDF:
+
+* <code v-pre>{{order.store_seller_name}}</code>: Your **Company Name**, or your store name if it is empty.
+* <code v-pre>{{order.store_seller_vat_display}}</code>: Your **Seller VAT ID**.
+* <code v-pre>{{order.store_legal_registration_display}}</code>: Your **Legal Registration ID**.
+* <code v-pre>{{order.store_tax_display}}</code>: Your **Seller Tax ID**.
+
+The Pro **Receipt Addresses** block includes a seller column built from these Business Details.
+
+These tags work alongside the automatic VAT-in-billing-address behavior covered below. They don't conflict, so a complete B2B-ready PDF can include the buyer's VAT in the address, your seller VAT ID and registration details in the header, and a tax breakdown table in the totals section.
+
+For ZUGFeRD / Factur-X e-invoices, configure **Settings > Invoice & Packing > E-Invoice Settings**. It holds your seller contact, bank details, and the **ZUGFeRD Profile**, while your Company Name and IDs come from Store Settings > Business Details.
 
 #### Customer VAT Number on Receipts
 
@@ -129,4 +150,7 @@ Before you let this template go live to your real customers, you should always c
 2. Click the white **Test Download** button.
 3. FluentCart will instantly generate a sample PDF and download it to your computer. Open it up and see how your logo, text, and smart tags look!
 4. If everything looks perfect and professional, click the dark **Save Template** button next to it.
-You are done! Your custom-designed PDF is now active. The next time a customer buys something, FluentCart will automatically generate a PDF using your new design and attach it directly to their order email.
+
+Emails have no PDF attached until you choose one. To send your template, open **Settings > Email Configuration > Notifications**, edit the email (for example **Purchase receipt to customer**), choose your template under **Attach PDF Template**, and click **Update**.
+
+Your custom-designed PDF now goes out with every email you attached it to.
