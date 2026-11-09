@@ -1,19 +1,14 @@
----
-title: Migrating from Easy Digital Downloads
-description: Move your Easy Digital Downloads store into FluentCart with full data fidelity. Products, orders, customers, subscriptions, and software licenses migrate together.
----
-
 # Migrating from Easy Digital Downloads
 
 The FluentCart Migrator handles end-to-end migration from **Easy Digital Downloads 3.x** into FluentCart. Products, customers, orders across every meaningful status, recurring subscriptions, software licenses with all their site activations, coupons, and tax configuration transfer in a single coordinated pipeline.
 
 The same engine is reachable two ways — pick the surface that fits your store size and comfort level:
 
-- **Admin Wizard** — six-step Vue interface inside WordPress admin. Best for small to medium stores and non-technical operators.
-- **WP-CLI** — single namespaced command with flags for each stage. Faster for large stores, no browser timeouts.
+- **Admin Wizard:** a guided interface inside WordPress admin. Best for small to medium stores and non-technical operators.
+- **WP-CLI:** single namespaced command with flags for each stage. Faster for large stores, no browser timeouts.
 
 ::: tip Your EDD store stays untouched
-The Migrator only **reads** from EDD. Your existing store, its settings, and every record stay exactly as they are. Run both side-by-side until you're ready to switch.
+The Migrator reads your EDD orders, customers, and settings without changing them. It only adds an ID-mapping field to each EDD download, so re-runs update instead of duplicating. Run both side-by-side until you're ready to switch.
 :::
 
 ## Documentation in this section
@@ -21,7 +16,7 @@ The Migrator only **reads** from EDD. Your existing store, its settings, and eve
 | Page | When to read |
 |------|--------------|
 | [Wizard Walkthrough](/guide/migration/edd/edd-migration) | Start here. Full step-by-step run through the admin wizard, with screenshots. |
-| [What Gets Migrated](/guide/migration/edd/what-is-migrated) | Before you start. Complete inventory of what transfers — and what's deliberately out of scope (categories, upgrade paths, gateway credentials, custom meta). |
+| [What Gets Migrated](/guide/migration/edd/what-is-migrated) | Before you start. Complete inventory of what transfers — and what's deliberately out of scope (product tags, upgrade paths, gateway credentials, custom meta). |
 | [WP-CLI Reference](/guide/migration/edd/edd-cli) | If your store has thousands of orders, or you prefer the terminal. Full flag reference and workflows. |
 | [Developer Mode](/guide/migration/edd/developer-mode) | Before testing on staging. Explains the `FLUENT_CART_DEV_MODE` constant that gates destructive reset paths. |
 | [Backward Compatibility](/guide/migration/edd/backward-compatibility) | After migration. Why the Migrator plugin must stay active — license API rerouting, PayPal IPN, Stripe webhook fallback, legacy URLs. |
@@ -29,12 +24,12 @@ The Migrator only **reads** from EDD. Your existing store, its settings, and eve
 
 ## Recommended workflow
 
-1. **Take a database backup.** Even though the Migrator never modifies your source data, a fresh backup is your safety net.
+1. **Take a database backup.** Even though the Migrator leaves your EDD orders and settings alone, a fresh backup is your safety net.
 2. **Read [What Gets Migrated](/guide/migration/edd/what-is-migrated).** Confirm the boundaries match your expectations.
 3. **Rehearse on staging first.** Enable [Developer Mode](/guide/migration/edd/developer-mode) so you can reset and re-run as many times as needed.
 4. **Verify the result.** Spot-check products, orders, subscriptions, and licenses against your source store.
 5. **Repeat on production.** With staging validated, the production run is uneventful.
-6. **Keep the Migrator plugin active.** It provides a [backward compatibility layer](/guide/migration/edd/backward-compatibility) for legacy URLs, license API calls, and PayPal IPN renewals.
+6. **Keep the Migrator plugin active.** It provides a [backward compatibility layer](/guide/migration/edd/backward-compatibility) for license API calls, license renewal and package-download links, PayPal IPN renewals, and Stripe events on old orders.
 
 ## Quick requirements check
 
