@@ -6,9 +6,9 @@ Connecting FluentCart with LifterLMS allows you to sell access to your online co
 
 This guide will show you how to activate the integration and configure enrollment rules using Integration Feeds.
 
-### Activating the LifterLMS Integration
+## Activating the LifterLMS Integration
 
-First, ensure you have both FluentCart and LifterLMS installed and active on your WordPress site.
+The LifterLMS integration is part of **FluentCart Pro**. Make sure **FluentCart**, **FluentCart Pro**, and **LifterLMS** are installed and active. Once they are, **LifterLMS** appears in the **Add Integration** list.
 
 ## Configuring Enrollment Rules (Integration Feeds)
 
@@ -16,7 +16,7 @@ The center of this integration is setting up **Integration Feeds**. An integrati
 
 You can create these feeds in two different locations:
 
-* **Globally:** These are rules that apply to your *entire* store. They are useful for broad, general actions. For example, you could make a global rule to remove any user from a membership if their subscription is canceled, no matter what product they bought.
+* **Globally:** These are rules that apply to your *entire* store. They are useful for broad, general actions. For example, you could make a global rule that enrolls every paying customer in a "Members" membership.
 * **Product Specific:** This rule applies *only* to one specific product. This is the most common and recommended way to sell your courses. For example, "When a customer buys the 'Content Writing Course' product, enroll them in the 'Writing 101' LifterLMS course."
 
 ---
@@ -27,7 +27,7 @@ You have two ways to create these enrollment rules, depending on whether you wan
 
 #### Method 1: Creating a Global Feed
 
-Choose this option to create a "catch-all" rule that runs for *any* order or subscription in your store. This is perfect for broad actions, like a site-wide rule that revokes access from a membership if *any* subscription expires.
+Choose this option to create a "catch-all" rule that runs for *any* order or subscription in your store. This is perfect for broad actions, like a site-wide rule that enrolls every new subscriber in a general membership.
 
 1.  From your WordPress dashboard, go to **FluentCart Pro > Integrations**.
 2.  Look for the **Global Integrations Feeds** section at the top of the page.
@@ -58,17 +58,18 @@ Whether you're making a global or product-specific feed, you'll land on the conf
 
 Here’s a simple breakdown of each setting:
 
-* **Feed Title:** This is just for you. Give your feed a name you'll remember, like `Enroll in Content Writing Course` or `Global Refund Rule`.
+* **Feed Title:** This is just for you. Give your feed a name you'll remember, like `Enroll in Content Writing Course` or `Enroll All Members`.
 * **Add to Courses:** Click in this box to select one or more LifterLMS courses. When this rule runs, the customer will be enrolled in the course(s) you pick here.
 * **Add to Memberships:** This works just like the 'Add to Courses' setting. Click here to select one or more LifterLMS memberships to add the customer to.
-* **Remove from selected Courses/Memberships on Refund or Subscription Access Expiration:** This is a very important setting for protecting your content. Check this box if you want FluentCart to automatically *unenroll* the customer from the courses or memberships you selected above. This will happen if their order is refunded or their subscription expires or is canceled.
+* **Remove from selected Courses/Memberships on Refund or Subscription Access Expiration:** This is a very important setting for protecting your content. This box is checked by default. With it checked, FluentCart automatically *unenrolls* the customer from the courses or memberships you selected above when the order is fully refunded or canceled, or when the subscription's paid access expires. Canceling a subscription does not remove access right away; access ends when the paid period runs out.
 * **Event Trigger:** Choose the specific action in FluentCart that should make this rule run. This is the "when" part of your automation. A full list of triggers includes:
     * **Orders**
         * `Order Paid (Payment / Subscription)`: **This is the most common trigger for selling courses.** It runs as soon as a customer's payment is successful.
         * `Order Canceled`: Runs if an order is canceled.
-        * `Order Refunded (Full)`: Runs if an order is fully refunded. This is useful for global rules that revoke access.
+        * `Order Refunded (Full)`: Runs if an order is fully refunded.
     * **Subscriptions**
         * `Subscription Activated`: Runs when a subscription's status becomes active.
+        * `Subscription Reactivated`: Runs when a canceled or paused subscription becomes active again.
         * `Subscription Canceled`: Runs if a subscription is canceled (either by the admin or the user).
         * `Subscription Renewed`: Runs successfully on each subscription renewal payment.
         * `Subscription End of Term (Completed)`: Runs when a subscription with a fixed number of payments (e.g., 3 installments) is completed.
@@ -80,6 +81,10 @@ Here’s a simple breakdown of each setting:
 * **Enable this Integration:** Make sure this toggle at the top right is switched **ON** (blue) to make the rule active.
 
 Click the **Create LifterLMS Feed** button to save your rule.
+
+::: info
+To remove access, don't build a separate rule around a refund or cancellation trigger. Check **Remove from selected Courses/Memberships on Refund or Subscription Access Expiration** on the feed that grants access. LifterLMS feeds always enroll when their trigger fires, so a feed whose trigger is **Order Refunded (Full)** would enroll the customer instead of removing them.
+:::
 
 ![Screenshot of Create LifterLMS Feed](/images/integrations/lifterlms-integration/specific-product-integration.webp)
 
@@ -106,7 +111,7 @@ Here’s how you would set up the product-specific feeds:
     * Check the "Remove..." box.
 
 3.  **Inside "The Full Photography Bundle" Product:**
-    * Add a LifterLFMS feed.
+    * Add a LifterLMS feed.
     * In **"Add to Courses,"** select *both* the "Beginner Photography" course AND the "Advanced Editing Masterclass" course.
     * Set **Event Trigger** to `Order Paid (Payment / Subscription)`.
     * Check the "Remove..." box.
