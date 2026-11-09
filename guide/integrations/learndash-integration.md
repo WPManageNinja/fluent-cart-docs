@@ -6,7 +6,7 @@ This guide will show you how to activate the integration and configure enrollmen
 
 ## Activating the LearnDash Integration
 
-First, ensure you have both **FluentCart** and **LearnDash** installed and active on your WordPress site. The basic connection is automatic.
+The LearnDash integration is part of **FluentCart Pro**. Make sure **FluentCart**, **FluentCart Pro**, and **LearnDash** are installed and active. There is no module to switch on: once all three are active, **LearnDash** appears in the **Add Integration** list.
 
 ## Configuring Enrollment Rules (Integration Feeds)
 
@@ -55,18 +55,25 @@ Here’s what each setting does:
 * **Feed Title:** Give your rule a clear name that you'll easily recognize later (e.g., "Enroll in Learn Python Course" or "Add Subscribers to Student Group").
 * **Add to Courses:** Use the dropdown menu to select the LearnDash courses you want to enroll the user in when this rule runs.
 * **Add to LearnDash Groups:** Similarly, select any LearnDash group(s) you want to add the user to.
-* **Remove from selected Courses/Groups on Refund or Subscription Access Expiration:** This is a vital setting for managing access automatically. Check this box if you want FluentCart to automatically remove the user from the selected courses/groups if their related order is refunded, or if their subscription expires or is canceled.
-* **Set Course Expiration from Subscription / License Expiry:** Enable this option to automatically expire the customer's LearnDash course access on the same date as their **subscription expiration** or **license expiration**. When the underlying commercial relationship ends — the subscription lapses or the license reaches its expiry date — LearnDash receives the same expiry date for the enrolled course(s), so the customer loses access at exactly the right moment. This keeps course access aligned with billing instead of letting the two systems drift apart.
-    * Use this for **membership-style course bundles** where access is tied to an ongoing subscription.
-    * Use this for **time-limited licensed courses** where each license carries its own expiry (e.g., a one-year course license).
-    * If both a subscription and a license are connected to the order, FluentCart will use whichever expiry is earliest, so the customer never keeps access past either deadline.
+* **Remove from selected Courses/Groups on Refund or Subscription Access Expiration:** This box is checked by default. With it checked, FluentCart unenrolls the customer from the selected courses and groups when the order is fully refunded or canceled, or when the subscription's paid access expires. Canceling a subscription does not remove access right away; access ends when the paid period runs out. If you uncheck it, an expired subscription blocks the course without removing the enrollment, so the student's progress is kept and access returns if they renew. In that case, add **Subscription Expired / End of Access Validity** to **Event Trigger** so the block is applied.
 * **Event Trigger:** Select the FluentCart action from the dropdown that runs this rule. For course access after purchase, you can use `Order Paid (Payment / Subscription)`. Other order and subscription triggers are available for different needs. 
 * **Run on Selected Variations Only (Available for Product-Specific Feeds Only):** If the product has different variations (e.g., "Basic Access," "Premium Access"), you can use this dropdown to make the rule run only when a specific variation is purchased. Leave empty to apply to all variations.
 * **Enable this Integration:** Make sure this toggle at the top right is switched **ON** (blue) to make the rule active.
 
-Click **Create LearnDash Feed** (or similar button) to save your rule.
+Click **Create LearnDash Feed** to save your rule.
 
 ![Global Integration Feed](/images/integrations/learndash/integration-feed-3.png)
+
+### How Course Expiry Works
+
+You don't need to turn anything on. When the feed enrolls a customer, FluentCart sets the LearnDash course expiry automatically:
+
+* If the order has a subscription, access lasts until the subscription's next billing date.
+* If there is no subscription but the order has a license, access lasts until the license expiry date.
+* If there is neither (a one-time purchase), no expiry is set.
+* When a subscription finishes all its installments, the expiry is removed and access becomes permanent.
+
+To move the expiry forward each time a subscription renews, also select **Subscription Renewed** in **Event Trigger**. On a renewal, FluentCart only extends the expiry and clears any block; it does not re-enroll the student.
 
 ### Use Case Example: Selling a Course Bundle
 
@@ -85,11 +92,11 @@ With these simple, product-specific rules, FluentCart automatically handles the 
 
 ### Use Case Example: Time-Limited Membership Course
 
-If you sell course access as a yearly subscription or a time-limited license, you can use **Set Course Expiration from Subscription / License Expiry** to keep LearnDash and FluentCart perfectly in sync:
+If you sell course access as a yearly subscription, FluentCart keeps LearnDash and your billing in sync:
 
 1.  Create a subscription product (e.g., "Annual Photography Membership") in FluentCart.
 2.  On the product, add a LearnDash feed and select the courses included in the membership.
-3.  Enable **Set Course Expiration from Subscription / License Expiry** in the feed.
-4.  Set Trigger to **Order Paid (Payment / Subscription)**.
+3.  Set **Event Trigger** to **Order Paid (Payment / Subscription)** and **Subscription Renewed**.
+4.  Leave **Remove from selected Courses/Groups on Refund or Subscription Access Expiration** checked.
 
-When a customer subscribes, LearnDash gives them access until the subscription's next expiry date. If they renew, the course expiry rolls forward automatically. If they cancel or fail to renew, course access ends on the same day as their subscription — no manual cleanup required, and no risk of a customer losing access early or keeping it for free.
+When a customer subscribes, LearnDash gives them access until the subscription's next billing date. Each renewal moves that date forward. If they cancel, they keep access until the period they paid for ends.
