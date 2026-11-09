@@ -1,8 +1,3 @@
----
-title: Developer Mode
-description: Enable FLUENT_CART_DEV_MODE to unlock destructive migration tooling on staging environments. The constant is the gate for every reset path in the plugin.
----
-
 # Developer Mode
 
 The Migrator includes a set of tools — primarily reset and re-run paths — that are too destructive to leave exposed on production. **Developer Mode** is the single switch that unlocks them.
@@ -37,14 +32,16 @@ With `FLUENT_CART_DEV_MODE` set to `true`, the following capabilities become ava
 
 | Path | How to access |
 |------|---------------|
-| `--reset` flag on the main migration command | `wp fluent_cart_migrator migrate_from_edd --reset` |
 | Standalone reset command | `wp fluent_cart_migrator reset` |
-| Schema-refresh reset | `wp fluent_cart_migrator migrate_fresh` |
-| Reset button in the admin wizard | Visible at the completion screen |
+| **Reset Migration** link in the admin wizard | Appears inside the "Previous migration detected" notice on the Pre-Migration Overview screen |
 
-Without Developer Mode, every one of those paths returns blocked. The admin wizard checks the same flag and hides the reset button entirely. This is the behavior you want on production.
+Without Developer Mode, the standalone `reset` command stops with an error and the wizard hides the **Reset Migration** link. This is the behavior you want on production.
 
-For the actual reset workflow — what reset destroys, when to use `reset` vs `migrate_fresh`, the staging rehearsal recipe, and confirmation prompts — see [Troubleshooting → Resetting a migration](/guide/migration/edd/troubleshooting#resetting-a-migration).
+::: warning The `--reset` flag isn't gated
+`wp fluent_cart_migrator migrate_from_edd --reset` isn't gated by Developer Mode. It only asks for confirmation, so treat it as destructive everywhere.
+:::
+
+For the actual reset workflow (what reset destroys, the staging rehearsal recipe, and confirmation prompts), see [Troubleshooting → Resetting a migration](/guide/migration/edd/troubleshooting#resetting-a-migration).
 
 ## Related
 
