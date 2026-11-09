@@ -4,23 +4,33 @@ The Checkout Fields screen in **FluentCart** allows you to customize the form cu
 
 ## Accessing Checkout Fields Settings
 
-Go to your **WordPress dashboard**, then navigate to **FluentCart > Store Settings** in the side menu, and select the **Checkout Fields** section.
+Go to your **WordPress dashboard**, then go to **FluentCart > Settings**, open **Store Settings** in the settings menu and select **Checkout Fields**.
 
 ## Configuration Options
 
-The settings are organized into three sections, allowing you to control which fields appear during the checkout process.
+The fields are grouped into **Basic Info**, **Business Details**, **Billing Address**, **Shipping Address** and **Agree Terms**, allowing you to control which fields appear during the checkout process.
 
 ### 1. Basic Info
 
 This section includes essential fields for customer identification.
 
-* **First Name:** You can now enable this as an individual field. Enabling First/Last name will replace the default Full Name.
-* **Last Name:** You can enable this field and mark it as mandatory by checking the **Required** box.
-* **Email Address:** A system-required field used for order confirmations and communication. This field cannot be disabled.
-* **Company:** An optional field for collecting a customer's company name. You can enable it with the toggle and make it mandatory by checking the **Required** box.
+* **Full Name:** Shown by default and marked **System**. Enabling First Name and Last Name replaces it.
+* **First Name:** Turn it on to split the name into first and last name. It is marked **System** and has no **Required** box. While **Last Name** is on, you can't turn First Name off.
+* **Last Name:** Turn it on and tick **Required** to make it mandatory.
+* **Email Address:** A system-required field used for order confirmations and communication. It is always required and can't be disabled.
 
+### 2. Business Details
 
-### 2. Billing Address
+Use these fields if you sell to businesses. All of them are off by default.
+
+* **Company:** The customer's company name.
+* **VAT/GST/Tax Number:** A field for the customer's tax ID.
+* **Legal Registration ID:** A company registration or business ID.
+* **B2B Only Mode:** Available once at least one business field is on.
+
+Normally, customers see an **I am purchasing as a business** toggle at checkout that reveals these fields. With **B2B Only Mode** on, the toggle is hidden and the business fields are always shown.
+
+### 3. Billing Address
 
 This section allows you to define the address fields required for billing purposes.
 
@@ -30,11 +40,12 @@ This section allows you to define the address fields required for billing purpos
 * **Apt, suite, unit:** Displays an optional second address line for apartment numbers or other details.
 * **City**: Displays the city field. It is enabled and required by default.
 * **Post Code**: Displays the postal/zip code field. It is enabled and required by default.
-* **Phone**: An optional field to collect the customer’s phone number.
+* **Phone:** Off by default. Turn it on to collect the customer's phone number, and tick **Required** if you need it.
 
-    ![Screenshot of Additional Info Settings Tab](/images/settings-configuration/checkout-field/checkout-fields.webp)
+    <!-- TODO(screenshots): checkout-fields.webp is outdated: it shows Company under Basic Info and has no Business Details section. Retake the Basic Info, Business Details and Billing Address sections of Checkout Fields. Update later. -->
+    ![Screenshot of Checkout Fields billing address settings](/images/settings-configuration/checkout-field/checkout-fields.webp)
 
-### 3. Shipping Address
+### 4. Shipping Address
 
 This section lets you configure the fields for the shipping address, which is crucial for physical products.
 
@@ -45,16 +56,17 @@ This section lets you configure the fields for the shipping address, which is cr
 * **Apt, suite, unit:** Displays an optional second shipping address line.
 * **City**: Displays the city field for shipping.
 * **Post Code**: Displays the postal/zip code field for shipping.
-* **Phone**: An optional field to collect the recipient’s phone number for delivery purposes.
+* **Phone:** Off by default. Turn it on to collect the recipient's phone number for delivery, and tick **Required** if you need it.
 
-   ![Screenshot of Additional Info Settings Tab](/images/settings-configuration/checkout-field/shipping-address.webp)
+   ![Screenshot of Checkout Fields shipping address settings](/images/settings-configuration/checkout-field/shipping-address.webp)
 
-### 4. Agree Terms
+### 5. Agree Terms
 
 This section allows you to include legal agreements at checkout.
 
 * **Agree Terms and Conditions:** Use the toggle to display a terms agreement checkbox on your checkout page.
-* **Required Checkbox:** If enabled, you can make this mandatory so customers must agree before completing their purchase.
+* **Terms text:** Once the toggle is on, a text box lets you write the wording shown next to the checkbox. If you leave it empty, customers see "I agree to the terms and conditions."
+* **Required:** If enabled, you can make this mandatory so customers must agree before completing their purchase.
 
 
 ## Saving Your Settings
