@@ -8,6 +8,10 @@ The **Overview** page is the first stop. It gathers the headline figure from eac
 
 Go to your WordPress dashboard, then go to **FluentCart** > **Reports**. The section always opens on the **Overview** page, and the menu on the left lets you switch to any other report.
 
+::: info
+Reports are included in the free FluentCart plugin. A few extras need **FluentCart Pro**: the **Compare** report, the **Export** (accounting export) page, **Advanced Filters**, and changing the compare period.
+:::
+
 ## The Full Report Section
 
 The Reports menu is divided into focused pages, each covering one area of your store:
@@ -17,13 +21,13 @@ The Reports menu is divided into focused pages, each covering one area of your s
 * **Revenue:** What you actually earned after refunds and tax, with trend charts and breakdowns.
 * **Refunds:** How often and how much money goes back to customers.
 * **Subscriptions:** Recurring revenue and subscriber movement. Its sub-pages cover **Retention**, **Cohorts**, **Future Renewals**, and [Installments](/guide/reporting-analytics/installments-report).
-* **Products:** How each product sells. Its **Compare** sub-page puts the products you pick side by side.
+* **Products:** How each product sells. Its **Compare** sub-page (FluentCart Pro) puts the products you pick side by side.
 * **Customers:** New and returning customers and what they are worth.
 * **Sources:** Orders grouped by marketing channel, campaign, source, and medium.
 * **Coupons:** How much discount you give and how each coupon code performs. See the [Coupons Report](/guide/reporting-analytics/coupons-report).
 * **Payment Methods:** Sales, refunds, and payment failures for each payment gateway. See the [Payment Methods Report](/guide/reporting-analytics/payment-methods-report).
 * **Locations:** Sales and customers by country, with a world map. See the [Locations Report](/guide/reporting-analytics/locations-report).
-* **Export:** An accounting export of your sales and refunds. This page is added by FluentCart Pro.
+* **Export:** An accounting export of your sales and refunds. This page is added by FluentCart Pro and appears only when your role can export reports.
 
 ::: info
 The Reports menu is **extensible**. When you install a FluentCart add-on that ships its own reports, those pages appear automatically in the same menu, after the built-in ones. There's nothing to configure.

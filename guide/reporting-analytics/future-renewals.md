@@ -4,7 +4,7 @@ The **Future Renewals** report provides a predictive look into your store's upco
 
 ## Accessing Future Renewals
 
-Go to your WordPress dashboard, navigate to **FluentCart Pro → [Reports](/guide/reporting-analytics/reports-dashboard-overview)**, and select the **Future Renewals** sub-tab under the **Subscriptions** category.
+Go to your WordPress dashboard, navigate to **FluentCart → [Reports](/guide/reporting-analytics/reports-dashboard-overview)**, and select the **Future Renewals** sub-tab under the **Subscriptions** category.
 
 ## Report Filters and Controls
 

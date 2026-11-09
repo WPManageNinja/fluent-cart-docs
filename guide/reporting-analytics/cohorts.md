@@ -4,7 +4,7 @@ The **Cohorts** report provides a detailed look at customer behavior over time b
 
 ## Accessing the Cohorts Report
 
-Go to your WordPress dashboard, navigate to **FluentCart Pro → [Reports](/guide/reporting-analytics/reports-dashboard-overview)**, and select the **Cohorts** sub-tab under the **Subscriptions** category.
+Go to your WordPress dashboard, navigate to **FluentCart → [Reports](/guide/reporting-analytics/reports-dashboard-overview)**, and select the **Cohorts** sub-tab under the **Subscriptions** category.
 
 ---
 

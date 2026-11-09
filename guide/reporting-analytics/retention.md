@@ -4,7 +4,7 @@ The **Retention** report in FluentCart provides a deep dive into your subscripti
 
 ## Accessing the Retention Report
 
-Go to your WordPress dashboard, navigate to **FluentCart Pro → [Reports](/guide/reporting-analytics/reports-dashboard-overview)**, and select the **Retention** sub-tab under the **Subscriptions** category.
+Go to your WordPress dashboard, navigate to **FluentCart → [Reports](/guide/reporting-analytics/reports-dashboard-overview)**, and select the **Retention** sub-tab under the **Subscriptions** category.
 
 ## Report Filters and Controls
 
