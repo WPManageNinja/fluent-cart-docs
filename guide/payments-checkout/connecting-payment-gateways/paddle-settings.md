@@ -4,6 +4,10 @@ Paddle is an all-in-one payment solution that simplifies selling globally by han
 
 This guide will walk you through the entire process of connecting your Paddle account to FluentCart.
 
+::: info
+Paddle requires **FluentCart Pro**. Without Pro, the Paddle page in Payment Settings shows an upgrade prompt instead of the settings.
+:::
+
 ## Step 1: Activate Paddle in FluentCart
 
  1. First, you need to enable **Paddle** as a payment method in your store.
@@ -16,7 +20,7 @@ This will take you to the main Paddle settings page, where you will configure th
    ![Screenshot of Activate Paddle in FluentCart](/images/payments-checkout/paddle-payment/activate-paddle.webp)
 
 
-### Step 2: Configure Paddle Settings
+## Step 2: Configure Paddle Settings
 
 On this page, you need to provide your Paddle API credentials and customize the checkout experience.
 
@@ -25,10 +29,14 @@ Here's a breakdown of the available settings:
 
 * **Test/Live Credentials:** You can switch between Test credentials and Live credentials. It's recommended to start with the test mode to ensure everything is working correctly before accepting real payments.
 * **Sandbox/Live API Key:** Enter your API Key from your Paddle dashboard.
-* **Sandbox/Live Client Token / Public Key:** Enter your Client Token or Public Key from Paddle.
+* **Sandbox/Live Client Token / Public Key:** Enter your Client Token or Public Key from Paddle (optional; used for the on-page Paddle checkout).
 * **Sandbox/Live Webhook Secret:** Enter your Webhook Secret Key. You'll get this when you set up the webhook in your Paddle account (see next step).
 
 To find your API Keys and Client Token, log in to your [Paddle account](https://login.paddle.com/login) and navigate to the **Developer Tools → Authentication** section.
+
+::: info
+Paddle redirects customers to your receipt page after payment. If no valid receipt page is set (for example, it is a draft or deleted), the Paddle settings page shows a red warning with a link to **Store Settings > Pages Setup**.
+:::
 
    ![Screenshot of Payment Activation](/images/payments-checkout/paddle-payment/payment-activation.webp)
 
@@ -56,7 +64,7 @@ Here, you can see the newly generated Client Token. Now, click the **Three-dot i
 
    ![Screenshot of Copy Client Token/ Public Token](/images/payments-checkout/paddle-payment/copy-client-token.webp)
 
-### Step 3: Set up Webhooks in Paddle
+## Step 3: Set up Webhooks in Paddle
 
 Webhooks are essential for FluentCart to receive real-time updates about transaction statuses, subscriptions, and other events from Paddle.
 
@@ -76,6 +84,7 @@ A modal will appear. **Paste** the URL you copied from FluentCart into the **Web
     * `subscription.created`
     * `subscription.activated`
     * `subscription.updated`
+    * `subscription.past_due`
     * `subscription.paused`
     * `subscription.resumed`
     * `subscription.canceled`
@@ -86,21 +95,22 @@ After selecting the events, save the webhook by clicking the **Save destination*
 
 #### Add Webhook Secret to FluentCart:
 
-Go back to your FluentCart **Paddle Settings** page in WordPress. Then, **paste** the API key, Secret key, and Webhook Secret into their respective fields.
+Go back to your FluentCart **Paddle Settings** page in WordPress. Then, **paste** the **API Key**, **Client Token / Public Key** and **Webhook Secret** into their fields.
 
 ## Customization Options
 
 You can also customize the appearance and text of the Paddle checkout button:
 
-* **Tax Mode:** This setting determines how taxes are calculated for your transactions.
-    * **Use paddle account settings:** This is the recommended option. It leverages Paddle's powerful tax platform to automatically calculate and remit sales tax and VAT for you worldwide. All tax settings will be managed directly from your Paddle dashboard.
-    * **Internal:** Select this if you want to use the tax rates you have configured within FluentCart's own tax settings (**FluentCart → Tax & Duties**).
-    * **External:** Choose this option if you are using a third-party service to handle tax calculations or if you do not need to charge tax. FluentCart will not add any tax to the transaction.
+* **Tax Mode:** Paddle is the Merchant of Record, so it ignores FluentCart's tax rates and its tax-inclusive/exclusive setting. Only this option decides how Paddle taxes your prices:
+    * **External** (default): Tax is added on top of your price, so the customer pays price plus VAT. Choose this if your prices exclude tax.
+    * **Internal:** Your price already includes tax. Paddle deducts VAT from it, so you receive less than the listed price.
+    * **Use Paddle Account Settings:** Follows the default in your Paddle dashboard, which is tax-inclusive on new Paddle accounts.
 * **Paddle Checkout Theme:** Select a **Light** or **Dark** theme for the Paddle checkout modal.
 * **Paddle Checkout Button Text:** Customize the text that appears on the payment button (e.g., "Pay with Card", "Proceed to Paddle").
 * **Button Styling:** Adjust the **Button Color**, **Button Hover Color**, **Button Text Color**, and **Button Font Size** to match your store's design.
-* **Disable Webhook Verification:** This security feature ensures that webhook notifications are genuinely coming from Paddle. It should only be disabled for specific debugging or testing scenarios. For a live store, always keep this setting enabled to protect your store from fraudulent requests.
+* **Disable Webhook Verification (Test purpose only):** Leave this unchecked. Webhook verification confirms that notifications really come from Paddle. Tick the box only while debugging in test mode, never on a live store.
 
+<!-- TODO(screenshots): customization-options.webp is outdated: it lacks the Tax Mode notice box, shows the old "Disable Webhook Verification" label without "(Test purpose only)", and has a duplicated Theme/Button Text rendering glitch; retake the Paddle settings page. Update later. -->
    ![Screenshot of Customization](/images/payments-checkout/paddle-payment/customization-options.webp)
 
 Once you have configured all the settings, click the **Save Settings** button. Your Paddle integration is now complete!
