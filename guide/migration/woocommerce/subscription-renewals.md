@@ -1,8 +1,3 @@
----
-title: Subscriptions & Renewals
-description: How recurring billing changes hands when you migrate from WooCommerce Subscriptions to FluentCart, and what decides whether a migrated subscription keeps auto-charging.
----
-
 # Subscriptions & Renewals
 
 If your WooCommerce store sells recurring products, this is the part of the migration that needs the most attention. Everything else — products, orders, customers, coupons — is history being copied. Subscriptions are live obligations, and after migration a different system is responsible for billing them.

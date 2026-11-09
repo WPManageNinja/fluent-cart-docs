@@ -13,7 +13,7 @@ The Migrator reads your data from a supported source platform and recreates it i
 * **Licenses** software licenses and their site activations.
 * **Coupons and tax configuration.**
 
-Your source store is only ever **read**, never modified, so it keeps running untouched while you migrate — you can run both stores side by side until you're ready to switch over.
+The Migrator only reads your orders, customers, and settings from the source store. The one thing it writes there is a small ID-mapping field on each source product (so a re-run updates instead of duplicating), so your old store keeps running while you migrate. You can run both stores side by side until you're ready to switch over.
 
 ## Activating the Migrator Addon
 
@@ -21,17 +21,17 @@ The Migrator ships as an addon, so you need to turn it on before it appears in y
 
 1. In your WordPress admin, go to **FluentCart → Settings → Features & addon**.
 2. Scroll to the **Plugin Addons** list and find **FluentCart Migrator**.
-3. Click **Install & Activate**.
+3. If FluentCart Pro is active, click **Install & Activate**. On the free plugin the button reads **Download** and opens the FluentCart addons page: download the `.zip`, then upload it under **Plugins > Add New > Upload Plugin** and click **Activate Plugin**.
 
-![Screenshot of the Features & addon settings page with the FluentCart Migrator addon and its Install & Activate button highlighted](/images/migration/overview/activate-migrator-addon.webp)
+![Screenshot of the Features & addon settings page with the FluentCart Migrator addon and its Install & Activate (Pro) / Download (free) button highlighted](/images/migration/overview/activate-migrator-addon.webp)
 
-## Finding the Migration Menu
+## Finding the Migrator Menu
 
-Once the addon is active, a new **Migration** menu appears under the **FluentCart** section in your WordPress sidebar. Open it any time to start, resume, or review a migration.
+Once the addon is active, a new **Migrator** item appears under **FluentCart** in your WordPress sidebar. Open it any time to start, resume, or review a migration.
 
-## What's Inside the Migration Screen
+## What's Inside the Migrator Screen
 
-The Migration screen opens with a **Select Migration Source** panel listing every platform the Migrator supports. FluentCart automatically scans your site and marks a platform **Detected** when it finds an active installation it can read from.
+The Migrator screen opens with a **Select Migration Source** panel listing every platform the Migrator supports. FluentCart automatically scans your site and marks a platform **Detected** when it finds that platform on your site. Easy Digital Downloads also counts as detected when only its data tables remain.
 
 ![Screenshot of the Select Migration Source screen showing Easy Digital Downloads and WooCommerce marked as Detected, with SureCart listed as Coming Soon](/images/migration/overview/select-migration-source.webp)
 
@@ -43,7 +43,7 @@ Currently, the Migrator supports moving your store from **Easy Digital Downloads
 
 ## Before You Start: Install and Activate the Source Platform
 
-The Migrator needs a live copy of your old store to read from, so the source plugin — **Easy Digital Downloads** or **WooCommerce** — must be installed and active on the same site as FluentCart before you begin. If it isn't detected, install and activate it first, then return to the Migration screen.
+The Migrator needs a live copy of your old store to read from, so the source plugin — **Easy Digital Downloads** or **WooCommerce** — must be installed and active on the same site as FluentCart before you begin. If it isn't detected, install and activate it first, then return to the Migrator screen.
 
 ## Continue With Your Platform's Migration Guide
 

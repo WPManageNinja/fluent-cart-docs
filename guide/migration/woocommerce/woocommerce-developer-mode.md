@@ -1,8 +1,3 @@
----
-title: Developer Mode
-description: Enable FLUENT_CART_DEV_MODE to unlock the WooCommerce migration reset path on staging environments. The constant is the gate for every destructive operation in the Migrator.
----
-
 # Developer Mode
 
 The Migrator includes a reset path that is too destructive to leave exposed on production. **Developer Mode** is the single switch that unlocks it.
@@ -40,7 +35,7 @@ With `FLUENT_CART_DEV_MODE` set to `true`, the following become available:
 | `--reset` flag on the WooCommerce migration command | `wp fluent_cart_migrator migrate_from_woo --reset` |
 | **Reset Migration** link in the admin wizard | Appears inside the "Previous migration detected" notice on the Pre-Migration Overview screen |
 
-Without Developer Mode, the CLI flag returns a clear error and the wizard hides the reset link entirely — the "Previous migration detected" notice still appears so you know a prior run happened, just without the reset option. That is the behavior you want on production.
+Without Developer Mode, the CLI flag still asks you to confirm, then stops with an error that tells you to define `FLUENT_CART_DEV_MODE`. Nothing is deleted. The wizard hides the reset link entirely — the "Previous migration detected" notice still appears so you know a prior run happened, just without the reset option. That is the behavior you want on production.
 
 For the actual reset workflow — what reset destroys, the staging rehearsal recipe, and confirmation prompts — see [Troubleshooting → Resetting a migration](/guide/migration/woocommerce/woocommerce-troubleshooting#resetting-a-migration).
 

@@ -1,8 +1,3 @@
----
-title: WP-CLI Reference
-description: Complete WP-CLI reference for migrating WooCommerce to FluentCart. Run full migrations, individual stages, stats, logs, and reset from the terminal.
----
-
 # WP-CLI Reference
 
 For stores with thousands of orders, WP-CLI is faster than the admin wizard and avoids browser timeouts entirely. The same engine drives both interfaces, so the result is identical — only the surface differs.
@@ -49,7 +44,7 @@ WooCommerce uses `migrate_from_woo`. Easy Digital Downloads uses `migrate_from_e
 | `--missing-customers` | Create FluentCart customers for registered `customer` / `subscriber` accounts that never placed an order. |
 | `--recount` | Recalculate aggregates after migration: coupon usage, customer lifetime value and purchase counts, orphaned renewal transactions, subscription bill counts. |
 | `--stats` | Show pre-migration statistics for the WooCommerce store. No data is migrated. |
-| `--log` | Display the failed order log. |
+| `--log` | Show the skip and failure report: totals, then one group per reason with a hint. Add `--verbose` to list every record, or `--export=<file.csv>` to save the full report as CSV. |
 | `--reset` | Wipe migrated data and clear migration state. **Requires Developer Mode.** See [Developer Mode](/guide/migration/woocommerce/woocommerce-developer-mode). |
 
 ## Common workflows
@@ -100,7 +95,7 @@ If individual orders failed during the migration — corrupted records, missing 
 wp fluent_cart_migrator migrate_from_woo --log
 ```
 
-Each entry shows the WooCommerce order ID and the error message. Failures are also printed as warnings during the run itself, so a long CLI migration surfaces problems as they happen.
+By default the report groups records by reason, with a count and a hint for each. Add `--verbose` to list every record (type, ID, order number, and message), or `--export=report.csv` to write the full CSV. During the run, the orders stage prints one line per page and the number of logged errors at the end.
 
 ### Reset and start over (staging only)
 
@@ -117,7 +112,7 @@ The CLI is fully resumable. State is persisted in the `__fluent_cart_woocommerce
 - **Stage-level resume:** Re-running `--all` skips any stages already marked complete.
 - **Page-level resume for products:** The last completed product page is stored; a re-run continues from the next one.
 - **Page-level resume for orders:** Same mechanism, in pages of 1,000 orders.
-- **Idempotent re-runs:** `--products` updates existing migrated products in place through the ID map rather than duplicating them. `--coupons` updates existing coupons by code. `--recount` always recalculates from current data and never increments.
+- **Completed stages don't re-run:** once a stage is marked complete, running its flag again prints `[already done]` or `already done. Skipping.` and changes nothing. The ID map only protects against duplicates when an interrupted stage resumes. To redo a completed stage, reset the migration on staging ([Developer Mode](/guide/migration/woocommerce/woocommerce-developer-mode)) and run it again. `--recount` always recalculates from current data and never increments.
 
 This means you can safely interrupt a long run with `Ctrl+C` and start it again. No duplicate data, no skipped records.
 

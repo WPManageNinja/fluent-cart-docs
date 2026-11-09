@@ -1,8 +1,3 @@
----
-title: Migrating from WooCommerce
-description: Step-by-step walkthrough for migrating a WooCommerce store to FluentCart using the admin wizard. Covers installation, compatibility, the pre-migration overview, step selection, and verification.
----
-
 # Migrating to FluentCart from WooCommerce
 
 Moving an entire online store to a new platform might sound like a massive, stressful project — but with FluentCart it doesn't have to be.
@@ -10,7 +5,7 @@ Moving an entire online store to a new platform might sound like a massive, stre
 The **FluentCart Migrator** addon acts as your personal moving team. It automatically and securely transfers all of your hard-earned data — products, categories, attributes, orders, customers, subscriptions, coupons, tax rates — from **WooCommerce** directly into your new FluentCart store. No spreadsheets, no CSV exports, no manual data entry.
 
 ::: tip Your WooCommerce store stays safe
-This tool only **copies** your data into FluentCart. Your original WooCommerce store, all its settings, and every record stay completely untouched throughout this entire process. You can run both side-by-side until you're fully ready to switch.
+This tool copies your data into FluentCart and leaves your WooCommerce orders, customers, and settings unchanged (it only adds an ID-mapping field to each WooCommerce product). You can run both side-by-side until you're fully ready to switch.
 :::
 
 This page walks through the wizard step by step. For an alternative terminal-based workflow on large stores, see the [WP-CLI Reference](/guide/migration/woocommerce/woocommerce-cli). For a complete inventory of what does and doesn't transfer, see [What Gets Migrated](/guide/migration/woocommerce/woocommerce-what-is-migrated).
@@ -29,11 +24,11 @@ Take two minutes to confirm these are in place before you start. Catching a miss
 - **At least one product** must exist in WooCommerce. The compatibility check refuses to run against an empty catalog.
 - **FluentCart** must be installed and activated — [Get FluentCart](https://fluentcart.com).
 - **WooCommerce Subscriptions** is only needed if you sell recurring products. If it isn't active, subscription counts read zero and every order migrates as a one-time payment.
-- **A database backup** — always take a fresh backup before any migration. It's your safety net, even though the Migrator never modifies your WooCommerce data.
+- **A database backup** — always take a fresh backup before any migration. It's your safety net, even though the Migrator leaves your WooCommerce orders, customers, and settings unchanged (it only adds an ID-mapping field to each WooCommerce product).
 - **WordPress admin access** on the site you're migrating.
 
 ::: warning Back up first
-Even though the Migrator only reads from WooCommerce and never touches your existing data, take a fresh database backup before you begin. It takes five minutes and gives you complete peace of mind.
+Even though the Migrator leaves your WooCommerce orders, customers, and settings unchanged (it only adds an ID-mapping field to each WooCommerce product), take a fresh database backup before you begin. It takes five minutes and gives you complete peace of mind.
 :::
 
 For a deeper rehearsal before touching production, run the migration on staging first with [Developer Mode](/guide/migration/woocommerce/woocommerce-developer-mode) enabled. That lets you reset and re-run as many times as needed.
@@ -49,7 +44,7 @@ The quickest route is from inside FluentCart itself:
 1. Go to **FluentCart → Settings → Features & addon**.
 2. Scroll to the **Plugin Addons** panel.
 3. Find **FluentCart Migrator** — *"Migrate your store data to FluentCart from other eCommerce platforms."*
-4. Click **Download**, then activate the plugin when prompted.
+4. With FluentCart Pro active, click **Install & Activate**. FluentCart installs and activates the addon and reloads the page. On the free plugin, click **Download**: the FluentCart addons page opens in a new tab. Download the `.zip` there and install it as described below.
 
 ![FluentCart Features and addon screen with the Download button next to FluentCart Migrator](/images/migration/woo-migrator/01-addon-download.webp)
 
@@ -118,10 +113,11 @@ You're at the final setup screen. The **Migration Steps** panel lets you choose 
 - **Tax Rates** — WooCommerce tax configuration and the rate map orders depend on
 - **Coupons** — discount codes with their restrictions
 - **Orders, Payments, Customers** — the main stage; also covers subscriptions when WooCommerce Subscriptions is active
-- **Missing Customers** — appears only when you have registered customers who never placed an order
 - **Recount & Verify** — rebuilds coupon usage, customer lifetime value, and subscription bill counts
 
-Leave **all of them checked**. Unchecking any item means that data won't come over. Order matters and the wizard runs them in the correct sequence — products must exist before orders can reference them, and recount always runs last.
+The wizard doesn't offer a **Missing Customers** step for WooCommerce. To bring over registered `customer` or `subscriber` accounts that never placed an order, run `wp fluent_cart_migrator migrate_from_woo --missing-customers` after the wizard finishes (or use `--all` from the start). See the [WP-CLI Reference](/guide/migration/woocommerce/woocommerce-cli).
+
+Leave every step checked. Unchecking an item means that data won't come over. Order matters and the wizard runs them in the correct sequence — products must exist before orders can reference them, and recount always runs last.
 
 When ready, click **Start Migration**.
 
@@ -146,7 +142,7 @@ Once every stage reports done, you'll see a green checkmark and a **WooCommerce 
 
 ![WooCommerce Migration Completed panel showing product and customer counts and a View FluentCart Dashboard button](/images/migration/woo-migrator/05-completion.webp)
 
-If any individual orders failed during the run, an expandable **Error Log** section appears here listing each one. See [Troubleshooting](/guide/migration/woocommerce/woocommerce-troubleshooting) for how to read and act on those entries.
+If any orders were skipped or failed, the **Orders** tag on the completion panel shows a **(N skipped)** or **(N failed)** count. Click it to open the report, which lists each record with its reason and offers **Download CSV report**. See [Troubleshooting](/guide/migration/woocommerce/woocommerce-troubleshooting) for how to read and act on those entries.
 
 Your data is in. Before opening your new store to the public, spend a few minutes verifying the result.
 
@@ -199,8 +195,11 @@ Any `[woocommerce_cart]`, `[woocommerce_checkout]`, `[products]`, or add-to-cart
 **6. Confirm Downloadable Files**
 Downloadable files stored on your own server are copied into FluentCart's storage during migration. Files hosted remotely (S3, a CDN, another domain) keep their original URL. Open each digital product and confirm the file is linked correctly under **Downloadable Asset(s)**.
 
+**7. Keep the Migrator Active While Stripe Webhooks for Old Orders Can Still Arrive**
+Stripe events for orders paid in WooCommerce reference the original charge ID. While the Migrator is active, it matches them to the migrated transaction, so refunds and disputes on old orders still update in FluentCart. The completion screen reminds you of this with a **Keep this plugin active** notice.
+
 ::: warning Don't delete your WooCommerce data yet
-Even after everything is verified and running, don't rush to remove WooCommerce or its database tables. The Migrator never modifies them — they're your fallback if you ever need to reference an original record. Leave them in place until you're fully confident in the new store.
+Even after everything is verified and running, don't rush to remove WooCommerce or its database tables. The Migrator leaves your WooCommerce orders, customers, and settings unchanged (it only adds an ID-mapping field to each WooCommerce product), so they're your fallback if you ever need to reference an original record. Leave them in place until you're fully confident in the new store.
 :::
 
 ## Need help?

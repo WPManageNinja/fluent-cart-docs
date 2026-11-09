@@ -1,8 +1,3 @@
----
-title: What Gets Migrated
-description: A complete reference of every entity the FluentCart Migrator transfers from WooCommerce — and the items that are deliberately out of scope.
----
-
 # What Gets Migrated
 
 Before you run a migration, it is worth knowing exactly what comes across, what doesn't, and why. This page covers both — so there are no surprises after the wizard finishes.
@@ -79,7 +74,7 @@ Customer records transfer with full identity and address data, deduplicated on e
 - Phone number on the billing address
 - Lifetime value, purchase count, average order value — recalculated from the migrated orders during the **Recount & Verify** step
 
-Customers are created two ways. Most arrive as a by-product of order migration: the first migrated order for an email creates the customer and seeds their address book. Registered customers who **never placed an order** would be lost that way, so a dedicated **Missing Customers** step walks users with the `customer` or `subscriber` role and creates any that don't already exist, reading their addresses from the WooCommerce customer profile.
+Customers are created two ways. Most arrive as a by-product of order migration: the first migrated order for an email creates the customer and seeds their address book. Registered customers who **never placed an order** would be lost that way, so a dedicated **Missing Customers** step walks users with the `customer` or `subscriber` role and creates any that don't already exist, reading their addresses from the WooCommerce customer profile. This step runs from WP-CLI (`--missing-customers`, included in `--all`). The admin wizard doesn't offer it for WooCommerce.
 
 ::: info Why `subscriber` too
 Stores that let people register before buying leave those accounts on WordPress's default `subscriber` role. Including that role means those accounts aren't silently dropped.
@@ -165,7 +160,7 @@ After import, the **Recount & Verify** step re-attaches renewal transactions tha
 
 ### Coupons
 
-Every WooCommerce coupon transfers with its rules intact.
+Every WooCommerce coupon transfers with its rules intact. Draft, pending, and private coupons migrate too, as disabled coupons. The **Coupons** count on the pre-migration overview counts published coupons only, so expect FluentCart to show more coupons than that count.
 
 | WooCommerce | Becomes in FluentCart |
 |-------------|----------------------|
@@ -347,7 +342,7 @@ All operations are live. There is no preview mode. To rehearse a migration safel
 | Stock levels and backorders | ✅ | Parent stock flag rolled up from variations |
 | SKUs | ✅ | De-duplicated on collision |
 | Customers (with orders) | ✅ | Deduplicated by email |
-| Customers (without orders) | ✅ | Via the Missing Customers step |
+| Customers (without orders) | ✅ | Via the Missing Customers step (WP-CLI only) |
 | Customer addresses | ✅ | Billing and shipping |
 | Orders (all statuses) | ✅ | `checkout-draft` excluded |
 | Orders in a deactivated custom status | ❌ | Logged to the failed order log; reactivate and re-run |

@@ -1,8 +1,3 @@
----
-title: Troubleshooting
-description: Diagnose and recover from WooCommerce migration issues. Failed order logs, common errors, the reset workflow, and the migration FAQ.
----
-
 # Troubleshooting
 
 The Migrator is built to be tolerant of bad data: individual record failures are captured rather than halting the run. This page explains how to find those failures, how to verify integrity after a migration, and how to recover from common problems.
@@ -17,24 +12,24 @@ When an order fails to migrate — a corrupted record, a missing customer email,
 wp fluent_cart_migrator migrate_from_woo --log
 ```
 
-Each entry shows the WooCommerce order ID and the error message. Failures are also printed as warnings while a CLI run is in progress, so you see them as they happen rather than only at the end.
+The report groups records by reason, with a count and a hint for each. Add `--verbose` to list every record or `--export=report.csv` to save it. A CLI run prints one line per page and the number of logged errors at the end.
 
 ### Viewing failures from the wizard
 
-The completion screen surfaces an expandable **Error Log** section. Click to expand and see the same data as the CLI `--log` output.
+On the completion panel, click the **(N skipped)** or **(N failed)** count next to **Orders** to open the report. From there you can **Refresh** it or **Download CSV report**.
 
 ### What to do with a failed entry
 
 1. Open the original order in WooCommerce (**WooCommerce → Orders**).
 2. Compare it against the error message — usually the cause is obvious (missing billing email, deleted product reference, an order with no usable line items).
 3. Fix the source data in WooCommerce.
-4. Re-run the orders stage: `wp fluent_cart_migrator migrate_from_woo --payments`. Already-migrated orders are skipped.
+4. Once the orders stage has finished, running `--payments` again does nothing: the whole stage is marked complete and is skipped. To bring the fixed orders across, rehearse on staging: reset the migration ([Developer Mode](/guide/migration/woocommerce/woocommerce-developer-mode)), then run it again. On production, fix the source data before the run, or recreate the few affected orders by hand in FluentCart.
 
 ### Orders in an unregistered custom status
 
 One entry type in the log isn't a data problem. WooCommerce can only return orders whose status is currently registered, so if a plugin that added custom order statuses has been deactivated, its orders can't be queried at all. Rather than leaving them unaccounted for, the Migrator lists each one with its order number, status, date, total, customer email, and an edit link.
 
-**Fix:** reactivate the plugin that registered the status, then re-run the orders stage. The orders become queryable again and migrate normally.
+**Fix:** reactivate the plugin that registered the status **before** you run the orders stage. If the stage has already completed, re-running it is skipped, so you'll need to reset (staging) and run the migration again.
 
 ## Common issues
 
@@ -88,7 +83,7 @@ FluentCart's product count won't always equal WooCommerce's, and that's usually 
 
 This happens when the orders stage ran before the products stage. Order line items resolve their product through the ID map that the products step writes.
 
-**Fix:** Run `--products` first, then re-run `--payments`. If the products already migrated, re-running orders is safe — order records are idempotent.
+**Fix:** Always run `--products` before `--payments` (`--all` does this for you). If the orders stage already completed without products, reset the migration on staging and run it again in order. A second `--payments` run is skipped.
 
 ### An order total doesn't match WooCommerce
 
@@ -98,13 +93,13 @@ It should always match. The Migrator rebuilds each order total from its componen
 
 Coupon product and category restrictions are remapped, not copied. A restricted product that wasn't migrated — because it was trashed, or the products step hadn't run yet — is dropped from the list rather than left pointing at a non-existent ID.
 
-**Fix:** Run `--products` first, then re-run `--coupons`. Coupons are updated in place by code, so re-running is safe.
+**Fix:** Run `--products` before `--coupons`. Once the coupons stage is complete, running it again is skipped, so reset (staging) and re-run the stages in order.
 
 ### Tax is missing on migrated orders
 
 Tax migration is conditional on taxes being enabled in WooCommerce. If they were disabled, the tax step is skipped with a notice and order tax rows have no FluentCart rate to link to.
 
-**Fix:** Enable taxes in WooCommerce, run `--tax_rates`, then re-run `--payments` so order tax rows resolve.
+**Fix:** Enable taxes in WooCommerce **before** you migrate. Both the tax and orders stages are skipped once they've completed, even if the tax stage was skipped because taxes were off. Reset the migration on staging and run it again.
 
 ### Subscription bill counts look wrong
 
@@ -145,7 +140,7 @@ Customers are created from orders. Registered accounts that never placed an orde
 wp fluent_cart_migrator migrate_from_woo --missing-customers
 ```
 
-In the wizard, the **Missing Customers** checkbox only appears when such accounts are detected.
+The wizard doesn't offer this step for WooCommerce, so run the command above after a wizard migration.
 
 ### Downloadable files aren't downloading
 
@@ -171,7 +166,7 @@ Reset drops and recreates FluentCart's database tables and deletes migrated prod
 wp fluent_cart_migrator migrate_from_woo --reset
 ```
 
-Asks for confirmation before destroying anything. You can bypass the prompt with WP-CLI's standard `--yes` flag inside scripts you have reviewed.
+Asks for confirmation before destroying anything. The prompt always appears, even with `--yes`.
 
 ### From the wizard
 
@@ -193,7 +188,7 @@ Reset is thorough. It rolls back everything the migration created so you can sta
 - Deletes FluentCart product posts and their metadata
 - Removes the ID-mapping metadata from both sides (`_fct_migrated_id`, `_wc_migrated_from`, `__wc_migrated_variation_maps`)
 
-Your original WooCommerce data is never touched. Only FluentCart-side records and the mapping metadata are affected.
+Your WooCommerce orders, customers, and settings are not touched. Only FluentCart-side records and the mapping metadata are affected.
 
 ::: warning Reset wipes all FluentCart data, not just WooCommerce imports
 Because reset recreates the FluentCart schema, anything else living in FluentCart on that site goes with it. On a staging clone that's exactly what you want. On any site with real FluentCart data, it isn't.
@@ -222,7 +217,7 @@ The ability to iterate without consequence turns a one-shot migration into somet
 
 ### Does the migration modify or delete my WooCommerce data?
 
-Never. The Migrator only reads from WooCommerce. Your original data is untouched, which means you can verify the entire migration against your live WooCommerce store before switching anything over.
+No orders, customers, coupons, or settings are changed. The Migrator only adds an ID-mapping field (`_fct_migrated_id`) to each WooCommerce product so re-runs update instead of duplicating, and a reset removes it again. This means you can verify the entire migration against your live WooCommerce store before switching anything over.
 
 ### Does it work with HPOS?
 
@@ -234,7 +229,7 @@ Just start it again. The Migrator tracks its own progress: it skips completed st
 
 ### Can I run the migration multiple times?
 
-Yes. Every stage is idempotent. Re-running products updates existing migrated products through the ID map. Re-running coupons updates existing coupons by code. Re-running recount always recalculates from current data. There is no risk of duplicate records from re-running.
+Yes, safely. A finished stage is skipped on the next run, and an interrupted stage resumes where it stopped without creating duplicates. To run a finished stage again from scratch, reset the migration on staging first.
 
 ### Will my existing customers need to do anything?
 
@@ -260,11 +255,11 @@ The CLI is consistently faster than the wizard for medium and large stores becau
 
 ### Should I keep the Migrator plugin active afterwards?
 
-For a WooCommerce migration there is no compatibility layer to maintain, so the addon isn't doing anything once the migration is verified and complete. Keep it active while you're still verifying and might need the logs or a re-run; deactivate it afterwards if you like.
+Keep it active for a while. For WooCommerce stores that took Stripe payments, it matches Stripe events for migrated orders (which still carry the old charge ID) to the right transaction, and the completion screen says so. Once Stripe activity on pre-migration orders has stopped, you can deactivate it.
 
 ### When can I deactivate WooCommerce?
 
-Once you have verified the migration, reconnected your gateways, and replaced your WooCommerce pages, shortcodes, and blocks with FluentCart's. If you sell subscriptions, deactivate WooCommerce before the next renewal date so two billing engines don't both act on the same schedule. Leave the WooCommerce database tables in place for a while as a fallback — they cost almost nothing and the Migrator never modified them.
+Once you have verified the migration, reconnected your gateways, and replaced your WooCommerce pages, shortcodes, and blocks with FluentCart's. If you sell subscriptions, deactivate WooCommerce before the next renewal date so two billing engines don't both act on the same schedule. Leave the WooCommerce database tables in place for a while as a fallback — they cost almost nothing and the Migrator left your orders and settings unchanged.
 
 ### Where do I get help if I'm stuck?
 

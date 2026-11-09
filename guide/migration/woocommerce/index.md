@@ -1,8 +1,3 @@
----
-title: Migrating from WooCommerce
-description: Move your WooCommerce store into FluentCart with full data fidelity. Products, categories, attributes, orders, customers, subscriptions, coupons, and tax configuration migrate together.
----
-
 # Migrating from WooCommerce
 
 The FluentCart Migrator handles end-to-end migration from **WooCommerce 3.0+** into FluentCart. Your product catalog with its categories, attributes and variations, every customer, orders across every status, WooCommerce Subscriptions records, coupons, and tax configuration transfer in a single coordinated pipeline.
@@ -13,11 +8,11 @@ The Migrator reads WooCommerce through its own CRUD API (`wc_get_products`, `wc_
 
 The same engine is reachable two ways — pick the surface that fits your store size and comfort level:
 
-- **Admin Wizard** — a three-step interface inside WordPress admin. Best for small to medium stores and non-technical operators.
+- **Admin Wizard** — a guided interface inside WordPress admin (pick the source, pass the compatibility check, review and run). Best for small to medium stores and non-technical operators.
 - **WP-CLI** — a single namespaced command with flags for each stage. Faster for large stores, no browser timeouts.
 
 ::: tip Your WooCommerce store stays untouched
-The Migrator only **reads** from WooCommerce. Your existing store, its settings, and every record stay exactly as they are. Run both side-by-side until you're ready to switch.
+The Migrator reads your WooCommerce orders, customers, and settings without changing them. The only thing it adds is an ID-mapping field on each WooCommerce product, so a re-run updates products instead of duplicating them. Run both side-by-side until you're ready to switch.
 :::
 
 ## Documentation in this section
@@ -33,7 +28,7 @@ The Migrator only **reads** from WooCommerce. Your existing store, its settings,
 
 ## Recommended workflow
 
-1. **Take a database backup.** Even though the Migrator never modifies your source data, a fresh backup is your safety net.
+1. **Take a database backup.** Even though the Migrator leaves your WooCommerce orders and settings alone, a fresh backup is your safety net.
 2. **Read [What Gets Migrated](/guide/migration/woocommerce/woocommerce-what-is-migrated).** Confirm the boundaries match your expectations.
 3. **Read [Subscriptions & Renewals](/guide/migration/woocommerce/subscription-renewals)** if you sell recurring products. This is the part of a WooCommerce migration that needs the most attention.
 4. **Rehearse on staging first.** Enable [Developer Mode](/guide/migration/woocommerce/woocommerce-developer-mode) so you can reset and re-run as many times as needed.
