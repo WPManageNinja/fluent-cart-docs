@@ -1,6 +1,6 @@
 # Setting Up Tax Rates
 
-Once you have your global tax behaviour configured and your tax classes created, the next step is to tell FluentCart what tax rate to charge in each region you sell into. The **Tax Regions** screen is the entry point: it lists every country, lets you toggle which ones are actively collecting tax, and opens a per-region detail page where you set the actual rates, custom labels, and overrides.
+Once your global tax behaviour is configured, the next step is to tell FluentCart what tax rate to charge in each region you sell into. The **Tax Regions** screen is the entry point: it lists every country, lets you toggle which ones are actively collecting tax, and opens a per-region detail page where you set the actual rates, custom labels, and overrides.
 
 This guide walks through the list, the region detail page, multi-class rates, multi-tax compound rules for federal-plus-state regions, and the new product/shipping overrides with city + postcode granularity.
 
@@ -13,7 +13,7 @@ This opens the **Tax Regions** screen.
 
 ## The Tax Regions List
 
-The Tax Regions screen is a single sortable table of every country FluentCart knows about (pre-seeded — you don't need to add countries first).
+The Tax Regions screen is a single table of every country FluentCart knows about (pre-seeded — you don't need to add countries first).
 
 ![Screenshot of the Tax Regions list with the EU row collecting and other countries inactive](/images/tax/tax-rates/tax-rates-settings.webp)
 
@@ -22,8 +22,10 @@ The Tax Regions screen is a single sortable table of every country FluentCart kn
 The table has three columns:
 
 * **Region** — the country name with its flag. The **European Union** is listed as a single region at the top — that's where you manage all EU VAT collection from a single record.
-* **Collecting** — a status indicator. Reads **Collecting tax** when the region is actively configured, or a dash when it isn't yet set up.
-* **Enabled** — a toggle that turns tax collection on or off for that region.
+* **Collecting** — a status indicator. Reads **Collecting tax**, **Disabled** (configured but switched off), or a dash (not set up).
+* **Enabled** — a toggle that turns tax collection on or off for that region. It only appears on regions that already have rates, and is greyed out while tax is off in **Configuration**.
+
+A **Collecting Tax** checkbox next to the search box filters the list to active regions.
 
 ### Enabling or Disabling a Region
 
@@ -62,15 +64,15 @@ Rates are **pre-filled for convenience** and may not reflect current laws. **Alw
 
 Below the banner you'll find the **class tabs**, a **Search country or region…** field to jump to a specific sub-region, and the **per-region rate table** itself. The columns map to a row's **Region**, its **Rate (%)**, the customer-facing **Tax Label**, and (on sub-region rows) a **Compound** dropdown that controls how that rate relates to the parent region's tax (covered in [Compound (Multi-Tax Scenarios)](#compound-multi-tax-scenarios) below).
 
-When you're done editing a class tab, click **Save Rates** at the bottom-right of the card. **Reset to default** sits next to it and reverts the active class's rows to FluentCart's shipped defaults.
+When you're done editing a class tab, click **Save Rates** at the bottom-right of the card. On the **Standard** tab, **Reset to default** sits next to it (see [Reset to Default](#reset-to-default)).
 
 ### Tax Class Tabs
 
 Each region carries a separate rate table per tax class. You'll see tabs at the top of the rate area: **Standard**, **Reduced**, **Zero**, plus a **+** button to add more.
 
 * Click a class tab to view and edit that class's rates.
-* Click **+** to add another class to this region — a small dropdown appears with **Zero** (if not already added) and **Custom Class…**.
-* An **×** appears on optional class tabs (Reduced, Zero, custom) so you can remove them from this region; the **Standard** class is always present and can't be deleted.
+* Click **+** to add a class. The dropdown offers **Reduced** and **Zero** (whichever isn't added yet) and **Custom Class...**. Once both exist, **+** opens the custom-name input directly. A store can have up to six classes.
+* Tax classes are store-wide. A class you add here appears on every region and on products. Clicking **×** on a tab deletes the class everywhere, with all its rates, and products that used it fall back to **Standard**. FluentCart asks you to confirm first. The **Standard** class is always present and can't be deleted.
 
 #### Creating a Tax Class Inline
 
@@ -82,17 +84,18 @@ If you enter a name that already exists, the input turns **red** to flag the dup
 
 ### Per-Country Rate and Label
 
-Inside each class tab, the rate table has three columns per row:
+Inside each class tab, the rate table has these columns:
 
-* **Country** — the country the row applies to. For the EU region this is one row per member state; for a single-country region it's one row.
-* **Tax Label** — the customer-facing name of the tax for this country and class (e.g. `VAT`, `MwSt`, `GST`, `Sales Tax`). The label is what appears on receipts and on the checkout breakdown — set it to whatever your customers expect to see.
-* **Rate (%)** — the percentage rate. Enter `20` for 20%.
+* **Region**: the country, plus one row per state or province where the country has them.
+* **Rate**: the percentage rate. Enter `20` for 20%.
+* **Tax Label**: the customer-facing name of the tax for this region and class (for example `VAT`, `MwSt`, `GST`, `Sales Tax`). The label appears on receipts and on the checkout breakdown, so set it to whatever your customers expect to see.
+* **Compound**: shown only on state or province rows (see below).
 
-Each class can carry its own label per country — so the EU's Standard class can read `VAT` everywhere while a reduced-rate book row in Germany could read `MwSt (ermäßigt)`. Useful when your jurisdiction names the rate differently per class.
+Each class can carry its own label, so a Standard class can read `MwSt` while a reduced-rate class reads `MwSt (ermäßigt)`. This is useful when your jurisdiction names the rate differently per class.
 
 ### Reset to Default
 
-Click **Reset to default** to discard the rates in the current class tab and restore the plugin's shipped defaults for that class. Useful after experimentation, but it does overwrite — there's no undo.
+**Reset to default** only appears on the **Standard** tab. After you confirm, it replaces the Standard rates (country and states) with FluentCart's preset values and saves them right away. This can't be undone.
 
 ### Saving Rates
 
@@ -177,35 +180,32 @@ Overrides let you charge a different rate when a more specific condition is met 
 
 ### What Overrides Do
 
-When an override matches an order line, its rate replaces the default class rate for that region. Overrides are **scoped** — they can target a product category, a shipping line, or both — and FluentCart picks the most specific match (see **Specificity Matching** below).
+When an override matches an order line, its rate replaces the default class rate for that region. Each override targets either a product category or the shipping line, not both. To change both, add two overrides. When several overrides match, FluentCart picks the most specific one (see **Specificity Matching** below).
 
 ### Adding an Override
 
-Click **Add Tax Override** to open the modal. Fill in:
+Click **Add Tax Override** to open the **Add tax override for [Country]** dialog, then choose the **Override type** (**Products** or **Shipping**). The fields differ by type.
 
-* **Override type** — radio:
-  * **Products** — applies to product lines in a specific category.
-  * **Shipping** — applies to the shipping line on orders that match.
-* **Category** *(only when Products is selected)* — the product category this override targets.
-* **Tax label** — the label shown on the matched line at checkout and on receipts.
-* **Location** — the country this override applies in.
-* **City (optional)** — narrows the override to a specific city. Leave empty to match every city in the country.
-* **Postcode (optional)** — narrows further by postcode. You can enter a single value (`9302`) or a range (`9302:9399`) to match any postcode in that band. Here you have to use `:` to define the range.
-* **Tax rate (%)** — the rate to apply on a match.
+For **Products** overrides, fill in:
+
+* **Category**: the product category to target (required).
+* **Tax Class**: **All Tax Classes**, or one class to target.
+* **Tax label**: the label shown on the matched line at checkout and on receipts.
+* **Location**: the whole country, or one of its states or provinces.
+* **City (optional)**: narrows the override to a specific city. Leave empty to match every city.
+* **Postcode (optional)**: a single postcode (`9300`), a numeric range written with a hyphen (`9300-9399`), or a comma-separated list (`9300,9400`). Ranges only work with numeric postcodes. A range written with `:` never matches.
+* **Tax rate (%)**: the rate to apply on a match. Enter `0` to make the category tax-exempt.
+* **Also override state/provincial taxes** (only for countries with states): when checked, the override replaces the state tax as well. When unchecked, it replaces only the country-level rate and state taxes still apply.
+
+**Shipping** overrides have no category or label. They use **Tax Class** (required), **Location**, **City (optional)**, **Postcode (optional)** and **Tax rate (%)**. **Location** only lists places that already have a rate in that class.
 
 Click **Add override** to save. The override appears in the table.
 
 ### Specificity Matching
 
-When multiple overrides could apply to the same order line, FluentCart picks the **most specific** match. Specificity, from most specific to least:
+When several product overrides match the same line, FluentCart picks the one with the most location detail. Each filled-in **state**, **city** and **postcode** adds to its weight, so an override with city and postcode beats one with postcode only. On a tie, an override set to a specific **Tax Class** beats one set to **All Tax Classes**. The city must match the customer's city exactly as typed at checkout.
 
-1. Postcode
-2. City
-3. State
-4. Country
-5. Class default rate (no override)
-
-So a row scoped to a specific postcode wins over one scoped to a city, which wins over country-only, and so on. Use this layering to model real-world tax law without duplicating rules.
+Use this layering to model real-world tax law without duplicating rules.
 
 ### Editing or Deleting an Override
 
