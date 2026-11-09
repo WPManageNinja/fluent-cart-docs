@@ -6,10 +6,10 @@ FluentCart ships with a **native** R2 driver. This means R2 is a first-class sto
 
 ## Accessing Cloudflare R2 Settings
 
-From your WordPress dashboard:
+Cloudflare R2 requires **FluentCart Pro**. From your WordPress dashboard:
 
-1. Go to **FluentCart → Storage**.
-2. Click **Cloudflare R2** in the sub-menu.
+1. Go to **FluentCart** > **Settings** > **Storage Settings**.
+2. Click **Cloudflare R2** (or its **Manage** button).
 
 R2 setup has two steps:
 
@@ -26,7 +26,7 @@ Before you connect R2 to FluentCart, you need:
 
 * A **Cloudflare account** with **R2 enabled** (R2 must be opted into from your Cloudflare dashboard — it is free to enable).
 * Your **Cloudflare Account ID**.
-* An **R2 API token** with **Object Read & Write** permissions, which gives you an **Access Key ID** and **Secret Access Key**.
+* An **R2 API token** with **Admin Read & Write** (or **Object Read & Write** scoped to your bucket, if you don't need to list or create buckets from FluentCart), which gives you an **Access Key ID** and **Secret Access Key**.
 
 ### Getting Credentials From Cloudflare
 
@@ -79,8 +79,8 @@ On the **Create Account API Token** page, fill in the following:
 
 * **Token name** — give it something identifiable, for example `R2 Account Token for FluentCart`. This is just a label for your own bookkeeping.
 * **Permissions** — select **Admin Read & Write**. This is the right level for FluentCart because it allows the full set of operations the plugin needs:
-  * Listing buckets (so "Browse existing buckets" works in the UI)
-  * Creating buckets (so "Create New Bucket" works in the UI)
+  * Listing buckets (so **Select from existing** works in the UI)
+  * Creating buckets (so **Create a new bucket** works in the UI)
   * Reading, writing, and deleting objects inside buckets (so uploads, downloads, and file management work)
 * **TTL (Time to live)** — choose **Forever**. You do not want your store's storage driver to silently stop working when a token expires. If your security policy requires token rotation, pick a date you can actually track and set a calendar reminder to rotate the token before it expires.
 * **Client IP Address Filtering** *(optional)* — leave blank unless your store runs from a known, fixed set of server IPs. If you do restrict by IP, remember to add any load balancer or cron-runner IPs too, or uploads from background processes will fail.
@@ -134,21 +134,21 @@ define( 'FCT_R2_ACCESS_KEY', 'your-access-key-id' );
 define( 'FCT_R2_SECRET_KEY', 'your-secret-access-key' );
 ```
 
-Once FluentCart detects these constants, the credential fields lock automatically and the Connection Method card confirms the keys were picked up from `wp-config.php`. The in-app snippet includes a **Copy Snippet** button to make this paste-in friendlier.
+Once FluentCart detects these constants, the **Define access keys in wp-config.php** option reads "You have already defined your R2 credentials in wp-config.php." and the database option is disabled. The in-app snippet includes a **Copy Snippet** button to make this paste-in friendlier.
 
 > **Heads up:** to later switch to a different method here, comment out or remove the `FCT_R2_ACCOUNT_ID`, `FCT_R2_ACCESS_KEY`, and `FCT_R2_SECRET_KEY` defines from `wp-config.php` and reload the page.
 
 ### Method B — Store Access Keys in the Database
 
-Available when you need UI-only configuration. Keys are saved to the database; an explicit acknowledgement is required.
+Available when you need UI-only configuration. Keys are saved to the database.
 
 ![Cloudflare R2 — Store access keys in the database](/images/storage/r2/credential-db.webp)
 
-Select **"I understand the risks but I'd like to store access keys in the database anyway."** Then enter:
+Select **Store credentials in the database**, then enter:
 
-* **Account ID** — your Cloudflare Account ID.
-* **Access Key ID** — from your R2 API token.
-* **Secret Access Key** — from your R2 API token.
+* **Account ID**: your Cloudflare Account ID.
+* **Access Key**: the Access Key ID from your R2 API token.
+* **Secret Key**: the Secret Access Key from your R2 API token.
 
 Click **Save & Continue** to move to the bucket step.
 
@@ -156,45 +156,45 @@ Click **Save & Continue** to move to the bucket step.
 
 ## Step 2 — Bucket
 
-An R2 **bucket** is a named storage container inside your Cloudflare account. FluentCart gives you three ways to pick or create one.
+An R2 **bucket** is a named storage container inside your Cloudflare account. On the **Choose where files live** screen, you either connect an existing bucket (typed in or picked from a list) or create a new one.
 
-### Option 1 — Use Existing Bucket, Entered Manually
+### Option 1 — Connect an Existing Bucket, Entered Manually
 
 If you already know the name of the bucket you want to use, type it directly.
 
 ![Cloudflare R2 — Enter bucket name manually](/images/storage/r2/bucket-existing-manual.webp)
 
-1. Select **Use Existing Bucket**.
-2. Choose **Enter bucket name**.
+1. Select **Connect an existing bucket**.
+2. Under **Bucket name**, choose **Enter bucket name**.
 3. Type the bucket name and click **Save Settings**.
 
-### Option 2 — Use Existing Bucket, Browse From Cloudflare
+### Option 2 — Connect an Existing Bucket, Selected From Cloudflare
 
-FluentCart can fetch the buckets attached to your Cloudflare account so you can pick one from the list.
+FluentCart can fetch the buckets in your Cloudflare account so you can pick one from the list.
 
 ![Cloudflare R2 — Browse existing buckets](/images/storage/r2/bucket-existing-browse.webp)
 
-1. Select **Use Existing Bucket**.
-2. Choose **Browse existing buckets**.
-3. Click the refresh icon if a bucket you just created is not visible.
+1. Select **Connect an existing bucket**.
+2. Under **Bucket name**, choose **Select from existing**.
+3. Use the **Search buckets** box to filter the list, or click **Reload bucket list** if a bucket you just created is not visible.
 4. Click the bucket you want, then **Save Settings**.
 
 ### Option 3 — Create a New Bucket From the UI
 
-No need to switch over to the Cloudflare dashboard. FluentCart can create a fresh R2 bucket in the jurisdiction you pick.
+No need to switch over to the Cloudflare dashboard. FluentCart can create a fresh R2 bucket in the region you pick.
 
 ![Cloudflare R2 — Create a new bucket](/images/storage/r2/bucket-create-new.webp)
 
-1. Select **Create New Bucket**.
-2. Enter a **Bucket Name**. R2 bucket names must be **globally unique across all Cloudflare R2 accounts** — this is called out directly in the UI.
-3. Choose a **Region / Jurisdiction** (see the table below). **Automatic** is a safe default and lets Cloudflare pick the best fit.
-4. Click **Save Settings**. FluentCart creates the bucket in R2 and selects it automatically.
+1. Select **Create a new bucket**.
+2. Enter a **Bucket Name**. R2 bucket names must be **globally unique across all Cloudflare R2 accounts**.
+3. Choose a **Region** (see the table below). **Automatic** is the default and lets Cloudflare pick the best fit.
+4. Click **Create Bucket & Save**. FluentCart creates the bucket in R2 and selects it automatically.
 
-### Understanding R2 Jurisdictions
+### Understanding R2 Regions
 
-R2 lets you pin a bucket to a geographic jurisdiction for data residency, latency, or compliance reasons.
+R2 lets you pin a bucket to a geographic region (Cloudflare calls this a jurisdiction or location hint) for data residency, latency, or compliance reasons.
 
-| Value    | Label                                 | When to pick it |
+| Value    | Region                                | When to pick it |
 |----------|---------------------------------------|-----------------|
 | `auto`   | Automatic                             | Default. Cloudflare chooses the best location based on where data is written. Best general-purpose choice. |
 | `apac`   | Asia-Pacific (APAC)                   | Most of your customers are in Asia-Pacific. |
@@ -210,17 +210,18 @@ R2 lets you pin a bucket to a geographic jurisdiction for data residency, latenc
 
 ## Connected State
 
-Once credentials are verified and a bucket is picked, the Cloudflare R2 card shows the provider as **Active**, with the bucket name and jurisdiction.
+Once credentials are verified and a bucket is picked, the Cloudflare R2 card shows the provider as **Active**, with the bucket name and region.
 
 ![Cloudflare R2 — Connected and ready to serve assets](/images/storage/r2/connected.webp)
 
 What each element does:
 
-* **Active toggle** — enable or disable this storage provider without losing its configuration.
-* **Edit** — re-enter the wizard and change credentials or bucket.
-* **Bucket name** — the R2 bucket your assets live in.
-* **Jurisdiction label** (e.g. `ENAM`) — the R2 region this bucket is pinned to.
-* **Check Connection** — re-runs FluentCart's connection verification against R2 on demand.
+* **Active toggle**: turn the provider on or off without losing its configuration.
+* **Check again**: re-verify the connection.
+* **Edit Config**: re-open the wizard to change credentials or bucket.
+* **Reset**: clear all R2 settings after confirmation.
+
+Below the buttons, info rows show the **Bucket**, **Region** (for example `Eastern North America (ENAM)`) and **Authentication** (Defined mode or Database mode).
 
 ---
 
@@ -236,7 +237,7 @@ Once connected, all digital product uploads flow through your R2 bucket automati
 
 ## Editing an Existing R2 Connection
 
-1. From **FluentCart → Storage → Cloudflare R2**, click **Edit**.
+1. From **Settings** > **Storage Settings** > **Cloudflare R2**, click **Edit Config**.
 2. Move through the Credential → Bucket wizard again.
 3. Only the fields you change need to be updated.
 
@@ -269,11 +270,12 @@ Once saved, reload the Cloudflare R2 page in FluentCart and the credential field
 **The connection fails with an authentication error.**
 * Verify your **Account ID** is correct — it is a long hex string, not your email or account name.
 * Confirm the **Access Key ID** and **Secret Access Key** were copied fully, with no extra spaces.
-* Make sure the R2 API token has **Object Read & Write** permission.
+* Make sure the R2 API token has **Admin Read & Write** (or **Object Read & Write** scoped to your bucket).
 * If you regenerated the token, the previous Access Key ID / Secret are invalid.
 
-**"Browse existing buckets" is empty.**
-* Your Cloudflare account has no R2 buckets yet — switch to **Create New Bucket**.
+**"Select from existing" shows no buckets.**
+* Your Cloudflare account has no R2 buckets yet. Switch to **Create a new bucket**.
+* The token only has **Object Read & Write**, which can't list buckets. Use **Enter bucket name** instead, or a token with **Admin Read & Write**.
 * The API token is scoped to a different set of buckets than the one you expect.
 
 **Bucket creation fails with a name conflict.**
@@ -281,7 +283,7 @@ Once saved, reload the Cloudflare R2 page in FluentCart and the credential field
 
 **Files upload but customers cannot download them.**
 * Confirm the digital product is configured to use Cloudflare R2 as its storage driver.
-* Confirm the API token still has **Object Read & Write** — read-only tokens will break downloads.
+* Confirm the API token still has **Admin Read & Write** (or **Object Read & Write** on this bucket). Read-only tokens will break downloads.
 
 **I defined `FCT_R2_ACCOUNT_ID` / `FCT_R2_ACCESS_KEY` / `FCT_R2_SECRET_KEY` but the UI still shows empty fields.**
 * Confirm all three constants are in `wp-config.php` (not inside a plugin or theme file) and load before FluentCart.

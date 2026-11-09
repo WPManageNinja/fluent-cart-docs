@@ -94,8 +94,8 @@ Keep the two keys handy — you will paste them into FluentCart in the next sect
 
 From your WordPress dashboard:
 
-1. Go to **FluentCart → Storage**.
-2. Click **Amazon S3** in the sub-menu.
+1. Go to **FluentCart** > **Settings** > **Storage Settings**.
+2. Click **Amazon S3** (or its **Manage** button).
 
 You will land on the Amazon S3 configuration wizard. Setup is split into three steps:
 
@@ -107,7 +107,7 @@ You will land on the Amazon S3 configuration wizard. Setup is split into three s
 
 ## Step 1 — Credential
 
-FluentCart supports two ways to supply your AWS access keys.
+The step is titled **Verify Access Keys**. FluentCart supports two ways to supply your AWS access keys.
 
 ### Method A — Define Access Keys in `wp-config.php` (Recommended)
 
@@ -115,29 +115,29 @@ This is the most secure option. Your keys live in your WordPress configuration f
 
 ![Amazon S3 — Define access keys in wp-config.php](/images/storage/s3/credential-define.webp)
 
-Copy the snippet below **near the top** of your `wp-config.php` (before the `/* That's all, stop editing! */` line) and replace the placeholder values with your real AWS keys:
+Select **Define access keys in wp-config.php (Recommended)**. The option has a **Copy Snippet** button. Copy the snippet below **near the top** of your `wp-config.php` (before the `/* That's all, stop editing! */` line) and replace the placeholder values with your real AWS keys:
 
 ```php
 define( 'FCT_S3_ACCESS_KEY', 'your-access-key-id' );
 define( 'FCT_S3_SECRET_KEY', 'your-secret-access-key' );
 ```
 
-Once FluentCart detects these constants, the credential fields in the UI are automatically locked, and the Connection Method card will tell you the keys have been picked up from your `wp-config.php`.
+Once FluentCart detects the constants, this option reads "You have already defined your credentials in wp-config.php." and the database option is disabled.
 
 > **Heads up:** to later switch to a different method here, comment out or remove the `FCT_S3_ACCESS_KEY` and `FCT_S3_SECRET_KEY` defines from `wp-config.php` and reload the page.
 
 ### Method B — Store Access Keys in the Database
 
-Available when you need UI-only configuration. Keys are saved to the database, which is inherently less secure than a file-based constant — an acknowledgement is shown before you proceed.
+Available when you need UI-only configuration. Keys are saved to the database, which is less secure than a file-based constant.
 
 ![Amazon S3 — Store access keys in the database](/images/storage/s3/credential-db.webp)
 
-Select **"I understand the risks but I'd like to store access keys in the database."** Then enter:
+Select **Store credentials in the database**, then enter:
 
-* **Access Key** — your AWS Access Key ID.
-* **Secret Key** — your AWS Secret Access Key.
+* **Access Key**: your AWS Access Key ID.
+* **Secret Key**: your AWS Secret Access Key.
 
-Click **Save & Continue** to move on to the bucket step.
+Click **Save & Continue**. FluentCart checks the keys before moving on to the bucket step.
 
 > **No access keys yet?** Head back to [Obtaining AWS Access Keys](#obtaining-aws-access-keys) above for the full IAM walkthrough.
 
@@ -145,28 +145,28 @@ Click **Save & Continue** to move on to the bucket step.
 
 ## Step 2 — Bucket
 
-An S3 **bucket** is a named storage container inside your AWS account. FluentCart gives you three ways to pick or create one.
+An S3 **bucket** is a named storage container inside your AWS account. On the **Choose where files live** screen, you either connect an existing bucket (typed in or picked from a list) or create a new one.
 
-### Option 1 — Use Existing Bucket, Entered Manually
+### Option 1 — Connect an Existing Bucket, Entered Manually
 
 If you already know the exact name of the bucket you want to use, type it directly.
 
 ![Amazon S3 — Enter bucket name manually](/images/storage/s3/bucket-existing-manual.webp)
 
-1. Select **Use Existing Bucket**.
-2. Choose **Enter bucket name**.
-3. Type the bucket name and click **Save Selected Bucket**.
+1. Select **Connect an existing bucket**.
+2. Under **Bucket name**, choose **Enter bucket name**.
+3. Type the bucket name and click **Next**.
 
-### Option 2 — Use Existing Bucket, Browse From AWS
+### Option 2 — Connect an Existing Bucket, Selected From AWS
 
-FluentCart can fetch the list of buckets attached to the connected AWS account so you can pick from a dropdown — no copy-pasting names, no typos.
+FluentCart can fetch the list of buckets in the connected AWS account so you can pick one, with no copy-pasting and no typos.
 
 ![Amazon S3 — Browse existing buckets](/images/storage/s3/bucket-existing-browse.webp)
 
-1. Select **Use Existing Bucket**.
-2. Choose **Browse existing buckets**.
-3. Click the refresh icon if you do not see a bucket you just created.
-4. Click the bucket you want and click **Save Selected Bucket**.
+1. Select **Connect an existing bucket**.
+2. Under **Bucket name**, choose **Select from existing**.
+3. Use the **Search buckets** box to filter the list, or click **Reload bucket list** if you do not see a bucket you just created.
+4. Click the bucket you want, then click **Next**.
 
 ### Option 3 — Create a New Bucket From the UI
 
@@ -174,10 +174,10 @@ No need to switch to the AWS console. FluentCart can create a fresh S3 bucket in
 
 ![Amazon S3 — Create a new bucket](/images/storage/s3/bucket-create-new.webp)
 
-1. Select **Create New Bucket**.
+1. Select **Create a new bucket**.
 2. Enter a **Bucket Name**. Bucket names must be unique across **all of AWS globally**, follow DNS-style naming (lowercase letters, numbers, hyphens), and cannot be reused after deletion for a while.
 3. Choose a **Region** — pick the one geographically closest to most of your customers (for example, **US East (N. Virginia)** for the Americas, **EU (Frankfurt)** for Europe).
-4. Click **Create New Bucket**. FluentCart will create the bucket in AWS and select it for you automatically.
+4. Click **Create Bucket & Continue**. FluentCart creates the bucket in AWS and selects it for you.
 
 > **Region tip:** once a bucket exists, its region is fixed. If you change your mind later, you create a new bucket in the new region and move your files over.
 
@@ -185,7 +185,7 @@ No need to switch to the AWS console. FluentCart can create a fresh S3 bucket in
 
 ## Step 3 — Security
 
-This step configures two bucket-level protections on AWS.
+This step is titled **Review protection settings** and configures two bucket-level protections on AWS. Each toggle shows a **Recommended** badge when on and **Review** when off.
 
 ![Amazon S3 — Security step with recommended toggles enabled](/images/storage/s3/security-enabled.webp)
 
@@ -219,12 +219,12 @@ Once all three steps are complete, the Amazon S3 card shows the provider as **Ac
 
 What each element does:
 
-* **Active toggle** — enable or disable this storage provider without losing its configuration.
-* **Edit** — re-enter the wizard and change credentials, bucket, or security.
-* **Bucket name link** — opens the bucket in the AWS console.
-* **Region label** — the AWS region your bucket lives in.
-* **Check again** — re-runs FluentCart's connection verification against S3 on demand.
-* **Security Configuration cards** — quick visual of Block All Public Access + Object Ownership state.
+* **Active toggle**: turn the provider on or off without losing its configuration.
+* **Check again**: re-verify the connection.
+* **Edit Config**: re-open the wizard to change credentials, bucket, or security.
+* **Reset**: clear all S3 settings after confirmation.
+
+Below the buttons, info rows show the **Bucket** (links to the bucket in the AWS console), **Region**, **Authentication** (Defined mode or Database mode) and **Security posture** (for example "Public access blocked, ownership enforced").
 
 ---
 
@@ -242,8 +242,8 @@ Once connected, all digital product uploads flow through your S3 bucket automati
 
 Need to rotate your AWS keys, point FluentCart to a different bucket, or tighten the security settings?
 
-1. From **FluentCart → Storage → Amazon S3**, click **Edit**.
-2. Move through the Credential → Bucket → Security wizard again.
+1. From **Settings** > **Storage Settings** > **Amazon S3**, click **Edit Config**. The wizard opens at the bucket step when a bucket is already set. Use **Back** or the step indicator to reach credentials, and **Cancel** to leave without changes.
+2. Move through the Credential, Bucket and Security steps as needed.
 3. Only the fields you change need to be updated.
 
 You do **not** need to disconnect and reconnect — existing assets stay referenced correctly.
@@ -276,15 +276,16 @@ Once saved, reload the Amazon S3 page in FluentCart and the credential fields wi
 * Confirm the IAM user has the `AmazonS3FullAccess` policy (or an equivalent that allows `s3:ListAllMyBuckets`, `s3:CreateBucket`, `s3:PutObject`, `s3:GetObject`, `s3:DeleteObject`).
 * If you rotated keys recently, make sure the old key is deactivated and you are using the current one.
 
-**"Browse existing buckets" shows nothing.**
+**"Select from existing" shows no buckets.**
+* The list reads "No buckets found or credentials are invalid."
 * The IAM user lacks `s3:ListAllMyBuckets`.
-* The account genuinely has no buckets yet — switch to **Create New Bucket**.
+* The account genuinely has no buckets yet. Switch to **Create a new bucket**.
 
 **Bucket creation fails with a name conflict.**
 * Bucket names are globally unique across all AWS accounts. Try a more specific name (for example, `yourstore-fluentcart-assets`).
 
 **Files upload but customers cannot download them.**
-* *Block All Public Access* is likely **Enabled** (good) — FluentCart serves files through signed URLs in this mode, so confirm your digital product is configured to use S3 as its storage driver.
+* *Block All Public Access* is likely **Enabled** (good) — FluentCart serves files through signed URLs in this mode, so confirm the file was uploaded under the **Amazon S3** tab of the **Storage Providers** dialog when you added it to the product.
 
 **I defined `FCT_S3_ACCESS_KEY` / `FCT_S3_SECRET_KEY` but the UI still shows empty fields.**
 * Confirm both constants are in `wp-config.php` (not in a plugin file) and load before FluentCart.

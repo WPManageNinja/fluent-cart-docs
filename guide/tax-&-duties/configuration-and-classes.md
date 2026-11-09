@@ -21,7 +21,7 @@ This block holds the global rules that govern tax across your entire store.
 
 ### Enable Tax
 
-The master switch. When **on**, FluentCart applies your tax rules at checkout and a confirmation reads "This store is now collecting tax." When **off**, no tax is calculated and all per-variation tax controls are hidden.
+The master switch. When **on**, FluentCart applies your tax rules at checkout and a confirmation reads "This store is now collecting tax." When **off**, no tax is calculated, the rest of this screen is hidden, the **Taxes** menu item disappears, and per-variation tax controls are hidden.
 
 ### Prices entered with tax
 
@@ -30,11 +30,13 @@ Tells FluentCart how your product prices are entered:
 * **Included:** the price you set on a product already contains tax. At checkout, FluentCart splits the tax out for reporting, but the customer pays the same number you see in the product editor.
 * **Excluded:** the price you set excludes tax. At checkout, tax is added on top.
 
+Shipping tax always follows this store-level setting. Per-variation tax settings never apply to shipping.
+
 This single choice has the biggest downstream effect on what customers see, so set it deliberately. Individual variations can override this; see [Per-Variation Tax Settings](/guide/product-types-creation/per-variation-tax).
 
 ### Tax-Inclusive Price Mode
 
-Visible only when **Local Reverse Charge** is on. Controls how a reverse charge affects products whose price was entered tax-inclusive:
+This setting is always shown. It only affects orders that are reverse-charged (B2B sales to customers with a valid VAT number), and it controls what happens to products whose price includes tax:
 
 * **Fixed:** the listed price stays the same. The invoice shows the same total, but the tax line is zeroed.
 * **Dynamic:** VAT is stripped from the price. The customer pays the net (ex-VAT) amount.
@@ -76,9 +78,9 @@ Controls how tax is presented to shoppers and on your documents — the checkout
 Stores upgrading from an earlier version keep **Itemized**, so nothing changes unexpectedly, while brand-new installs start on **Simplified**. You can switch styles at any time.
 :::
 
-#### Tax Label (Simplified mode)
+#### Tax Line Label (Simplified mode)
 
-When **Simplified** is selected, a **Tax Label** field appears so you can rename that single tax line to whatever your customers expect — for example `VAT`, `GST`, or `MwSt`. Leave it as the default **Tax** if a generic label suits your store.
+When **Simplified** is selected, a **Tax Line Label** field appears so you can rename that single tax line to whatever your customers expect — for example `VAT`, `GST`, or `MwSt`. Leave it as the default **Tax** if a generic label suits your store.
 
 #### How tax appears at checkout
 
@@ -108,16 +110,14 @@ If you sell to business customers in the European Union, you'll likely need to h
 
 ### Local Reverse Charge
 
-Toggle. **Default: off.** There are no other settings for this option.
+Toggle. **Default: off.** Turning it on also reveals **Exclude Categories from VAT reverse** (below).
 
 * **On:** home country reverse charge applies when the customer is in your home country (some jurisdictions require this; check with a tax advisor).
 * **Off:** home country reverse charge does not apply. Reverse charge still applies when the customer is in a different EU country than your home country.
 
-### Exclude Categories from VAT Reverse
+### Exclude Categories from VAT reverse
 
-A multi-select product-category picker. Any category you select here is **never** reverse-charged: VAT is always added, even when the customer has a valid EU VAT ID. Use this for product types that are explicitly outside reverse-charge scope.
-
-Pick the one that matches how your accounting and contracts are written.
+Appears only when **Local Reverse Charge** is on. A multi-select product-category picker. Any category you select here is **never** reverse-charged: VAT is always added, even when the customer has a valid EU VAT ID. Use this for product types that are explicitly outside reverse-charge scope.
 
 ### Automatic Reverse-Charge Notice
 
