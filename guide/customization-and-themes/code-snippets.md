@@ -123,6 +123,8 @@ When a customer pays with Stripe, FluentCart decides whether to ask Stripe to ke
 
 The filter receives the current value and a context array containing `data` and `has_subscription`. Return `on_session` or `off_session` to have the card stored, or a falsy value to leave it unstored.
 
+The filter runs only when Stripe takes a one-time payment. Checkouts that start a subscription always ask Stripe to keep the card.
+
 ```php
 <?php
 
