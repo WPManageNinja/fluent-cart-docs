@@ -4,7 +4,11 @@ Mollie is a popular and flexible payment gateway, primarily used in Europe, that
 
 This guide will walk you through every step of connecting your Mollie account to FluentCart.
 
-### Step 1: Get Your API Keys from Mollie
+::: info
+Mollie requires **FluentCart Pro**.
+:::
+
+## Step 1: Get Your API Keys from Mollie
 
 First, you need to get your **API Key** from your Mollie dashboard. This key is like a password that allows your FluentCart store to securely communicate with Mollie.
 
@@ -21,7 +25,7 @@ For now, click the **Copy** button next to your **Test API key**.
 
 ![Mollie API Configuration](/images/payments-checkout/mollie/mollie-3.webp)
 
-### Step 2: Configure Mollie in FluentCart
+## Step 2: Configure Mollie in FluentCart
 
 Now that you have your test key, let's go back to your WordPress dashboard to paste it into FluentCart.
 
@@ -34,12 +38,17 @@ Now that you have your test key, let's go back to your WordPress dashboard to pa
 * **Payment Activation:** First, ensure the **Payment Activation** toggle at the top right is switched **ON**. This makes Mollie available as an option at checkout.
 * **Select Credentials Tab:** You will see two tabs: **Live credentials** and **Test credentials**. Click on the **Test credentials** tab.
 * **Paste Your Key:** Paste the Test API key you copied from Mollie into the **Test API Key** field.
-* **You can configure methods here:** From here you can directly visit to select Payment page of Mollie.
+* **Activated Methods:** Lists the payment methods enabled in your Mollie account. Click **here** to open your Mollie dashboard and change them.
 * **Save Settings:** Click the **Save Settings** button at the bottom of the page.
 
+::: info
+Most Mollie methods work without a billing address. Buy Now Pay Later methods (Klarna, Billie, in3, Riverty) need a complete one. If you accept them, enable **Street Address**, **City**, **Post Code** and **Country** in [Checkout Fields](/guide/settings-configuration/checkout-fields).
+:::
+
+<!-- TODO(screenshots): mollie-7.webp is outdated: it lacks the Recommended Checkout Fields notice about billing address for Buy Now Pay Later methods; retake the Mollie settings page. Update later. -->
 ![Mollie API Configuration](/images/payments-checkout/mollie/mollie-7.webp)
 
-### Step 3: Go Live with Real Payments
+## Step 3: Go Live with Real Payments
 
 When you are ready to start accepting real money, follow these simple steps to switch from Test to Live mode:
 
@@ -48,6 +57,10 @@ When you are ready to start accepting real money, follow these simple steps to s
 3.  Click on the **Live credentials** tab.
 4.  Paste your **Live API key** into the **Live API key** field.
 5.  Click **Save Settings**.
-6.  Finally, make sure your store's main **Order Mode is set to Live** (`FluentCart Pro > Settings > Store Settings`).
+6.  Finally, set **Store Mode** to **Live** under **FluentCart Pro > Settings > Store Settings > Store Setup**.
 
 Your Mollie integration is now live and ready to securely process payments for your store!
+
+## Troubleshooting
+
+If a customer pays a different amount or currency than the order expects, FluentCart does not confirm the order and adds a **Mollie Payment Mismatch** entry to the logs.
