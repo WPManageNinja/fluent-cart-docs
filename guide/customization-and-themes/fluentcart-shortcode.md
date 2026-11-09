@@ -103,6 +103,9 @@ Use the `product_type` parameter to display only a specific type of product, or 
 // Subscription products only
 [fluent_cart_products product_type="subscription"]
 
+// One-time (non-subscription) products only
+[fluent_cart_products product_type="onetime"]
+
 // Only products currently on sale
 [fluent_cart_products on_sale="yes"]
 ```
@@ -126,6 +129,9 @@ Control the order in which products appear using the `sort_by` parameter for com
 // Alphabetical A–Z
 [fluent_cart_products sort_by="name-asc"]
 
+// Alphabetical Z–A
+[fluent_cart_products sort_by="name-desc"]
+
 // Newest first
 [fluent_cart_products sort_by="date-newest"]
 
@@ -141,7 +147,7 @@ Adjust the number of columns and the view mode to match the look and feel of you
 // Show products in a 3-column grid
 [fluent_cart_products columns="3"]
 
-// Limit to 6 products in a 3-column grid
+// 6 products per page in a 3-column grid
 [fluent_cart_products limit="6" columns="3"]
 
 // 2-column grid view
@@ -193,18 +199,18 @@ You can also enable a sidebar filter and configure it with JSON-based settings. 
 | **category** | Filter products by one or more category slugs. | — | Comma-separated slugs (e.g., `cloths` or `cloths,shoes`) |
 | **category_id** | Filter products by one or more category term IDs. | — | Comma-separated IDs (e.g., `9` or `9,12`) |
 | **taxonomies** | Filter products by term IDs from any taxonomy registered on products. | — | `taxonomy:id,id`, with `\|` between taxonomies (e.g., `product-brands:67,82\|product-categories:9`) |
-| **product_type** | Show only products of a specific type. | — | `simple`, `simple_variations`, `physical`, `digital`, `subscription` |
+| **product_type** | Show only products of a specific type. | — | `simple`, `simple_variations`, `physical`, `digital`, `subscription`, `onetime` |
 | **on_sale** | Show only products that are currently discounted. | — | `yes` |
-| **sort_by** | A quick preset for sorting products. | — | `price-low`, `price-high`, `name-asc`, `date-newest`, `date-oldest` |
-| **orderby** | The field to sort products by (use with `order`). | — | `price`, `name`, `date` |
-| **order** | Sort direction (use with `orderby`). | — | `ASC`, `DESC` |
-| **columns** | Number of columns in the product grid. | — | Any number (e.g., `2`, `3`, `4`) |
-| **limit** | Maximum number of products to display. | — | Any number (e.g., `6`, `10`) |
+| **sort_by** | A quick preset for sorting products. | `name-asc` | `name-asc` (A–Z), `name-desc` (Z–A), `price-low`, `price-high`, `date-newest`, `date-oldest` |
+| **orderby** | The field to sort products by (use with `order`). | — | `title`, `price`, `date`, `id` |
+| **order** | Sort direction (use with `orderby`). | `DESC` | `ASC`, `DESC` |
+| **columns** | Number of columns in the product grid. | — | 1 to 6 |
+| **limit** | Another name for **per_page**. Sets how many products show per page. | — | Any number (e.g., `6`, `10`) |
 | **view_mode** | Choose between a grid layout or a list layout. | `grid` | `grid`, `list` |
-| **per_page** | How many products to show on one page. | 12 | Any number (e.g., 4, 8, 20) |
-| **paginator** | The style of the page navigation at the bottom. | `numbers` | `numbers`, `load_more`, `scroll`, `none` |
-| **enable_filter** | Show or hide the filter sidebar on the left/right. | `true` | `true`, `false` |
-| **live_filter** | If "true," products update instantly as you click filters. | `true` | `true`, `false` |
+| **per_page** | How many products to show on one page. | 10 | Any number up to 100 (e.g., 4, 8, 20) |
+| **paginator** | How visitors move through more products. | `scroll` | `scroll` (load more as the visitor scrolls), `numbers` (numbered pages) |
+| **enable_filter** | Show or hide the filter sidebar on the left/right. | `false` | `true`, `false` |
+| **live_filter** | If "true," products update instantly as you click filters. | `false` | `true`, `false` |
 | **custom_filters** | A list of settings to control category and price filters. | — | See JSON guide below |
 | **filters** | Settings for how products are sorted (Name, Price, etc.). | — | See JSON guide below |
 
@@ -219,7 +225,7 @@ You can also enable a sidebar filter and configure it with JSON-based settings. 
 
 **`filters` object:**
 
-* **sort_by:** Choose how products appear first. Options include: `name-asc`, `name-desc`, `price-asc`, `price-desc`, or `date-desc`.
+* **sort_by:** Choose how products appear first. Options: `name-asc`, `name-desc`, `price-low`, `price-high`, `date-newest`, `date-oldest`. The `filters` attribute only takes effect when `enable_filter` is `true`.
 
 ---
 
@@ -237,14 +243,15 @@ This shortcode creates a button that sends customers straight to the checkout pa
 
 | Attribute | Description |
 | :--- | :--- |
-| **button_text** | Changes what the button says. Example: `button_text="Get it Now"`. (If left empty, it usually says "Checkout".) |
-| **variation_id** | **(Very Important)** The ID of the specific item or size/color you want to sell. You must use the specific variation ID found in your product settings. |
+| **button_text** | Changes what the button says. Example: `button_text="Get it Now"`. Defaults to **Buy Now**. |
+| **variation_id** | **(Required)** The ID of the specific item or size/color you want to sell. Without it the shortcode renders nothing. A product ID also works and uses that product's first variation. |
 | **target** | Decides where the link opens. Use `_self` for the same tab or `_blank` to open the checkout in a new window. |
-| **instant_checkout** | If set to `yes`, the checkout will open in a popup modal. If set to `no`, it works like a normal link to the checkout page. |
+| **instant_checkout** | If set to `yes`, the checkout will open in a popup modal. If set to `no` (the default), it works like a normal link to the checkout page. |
+| **class** | Your own CSS class for the button. It replaces the default button class. |
 
 #### Example Variations
 
-* **Standard Link to Checkout:** `[fluent_cart_checkout_button button_text="Go to Checkout" target="_self"]`
+* **Link to Checkout for One Item:** `[fluent_cart_checkout_button variation_id="113" button_text="Go to Checkout" target="_self"]`
 * **One-Click "Instant" Purchase:** `[fluent_cart_checkout_button variation_id="113" instant_checkout="yes" button_text="Buy Now"]`
 
 ---
@@ -263,8 +270,9 @@ This shortcode puts a simple "Add to Cart" button anywhere you want. Use this if
 
 | Attribute | Description |
 | :--- | :--- |
-| **button_text** | The text displayed on the button (e.g., "Add to Bag", "Grab One"). |
-| **variation_id** | The ID of the product or specific option you want added to the cart. |
+| **button_text** | The text displayed on the button (e.g., "Add to Bag", "Grab One"). Defaults to **Add to Cart**. |
+| **variation_id** | **(Required)** The ID of the specific option you want added to the cart. Without it nothing renders. A product ID also works. |
+| **class** | Your own CSS class for the button. |
 
 ---
 
@@ -282,9 +290,10 @@ The Mini Cart shortcode allows you to display a small, convenient cart summary. 
 
 | Attribute | Description |
 | :--- | :--- |
-| **cart_icon** | Choose the style of your icon. Options: `cart`, `bag`, `bag-alt`. You can also use a custom SVG URL: `cart_icon="https://example.com/icon.svg"`. |
-| **show_total_price** | Set to `true` to show the current total amount next to the icon. |
-| **show_item_count** | Decides when to show the number of items: `always` (shows even if 0), `has_items` (only when cart has items), `never` (hides count). |
+| **cart_icon** | Choose the style of your icon. Options: `cart` (the default), `bag`, `bag-alt`. You can also use a custom SVG URL: `cart_icon="https://example.com/icon.svg"`. |
+| **show_total_price** | Shows the current total amount next to the icon. Default `true`. Set to `false` to hide the total. |
+| **show_item_count** | Decides when to show the number of items: `always` (shows even if 0), `has_items` (only when cart has items, the default), `never` (hides count). |
+| **count_mode** | What the number counts: `distinct_products` (the default, one per product line) or `total_quantity` (adds up quantities). |
 | **icon_color** / **price_color** / **product_count_color** | Use hex codes to match your site's branding (e.g., `icon_color="#cf2e2e"`). |
 | **button_class** | Add a custom CSS class if you want to apply your own specific styling to the cart button. |
 
@@ -304,10 +313,10 @@ This shortcode helps your customers browse your store by showing a list or a dro
 
 | Attribute | Description |
 | :--- | :--- |
-| **display_style** | Choose how the categories are presented: `list` (standard bulleted list) or `dropdown` (space-saving dropdown menu). |
-| **show_hierarchy** | Set to `true` to show "parent" and "child" categories (indented). |
-| **show_empty** | Set to `true` if you want to show categories even if they don't have any products yet. |
-| **show_product_count** | Set to `true` to show the number of products next to each category name. |
+| **display_style** | Choose how the categories are presented: `list` (standard bulleted list, the default) or `dropdown` (space-saving dropdown menu). |
+| **show_hierarchy** | Set to `true` to show "parent" and "child" categories (indented). Default `true`. |
+| **show_empty** | Set to `true` if you want to show categories even if they don't have any products yet. Default `false`. |
+| **show_product_count** | Set to `true` to show the number of products next to each category name. Default `true`. |
 
 
 ### 6. Store Logo Shortcode (`[fluent_cart_store_logo]`)
@@ -317,16 +326,16 @@ Use this shortcode to display your store's branding logo anywhere on your site. 
 #### Basic Usage
 
 ```text
-[fluent_cart_store_logo is_link="true" logo_url="https://yoursite.com/logo.png" max_width="200"]
+[fluent_cart_store_logo max_width="200"]
 ```
 
 #### Supported Attributes
 
 | Attribute | Description |
 | :--- | :--- |
-| **logo_url** | (Required) The direct URL link to your logo image file. |
-| **is_link** | Set to `true` to make the logo clickable (usually linking to your homepage). Set to `false` for a static image. |
-| **link_target** | Choose `_self` to open in the same tab, or `_blank` to open the link in a new tab. |
+| **logo_url** | *(Optional)* A logo image URL. Leave it out to use the store logo from your store settings. |
+| **is_link** | Set to `true` (the default) to make the logo clickable (usually linking to your homepage). Set to `false` for a static image. |
+| **link_target** | Choose `_self` (the default) to open in the same tab, or `_blank` to open the link in a new tab. |
 | **max_width** | Sets the maximum width of the logo in pixels (e.g., `"300"`). |
 | **max_height** | Sets the maximum height of the logo in pixels (e.g., `"200"`). |
 
@@ -334,7 +343,7 @@ Use this shortcode to display your store's branding logo anywhere on your site. 
 
 ### 7. Customer Dashboard Button (`[fluent_cart_customer_dashboard_button]`)
 
-This shortcode adds a button or link that allows logged-in customers to access their "My Profile" or "My Orders" area. It is perfect for your site's header or footer menu.
+This shortcode adds a button or link to the customer dashboard page, where customers reach their "My Profile" or "My Orders" area (logged-out visitors see the login form there). It is perfect for your site's header or footer menu.
 
 #### Basic Usage
 
@@ -346,10 +355,10 @@ This shortcode adds a button or link that allows logged-in customers to access t
 
 | Attribute | Description |
 | :--- | :--- |
-| **button_text** | The text displayed on the link or button (e.g., "My Account", "Profile"). |
-| **display_type** | Choose how it looks: `link` (simple text link) or `button` (styled button). |
-| **show_icon** | Set to `true` to display a small user icon next to the text, or `false` to hide it. |
-| **link_target** | Choose `_self` (same tab) or `_blank` (new tab). |
+| **button_text** | The text displayed on the link or button (e.g., "Profile"). Defaults to **My Account**. |
+| **display_type** | Choose how it looks: `link` (simple text link) or `button` (styled button, the default). |
+| **show_icon** | Set to `true` (the default) to display a small user icon next to the text, or `false` to hide it. |
+| **link_target** | Choose `_self` (same tab, the default) or `_blank` (new tab). |
 
 ---
 
@@ -367,10 +376,10 @@ This shortcode allows you to display the name of a specific product anywhere on 
 
 | Attribute | Description |
 | :--- | :--- |
-| **product_id** | (Required) The ID of the specific product you want to display the title for. |
-| **is_link** | Set to `true` to make the title clickable (links to the product page). |
-| **link_target** | Choose `_self` (same tab) or `_blank` (new tab). |
-| **is_default** | Set to `true` to use default styling, or `false` to inherit the surrounding text style. |
+| **product_id** | The product to show the title for. Not needed when `is_default` is `true`. |
+| **is_link** | Set to `true` (the default) to make the title clickable (links to the product page). |
+| **link_target** | Choose `_self` (same tab, the default) or `_blank` (new tab). |
+| **is_default** | Set to `true` to show the product being viewed (for product templates). Default `false`. |
 
 ---
 
@@ -388,8 +397,8 @@ Similar to the Product Title shortcode, this lets you display the featured image
 
 | Attribute | Description |
 | :--- | :--- |
-| **product_id** | (Required) The ID of the specific product you want to display the image for. |
-| **is_default** | Set to `false` to allow for custom sizing or styling via CSS, or `true` for standard output. |
+| **product_id** | The product to show the image for. Not needed when `is_default` is `true`. |
+| **is_default** | Set to `true` to show the image of the product being viewed (for product templates). Default `false`. |
 
 ---
 
@@ -409,7 +418,7 @@ The checkout shortcode normally shows the shopper's main cart. Add a list of pro
 | :--- | :--- |
 | **variant_ids** | **(Required for this mode)** A comma-separated list of the variation IDs to offer, up to 20. |
 | **selection_mode** | `single` shows radio buttons (the default). `multiple` shows checkboxes. |
-| **max_items** | With `multiple`, the most options a shopper can tick at once, from 1 to 20. |
+| **max_items** | With `multiple`, the most options a shopper can tick at once, from 1 to 20. Default 5. |
 | **selector_label** | The heading shown above the list of options. |
 | **field_label_style** | Sets how checkout fields show their name once the customer has typed in them: `docked` (the default), `floating`, or `placeholder`. It works with or without `variant_ids`. |
 
@@ -439,6 +448,27 @@ The attributes starting with `list_` control the list that opens when the button
 | **list_flag_position** | `left` (the default) or `right`. Where the flag sits in each row. |
 
 The same switcher is also available as a block, and as a menu item. See [Adding a Currency Switcher](/guide/customization-and-themes/currency-switcher) for what each value looks like and for ready-made combinations.
+
+---
+
+### 12. More Shortcodes
+
+FluentCart registers a few more shortcodes. Most of them power the store pages you assign under [Pages Setup](/guide/settings-configuration/pages-setup), and you rarely need to place them by hand:
+
+| Shortcode | What it shows |
+| :--- | :--- |
+| `[fluent_cart_product_card]` | A single product card, like one item from the product grid. |
+| `[fluent_cart_single_product]` | A full single product layout. |
+| `[fluent_cart_pricing_table]` | A pricing table for comparing product plans. |
+| `[fluent_products_search_bar]` | A product search bar. |
+| `[fluent_cart_cart]` | The cart page. |
+| `[fluent_cart_customer_profile]` | The customer dashboard page. |
+| `[fluent_cart_receipt]` | The order receipt (thank you) page. |
+| `[fluent_cart_order_review]` | The "review your order" page. |
+| `[fluent_cart_product_reviews]` | A product's reviews. See [the reviews shortcode](/guide/store-management/product-reviews/displaying-reviews#the-reviews-shortcode) for its options. |
+| `[fluent_cart_product_header]` | The top section of a single product page. |
+| `[fluent_cart_related_products]` | Products related to the one being viewed. |
+| `[fluent_cart_checkout_shipping_methods]` | The shipping method choices on the checkout. |
 
 ---
 
