@@ -12,6 +12,8 @@ This guide will show you how to use this feature to make your tax season much ea
 
 This will take you to the main Taxes screen, where you'll see a comprehensive table of all the taxes your store has collected.
 
+**Taxes** only appears in the menu while **Enable Tax** is on in **Settings** > **Tax Settings** > **Configuration**.
+
 ::: info
 The Taxes screen is the reporting view for the rates you've already configured on the [Tax Regions](/guide/tax-&-duties/tax-rates) and [EU VAT](/guide/tax-&-duties/european-union-vat) pages. Set those up first if you're starting fresh — there's nothing to file until orders have been placed against active rates.
 :::
@@ -24,12 +26,15 @@ The main screen displays a detailed, line-by-line log of every individual tax co
 
 Here’s a breakdown of the columns:
 
-* **Order ID:** The ID of the order the tax was applied to. You can click this ID to navigate directly to the full order details page.
-* **Tax Country, Region, Zip Code:** The location details used for the tax calculation.
+* **ID:** The tax record ID.
+* **Order ID:** The ID of the order the tax was applied to. You can click this ID to navigate directly to the full order details page. Reverse-charged orders show a **Reverse Charge** tag next to the order ID.
+* **Tax Country**, **Tax Region**, **Zip Code:** The location details used for the tax calculation.
 * **Tax Name:** The name of the specific tax rule that was applied (e.g., "State Tax," "VAT").
 * **Tax Rate:** The percentage rate of the tax.
 * **Sale Taxes:** The total monetary amount of tax collected for that specific order line.
 * **Filed:** This is an internal marker to help you stay organized. A "No" status means the tax is still waiting to be reported. A "Yes" status means you have already included it in a tax filing.
+
+You can hide the **ID**, **Zip Code**, **Tax Rate** and **Filed** columns from the column picker.
 
 ### How to Use the Tax Filing Feature
 
@@ -40,11 +45,11 @@ Once you are ready to file your taxes for a specific period, you can use the Tax
 Before clicking the main button, you must select which tax records you want to include in your filing.
 
 1.  Go through the list and check the box next to each individual tax record you want to process.
-2.  To make this easier, you can use the **Quick Filters** (e.g., "Not Filed") and the **Advanced Filter** to narrow down the list to a specific country, region, or date range first.
+2.  To make this easier, you can use the **Quick Filters** (e.g., "Not Filed") and the **Advanced Filter** to narrow down the list by country, region, tax name, or filed status first.
 
 #### Step 2: Tax Filing 
 
-Once you have selected the desired tax records, click the **Tax Filing** button at the top right of the screen.
+Once you have selected the desired tax records, click the **Tax Filing** button at the top right of the screen. The button stays disabled until you select at least one record.
 
 ![Screenshot of the Tax Filing summary modal with the selected records](/images/tax/tax-filing/tax-filing-2.webp)
 
@@ -62,11 +67,13 @@ Review this information to ensure it is correct.
 
 #### Step 4: Download & Continue
 
-Click the **Download & Continue** button. This action performs two important tasks simultaneously:
+Click **Download & Continue** to finish the filing in two stages:
 
 ![Screenshot of the Download & Continue confirmation step](/images/tax/tax-filing/tax-filing-3.webp)
 
-1.  It downloads a **CSV file** to your computer. This file contains a detailed breakdown of all the tax records you selected, which you can use for your accounting or to file your tax returns with the relevant authorities.
-2.  It marks all the selected tax records as **"Filed"** within FluentCart. Their "Filed" status will change to "Yes," so you know they have been processed.
+1.  FluentCart downloads a **CSV file** of the selected records. You can use it for your accounting or to file your tax returns with the relevant authorities.
+2.  A dialog then asks **Don't Forget to Save Your Tax File**. Make sure the file is saved (use **Download Again** if needed), then click **Mark as Filed**. Only then does the **Filed** status change to **Yes**. Click **Cancel** to leave the records unfiled.
+
+<!-- TODO(screenshots): new image needed: capture the "Don't Forget to Save Your Tax File" dialog after Download & Continue, showing the Download Again, Mark as Filed and Cancel buttons. Update later. -->
 
 This workflow helps you keep your financial records clean, prevents you from accidentally reporting the same taxes twice, and provides you with the necessary documentation for your tax filings.
