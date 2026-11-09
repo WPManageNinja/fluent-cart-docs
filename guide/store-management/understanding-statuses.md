@@ -1,8 +1,8 @@
-# FluentCart status Overview
+# FluentCart Status Overview
 
 This guide explains the different statuses you'll see throughout FluentCart. Statuses help you quickly understand the current state of your products, orders, payments, subscriptions, and more.
 
-#### 1. Product status
+## Product status
 
 These statuses describe the visibility of your products.
 
@@ -14,7 +14,7 @@ These statuses describe the visibility of your products.
 | `future` | The product is scheduled to be published at a future date. |
 | `trash` | The product has been moved to the trash and is not visible. |
 
-#### 2. Order status
+## Order status
 
 Order statuses help you follow an order from the time it’s placed until it’s finished.
 
@@ -26,7 +26,7 @@ Order statuses help you follow an order from the time it’s placed until it’s
 | `canceled` | The order has been canceled. |
 | `failed` | The order could not be processed, usually due to a failed payment.  |
 
-#### 3. Payment status
+## Payment status
 
 These statuses show the state of a payment transaction. 
 
@@ -39,8 +39,9 @@ These statuses show the state of a payment transaction.
 | `refunded` | The full payment has been returned to the customer. |
 | `partially_refunded` | A portion of the payment has been refunded. |
 | `authorized` | The payment has been approved by the provider but not yet charged (captured). |
+| `payment_scheduled` | A renewal invoice for a store-billed subscription that FluentCart will charge to the saved payment method on its due date. |
 
-#### 4. Transaction status
+## Transaction status
 
 These statuses apply to individual transaction records. 
 
@@ -51,8 +52,9 @@ These statuses apply to individual transaction records.
 | `refunded` | The transaction has been refunded. |
 | `failed` | The transaction failed. |
 | `dispute_lost` | A payment dispute was opened and lost. |
+| `authorized` | The payment was approved by the provider but has not been captured yet. |
 
-#### 4. Transaction Types
+## Transaction Types
 
 These describe the nature of a transaction.  
 
@@ -62,7 +64,7 @@ These describe the nature of a transaction.
 | `refund` | A payment returned to a customer. |
 | `dispute` | A transaction related to a payment dispute. |
 
-#### 5. Subscription status
+## Subscription status
 
 These statuses track the lifecycle of a customer subscription.
 
@@ -82,7 +84,7 @@ These statuses track the lifecycle of a customer subscription.
 
 For store-billed subscriptions, FluentCart drives the move from `active` to `past_due` and finally to `expired` on its own schedule, using a grace period tied to the billing interval. See [Store Billing for Subscriptions](/guide/product-types-creation/store-managed-subscriptions) for how that escalation works.
 
-#### 6. Shipping status
+## Shipping status
 
 These statuses track the fulfillment of physical goods. 
 
@@ -93,7 +95,7 @@ These statuses track the fulfillment of physical goods.
 | `delivered` | The order has been delivered. |
 | `unshippable` | The order does not require shipping (e.g., a digital product). |
 
-#### Customer status
+## Customer status
 
 These statuses describe the state of a customer's account.
 
@@ -102,7 +104,7 @@ These statuses describe the state of a customer's account.
 | `active` | The customer is an active user. |
 | `inactive` | The customer is an inactive user. |
 
-#### Stock status
+## Stock status
 
 These statuses indicate the availability of a product.
 
@@ -112,18 +114,20 @@ These statuses indicate the availability of a product.
 | `outofstock` | The product is out of stock. |
 | `onbackorder` | The product is out of stock but can be purchased and will be shipped when available. |
 
-#### Billing Intervals
+## Billing Intervals
 
 These define the recurring payment schedule for subscriptions. 
 
 | Status | Description |
 |---|---|
 | `yearly` | Yearly billing interval. |
+| `half_yearly` | Billed every six months. |
+| `quarterly` | Billed every three months. |
 | `monthly` | Monthly billing interval. |
 | `weekly` | Weekly billing interval. |
 | `daily` | Daily billing interval. |
 
-#### License status
+## License status
 
 These statuses are for products sold with license keys. 
 
@@ -133,7 +137,7 @@ These statuses are for products sold with license keys.
 | `disabled` | The license is disabled. |
 | `expired` | The license has passed its expiration date. |
 
-#### Fulfillment Types
+## Fulfillment Types
 
 These describe the type of product being sold.
 
@@ -142,7 +146,7 @@ These describe the type of product being sold.
 | `physical` | A physical product that requires shipping. |
 | `digital` | A downloadable or digital product that does not require shipping. |
 
-#### Order Types
+## Order Types
 
 These describe the nature of an order.
 
@@ -152,7 +156,7 @@ These describe the nature of an order.
 | `subscription` | An order for a new subscription. |
 | `renewal` | An automatic renewal payment for an existing subscription. |
 
-#### Schedule status
+## Schedule status
 
 These statuses apply to automated or scheduled tasks within FluentCart. 
 
@@ -163,3 +167,13 @@ These statuses apply to automated or scheduled tasks within FluentCart.
 | `completed` | A scheduled task has finished. |
 | `failed` | The task did not complete successfully. |
 
+## Review status
+
+These statuses apply to product reviews.
+
+| Status | Description |
+|---|---|
+| `approved` | The review is live on the product page and counts toward the rating. |
+| `pending` | The review is waiting for your approval. |
+| `spam` | The review was flagged as junk and is hidden. |
+| `trash` | The review was discarded but not deleted. |
