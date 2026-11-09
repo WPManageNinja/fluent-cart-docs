@@ -18,7 +18,7 @@ On this screen, you will see a list of all available email notifications. For ea
 
 #### Available Notifications:
 
-The notifications are grouped below by what they cover.
+The notifications are grouped below by what they cover. On screen, FluentCart lists them under the groups **Order Actions**, **Subscription Actions**, **Store-Managed Renewals**, **Store-Managed Renewals · Auto-Charge**, **Scheduler / Reminder Actions**, and **Review Actions**. Notifications added by add-ons without a group of their own appear under **Other Actions**.
 
 **Orders and refunds**
 
@@ -26,7 +26,7 @@ The notifications are grouped below by what they cover.
 * **Purchase receipt to customer:** Sends a receipt to the customer immediately after their order is placed.
 * **Send mail to admin after New Order Placed (Offline Payment):** Alerts the admin when an order arrives through an offline payment method.
 * **Order confirmation to customer (Offline Payment):** Confirms an offline-payment order to the customer.
-* **Send mail to admin after a refund:** Informs the admin that a full or partial refund has been processed.
+* **Send mail to admin after a refund:** Informs the admin that a full or partial refund has been processed. This one is **off by default**.
 * **Send mail to customer after a refund:** Notifies the customer that a refund has been issued for their order.
 
 **Shipping**
@@ -41,31 +41,32 @@ The notifications are grouped below by what they cover.
 * **Send mail to admin after a subscription renewed:** Alerts the admin that a subscription renewal payment has been made.
 * **Send the renewal order to the customer when a renewal order is created:** Delivers the renewal order to the customer when FluentCart generates one for a store-billed subscription. This is the email carrying the **Pay Now** link.
 * **Notify admin when a renewal order is created:** The admin-side copy of the same event.
+* **Notify customer when an automatic renewal charge fails** and **Notify admin when an automatic renewal charge fails** (in the **Subscription Actions** group): Sent when Stripe or PayPal reports a failed renewal charge on a gateway-billed subscription. The customer email is on by default. The admin copy is **off by default**.
 
 **Automatic renewal charges**
 
-These apply when your store charges saved payment methods automatically. See [Store Billing for Subscriptions](/guide/product-types-creation/store-managed-subscriptions) for how that mode works.
+These sit in the **Store-Managed Renewals · Auto-Charge** group and apply to store-billed subscriptions, when your store charges saved payment methods automatically. See [Store Billing for Subscriptions](/guide/product-types-creation/store-managed-subscriptions) for how that mode works. Two of them share their names with the gateway-billed pair above, so check the group when you edit one.
 
 * **Notify customer before an automatic renewal charge:** Tells the customer the amount and date of the upcoming automatic charge to their saved payment method, sent when the renewal order is created ahead of the due date.
 * **Notify customer when an automatic renewal charge fails:** Sent when the saved payment method could not be charged. It includes the failure reason and a **Pay Now** link so the customer can settle it manually.
-* **Notify admin when an automatic renewal charge fails:** The admin-side copy of the failed charge notice.
+* **Notify admin when an automatic renewal charge fails:** The admin-side copy of the failed charge notice. This one is **off by default**.
 
 **Reminders and overdue notices**
 
 * **Renewal due reminder to customer:** Sent before or on the renewal due date while payment is still pending.
-* **Renewal due reminder copy to admin:** The admin-side copy of the due reminder.
+* **Renewal due reminder copy to admin:** The admin-side copy of the due reminder. This one is **off by default**.
 * **Payment reminder to customer:** A general reminder about a pending payment.
 * **First overdue renewal reminder to customer:** Sent on the earliest overdue day you configured, once a renewal due date has passed with payment still pending.
 * **Follow-up overdue renewal reminder to customer:** Sent on the overdue days between the first and the last.
 * **Final overdue renewal notice to customer:** Sent on the last overdue day you configured while payment is still pending.
 * **Upcoming renewal reminder to customer:** Sent ahead of a subscription's auto-renewal date.
-* **Upcoming renewal reminder copy to admin:** The admin-side copy of the upcoming renewal reminder.
+* **Upcoming renewal reminder copy to admin:** The admin-side copy of the upcoming renewal reminder. This one is **off by default**.
 * **Trial ending soon reminder to customer:** Sent before a trial period ends and converts to a paid subscription.
-* **Trial ending soon reminder copy to admin:** The admin-side copy of the trial ending reminder.
+* **Trial ending soon reminder copy to admin:** The admin-side copy of the trial ending reminder. This one is **off by default**.
 * **Notify customer when subscription is past due:** Sent when a subscription is marked past due.
-* **Notify admin when a subscription is past due:** The admin-side copy of the past due notice.
+* **Notify admin when a subscription is past due:** The admin-side copy of the past due notice. This one is **off by default**.
 
-Reminder timing is configured separately. See [Reminders](/guide/settings-configuration/email-configuration/reminders) for the schedule controls.
+Reminder timing is configured separately. The **Scheduler / Reminder Actions** group shows the note "This notification trigger is controlled from the Reminders section", because when these emails go out is managed in [Reminders](/guide/settings-configuration/email-configuration/reminders), not on this screen.
 
 **Subscription changes**
 
@@ -76,10 +77,23 @@ Reminder timing is configured separately. See [Reminders](/guide/settings-config
 >[!Note]
 >The cancellation email is sent automatically whenever a subscription moves to a cancelled state. The access end date is pulled from the subscription's paid-through period, so customers can see at a glance whether their access ends immediately or continues through the end of the current billing cycle.
 
+**Product reviews**
+
+These appear in the **Review Actions** group only while [Product Reviews](/guide/store-management/product-reviews/review-settings) are switched on.
+
+* **Send mail to admin when a new review is submitted:** Alerts the admin that a customer has left a review.
+* **Send mail to the reviewer when their review is approved:** Tells the reviewer that their review is now live.
+* **Send mail to the reviewer when the store replies to their review:** Lets the reviewer know the store has replied.
+
+**Withdrawal**
+
+When the FluentCart Customer Rights add-on is active, a **Withdrawal** group with four more emails for [EU withdrawal requests](/guide/settings-configuration/withdrawal-eu) appears: **Withdrawal acknowledgment to customer**, **New withdrawal request to admin**, **Withdrawal accepted notice to customer**, and **Withdrawal declined notice to customer**.
+
 #### Enabling or Disabling Notifications
 
 To quickly activate or deactivate any notification, simply click the **toggle switch** in the "Enabled" column. The email will only be sent if the toggle is on.
 
+<!-- TODO(screenshots): email-notification-1.webp is outdated: the list is now split into group cards (Order Actions, Subscription Actions, Store-Managed Renewals, Scheduler / Reminder Actions, ...) and the old sidebar lacks Reminders and Store Digest. Retake the grouped Notifications list with the arrow on a toggle. Update later. -->
 ![Email Notification](/images/settings-configuration/email-notifications/email-notification-1.webp)
 
 
@@ -97,8 +111,8 @@ This field controls the subject line of the email. You can personalize it by cli
 
 You have two options for the email's main content:
 
-* **Default Body:** This is the standard, pre-written email content provided by FluentCart. It contains all the essential information for that specific notification and is ready to use out of the box.
-* **Customized Body:** Select this option to take full control over the email's content. This is perfect for matching the email's design and tone to your brand's voice.
+* **Default Body:** This is the standard, pre-written email content provided by FluentCart. It contains all the essential information for that specific notification and is ready to use out of the box. With it selected, FluentCart shows a live preview of the built-in email filled with sample data.
+* **Customized Body:** Select this option to take full control over the email's content. This is perfect for matching the email's design and tone to your brand's voice. It requires FluentCart Pro, and shows a crown icon without Pro.
 
 #### The Default Email Layout
 
@@ -126,13 +140,18 @@ In the shortcode list, <code v-pre>{{order.uuid}}</code> (**Order UUID**) gives 
 
 #### Customizing the Email Body
 
-If you select **Customized Body**, a full rich text editor will appear.
+**Customized Body** requires FluentCart Pro. Selecting it opens the drag-and-drop email block editor.
 
-* **Content Editor:** Use the editor to write your own text, apply formatting (like bold, italics, and lists), and structure the email exactly as you want it.
-* **Shortcodes:** Just like with the subject line, you can use the **shortcode icon {;}** above the editor to insert dynamic placeholders for order, customer, and general store details. This allows you to create highly personalized and informative emails.
-* **Visual/Code View:** You can switch between the **Visual** editor and the **Code** editor (for HTML) to achieve more advanced customizations.
+* **Block Editor:** Design the email with blocks, shortcodes, and conditional content, and structure it exactly as you want it.
+* **Shortcodes:** Insert dynamic placeholders for order, customer, and general store details. This allows you to create highly personalized and informative emails.
+* **Preview:** Click **Preview** to see the email at **Desktop**, **Tablet**, and **Mobile** widths before you save it.
 
+<!-- TODO(screenshots): email-notification-body.webp is outdated: it shows the old rich text editor with Visual/Code tabs. Retake the Customized Body view with the drag-and-drop block editor (FluentCart Pro), and include the Attach PDF Template field if Fluent PDF is active. Update later. -->
 ![Email Notification Customization](/images/settings-configuration/email-notifications/email-notification-body.webp)
+
+#### Attach PDF Template
+
+When Fluent PDF is active, the editor also shows an **Attach PDF Template** field. Choose which [PDF template](/guide/settings-configuration/email-configuration/pdf-invoice) (if any) to attach to this email. The default is **No PDF attachment**, so an email carries a PDF only after you pick one here.
 
 #### Package Merge Tags
 

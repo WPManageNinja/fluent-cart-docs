@@ -13,7 +13,7 @@ A rule's conditions are arranged in **groups** made of **rows**.
 
 For example, two groups can express "quantity is at least 5, or the customer's role is Wholesale". If you add no conditions at all, the rule applies whenever its schedule and **When to Apply** choice allow it.
 
-A condition always asks about the **whole cart**, even on a **Line item** rule. When the cart qualifies, the rule is then applied to every product line.
+A condition always asks about the **whole cart**, even on an **All line items** rule. When the cart qualifies, the rule is then applied to every product line.
 
 ::: info
 A condition that reads data the checkout does not have does not match, whatever its operator. For example, a coupon condition never matches a renewal invoice, because a renewal has no cart. A guest checkout is different: a guest has no role and no customer record, so **Role is not Wholesale** and **Customer is not** conditions do match a guest.

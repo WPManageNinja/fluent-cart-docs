@@ -78,7 +78,7 @@ You can combine any **Where** choice with any **When** choice, with the renewal 
 
 This card sits at the top right of the form. It decides which amount the rule's percentage or fixed value is worked out against.
 
-* **Line item:** The rule is calculated on each product line separately. A 10% line item rule takes 10% off every line's subtotal, so it covers every unit on the line. A **Fixed** amount is taken from each line.
+* **All line items:** The rule is calculated on each product line separately. The rules list shows this choice as **Line Item**. A 10% line item rule takes 10% off every line's subtotal, so it covers every unit on the line. A **Fixed** amount is taken from each line.
 * **Checkout:** The rule is calculated once on the whole cart subtotal. A discount is spread across the products so receipts and reports stay consistent.
 * **Shipping:** The rule is calculated on the shipping cost. A 100% shipping discount makes shipping free. When a shipping discount and a percentage shipping **Fee** both apply, the fee is calculated on the shipping cost after the discount, so the total in the checkout summary matches what the customer is charged.
 
@@ -105,12 +105,12 @@ Use these examples when you aren't sure which options to pick.
 
 | You want to | Price Type | Applies To | When to Apply |
 |---|---|---|---|
-| Take 10% off every item when a customer buys five or more | Discount | Line item | Every purchase |
+| Take 10% off every item when a customer buys five or more | Discount | All line items | Every purchase |
 | Offer 15% off a whole order for a limited time | Discount | Checkout | Every purchase, with a [schedule](#scheduling-a-rule) |
 | Give free shipping above a set subtotal | Discount | Shipping | Every purchase |
 | Welcome new customers with $5 off | Discount | Checkout | First purchase only |
 | Add a handling fee to specific orders | Fee | Checkout | Every purchase |
-| Give subscribers 10% off each renewal | Discount | Checkout or Line item | Store managed renewals |
+| Give subscribers 10% off each renewal | Discount | Checkout or All line items | Store managed renewals |
 | Make a plan change cheaper | Discount | Checkout | Upgrades & downgrades |
 
 ## Editing a Rule
@@ -123,7 +123,7 @@ The editor has these cards:
 
 * **Details:** The name, display name, price type, apply-as, and amount.
 * **Display Conditions:** The rules that decide which carts qualify. See [Display Conditions](/guide/marketing-sales-tools/dynamic-pricing-conditions).
-* **Applies To:** Line item, checkout, or shipping.
+* **Applies To:** All line items, checkout, or shipping.
 * **When to Apply:** Every purchase, first purchase only, store managed renewals, or upgrades and downgrades.
 * **Schedule:** When the rule starts and stops.
 
@@ -178,7 +178,7 @@ FluentCart stores the rules that priced each placed order, with the amount each 
 
 ## Permissions
 
-Access to Dynamic Pricing is controlled by two permissions on the **Roles & Permissions** screen:
+Access to Dynamic Pricing is controlled by two permissions on the **Settings > Roles and Permissions** screen:
 
 * **View Dynamic Pricing:** See the rules list. Managers and workers have this by default.
 * **Manage Dynamic Pricing:** Open the create and edit screens, and create, edit, switch on or off, and delete rules. Managers have this by default.
@@ -189,7 +189,7 @@ Learn more in [Roles & Permissions](/guide/settings-configuration/roles-permissi
 
 Here are a few starting points you can build with the tools above.
 
-1. **Bulk discount:** **Line item**, **Discount**, **Percentage** 10, condition **Cart > Quantity is at least 5**.
+1. **Bulk discount:** **All line items**, **Discount**, **Percentage** 10, condition **Cart > Quantity is at least 5**.
 2. **Free shipping over $75:** **Shipping**, **Discount**, **Percentage** 100, condition **Cart > Subtotal is at least 75**.
 3. **Welcome offer:** **Checkout**, **Discount**, **Percentage** 15, **First purchase only**.
 4. **Wholesale pricing:** **Checkout**, **Discount**, **Percentage** 20, condition **User > Role is Wholesale**.
