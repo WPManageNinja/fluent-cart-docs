@@ -1,6 +1,6 @@
 # Browsing History
 
-The **Browsing History** add-on quietly keeps a record of the pages every visitor views on your store before they place an order. That record is then attached to the order itself, so when you open an order in your dashboard, you can see the exact path the customer took to reach checkout.
+The **Browsing History** add-on quietly keeps a record of the pages every visitor views on your store before they place an order. That record is then attached to the order itself, so when you open an order in your dashboard, you can see the exact path the customer took to reach checkout. The add-on requires **FluentCart Pro**.
 
 It helps you answer a question that is usually hard to answer inside WordPress: *how did this sale actually happen?*
 
@@ -20,6 +20,8 @@ The panel appears alongside the other order information (Labels, UTM Details, Ta
 
 The Browsing History panel displays the pages the customer visited during the session that led to the order, in the order they visited them. Each entry includes the page address and the time it was viewed.
 
+At the top, the panel shows a **Converted** badge for paid orders (or **Tracked** for unpaid ones), summary figures for the whole visit (**Journey** length, **Avg gap** between pages, and **Active** time), when the session started, and the **First referrer** that brought the visitor to your store. If they came back through a different site, the **Latest referrer** is shown too. Entries that came from another page show a **Via** link to it.
+
 ![Close-up view of the Browsing History panel listing visited pages with timestamps](/images/browsing-history/browsing-history-widget.webp)
 
 The number in the panel heading (for example, *Browsing History (9)*) tells you how many pages the customer viewed in total before checking out.
@@ -38,7 +40,7 @@ Over time, these patterns help you understand which pages bring buyers in, which
 ## How long the history is kept
 
 - **Orders that resulted in a purchase** keep their full browsing history attached to the order permanently. Even if old browsing data is cleaned up in the background, the snapshot tied to the order stays exactly as it was on the day of the sale.
-- **Sessions that never led to a purchase** are tidied up automatically after a short retention window, so your store does not accumulate unused data.
+- **Sessions that never led to a purchase** are marked as abandoned after an hour without activity and deleted after 15 days, so your store does not accumulate unused data.
 
 In short: only the history that matters for real orders is kept long-term.
 
@@ -49,12 +51,16 @@ The Browsing History add-on is designed to respect visitor privacy:
 - It does not use any third-party tracking services.
 - It does not store IP addresses, device fingerprints, or names.
 - Visitors are linked between pageviews only by a short, anonymous identifier, which clears itself after a purchase.
+- The referring page address is stored with the session, so a visitor's first and latest referrer appear on the order.
 
 Only the pages visitors open on your own store are recorded, and only for the purpose of showing the path that led to their order.
 
 ## Getting started
 
-1. Install and activate the **FluentCart Page History** add-on from your plugins area.
-2. That is all that is needed — tracking begins automatically on the next visitor, and new orders will start showing their browsing history right away.
+The Browsing History add-on needs **FluentCart Pro**, so check that first:
+
+1. Make sure FluentCart and FluentCart Pro are active.
+2. Install and activate the **FluentCart Page History** add-on from your plugins area.
+3. That's all. Tracking starts with the next visitor, and new orders show their browsing history right away.
 
 No configuration, no setup wizard. Open a recent order after activation, and you will begin seeing the path that led to every new sale.
