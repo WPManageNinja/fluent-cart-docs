@@ -23,9 +23,9 @@ This will open the **"Coupons > Add Coupon"** screen, where you can set up and c
 
 * **Title:** Enter an internal title for your coupon. This is for your reference and not visible to customers.
 * **Code:** This is the actual discount code that customers will enter at checkout (e.g., "HOLIDAY10"). You can type a custom code or click **"Generate Random Code"** to create one automatically.
-* **Coupon Priority:** (Optional) Enter a numerical value to set the priority of this coupon. A higher number might indicate a higher priority if multiple coupons can be applied.
+* **Coupon Priority:** (Optional) Decides the order in which stackable coupons are calculated. The **lower** the number, the higher the priority, so a coupon with priority 1 is applied before one with priority 5.
 
-### 2. Discount Value (Fixed Type)
+### 2. Discount Details
 
 Here, you can decide what kind of discount you want to offer.
 
@@ -35,12 +35,12 @@ Here, you can decide what kind of discount you want to offer.
 
   * **Percentage:** This takes a percentage off the total, like 10% off.
 
-* **Discount Amount:** Enter the value of your discount here. If you choose **Fixed**, enter a number like 5 for a $5 discount. If you choose **Percentage**, enter a number like 10 for a 10% discount. You can also leave it blank or set it to 0 for no maximum limit.
-  * **Max Discount Amount:** (Optional) Enter the maximum discount amount a customer can get. This is especially helpful for **percentage-based** coupons to make sure the discount doesn’t get too large on high-value orders.
+* **Discount Amount** (Fixed) or **Discount Percentage (%)** (Percentage): Enter the value of your discount, for example 5 for $5 off or 10 for 10% off.
+* **Max Discount Amount:** (Optional) The most a customer can save with this coupon. Leave it empty or 0 for no limit. This is especially helpful for **percentage-based** coupons to make sure the discount doesn’t get too large on high-value orders.
 
 ### 3. Schedule
 
-On the right side of the screen, you’ll find the **Schedule** box. This is where you can make your coupon work only for a specific time.
+On the right side of the screen, a **Summary** card previews the coupon code and its main settings as you fill in the form. Below it, you’ll find the **Schedule** box. This is where you can make your coupon work only for a specific time.
 
 * **Start Date & Time:** Set when you want the coupon to start working.
 * **Set end date & time:** Check this box and pick a date and time for the coupon to automatically expire.
@@ -53,28 +53,33 @@ Sometimes, you don’t want a coupon to be used for every single thing in your s
 
 #### Spending Limits
 
- * **Min Spend Amount:** The customer's cart must reach this total before the coupon will work.
- * **Max Spend Amount:** You can set a limit so the coupon won't work if the cart total is too high. If you don't want a limit, just leave this empty.
+ * **Min Spend Amount:** The smallest order amount the coupon works on.
+ * **Max Spend Amount:** The largest order amount the coupon works on. Leave it empty for no limit.
+ * **Spend Amount Based On:** Choose what these limits are measured against: **Subtotal (items only)** or **Total (includes shipping & fees)**. New coupons use **Subtotal (items only)**. This choice applies at checkout. On orders you create in the admin, the limits are always checked against the items subtotal.
 
 #### Picking Specific Items
 
- * **Include/Exclude Categories:** You can choose to make a coupon work only for certain groups of products (like "Winter Gear") or keep it from working on others.
- * **Include/Exclude Products:** If you have one specific product that you don't want to discount, you can list it here to exclude it from the deal.
+ * **Include Categories** and **Exclude Categories:** You can choose to make a coupon work only for certain groups of products (like "Winter Gear") or keep it from working on others.
+ * **Include Products** and **Excluded Products:** Limit the coupon to specific products, or list a product you don't want to discount to exclude it from the deal.
 
 >[!Note]
-> Both **published** and **Private** products now appear in the Include/Exclude Products dropdown. This means you can apply discounts to private (hidden) products too — perfect for VIP-only deals, beta-tester pricing, or invitation-only promotions where the product isn't publicly listed but still needs a working discount.
+> Both **published** and **Private** products now appear in the **Include Products** and **Excluded Products** dropdowns. This means you can apply discounts to private (hidden) products too — perfect for VIP-only deals, beta-tester pricing, or invitation-only promotions where the product isn't publicly listed but still needs a working discount.
 
 #### Restricting by User
 
- * **By Email Address:** You can limit a coupon so only specific people can use it by entering their email addresses here. This is perfect for sending a "thank you" discount to a single loyal customer.
+ * **By Email Address:** You can limit a coupon so only specific people can use it by entering their email addresses here. This is perfect for sending a "thank you" discount to a single loyal customer. Separate several addresses with commas. You can use a wildcard such as `*@company.com` to allow a whole domain, or a regular expression.
 
 ### Recurring Coupons 
 
 FluentCart supports recurring discounts (including 100% off) for subscriptions. This means a coupon can apply not just to the first payment, but to every renewal for as long as the subscription remains active.
 
+::: info
+A recurring coupon that brings a subscription's payment down to zero works only with Stripe. While such a coupon is in the cart, checkout hides payment methods that can't handle a $0 recurring payment.
+:::
+
 #### Make this coupon recurring
 
-When enabled, the discount will automatically apply on each billing cycle—no manual work required.
+Under **Recurring Coupon**, tick **Make this coupon recurring**. The discount then applies automatically on every renewal as well, with no manual work required.
 
 #### What Happens with a One-Time Coupon on a Subscription
 
@@ -96,6 +101,7 @@ This is expected behavior, not a free trial. Once the first renewal is charged, 
 >[!Note]
 >This feature makes your store more flexible because it doesn't assume every subscription has to make money immediately. It also makes your reports and renewal logic much safer for the long term.
 
+   <!-- TODO(screenshots): usage-restrictions.webp is outdated: it lacks the Spend Amount Based On option and shows the old Per User Limit label (now Per Logged in User Limit); retake the Usage Restrictions and Maximum Discount Uses cards. Update later. -->
    ![Screenshot of Usage Restrictions](/images/marketing-sales-tools/usage-restrictions.webp)
 
 ### 5. Maximum Discount Uses
@@ -103,14 +109,14 @@ This is expected behavior, not a free trial. Once the first renewal is charged, 
 Control how many times the coupon can be used.
 
 * **Total Limit:** Enter the maximum number of times this coupon can be used across all customers. Enter "0" for unlimited usage.
-* **Per User Limit:** Enter the maximum number of times a single customer can use this coupon. Enter "0" for unlimited usage per user.
+* **Per Logged in User Limit:** The maximum number of times one logged-in customer can use the coupon. Enter 0 (or leave it empty) for no limit. When you set a limit, the coupon only works for logged-in shoppers, and guests see **You Need To be logged in**.
 
 ### 6. Additional Information
 
 * **Status:** 
   * **Active:** The coupon is live and can be used right away.
   * **Disabled:** The coupon is turned off and cannot be used.
-  * **Expired:** The coupon has passed its end date.
+  * **Expired:** Marks the coupon as expired. FluentCart doesn't switch a coupon to **Expired** on its own when time runs out; a coupon past its end date simply stops working at checkout.
 * **Internal Notes:** (Optional) You can leave a private note for yourself here, like "This coupon is for our newsletter subscribers."
 * **Stackable:** If you select **Yes**, customers can use this coupon with other coupons in the same purchase. If you select **No**, it can only be used by itself.
 
@@ -118,7 +124,7 @@ Control how many times the coupon can be used.
 
 ## Saving Your Coupon
 
-Once all settings are configured, click the **"Save"** button at the top of the page (if visible, or "Update" if editing) to create or update your fixed type coupon. 
+When you're done, click **Create** in the **Unsaved Changes** bar at the top of the page (or **Update** when editing an existing coupon).
 
 ## Editing or Deleting a Coupon
 
