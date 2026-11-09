@@ -96,6 +96,8 @@ Before you start, make sure the addon for your builder is installed and active: 
 
 ### Elementor
 
+The **Currency Switcher** widget needs **FluentCart Elementor Blocks 1.1.1** or later.
+
 1. Open the page or template with **Edit with Elementor**.
 2. In the **Elements** panel, type `currency` into **Search Widget...**. You can also find it in the **FluentCart** category.
 3. Drag the **Currency Switcher** widget onto the canvas.

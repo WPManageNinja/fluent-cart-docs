@@ -35,7 +35,8 @@ A focused shortcut that sends customers straight to checkout without stopping at
 
 A compact cart icon that usually sits in your site header. It lets customers see their cart count and total without leaving the current page.
 
-* **Style Tab:** Almost all customization lives in **Cart Icon Style**.
+* **Content Tab:** Choose the **Cart Icon** (or a **Custom Icon URL**), and set **Display Total Price**, **Show Cart Item Count**, and **Badge Count Shows**: **Count distinct products** or **Count total item quantity**.
+* **Style Tab:** Almost all visual customization lives in **Cart Icon Style**.
     * **States:** Style **Normal** and **Hover** states separately.
     * **Typography & Colors:** Adjust the typography, text color, and icon color.
     * **Container Style:** Pick a **Background Type** (Classic or Gradient), choose a **Border Type**, set the **Border Radius** for rounded corners, and add a **Box Shadow**.
@@ -58,13 +59,14 @@ Renders the full FluentCart shopping cart — item rows, quantities, line totals
 The main widget for building shop pages. It renders your product catalog as a clean grid or list and supports filters, sorting, and pagination.
 
 * **Content Tab:** Control which products show up and how they're arranged.
-    * **General Settings:** Set **Products Per Page**, switch the **View Mode** between Grid and List, choose **Grid Columns**, and pick a **Pagination Type** (Infinite Scroll, Load More, or numbered pages). Choose the **Price Format**, sort with **Order By** and **Order**, and toggle **Use Default Style** for FluentCart's built-in styling.
+    * **General Settings:** Set **Products Per Page**, switch the **View Mode** between Grid and List, choose **Grid Columns**, and pick a **Pagination Type** (**Infinite Scroll** or **Page Numbers**). Choose the **Price Format** and toggle **Use Default Style** for FluentCart's built-in styling.
     * **Shop Layout:** Adjust the spacing and layout of the product grid.
     * **Product Card Layout:** Choose which elements (image, title, excerpt, price, rating, button) appear inside each product card. See [ratings on shop cards](/guide/customization-and-themes/elementor-review-widgets#ratings-on-shop-cards) for the **Rating** element.
     * **Filter Settings:** Turn on a sidebar filter so customers can narrow the list by category, price, or attributes.
 * **Style Tab:** Customize typography, card colors, button colors, and grid spacing.
 * **Advanced Tab:** Standard Elementor margin, padding, and responsive controls.
 
+<!-- TODO(screenshots): fluentcart-elementor-5.webp is outdated: it still shows the removed Order By and Order controls. Retake the Products widget General Settings panel. Update later. -->
 ![Screenshot of the Products widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-5.webp)
 
 ## 6. Product Card
@@ -149,7 +151,7 @@ A button that links to your customer's account dashboard. Drop it into your head
 * **Style Tab:** Customize colors, typography, borders, and hover states.
 * **Advanced Tab:** Standard Elementor positioning and responsive controls.
 
-The dashboard page itself is configured under **FluentCart Pro → Settings → Pages Setup**.
+The dashboard page itself is configured under **FluentCart → Settings → Store Settings → Pages Setup**.
 
 ![Screenshot of the Customer Dashboard Button widget edit panel in Elementor](/images/customization-and-themes/fluentcart-elementor-widgets/widget-for-fluentcart/fluentcart-elementor-10.webp)
 
@@ -176,6 +178,7 @@ A search input that lets customers find products from anywhere on your site. Use
     * **Show Category Filter:** Turn this on to add an inline category dropdown next to the search input.
     * **Link Target:** Choose whether results open in the **Same Tab** or a **New Tab**.
     * **Link With Shop App:** Connect the bar to your configured Shop App page so results display in your store's layout.
+    * **Show Thumbnail:** Shows product images in the results dropdown.
 * **Style Tab:** Style the input field, the category dropdown, the submit button, and the placeholder text.
 * **Advanced Tab:** Standard Elementor controls.
 
@@ -186,7 +189,7 @@ A search input that lets customers find products from anywhere on your site. Use
 Renders the store logo you configured in your FluentCart store settings. Drop it into headers, footers, or invoice templates so the logo updates everywhere when you change it.
 
 * **Content Tab:** Configure the link.
-    * **Link:** Choose where clicking the logo takes the visitor (Home Page or a custom URL).
+    * **Link:** **Home Page** makes the logo link to your home page, and **None** shows it without a link.
     * **Open in New Tab:** Toggle on to open the link in a new browser tab.
 * **Style Tab:** Adjust the logo size, max width, alignment, and border radius.
 * **Advanced Tab:** Standard Elementor positioning controls.
@@ -235,7 +238,7 @@ Standard Elementor controls for margin, padding, and responsive visibility.
 
 ## 16. Related Products
 
-Renders a row of products related to the current product. FluentCart picks the related items based on shared categories and tags, plus any manual relations you set in the product editor.
+Renders a row of products related to the current product. FluentCart picks products that share a category or brand with the current product.
 
 * **Content Tab:** Configure the query and badges.
     * **Source:** Pull from the **Current Product** or a **Custom** product.

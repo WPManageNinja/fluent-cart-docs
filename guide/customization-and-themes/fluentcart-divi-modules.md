@@ -9,27 +9,27 @@ This guide walks you through installing the addon, finding the modules inside Di
 Before you install the addon, make sure of two things:
 
 1. **Divi 5.0 or newer** is installed and active on your site. These are native Divi 5 modules, so they render inside the Divi 5 builder and need that version to appear.
-2. **FluentCart 1.3.4 or newer** is installed, and your FluentCart Pro license is verified. See [Licensing Settings](/guide/settings-configuration/licensing-settings) if you have not done this yet.
+2. **FluentCart 1.3.4 or newer** is installed. The addon itself is free.
 
 ## Installing the Addon
 
 The modules ship as a separate addon, so you install it once from the FluentCart settings before they show up in Divi.
 
-1. From your WordPress dashboard, navigate to **FluentCart Pro > Settings > Features & addon**.
+1. From your WordPress dashboard, navigate to **FluentCart > Settings > Features & addon** (the menu reads **FluentCart Pro** when Pro is active).
 2. Scroll to the **Plugin Addons** section.
 3. Find the **FluentCart Divi Modules** card. Its description reads "Native Divi 5 modules for FluentCart products, cart, and checkout. Requires Divi 5.0+ and FluentCart 1.3.4+."
-4. Click the **Install & Activate** button on the card.
+4. Click the **Install & Activate** button on the card (with FluentCart Pro active), or **Download** on the free plugin.
 
 ![Screenshot of the Plugin Addons section with the FluentCart Divi Modules card and its Install & Activate button highlighted](/images/customization-and-themes/divi/divi-1.webp)
 
-FluentCart fetches the addon, installs it, and activates it for you. No upload or manual download is needed. When it finishes, the card's status badge switches to **Active**.
+With FluentCart Pro, FluentCart installs and activates the addon for you, then reloads the page. When it finishes, the card's status badge switches to **Active**.
 
 ![Screenshot of the FluentCart Divi Modules card showing the Active status badge](/images/customization-and-themes/divi/divi-2.webp)
 
 For more on this one-click installer, see [Features & Addons](/guide/settings-configuration/features-addons).
 
 ::: info
-If the **Install & Activate** button is greyed out or replaced with a license prompt, your FluentCart Pro license either has not been verified or has lapsed. Verify it from **Settings > License Settings** and the installer becomes available again.
+On the free plugin the button reads **Download**: it opens the FluentCart addons page, where you download the `.zip` and upload it under **Plugins > Add New > Upload Plugin**.
 :::
 
 ## Finding the Modules in Divi

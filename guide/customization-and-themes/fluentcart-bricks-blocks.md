@@ -7,23 +7,23 @@ The **FluentCart Bricks Blocks** addon brings a full palette of FluentCart eleme
 Before you install the addon, make sure of two things:
 
 1. The **Bricks** theme is installed and active on your site. These blocks render inside the Bricks builder, so without the theme there is nowhere for them to appear.
-2. Your FluentCart Pro license is verified. See [Licensing Settings](/guide/settings-configuration/licensing-settings) if you have not done this yet.
+2. FluentCart is installed. The addon itself is free.
 
 ## Installing the Addon
 
 The blocks ship as a separate addon, so you install it once from the FluentCart settings before it shows up in Bricks.
 
-1. Navigate to **FluentCart Pro > Settings > Features & addon**.
+1. Navigate to **FluentCart > Settings > Features & addon** (the menu reads **FluentCart Pro** when Pro is active).
 2. Scroll to the **Plugin Addons** section.
 3. Find the **FluentCart Bricks Blocks** card. Its description reads "Enable to get Bricks Builder elements for FluentCart. Requires the Bricks theme."
-4. Click the **Install & Activate** button on the card.
+4. Click the **Install & Activate** button on the card (with FluentCart Pro active), or **Download** on the free plugin.
 
 ![Screenshot of the Plugin Addons section with the FluentCart Bricks Blocks card and its Install & Activate button highlighted](/images/customization-and-themes/bricks-blocks/bricks-blocks-addon-install.webp)
 
-FluentCart fetches the addon, installs it, and activates it for you. The card's status badge switches to **Active** when it finishes, and no upload or page reload is needed. For more on this installer, see [Features & Addons](/guide/settings-configuration/features-addons).
+FluentCart installs and activates the addon, then reloads the page. The card then shows an **Active** badge. For more on this installer, see [Features & Addons](/guide/settings-configuration/features-addons).
 
 ::: info
-If the **Install & Activate** button is greyed out or replaced with a license prompt, your FluentCart Pro license either has not been verified or has lapsed. Verify it from **Settings > License Settings** and the installer becomes available again.
+On the free plugin the button reads **Download**: it opens the FluentCart addons page, where you download the `.zip` and upload it under **Plugins > Add New > Upload Plugin**.
 :::
 
 ## Finding the Blocks in Bricks
@@ -84,7 +84,7 @@ These blocks help customers find their way around your catalog:
 * **Product Carousel:** Products in a sliding carousel. Set **Slides to Show**, **Space Between**, and **Autoplay** with its **Autoplay Speed**, then choose whether **Infinite Loop**, **Show Arrows**, and **Show Pagination** are on.
 * **Product Categories:** A list of your product categories. **Display Style** sets the look, while **Show Product Count**, **Show Hierarchy**, and **Show Empty Categories** control what is listed.
 * **Related Products:** Products related to the one being viewed. **Related By** matches on **Categories** or **Brands**, and you can set the **Heading Text**, **Order By**, **Columns**, and **Products Per Page**.
-* **Product Search:** A search field scoped to your products, with an optional **Show Category Filter**. **Open In** sets where results land.
+* **Product Search:** A search field scoped to your products, with an optional **Show Category Filter**. **Open In** sets where results land. **Link With Shop App** makes the search filter a **Products** element on the same page instead of opening a results dropdown.
 
 ### Store and Account
 
