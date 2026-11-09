@@ -1,8 +1,3 @@
----
-title: Troubleshooting
-description: Diagnose and recover from migration issues. Failed payment logs, license verification, common errors, and the migration FAQ.
----
-
 # Troubleshooting
 
 The Migrator is built to be tolerant of bad data: individual record failures are captured rather than halting the run. This page explains how to find those failures, how to verify integrity after a migration, and how to recover from common problems.
@@ -28,14 +23,14 @@ Each entry shows:
 
 ### Viewing failures from the wizard
 
-The migration completion screen surfaces an expandable error log section. Click to expand and see the same data as the CLI `--log` output.
+On the completion panel, click the **(N skipped)** or **(N failed)** count next to **Orders** to open the report. From there you can **Refresh** it or **Download CSV report**.
 
 ### What to do with a failed entry
 
 1. Open the original EDD order in your WordPress admin (`Edit > Orders` in EDD's UI).
 2. Compare it against the error message — usually the cause is obvious (missing customer email, deleted product reference, broken meta).
 3. Fix the source data in EDD.
-4. Re-run the payments stage: `wp fluent_cart_migrator migrate_from_edd --payments`. The Migrator will pick up only the orders not yet successfully migrated.
+4. Once the payments stage has finished, running `--payments` again is skipped (`Orders Migration already done. Skipping...`). Fix source data before the production run. On staging, `reset` and run the migration again to pick up the corrected orders.
 
 ## Verifying license integrity
 
@@ -50,7 +45,7 @@ This compares EDD's license records against FluentCart's license records and rep
 - Licenses present in EDD but missing in FluentCart
 - Licenses with status mismatches (active in EDD but inactive in FluentCart, or vice versa)
 
-For each discrepancy, investigate whether the source license has anomalies (a license without a parent order, an activation pointing at a deleted site) or whether the migration genuinely missed it. If genuinely missed, re-running the payments stage usually resolves it because licenses are migrated as part of order processing.
+For each discrepancy, investigate whether the source license has anomalies (a license without a parent order, an activation pointing at a deleted site) or whether the migration genuinely missed it. If a license was genuinely missed, re-running a completed payments stage won't pick it up. Reset on staging and run again, or recreate the license by hand in FluentCart.
 
 ## Common issues
 
@@ -60,11 +55,27 @@ The compatibility check blocks the migration if it detects EDD 2.x with the lega
 
 **Fix:** Update Easy Digital Downloads to 3.x. EDD 3.0 includes a built-in migration tool that converts legacy CPT data into the v3 tables. Run that first, then return to the FluentCart Migrator.
 
+### "Easy Digital Downloads plugin not found"
+
+EDD must be installed and active while you migrate, even though the compatibility check can detect its tables when it's inactive.
+
+**Fix:** Activate EDD and start again.
+
+### "FluentCart Pro is required to migrate EDD License data"
+
+This appears when EDD Software Licensing is active.
+
+**Fix:** Install and activate FluentCart Pro. The Migrator switches on FluentCart's **Licensing** module for you on the first run.
+
+### "No EDD products found. Nothing to migrate."
+
+The Migrator refuses to run when EDD has no downloads.
+
 ### Migration stalls partway through
 
 A stalled migration is almost always a server-side timeout: PHP `max_execution_time` cut off the request, or the host's process supervisor killed a long-running script.
 
-**Fix from the wizard:** Just refresh the page. The wizard will pick up from the last completed batch. If it stalls again, lower the **Batch Size** dropdown (try 50 or 25) so each batch finishes well within the host's timeout.
+**Fix from the wizard:** Just refresh the page. The wizard will pick up from the last completed batch. If it keeps stalling, switch to WP-CLI below. The wizard has no batch-size setting, because it already works in short timed batches.
 
 **Fix from the CLI:** The CLI bypasses HTTP timeouts entirely. If the wizard keeps stalling, switch to the CLI:
 
@@ -128,7 +139,7 @@ This backfills missing UUIDs without touching anything else.
 
 ## Resetting a migration
 
-If a staging migration has problems and you want to start fresh, the Migrator provides clean reset paths. All of them are gated behind [Developer Mode](/guide/migration/edd/developer-mode) — you must define `FLUENT_CART_DEV_MODE` in `wp-config.php` before any reset path will work. This is intentional: reset is destructive, and gating it behind a constant makes it impossible to trigger by accident from the WordPress admin.
+If a staging migration has problems and you want to start fresh, the Migrator provides clean reset paths. The standalone `reset` command and the wizard's **Reset Migration** link need [Developer Mode](/guide/migration/edd/developer-mode), so you must define `FLUENT_CART_DEV_MODE` in `wp-config.php` first. The `migrate_from_edd --reset` flag only asks for confirmation, so treat it as destructive everywhere.
 
 ::: danger Never run reset on production
 Reset drops FluentCart tables and deletes migrated post data. Only ever run it on staging, local, or otherwise isolated environments.
@@ -147,7 +158,7 @@ Clicking the link asks for confirmation, then runs the reset. On production (Dev
 Reset is thorough. It rolls back everything the migration created so you can start clean.
 
 **Database schema:**
-- Drops FluentCart tables via `DBMigrator::refresh()`
+- Drops **and recreates** every FluentCart table, so all FluentCart data on the site is removed, not just migrated records
 
 **WordPress options cleared:**
 - `__fluent_cart_edd3_migration_steps` (stage progress)
@@ -156,21 +167,20 @@ Reset is thorough. It rolls back everything the migration created so you can sta
 
 **Migrated post data:**
 - Deletes FluentCart product posts created by the migration
-- Removes migration metadata from EDD posts (`_fcart_migrated_id`, `__edd_migrated_variation_maps`)
+- Removes the mapping fields `_fcart_migrated_id` (on EDD downloads) and `_edd_migrated_from` / `__edd_migrated_variation_maps` (on FluentCart products)
 
-Your original EDD data is never touched. Only FluentCart-side records and the bidirectional mapping meta are affected.
+Your original EDD orders, customers, and settings aren't touched. Only FluentCart-side records and the mapping fields are affected.
 
-### `reset` vs `migrate_fresh`
+### `--reset` vs `reset`
 
-Both are destructive, but they operate at different levels.
+Both commands do the same wipe, including the schema refresh. The difference is the safety check.
 
-| Command | Scope | When to use |
-|---------|-------|-------------|
-| `wp fluent_cart_migrator migrate_from_edd --reset` | Wipes migrated data and clears migration state | Quick reset between rehearsal runs |
-| `wp fluent_cart_migrator reset` | Same as `--reset`, invoked as a standalone command | Same scenario, different entry point |
-| `wp fluent_cart_migrator migrate_fresh` | Reset plus schema refresh | When the FluentCart schema itself has changed (during plugin upgrades or development) |
+| Command | Scope | Developer Mode check |
+|---------|-------|----------------------|
+| `wp fluent_cart_migrator migrate_from_edd --reset` | Drops and recreates FluentCart tables and clears migration state | No, only a confirmation prompt |
+| `wp fluent_cart_migrator reset` | Same wipe, invoked as a standalone command | Yes |
 
-For most staging workflows, `--reset` or `reset` is sufficient. Reach for `migrate_fresh` only when the FluentCart database schema has been updated and you want a guaranteed clean slate.
+Prefer `reset` on staging, since it refuses to run without Developer Mode.
 
 ### A staging rehearsal workflow
 
@@ -182,7 +192,7 @@ A typical rehearsal loop looks like this:
 4. Run the full migration via the wizard or CLI.
 5. Spot-check products, orders, subscriptions, licenses, coupons.
 6. Note anything that needs source-data cleanup before the production run (duplicate customers, broken products, legacy records).
-7. Reset the migration: `wp fluent_cart_migrator migrate_from_edd --reset`.
+7. Reset the migration: `wp fluent_cart_migrator reset`.
 8. Clean up the source data.
 9. Re-run the full migration.
 10. When the result looks right on staging, repeat on production (with Developer Mode **disabled**).
@@ -191,13 +201,7 @@ The ability to iterate without consequence turns a one-shot migration into somet
 
 ### Confirmation prompts
 
-Every reset path asks for confirmation before destroying data — both in the CLI and in the wizard. You can bypass the CLI prompt with the standard WP-CLI `--yes` flag:
-
-```bash
-wp fluent_cart_migrator migrate_from_edd --reset --yes
-```
-
-Only do this inside scripts you have reviewed. The confirmation exists for a reason.
+Every reset path asks for confirmation before destroying data, both in the CLI and in the wizard. The CLI prompt always appears, even with `--yes`.
 
 ## Frequently asked questions
 
@@ -211,11 +215,11 @@ Yes. Subscription records migrate with their gateway subscription IDs (Stripe, P
 
 ### Will my customers' software licenses keep working?
 
-Yes. The Migrator intercepts EDD-format license API calls (activation, deactivation, validity check, update check) and routes them through FluentCart. Customers don't need to update or reconfigure anything.
+Yes. The Migrator intercepts EDD-format license API calls (activation, deactivation, validity check, update check) and routes them through FluentCart once EDD Software Licensing is deactivated (until then it answers those calls itself). Keep FluentCart Pro active, since the license routing uses its Licensing module. Customers don't need to update or reconfigure anything.
 
 ### Does the migration modify or delete my EDD data?
 
-Never. The Migrator only reads from EDD's database tables. Your original data is untouched. You can verify the entire migration against your EDD store before switching anything over.
+It doesn't change your EDD orders, customers, or settings. It adds one ID-mapping field to each EDD download, and if EDD Software Licensing is active it switches on FluentCart's Licensing module. You can verify the entire migration against your EDD store before switching anything over.
 
 ### What if the migration is interrupted halfway through?
 
@@ -232,7 +236,7 @@ The CLI is consistently faster than the wizard for medium and large stores becau
 
 ### Can I run the migration multiple times?
 
-Yes. Every stage is idempotent. Re-running products updates existing migrated products via the ID map. Re-running coupons updates existing coupons by code. Re-running recount always recalculates from current data. There is no risk of duplicate records from re-running.
+Yes, safely. A finished stage is skipped on the next run, and an interrupted stage resumes where it stopped without creating duplicates. To run a finished stage again from scratch, reset the migration on staging first.
 
 ### What about WooCommerce or SureCart migrations?
 
