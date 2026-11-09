@@ -10,7 +10,7 @@ First, ensure both FluentCart and Fluent Support are installed and active on you
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Integrations**.
 2.  Scroll down to the **Integration Modules** section.
-3.  Locate the **Fluent Support** module.
+3.  Locate the **FluentSupport** module.
 4.  You should see a green **Enabled** status badge. This means FluentCart recognizes Fluent Support, and the basic connection is active. No further action is needed here.
 
 ![Screenshot of Fluent Support Integration](/images/integrations/fluentsupport-integration/enabling-the-integration.webp)
@@ -62,12 +62,12 @@ Now, whenever a customer submits a ticket and selects that specific product, the
 Provide a great experience by adding a dedicated support section directly into the FluentCart customer account area.
 
 1.  Navigate to **Fluent Support > Global Settings**.
-2.  Scroll down to the bottom of the page.
-3.  Check the box labeled **Add support link to Fluent Cart account navigation**.
-4.  Click **Save Settings**.
+2.  Under **Customer Portal**, select **FluentCart Account Navigation**.
+3.  Click **Save Settings**.
 
-The Result: A new **Support** tab will now appear in the FluentCart customer dashboard (`/account/Support`). Customers can click this tab to view their existing support tickets and submit new ones without leaving your store's account area.
+The Result: A new **Support** tab appears in the FluentCart customer dashboard. Customers can open it to view their tickets and submit new ones without leaving your store's account area.
 
+<!-- TODO(screenshots): add-support-link-in-cart.webp is outdated: it shows the old "Add support link to Fluent Cart account navigation" checkbox. Retake Fluent Support > Global Settings showing the Customer Portal option with FluentCart Account Navigation selected and the Save Settings button. Update later. -->
 ![Screenshot of Global Settings](/images/integrations/fluentsupport-integration/add-support-link-in-cart.webp)
 
 ### Step 5: Linking Tickets to Products/Orders (Customer Experience)
@@ -89,12 +89,8 @@ This ensures that when the ticket arrives in your helpdesk, it's already linked 
 This feature requires no extra setup and works automatically thanks to the integration. It provides invaluable context for your support agents.
 
 1.  When a support agent opens any ticket in **Fluent Support > Tickets**.
-2.  Look at the right-hand sidebar. A **Purchases** widget will automatically appear if the customer who submitted the ticket has any purchase history in your FluentCart store.
-3.  **What it shows:** This widget displays key information:
-    * Customer's **Lifetime Value**.
-    * A list of their recent FluentCart purchases, including product names, prices, order statuses, and direct links (#) to the orders in FluentCart.
-    * Subscription details (if applicable).
-    * License keys (if applicable).
+2.  Look at the right-hand sidebar. A **FluentCart Purchases** widget will automatically appear if the customer who submitted the ticket has any purchase history in your FluentCart store.
+3.  **What it shows:** **Lifetime Value**, **Paid Purchases**, **First Paid Order** and **Last Paid Order** dates, and a **Recent Purchases** list with product names, prices, statuses, and links to the orders. Subscription renewal details and license keys appear when they apply.
 4.  **Benefit:** Your agents get immediate access to the customer's purchase history without needing to ask or switch screens. This allows them to understand the context quickly and provide faster, more accurate support.
 
 ![Screenshot of Purchases History](/images/integrations/fluentsupport-integration/purchases-widget.webp)
