@@ -5,7 +5,7 @@ FluentCart lets you refund an order in full or in part, pick the exact items and
 ## Opening the Refund Modal
 
 1. Open the **[Order Details](/guide/store-management/orders-management/order-details-overview)** screen for the order you want to refund.
-2. In the top right corner, click the **Refund** button.
+2. In the top right corner, click the **Refund** button. The button appears only while the order still has a paid amount that has not been refunded.
 
     ![Screenshot of the Refund button on the Order Details screen](/images/store-management/processing-refunds/refund-button-on-order.webp)
 
