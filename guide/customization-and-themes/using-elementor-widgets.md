@@ -11,10 +11,10 @@ FluentCart starts with only the basics to keep your site fast. To use the Elemen
 1. **Go to Settings:** In your WordPress dashboard, go to **FluentCart → Settings**.
 2. **Open Features & Addons:** Click the **Features & addon** tab on the left.
 3. **Find Plugin Addons:** Scroll to the bottom of the page to find the **Plugin Addons** section.
-4. **Turn it On:** Find the **Elementor Blocks** card and click **Install & Activate**.
+4. **Turn it On:** Find the **Elementor Blocks** card and click **Install & Activate** (FluentCart Pro) or **Download** (free plugin).
 
 ::: info
-The Elementor Blocks add-on is available on **FluentCart Free** as well as Pro, and it installs in one click from the Plugin Addons section. It requires **Elementor 3.34 or later**.
+The addon is free. With FluentCart Pro it installs in one click. On the free plugin, **Download** opens the FluentCart addons page, where you download the `.zip` and upload it under **Plugins → Add New → Upload Plugin**. It requires **Elementor 3.34 or later**.
 :::
 
 ![Screenshot of the FluentCart widget category panel in the Elementor editor](/images/customization-and-themes/fluentcart-elementor-widgets/elementor-widget-1.webp)
@@ -64,7 +64,7 @@ You don't have to build every store page from a blank canvas. Activating the add
 
 Once inserted, everything is a normal Elementor layout. Edit any widget, delete sections you don't need, and restyle it to match your brand.
 
-You'll also want to tell FluentCart to use these pages. After building them, assign each one under **FluentCart Pro → Settings → Pages Setup** so your store's shop, cart, checkout, and dashboard links point at your new designs. See [Pages Setup](/guide/settings-configuration/pages-setup) for the full walkthrough.
+You'll also want to tell FluentCart to use these pages. After building them, assign each one under **FluentCart → Settings → Store Settings → Pages Setup** so your store's shop, cart, checkout, and dashboard links point at your new designs. See [Pages Setup](/guide/settings-configuration/pages-setup) for the full walkthrough.
 
 ::: info The templates install themselves
 The template set is seeded into Elementor's library automatically the first time an administrator loads the WordPress admin after activating the addon — there's no import step. Elementor must be active for seeding to happen, so if you activate the FluentCart addon first, the templates appear once Elementor is running.

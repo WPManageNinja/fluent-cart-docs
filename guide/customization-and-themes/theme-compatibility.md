@@ -11,7 +11,16 @@ While FluentCart should work well with almost any standard theme, we have offici
 #### Popular Page Builders & Frameworks:
 
 * Bricks
+* Elementor
 * Gutenberg
+
+Elementor, Bricks, and Divi each have a free FluentCart addon with native widgets:
+
+* **Elementor Blocks:** needs Elementor 3.34 or later. See [Using Elementor Widgets](/guide/customization-and-themes/using-elementor-widgets).
+* **FluentCart Bricks Blocks:** needs the Bricks theme. See [FluentCart Bricks Blocks](/guide/customization-and-themes/fluentcart-bricks-blocks).
+* **FluentCart Divi Modules:** needs Divi 5. See [FluentCart Divi Modules](/guide/customization-and-themes/fluentcart-divi-modules).
+
+You install them from **FluentCart > Settings > Features & addon > Plugin Addons**.
 
 #### Popular Modern & Block-Based Themes:
 

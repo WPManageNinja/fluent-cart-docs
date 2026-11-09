@@ -69,7 +69,7 @@ Each product you added appears in the panel with its price. Use the bin icon nex
 
 When you choose **Select many**, an extra setting appears:
 
-* **Maximum Selectable Items:** How many options a shopper can tick at the same time, from 1 to 20. Every product you added is always shown. This setting only limits how many can be chosen together.
+* **Maximum Selectable Items:** How many options a shopper can tick at the same time, from 1 to 20 (default 5). Every product you added is always shown. This setting only limits how many can be chosen together.
 
 ![Screenshot of the Products panel with Select many chosen and Maximum Selectable Items set to 2](/images/customization-and-themes/on-page-checkout-form/checkout-selection-mode-many.webp)
 
@@ -89,7 +89,7 @@ The same form works with the `[fluent_cart_checkout]` shortcode, which is handy 
 
 * **variant_ids:** A comma-separated list of the variation IDs you want to offer, for example `185,186,187`. Adding this attribute switches the checkout to **Custom Product** automatically. *(Required)*
 * **selection_mode:** `single` for radio buttons or `multiple` for checkboxes. If you leave it out, the form uses `single`.
-* **max_items:** The most options a shopper can tick at once, from 1 to 20. It only applies when `selection_mode` is `multiple`.
+* **max_items:** The most options a shopper can tick at once, from 1 to 20 (default 5). It only applies when `selection_mode` is `multiple`.
 * **selector_label:** The heading shown above the list of options.
 
 A shortcode without `variant_ids` is a normal checkout page that shows the shopper's main cart. You can find a variation ID in the product settings, the same one you use with the other [FluentCart shortcodes](/guide/customization-and-themes/fluentcart-shortcode).
