@@ -477,8 +477,12 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 
 ::::: code-group
 
-```markdown [✨ Newly Added]
-• Improves PayPal payment and subscription confirmation flow against unverified payment states
+```markdown [🚀 Improvements]
+• Improves Security by hardening the PayPal payment and subscription confirmation flow against unverified payment states
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes PayPal one-time payments to capture server-side so an order is marked paid only after the payment is actually completed
 ```
 
 :::::
@@ -836,10 +840,38 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 • Fixes Safari chevron icon visibility issue
 • Fixes Menu button and dropdown styling issues
 • Fixes LearnDash course expiry resolution for users
+• Fixes Skip subscription field validation when subscription is disabled
+• Fixes Auto-expand Additional display prices section when subscription is enabled
 ```
 
 ```markdown [🚀 Improvements]
 • Improves button feedback with visual indicators only
+```
+
+:::::
+
+## FluentCart v1.3.25
+*Released on April 30, 2026*
+
+::::: code-group
+
+```markdown [🐞 Bug fixes]
+• Fixes Sites with www and non-www counted as separate activations
+• Fixes Subscription orders with coupon discounts getting stuck after checkout
+• Fixes Duplicate renewal records created during payment processing
+• Fixes Page freeze when clicking empty mini cart
+• Fixes Max-width constraints and responsive padding on product pages
+• Fixes Incorrect coupon expiration time in admin dashboard
+• Fixes Shipping overcharge with multiple shipping classes in cart
+• Fixes Free shipping adding class surcharges with multiple shipping classes
+• Fixes Paddle subscriptions not cancelling immediately after refund
+• Fixes Customer lifetime stats not updating after refund
+• Fixes Double encryption when saving Stripe settings
+• Fixes Raw transaction and subscription status keys shown in customer portal
+```
+
+```markdown [🚀 Improvements]
+• Improves Product variation management
 ```
 
 :::::
@@ -878,6 +910,27 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 ```markdown [🚀 Improvements]
 • Enhanced Paddle - allows all default emails, modifiable via filter hook
 • Enhanced Adjust product-card and single-product styles
+```
+
+:::::
+
+## FluentCart v1.3.22
+*Released on April 23, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds Gutenberg Package Description block
+• Adds New stock management in Pro
+```
+
+```markdown [🚀 Improvements]
+• Improves Package Description support for block themes & emails
+• Improves Email templates with 5 new merge tags
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes Shipping zone list loading issue
 ```
 
 :::::
@@ -1143,7 +1196,7 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 :::
 
 ## FluentCart v1.3.9
-*Released on January 28, 2026*
+*Released on January 27, 2026*
 
 ::: code-group
 
@@ -1299,6 +1352,17 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 
 :::
 
+## FluentCart v1.3.3
+*Released on December 3, 2025*
+
+::: code-group
+
+```markdown [🐞 Bug fixes]
+• Fixes Authorize.net compatibility issue with PHP versions
+```
+
+:::
+
 ## FluentCart v1.3.2
 *Released on December 2, 2025*
 
@@ -1329,6 +1393,17 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 • Fixes EU VAT renderer issue on initial load
 • Fixes variation title not showing for bump product
 • Fixes wrong Stripe canceled_at date
+```
+
+:::
+
+## FluentCart v1.3.1
+*Released on November 19, 2025*
+
+::: code-group
+
+```markdown [🐞 Bug fixes]
+• Hotfix: License API Issues Fixed
 ```
 
 :::
@@ -1453,6 +1528,22 @@ Stay updated with the latest improvements, new features, bug fixes, and performa
 • Remove force POST request validation for IPN
 • Translation strings issue for all modules
 • Payment method not showing issue on stripe
+```
+
+:::
+
+## FluentCart v1.2.3
+*Released on October 22, 2025*
+
+::: code-group
+
+```markdown [✨ Newly Added]
+• Added LifterLMS integration
+• Added LearnDash integration
+```
+
+```markdown [🐞 Bug fixes]
+• Fixed Webhook Config Issue
 ```
 
 :::
