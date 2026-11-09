@@ -45,10 +45,12 @@ Provide your physical business address. FluentCart uses this for PayPal verifica
 
 Below the address fields you'll find the **Business Details** block — your legal business identity, used on receipts, invoices, and anywhere FluentCart needs to display official store information for compliance.
 
-* **Company Name:** Your registered business name as it should appear on receipts and invoices.
-* **Legal Registration ID:** Your company registration number (Companies House number in the UK, state filing number in the US, etc.). Shown on PDF receipts where local rules require business identification.
-* **Seller VAT ID:** Your store's EU VAT registration number. Appears in PDF receipts and is rendered into the <code v-pre>{{order.store_vat_display}}</code> smart tag for email templates. Use this field if you collect EU VAT — see [Configuring European Union (EU) VAT](/guide/tax-&-duties/european-union-vat) for how the VAT ID ties into reverse-charge handling.
-* **Seller Tax ID:** Any other tax registration number your store operates under, such as a US EIN, an Australian ABN, or a GST number. It is available to receipts, invoices, and email templates through the <code v-pre>{{settings.seller_tax_id}}</code> and <code v-pre>{{order.store_seller_tax_id}}</code> smart tags, and FluentCart Pro includes it in the seller block of PDF invoices.
+* **Company Name:** Your registered business name as it should appear on receipts and invoices. FluentCart uses it as the seller name heading on receipts. If you leave it empty, your **Store Name** is used. Smart tag: <code v-pre>{{order.store_seller_name}}</code>.
+* **Legal Registration ID:** Your company registration number (Companies House number in the UK, state filing number in the US, etc.). Shown on receipts, the thank-you page, and order emails once you fill it in. Use <code v-pre>{{order.store_legal_registration_display}}</code> to place it in a custom email or PDF template.
+* **Seller VAT ID:** Your store's VAT registration number. It prints on receipts, the thank-you page, and order emails, and you can insert it into email and PDF templates with the <code v-pre>{{order.store_seller_vat_display}}</code> smart tag. (<code v-pre>{{order.store_vat_display}}</code> is different: it shows the VAT number registered for the order's tax country under Tax Settings.) Use this field if you collect EU VAT. See [Configuring European Union (EU) VAT](/guide/tax-&-duties/european-union-vat) for how the VAT ID ties into reverse-charge handling.
+* **Seller Tax ID:** Any other tax registration number your store operates under, such as a US EIN, an Australian ABN, or a GST number. It prints on receipts, the thank-you page, and order emails. It is also available to receipts, invoices, and email templates through the <code v-pre>{{settings.seller_tax_id}}</code> and <code v-pre>{{order.store_seller_tax_id}}</code> smart tags, plus <code v-pre>{{order.store_tax_display}}</code> for the formatted line with its label. FluentCart Pro includes it in the seller block of PDF invoices.
+
+When an order already shows the VAT number for its tax country, FluentCart doesn't print your Seller VAT ID a second time.
 
 ![Screenshot of Store Settings - Business Details block](/images/settings-configuration/store-setting/store-business-tax.webp)
 
@@ -68,8 +70,8 @@ The locked **Checkout Currency** field looks like this:
 
 The **Payment View** setting controls how payment methods appear to customers on the checkout page. Pick between two visual styles:
 
-* **Logo:** Displays each payment method as its brand logo (for example, the PayPal logo rather than the word "PayPal"). Best for visually rich checkouts.
-* **Radio:** Displays each payment method as a labelled radio button. Cleaner and more compact, useful when you want the checkout to stay text-driven.
+* **Logo:** Displays each payment method as its brand logo with no text label (for example, the PayPal logo rather than the word "PayPal"). In the settings, this option is shown as a logo. Best for visually rich checkouts.
+* **Label Selector:** Displays each payment method as a labelled option. Cleaner and more compact, useful when you want the checkout to stay text-driven.
 
 ### 7. Date & Time Format and Timezone
 
@@ -92,9 +94,9 @@ If your store previously showed dates like `Aug 16, 2026`, switching to **WordPr
 
 ### 8. Units of Measurement
 
-These two units are used across the product editor, package definitions, and shipping calculations.
+These two units are used across the product editor, package definitions, and shipping calculations. These two fields appear only for users who can manage sensitive store settings.
 
-* **Weight Unit:** The unit used for product weight measurements. Choose from the dropdown (e.g. `kg`, `lb`, `g`, `oz`). Setting this consistently ensures carrier rates and shipping labels stay accurate.
+* **Weight Unit:** The unit used for product weight measurements. Choose **kg**, **g**, **lbs**, or **oz**. Setting this consistently ensures carrier rates and shipping labels stay accurate.
 * **Dimension Unit:** The unit used for product dimension measurements (length, width, height). Choose from the dropdown (e.g. `cm`, `mm`, `m`, `in`).
 
 ::: info

@@ -2,10 +2,14 @@
 
 The **Roles & Permissions** feature in FluentCart allows you to define and manage different user roles within your store's backend. This helps control who can access certain features and perform specific actions, ensuring security and proper task delegation among your team.
 
+::: info
+Roles and permissions need FluentCart Pro. Without Pro, the screen shows an upgrade notice, and the **Add Role** button is hidden.
+:::
+
 ## Accessing Roles & Permissions
 
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings** in the left sidebar.
-2.  Click on the **"Roles And Permissions"** tab.
+2.  Click the **Roles and Permissions** tab. Only WordPress administrators (super admins) see it.
 
 ## Understanding Roles and Permissions
 
@@ -26,23 +30,26 @@ The table provides an overview of existing role assignments:
 
 You can assign existing WordPress users to predefined **FluentCart** roles directly from this display. 
 
-* To add a new role, click the **"+ Add Role"** button at the top right of the screen. This will open a modal to [add a new role](/guide/settings-configuration/roles-permissions/adding-new-roles/index).
+* To add a new role, click the **Add Role** button at the top right of the screen. This will open a modal to [add a new role](/guide/settings-configuration/roles-permissions/adding-new-roles/index).
 
 ## Export Permissions
 
 Exporting data is controlled separately from viewing it, so a staff member who can read your customer list cannot necessarily download a copy of it.
 
-Four permissions govern this:
+Five export permissions exist:
 
 * **Export Orders**
 * **Export Customers**
 * **Export Subscriptions**
 * **Export Licenses**
+* **Export Reports**
 
-Grant them per role like any other permission. When a role lacks the matching permission, the **Export** button doesn't appear on that screen, and the export request is refused even if it's issued directly — so removing the permission removes the capability, not just the button.
+They come with the predefined roles: **Manager** and **Accountant** include all export permissions, and **Worker** has none. You can't edit a role's permissions on this screen, so to withhold exports, assign the **Worker** role (or a custom role a developer registers).
+
+When a role lacks the matching permission, the **Export** button doesn't appear on that screen, and the export request is refused even if it's issued directly, so removing the permission removes the capability, not just the button.
 
 ::: tip Worth withholding by default
-An order or customer export is a complete copy of your customer records — names, emails, billing addresses. Grant export permissions only to the roles that genuinely need them, even when those roles can already view the data on screen. Viewing a record at a time and downloading the entire database are very different levels of exposure.
+An order or customer export is a complete copy of your customer records: names, emails, billing addresses. Assign roles that include export permissions only to people who genuinely need them, even when those roles can already view the data on screen. Viewing a record at a time and downloading the entire database are very different levels of exposure.
 :::
 
 See [Exporting Your Store Data](/guide/store-management/exporting-data) for how the export itself works.

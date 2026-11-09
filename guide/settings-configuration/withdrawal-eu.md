@@ -1,6 +1,6 @@
 # Withdrawal (EU)
 
-If you sell to customers in the European Union, the law gives them the right to change their mind and cancel a purchase within a set cooling-off period. FluentCart's **Withdrawal (EU)** feature builds this right directly into your store. It gives shoppers a guided "Withdraw from contract" form, sends them an instant acknowledgment by email, and gives you a clean dashboard to review and decide on every request.
+If you sell to customers in the European Union, the law gives them the right to change their mind and cancel a purchase within a set cooling-off period. FluentCart's **Withdrawal** feature builds this right directly into your store. It gives shoppers a guided "Withdraw from contract" form, sends them an instant acknowledgment by email, and gives you a clean dashboard to review and decide on every request.
 
 This page explains the law in plain terms, walks through every admin setting, and shows the full customer journey from declaration to acknowledgment.
 
@@ -29,23 +29,23 @@ For the full legal text, see the official EU summary, [Consumer information, rig
 
 ## Enabling the Feature
 
-Withdrawal (EU) is a FluentCart module, so you first turn it on from the **Features & Addon** section. Once it is active, a dedicated **Withdrawal (EU)** tab appears in your settings sidebar.
+Withdrawal is provided by the **FluentCart Customer Rights** add-on. To install it:
 
-1. From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
-2. Select the **Features & Addon** tab from the left-hand sidebar.
-3. Find the **Withdrawal (EU)** module and toggle it **on**.
-4. Click **Save Settings** to apply the change.
+1. Go to **FluentCart Pro > Settings > Features & addon**.
+2. In **Plugin Addons**, find **FluentCart Customer Rights** and click **Install & Activate** (without FluentCart Pro, click **Download** and install the plugin manually).
+3. Once the add-on is active, a **Withdrawal** tab appears in the settings sidebar. There is no separate on/off toggle.
 
-For more on managing modules, see [Features & Addons](/guide/settings-configuration/features-addons).
+For more on installing add-ons, see [Features & Addons](/guide/settings-configuration/features-addons).
 
 ## Accessing Withdrawal Settings
 
-With the module active, all of its controls live in one settings tab. To open it:
+With the add-on active, all of its controls live in one settings tab. To open it:
 
 1. From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
-2. Select the **Withdrawal (EU)** tab from the left-hand sidebar.
+2. Select the **Withdrawal** tab from the left-hand sidebar.
 
-![Screenshot of the FluentCart Withdrawal (EU) settings screen showing the Button Placement, Form Behaviour, Time Windows, and Order Filtering sections](/images/settings-configuration/withdrawal/withdrawal-settings.webp)
+<!-- TODO(screenshots): withdrawal-settings.webp is outdated: the sidebar tab and page heading read "Withdrawal (EU)", but the Customer Rights add-on 0.1.3 labels them "Withdrawal". Retake the Withdrawal settings screen. Update later. -->
+![Screenshot of the FluentCart Withdrawal settings screen showing the Button Placement, Form Behaviour, Time Windows, and Order Filtering sections](/images/settings-configuration/withdrawal/withdrawal-settings.webp)
 
 The settings are grouped into four areas: **Button Placement**, **Form Behaviour**, **Time Windows**, and **Order Filtering**, plus the **Select Withdrawal Page** option at the bottom. Each is covered below.
 
@@ -65,13 +65,13 @@ These options shape what the customer sees and how strictly each declaration is 
 
 * **Require a verified order match:** *(Toggle, off by default)* When this is **off** (recommended), declarations that cannot be automatically matched to an order are still accepted and queued as **unverified**, so a genuine withdrawal is never refused on a technicality. Turn it **on** only if your operations require a matched order before a request can be processed.
 * **Show the optional note field:** *(Toggle)* Lets the customer add an optional free-text note to their declaration. This is for any extra context. The choice of which items to withdraw is handled separately by the item-selection step.
-* **Allow partial revocations:** *(Toggle)* When **on**, customers can withdraw from some items while keeping others. When **off**, every request is treated as a full contract withdrawal and the item-selection step is hidden.
-* **Item selection step (who can use it):** Controls which customers see the item-selection step.
+* **Allow partial revocations:** *(Toggle)* When **on**, customers can withdraw from some items while keeping others. When **off**, every request is treated as a full contract withdrawal and the item-selection step is hidden. Turning this off also hides the note field.
+* **Item selection step, who can use it:** Controls which customers see the item-selection step.
   * **Account owner (logged in, email + invoice match):** Only customers who are logged in with the account that placed the order, and whose email and invoice match, see the step.
   * **Email-verified submitter (invoice + email match):** The step is also shown to any customer (including guests) who correctly matches the receipt number and billing email.
 
 ::: info
-The emails that go out during the withdrawal flow (acknowledgment, accepted, and declined) are managed under **Email Configuration > Notifications**. See [Configuring Email Notification](/guide/settings-configuration/email-configuration/configuring-email-notification) to customize their wording.
+Four emails are added to **Email Configuration > Notifications** under **Withdrawal**: **Withdrawal acknowledgment to customer**, **New withdrawal request to admin**, **Withdrawal accepted notice to customer**, and **Withdrawal declined notice to customer**. The acknowledgment is legally required, so it is sent even if you switch it off. See [Configuring Email Notification](/guide/settings-configuration/email-configuration/configuring-email-notification) to customize their wording.
 :::
 
 ## Time Windows
@@ -95,9 +95,11 @@ This section decides which orders and products are eligible, and where the withd
 The customer-facing form is rendered by a shortcode, so you can place it on any WordPress page.
 
 1. Create a new WordPress page (for example, titled "Right of Withdrawal").
-2. Add the `<code v-pre>[fluent_cart_withdrawal]</code>` shortcode to the page content and publish it.
-3. Back in **Settings > Withdrawal (EU)**, choose that page under **Select Withdrawal Page**.
+2. Add the `[fluent_cart_withdrawal]` shortcode to the page content and publish it.
+3. Back in **Settings > Withdrawal**, choose that page under **Select Withdrawal Page**.
 4. Add a link to the page somewhere persistent, such as your site footer, so customers can always reach it.
+
+Prefer a shortcut for steps 1 to 3? Click the **+** button next to **Select Withdrawal Page**, and FluentCart creates the page for you (default title "Withdraw from contract") with the shortcode already in place.
 
 ## The Customer Withdrawal Journey
 
