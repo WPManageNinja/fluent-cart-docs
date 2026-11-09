@@ -1,8 +1,3 @@
----
-title: What Gets Migrated
-description: A complete reference of every entity the FluentCart Migrator transfers from EDD — and the items that are deliberately out of scope.
----
-
 # What Gets Migrated
 
 Before you run a migration, it is worth knowing exactly what comes across, what doesn't, and why. This page covers both — so there are no surprises after the wizard finishes.
@@ -24,7 +19,9 @@ Every EDD download transfers as a FluentCart product, with the structure preserv
 | Signup fees | Variation `other_info` | Stored alongside pricing |
 | License limits per variation | Variation license limit | Only when EDD Software Licensing is detected |
 
-A bidirectional ID map is created so re-running the migration updates rather than duplicates: `_fcart_migrated_id` on the EDD post points to the FluentCart record, and `_edd_migrated_from` on the FluentCart product points back.
+A bidirectional ID map is created so re-running the migration updates rather than duplicates: `_fcart_migrated_id` on the EDD post points to the FluentCart record, and `_edd_migrated_from` on the FluentCart product points back. This is the only change the Migrator makes to your EDD data.
+
+**Categories:** EDD download categories become FluentCart product categories with their parent/child hierarchy, and existing categories with the same slug are reused.
 
 ### Customers
 
@@ -37,9 +34,11 @@ Customer records transfer with full identity and address data, deduplicated on e
 
 If a customer with the same email already exists in FluentCart when an order is being migrated, the order is linked to the existing record rather than creating a duplicate.
 
+Customers who never placed an order are migrated by the separate **Missing Customers** step (wizard checkbox, or `--missing-customers` in WP-CLI). Customers marked inactive in EDD are left out.
+
 ### Orders and Payments
 
-Every order with a meaningful status transfers — including all line items, taxes, discounts, transactions, and notes.
+Every order in one of the statuses below transfers, including all line items, taxes, discounts, transactions, and notes.
 
 | EDD status | FluentCart payment status |
 |------------|---------------------------|
@@ -47,7 +46,9 @@ Every order with a meaningful status transfers — including all line items, tax
 | `pending` | Pending |
 | `refunded` | Refunded |
 | `partially_refunded` | Partially Refunded |
-| `revoked`, `failed`, `cancelled` | Failed |
+| `revoked` | Failed (order status Canceled) |
+
+Orders in any other status, including `failed`, `cancelled`, `abandoned`, and `trash`, aren't migrated. Only sale orders are read.
 
 Each order brings:
 
@@ -120,22 +121,23 @@ Every EDD discount code transfers with its rules intact.
 
 If a coupon code already exists in FluentCart, the migration updates that record. Otherwise, a new one is inserted. Re-running coupon migration is safe.
 
+### Store settings
+
+At the start of the products step, your EDD store details are copied into FluentCart's store settings, but only into fields you've left empty: store name, address lines, city, state, country, postcode, currency, currency position, and decimal separator.
+
 ### Tax Rates
 
 Tax migration is conditional. It only runs if `edd_settings.enable_taxes` is true. If taxes are disabled in EDD, this step is skipped with a clear notice.
 
-When enabled, the migration brings:
-
-- Currency position (`before` / `after`)
-- Decimal separator (`dot` / `comma`)
-- Store name, address, city, state, country, postcode
-- Tax-inclusive vs. exclusive pricing behavior
-
-It then generates FluentCart's default tax classes (Standard, Reduced, Zero) and tax rates for every country found in the EDD tax rates table. The mapping between EDD rates and the new FluentCart rates is stored in `_edd_fct_tax_rate_maps` so order-level tax adjustments stay accurate.
+When enabled, the migration switches on FluentCart taxes with the same tax-inclusive or tax-exclusive pricing you used in EDD. It then generates FluentCart's default tax classes (Standard, Reduced, Zero) and tax rates for every country found in the EDD tax rates table. The mapping between EDD rates and the new FluentCart rates is stored in `_edd_fct_tax_rate_maps` so order-level tax adjustments stay accurate.
 
 ::: info Not a 1:1 rate copy
 FluentCart's tax model differs from EDD's. The Migrator generates modern FluentCart tax rates for the relevant countries rather than copying every EDD rate as-is. Review your tax setup after migration to confirm it matches your jurisdictional requirements.
 :::
+
+### Downloadable files
+
+Files from your Media Library are copied into FluentCart's storage. Files stored with the EDD Amazon S3 extension are linked as S3 files when that extension is active during migration. Files saved only as a plain external URL are skipped, so re-attach those under **Downloadable Asset(s)**. Bundle products don't carry their own files.
 
 ---
 
@@ -143,9 +145,9 @@ FluentCart's tax model differs from EDD's. The Migrator generates modern FluentC
 
 Honesty about boundaries matters more than a longer feature list. The following items are deliberately out of scope.
 
-### Product categories and tags
+### Product tags
 
-EDD's `download_category` taxonomy and any custom taxonomies do not transfer. FluentCart's category model differs structurally, and a one-to-one mapping would mislead more than help. Set up your categories fresh in FluentCart after migration.
+EDD's `download_tag` taxonomy and any custom taxonomies don't transfer. Product categories do (see **Categories** under Products above).
 
 ### EDD upgrade paths
 
@@ -155,9 +157,9 @@ The EDD upgrade-path mechanic — the ability for a customer to upgrade from one
 
 Only known fields from EDD core, EDD Recurring Payments, EDD Software Licensing, and AffiliateWP are parsed. Custom meta written by other third-party EDD add-ons is not preserved. If you have important custom data on products or orders, export it separately before migrating.
 
-### Abandoned and trashed orders
+### Failed, cancelled, abandoned, and trashed orders
 
-Orders with status `abandoned` or `trash` are explicitly filtered out. Only orders representing real transactions transfer.
+Only orders in the statuses listed above transfer. Orders marked `failed`, `cancelled`, `abandoned`, or `trash` are left behind.
 
 ### Payment gateway credentials
 
@@ -166,10 +168,6 @@ Transaction records — Stripe charge IDs, PayPal subscription IDs — come acro
 ### Email templates
 
 EDD's email settings are not migrated. FluentCart has its own notification system with its own templates. Review and customize them under **FluentCart > Settings > Email Configuration**.
-
-### Download file attachments
-
-Products are created. The actual downloadable files attached to each product are not automated. File paths, permissions, and storage architecture differ enough between platforms that an automated transfer would silently break delivery for customers. Open each digital product in FluentCart and confirm the file is linked under **Downloadable Asset(s)**.
 
 ### Download history logs
 
@@ -181,7 +179,7 @@ Refund amounts and dates transfer as part of the order. The reason text — whic
 
 ### Dry-run mode
 
-All operations in 1.0.0 are live. There is no preview mode. To rehearse a migration safely, use [Developer Mode](/guide/migration/edd/developer-mode) on a staging environment, run the full migration, review the result, then reset and run again.
+All operations are live. There is no preview mode. To rehearse a migration safely, use [Developer Mode](/guide/migration/edd/developer-mode) on a staging environment, run the full migration, review the result, then reset and run again.
 
 ---
 
@@ -189,11 +187,11 @@ All operations in 1.0.0 are live. There is no preview mode. To rehearse a migrat
 
 | Entity | Migrated? | Notes |
 |--------|-----------|-------|
-| Products (simple, variable, bundle, recurring) | ✅ | Categories not migrated |
+| Products (simple, variable, bundle, recurring) | ✅ | Categories migrated, tags not |
 | Product images and content | ✅ | |
 | Custom product meta from third parties | ❌ | Only known fields parsed |
 | Customers | ✅ | Deduplicated by email |
-| Orders (all real statuses) | ✅ | Abandoned and trash excluded |
+| Orders (complete, pending, refunded, revoked, and similar) | ✅ | Failed, cancelled, abandoned, and trash excluded |
 | Order line items, taxes, discounts | ✅ | |
 | Transactions (Stripe, PayPal, custom) | ✅ | IDs preserved |
 | Refunds (amount + date) | ✅ | Reason text not extracted |
@@ -204,11 +202,12 @@ All operations in 1.0.0 are live. There is no preview mode. To rehearse a migrat
 | Tax rates | ✅ | Only if enabled in EDD |
 | Payment gateway credentials | ❌ | Reconnect in FluentCart |
 | Email templates | ❌ | Set up fresh in FluentCart |
-| Downloadable file attachments | ❌ | Re-attach in each product |
+| Downloadable files | ✅ | Media Library copied, S3 linked; plain-URL files skipped |
+| Product categories | ✅ | Hierarchy kept |
 | Download history logs | ❌ | |
-| Product categories / tags | ❌ | |
+| Product tags / custom taxonomies | ❌ | |
 | EDD upgrade paths | ❌ | |
-| Abandoned / trashed orders | ❌ | Intentionally excluded |
+| Failed, cancelled, abandoned, trashed orders | ❌ | Intentionally excluded |
 
 ---
 
