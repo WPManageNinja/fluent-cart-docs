@@ -4,6 +4,12 @@ FluentPlayer lets you add tutorial, demo, or trailer videos to your FluentCart p
 
 You can add a video by pasting a URL from YouTube, Vimeo, or a direct video file, or by reusing a video you've already uploaded to another product. Once saved, the video shows up as a gallery item with full playback controls, including skip, volume, and fullscreen.
 
+## Before You Start
+
+Videos need the free **FluentPlayer** plugin. If it isn't active, the **Video** tab shows an **Install & Activate FluentPlayer** button (or **Activate FluentPlayer** if it is installed but inactive). Save any unsaved changes to your product first, click the button, then click **Reload Page** when prompted. Only users who can install and activate plugins see the button; other users are asked to contact an administrator.
+
+You can attach up to 20 videos to one product.
+
 ## Step 1: Opening the Product Gallery
 
 Videos are added from the same screen where you manage a product's images.
@@ -12,7 +18,7 @@ Videos are added from the same screen where you manage a product's images.
 2. Open the product you want to add a video to.
 3. In the **Media** panel on the right, click **Add Media**.
 
-This opens the **Product Gallery** modal, where you'll find three tabs: **Gallery**, **Add by URL**, and **FluentPlayer**.
+This opens the **Product Gallery** modal, where you'll find the **Gallery** and **Video** tabs (and **Add by URL** where it is offered).
 
 ![Screenshot of the Add Media button in the product Media panel](/images/integrations/fluentplayer/fluentplayer-integration-1.webp)
 
@@ -20,14 +26,15 @@ This opens the **Product Gallery** modal, where you'll find three tabs: **Galler
 
 ## Step 2: Adding a Video with FluentPlayer
 
-Switch to the **FluentPlayer** tab to add a new video or reuse one you've already uploaded.
+Switch to the **Video** tab to add a new video or reuse one you've already uploaded.
 
-1. Click the **FluentPlayer** tab.
-2. Under **Add a video**, paste a YouTube, Vimeo, audio, HLS, or direct video URL into the field. Alternatively, click the video icon next to the field to choose a file from your WordPress Media Library.
+1. Click the **Video** tab.
+2. Under **Add a video**, paste a YouTube, Vimeo, or direct video URL into the field (audio and HLS links also work). Alternatively, click the video icon next to the field to choose a file from your WordPress Media Library.
 3. Click **Add Video**.
 
 FluentPlayer automatically detects the source and pulls in the video's title and poster image, so you don't have to fill those in by hand.
 
+<!-- TODO(screenshots): fluentplayer-integration-2.webp is outdated: the tab is labelled "FluentPlayer" but now reads "Video". Retake the Video tab with a pasted URL and the Add Video button. Update later. -->
 ![Screenshot of pasting a video URL on the FluentPlayer tab](/images/integrations/fluentplayer/fluentplayer-integration-2.webp)
 
 ### Reusing an Existing Video
@@ -38,14 +45,15 @@ If you've already added the same video to another product, you don't need to pas
 2. Select the video from the results.
 3. Click **Use Video**.
 
+<!-- TODO(screenshots): fluentplayer-integration-4.webp is outdated: the tab is labelled "FluentPlayer" but now reads "Video". Retake the Video tab with the Pick an existing FluentPlayer video search. Update later. -->
 ![Screenshot of picking an existing FluentPlayer video by title or ID](/images/integrations/fluentplayer/fluentplayer-integration-4.webp)
 
 ## Step 3: Managing Videos in the Gallery
 
-Every video you add appears in a **Videos** list at the bottom of the **FluentPlayer** tab, showing its thumbnail, title, ID, and source. The tab label also shows a running count of videos already added to this product.
+Every video you add appears in a **Videos** list at the bottom of the **Video** tab, showing its thumbnail, title, ID, and source. The tab label also shows a running count of videos already added to this product.
 
 1. Repeat Step 2 to add more videos.
-2. Use the pencil icon to edit a video's details, or the trash icon to remove it from the gallery.
+2. Use the pencil icon (**Edit in FluentPlayer**) to open the video in FluentPlayer and change its details, or the trash icon (**Remove video**) to remove it from the gallery.
 
 ::: info
 Videos are saved as part of the product gallery. They're mixed in with your product images in the same order you add them.
@@ -54,6 +62,7 @@ Videos are saved as part of the product gallery. They're mixed in with your prod
 
 3. Click **Save** to add the video to the product gallery.
 
+<!-- TODO(screenshots): fluentplayer-integration-5.webp is outdated: the tab is labelled "FluentPlayer" but now reads "Video". Retake the Video tab with a video in the Videos list and the Save button. Update later. -->
 ![Screenshot of saving an added FluentPlayer video to the product gallery](/images/integrations/fluentplayer/fluentplayer-integration-5.webp)
 
 ## How to Verify the Integration

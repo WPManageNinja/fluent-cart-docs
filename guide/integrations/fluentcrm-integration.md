@@ -45,16 +45,16 @@ A global feed is perfect for tasks that should apply to all your customers, like
 
 Here, you'll decide exactly what happens in FluentCRM when the feed is triggered.
 
-* **Feed Title:** Give your feed a descriptive name that you'll recognize later, like "Add All Customers to Newsletter.
+* **Feed Title:** Give your feed a descriptive name that you'll recognize later, like "Add All Customers to Newsletter."
 * **Add to Lists:** Use this field to select the FluentCRM lists you want to add to a customer’s profile when this feed runs from the dropdown.
 * **Add to Tags:** Select the FluentCRM tag(s) you want to apply to all new customers. This is a great way to segment all your buyers for future marketing campaigns.
 * **Remove From Lists / Remove From Tags:** If needed, you can also select lists and tags to remove from a customer's profile.
 * **Note:** You can add a note that will be attached to the contact's profile in FluentCRM. This is great for internal records. You can even make the note dynamic by using shortcodes (click the {(...)} icon) to include customer or order data.
 * **Enable Double Opt-in:** It is highly recommended to keep this enabled. It sends a confirmation email to new contacts before they are subscribed, which is a best practice for maintaining a healthy and engaged email list.
-* **Event Trigger:** Select the specific store event that will trigger this automation. For most use cases, "Order Completed / Paid" is the best option, as it ensures only paying customers are added to your CRM. 
+* **Event Trigger:** Select the specific store event that will trigger this automation. For most use cases, **Order Paid (Payment / Subscription)** is the best option, as it ensures only paying customers are added to your CRM.
 
-* **Remove from selected Tags/Lists on Refund or Subscription Access Expiration:** This is a handy automation. If you check this box, FluentCart will automatically remove the customer from the lists and tags you selected if their order is refunded or their subscription ends.
-* **Run on Selected Variations Only:** This setting allows this integration rule to run only when a customer buys a **specific product variation**. Select one or more variations from the dropdown to apply this rule exclusively to them. If you leave this field empty, the rule will apply to all variations of this product.
+* **Remove from selected Tags/Lists on Refund or Subscription Access Expiration:** This is a handy automation. If you check this box, FluentCart will automatically remove the customer from the lists and tags you selected if their order is fully refunded or canceled, or when their subscription's paid access runs out. Canceling a subscription does not remove anything on its own: access ends, and the tags and lists are removed, when the paid period expires.
+* **Run on Selected Variations Only (product-specific feeds only):** When you add this feed from a product's **Integrations** tab and the product has variations, you can limit the feed to the variations you pick. Leave it empty to run for all variations. This field does not appear on global feeds.
 
 * **Enable This Integration:** Ensure the toggle at the top right is switched on to make the automation active. If it is disabled, the integration will be saved but will not run.
 
@@ -73,9 +73,6 @@ By combining both Global and Product-specific integrations, you can create a sop
 ### Advanced Marketing Automation with FluentCRM Triggers
 
 Beyond simply adding tags and lists, the FluentCart integration adds a powerful set of e-commerce triggers directly inside FluentCRM's automation builder. This allows you to create automated marketing funnels based on real-time events in your store.
-When you create a new automation in FluentCRM, you will find a new FluentCart trigger category.
-Here are the available triggers and what they do:
-
 
 When you create a new automation in FluentCRM, you will find a new **FluentCart** trigger category.
 
@@ -86,30 +83,30 @@ Here are the available triggers and what they do:
  * **Order Delivered:** Triggers when an order's status is changed to "Delivered." A great opportunity to ask for a product review.
  * **Order Refunded (Full):** Starts when a full refund is processed. You could use this to send a survey asking for feedback on why the customer requested a refund.
  * **Order Canceled:** Triggers when an order is canceled.
- * **Subscription Triggers:** A full suite of triggers for managing communication with your subscribers, including **Subscription Activated, Subscription Canceled, Subscription Renewed, and Subscription Expired**. These are essential for reducing churn and keeping subscribers engaged.
+ * **Order Status Changed:** Starts when an order moves to a status you choose.
+ * **Subscription Triggers:** A full suite of triggers for managing communication with your subscribers, including **Subscription Activated**, **Subscription Cancelled**, **Subscription Renewed**, **Subscription End of Term (Completed)**, and **Subscription Expired / End of Access Validity**. These are essential for reducing churn and keeping subscribers engaged.
 
 > [!Info]
 > These triggers are the starting point for powerful marketing funnels. For detailed, step-by-step guides on how to use these triggers to build onboarding sequences, cart abandonment funnels, and other advanced marketing automations, please see this [documentation](https://fluentcrm.com/docs/fluentcart-integration-with-fluentcrm/).
+> Abandoned cart tracking for FluentCart comes from FluentCRM's **Abandoned Cart** feature, not from FluentCart itself.
 
 ![Screenshot of Fluentcrm Automation Trigger](/images/integrations/fluentcrm/automation-trigger.webp)
 
 
-### Use Case Example: Segmenting Customers by Location
+### Use Case Example: Tagging Buyers of a Specific Product
 
-To better understand how this integration works in practice, let's imagine you run an online store that sells physical goods, like custom-printed t-shirts. Your goal is to identify all customers from a specific city (e.g., London) so you can send them a targeted email about a local pop-up shop you are hosting.
+You sell a "Beginner Photography Course" and want to email its buyers separately. Here is how you set up the feed:
 
-Here is how you would configure the FluentCRM feed to achieve this:
+1. Open the course product and go to its **Integrations** tab.
+2. Click **Add Integration** and choose **FluentCRM**.
+3. **Feed Title:** `Tag photography course buyers`
+4. **Add to Lists:** `Main Customer List`
+5. **Add to Tags:** `photography-course`
+6. **Event Trigger:** **Order Paid (Payment / Subscription)**
+7. Make sure **Enable this Integration** is on, then click **Create FluentCRM Feed**.
 
-* **Name:** `London Customer Segmentation`
-* **List:** `Main Customer List`
-* **Tags (Dynamic Tag Inputs):**
-    * **Tag:** `london-customer`
-    * **Condition:** IF `{order.billing.city}` *equals* `London`.
-* **Event Trigger:** `Order Completed`
-* **Status:** `Enable This feed`
+Every paying buyer of that course is added to your list and tagged `photography-course`, so you can target them from a FluentCRM campaign or automation.
 
-**Result:**
-
-With this configuration, every time an order with a London billing address is marked as "Completed" in FluentCart, the customer's information will be sent to FluentCRM. They will be added to your "Main Customer List" and will automatically be tagged as `london-customer`.
-
-Inside FluentCRM, you can then create a new email campaign and, in the recipient settings, choose to send it *only* to contacts who have the `london-customer` tag. This ensures your promotional email about the London pop-up shop is sent exclusively to the relevant local audience.
+::: info
+Feeds apply fixed lists and tags; they have no conditions. To segment contacts by details such as their city, use FluentCRM's own segment filters.
+:::
