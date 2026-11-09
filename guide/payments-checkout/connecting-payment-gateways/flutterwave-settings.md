@@ -1,4 +1,4 @@
-# Flutterwave Integration 
+# Flutterwave Settings
 
 Flutterwave is a powerful payment gateway that allows you to accept payments globally, with a strong focus on African markets. By connecting Flutterwave to your FluentCart store, your customers can pay securely using their Credit/Debit Cards, Bank Transfers, Mobile Money, USSD, M-Pesa, and more.
 
@@ -16,7 +16,7 @@ Before you can connect your account, you need to enable the Flutterwave module i
 
 ![Flutterwave](/images/payments-checkout/flutterwave/flutterwave-1.webp)
 
-6. You will see a prompt saying the add-on is not installed. Click the blue **Install & Activate** button. This will instantly install the free integration.
+6. You will see a prompt saying the add-on is not installed. Click **Install & Activate** (FluentCart Pro active). On the free version, the button reads **Download**: download the add-on from the page that opens, then upload and activate it under **Plugins > Add New**.
 
 ![Flutterwave](/images/payments-checkout/flutterwave/flutterwave-2.webp)
 
@@ -37,8 +37,8 @@ To link your store securely, you need special codes called "API Keys." You can g
 ![Flutterwave](/images/payments-checkout/flutterwave/flutterwave-4.webp)
 
 4. Look for the section labeled **V3 API keys** (Make sure you are viewing the "Test API Keys" if you are setting up a test environment, or "Live API Keys" for your actual store).
-5. You will see a **Public key**, **Secret key**, and **Encryption Key**.
-6. Use the Copy buttons next to each key. Leave this browser tab open, as you will need it again.
+5. Copy the **Public key** and **Secret key** using the copy buttons next to them. FluentCart does not need the **Encryption Key**.
+6. Leave this browser tab open, as you will need it again.
 
 ![Flutterwave](/images/payments-checkout/flutterwave/flutterwave-5.webp)
 
