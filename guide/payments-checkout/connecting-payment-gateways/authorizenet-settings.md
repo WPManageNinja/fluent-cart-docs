@@ -4,6 +4,10 @@ Authorize.net is one of the most trusted payment gateways, allowing you to secur
 
 This guide provides a step-by-step walkthrough to connect your Authorize.net account, configure your checkout appearance, and set up webhooks for automated order processing.
 
+::: info
+Authorize.net requires **FluentCart Pro**.
+:::
+
 ## Step 1: Accessing Authorize.net Settings
 
 First, you need to locate the integration settings within your WordPress site.
@@ -45,10 +49,10 @@ Now, return to your WordPress site to input the credentials you just gathered.
 2.  **Enter the Keys:** Paste the **API Login ID**, **Transaction Key**, **Client Key**, and **Signature Key** into their respective fields.
 3.  **Enable e-Check (ACH):** If you want customers to pay directly via their bank accounts, check the **Enable e-Check (ACH)** box.
 4.  **Customize the Checkout UI:**
-    * **Authorize.Net Checkout Form Button Text:** Change the text that appears on the Authorize.net popup (e.g., "Pay Now").
-    * **Authorize.Net Checkout Form Header Text:** Set a custom title for the payment popup (e.g., "Secure Checkout").
-    * **FluentCart Checkout Button Text:** This is the text for the main button on your checkout page (e.g., "Place Order").
-    * **Button Colors:** Use the color pickers to match the button background and hover colors to your website's branding.
+    * **Authorize.Net checkout Form Button Text:** Change the text on the button inside the Authorize.net popup (default placeholder "Pay now").
+    * **Authorize.Net Checkout Form Header Text:** Set a custom title for the payment popup (default "Enter Payment Details").
+    * **Fluent Cart Checkout Button Text:** This is the text for the main button on your checkout page (default "Place Order").
+    * **Button Background Color** (default #0F4B8D) and **Button Hover Color** (default #0d3d75): Use the color pickers to match the buttons to your website's branding.
 5.  **Enable Debug Logging:** Log Authorize.Net API interactions for troubleshooting.
 
 ![Authorize.net Settings](/images/payments-checkout/authorize.net/authorize-payment-method-4.webp)
@@ -57,7 +61,7 @@ Now, return to your WordPress site to input the credentials you just gathered.
 
 Webhooks are critical for communication. They allow Authorize.net to notify FluentCart the moment a payment is successful, failed, or a subscription is renewed.
 
-1.  **Copy the Webhook URL:** On the FluentCart Authorize.net settings page, locate the **Webhook URL** (it looks like `https://your-site.com/?fluentcart_api...`). Click the copy icon.
+1.  **Copy the Webhook URL:** On the FluentCart Authorize.net settings page, locate the **Webhook URL**. It is your site's home URL (for example, `https://your-site.com/`). Click the copy icon.
 2.  **Add Webhook in Authorize.net:**
     * In your Authorize.net dashboard, go to **Account > Webhook Notifications > Webhooks**.
     * Click the **+ Create a webhook notification** button.
@@ -75,10 +79,15 @@ Webhooks are critical for communication. They allow Authorize.net to notify Flue
     * `net.authorize.payment.void.created`
     * `net.authorize.payment.refund.created`
     * `net.authorize.customer.subscription.cancelled`
+    * `net.authorize.customer.subscription.terminated`
+    * `net.authorize.customer.subscription.suspended`
+    * `net.authorize.customer.subscription.failed`
+    * `net.authorize.customer.subscription.updated`
     * `net.authorize.customer.subscription.expired`
     * `net.authorize.customer.subscription.expiring`
 5.  Click **Save** to finalize.
 
+<!-- TODO(screenshots): authorize-payment-method-6.webp is outdated: only 8 events are ticked; retake with the 4 added subscription events (Failed, Suspended, Terminated, Updated) also ticked, 12 in total. Update later. -->
 ![Authorize.net Settings](/images/payments-checkout/authorize.net/authorize-payment-method-6.webp)
 
 ## Step 5: Activation and Final Save
