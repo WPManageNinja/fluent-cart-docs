@@ -35,10 +35,10 @@ This section provides a summary of the core details of your subscription.
 
 Below the details, you will find several important links:
 
-* **Pay Remaining Installments:** This new feature is perfect for those who want to get ahead. Clicking this allows you to settle your remaining balance early, clearing your future obligations in one go.
+* **Pay Remaining Installments:** This feature is perfect for those who want to get ahead. Clicking this allows you to settle your remaining balance early, clearing your future obligations in one go.
 
 >[!Note]
->The installment plan must be **Active** for this early payment option to be available.
+>**Pay Remaining Installments** appears for installment plans that still have payments left and are **Active** or **Trialing**, when the store has FluentCart Pro with early payment for installments enabled.
 
 * **Update Payment Method:** Use this to securely swap out the credit card or account used for your renewals. For gateways like Stripe and PayPal, you can enter the new details right in the dashboard. For Paddle and other gateways that manage cards on their own site, a short notice tells you that you will be redirected to complete the update: click **Continue** and the gateway's secure card-update page opens in a new tab, where you can finish the change.
 * **View Order:** This takes you directly to the original transaction in your **Purchase History**.
@@ -47,6 +47,16 @@ Below the details, you will find several important links:
 ::: info
 Some subscriptions are billed manually by the store rather than charged automatically by the gateway. If yours is, you pay each renewal yourself using the **Pay Now** link sent with your renewal email, and you can use any available payment method. To understand how store billing works, see [Store Billing for Subscriptions](/guide/product-types-creation/store-managed-subscriptions).
 :::
+
+#### Subscription Options
+
+Depending on your plan and its status, you may also see these actions:
+
+* **Upgrade Plan:** Appears when the store offers an upgrade path for your plan.
+* **Renew Subscription Plan** or **Reactivate Subscription Plan:** If the subscription has expired or stopped, this button lets you restart it.
+* **Subscription options:** This menu offers **Pause Subscription**, **Resume Subscription**, and **Cancel Subscription** when they apply.
+    * **Pause:** Store-billed plans can be paused only while they are **Active** or **Trialing** with nothing overdue. Gateway-billed plans can be paused only when the payment gateway supports pausing.
+    * **Cancel:** Not offered on installment plans. Cancelling asks you to confirm, and your access stays active until the current billing cycle ends.
 
 #### Related Transactions
 

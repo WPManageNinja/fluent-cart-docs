@@ -17,17 +17,23 @@ This first section displays your basic account information.
 
 This section allows you to provide or update the address where your billing statements and invoices will be sent.
 
-* **Add New Address:** Click the **+ ADD NEW ADDRESS** button to add a new billing address.
-* **Default Address:** You can view your saved billing addresses. 
+* **Add New Address:** Click the **Add New Address** button to add a new billing address.
+* **Default Address:** Your default address carries a **Default** badge. Open the three-dot menu on any address to **Edit**, **Set as default**, or **Delete** it (you'll be asked to confirm before it is deleted).
 
 ## Shipping Address
 
 This section allows you to provide or update the address where your orders will be delivered.
 
-* **Add New Address:** Click the **+ ADD NEW ADDRESS** button to add a new shipping address.
-* **Default Address:** You can view your saved shipping addresses. 
+* **Add New Address:** Click the **Add New Address** button to add a new shipping address.
+* **Default Address:** Your default address carries a **Default** badge. Open the three-dot menu on any address to **Edit**, **Set as default**, or **Delete** it (you'll be asked to confirm before it is deleted).
 
-![Screenshot of Purchase History](/images/customer-dashboard/customer-profile/customer-profile.webp)
+The address form lets you name the address (for example Home or Office). If the store collects business details, it also has a **Business Details** part with **Company Name**, **VAT/GST/Tax Number**, and **Legal Registration ID**.
+
+![Screenshot of the Profile page](/images/customer-dashboard/customer-profile/customer-profile.webp)
+
+## Payment Methods
+
+With FluentCart Pro saved payment methods enabled, Profile also has a **Payment Methods** section where you add, set as default, and remove your [saved payment methods](/guide/customer-dashboard/payment-methods).
 
 ## Edit an Existing Address
 
@@ -39,4 +45,4 @@ When you're finished with your changes, click the **Update Address** button or *
 
 After making any changes on this page, make sure you scroll to the bottom and click the main **Save Profile** button. This saves all your updates to your name and addresses
 
-![Screenshot of Purchase History](/images/customer-dashboard/customer-profile/edit-address.webp)
+![Screenshot of the Edit address window](/images/customer-dashboard/customer-profile/edit-address.webp)

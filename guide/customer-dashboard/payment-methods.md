@@ -5,7 +5,7 @@ The **Payment Methods** section is where you save a card or PayPal account once 
 Your payment details are never stored on this site. Your payment provider keeps them and hands the store a secure token, which is only charged when you place an order or when a subscription you already signed up for renews.
 
 ::: info
-This section appears only when your store has **Saved Payment Methods** turned on. If you do not see **Payment Methods** in your dashboard menu, the store has not enabled the feature.
+This section appears only when your store has **Saved Payment Methods** (FluentCart Pro) turned on. It sits on your **Profile** page, not in the dashboard menu. If you do not see a **Payment Methods** section on **Profile**, the store has not enabled the feature.
 :::
 
 ## Saving a Payment Method While You Check Out
@@ -15,7 +15,9 @@ The easiest moment to save a payment method is when you are already paying with 
 * **Card:** On the checkout page, look under the card fields for the **Save this card for faster checkout next time** checkbox and tick it before you pay.
 * **PayPal:** When PayPal is your selected payment method, the same **Save this card for faster checkout next time** checkbox appears before you are sent to approve the payment. Tick it and approve the save agreement on PayPal's own screen to save the account for next time.
 
-The box is always unticked to begin with, so a payment method is only ever saved because you asked for it. Nothing is charged until you place the order, and the store still receives a token rather than your card or account details.
+The checkbox appears when you are logged in, or when you are buying a subscription. Guests making a one-time purchase don't see it.
+
+Depending on the store's settings, the box may start ticked. You can clear it before you pay if you don't want to save the payment method. Nothing is charged until you place the order, and the store still receives a token rather than your card or account details.
 
 Once the order goes through, that payment method appears in your **Payment Methods** list, ready for next time.
 
@@ -33,7 +35,7 @@ Your bank may still ask you to confirm the payment, which is a normal security s
 
 ## Viewing Your Saved Payment Methods
 
-To see everything you have saved, open the **Payment Methods** item in your dashboard menu. A saved card shows its brand, its last four digits, and its expiry date; a saved PayPal account shows its email address instead. Either entry can carry a couple of helpful labels:
+To see everything you have saved, open **Profile** in your dashboard and scroll to the **Payment Methods** section. Older links to a separate Payment Methods page now take you to **Profile**. A saved card shows its brand, its last four digits, and its expiry date; a saved PayPal account shows its email address instead. Either entry can carry a couple of helpful labels:
 
 * **Default:** The payment method that gets selected automatically at checkout and used for subscription renewals. Only a saved card can currently be set as the default.
 * **On a subscription:** The payment method is currently paying for an active subscription.
@@ -42,9 +44,9 @@ If you have not saved anything yet, you will see **No saved cards yet** instead,
 
 ## Adding a Card Without Buying Anything
 
-You do not have to wait for a purchase to save a card. You can add one directly from your dashboard, which is handy when your old card is about to expire and you want the new one ready.
+You do not have to wait for a purchase to save a card. You can add one directly from your dashboard, which is handy when your old card is about to expire and you want the new one ready. Adding a card here is available when the store uses Stripe.
 
-1. Open **Payment Methods** from your dashboard menu.
+1. Open **Profile** in your dashboard and scroll to the **Payment Methods** section.
 2. Click the **Add payment method** button.
 3. In the **Add a payment method** window, fill in your **Cardholder name**, **Card number**, **Expiry**, and **CVC**.
 4. Tick **Set as default payment method** if you want this card used automatically from now on.

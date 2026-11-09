@@ -54,7 +54,7 @@ If the carrier could not deliver a parcel or it went back to the store, the ship
 
 <!-- TODO(screenshot): Delivery card on a customer-portal order page with one shipment expanded (progress steps, carrier, tracking number, items). Needs an order with a shipment on cart.local; a Shippo test label gives the "Expected" date. -->
 
-## Upgrading a One time Purchases
+## Upgrading a One-Time Purchase
 
 Some products can be moved up to a bigger package after you have bought them, and you no longer have to own an active subscription to do it! If the store has set up an [upgrade path](/guide/product-types-creation/defining-upgrade-paths) for something you bought outright, an **Upgrade Plan** button appears next to that item on the order details page.
 
@@ -70,5 +70,6 @@ Some products can be moved up to a bigger package after you have bought them, an
 
 > [!Note]
 > The **Upgrade Plan** button only appears on items that qualify. Your original order must be paid, and the store must currently offer an active upgrade path for that exact product.
+> Each order can be upgraded once. If you try to upgrade an order again, you'll see "This order has already been upgraded."
 
 ![Upgrade Plan](/images/customer-dashboard/purchase-history/popup-upgrade-4.webp)

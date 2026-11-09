@@ -2,7 +2,7 @@
 
 Tired of answering emails from customers asking for their past orders or download links? The FluentCart Customer Dashboard serves as a comprehensive and personalized portal for every customer, offering a centralized location to manage all aspects of their interactions with your e-commerce store. This powerful dashboard empowers customers to efficiently handle their orders, subscriptions, licenses, and personal details.
 
-Ensure you have set the Customer Dashboard page from **FluentCart Pro** > **Settings** > **Pages Setup**, and your users can access their dashboard on that particular page. For detailed instructions on setting this up, please refer to our [Pages Setup documentation](/guide/settings-configuration/pages-setup).
+Ensure you have set the **Customer Profile Page** under **FluentCart Pro > Settings > Store Settings > Pages Setup**, and your users can access their dashboard on that particular page. For detailed instructions on setting this up, please refer to our [Pages Setup documentation](/guide/settings-configuration/pages-setup).
 
 ## Confirming Your Email Address
 
@@ -22,11 +22,14 @@ When a customer logs in, they'll see a quick summary of their activity. From the
 
 ![Screenshot of Customer Dashboard Overview](/images/customer-dashboard/customer-dashboard-overview/customer-dashboard.webp)
 
+The menu shows **Dashboard**, **Purchase History**, **Subscription Plans** (only for customers who have a subscription), **Licenses** (only when FluentCart Pro and Product Licensing are active), **Downloads**, **My Reviews** (only while Product Reviews are switched on), and **Profile**. Each section is covered below:
+
 * **[View Purchase History (Orders & Payment Details)](/guide/customer-dashboard/purchase-history)**: Provides a complete and detailed record of all past orders, including transaction details, payment statuses, and options to download invoices.
 * **[Managing Subscriptions](/guide/customer-dashboard/subscriptions)**: If you sell subscription products, this is where customers can view and control their recurring plans. They can check the status, see upcoming renewal dates, and manage other details.
 * **[Managing Licenses](/guide/customer-dashboard/licenses)**: For software or other digital products that use license keys, this is a dedicated area for customers to find their keys, check activation limits, and see renewal information.
 * **[Digital Product Downloads](/guide/customer-dashboard/downloads)**: This section gives customers a neat list of all the digital products they've purchased, with a simple download button next to each one.
 * **[Update Profile Settings](/guide/customer-dashboard/profile-management)**: Where customers can update their personal contact information, manage billing addresses, and shipping addresses for future orders.
-* **[Payment Methods](/guide/customer-dashboard/payment-methods)**: If your store allows saved payment methods, this is where customers add a card, choose which one is used by default, and remove cards they no longer want on file.
+* **[Payment Methods](/guide/customer-dashboard/payment-methods)** (inside **Profile**): With FluentCart Pro and saved payment methods enabled, the Profile page includes a Payment Methods section. This is where customers add a card, choose which one is used by default, and remove cards they no longer want on file.
+* **[My Reviews](/guide/store-management/product-reviews/)**: When Product Reviews are switched on, customers find purchased products waiting under **To Be Reviewed**, write or edit their reviews, and see their past reviews under **History**.
 
 This comprehensive structure ensures that customers have all the necessary tools at their fingertips for a seamless and efficient experience with your FluentCart store.

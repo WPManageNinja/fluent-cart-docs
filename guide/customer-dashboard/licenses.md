@@ -2,6 +2,10 @@
 
 The **Licenses** section of your FluentCart Customer Profile is where you can view and manage all your purchased software licenses. This is particularly useful for digital products like plugins or themes that require activation.
 
+::: info
+The **Licenses** menu item appears only when the store has FluentCart Pro with Product Licensing enabled.
+:::
+
 ## Viewing All Licenses
 
 The main Licenses page presents a list of all your available licenses. Each license entry typically includes:

@@ -42,7 +42,7 @@ FluentCart automatically generates an invoice receipt for every order. This invo
 * Renewal information (if it’s a subscription-based order)
 * Subscription **setup fee** as a separate line item (when a one-time setup or activation fee was charged at signup)
 * Customer VAT number (rendered automatically inside the billing address block when the customer provides one at checkout)
-* Your store's business IDs (Legal Registration ID, Seller Tax ID, and Seller VAT ID), shown on the receipt, the thank-you page, and order emails when you have filled them in under [Store Settings](/guide/settings-configuration/store-settings)
+* Your store's business IDs (Legal Registration ID, Seller Tax ID, and Seller VAT ID), shown on the receipt, the thank-you page, and order emails when you have filled them in under [Store Settings](/guide/settings-configuration/store-settings). Your **Company Name** from Business Details is used as the seller name on the receipt (your store name if it is empty)
 
 >[!Note]
 > If the purchased subscription includes a **Setup Fee**, it now appears as a clearly labeled line item on both the invoice receipt and the order confirmation email — so customers always know exactly what the one-time charge was for, on top of the recurring subscription price.
@@ -63,9 +63,7 @@ This allows users to quickly access their payment confirmation and keep a digita
 
 ### Accessing the Order Later
 
-Customers can always revisit their order details later by logging into their account and navigating to:
-
-**My Account → Purchse History**
+Customers can always revisit their order details later by logging into their account and opening **Purchase History** in their customer dashboard.
 
 From there, they can:
 
