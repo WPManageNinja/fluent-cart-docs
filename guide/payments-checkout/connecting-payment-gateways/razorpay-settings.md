@@ -1,8 +1,3 @@
----
-title: "Razorpay Settings"
-description: "A complete guide to integrating Razorpay with FluentCart, enabling UPI, Cards, and NetBanking payments for your store."
----
-
 # Razorpay Settings
 
 Razorpay is a popular and powerful payment solution, especially perfect for businesses in India. It allows you to accept a wide variety of payments, including UPI, Credit/Debit Cards, NetBanking, and Wallets. By connecting Razorpay to FluentCart, you provide your customers with a fast and secure payment option for their orders.
@@ -13,10 +8,10 @@ This guide will walk you through how you can get Razorpay up and running on your
 
 Before you can use Razorpay, you need to add the feature to your FluentCart store.
 
-1.  Log in to your WordPress dashboard and go to **FluentCart Pro > Settings**.
+1.  Log in to your WordPress dashboard and go to **FluentCart > Settings**.
 2.  Click on the **Payment Settings** tab on the left.
 3.  You will see a list of available payment gateways. Find **Razorpay** and click the **Manage** button next to it.
-4.  If it isn't ready yet, you will see a screen with an **Install & Activate** button. Click on it.
+4.  If the add-on isn't installed yet, click **Install & Activate** on the Razorpay page (FluentCart Pro active). On the free version, click **Download**, then upload and activate the add-on under **Plugins > Add New**. Razorpay is a free add-on.
 
 ![ Activate Razorpay](/images/payments-checkout/razorpay-settings/access-razorpay-1.webp)
 
@@ -99,8 +94,8 @@ Now, take those keys and put them into your store settings.
 3.  Paste your **Key ID** and **Key Secret** into the corresponding fields.
 4.  Paste the **Test or Live Webhook Secret** you copied earlier from Razorpay.
 
->[Tip] 
->We recommend starting with "Test" mode to make sure everything works before you take real money!
+> [!TIP]
+> We recommend starting with "Test" mode to make sure everything works before you take real money!
 
 ![ Finalize Configuration](/images/payments-checkout/razorpay-settings/razorpay-settings-8.webp)
 
@@ -110,6 +105,6 @@ Now, take those keys and put them into your store settings.
 
 If you want to sell to customers outside of India, there is an extra step:
 
-* You must enable **International Payments** inside your actual **Razorpay Dashboard settings**.
+* You must enable **International Payments** in your Razorpay Dashboard. Go to **Settings > Configuration > Payment Methods** and enable it there.
 * Without this, customers using cards from other countries might see their payments declined.
 
