@@ -10,27 +10,32 @@ The calculation follows these general steps:
 
 1.  **Zone Matching**: The customer's shipping address is matched to an [applicable shipping zone](/guide/shipping/configuring-shipping-zones).
 2.  **Method Selection**: All [shipping methods](/guide/shipping/setting-up-shipping-methods) configured for that zone become potential options.
-3.  **Base Method Cost**: For each applicable method, its base cost is calculated based on its "Rate Type" (e.g., a fixed amount, total items, or total order value).
+
+    ::: info
+    Only physical items count. Carts with only digital products are not charged shipping. Items added through an order bump with **Free shipping for this offer item** turned on are left out of the shipping calculation.
+    :::
+
+3.  **Base Method Cost**: For each method, FluentCart calculates its base cost from its **Configure Rate** setting: **Per Order** (one charge), **Per Item** (Amount × physical item quantity), **Percentage** (a percentage of the physical items' subtotal after discounts) or **Per Weight** (the matching weight tier). Free Shipping methods always cost 0.
 4.  **Shipping Class Contributions**: This is where the complexity comes in. For each product in the cart, its assigned [shipping class](/guide/shipping/understanding-shipping-classes) (if any) and its quantity are considered.
-    * The "Cost Adjustment" for that shipping class is applied based on its "Cost Type" (`Per Item` or `Fixed Amount`).
+    * Each product's class cost is worked out from the class **Cost** and **Cost Type** (**Fixed Amount** or **Percentage** of the product's unit price). If **Apply to quantity** is checked, the cost is multiplied by the product's quantity.
     * These individual class contributions are then gathered per class, not per cart line. Products that share a class are charged together: a class without **Apply to quantity** is charged once, however many products in the cart use it.
 
-5.  **Class Aggregation (Crucial Step)**: If the cart contains products from *multiple distinct shipping classes*, the `Class Aggregation` setting of the *chosen shipping method* dictates how these class contributions are combined into a single subtotal for shipping class adjustments.
+5.  **Class Aggregation (Crucial Step)**: The chosen method's **Class Aggregation** setting decides how the class costs are combined:
 
-    * **"Sum all class costs"**:
-        * **Concept**: This option adds up the calculated cost for *each distinct shipping class* present in the cart.
+    * **Combined Cost**:
+        * **Concept**: This option adds up the calculated cost for *each shipping class* present in the cart.
         * **Scenario**: Your cart contains:
-            * Product A: `Quantity: 2`, `Shipping Class: Heavy Items` (Cost Adjustment: $15, Type: Per Item)
-            * Product B: `Quantity: 1`, `Shipping Class: Small Envelopes` (Cost Adjustment: $5, Type: Per Item)
-            * Product C: `Quantity: 3`, `Shipping Class: Fragile Items` (Cost Adjustment: $4, Type: Fixed Amount)
+            * Product A: Quantity 2, Heavy Items (Cost $15, Fixed Amount, **Apply to quantity** on)
+            * Product B: Quantity 1, Small Envelopes (Cost $5, Fixed Amount, **Apply to quantity** on)
+            * Product C: Quantity 3, Fragile Items (Cost $4, Fixed Amount, **Apply to quantity** off)
         * **Calculation**:
             * Contribution from "Heavy Items" = $15 (per item) \* 2 items = $30
             * Contribution from "Small Envelopes" = $5 (per item) \* 1 item = $5
             * Contribution from "Fragile Items" = $4 (fixed amount, applied once for the class) = $4
         * **Total Aggregated Class Cost** = $30 (Heavy) + $5 (Small) + $4 (Fragile) = **$39**.
 
-    * **"Take highest class cost"**:
-        * **Concept**: This option applies only the highest individual shipping cost derived from any *distinct shipping class* present in the cart.
+    * **Highest Cost**:
+        * **Concept**: This option adds only the single highest class total among the shipping classes present in the cart.
         * **Scenario**: Using the same cart as above:
             * Contribution from "Heavy Items" = $30
             * Contribution from "Small Envelopes" = $5
