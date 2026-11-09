@@ -4,17 +4,16 @@ The **Global Integrations** section is your central dashboard for managing power
 
 ## Accessing Global Integrations
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
-2.  Click on the **Global Integrations** tab.
+In FluentCart, open **More > Integrations** (or **FluentCart Pro > Integrations** in the WordPress sidebar). Only WordPress administrators (super admins) see this menu.
 
-    ![Screenshot of Checkout Actions Tab](/images/settings-configuration/checkout/checkout-actions-tab.webp)
-
+<!-- TODO(screenshots): checkout-actions-tab.webp is outdated: it shows a Global Integrations tab inside Settings, which no longer exists. Retake the Integrations screen opened from More > Integrations. Update later. -->
+![Screenshot of the Integrations screen](/images/settings-configuration/checkout/checkout-actions-tab.webp)
 
 ### The Global Integrations Dashboard
 
 This screen provides a comprehensive overview of all the integration feeds you have configured, serving as your command center for all connected services.
 
-* **Integration List:** Displays all your feeds in a table, giving you an at-a-glance view of your automations:
+* **Global Integrations Feeds:** This card lists all your feeds in a table, giving you an at-a-glance view of your automations:
     * **Integration:** Shows the icon and name of the integrated service (e.g., FluentCRM), making it easy to identify the platform you are sending data to.
     * **Title:** The custom name you gave to the integration feed for your own internal reference, helping you distinguish between different automations for the same service.
     * **Triggers:** Lists the specific store event(s) that will trigger this automation. This is crucial for understanding exactly when your data is being sent.
@@ -24,9 +23,14 @@ This screen provides a comprehensive overview of all the integration feeds you h
     * **Edit (Pencil Icon):** Click this to open the configuration screen and make changes to the feed's settings, such as adding new triggers or modifying data mappings.
     * **Delete (Trash Can Icon):** Click this to permanently delete the integration feed. This action cannot be undone.
 
-    ![Screenshot of Checkout Actions Tab](/images/settings-configuration/checkout/global-integration.webp)
+<!-- TODO(screenshots): global-integration.webp is outdated: it shows the old Settings sidebar layout. Retake the Global Integrations Feeds card on the Integrations screen with a couple of feeds. Update later. -->
+![Screenshot of the Global Integrations Feeds list](/images/settings-configuration/checkout/global-integration.webp)
 
-#### Adding a New Integration
+Below the feeds is the **Integration Modules** list, where you enable, configure, or install each integration. Pro-only modules show a **Pro** badge and an **Upgrade to Pro** link when FluentCart Pro is inactive.
+
+<!-- TODO(screenshots): no image of the Integration Modules list yet: capture the list below the feeds, including a Pro badge if possible. Update later. -->
+
+### Adding a New Integration
 
 To create a new automation, you can add a new integration feed. This is the starting point for connecting your store to a new service.
 
