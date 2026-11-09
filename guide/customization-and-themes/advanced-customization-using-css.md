@@ -69,7 +69,8 @@ These variables affect multiple pages at once, making them perfect for store-wid
 |----------|---------------|-------------|
 | `--fct-input-bg-color` | `#ffffff` | Input background |
 | `--fct-input-text-color` | `#2F3448` | Input text |
-| `--fct-input-border-color` | `#d6dae1` | Input border |
+
+Input borders use `--fct-border-color`.
 
 **Example: Making all buttons blue**
 
@@ -96,7 +97,7 @@ The checkout page has its own set of variables for fine-tuned control.
 | Variable | Default Value | Description |
 |----------|---------------|-------------|
 | `--fct-checkout-input-bg-color` | `#ffffff` | Input background |
-| `--fct-checkout-input-text-color` | `theme('colors.system.dark')` | Input text |
+| `--fct-checkout-input-text-color` | `--fct-input-text-color` | Input text |
 | `--fct-checkout-input-border-color` | `--fct-checkout-border-color` | Input border |
 
 ### Checkout Sections
@@ -200,14 +201,14 @@ The cart drawer (slide-out cart) can be customized independently.
 |----------|---------------|-------------|
 | `--fct-cart-drawer-btn-bg-color` | `#253241` | Action button |
 | `--fct-cart-drawer-btn-text-color` | `#ffffff` | Button text |
-| `--fct-cart-drawer-open-btn-bg-color` | `#253241` | Cart icon button |
-| `--fct-view-cart-btn-bg-color` | `#253241` | View Cart button |
+| `--fct-cart-drawer-open-btn-bg-color` | `#ffffff` (follows `--fct-secondary-btn-bg-color`) | Cart icon button |
+| `--fct-view-cart-btn-bg-color` | `#ffffff` (follows `--fct-secondary-btn-bg-color`) | View Cart button |
 
 ### Cart Badge
 
 | Variable | Default Value | Description |
 |----------|---------------|-------------|
-| `--fct-cart-drawer-badge-bg-color` | `#ef4444` | Badge background |
+| `--fct-cart-drawer-badge-bg-color` | `#000000` | Badge background |
 | `--fct-cart-drawer-badge-text-color` | `#ffffff` | Badge text |
 
 **Example: Blue cart drawer**
@@ -310,15 +311,15 @@ Customize individual product pages.
 
 | Variable | Default Value | Description |
 |----------|---------------|-------------|
-| `--fct-single-product-primary-text-color` | `theme('colors.system.dark')` | Primary text |
-| `--fct-single-product-secondary-text-color` | `theme('colors.system.mid')` | Secondary text |
+| `--fct-single-product-primary-text-color` | `--fct-primary-text-color` | Primary text |
+| `--fct-single-product-secondary-text-color` | `--fct-secondary-text-color` | Secondary text |
 
 ### Product Page Borders
 
 | Variable | Default Value | Description |
 |----------|---------------|-------------|
-| `--fct-single-product-border-color` | `theme('colors.gray.outline')` | Element borders |
-| `--fct-single-product-active-border-color` | `theme('colors.primary.500')` | Active borders |
+| `--fct-single-product-border-color` | `--fct-border-color` | Element borders |
+| `--fct-single-product-active-border-color` | `--fct-active-border-color` | Active borders |
 
 ### Quantity Selector
 
