@@ -1,8 +1,3 @@
----
-title: "Airwallex Settings"
-description: "Learn how to connect Airwallex to FluentCart, create a scoped API key, configure webhooks, and start accepting payments at checkout."
----
-
 # Airwallex Settings
 
 Airwallex is a global financial platform that lets businesses accept payments from customers around the world. By connecting Airwallex with FluentCart, you can offer your customers a secure checkout experience with support for refunds, disputes, and recurring subscriptions, all kept in sync through webhooks.
@@ -10,7 +5,7 @@ Airwallex is a global financial platform that lets businesses accept payments fr
 This guide will walk you through every step of connecting your Airwallex account to FluentCart, from creating a scoped API key to configuring webhooks and activating the gateway.
 
 ::: info
-Airwallex is a Pro feature. It is only available when **FluentCart Pro** is installed and active on your site.
+Airwallex is a separate add-on that requires **FluentCart Pro**. Without Pro active, the Airwallex page shows **Requires Pro** with an **Upgrade to Pro** button.
 :::
 
 ## Step 1: Accessing Airwallex Settings
@@ -18,12 +13,15 @@ Airwallex is a Pro feature. It is only available when **FluentCart Pro** is inst
 1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
 2.  Click on the **Payment Settings** tab.
 3.  Locate **Airwallex** in the list of payment gateways and click the **Manage** button next to it.
+4.  If the add-on is not installed yet, the Airwallex Payment Gateway page opens. Click **Install & Activate**. Once it is active, the Airwallex settings page appears.
 
 ![Screenshot of Airwallex in FluentCart Payment Settings](/images/payments-checkout/airwallex/airwallex-payment-settings-1.webp)
 
+<!-- TODO(screenshots): new shot needed of the Airwallex Payment Gateway add-on page (Not Installed status with the Install & Activate button) for step 4. Update later. -->
+
 ## Step 2: Connect Your Airwallex Account
 
-Once you open the Airwallex settings page, you can connect your store in both Test and Live modes. Choose the mode that matches your store's current **Order Mode** before you start entering credentials.
+Once you open the Airwallex settings page, you can connect your store in both Test and Live modes. Choose the mode that matches your store's current **Store Mode** before you start entering credentials.
 
 ![Screenshot of the Airwallex settings page in FluentCart](/images/payments-checkout/airwallex/airwallex-3.webp)
 
@@ -172,6 +170,6 @@ When you're ready to accept real payments, follow these steps to switch from Tes
 2.  Repeat **Step 4** in your live account to create a webhook and copy its **signing secret**.
 3.  In FluentCart, open the Airwallex settings page and select the **Live credentials** tab.
 4.  Paste the live **Client ID**, **API Key**, and **Webhook Secret**, then click **Save Settings**.
-5.  Finally, make sure your store's **Order Mode** is set to **Live** under **FluentCart Pro > Settings > Store Settings**.
+5.  Finally, make sure your store's **Store Mode** is set to **Live** under **FluentCart Pro > Settings > Store Settings > Store Setup**.
 
 Your store is now configured to securely accept payments through Airwallex.
