@@ -1,8 +1,3 @@
----
-title: "Paystack Settings"
-description: ""
----
-
 # Paystack Settings
 
 Paystack is a popular and secure payment gateway that allows you and your customers to pay using credit cards, debit cards, bank transfers, USSD, and more. When you integrate Paystack with FluentCart, you can easily accept fast and reliable payments from customers across Africa, as well as international payments from customers worldwide.
@@ -13,10 +8,13 @@ This guide will walk you through the entire process of connecting your Paystack 
 
 First, you need to install and enable Paystack as a payment method in your store.
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
+1.  From your WordPress dashboard, navigate to **FluentCart > Settings**.
 2.  Click on the **Payment Settings** tab.
-3.  You will see a list of available payment gateways. Find **Paystack** and click the **Install & Activate** button next to it.
-4.  After a moment, the page will refresh, and the button will change to **Manage**. Click the **Manage** button to open the Paystack Settings page.
+3.  You will see a list of available payment gateways. Find **Paystack** and click **Manage**.
+4.  On the Paystack Payment Gateway page, click **Install & Activate** (FluentCart Pro active). On the free version, the button reads **Download**: it opens the FluentCart add-ons page, where you download the Paystack add-on and then upload and activate it under **Plugins > Add New**.
+5.  Once the add-on is active, the Paystack settings open.
+
+<!-- TODO(screenshots): new shot needed of the Paystack Payment Gateway add-on page (Not Installed status with the Install & Activate button) for step 4. Update later. -->
 
 ![Installing and activating Paystack in FluentCart Payment Settings](/images/payments-checkout/paystack-settings/enable-paystack-payment.webp)
 
@@ -60,6 +58,6 @@ Now, open a new tab and log in to your **Paystack dashboard**. Go to **Settings 
 
 Your Paystack integration is now complete and in **Test Mode**. We recommend running a test transaction with a Paystack test card to ensure the connection is working.
 
-To go live, simply repeat Step 3 using the **Live credentials** tab in FluentCart and the **Live API Keys** and **Live Webhook URL** fields in your Paystack dashboard.
+To go live, simply repeat Steps 3 and 4 using the **Live credentials** tab in FluentCart and the **Live API Keys** and **Live Webhook URL** fields in your Paystack dashboard.
 
 If you have any questions or need further assistance, feel free to reach out to our [support team](https://wpmanageninja.com/support-tickets/?utm_source=wpsnsite&utm_medium=popup&utm_campaign=spring#/).
