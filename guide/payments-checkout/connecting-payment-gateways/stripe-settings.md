@@ -1,8 +1,3 @@
----
-title: "Stripe Settings"
-description: "Learn how to connect and configure Stripe payment gateway in FluentCart to securely accept credit cards, debit cards, and various payment methods through embedded or hosted checkout."
----
-
 # Stripe Settings
 
 Stripe is a powerful and globally recognized payment platform that allows you to securely accept credit cards, debit cards, and various other payment methods through a single, seamless integration.
@@ -11,7 +6,7 @@ This guide will walk you through connecting your Stripe account to FluentCart to
 
 ## Step 1: Accessing Stripe Settings
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
+1.  From your WordPress dashboard, navigate to **FluentCart > Settings** (shown as **FluentCart Pro** if you have Pro active).
 2.  Click on the **Payment Settings** tab.
 3.  Locate **Stripe** in the list of payment gateways and click the **Manage** button next to it.
 
@@ -25,7 +20,7 @@ The Stripe settings page allows you to connect your store in both Test and Live 
     * **Test credentials:** Select this tab if you want to connect your Stripe account in Test Mode. This is perfect for testing your checkout flow without processing real payments.
     * **Live credentials:** Select this tab when you are ready to start accepting real payments from customers.
 
-* **Connect with Stripe:** After selecting the appropriate tab (Test or Live), click the **Connect with stripe** button. This will redirect you to Stripe's website, where you will be prompted to log in and authorize the connection with FluentCart. This is a secure process that automatically syncs your account for the selected mode.
+* **Connect with Stripe:** After selecting the appropriate tab (Test or Live), click **Connect with Stripe**. This will redirect you to Stripe's website, where you will be prompted to log in and authorize the connection with FluentCart. This is a secure process that automatically syncs your account for the selected mode.
 
 ::: info
 FluentCart securely stores your Stripe connection information using a salt key encryption method. This ensures your informations remain fully encrypted in the database and protected from unauthorized access.
@@ -33,10 +28,10 @@ FluentCart securely stores your Stripe connection information using a salt key e
 
 ## Step 3: Choose Your Checkout Mode
 
-FluentCart gives you two different ways for customers to pay:
+FluentCart gives you two different ways for customers to pay. Under **Checkout Mode**, choose:
 
- * **Embedded checkout (Recommended):** This keeps the customer on your website. It’s a customizable block that lets you control the design.
- * **Stripe Hosted checkout:** This sends the customer to a secure page managed by **Stripe**. This is great for high-volume stores or if you want Stripe to handle all the complex security rules for you.
+ * **Embedded checkout (Recommended):** Renders the payment form inside your checkout page, so the customer stays on your website.
+ * **Stripe Hosted Checkout:** Redirects the customer to a payment page hosted by **Stripe**. Use it if you accept bank transfers, or if a payment method you enabled in Stripe does not appear on the embedded form. The `checkout.session.completed` webhook event is only sent in this mode.
 
 ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/stripe-settings.webp)
 
@@ -71,9 +66,9 @@ Subscriptions break out their parts the same way—meaning a setup fee, a one-ti
 Webhooks are essential for the integration to function correctly. They allow Stripe to send real-time notifications to your store about payment events, such as successful charges, refunds, and subscription updates.
 
 1.  **Copy Your Webhook URL:** On the FluentCart Stripe settings page, you will see your unique **Webhook URL**. **Copy** this **URL** to your clipboard.
-2.  **Configure in Stripe:** Click the **Add Endpoint** link, and you’ll be redirected to your **Create an event destination** page.
+2.  **Configure in Stripe:** Click the **Add endpoint** link under **How to configure?** on the FluentCart Stripe page. It opens Stripe's **Create an event destination** page with FluentCart's events already selected.
 
-3. **Select the Important Events:** Now, choose the events recommended by **FluentCart** for **Stripe** to send to your **endpoint**. Under **Events**, click the **All events** tab. Click the checkboxes to select these specific events:
+3. **Check the Important Events:** Make sure the events below are ticked, then click **Continue**.
 
 The Events recommended by FluentCart are briefly explained below:
 
@@ -82,12 +77,14 @@ The Events recommended by FluentCart are briefly explained below:
  * **charge.refund.updated:** Details of a refund were updated (like the amount or reason).
  * **charge.succeeded:** The customer’s payment went through successfully.
  * **invoice.paid:** A subscription invoice was paid by the customer.
- * **invoice.payment.failed:** A subscription invoice payment failed (e.g., card declined).
+ * **invoice.payment_failed:** A subscription invoice payment failed (e.g., card declined).
  * **customer.subscription.deleted:** The customer canceled their subscription.
  * **customer.subscription.updated:** The customer’s subscription was changed (e.g., upgraded or downgraded).
+ * **setup_intent.succeeded:** A card was saved for future payments without an immediate charge (for example, a card a customer adds from their account).
 
-Once you select all the suggested **Webhook Events**, click the **Continue** button.
+Once the suggested **Webhook Events** are selected, click the **Continue** button.
 
+<!-- TODO(screenshots): select-events.webp is outdated: it shows the manual All events tab with 8 selected events; retake after opening the pre-filled Add endpoint link from FluentCart (Selected events tab, 14 events pre-selected). Update later. -->
    ![Screenshot of Stripe Settings Page](/images/payments-checkout/stripe-payment/select-events.webp)
 
 Then, select the **Webhook endpoint** and again click the **Continue** button.
@@ -110,8 +107,8 @@ Your store is now configured to securely accept payments through Stripe.
 
 ## Letting Customers Save Their Card
 
-Stripe is the gateway behind FluentCart's **Saved Payment Methods** feature, which lets logged-in customers keep a card on file and pay with it in a single step next time.
+Stripe is one of the two gateways, with PayPal, behind the **Saved Payment Methods** feature in **FluentCart Pro**, which lets logged-in customers keep a card on file and pay with it in a single step next time.
 
-Your store never stores the card itself. Stripe keeps it and returns a token, which is charged only for an order the customer places or a subscription they already signed up for. Customers opt in with an unticked checkbox at checkout and can remove a saved card whenever they want.
+Your store never stores the card itself. Stripe keeps it and returns a token, which is charged only for an order the customer places or a subscription they already signed up for. At checkout, customers tick **Save this card for faster checkout next time** to opt in. The box is unticked unless you turn on **Pre-select it at checkout**. Customers can remove a saved card whenever they want.
 
-The feature is turned off until you enable it in [Cart & Checkout Settings](/guide/settings-configuration/cart-checkout-settings). Once it is on, the card a customer marks as their default is also used for their subscription renewals, so updating it in one place keeps their recurring payments running.
+The feature is off until you tick **Enable saved payment methods** in [Cart & Checkout Settings](/guide/settings-configuration/cart-checkout-settings). Once it is on, the card a customer marks as their default is also used for their subscription renewals, so updating it in one place keeps their recurring payments running.
