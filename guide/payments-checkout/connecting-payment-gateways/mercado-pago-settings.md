@@ -1,8 +1,3 @@
----
-title: "Mercado Pago Settings"
-description: "A complete guide to integrating Mercado Pago with FluentCart to accept local payments across Latin America."
----
-
 # Mercado Pago Settings
 
 Mercado Pago is a leading payment platform, making it the perfect choice for businesses operating in Latin America. By connecting **Mercado Pago to FluentCart**, you can securely accept a wide variety of local payment methods, including Credit Cards, Pix, Boleto, OXXO, and Bank Transfers.
@@ -13,10 +8,10 @@ This guide will walk you through the entire process of connecting your Mercado P
 
 First, you need to enable Mercado Pago as a payment method in your store.
 
-1.  From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
+1.  From your WordPress dashboard, navigate to **FluentCart > Settings**.
 2.  Click on the **Payment Settings** tab.
 3.  Find **Mercado Pago** in the list of available gateways and click the **Manage** button.
-4.  If the addon is not yet installed, click the **Install & Activate** button to begin the setup.
+4.  If the addon is not yet installed, click the **Install & Activate** button to begin the setup (FluentCart Pro active). On the free version, the button reads **Download**: upload and activate the downloaded add-on under **Plugins > Add New**. Mercado Pago is a free add-on.
 
 ![Mercado Pago Install & Activate](/images/payments-checkout/mercado-pago/install-activate-mercado-pago-1.webp)
 
