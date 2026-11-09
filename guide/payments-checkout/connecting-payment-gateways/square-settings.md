@@ -1,8 +1,3 @@
----
-title: "Square Settings"
-description: ""
----
-
 # Square Settings
 
 Square is a globally trusted payment gateway that lets you accept Credit and Debit Cards through a single, secure inline checkout, with no redirects. By connecting Square with FluentCart, you can offer your customers a fast and reliable checkout experience along with support for recurring subscriptions and automatic refunds via webhooks.
@@ -19,7 +14,7 @@ First, you need to install and enable **Square** as a payment method in your sto
 
 ![Find Square in FluentCart Payment Settings](/images/payments-checkout/square/square-1.webp)
 
-4.  Since Square is a premium add-on, you will be taken to the Square Payment Gateway page. Click the **Install & Activate** button to enable it for your store.
+4.  Square is an add-on that requires **FluentCart Pro**. On the Square Payment Gateway page, click **Install & Activate** to enable it for your store. If Pro is not active, the page shows **Requires Pro** with an **Upgrade to Pro** button instead.
 
 ![Install and activate Square Payment Gateway](/images/payments-checkout/square/square-2.webp)
 
@@ -139,7 +134,7 @@ When you're ready to start accepting real payments, follow these simple steps to
 2.  Repeat **Step 3** and **Step 4** to collect your **Production Application ID**, **Production Access Token**, **Production Location ID**, and **Production Webhook Signature Key**.
 3.  Return to your FluentCart **Square Settings** page and click the **Live credentials** tab.
 4.  Paste the production credentials into their matching fields and click **Save Settings**.
-5.  Finally, make sure your store's main **Order Mode is set to Live** under **FluentCart Pro > Settings > Store Settings**.
+5.  Finally, make sure your store's main **Store Mode** is set to **Live** under **FluentCart Pro > Settings > Store Settings > Store Setup**.
 
 Your Square integration is now live and ready to securely process payments for your store.
 
