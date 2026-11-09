@@ -33,17 +33,23 @@ These settings can be accessed and modified anytime from **FluentCart → Settin
 
 The second step turns tax collection on or off and captures the high-level tax behaviour for your store. The card pre-fills your **Store country** from Step 1, so make sure that's right before continuing.
 
-* **Collect taxes for my store:** Master toggle. Leave it on to collect tax at checkout; switch it off to ship without any tax calculations.
+* **Collect taxes for my store:** Master toggle. FluentCart pre-sets it, and picks **Prices include tax** or **Add tax at checkout**, based on the store country you chose. Check both before you continue. Switch the toggle off to sell without any tax calculations.
 * **How do you display your prices?** Pick one:
     * **Prices include tax:** the price on a product already contains tax. FluentCart splits the tax out for reporting, and the customer pays the listed number.
     * **Add tax at checkout:** the listed price excludes tax. Tax is shown separately and added to the subtotal.
-* **Tax ID / VAT Number** *(optional)*: Your registration number. Printed on invoices and PDF receipts where local rules require it.
+* **Cross-border compliance** *(EU stores only)*: If your store country is in the EU, choose how you charge VAT to customers in other EU countries:
+    * **OSS (One Stop Shop):** Charge each EU customer their own country's VAT rate. This is the default.
+    * **Home Country Only:** Charge all EU customers your home country's rate.
+    * **Only for [your country]:** Only collect VAT from customers in your own country.
+* **Tax ID / VAT Number** *(optional)*: Your registration number, printed on invoices. For EU stores the label follows your choice above: **OSS VAT Number**, **Home VAT Number**, or **[Country] VAT Number**.
 
-An advisory at the bottom of the card reminds you that a **standard tax class will be created automatically for your store country**, and that the actual per-region rates are set later under **Tax → Tax Rates**.
+An advisory at the bottom of the card explains what happens next. For most countries, a standard tax class is created for your store country and you add rates later under **Tax → Tax Rates**. For EU stores, standard EU VAT rates are imported automatically for all EU countries.
 
 Click **Continue** to proceed. You can also choose **Skip for now** to leave tax disabled (configure it later) or **Skip All** to jump straight past the remaining wizard steps.
 
 ![Screenshot of Initial Setup Wizard - Set Up Tax Collection (Step 2 of 4)](/images/getting-started/initial-setup-wizard/onboarding-2.webp)
+
+<!-- TODO(screenshots): new image needed next to onboarding-2.webp: capture the Set Up Tax Collection step with an EU store country (e.g. Germany) to show the Cross-border compliance options, the OSS VAT Number label and the EU VAT import advisory. Update later. -->
 
 :::info Where to find later?
 These settings can be accessed and modified anytime from **FluentCart → Settings → Tax Settings → Configuration**, and per-region rates from **Tax Settings → Rates**. See [Tax Configuration](/guide/tax-&-duties/configuration-and-classes) and [Setting Up Tax Rates](/guide/tax-&-duties/tax-rates) for the full walkthroughs.

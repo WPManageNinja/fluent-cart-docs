@@ -9,9 +9,10 @@ This guide will show you how to install and activate the FluentCart plugin on yo
 Before you install FluentCart, make sure your hosting environment meets the following requirements. This ensures that the plugin runs smoothly and delivers the best performance for your store.
 
 ##### Minimum Requirements
-- **WordPress Version:** 5.0 or higher  
+- **WordPress Version:** 6.7 or higher  
 - **PHP Version:** 7.4 or higher  
-- **MySQL Version:** 5.6 or higher (with InnoDB support)  
+- **Database:** MySQL or MariaDB. FluentCart does not run on SQLite.  
+- **FluentCart Pro:** Keep FluentCart and FluentCart Pro on the same version. FluentCart 2.2.0 needs FluentCart Pro 2.2.0 or later, and Pro 2.2.0 needs FluentCart 2.2.0 or later.  
 
 ## 1. Installing FluentCart (Free Version)
 
@@ -23,30 +24,30 @@ This is the standard method for installing the core FluentCart plugin, which is 
 4.  Locate the "FluentCart" plugin in the search results and click **"Install Now"**.
 5.  Once installed, click **"Activate"**. You can now use the FluentCart plugin.
 
-## 2. Installing FluentCart Pro Addons (Requires Base Plugin)
+## 2. Installing FluentCart Pro (Requires Base Plugin)
 
-If you have purchased FluentCart Pro Addons for advanced features, you will need to upload and activate them. Ensure the Free Base Plugin (from step 1) is already installed and active before proceeding with Pro Addons.
+If you have purchased FluentCart Pro for advanced features, you will need to upload and activate it. Ensure the Free Base Plugin (from step 1) is already installed and active before proceeding with FluentCart Pro.
 
-1.  Download the FluentCart Pro Addons `.zip` file from [FluentCart](https://fluentcart.com/).
+1.  Download the FluentCart Pro `.zip` file from [FluentCart](https://fluentcart.com/).
 
 ![Download Plugin](/images/getting-started/install-activation/download-plugin.png)
 
 2.  Navigate to your WordPress dashboard.
 3.  Go to **Plugins > Add New**.
 4.  At the top of the page, click the **"Upload Plugin"** button.
-5.  Click **"Choose File"**, then select the FluentCart Pro Addons `.zip` file you downloaded.
+5.  Click **"Choose File"**, then select the FluentCart Pro `.zip` file you downloaded.
 6.  Click **"Install Now"**.
 7.  Once the installation is complete, click **"Activate Plugin"**.
 
-## 3. Activating Your FluentCart Pro Addons License
+## 3. Activating Your FluentCart Pro License
 
-After installing the Pro Addons, you will need to activate your license key. This is essential to receive automatic updates, bug fixes, new features, and access to our support for your Pro Addons.
+After installing FluentCart Pro, you will need to activate your license key. This is essential to receive automatic updates, bug fixes, new features, and access to our support for FluentCart Pro.
 
-1.  When you turn on the Pro Addons, you might see an activation notice directly in your WordPress dashboard. You can click on this notice to start the activation process.
+1.  When you turn on FluentCart Pro, you might see an activation notice directly in your WordPress dashboard. You can click on this notice to start the activation process.
 2.  Alternatively, navigate to the FluentCart Dashboard in your WordPress admin area.
 3.  In the left sidebar, go to **FluentCart Pro > Settings**.
 4.  Click on the **"License Settings"** tab.
-5.  In the "License Key" field, enter the unique license key you received upon purchasing FluentCart Pro Addons from the [site](https://fluentcart.com/account/).
+5.  In the "License Key" field, enter the unique license key you received upon purchasing FluentCart Pro from the [site](https://fluentcart.com/account/).
 
 ![License Key](/images/getting-started/install-activation/get-license.png)
 
@@ -56,6 +57,6 @@ After installing the Pro Addons, you will need to activate your license key. Thi
     * If you encounter an error, please double-check your license key for any typos or ensure your site can connect to the licensing server.
 
 :::tip Need a License Key?
-If you don't have a FluentCart Pro Addons license key yet, you can purchase one directly from [FluentCart](https://fluentcart.com/).
+If you don't have a FluentCart Pro license key yet, you can purchase one directly from [FluentCart](https://fluentcart.com/).
 :::
 

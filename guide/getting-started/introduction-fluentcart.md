@@ -22,10 +22,10 @@ Every type supports variations, so one product can carry different sizes, format
 
 Once your products are in place, these systems run the store day to day:
 
-* **[Payments](/guide/payments-checkout/):** Connect Stripe, PayPal, Square, Paddle, Mollie, Razorpay, and other gateways, or take offline payments with cash on delivery.
+* **[Payments](/guide/payments-checkout/):** Take payments with Stripe, PayPal, and cash on delivery in the free plugin. FluentCart Pro adds Paddle, Mollie, and Authorize.net, and add-ons connect gateways such as Square, Razorpay, Paystack, Flutterwave, Mercado Pago, Airwallex, and SSLCommerz.
 * **[Tax and VAT](/guide/tax-&-duties/tax-&-duties-overview):** Apply country-specific rates and tax classes, including EU VAT with OSS, home country, or per-country registrations.
 * **[Shipping](/guide/shipping/):** Build the zones, methods, classes, and packages that match how you actually ship.
-* **Inventory:** Track stock for each product or variation, with low-stock thresholds and bulk import.
+* **Inventory:** Track stock for each product or variation, with a low-stock view and bulk import in FluentCart Pro's Advanced Inventory.
 * **[Reports](/guide/reporting-analytics/):** Follow sales, revenue, refunds, subscriptions, cohorts, and retention from one dashboard.
 * **[Customer accounts](/guide/customer-dashboard/):** Give buyers their own area for orders, downloads, licenses, subscriptions, and saved payment methods.
 
@@ -43,7 +43,7 @@ Start here if this is your first store on the site.
 
 ### Moving From Another Platform
 
-If you already sell somewhere else, the [Migration](/guide/migration/) tool brings your products, customers, orders, subscriptions, and licenses across in one coordinated pass. Your old store is only ever read, never modified, so it keeps running while you migrate.
+If you already sell somewhere else, the [Migration](/guide/migration/) tool brings your products, customers, orders, subscriptions, and licenses across in one coordinated pass. Your old store keeps running while you migrate. The Migrator only reads your orders, customers, and settings; the one thing it writes is a small reference field on each source product so it can match it to the new FluentCart product.
 
 FluentCart currently migrates from **Easy Digital Downloads** and **WooCommerce**.
 

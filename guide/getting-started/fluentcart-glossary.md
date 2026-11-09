@@ -5,13 +5,13 @@ This glossary defines common terms used throughout the FluentCart documentation 
 **A**
 
 * **Abandoned Cart:**
-    A shopping cart where a customer has added products but has not completed the checkout process. FluentCart can track these for recovery and remarketing campaigns.
+    A shopping cart where a customer has added products but has not completed the checkout process. FluentCart doesn't run cart recovery on its own. If you use FluentCRM, its **Abandoned Cart** feature can track FluentCart carts and send recovery emails.
 
 * **Activation Limit:**
     The maximum number of times a **License Key** can be used to activate a software product. This is set per **Variation** (e.g., a "Single Site" license has an activation limit of 1).
 
 * **Add-on:**
-    An optional extension that adds new features and capabilities to FluentCart Pro, such as Subscriptions or advanced licensing.
+    A separate plugin that adds a feature to FluentCart, such as an extra payment gateway, Elementor, Bricks, or Divi elements, or the Migrator. You can install most add-ons from **Settings > Features & addon**. Subscriptions are built into the free plugin; licensing is part of FluentCart Pro.
 
 * **Advanced Filters:**
     A set of powerful tools in the admin dashboard for searching and segmenting records like orders or customers based on specific, detailed criteria.
@@ -41,9 +41,6 @@ This glossary defines common terms used throughout the FluentCart documentation 
 * **Checkout:**
     The final stage of a purchase where customers provide payment information, shipping details, and confirm their order.
 
-* **Checkout Action:**
-    An automation that triggers during the checkout process. It is used to connect FluentCart to other services, such as adding a customer to a specific list in FluentCRM. Also referred to as a **Feed**.
-
 * **Compare at price:**
     An optional, higher price shown with a strikethrough next to the actual selling price. This is used to visually indicate a sale or discount.
 
@@ -69,16 +66,13 @@ This glossary defines common terms used throughout the FluentCart documentation 
 
 **E**
 
-* **Email Credit Link:**
-    A unique URL that can be embedded in emails. When a customer clicks this link, a specific credit or discount is automatically applied to their next purchase or added to their account.
-
 * **Email Notification:**
     Automated emails sent from your store to customers or administrators to confirm actions like order placement, payment, or refunds.
 
 **F**
 
-* **Feed**
-    In the context of **Checkout Actions:**, a feed is a single, configured automation that sends data from FluentCart to another service (like FluentCRM).
+* **Feed:**
+    Short for **Integration Feed**. See **Integration Feed**.
 
 **G**
 
@@ -94,6 +88,9 @@ This glossary defines common terms used throughout the FluentCart documentation 
     An advanced setup where the front-end of your store (the "head," like a custom website or mobile app) is separate from the back-end (FluentCart). Developers use the **REST API** to connect the two, allowing for highly custom and high-performance storefronts while FluentCart manages all the e-commerce logic (products, orders, payments) in the background.
 
 **I**
+
+* **Integration Feed:**
+    A rule that runs when an order or subscription event happens (for example, an order is paid or refunded) and sends data to another service, such as adding the customer to a FluentCRM list. Feeds can be global or set on a single product. Also referred to as a **Feed**.
 
 * **Inventory Management:**
     The process of tracking stock levels for **Physical Products**, including available quantities, units on hold for pending orders, and fulfilled units.
@@ -126,16 +123,16 @@ This glossary defines common terms used throughout the FluentCart documentation 
     A formal record of a customer's transaction. It includes all details of the purchase, such as products, pricing, customer information, and payment status.
 
 * **Order Status:**
-    The current stage of an **Order** in the fulfillment process (e.g., Pending, Completed, Refunded). Statuses can be updated manually or automatically by payment events.
+    The current stage of an **Order** in the fulfillment process (e.g., Processing, Completed, On Hold, Canceled). Payment progress, such as Pending, Paid, or Refunded, is tracked separately as the **Payment Status**. Statuses can be updated manually or automatically by payment events.
 
-* **Order Bump**
-    An Order Bump is a last-minute offer presented to customers directly on the checkout page, just before they complete their purchase. It's designed to increase the average order value by allowing customers to add a complementary or discounted product to their order with a single click.
+* **Order Bump:**
+    An Order Bump is a last-minute offer presented to customers directly on the checkout page, just before they complete their purchase. It's designed to increase the average order value by allowing customers to add a complementary or discounted product to their order with a single click. Order Bumps are a FluentCart Pro feature.
 
 
 **P**
 
 * **Payment Gateway:**
-    A third-party service that processes customer payment information to authorize and complete transactions. FluentCart includes built-in integrations for major gateways like Stripe and PayPal, and allows for custom integrations via **Webhooks**.
+    A third-party service that processes customer payment information to authorize and complete transactions. The free plugin includes Stripe, PayPal, and cash on delivery. FluentCart Pro adds Paddle, Mollie, and Authorize.net, and add-ons connect more gateways such as Square and Razorpay.
 
 * **Physical Product:**
     A tangible item that must be physically shipped to a customer. Requires inventory tracking and shipping settings.
@@ -148,12 +145,12 @@ This glossary defines common terms used throughout the FluentCart documentation 
 
 * **Product Status:**
     The current visibility and availability of a product in your store's backend.
-    * **Draft:** The product is not visible to the public and is still being worked on.
     * **Published:** The product is live and available for purchase on your storefront.
-    * **Archived:** (Coming Soon) A planned status to hide a product from the main store view without deleting it.
+    * **Draft:** The product is not visible to the public and is still being worked on.
+    * **Scheduled:** The product is published automatically at a date you set.
 
 * **Product Type:**
-    A flexible, custom classification system you create to group and manage products for your own internal needs (e.g., "Polo Shirts," "Limited Edition," "Brand Collabs").
+    Whether a product is **Physical** (shipped) or **Digital** (downloaded). To group products your own way, use **Categories** and **Brands**.
 
 * **Purchases:**
     A record of a completed transaction where a customer has successfully bought one or more products from your store.
@@ -190,7 +187,7 @@ This glossary defines common terms used throughout the FluentCart documentation 
     A specific geographic region (e.g., a country, state, or group of zip codes) to which a unique set of **Shipping Methods** and rates apply.
 
 * **Shortcode:**
-    A small placeholder, enclosed in curly braces (e.g., `{order.id}`), used in email and document templates. FluentCart automatically replaces it with the corresponding dynamic information, such as a customer's name or order number.
+    A small placeholder in double curly braces (for example, <code v-pre>{{order.id}}</code>), used in email and document templates. FluentCart automatically replaces it with the corresponding dynamic information, such as a customer's name or order number.
 
 * **Simple Pricing:**
     A pricing method used for products that have only one version and a single price. To learn more, read the price configuring documentation.
