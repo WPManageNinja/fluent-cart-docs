@@ -96,7 +96,6 @@ This log sits in the right-hand sidebar, under the **Getting Started** panel. It
 
 * **Example Activities:** Order Created, Payment Paid, Order Status Updated, Order Refunded, Shipping Status Updated, License Upgrade.
 
-<!-- TODO(screenshots): dashboard-overview.webp is outdated: the 2.2.0 dashboard shows a "Last 30 Days" label above the stat cards; retake the full dashboard (stat cards with the label, Sales Growth chart, right sidebar with Getting Started and Recent Activities). Update later. -->
 ![Screenshot of Dashboard Overview - Getting Started](/images/getting-started/admin-dashboard/dashboard-overview.webp)
 
 ### 6. Recent Orders

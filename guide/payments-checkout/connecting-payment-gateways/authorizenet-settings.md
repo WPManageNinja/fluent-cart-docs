@@ -87,7 +87,6 @@ Webhooks are critical for communication. They allow Authorize.net to notify Flue
     * `net.authorize.customer.subscription.expiring`
 5.  Click **Save** to finalize.
 
-<!-- TODO(screenshots): authorize-payment-method-6.webp is outdated: only 8 events are ticked; retake with the 4 added subscription events (Failed, Suspended, Terminated, Updated) also ticked, 12 in total. Update later. -->
 ![Authorize.net Settings](/images/payments-checkout/authorize.net/authorize-payment-method-6.webp)
 
 ## Step 5: Activation and Final Save

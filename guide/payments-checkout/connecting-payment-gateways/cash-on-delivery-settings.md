@@ -5,7 +5,6 @@ Cash on Delivery allows customers to pay with cash directly upon receiving their
 1.  On the **Payment Settings** screen, find the **Cash** gateway (described as **Pay with cash upon delivery**) and click **Manage**.
 2.  This opens the **Cash** settings screen.
 
-    <!-- TODO(screenshots): cash-on-delivery-settings.webp is outdated: it shows the old "Offline Payment Settings" header and an older settings menu; retake the Cash gateway settings screen. Update later. -->
     ![Screenshot of Cash on Delivery Settings Page](/images/payments-checkout/cash-on-delivery-settings.webp)
 
 3.  **Review the note:** The settings screen only shows a short note: customers pay in cash on delivery, and you can also collect payment by bank transfer or another manual process. There is nothing to fill in.
@@ -23,4 +22,4 @@ Customers see this method as **Cash** at checkout. To rename it (for example to 
 
 Click **Update** to save. Your customers now see the method under the name and instructions you chose.
 
-<!-- TODO(screenshots): new shot needed: the Checkout Customization page for the Cash gateway (opened via the pencil icon), showing Checkout Label, Checkout Logo, Checkout Instructions and Thank you page Instruction. Update later. -->
+![Screenshot of the Checkout Customization page for the Cash gateway](/images/payments-checkout/cash-on-delivery-checkout-customization.webp)

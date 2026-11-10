@@ -17,7 +17,7 @@ Airwallex is a separate add-on that requires **FluentCart Pro**. Without Pro act
 
 ![Screenshot of Airwallex in FluentCart Payment Settings](/images/payments-checkout/airwallex/airwallex-payment-settings-1.webp)
 
-<!-- TODO(screenshots): new shot needed of the Airwallex Payment Gateway add-on page (Not Installed status with the Install & Activate button) for step 4. Update later. -->
+![Screenshot of the Airwallex Payment Gateway page with the Install & Activate button](/images/payments-checkout/airwallex/airwallex-addon-install.webp)
 
 ## Step 2: Connect Your Airwallex Account
 

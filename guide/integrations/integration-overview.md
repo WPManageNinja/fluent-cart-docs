@@ -38,8 +38,7 @@ The activation process is largely automatic.
 
 To help you find what you need, you can also use the filter tabs (**ALL, CRM, LMS, CORE, MARKETING**) or the search bar to find a specific module.
 
-<!-- TODO(screenshots): integration-overview-1.png is outdated: it shows the old "FluentForm" title and no Webhook or WP User Create/Update cards. Retake the full Integration Modules list including the Pro cards (Webhook, WP User Create/Update). Update later. -->
-![Available Integration Modules](/images/integrations/integration-overview/integration-overview-1.png)
+![Available Integration Modules](/images/integrations/integration-overview/integration-overview-1.webp)
 
 ### Available Integration Modules
 
