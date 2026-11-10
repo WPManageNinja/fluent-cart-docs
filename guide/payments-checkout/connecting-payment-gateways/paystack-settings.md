@@ -14,7 +14,7 @@ First, you need to install and enable Paystack as a payment method in your store
 4.  On the Paystack Payment Gateway page, click **Install & Activate** (FluentCart Pro active). On the free version, the button reads **Download**: it opens the FluentCart add-ons page, where you download the Paystack add-on and then upload and activate it under **Plugins > Add New**.
 5.  Once the add-on is active, the Paystack settings open.
 
-<!-- TODO(screenshots): new shot needed of the Paystack Payment Gateway add-on page (Not Installed status with the Install & Activate button) for step 4. Update later. -->
+![Screenshot of the Paystack Payment Gateway page with the Install & Activate button](/images/payments-checkout/paystack-settings/paystack-addon-install.webp)
 
 ![Installing and activating Paystack in FluentCart Payment Settings](/images/payments-checkout/paystack-settings/enable-paystack-payment.webp)
 

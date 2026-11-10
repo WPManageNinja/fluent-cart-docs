@@ -110,7 +110,6 @@ You can also customize the appearance and text of the Paddle checkout button:
 * **Button Styling:** Adjust the **Button Color**, **Button Hover Color**, **Button Text Color**, and **Button Font Size** to match your store's design.
 * **Disable Webhook Verification (Test purpose only):** Leave this unchecked. Webhook verification confirms that notifications really come from Paddle. Tick the box only while debugging in test mode, never on a live store.
 
-<!-- TODO(screenshots): customization-options.webp is outdated: it lacks the Tax Mode notice box, shows the old "Disable Webhook Verification" label without "(Test purpose only)", and has a duplicated Theme/Button Text rendering glitch; retake the Paddle settings page. Update later. -->
    ![Screenshot of Customization](/images/payments-checkout/paddle-payment/customization-options.webp)
 
 Once you have configured all the settings, click the **Save Settings** button. Your Paddle integration is now complete!

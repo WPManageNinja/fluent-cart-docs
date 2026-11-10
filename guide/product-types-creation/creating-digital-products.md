@@ -23,7 +23,7 @@ By the end, you will be able to confidently sell and manage any downloadable ite
 
 3.  In the **Add New Product** popup, enter the **Product Title**, choose a **Variation Type** (**Simple**, **Simple Variations**, or **Advanced Variations**), and keep **Digital Product** selected (it's the default). Click **Add Product** to open the **Edit Product** page.
 
-    <!-- TODO(screenshots): new image needed: capture the Add New Product popup showing Product Title, the Variation Type dropdown, and Digital Product selected, with an arrow on Add Product. Update later. -->
+    ![Screenshot of the Add New Product popup with Digital Product selected](/images/product-types-creation/creating-digital-product/add-new-product-digital.webp)
 
     ![Screenshot of Product Edit Screen (Digital Product Example)](/images/product-types-creation/creating-digital-product/Digital-product-3.webp) 
 

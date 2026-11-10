@@ -48,4 +48,4 @@ Once your brands are created, you can assign them to your products.
 3. Open the **Brands** dropdown and check one or more brands. To create a new one without leaving the page, click **+ Add Brand**, type the name, and click **Add**.
 4. After assigning the brand(s), click **Update** in the save bar to save your changes. The brand will now be associated with that product.
 
-<!-- TODO(screenshots): new image needed: capture the Product Taxonomies card on the product edit page with the Brands dropdown open (checkboxes visible) and the + Add Brand link. Update later. -->
+![Screenshot of the Product Taxonomies card with the Brands dropdown open](/images/product-types-creation/creating-managing-brand/product-taxonomies-brands-dropdown.webp)

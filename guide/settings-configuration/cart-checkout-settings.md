@@ -9,7 +9,6 @@ This section controls the visibility of the cart, how user accounts are created,
 1.  From your WordPress dashboard, go to **FluentCart > Settings** (shown as **FluentCart Pro** when Pro is active).
 2.  In the settings menu, open **Store Settings** and select **Cart & Checkout**.
 
-<!-- TODO(screenshots): cart-checkout.webp is outdated: it shows the old "fcart-cart-toogle-button" class spelling and has no Saved Payment Methods row. Retake with FluentCart Pro active so the Saved Payment Methods row (Enable saved payment methods, Pre-select it at checkout) is visible. Update later. -->
 ![Screenshot of Cart & Checkout settings](/images/settings-configuration/cart-checkout/cart-checkout.webp)
 
 #### Cart Icon In Body

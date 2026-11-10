@@ -20,7 +20,6 @@ By the end of this guide, you will be able to confidently list and manage any ph
     
 3. This action will open a new **Add New Product** modal. Enter the **Product Title**, choose a **Variation Type** (**Simple**, **Simple Variations**, or **Advanced Variations**), and select **Physical Product** (the modal starts on **Digital Product**). Check **Add as a Bundle** only if you're creating a bundle. Then click the **Add Product** button and you’ll be redirected to the **Edit Product** page to configure all product details.
 
-    <!-- TODO(screenshots): add-new-product.webp is outdated: retake the Add New Product modal showing the Product Title, Variation Type dropdown, Physical/Digital selector, and Add as a Bundle checkbox. Update later. -->
     ![Screenshot of Add New Product Modal)](/images/product-types-creation/Creating-Physical-Products/add-new-product.webp)
 
 ### 1. Basic Product Information
@@ -225,7 +224,7 @@ To track the stock for your product, first make sure the [**Stock Management**](
 
 Once the switch is on, an inventory table appears with a separate row for each product variation. This table helps you monitor your stock levels at a glance.
 
-<!-- TODO(screenshots): new image needed: capture the product inventory card below Pricing with the Inventory Management switch turned on and the per-variation stock table visible. Update later. -->
+![Screenshot of the Inventory Management card with the per-variation stock table](/images/product-types-creation/advanced-inventory/product-inventory-card.webp)
 
 #### Understanding the Inventory Table
 

@@ -9,7 +9,6 @@ PayPal provides a fast and secure way for customers to send and receive money or
 Please note that you must have a PayPal Business or Merchant account to accept payments through this integration. The following step will prompt you to log in to this account.
 :::
 
-<!-- TODO(screenshots): paypal-settings.webp is outdated: it shows the old Test mode banner wording and an older settings menu, and lacks the Brand name field; retake the PayPal settings page. Update later. -->
 ![Screenshot of PayPal Settings Page](/images/payments-checkout/paypal-settings.webp)
 
 3.  **Test Mode Warning:** If your store is in Test mode, a banner reminds you to switch to Live before taking real payments. You change this under **Settings > Store Settings > Store Setup > Store Mode**.

@@ -45,7 +45,6 @@ Now that you have your test key, let's go back to your WordPress dashboard to pa
 Most Mollie methods work without a billing address. Buy Now Pay Later methods (Klarna, Billie, in3, Riverty) need a complete one. If you accept them, enable **Street Address**, **City**, **Post Code** and **Country** in [Checkout Fields](/guide/settings-configuration/checkout-fields).
 :::
 
-<!-- TODO(screenshots): mollie-7.webp is outdated: it lacks the Recommended Checkout Fields notice about billing address for Buy Now Pay Later methods; retake the Mollie settings page. Update later. -->
 ![Mollie API Configuration](/images/payments-checkout/mollie/mollie-7.webp)
 
 ## Step 3: Go Live with Real Payments
