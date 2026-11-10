@@ -8,7 +8,6 @@ The **Payment Settings** screen in FluentCart lets you set up how your store han
 1.  Go to **FluentCart > Settings** (shown as **FluentCart Pro** when Pro is active).
 2.  Click **Payment Settings** in the settings menu on the left.
 
-<!-- TODO(screenshots): payment-settings-tab.webp is outdated: it shows a "Disabled" badge and "Coming Soon!" rows. Retake the Payment Settings list showing the current Active/Inactive badges and the Manage buttons for all gateways. Update later. -->
 ![Screenshot of Payment Settings Tab](/images/settings-configuration/payment/payment-settings-tab.webp)
 
 ## Configuration Options
@@ -30,7 +29,7 @@ On any gateway's settings page, click the pencil icon next to the gateway name t
 
 Click **Update** to save your changes.
 
-<!-- TODO(screenshots): new UI with no image. Capture the Checkout Customization screen (pencil icon on a gateway page) showing Checkout Label, Checkout Logo, Checkout Instructions and Thank you page Instruction. Update later. -->
+![Screenshot of the Checkout Customization screen](/images/settings-configuration/payment/checkout-customization.webp)
 
 ## Available Payment Gateways
 

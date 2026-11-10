@@ -68,7 +68,6 @@ When a customer downloads a receipt, the PDF file is named after the receipt num
 
 Hover your mouse over the template you want to customize (for example, "Order Receipt") and click the blue **Edit Template** button that appears.
 
-<!-- TODO(screenshots): pdf-5.webp is outdated: the sidebar shows PDF Templates and E-Invoice Settings under Email Configuration; they now sit under Invoice & Packing. Retake the PDF Templates screen with the Invoice & Packing group open, ideally showing the Add Template button. Update later. -->
 ![PDF Invoice](/images/store-management/pdf-invoice/pdf-5.webp)
 
 ## Step 4: Designing Your PDF (The Fun Part!)

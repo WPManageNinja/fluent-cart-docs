@@ -6,7 +6,6 @@ The **Global Integrations** section is your central dashboard for managing power
 
 In FluentCart, open **More > Integrations** (or **FluentCart Pro > Integrations** in the WordPress sidebar). Only WordPress administrators (super admins) see this menu.
 
-<!-- TODO(screenshots): checkout-actions-tab.webp is outdated: it shows a Global Integrations tab inside Settings, which no longer exists. Retake the Integrations screen opened from More > Integrations. Update later. -->
 ![Screenshot of the Integrations screen](/images/settings-configuration/checkout/checkout-actions-tab.webp)
 
 ### The Global Integrations Dashboard
@@ -28,7 +27,7 @@ This screen provides a comprehensive overview of all the integration feeds you h
 
 Below the feeds is the **Integration Modules** list, where you enable, configure, or install each integration. Pro-only modules show a **Pro** badge and an **Upgrade to Pro** link when FluentCart Pro is inactive.
 
-<!-- TODO(screenshots): no image of the Integration Modules list yet: capture the list below the feeds, including a Pro badge if possible. Update later. -->
+![Screenshot of the Integration Modules list](/images/settings-configuration/checkout/integration-modules-list.webp)
 
 ### Adding a New Integration
 

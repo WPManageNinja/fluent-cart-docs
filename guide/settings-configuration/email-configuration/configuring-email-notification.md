@@ -93,7 +93,6 @@ When the FluentCart Customer Rights add-on is active, a **Withdrawal** group wit
 
 To quickly activate or deactivate any notification, simply click the **toggle switch** in the "Enabled" column. The email will only be sent if the toggle is on.
 
-<!-- TODO(screenshots): email-notification-1.webp is outdated: the list is now split into group cards (Order Actions, Subscription Actions, Store-Managed Renewals, Scheduler / Reminder Actions, ...) and the old sidebar lacks Reminders and Store Digest. Retake the grouped Notifications list with the arrow on a toggle. Update later. -->
 ![Email Notification](/images/settings-configuration/email-notifications/email-notification-1.webp)
 
 

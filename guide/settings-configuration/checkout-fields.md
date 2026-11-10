@@ -42,7 +42,6 @@ This section allows you to define the address fields required for billing purpos
 * **Post Code**: Displays the postal/zip code field. It is enabled and required by default.
 * **Phone:** Off by default. Turn it on to collect the customer's phone number, and tick **Required** if you need it.
 
-    <!-- TODO(screenshots): checkout-fields.webp is outdated: it shows Company under Basic Info and has no Business Details section. Retake the Basic Info, Business Details and Billing Address sections of Checkout Fields. Update later. -->
     ![Screenshot of Checkout Fields billing address settings](/images/settings-configuration/checkout-field/checkout-fields.webp)
 
 ### 4. Shipping Address

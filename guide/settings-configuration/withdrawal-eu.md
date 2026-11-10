@@ -44,7 +44,6 @@ With the add-on active, all of its controls live in one settings tab. To open it
 1. From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
 2. Select the **Withdrawal** tab from the left-hand sidebar.
 
-<!-- TODO(screenshots): withdrawal-settings.webp is outdated: the sidebar tab and page heading read "Withdrawal (EU)", but the Customer Rights add-on 0.1.3 labels them "Withdrawal". Retake the Withdrawal settings screen. Update later. -->
 ![Screenshot of the FluentCart Withdrawal settings screen showing the Button Placement, Form Behaviour, Time Windows, and Order Filtering sections](/images/settings-configuration/withdrawal/withdrawal-settings.webp)
 
 The settings are grouped into four areas: **Button Placement**, **Form Behaviour**, **Time Windows**, and **Order Filtering**, plus the **Select Withdrawal Page** option at the bottom. Each is covered below.

@@ -12,7 +12,6 @@ To manage your store's modules:
 
 Only WordPress administrators (super admins) see the **Features & addon** tab.
 
-<!-- TODO(screenshots): features-addons-1.webp is outdated: retake the full Features & addon screen with FluentCart Pro active, showing the Stock Management card with its Enable Advanced Inventory checkbox, plus the Dynamic Pricing and MCP for AI Agents cards. Update later. -->
 ![Features & Addons](/images/settings-configuration/feature-addon/features-addons-1.webp)
 
 ## Managing Available Modules

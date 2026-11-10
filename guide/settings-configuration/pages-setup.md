@@ -25,7 +25,6 @@ For each core FluentCart functionality, you need to select an existing WordPress
 
 Don't have the page yet? Click the **+** button next to a dropdown, enter a **Page Name**, and click **Create Page**. FluentCart creates the page with the right shortcode and selects it. When a page is selected, **Edit** and **Preview** links appear below the dropdown.
 
-<!-- TODO(screenshots): pages-setup.webp is outdated: retake with Product Reviews switched on so the Select Order Review Page row shows (sidebar labels have also changed). Update later. -->
 ![Screenshot of Pages Setup Tab](/images/settings-configuration/pages-setup/pages-setup.webp)
 
 ## Saving Your Settings
