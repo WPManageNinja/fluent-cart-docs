@@ -17,6 +17,9 @@ You pick the products on the page itself, not in the **Filters** menu. The page 
 1. Open the first **Pick a product or variation** dropdown and choose a product. Choose **All variants** to compare the whole product, or pick a single variation.
 2. Do the same in the second dropdown, beside **vs**.
 3. Click **+ Add** to add more, up to six items in total. Click the **✕** beside a dropdown to remove it.
+4. Click the **Compare** button. It becomes available once you have picked at least two items, and the report only loads when you click it.
+
+If you change a pick or a filter after comparing, the page shows **The picks or filters changed. Click Compare to update.** and keeps the earlier results on screen until you click **Compare** again. Changing the currency clears the results, because the amounts are shown in the live currency.
 
 Each item gets its own color, which it keeps on the chart and in the table. Your picks are saved in the page address, so you can bookmark or share a comparison.
 
@@ -77,6 +80,6 @@ The **Customer overlap** table shows, for each item's customers in the period, h
 
 ![Screenshot of the Trend chart and the Customer overlap table](/images/reporting-analytics/product/compare-trend-overlap.webp)
 
-If the report cannot load, the page shows **This report could not be loaded.** with a **Retry** button.
+If the report cannot load, the page shows **This report could not be loaded.** with a **Retry** button. The subscriptions and customer overlap cards load on their own, so a slow or failed card does not hold up the others, and each one has its own **Retry**.
 
 Your product comparison now shows you which products are pulling their weight, and which variations deserve more attention.

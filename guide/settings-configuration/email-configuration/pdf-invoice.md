@@ -130,6 +130,8 @@ These tags work alongside the automatic VAT-in-billing-address behavior covered 
 
 For ZUGFeRD / Factur-X e-invoices, configure **Settings > Invoice & Packing > E-Invoice Settings**. It holds your seller contact, bank details, and the **ZUGFeRD Profile**, while your Company Name and IDs come from Store Settings > Business Details.
 
+E-invoices are embedded in PDF receipts, and Fluent PDF creates them. If you turn on the E-Invoice setting while Fluent PDF is not active, the page shows a **Fluent PDF is required.** warning with an **Install & Activate** button, or an **Activate** button when the add-on is already installed. Click it and the page reloads once Fluent PDF is ready. Any E-Invoice changes you have not saved are kept while the add-on activates.
+
 #### Customer VAT Number on Receipts
 
 If a customer provides a VAT number at checkout, FluentCart now automatically includes it inside the **billing address block** of every generated PDF (Order Receipt, Renewal Receipt, Refund Notice, and Invoice). You don't need to add a separate smart tag or modify the template — when the address renders, the VAT number is appended right under the customer's address line.

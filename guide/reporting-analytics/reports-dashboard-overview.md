@@ -9,7 +9,7 @@ The **Overview** page is the first stop. It gathers the headline figure from eac
 Go to your WordPress dashboard, then go to **FluentCart** > **Reports**. The section always opens on the **Overview** page, and the menu on the left lets you switch to any other report.
 
 ::: info
-Reports are included in the free FluentCart plugin. A few extras need **FluentCart Pro**: the **Compare** report, the **Export** (accounting export) page, **Advanced Filters**, and changing the compare period.
+Reports are included in the free FluentCart plugin. A few extras need **FluentCart Pro**: the **Compare** report, the **Licenses** report, the **Export** (accounting export) page, **Advanced Filters**, and changing the compare period.
 :::
 
 ## The Full Report Section
@@ -27,6 +27,7 @@ The Reports menu is divided into focused pages, each covering one area of your s
 * **Coupons:** How much discount you give and how each coupon code performs. See the [Coupons Report](/guide/reporting-analytics/coupons-report).
 * **Payment Methods:** Sales, refunds, and payment failures for each payment gateway. See the [Payment Methods Report](/guide/reporting-analytics/payment-methods-report).
 * **Locations:** Sales and customers by country, with a world map. See the [Locations Report](/guide/reporting-analytics/locations-report).
+* **Licenses:** New licenses, site activations, and the versions your customers run. This page is added by FluentCart Pro while Product Licensing is on. See the [Licenses Report](/guide/reporting-analytics/licenses-report).
 * **Export:** An accounting export of your sales and refunds. This page is added by FluentCart Pro and appears only when your role can export reports.
 
 ::: info
