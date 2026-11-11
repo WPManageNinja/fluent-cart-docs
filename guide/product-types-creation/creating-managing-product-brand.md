@@ -21,8 +21,9 @@ Fill in the details for your brand:
  * **Slug:** This is the URL-friendly version of the name, used in the web address for the brand's archive page. It should be all lowercase and contain only letters, numbers, and hyphens. FluentCart will automatically generate this from the name if you leave it blank.
  * **Parent Brand:** This feature lets you create and organize brand levels. For example, if you sell a specific product line from a larger company, you could make "Air Jordan" a child of the "Nike" parent brand. For a top-level brand, simply leave this as "None."
  * **Description:** Add a short description for the brand. Depending on your website's theme, this description may be displayed on the brand's archive page, providing customers with more context.
+ * **Products:** *(Optional)* Search for products and pick the ones that belong to this brand. The picker lists products of any status except trash. The field is shown to roles that can edit products.
 
-Click the **Add New Brand** button to save the brand. It will now appear in the list on the right.
+Click the **Add New Brand** button to save the brand. It will now appear in the list on the right, and any products you picked are assigned to it.
 
 ### Managing Existing Brands
 
@@ -34,7 +35,7 @@ To manage your brands:
 
 **Sort the List:** You can organize the list by clicking the small arrows next to a column title, such as "Name" or "Count." This makes it easy to find brands alphabetically or see which ones have the most products.
 **Edit, Delete, and More:** When you move your mouse over a brand in the list, a set of options will appear right below its name:
-  * **Edit:** This takes you to a separate screen to change all the brand's details.
+  * **Edit:** This takes you to a separate screen to change all the brand's details, including its **Products**. Remove a product from the picker or add new ones, then click **Update**. Only the products you added or removed change, so the rest of the brand's products stay as they are. When the brand has a lot of products, the picker shows the first 200 and adds an **and N more products** link that opens the product list filtered to this brand.
   * **Quick Edit:** Allows you to make fast changes to the name and slug without leaving the page.
   * **Delete:** Permanently removes the brand.
   * **View:** Lets you see how the brand's page looks on your live website.

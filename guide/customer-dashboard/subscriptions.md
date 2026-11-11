@@ -41,6 +41,14 @@ Below the details, you will find several important links:
 >**Pay Remaining Installments** appears for installment plans that still have payments left and are **Active** or **Trialing**, when the store has FluentCart Pro with early payment for installments enabled.
 
 * **Update Payment Method:** Use this to securely swap out the credit card or account used for your renewals. For gateways like Stripe and PayPal, you can enter the new details right in the dashboard. For Paddle and other gateways that manage cards on their own site, a short notice tells you that you will be redirected to complete the update: click **Continue** and the gateway's secure card-update page opens in a new tab, where you can finish the change.
+
+::: info
+The **Update Payment Method** link depends on your plan, its billing, and the gateway, so you may not see it on every subscription.
+
+* It is not offered on subscriptions that are **Canceled**, **Expired**, or **Completed**.
+* With **PayPal**, an update creates a new PayPal subscription, so it is offered only while you still have paid days left in the current billing period. It is also not offered on a PayPal subscription that the store bills itself.
+* Subscriptions billed by invoice, with no saved payment method to replace, don't show it. You pay each renewal from your renewal email instead.
+:::
 * **View Order:** This takes you directly to the original transaction in your **Purchase History**.
 * **Connected License:** If your subscription includes software or access keys, you can view and copy your active license key right here.
 

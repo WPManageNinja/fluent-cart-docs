@@ -126,7 +126,7 @@ This glossary defines common terms used throughout the FluentCart documentation 
     The current stage of an **Order** in the fulfillment process (e.g., Processing, Completed, On Hold, Canceled). Payment progress, such as Pending, Paid, or Refunded, is tracked separately as the **Payment Status**. Statuses can be updated manually or automatically by payment events.
 
 * **Order Bump:**
-    An Order Bump is a last-minute offer presented to customers directly on the checkout page, just before they complete their purchase. It's designed to increase the average order value by allowing customers to add a complementary or discounted product to their order with a single click. Order Bumps are a FluentCart Pro feature.
+    An Order Bump is a last-minute offer presented to customers on the checkout page, in the cart drawer, or on the cart page, just before they complete their purchase. It's designed to increase the average order value by allowing customers to add a complementary or discounted product to their order with a single click. Order Bumps are a FluentCart Pro feature.
 
 
 **P**
