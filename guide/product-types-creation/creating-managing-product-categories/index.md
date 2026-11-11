@@ -19,8 +19,9 @@ Here’s a breakdown of the fields:
 * **Slug:** This is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens. FluentCart will automatically create a slug from the name, but you can edit it if needed.
 * **Parent Category:** This allows you to create a hierarchy of categories. For example, you could create a "Clothing" category and then create "T-Shirts" and "Hoodies" as child categories underneath it. To create a top-level category, leave this set to "None."
 * **Description:** (Optional) You can add a short description for the category. Depending on your theme, this might be displayed at the top of the category page on your storefront.
+* **Products:** (Optional) Search for products and pick the ones that belong to this category. The picker lists products of any status except trash. The field is shown to roles that can edit products.
 
-After filling in the details, click the **Add New Category** button. Your new category will now appear in the list on the right.
+After filling in the details, click the **Add New Category** button. Your new category will now appear in the list on the right, and any products you picked are assigned to it.
 
 ![Add New Categories](/images/product-types-creation/Creating-Managing-Product-Categories/Product-Category-1.webp)
 
@@ -30,7 +31,7 @@ The table on the right side of the screen lists all your existing product catego
 
 To manage a category, hover your mouse over its name, and a set of action links will appear:
 
-* **Edit:** Click this to open a dedicated editor for that category, where you can change its name, slug, parent, or description.
+* **Edit:** Click this to open a dedicated editor for that category, where you can change its name, slug, parent, description, or **Products**. Add or remove products in the picker, then click **Update**. Only the products you added or removed change. When the category has a lot of products, the picker shows the first 200 and adds an **and N more products** link that opens the product list filtered to this category.
 * **Quick Edit:** This allows you to make quick changes to the name and slug without leaving the main screen.
 * **Delete:** This will permanently remove the category.
 * **View:** This will take you to the public-facing category page on your storefront, showing all the products that belong to it.

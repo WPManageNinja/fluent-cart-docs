@@ -28,6 +28,10 @@ By the end of this guide, you will be able to confidently list and manage any ph
 * **Short description:** Write a brief, simple summary of what the product is. This usually shows up quickly near the product picture or price, giving customers a quick, important overview.
 * **Long Description:** This is the large area for all the detailed information, like features, materials, and how to use the product. FluentCart offers two great ways to build this content:
 
+    ::: info
+    If Elementor, Bricks, or Divi is active on your site but its FluentCart add-on is not, administrators see a **Design product pages in** notice under the Long Description. It offers **Install & Activate** (**Download** without FluentCart Pro) or **Activate**, and a close button (**Don't show again**) to hide it.
+    :::
+
     ##### **Using the Visual Builder (Recommended for Dynamic Content)**
 
     The **Builder** option uses the powerful block editor built into WordPress (Gutenberg). This lets you design rich, visual, and highly effective product pages.
