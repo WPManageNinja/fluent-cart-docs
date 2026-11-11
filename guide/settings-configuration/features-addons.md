@@ -6,9 +6,9 @@ The **Features & addon** section in FluentCart is the central hub for managing t
 
 To manage your store's modules:
 
-1.  Log in to your **WordPress Dashboard**.
-2.  Navigate to **FluentCart > Settings** in the side menu.
-3.  Select the **Features & addon** tab from the left-hand sidebar.
+1.  Log in to your **WordPress Dashboard** and open **FluentCart**.
+2.  Click the **Settings** icon (the gear) at the top right of the FluentCart bar.
+3.  Select **Features & addon** from the settings sidebar.
 
 Only WordPress administrators (super admins) see the **Features & addon** tab.
 
@@ -46,7 +46,7 @@ Allows you to maintain a clear overview of your physical or limited digital inve
 
 A powerful tool for increasing your Average Order Value (AOV).
 
-* **Function:** Allows you to offer relevant add-on products directly on the [checkout](/guide/settings-configuration/cart-checkout-settings) page, encouraging customers to add one more item to their purchase just before they pay. See [Order Bump](/guide/store-management/orders-management/order-bump) for creating and managing order bumps.
+* **Function:** Allows you to offer relevant add-on products directly on the [checkout](/guide/settings-configuration/cart-checkout-settings) page, encouraging customers to add one more item to their purchase just before they pay, in the cart drawer, and on the cart page. You can choose from several card designs. See [Order Bump](/guide/store-management/orders-management/order-bump) for creating and managing order bumps.
 * **Requirements:** FluentCart Pro. Without Pro, this card is not listed.
 
 ### 5. Dynamic Pricing
@@ -73,6 +73,20 @@ After toggling any feature on or off:
 
 > **Note:** Some features, like [Cloudflare Turnstile](/guide/integrations/cloudflare-turnstile-integration), may require additional configuration (such as API keys) immediately after activation to function correctly.
 
+## Recommended for Your Store
+
+At the top of the **Features & addon** page, a **Recommended for your store** card lists add-ons that match how you sell. It appears only when at least one add-on fits your store and is not active yet. Each add-on shows a short reason, and the card has the same **Install & Activate** or **Activate** button as the add-on list below. The page reloads after the add-on is ready.
+
+FluentCart picks the add-ons from three signals:
+
+* **FluentCart Customer Rights:** Your store country is in the EU. A store in Germany sees a **Required in Germany** badge, because German B2C stores need a withdrawal button.
+* **FluentCart Migrator:** WooCommerce or Easy Digital Downloads is active on the site, so you can import your products, customers, and orders.
+* **Shipping For FluentCart:** At least one product variation is physical, so you can get live carrier rates and print shipping labels.
+
+The same **Recommended for your store** card also appears in the sidebar of the FluentCart **Dashboard**, where you can collapse it. Its **See all add-ons** link opens this page.
+
+<!-- TODO(screenshot): Features & addon page with the Recommended for your store card above the Features list. -->
+
 ## Installing Plugin Addons (One-Click Installer)
 
 Below the core feature toggles, the **Features & addon** page also has a **Plugin Addons** section. It lists addons such as **Elementor Blocks**, **FluentCart Bricks Blocks**, **FluentCart Divi Modules**, **Fluent PDF**, **FluentCart Migrator**, and **FluentCart Customer Rights**. You don't need to download a ZIP file, upload it through the WordPress plugin uploader, and then activate it. The whole flow takes a single click.
@@ -86,14 +100,14 @@ Before you use the one-click installer, make sure:
 
 ### How to Install an Addon in One Click
 
-1.  Navigate to **FluentCart Pro > Settings > Features & addon**.
+1.  Click the **Settings** icon (the gear) at the top right of the FluentCart bar, then click **Features & addon**.
 2.  Scroll to the **Plugin Addons** section at the bottom of the page.
 3.  Find the addon card for the addon you want to install (e.g., Fluent PDF).
 4.  Click the **Install & Activate** button on the card.
 
 FluentCart fetches the addon from the FluentCart CDN (Fluent PDF comes from WordPress.org), installs it, and activates it automatically. The card's status badge switches to **Active** as soon as the process finishes, so you can use the addon immediately, with no page reload or upload needed.
 
-When an addon is installed but inactive, the card shows **Activate** instead.
+When an addon is installed but inactive, the card shows **Activate** instead. You can also click anywhere on a card's row to open the add-on page once it is installed.
 
 ### FluentCart Bricks Blocks
 
