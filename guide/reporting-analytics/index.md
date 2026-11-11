@@ -20,8 +20,9 @@ This section covers various types of reports to give you a holistic view of your
 * **[Coupons Report](/guide/reporting-analytics/coupons-report):** Discount given, how much of your store relies on coupons, and how each coupon code performs.
 * **[Payment Methods Report](/guide/reporting-analytics/payment-methods-report):** Sales, refunds, payment success, and failing subscriptions for each payment gateway, so you can spot payment problems early.
 * **[Locations Report](/guide/reporting-analytics/locations-report):** Net sales, customers, and refunds by country on a world map, with international share and per-country breakdowns.
+* **[Licenses Report](/guide/reporting-analytics/licenses-report) (Pro):** New licenses, site activations, valid and expired licenses, site limit use, and the plugin versions your customers run.
 * **[Accounting Export](/guide/reporting-analytics/accounting-export) (Pro):** A CSV or JSON file of every sale and refund with its tax line, currency, and exchange rates, for your accountant or tax software.
 
-All reports are included in the free plugin except **Compare** and **Export**, which need FluentCart Pro. Advanced Filters and changing the compare period also need Pro.
+All reports are included in the free plugin except **Compare**, **Licenses**, and **Export**, which need FluentCart Pro. Advanced Filters and changing the compare period also need Pro.
 
 By regularly reviewing these reports, you can gain a deeper understanding of your store's health and strategize for future growth.
