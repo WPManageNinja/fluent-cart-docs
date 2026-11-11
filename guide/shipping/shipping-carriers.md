@@ -28,12 +28,14 @@ Before you start, make sure you have:
 
 The add-on is available from the **Features & addon** screen in FluentCart.
 
-1. Go to **FluentCart Pro > Settings** in your WordPress dashboard.
-2. Click **Features & addon** in the left-hand menu.
+1. Click the **Settings** icon (the gear) at the top right of the FluentCart bar.
+2. Click **Features & addon** in the settings menu.
 3. Scroll to the **Plugin Addons** list and find **Shipping For FluentCart**.
 4. Click **Install & Activate**. If FluentCart Pro is not active on your site, this button reads **Download** instead. It does not install anything: it opens the FluentCart add-ons page in a new tab, and you install the plugin yourself.
 
 ![Screenshot of the Shipping For FluentCart add-on in the Features & addon screen](/images/shipping/shipping-carriers/shipping-addon-install.webp)
+
+You can also install it straight from the Carriers page. Until the add-on is installed, the page shows it as an **Add-on** row under **Manual / Other**, visible to administrators, with an **Install & Activate** button (**Download** without FluentCart Pro) or **Activate** when it is already installed. FluentCart installs it in place and reloads the Carriers page, where the add-on's carriers then show.
 
 Once the add-on is active, a **Shippo (Beta)** row appears on the **Carriers** page under **Settings > Shipping**, and the card gets a settings icon that opens it.
 

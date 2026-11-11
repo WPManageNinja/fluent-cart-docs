@@ -17,7 +17,10 @@ FluentCart allows you to manually create new orders directly from your WordPress
     * **Products:** Use **Search products...** or **Browse** to add products, choose the variation, and set the quantity. You can also enter a **Custom Price** for a line.
     * **Have a Coupon:** If a discount coupon applies to this manual order, you can enter and apply it here. Applying a coupon removes any manual discount already added to the order.
     * **Add Discount:** If you want to add a discount for the order instead of a coupon, click the **Add Discount** option to enter a discount value and an optional reason. This option is only available when no coupon is applied — see [Manual Discounts and Tax](#manual-discounts-and-tax) below.
-    * **Add Shipping Cost:** Manually you can add shipping charges for physical products.
+    * **Shipping method:** When the order has physical products, a **Shipping method** dropdown appears. Leave it on **Custom shipping** to type the charge yourself with **Add Shipping Cost**, or pick one of your [shipping methods](/guide/shipping/setting-up-shipping-methods) and FluentCart calculates the charge from the products on the order. Methods that serve the customer's country are listed under **Shipping Methods**, and your other enabled methods are listed under **Other Shipping Methods**. Once you pick a method, the manual shipping charge is locked, so switch back to **Custom shipping** to type a charge again. If a method cannot cover the order, FluentCart tells you instead of saving a charge.
+    * **Add Shipping Cost:** With **Custom shipping** selected, you can add the shipping charge for physical products yourself.
+    <!-- TODO(screenshot): Create order screen with the Shipping method dropdown open, showing Custom shipping, Shipping Methods, and Other Shipping Methods. -->
+
     * **Review Totals:** Ensure the order subtotal and total amount are correct after adding products and any discounts/shipping.
     * **Notes:** Click the **Notes** icon to add any private notes or comments relevant to the order.
     * **Labels:**  A section for assigning custom labels.

@@ -16,7 +16,12 @@ The **Payment Settings** page lists all integrated payment providers. Each gatew
 
  * **Enable/Disable Gateways:** You can quickly identify which methods are live by the status badge next to the provider name.
  * **Manage Settings:** Click the **Manage** button on any gateway to enter its specific configuration page, where you connect your account or enter API keys on the **Live credentials** and **Test credentials** tabs, and set up webhooks. Which set is used depends on your store's **Store Mode** (**Store Settings > Store Setup**); gateways have no Test Mode switch of their own.
- * **Reorder Gateways:** Use the "three-line" drag icon on the left of each gateway to change the order in which they appear to customers on your checkout page.
+ * **Reorder Gateways:** Drag the six-dot handle on the left of each gateway to change the order in which the payment methods appear to customers on your checkout page. To reorder with the keyboard, focus the handle and press the up or down arrow key. FluentCart announces the new position as you move.
+ * **Install and Activate Add-on Gateways:** Gateways that come as add-ons show a button that matches their state. **Install & Activate** installs the add-on when FluentCart Pro is active, and **Download** appears when it is not. **Activate** turns on an add-on that is already installed, and **Manage** opens an installed gateway. Gateways that need Pro show a **Requires Pro** badge and an **Upgrade to Pro** button when Pro is missing. You can click anywhere on a gateway's row, not only the button, to open it.
+
+::: info
+A gateway whose add-on or Pro plugin is missing has nothing to configure yet, so its settings page shows no activation switch and no **Save** button. Install and activate it first.
+:::
 
 ### Customizing How a Gateway Appears at Checkout
 
