@@ -400,6 +400,7 @@ export default defineConfig({
                 { text: 'Managing Shipments', link: '/guide/store-management/orders-management/managing-shipments' },
                 { text: 'Collecting Payments for Modified Orders', link: '/guide/store-management/orders-management/collecting-payments-modified-orders' },
                 { text: 'Order Bump', link: '/guide/store-management/orders-management/order-bump' },
+                { text: 'Order Bump Card Design', link: '/guide/store-management/orders-management/order-bump-design' },
                 { text: 'Changing Order Statuses', link: '/guide/store-management/orders-management/changing-order-statuses' },
                 { text: 'Instant Modal Checkout', link: '/guide/store-management/orders-management/instant-modal-checkout' },
                 { text: 'Understanding Statuses', link: '/guide/store-management/understanding-statuses' }
@@ -583,6 +584,7 @@ export default defineConfig({
             { text: 'Coupons Report', link: '/guide/reporting-analytics/coupons-report' },
             { text: 'Payment Methods Report', link: '/guide/reporting-analytics/payment-methods-report' },
             { text: 'Locations Report', link: '/guide/reporting-analytics/locations-report' },
+            { text: 'Licenses Report', link: '/guide/reporting-analytics/licenses-report' },
             { text: 'Accounting Export', link: '/guide/reporting-analytics/accounting-export' }
           ]
         },

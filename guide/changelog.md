@@ -1,6 +1,45 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v2.3.1
+*Released on Nov 10, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds new order bump placements, six card layouts, custom cards, and optional images
+• Adds a Licenses report under Reports
+• Adds address field rearranging in Checkout Fields settings
+• Adds shipping methods and charges to manual order creation
+• Adds a Products field to categories and brands
+• Adds a checkout payment loading placeholder
+• Adds CNY and RUB support for PayPal
+• Adds recommended add-ons and new developer hooks
+```
+
+```markdown [🚀 Improvements]
+• Improves PayPal, Mollie, Authorize.Net, and Paddle subscription and payments
+• Improves update payment method on the customer profile
+• Improves order bump management, discount validation, and subtotal conditions
+• Improves Payment Settings, add-on installation, and reorder controls
+• Improves Product Compare and E-Invoice setup
+• Improves admin accessibility and screen reader support
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes shipping tax calculations, renewal taxes, and accounting exports
+• Fixes refunded order totals and missing bundle items
+• Fixes coupon expiry dates, repeated variations, and grouped price formatting
+• Fixes saved cards appearing on free orders and unlimited license counts
+• Fixes payment method settings and shipping tier errors
+• Fixes integration settings, report dialogs, and keyboard accessibility
+• Fixes variation pricing, table layouts, and advanced filtering
+• Fixes customer portal translations, badges, and labels
+• Fixes Firefox compatibility and SEO plugin and Breakdance conflicts
+```
+
+:::::
+
 ## FluentCart v2.3.0
 *Released on Nov 3, 2026*
 
