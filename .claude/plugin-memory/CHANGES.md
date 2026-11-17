@@ -5,6 +5,14 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## 2.3.2 (Nov 17, 2026) docs sync
+- Added `guide/changelog.md` entry v2.3.2 (core + Pro).
+- `pdf-invoice.md`: Customize / Customized / Reset on PDF template cards.
+- `store-managed-subscriptions.md`: manual subscriptions convert to auto-charge when a renewal invoice saves a card (Stripe/PayPal).
+- `product-card-layouts.md`: Shop page and category template on new stores, Quick View section, Show Up To 1 to 12.
+- `customize-store-with-bricks.md`: elements moving to Bricks add-on notice.
+- Bug fixes (Mollie/Authorize.Net last installment, SKU bulk edit, etc.) changelog only. Not re-shot: pdf-5.webp still shows the old hover Edit Template button.
+
 ## Nov 17, 2026 add-on releases: Customer Rights 1.0.0, product card layouts/swatches/attribute filters (Elementor add-on 1.1.2), Japanese postcode
 - **Trigger:** user pasted the Elementor/Bricks-style 1.1.2 changelog, the Customer Rights 1.0.0 changelog, and "japanese postcode". Sources: Customer Rights `origin/develop` (1.0.0, read via `git archive`, the local folder is 0.2.0 on `main`); Elementor add-on `origin/develop` (1.1.2); core `develop` @ `6413eb3831` (`ProductCardLayoutPresets`, `ShopAttributeFilter`, Bricks `ProductsCollection`, Gutenberg `FilterSettings.jsx`).
 - **Created:** `settings-configuration/cookie-consent.md` (tracking consent gate from 0.2.0, supported plugins, 1.0.0 server-side order source, `fctcr/consent/providers` mentioned once); `customization-and-themes/product-card-layouts.md` (four layouts, Masonry switch, swatches, attribute filters). Sidebar entries added for both; featured images generated.
