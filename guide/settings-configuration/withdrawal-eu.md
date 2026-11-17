@@ -22,7 +22,7 @@ The right of withdrawal comes from the EU **Consumer Rights Directive (2011/83/E
 * **Some sales are exempt.** Under **Article 16** of the Directive, the right of withdrawal does not apply to certain contracts, for example custom or personalized goods, perishable items, sealed goods unsealed for health or hygiene reasons, sealed audio, video, or software that has been opened, and digital content whose download has begun with the consumer's prior consent. The **Excluded product categories** setting (below) lets you flag these.
 
 ::: info
-FluentCart is built to **never silently refuse a declaration**. Even when an order falls outside your time window or an item is in an excluded category, the customer can still submit. They simply see a warning, and the request lands in your dashboard for a human decision. This protects you from accidentally blocking a request the law actually permits.
+FluentCart is built to **never silently refuse a declaration**. Even when an order falls outside your time window, an item is in an excluded category, or no order matches the details, the customer can still submit. The request lands in your dashboard for a human decision. This protects you from accidentally blocking a request the law actually permits. The only hard stops are the ones you choose: orders in a blocked order or shipping status, and orders where every item is in an excluded category.
 :::
 
 For the full legal text, see the official EU summary, [Consumer information, right of withdrawal and other consumer rights](https://eur-lex.europa.eu/EN/legal-content/summary/consumer-information-right-of-withdrawal-and-other-consumer-rights.html), and the [Consumer Rights Directive 2011/83/EU](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0083).
@@ -33,7 +33,11 @@ Withdrawal is provided by the **FluentCart Customer Rights** add-on. To install 
 
 1. Go to **FluentCart Pro > Settings > Features & addon**.
 2. In **Plugin Addons**, find **FluentCart Customer Rights** and click **Install & Activate** (without FluentCart Pro, click **Download** and install the plugin manually).
-3. Once the add-on is active, a **Withdrawal** tab appears in the settings sidebar. There is no separate on/off toggle.
+3. Once the add-on is active, a **Withdrawal** page appears in the settings sidebar, grouped under **Compliance**, and a **Withdrawals** item is added to the **More** menu. There is no separate on/off toggle.
+
+::: info
+The Withdrawals screen needs a recent version of FluentCart. If your FluentCart is a little behind, the **Withdrawals** menu item opens an **Update FluentCart** card instead of the table. On a much older FluentCart, the menu item is hidden. In both cases a notice in the WordPress admin asks you to update, and the settings and the customer form keep working. Older versions of FluentCart also list **Withdrawal** at the top level of the settings sidebar instead of under **Compliance**.
+:::
 
 For more on installing add-ons, see [Features & Addons](/guide/settings-configuration/features-addons).
 
@@ -42,7 +46,9 @@ For more on installing add-ons, see [Features & Addons](/guide/settings-configur
 With the add-on active, all of its controls live in one settings tab. To open it:
 
 1. From your WordPress dashboard, navigate to **FluentCart Pro > Settings**.
-2. Select the **Withdrawal** tab from the left-hand sidebar.
+2. Expand **Compliance** in the left-hand sidebar and select **Withdrawal**.
+
+![Screenshot of the Compliance group in the settings sidebar expanded, with the Withdrawal page selected](/images/settings-configuration/withdrawal/withdrawal-settings-compliance.webp)
 
 ![Screenshot of the FluentCart Withdrawal settings screen showing the Button Placement, Form Behaviour, Time Windows, and Order Filtering sections](/images/settings-configuration/withdrawal/withdrawal-settings.webp)
 
@@ -50,13 +56,27 @@ The settings are grouped into four areas: **Button Placement**, **Form Behaviour
 
 ## Button Placement
 
-This section controls **where the "Withdraw from contract" button appears** in the customer portal. Once a request has been opened or decided, a status label is shown in place of the button so the customer always knows where their request stands.
+This section controls **where the "Withdraw from contract here" link appears** in the customer portal. All three placements are on by default.
 
-* **Show in subscription detail:** Adds the withdrawal link to the customer's subscription detail view.
-* **Show in order detail:** Adds the withdrawal link to an individual order's detail view.
-* **Show in customer dashboard:** Adds the withdrawal link to the main customer dashboard.
+* **Show in subscription detail:** Adds the link at the bottom of the customer's subscription detail view. It opens the form with the subscription and its original order already filled in.
+* **Show in order detail:** Adds the link at the bottom of an individual order's detail view. It opens the form with that order's receipt number already filled in.
+* **Show in customer dashboard:** Adds the link below the orders table on the main customer dashboard. It is not tied to one order, so it opens the empty form.
 
 Turn on whichever placements match how your customers browse their account. The more visible the link, the easier it is to meet the "must be clearly informed" requirement described above.
+
+::: info
+The link only appears once you have chosen a page under **Select Withdrawal Page** (see Order Filtering below). Without a page, none of the three placements shows anything.
+:::
+
+On the order and subscription views, the link is hidden when the order is in a blocked order or shipping status, or when every item in it is in an excluded category. The dashboard link is never hidden for those reasons, because it isn't tied to an order. Turning a placement off only removes the link. The withdrawal page itself stays reachable by its address.
+
+Once a withdrawal has been submitted for an order, the link is replaced by a status label so the customer always knows where the request stands:
+
+* **Withdrawal requested — pending review:** The request is waiting for your decision.
+* **Withdrawal accepted for this order:** You accepted it.
+* **Withdrawal declaration was not accepted:** You declined it.
+
+These labels are shown on the order and subscription views regardless of the blocked statuses, and they don't appear on the dashboard.
 
 ## Form Behaviour
 
@@ -84,9 +104,9 @@ These two fields let you mark older orders as outside the cooling-off period. Bo
 
 This section decides which orders and products are eligible, and where the withdrawal page lives.
 
-* **Blocked order statuses:** Orders in any of these statuses are rejected at the first step, and the withdrawal button is hidden in the customer portal. Withdrawing against an order that was, for example, **Cancelled**, **Failed**, **Draft**, or **Completed** is operationally meaningless, so these make sensible defaults.
-* **Blocked shipping statuses:** Orders whose shipping status matches one of these values (for example, **Shipped**) are rejected at the first step, and the button is hidden. Shipping status is tracked separately from order status, which is why it has its own filter.
-* **Excluded product categories:** Product categories that are not eligible for withdrawal under **Article 16** of the Directive, such as digital goods or perishables. When every item in an order belongs to an excluded category, the customer sees a warning but can still submit. The declaration itself is never refused.
+* **Blocked order statuses:** Orders in any of these statuses are rejected at the first step, and the withdrawal button is hidden in the customer portal. The default is **Canceled**, **Failed**, **Draft**, and **Completed**. A customer who tries anyway sees "Withdrawal is not available for this order (status: completed). Please contact the store if you believe this is a mistake." Remove **Completed** if you want customers to be able to withdraw from finished orders.
+* **Blocked shipping statuses:** Orders whose shipping status matches one of these values are rejected at the first step, and the button is hidden. The default is **Shipped**. Shipping status is tracked separately from order status, which is why it has its own filter.
+* **Excluded product categories:** Product categories that are not eligible for withdrawal under **Article 16** of the Directive, such as digital goods or perishables. When only some items in an order are excluded, the customer can still submit, and the request is flagged for you with a **Partial exclusion** badge and the excluded items listed. When every item in the order is excluded, the withdrawal button is hidden in the customer portal and the form shows "This order is not eligible for withdrawal — all products are excluded from the right of withdrawal." instead of accepting the declaration.
 * **Select Withdrawal Page:** The WordPress page that hosts the withdrawal form. The page must contain the `[fluent_cart_withdrawal]` shortcode. Link to this page prominently, for example with a footer link, so it is easy for customers to find.
 
 ### Setting Up the Withdrawal Page
@@ -95,14 +115,14 @@ The customer-facing form is rendered by a shortcode, so you can place it on any 
 
 1. Create a new WordPress page (for example, titled "Right of Withdrawal").
 2. Add the `[fluent_cart_withdrawal]` shortcode to the page content and publish it.
-3. Back in **Settings > Withdrawal**, choose that page under **Select Withdrawal Page**.
+3. Back in **Settings > Compliance > Withdrawal**, choose that page under **Select Withdrawal Page**.
 4. Add a link to the page somewhere persistent, such as your site footer, so customers can always reach it.
 
 Prefer a shortcut for steps 1 to 3? Click the **+** button next to **Select Withdrawal Page**, and FluentCart creates the page for you (default title "Withdraw from contract") with the shortcode already in place.
 
 ## The Customer Withdrawal Journey
 
-Once the feature is set up, withdrawing is a short, guided flow for the customer. Here is what they experience from start to finish.
+Once the feature is set up, withdrawing is a short, guided flow for the customer. Here is what they experience from start to finish. The form follows your store's color palette and spacing, so it blends in with the rest of your site, and your theme's button styles do not change how its links and buttons look.
 
 ### Starting a Withdrawal
 
@@ -121,11 +141,15 @@ The form opens on the **Withdraw from contract** page. The customer confirms who
 
 ![Screenshot of step one of the Withdraw from contract form with first name, last name, receipt number, email address, and an optional note field](/images/settings-configuration/withdrawal/withdrawal-step-1-details.webp)
 
-When the details are filled in, the customer clicks **Continue**.
+When the details are filled in, the customer clicks **Continue**. If no order matches the details, the next step starts with a notice that reads "We could not automatically match an order with these details. Your withdrawal will still be submitted and reviewed by the store." The declaration is still accepted and shows up as **Unverified** on your side.
+
+::: info
+To discourage abuse, each visitor can make 5 attempts in 15 minutes. After that, the form shows "Too many attempts — please try again in a few minutes."
+:::
 
 ### Step 2: Choose What to Withdraw
 
-If you allow partial revocations and the customer is eligible for the item-selection step, they now choose which items to withdraw. Every item is **pre-selected**, so a customer who wants to cancel the whole order can simply continue. To keep an item, they uncheck it.
+If you allow partial revocations and the customer is eligible for the item-selection step (by default only a logged-in account owner is, see **Item selection step, who can use it** above), they now choose which items to withdraw. Every item is **pre-selected**, so a customer who wants to cancel the whole order can simply continue. To keep an item, they uncheck it.
 
 ![Screenshot of the item-selection step showing the order items pre-selected with item, unit price, and quantity columns](/images/settings-configuration/withdrawal/withdrawal-step-2-items.webp)
 
@@ -133,7 +157,7 @@ Clicking **Continue** moves to the review step, and **Back to edit details** ret
 
 ### Step 3: Review and Confirm
 
-The final step summarizes the whole request so the customer can check it before submitting. It shows the order reference and total, the customer's name, receipt number, email, and note, the items being withdrawn, and an **estimated refund**.
+The final step summarizes the whole request so the customer can check it before submitting. When an order matches, it shows the order number, date, and total, then the customer's name, receipt number, and email, plus the items being withdrawn and an **estimated refund** for customers who went through the item-selection step. A guest who skipped item selection withdraws from the whole contract.
 
 ![Screenshot of the review and confirm step showing the order summary, the withdrawal request details, the items to withdraw, and the estimated refund](/images/settings-configuration/withdrawal/withdrawal-step-3-review.webp)
 
@@ -149,7 +173,36 @@ The screen makes clear that this acknowledgment confirms receipt of the declarat
 
 ## Reviewing Requests as an Admin
 
-Every declaration appears against the order it relates to, so you review and decide on it right where the order lives. To find a request:
+You can review declarations in two places: all together on the **Withdrawals** screen, or one by one on the order they relate to.
+
+### The Withdrawals Screen
+
+The **Withdrawals** screen lists every declaration in one table. To open it:
+
+1. From your FluentCart admin, click the **More** menu item in the top navigation bar.
+2. Click **Withdrawals**.
+
+![Screenshot of the More menu in the FluentCart top navigation with the Withdrawals item highlighted](/images/settings-configuration/withdrawal/withdrawals-more-menu.webp)
+
+The screen is titled **Withdrawal Requests** and lists every declaration in a table.
+
+![Screenshot of the Withdrawal Requests screen with status tabs, request rows, and one row expanded to show the withdrawn item](/images/settings-configuration/withdrawal/withdrawals-screen.webp)
+
+The table has the tabs **All**, **Pending**, **Accepted**, and **Declined**, with more views such as **Unverified** under **More views**. Use the search box to find a request by name, email, order number, or reference, and sort by **Received**, **Status**, or **Name**. The **Customer**, **Order**, and **Received** columns can be toggled on or off.
+
+Each row shows the reference code with its status badge (**Pending**, **Succeeded** once accepted, or **Failed** once declined), the customer, the linked order, when it was received, whether it is **Verified** (a **Verified User** or **Verified Mail** match) or **Unverified**, and the **Est. Refund**. Click the arrow at the start of a row to expand the items the customer chose to withdraw, with the quantity, unit refund, and line total for each (tax is shown as a note).
+
+The **Actions** column works like this:
+
+* **Accept:** The check button approves a pending request. The customer is notified by email.
+* **Decline:** The cross button rejects a pending request. The customer is notified by email. The row then shows **Failed** and the action buttons disappear.
+* **Link order:** Shown for a request that is not tied to an order yet, such as an unverified declaration. Click it, enter the **Order ID**, and click **Confirm**. The request is attached to that order and counted as verified. Its badge turns green, although it keeps the **Unverified** label because that label records how the customer identified themselves.
+
+You need permission to manage orders to see these buttons. Anyone who can view orders can read the table.
+
+### The Order Page
+
+Every declaration also appears against the order it relates to, so you can review and decide on it right where the order lives. To find a request:
 
 1. From your FluentCart admin, go to the **Orders** section.
 2. Click the order the customer is withdrawing from to open its **order detail** page.
@@ -158,8 +211,9 @@ Every declaration appears against the order it relates to, so you review and dec
 Each request card shows its current state at a glance:
 
 * **Status badge:** **Pending** until you decide, then **Accepted** or **Declined**.
-* **Verification badge:** Shows how the request was authenticated. A logged-in account owner shows as **Verified User**, a guest who matched the receipt number and billing email shows as **Verified Mail**, and a request that could not be matched shows as **Unverified**.
-* **Details:** The reference code, the date and time received, the customer's name, the order reference, and any note they left.
+* **Verification badge:** **Verified** when the order number and billing email matched the order, or **Unverified** when they did not. (The Withdrawals screen is more specific and tells **Verified User** from **Verified Mail**.)
+* **Exclusion badge:** **Partial exclusion** or **All items excluded** appears when the order contains products from an excluded category, and the excluded items are listed on the card.
+* **Details:** The reference code, the date and time received, the customer's name and email, the order reference, the customer's note (shown as **Part / note**), and the **Est. refund** when the customer chose items.
 
 ![Screenshot of a pending, verified withdrawal request card with Accept withdrawal and Decline buttons](/images/settings-configuration/withdrawal/withdrawal-request-pending.webp)
 

@@ -51,6 +51,8 @@ This is the main tool for building your shop pages using the WordPress block edi
   * **Paginator:** Choose your pagination style, such as Scroll (for infinite loading) or Numbers (for standard pages). You can also use the slider to set how many products show up per page.
   * **Product Grid Options:** Set the View Mode to Grid and pick a Price Format, such as "Starts From" for products with multiple prices. You can also adjust the Product Per Row to decide how many items sit side-by-side.
   * **Filter Option:** You can toggle Enable Filter to let customers sort products easily. You can also turn on Default Filter to manage the starting order of your items.
+  * **Attribute Filters:** Inside the filter settings, switch on Attribute Filters, choose which attributes to offer (for example Color and Size), and decide whether to show product counts and empty values. Shoppers can then narrow the shop by those options.
+  * **Card Layouts and Masonry:** The product card inside the block can use the **Classic**, **Compact**, **Floating**, or **Framed** layout, and **Masonry** staggers the cards in the grid. The same card also shows swatches for a product's options. See [Product Card Layouts, Swatches, and Attribute Filters](/guide/customization-and-themes/product-card-layouts) for what each does. The Product Carousel, Related Products, and Product Card blocks use the same layouts.
   * **Additional CSS Class(es):** Enter custom code here if you want to add unique styling to the product block.
 
 

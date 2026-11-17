@@ -9,6 +9,10 @@ To open the compliance settings:
 1. From your WordPress dashboard, navigate to **FluentCart > Settings**.
 2. Select the **Compliance** tab from the left-hand sidebar.
 
+::: info
+**Compliance** becomes a group when the **FluentCart Customer Rights** add-on is active. This page then appears as **Customer Accounts**, next to [Withdrawal](/guide/settings-configuration/withdrawal-eu) and [Cookie Consent](/guide/settings-configuration/cookie-consent).
+:::
+
 ![Screenshot of the Compliance tab in FluentCart settings](/images/settings-configuration/compliance-settings/compliance-settings.webp)
 
 ## Configuring Compliance Settings

@@ -89,7 +89,7 @@ The same **Recommended for your store** card also appears in the sidebar of the 
 
 ## Installing Plugin Addons (One-Click Installer)
 
-Below the core feature toggles, the **Features & addon** page also has a **Plugin Addons** section. It lists addons such as **Elementor Blocks**, **FluentCart Bricks Blocks**, **FluentCart Divi Modules**, **Fluent PDF**, **FluentCart Migrator**, and **FluentCart Customer Rights**. You don't need to download a ZIP file, upload it through the WordPress plugin uploader, and then activate it. The whole flow takes a single click.
+Below the core feature toggles, the **Features & addon** page also has a **Plugin Addons** section. It lists addons such as **Elementor Blocks**, **FluentCart Bricks Blocks**, **FluentCart Divi Modules**, **Fluent PDF**, **FluentCart Migrator**, **FluentCart Customer Rights**, and **Address Autofill for FluentCart**. You don't need to download a ZIP file, upload it through the WordPress plugin uploader, and then activate it. The whole flow takes a single click.
 
 ### Prerequisites
 
@@ -135,6 +135,22 @@ The card appears in the **Plugin Addons** section like any other addon, and inst
 
 ::: info
 This addon requires **Divi 5.0+** and **FluentCart 1.3.4+**. See [FluentCart Divi Modules](/guide/customization-and-themes/fluentcart-divi-modules) for the full module list and workflow.
+:::
+
+### Address Autofill for FluentCart
+
+The **Address Autofill for FluentCart** addon fills in the prefecture, city, and street at checkout from a Japanese postal code. It is free and installs from the **Plugin Addons** section like the others:
+
+1.  Navigate to **FluentCart Pro > Settings > Features & addon**.
+2.  Scroll to the **Plugin Addons** section and find the **Address Autofill for FluentCart** card.
+3.  Click the **Install & Activate** button on the card.
+
+If FluentCart Pro is not active on your site, the button reads **Download** instead, and you install the plugin yourself. The settings icon on the card brings you back to this **Features & addon** page.
+
+Once it is active, an **Address Autofill** toggle also appears in the **Features & addon** list at the top of the page. Turn on the **State** field under Checkout Fields first, or the prefecture has nowhere to go.
+
+::: info
+See [Address Autofill (Japan)](/guide/settings-configuration/address-autofill) for what it fills in and how the postal code lookup works.
 :::
 
 ### Shipping For FluentCart
