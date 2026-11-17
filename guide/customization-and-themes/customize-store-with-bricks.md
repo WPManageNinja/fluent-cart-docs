@@ -9,6 +9,10 @@ This guide will show you how to use FluentCart's dedicated elements within Brick
 The integration is automatic. As long as you have both **FluentCart** and the **Bricks theme** installed and active on your site, you will find the FluentCart elements ready to use inside the Bricks editor.
 
 ::: info
+The built-in Bricks elements for the product title, short description, content, stock, price range, gallery, buy section, and the Products collection are moving to the **FluentCart Bricks Blocks** addon in the next FluentCart release. Until then, the Bricks editor shows a notice on each of them, with a link to install the addon. Install and activate it before you update so pages that use these elements keep working. Visitors never see the notice.
+:::
+
+::: info
 Want the full palette? The **FluentCart Bricks Blocks** addon adds fifteen more FluentCart elements to the Bricks editor, covering the cart, checkout, product search, categories, and the customer dashboard. See [FluentCart Bricks Blocks](/guide/customization-and-themes/fluentcart-bricks-blocks) for the block list and how to install it.
 :::
 

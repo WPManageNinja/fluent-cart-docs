@@ -229,6 +229,12 @@ Click **Create & Charge**. On success the renewal shows as **Paid / Renewal** in
 
 If the attempt is declined, nothing is lost. The invoice stays open and the normal retry schedule takes over.
 
+### Manual Subscriptions Become Auto-Charge
+
+A subscription that started as **Manual** does not have to stay that way. When **Auto-charge** is on for your store and a customer pays a renewal invoice through **Stripe** or **PayPal**, FluentCart saves the payment method used for that payment, and the subscription switches to auto-charge. From the next renewal on, the saved method is charged on each due date and the **Pay Now** email stops.
+
+The customer sees the same notice about saving their payment method that a new auto-charge subscription shows at checkout, and there is no extra checkbox to tick. If the gateway does not return a reusable payment method, the subscription stays **Manual** and keeps sending **Pay Now** invoices. Cancelled and completed subscriptions never convert.
+
 ### Other Actions in the Menu
 
 * **Pause Subscription:** Halt billing temporarily. It's available only while the subscription is **Active** or **Trialing** and its next billing date is still ahead. A **Past Due** subscription can't be paused, so the open invoice stays payable. The menu then offers **Resume Subscription**, which returns the subscription to **Active**, or to **Past Due** if the billing date has passed while it was paused.

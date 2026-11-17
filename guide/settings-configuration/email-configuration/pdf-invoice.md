@@ -55,7 +55,11 @@ You will now see four built-in templates ready for your personal touch:
 * **Refund Notice:** Sent as proof of a refund if an order is returned or canceled.
 * **Invoice:** A standardized, formal invoice document for business transactions.
 
-The four built-in templates carry a **Built-in** badge. To make your own, click **Add Template**, enter a **Template Name** (for example "Custom Invoice"), and click **Create**. You can delete custom templates, and in the editor, **Revert to Default** restores a built-in template to its original design.
+The four built-in templates carry a **Built-in** badge. Once you save a change to a template's design, the badge turns into **Customized** and a **Reset** button appears next to it. Every card has a **Customize** button that opens the template in the editor.
+
+To make your own, click **Add Template**, enter a **Template Name** (for example "Custom Invoice"), and click **Create**. Delete a custom template with the trash icon at the end of its row.
+
+**Reset** asks you to confirm and then puts the template back to its starting design. For a built-in template that is its original design. For a template you added, it is the Order Receipt design. Your changes to the template are lost. Inside the editor, **Revert to Default** does the same for a built-in template.
 
 All four default templates show the same two numbers at the top:
 
@@ -66,7 +70,7 @@ When a customer downloads a receipt, the PDF file is named after the receipt num
 
 <!-- TODO(screenshot): The default Order Receipt PDF header showing the Order Number and Receipt Number rows. -->
 
-Hover your mouse over the template you want to customize (for example, "Order Receipt") and click the blue **Edit Template** button that appears.
+Find the template you want to customize (for example, "Order Receipt") and click **Customize**.
 
 ![PDF Invoice](/images/store-management/pdf-invoice/pdf-5.webp)
 

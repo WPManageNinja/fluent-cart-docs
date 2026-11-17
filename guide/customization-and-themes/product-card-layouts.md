@@ -37,11 +37,24 @@ You can use layouts in four places:
 
 Each layout comes with its own swatch and Quick View arrangement, so the card looks right the moment you select it. Classic keeps the full set of card settings of the block, element, or widget you are using. In the page builders, a layout takes over the card, including its badges, swatches, and Quick View.
 
+### Shop Page and Category Pages on New Stores
+
+On a store set up from this release on, the **Shop** page is created with a Products block that already uses the **Classic** layout card, with swatches, rating, and Quick View, along with the Grid/List and Sort controls and the filters. On a block theme, the product category template gets the same card, plus the Sort control and the brand and price filters. The category filter is left out there, since the page is already one category. Existing stores keep their current Shop page and category template, so nothing changes until you edit them.
+
 ### Masonry Grid
 
 **Masonry grid** is a switch, not a layout. It staggers the cards so each image keeps its own height, which suits photos in mixed shapes. It works with every layout in the **Products** and **Related Products** blocks, elements, and widgets. A carousel is a single row, so it has no Masonry option.
 
 In the Bricks element and the Elementor widget, the switch is labeled **Masonry grid**.
+
+## Quick View on the Card
+
+**Quick View** opens a product's buy section in a pop-up, so customers can pick options and add to cart without leaving the grid. You choose where its button sits:
+
+* **On the image:** The button overlays the product image. In the Bricks layout settings you can also pick which corner of the image it uses, and bottom middle is the default.
+* **After the button:** It sits beside **Add To Cart** at the bottom of the card.
+
+Each layout starts with its own placement. In the shortcodes, the `quick_view` attribute sets it.
 
 ## Swatches on the Card
 
@@ -55,7 +68,7 @@ The swatch settings let you control what the card shows:
 * **Which Attributes to Show:** Pick the attributes to display, in the order you want. Leave it empty to show every attribute.
 * **Also show attributes not listed here:** Add any other attribute a product has after the ones you picked.
 * **Never Show These Attributes:** Keep chosen attributes off the card even when the option above is on.
-* **Show Up To:** How many options show in a row before the rest collapse into a count such as "+2" or "+3". **Show All** displays every option instead.
+* **Show Up To:** How many options show in a row before the rest collapse into a count such as "+2" or "+3". **Show All** displays every option instead. The Bricks layout settings let you pick any number from 1 to 12.
 * **Show Label:** Print the attribute name, for example Color, above the row.
 * **Show the Selected Choice:** Print the option the shopper picked, for example COLOR · BLACK, after the row label or below the options.
 * **Sold-out Options:** Leave sold-out options as they are (**No Change**), strike them through (**Cross Out**), or remove them (**Hide**). This applies to both attribute and list products.
