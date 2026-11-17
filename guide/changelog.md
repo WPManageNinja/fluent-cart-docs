@@ -1,6 +1,39 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v2.3.2
+*Released on Nov 17, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds attribute filters to the shop sidebar, with filter limits
+• Adds product swatches for attribute and list products, with up to 12 options, sold-out styles, and selected choice
+• Adds four product card layouts (Classic, Compact, Floating, Framed) with a Masonry grid switch for every layout
+• Adds card layouts to Products, Related Products, Product Carousel, and Product Card
+• Adds card layouts, Masonry grid, swatches, and Quick View settings to the Products and Related Products shortcodes
+• Adds Quick View on the card image or after the button
+• Adds a Layout card to the new Shop page and category template, with Sort and filters
+• Adds Layout settings to the Products block
+• Adds manual subscription conversion to automatic charging when a renewal invoice saves a card
+• Adds Customize and Reset on PDF template cards
+• Adds a Bricks notice that core elements moved to the Bricks add-on
+```
+
+```markdown [🚀 Improvements]
+• Improves the Shop pager, scroll paginator, and shop box sizing in content-box themes
+• Improves the customer profile payment form and report dark mode
+• Improves Authorize.Net subscription retries on staging copies in a different store mode
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes unknown shortcode categories, duplicate bundle child titles, and empty variation titles
+• Fixes the coupon Apply button hover and SKU transfers in bulk edits
+• Fixes Mollie and Authorize.Net subscriptions paid off by the last installment
+```
+
+:::::
+
 ## FluentCart v2.3.1
 *Released on Nov 10, 2026*
 
