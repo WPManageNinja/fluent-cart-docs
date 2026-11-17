@@ -28,5 +28,8 @@ fluent-affiliate-docs/
 # Superpowers directory
 .superpowers/ 
 
-# Screenshot pipeline raw captures
-scripts/screenshots/raw/
+# Claude skill files (local only)
+.claude/skills/
+
+# Screenshot pipeline: runner, plans and raw captures (local only)
+scripts/screenshots/
