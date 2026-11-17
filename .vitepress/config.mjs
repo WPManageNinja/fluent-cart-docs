@@ -622,6 +622,7 @@ export default defineConfig({
               ]
             },
             { text: 'Features & Addons', link: '/guide/settings-configuration/features-addons' },
+            { text: 'Address Autofill (Japan)', link: '/guide/settings-configuration/address-autofill' },
             { text: 'Global Integrations', link: '/guide/settings-configuration/global-integrations' },
             { text: 'Storage Settings', link: '/guide/settings-configuration/storage-settings' },
             { text: 'AI Assistants (MCP)', link: '/guide/settings-configuration/mcp' },
@@ -634,6 +635,7 @@ export default defineConfig({
               ]
             },
             { text: 'Withdrawal (EU)', link: '/guide/settings-configuration/withdrawal-eu' },
+            { text: 'Cookie Consent', link: '/guide/settings-configuration/cookie-consent' },
             { text: 'Compliance Settings', link: '/guide/settings-configuration/compliance-settings' },
             { text: 'Multi Currency Settings', link: '/guide/settings-configuration/multi-currency-settings' }
           ]
@@ -686,6 +688,7 @@ export default defineConfig({
           items: [
             { text: 'Theme Compatibility', link: '/guide/customization-and-themes/theme-compatibility' },
             { text: 'Using Gutenberg Blocks', link: '/guide/customization-and-themes/using-gutenberg-blocks' },
+            { text: 'Product Card Layouts and Swatches', link: '/guide/customization-and-themes/product-card-layouts' },
             { text: 'On-Page Checkout Form', link: '/guide/customization-and-themes/on-page-checkout-form' },
             { text: 'Adding a Currency Switcher', link: '/guide/customization-and-themes/currency-switcher' },
             { text: 'Using Elementor Widgets', link: '/guide/customization-and-themes/using-elementor-widgets', items: [
