@@ -51,7 +51,7 @@ These blocks each render a single piece of a product, which makes them the build
 
 * **Product Title:** The product's name.
 * **Product Info:** A combined block covering several product details at once. Toggle each part on or off with **Show Gallery**, **Show Title**, **Show Stock**, **Show Excerpt**, **Show Price**, and **Show Buy Section**, and set where the gallery thumbnails sit with **Thumbnail Position**.
-* **Product Card:** A complete product summary, useful for custom grids and feature sections. **Card Elements** controls which parts appear, and **Price Format** and **Card Sizing** handle the presentation.
+* **Product Card:** A complete product summary, useful for custom grids and feature sections. It supports the same card layouts as the Products element. **Card Elements** controls which parts appear, and **Price Format** and **Card Sizing** handle the presentation.
 * **Product Excerpt:** The product's short description.
 * **Product Content:** The product's full description.
 * **Product Gallery:** The product's images.
@@ -113,6 +113,12 @@ These settings determine which products appear and how the grid is arranged:
 
  * **View Mode & Switcher:** Choose between a grid or list layout, and optionally let visitors flip between them.
 
+ * **Card Layout:** Choose **Classic**, **Compact**, **Floating**, or **Framed**. Classic keeps the element's own card, built from **Card Elements** or the Fields group. The other layouts build the whole card, with their own badges, swatches, and Quick View. **Floating** is grid only, so it hides the view switcher. See [Product Card Layouts, Swatches, and Attribute Filters](/guide/customization-and-themes/product-card-layouts).
+
+ * **Masonry grid:** Staggers the cards so each image keeps its own height. It works with every card layout.
+
+ * **Swatches:** Show a product's attribute and variation options on the card so shoppers can pick one there. Control which attributes show, how many (**Show Up To** or **Show All**), the label, the selected choice, and how sold-out options look.
+
  * **Pagination & Columns:** Control how customers navigate long lists and define the grid spacing.
 
  * **Is main query:** Ties the block to the page's main WordPress query, which is essential when building a shop or archive template.
@@ -129,6 +135,8 @@ Turn on **Enable Filter** to provide your customers with a front-end filter pane
  * **Wildcard Filter:** Broadens text matching so partial terms still return accurate results.
 
  * **Taxonomy toggles:** Choose exactly which taxonomies (like Categories or Brands) customers are allowed to filter by.
+
+ * **Attribute Filters:** Let customers filter by product attributes such as Color and Size. Choose the **Attributes** to offer, then turn on **Show counts** to display how many products match each value and **Show empty** to display values no product uses.
 
  * **Price Range & Sort By:** Adds sorting controls and a price slider to the panel.
 

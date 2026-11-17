@@ -307,6 +307,8 @@ FluentCart applies no internal domains by default, so attribution behaves exactl
 
 Campaign attribution is kept in the visitor's browser, and privacy rules such as GDPR and the German TDDDG treat that storage the way they treat cookies. If your store runs a consent banner, this is how you put attribution behind it.
 
+If you use Complianz, CookieYes, or GDPR Cookie Compliance, the FluentCart Customer Rights add-on does this for you without code. See [Cookie Consent](/guide/settings-configuration/cookie-consent).
+
 FluentCart fires a cancellable `fluent_cart_utm_before_store` event on `window` immediately before it writes. Call `preventDefault()` to claim the write, then answer with `allow()` or `deny()` from the event's detail. This snippet is JavaScript, so enqueue it on the front end rather than dropping it in `functions.php`.
 
 ```js

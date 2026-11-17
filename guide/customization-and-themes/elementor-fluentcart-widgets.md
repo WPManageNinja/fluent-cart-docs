@@ -63,6 +63,9 @@ The main widget for building shop pages. It renders your product catalog as a cl
     * **Shop Layout:** Adjust the spacing and layout of the product grid.
     * **Product Card Layout:** Choose which elements (image, title, excerpt, price, rating, button) appear inside each product card. See [ratings on shop cards](/guide/customization-and-themes/elementor-review-widgets#ratings-on-shop-cards) for the **Rating** element.
     * **Filter Settings:** Turn on a sidebar filter so customers can narrow the list by category, price, or attributes.
+    * **Card Layout:** Pick **Classic** (the widget's own card, with all of its card settings), **Compact**, **Floating**, or **Framed**. A layout builds the whole card, with its own badges, swatches, and Quick View. **Floating** is grid only, so the **View Mode** control is hidden for it. **Masonry grid** staggers the cards and works with every layout. See [Product Card Layouts, Swatches, and Attribute Filters](/guide/customization-and-themes/product-card-layouts).
+    * **Attribute Filters:** Under the filter settings, turn on **Attribute Filters** (it appears when your store has attributes and **Enable Filter** is on), choose the **Attributes** to offer, and optionally turn on **Show counts** and **Show empty**. You can offer up to 10 attributes.
+    * **Swatches:** Show a product's options on the card. The Swatches section has an **Attribute Products** tab and a **List Products** tab, each with **Show Up To** (or **Show All**), **Show Label**, and **Show the Selected Choice**, plus a **Sold-out Options** choice of **No Change**, **Cross Out**, or **Hide**. Under **Which Attributes to Show**, pick the **Attributes** and use **Never Show These Attributes** to keep some off the card.
 * **Style Tab:** Customize typography, card colors, button colors, and grid spacing.
 * **Advanced Tab:** Standard Elementor margin, padding, and responsive controls.
 
@@ -76,7 +79,7 @@ Renders a single product as a card — the same card layout used in the Products
 * **Content Tab:** Pick the product and shape the card.
     * **Select Product:** Choose the product this card represents.
     * **Price Format:** Pick how the price reads (for example, *Starts From* for variable products).
-    * **Card Layout:** Choose which elements appear on the card (image, title, price, button, etc.).
+    * **Card Layout:** Choose **Classic** to pick which elements appear on the card (image, title, price, button, etc.), or one of the **Compact**, **Floating**, or **Framed** layouts. The swatch settings are available here too.
 * **Style Tab:** Customize typography, colors, spacing, and the card's background and border.
 * **Advanced Tab:** Standard Elementor controls.
 
@@ -89,7 +92,7 @@ Use this on home pages or landing pages to show off a sliding row of products �
 * **Content Tab:** Configure which products show and how the slider behaves.
     * **Select Products:** Pick the products you want in the carousel.
     * **Carousel Settings:** Set how many slides show at once, turn on **Autoplay**, set the slide speed, enable **Infinite Loop**, and toggle navigation arrows or pagination dots.
-    * **Card Layout:** Customize the look of each product card inside the carousel.
+    * **Card Layout:** Customize the look of each product card inside the carousel. Choose **Classic**, **Compact**, **Floating**, or **Framed**.
 * **Style Tab:** Change the size and color of the arrows and pagination dots to match your theme.
 * **Advanced Tab:** Add entrance animations or hide the carousel on specific devices.
 
@@ -244,6 +247,7 @@ Renders a row of products related to the current product. FluentCart picks produ
     * **Source:** Pull from the **Current Product** or a **Custom** product.
     * **Select Product:** When **Source** is **Custom**, pick the product whose related items you want to preview.
     * **Badge:** Configure the sale or status badge shown on each card.
+    * **Card Layout and Masonry grid:** Choose **Classic**, **Compact**, **Floating**, or **Framed** for the cards, and switch on **Masonry grid** to stagger them.
 * **Style Tab:** Six design groups — **Heading** (color, typography, spacing), **Grid** (columns, gap), **Card** (background, border radius, padding), **Product Title** (color, hover color, typography), **Price** (color, compare-price color), and **Button**, plus badge styling.
 * **Advanced Tab:** Standard Elementor controls.
 

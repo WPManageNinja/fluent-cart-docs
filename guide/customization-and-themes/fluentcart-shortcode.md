@@ -213,6 +213,14 @@ You can also enable a sidebar filter and configure it with JSON-based settings. 
 | **live_filter** | If "true," products update instantly as you click filters. | `false` | `true`, `false` |
 | **custom_filters** | A list of settings to control category and price filters. | — | See JSON guide below |
 | **filters** | Settings for how products are sorted (Name, Price, etc.). | — | See JSON guide below |
+| **card_layout** | Build every card with a ready-made layout. Leave empty to keep the current card. See [Product Card Layouts](/guide/customization-and-themes/product-card-layouts). | — | `classic`, `compact`, `floating`, `framed` |
+| **masonry** | Stagger the cards so each image keeps its own height. Works with every layout. | — | `yes` |
+| **swatch_count** | How many options show in a swatch row before the rest collapse into a count. | The layout's own | `1` to `12`, or `0` / `all` for every option |
+| **swatch_selected_name** | Print the picked option after the row label, for example COLOR · BLACK. | The layout's own | `yes`, `no` |
+| **swatch_group_name** | Print the attribute name above each swatch row. | The layout's own | `yes`, `no` |
+| **swatch_sold_out** | How sold-out options look. | The layout's own | `normal`, `cross`, `hide` |
+| **quick_view** | Where the Quick View button sits on the card. | The layout's own | `image`, `button` |
+| **layout_hide** | Leave parts out of the card. | — | Comma-separated: `swatches`, `sale_badge`, `sold_out_badge`, `rating`, `quick_view` |
 
 #### A Quick Look at Filter Settings (JSON)
 
@@ -222,6 +230,9 @@ You can also enable a sidebar filter and configure it with JSON-based settings. 
 * **live_filter:** Set to `true` for instant, "no-reload" updates.
 * **taxonomies:** Tell the plugin what to show (e.g., `"product-categories,product-brands"`).
 * **price_range:** Include a price slider by adding `"price_range"`.
+* **attributes:** Add filters for product attributes such as Color and Size, as a comma-separated list of attribute slugs or IDs (e.g., `"color,size"`). You can list up to 10.
+* **show_attribute_counts:** Set to `true` to show how many products match each attribute value.
+* **show_attribute_empty:** Set to `true` to also show attribute values that no product uses.
 
 **`filters` object:**
 
