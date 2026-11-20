@@ -1,6 +1,40 @@
 # Changelog
 Stay updated with the latest improvements, new features, bug fixes, and performance enhancements in FluentCart.
 
+## FluentCart v2.3.3
+*Released on Nov 20, 2026*
+
+::::: code-group
+
+```markdown [✨ Newly Added]
+• Adds emails for subscription payment method and plan changes
+• Adds the `fluent_cart/subscription_payment_method_changed` action
+• Adds the `fluent_cart/product/append_reviews_to_content` filter
+```
+
+```markdown [🚀 Improvements]
+• Improves the product picker in block sidebars
+• Improves the Products, Related Products, and Product Card block sidebars
+• Improves the Related Products editor preview
+```
+
+```markdown [🐞 Bug fixes]
+• Fixes PayPal checkout failing on product text with accented letters
+• Fixes a payment retry using a saved address
+• Fixes Stripe showing the full price on plan upgrades
+• Fixes download link expiry in purchase emails and on S3 and R2 storage
+• Fixes cramped item names in order emails on phones
+• Fixes outdated subscription prices in Add Items
+• Fixes the file delete prompt hiding behind the upload window
+• Fixes the invoice print page breaking
+• Fixes Elementor filters listing empty categories
+• Fixes the Product Info picker saving after Cancel
+• Fixes the empty Buy Section preview inside Product Info
+• Fixes e-invoice PDFs that validators rejected (Pro only)
+```
+
+:::::
+
 ## FluentCart v2.3.2
 *Released on Nov 17, 2026*
 

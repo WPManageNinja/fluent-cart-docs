@@ -73,6 +73,10 @@ Reminder timing is configured separately. The **Scheduler / Reminder Actions** g
 * **Send mail to customer when a subscription is canceled:** Notifies the customer that their subscription has been cancelled and includes the **access end date** so they know exactly when their access ends. This is especially important for stores running courses, memberships, or licensed products where billing and access are tied together.
 * **Send mail to admin when a subscription is canceled:** The admin-side copy of the cancellation notice.
 * **Notify customer when a billing period is skipped:** Sent when an admin skips the customer's next billing period. The internal reason and the name of the admin who skipped it are never included. This one is **off by default**.
+* **Notify customer when the subscription payment method changes:** Sent after the customer updates their card or switches the payment method of a subscription. On by default.
+* **Notify admin when a subscription payment method changes:** The admin-side copy. This one is **off by default**.
+* **Notify customer when the subscription plan changes:** Sent after a plan upgrade is paid, showing the previous and the new plan. The order receipt is sent separately. On by default.
+* **Notify admin when a subscription plan changes:** The admin-side copy, with the previous and the new plan. This one is **off by default**.
 
 >[!Note]
 >The cancellation email is sent automatically whenever a subscription moves to a cancelled state. The access end date is pulled from the subscription's paid-through period, so customers can see at a glance whether their access ends immediately or continues through the end of the current billing cycle.

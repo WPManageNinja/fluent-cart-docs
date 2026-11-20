@@ -5,6 +5,11 @@ This file is the bridge between the changelog the user pastes and the doc edits 
 
 ---
 
+## 2.3.3 (Nov 20, 2026) docs sync
+- Added `guide/changelog.md` entry v2.3.3 (core + Pro, approved bullets verbatim in meaning; e-invoice fix marked Pro only).
+- `configuring-email-notification.md`: four new Subscription Actions emails (payment method changed customer/admin, plan changed customer/admin; defaults from core `EmailNotifications.php`: customer on, admin off).
+- Changelog only: hooks `fluent_cart/subscription_payment_method_changed` and `fluent_cart/product/append_reviews_to_content` (dev docs), block sidebar/picker improvements, all bug fixes. Core read at `develop` @ `75a78e79fb`; Pro not inspected.
+
 ## 2.3.2 (Nov 17, 2026) docs sync
 - Added `guide/changelog.md` entry v2.3.2 (core + Pro).
 - `pdf-invoice.md`: Customize / Customized / Reset on PDF template cards.
